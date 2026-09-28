@@ -38,7 +38,7 @@ That's it. From then on, everyone signs in at `/studio` with their email.
 
 ### Add an event (fishing rodeo, cornhole tournament, anything)
 1. **Events & fundraisers** → **Add an entry**.
-2. Fill in the name, type, date (or "when," like *Every June*), where, a sentence or two, and a big result if you have one (*$3,200 raised*, *40 teams*).
+2. Fill in the name, type, date (or "when," like *Every June* or *July 2021*; include the year when you know it so the event lands in the right order), where, a sentence or two, and a big result if you have one (*$3,200 raised*, *40 teams*).
 3. Upload a photo. Check **Show on the home page** if you want it featured.
 4. **Save.** Future dates show under "Coming up"; they move to "What we've done" automatically after the day passes.
 
@@ -60,9 +60,37 @@ That's it. From then on, everyone signs in at `/studio` with their email.
 ### Launch the site for real
 When everything looks right: **Site settings** → check **Launch the site** → **Save**. The yellow "Preview" banner disappears and Google can start listing us.
 
+## Where our photos go
+
+Photos live in three places, and each one has a different job:
+
+| Where | What goes there | Who can see it |
+|---|---|---|
+| **Our shared photo folder** (a family Google Drive or Google Photos album called *Because of ADAM – Photos*) | **Everything.** The originals, full size, straight off our phones, plus signed photo releases | Only the people we share it with |
+| **The Studio** | **Only the photos we've picked for the website**, one for each spot (below) | **Everyone.** Anything uploaded to the Studio is public, even if it isn't on a page yet, so never use it as storage |
+| **Facebook** | What we post day to day | Our followers |
+
+Suggested folders in the shared folder: `Adam (then & now)`, `Family`, `Events/2020 Cornhole`, `Events/2021 Booth`, `Events/Fishing rodeo`, `Wear Blue`, `Website picks`, `Photo releases`. Dad's Little Explorer Swim photos belong in **his own** folder, not ours.
+
+**The spots on the website that need a photo:**
+
+| Spot | Where in the Studio |
+|---|---|
+| Adam, on the home page | **Home page** → Photo of Adam |
+| Each event (cornhole, rodeo, booth, Wear Blue) | **Events & fundraisers** → the event → Photo |
+| Each of us | **Team** → Photo |
+| Dad teaching (only with the parents' OK for any kids in it) | **Pages** → ISR Swim Lessons — Dad's story box → Photo |
+| Photos inside Adam's Story or a news post | The picture button in the editor |
+
+**Before you upload one:**
+- **Size:** under about 1 MB is best. Phone photos are often 3–5 MB, so shrink them first (on iPhone, email it to yourself and pick *Medium*, or use [squoosh.app](https://squoosh.app)).
+- **Crop out** anything that isn't ours to promote, like Dad's business banner. The nonprofit site shouldn't advertise his lessons.
+- **Other people's kids:** only with a parent's written OK ([release form](PHOTO-AND-STORY-RELEASE.md)).
+- **Water photos:** show safe behavior (an adult within arm's reach, a fence, life jackets on open water).
+- **Always** fill in the "describe the photo" box.
+
 ## Good to know
 
-- **Photos:** use photos under about 2 MB when you can (phone photos are usually fine). Always fill in the description box.
 - **Photos of other people's kids:** only with a parent's written OK. See [PHOTO-AND-STORY-RELEASE.md](PHOTO-AND-STORY-RELEASE.md).
 - **Nothing gets lost.** Every save is kept in the history. If something goes wrong, tell Avery and it can be rolled back.
 - **If a change doesn't show up after 5 minutes,** something in that save may have a typo. Tell Avery. The site stays on the last working version in the meantime, so visitors never see a broken page.

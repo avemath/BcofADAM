@@ -19,11 +19,11 @@ Most of Adam's story on the website comes straight from Mom's Facebook posts (se
 10. A **photo** of you teaching (with the parents' OK for any kids in it).
 
 ## Events
-11. The **2018 fishing rodeo** in Jean Lafitte: the exact date and a photo or two. **Were there any rodeos after 2020** that raised money for Because of ADAM? For each **cornhole tournament**: the year, where, about how much it raised, and how many people or teams came. Any photos?
+11. The **2018 fishing rodeo** in Jean Lafitte: the exact date and a photo or two. **Were there any rodeos after 2020** that raised money for Because of ADAM? For each **cornhole tournament**: the year, where, about how much it raised, and how many people or teams came. Any photos? And the **July 2021 booth**: what event was it, and where?
 12. Any other events we should list (Wear Blue June 5, water safety days, talks at schools or daycares)?
 
 ## The nonprofit
-13. Our IRS record (EIN 85-0723376, from December 2020) shows no annual filings. **Has anyone been filing the 990-N each year?** Do we have the IRS letter? (See the [launch checklist](LAUNCH-CHECKLIST.md).)
+13. Our IRS record (EIN 85-0723376, from December 2020) shows no annual filings. **Has anyone been filing the 990-N each year?** Do we have the IRS letter? And for the CPA: **where did the 2020 cornhole money go** (the flyer mentions ISR swim and CPR scholarships), and did any of it land in the prayersforadam PayPal? (See the [launch checklist](LAUNCH-CHECKLIST.md).)
 14. Which **donation platform** do you want to use? (Zeffy is free for us.) The Venmo from 2020 can't send donation receipts.
 
 ## Photos and video

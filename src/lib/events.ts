@@ -1,9 +1,20 @@
 import { getCollection } from 'astro:content';
 
-/** Published events, newest first. Undated (yearly) events go after dated ones. */
+const MONTHS = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
+
+/** When an event happened: its date, or the year (and month) in "when", like "July 2021" or "Summer 2018". */
+function sortKey(data: { date?: Date; when: string }) {
+  if (data.date) return data.date.valueOf();
+  const year = data.when.match(/\b(19|20)\d{2}\b/);
+  if (!year) return 0;
+  const month = MONTHS.findIndex((m) => data.when.toLowerCase().includes(m));
+  return Date.UTC(Number(year[0]), Math.max(month, 0), 1);
+}
+
+/** Published events, newest first. Yearly events with no year (like "Every June 5") go last. */
 export async function getEvents() {
   const all = await getCollection('events', ({ data }) => !data.draft);
-  return all.sort((a, b) => (b.data.date?.valueOf() ?? 0) - (a.data.date?.valueOf() ?? 0));
+  return all.sort((a, b) => sortKey(b.data) - sortKey(a.data));
 }
 
 /** Upcoming = dated today or later (checked each time the site rebuilds). */
