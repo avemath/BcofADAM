@@ -48,6 +48,55 @@ With network access to facebook.com enabled, we loaded the page as a logged-out 
 - **Video wins.** Post short reels that link to the site: a 30-second "Water Watcher" explainer, "Adam rocks" milestone clips, and a door-alarm or gate-latch demo.
 - **Live Like Jake** is already in your feed. They're a natural partner (ISR scholarships, support for critical-care families).
 
+## Posts shared by the family (18 posts, June 2017 – July 2025)
+
+The family pasted in the page's key posts, which were written by Adam's mom. They settle most of the open questions below and are now the main source for the website's Adam's Story page.
+
+### Facts confirmed in the family's own words
+| Topic | What the posts say |
+|---|---|
+| Date | **Monday, June 5, 2017** (settles 2016 vs 2017) |
+| Family | Adam ("AJ") is the youngest of five: Rickey (then 18), Grace (15), Avery (14), Lea (4). The family is originally from Jean Lafitte, Louisiana, and moved to Pennsylvania |
+| The moment | Graduation week, with family visiting from Louisiana. The girls were dressing for the first softball game. Mom was braiding Avery's hair. Adam was playing in a tent in the living room with Lea, then "crept through the kitchen door" |
+| Doors | "The doors are kept locked and have alarms. We still don't know how he slipped out" (June 2017). "We lulled ourselves into thinking our door alarms would be enough" (2021). *The website uses this, not the news report that the alarms were switched off.* |
+| Time | In the water about 3 minutes (3–5 in the first post) |
+| Rescue | Mom started CPR, then his grandfather ("Pops"), then his dad, then EMS and the UPMC ER |
+| Pulse | "80 mins" in the first post; **"90 minutes without a pulse"** in every post since |
+| Faith | His heart restarted when a priest anointed him; the ER doctor cried |
+| Hospital | Flown to Children's Hospital of Pittsburgh. PICU, trach and feeding tube, about 4 months before coming home |
+| Diagnosis | Anoxic brain injury; seizures; neuromuscular scoliosis (spinal growing rods since 2020); hip/knee surgery and a 7-week stay with liver failure in 2024 |
+| Today (2024) | Can't move his body or speak, but sees, hears and understands. Uses an eye-gaze computer. Homebound school (finished 2nd grade in June 2024). Loves his swing, the ballpark, walks with his nurse, music, Mom's singing, Mickey, Pooh, Spider-Man, fast cars |
+| The nonprofit | Created in 2020 by Adam's siblings as **"Because of Adam: Allies in the Drowning Awareness Movement"**; mission "to teach the importance of water safety by using the lessons of the past, education in the present, and generations of the future to end childhood drowning." Donations were taken at venmo.com/bcofADAM |
+| Dad | Red Cross CPR instructor; ISR instructor (**Little Explorer Swim ISR**) |
+| Mom | Went to nursing school to care for children with anoxic brain injuries |
+
+### The most hopeful moments (used on the site)
+- **Lea's time machine** (2021): *"I love brother just the way he is… Everyone loves Adam and we are all better and smarter people because of him."* This is the origin of the name, and it's now on the About page and Adam's Story.
+- **"Adam. Get out of my room!"** Avery's words that made Adam's eyes shoot open when nothing else worked.
+- **The garden** (2020): *"To plant a garden is to believe in tomorrow."* It became the "Planting seeds" section.
+- **"I can't, but I know a guy"** (2024), **"My stick family can beat up your stick family"** (2024), and **"Adam the attention diva"** (Lea's Amazing Race dream). These capture the family's humor and faith.
+
+### Prevention lessons in the family's words (used on the site)
+- He wasn't "missing": "I had just saw him minutes before."
+- It was quiet: "When Adam left the tent area, he was very quiet."
+- It wasn't swim time: "days before… we coached Adam… to 'Jump in'… when he did it 3 days later, during a non-swim time, we wouldn't be there to catch him."
+- Layers: "ISR not available. Too young to swim. Without a four-sided fence, he didn't stand a chance."
+- "Skills before thrills. Sometimes there are no do-overs."
+- "Never take your eyes off your child… around water, whether it be a pool, a bathtub, a pond, the bayou, and even a bucket."
+- Don't judge: "For every tragic story you read, there are family members in horrendous pain blaming themselves… pause and find kindness." (now on the Survivors page)
+
+### Deliberately left off the website
+To keep the site striking but not morbid, and to protect the family's privacy, the site does **not** include:
+- Graphic rescue details (the driveway, the pavement, "The Color of Love" imagery)
+- The child-services investigation
+- The SPECT scan
+- Seizure descriptions and surgical and medication detail
+
+Those belong on the family's personal page, where readers choose to follow along.
+
+### Hashtags and campaigns worth carrying forward
+**#LearnfromourPastProtectYourFuture** (a strong tagline) · **#WearBlueJune5th** (an annual awareness day) · **#SkillsbeforeThrills** · **#LayerUp** · **#DrowningisPreventable** · #AdamsArmy · #AdamRocks · #StillSurviving · #ThrivinginthefaceofSurviving · #inHisTime
+
 ## Adam's story, as reported by local news
 
 | Detail | What the sources say | Source |

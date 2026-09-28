@@ -129,6 +129,24 @@ const realities = [
     </div>
   </section>
 
+  <section class="section section--foam">
+    <div class="wrap narrow">
+      <span class="eyebrow">For friends, neighbors and everyone else</span>
+      <h2>How to support a family after a drowning</h2>
+      <blockquote class="big-quote reveal">
+        <p>“For every tragic story you read, there are family members in horrendous pain blaming themselves. When you hear these stories, pause and find kindness.”</p>
+        <cite>Adam’s mom</cite>
+      </blockquote>
+      <ul class="support-list">
+        <li><strong>Don’t judge.</strong> Drowning happens to loving, careful families. Skip the comments section.</li>
+        <li><strong>Keep showing up.</strong> Months and years later, not just the first week.</li>
+        <li><strong>Help with the ordinary.</strong> Meals, laundry, and rides to school and practice for the brothers and sisters.</li>
+        <li><strong>Say the child’s name.</strong> Ask how they’re doing, and celebrate every milestone with them.</li>
+        <li><strong>Never say “move on.”</strong> Some things can’t be fixed. They can only be carried, together.</li>
+      </ul>
+    </div>
+  </section>
+
   <CtaBand
     title="Help us support survivor families."
     text="Your gift helps families facing life after a drowning, and helps keep other families from ever facing it."
@@ -156,6 +174,31 @@ const realities = [
   .nf-stats span {
     display: block;
     margin: 6px 0 2px;
+  }
+  .big-quote {
+    margin: 32px 0;
+    padding-left: 24px;
+    border-left: 4px solid var(--aqua);
+  }
+  .big-quote p {
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 1.4vw + 1rem, 1.9rem);
+    line-height: 1.35;
+    color: var(--ocean);
+    margin-bottom: 0.5em;
+  }
+  .big-quote cite {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .support-list {
+    padding-left: 1.2em;
+    display: grid;
+    gap: 10px;
   }
   .resource-list {
     list-style: none;

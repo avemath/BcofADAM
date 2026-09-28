@@ -3,15 +3,14 @@
  * These short lines appear on the home page. The full story is in
  * src/content/pages/adams-story.md.
  *
- * ⚠️  FAMILY TO VERIFY: this draft was assembled from public news coverage
- * (WJAC-TV, WTAJ, Home Nursing Agency's 2019 newsletter) and captions on the
- * Because of ADAM Facebook page. Please correct anything that's wrong and
+ * ⚠️  FAMILY TO VERIFY: this draft is drawn from the family's own Facebook
+ * posts (2017–2025) and public news coverage. Please correct anything that's wrong and
  * remove anything you'd rather not share. See docs/STORY-QUESTIONNAIRE.md.
  */
 export const story = {
   /** Home page, "Meet Adam" section. Lead with who he is, not what happened. */
   teaser:
-    'Adam is a tickle-loving little warrior with a smile that lights up a room. At 14 months old, during a busy family celebration, he slipped outside and into our backyard pool. He survived, and he’s been proving doctors wrong ever since.',
+    'Adam is the youngest of five, a music lover with a smile worth waiting for. At 14 months old, during a busy week of family celebrations, he slipped quietly out the kitchen door and into our backyard pool. After 90 minutes without a pulse, his heart started beating again. He’s been defying the odds ever since.',
 
   /** Shown under the "time on page" counter. */
   timeCompare: 'Adam was out of sight for about three minutes.',
