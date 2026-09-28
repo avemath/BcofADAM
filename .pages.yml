@@ -473,6 +473,10 @@ content:
         label: Describe the photo (required if there's a photo)
         type: string
         description: For people who can't see it, e.g. "Teams playing cornhole under a big white tent".
+      - name: photoWhole
+        label: Show the whole picture (for flyers)
+        type: boolean
+        description: Turn on for flyers or wide pictures so nothing gets cut off.
       - name: link
         label: Link for sign-ups, tickets or photos (optional)
         type: string
