@@ -13,7 +13,7 @@ import AnywhereAnytime from '../components/AnywhereAnytime.astro';
 import EventCard from '../components/EventCard.astro';
 import { getEvents, splitEvents } from '../lib/events';
 import { site, hasDonate } from '../data/site';
-import isr from '../data/isr.json';
+import { isr } from '../data/content';
 import { url } from '../lib/url';
 
 const events = await getEvents();
@@ -33,7 +33,7 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     </div>
     <div class="wrap hero__inner">
       <p class="hero__eyebrow">
-        Because of <strong>ADAM</strong> · <span>Allies in the Drowning Awareness Movement</span>
+        Because of <strong>ADAM</strong> · <span>{site.tagline}</span>
       </p>
       <h1 class="hero__title">
         <span class="hero__line">Drowning is silent.</span>
@@ -175,7 +175,7 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
       <div class="isr-card reveal">
         <p class="isr-card__label">Why this is personal</p>
         <p class="isr-card__name">Adam’s nearest ISR instructor was two hours away.</p>
-        <p>After Adam drowned, our dad became one, so families near us wouldn’t have to make that drive.</p>
+        <p>After Adam drowned, our dad became one, so families in {site.location} wouldn’t have to make that drive.</p>
         <p class="isr-card__quote">“Skills before thrills. Sometimes there are no do-overs.”</p>
       </div>
     </div>
