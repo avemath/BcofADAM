@@ -167,10 +167,9 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
         </div>
       </div>
       <div class="isr-card reveal">
-        <p class="isr-card__label">Our dad’s program</p>
-        <p class="isr-card__name">{isr.programName}</p>
-        {isr.location && <p>{isr.location}</p>}
-        {isr.season && <p>{isr.season}</p>}
+        <p class="isr-card__label">Why this is personal</p>
+        <p class="isr-card__name">Adam’s nearest ISR instructor was two hours away.</p>
+        <p>After Adam drowned, our dad became one, so families near us wouldn’t have to make that drive.</p>
         <p class="isr-card__quote">“Skills before thrills. Sometimes there are no do-overs.”</p>
       </div>
     </div>
@@ -260,7 +259,7 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
           hasDonate ? (
             <a class="card join reveal" href={url('/donate')}>
               <h3>Give</h3>
-              <p>Help put Water Watcher tags, alarms, swim lessons and CPR within reach of more families.</p>
+              <p>Help put Water Watcher tags, alarms, CPR and water safety education within reach of more families.</p>
               <span class="join__go">Donate →</span>
             </a>
           ) : (

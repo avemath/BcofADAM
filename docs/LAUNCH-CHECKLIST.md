@@ -6,7 +6,7 @@ Everything we still need to do to get Because of ADAM and the website fully up a
 
 ---
 
-## ⚠️ First: three things that shape everything else
+## ⚠️ First: four things that shape everything else
 
 1. **We're already registered with the IRS, but we need to check our status right away.** ProPublica lists a 501(c)(3) for us:
    - **Name on file:** "Becasue Of Adam Adolescent Drowning Awareness Movement". *Because* is misspelled, and it says **Adolescent**, not **Allies**.
@@ -20,6 +20,12 @@ Everything we still need to do to get Because of ADAM and the website fully up a
    - Then follow **Path B** (already registered) in Phase 1.
 2. **Donations to a 501(c)(3) can't pay for Adam's own care.** That's "private benefit," and it can cost the organization its tax exemption. Keep personal medical fundraising (e.g. the Facebook page's `paypal.me/prayersforadam` link, or HBOT costs) completely separate, through a personal crowdfund or a special-needs trust. Nonprofit money has to serve the public mission: education, prevention tools, and support for *families in general*. We'll talk this through with an attorney before raising money. The website is already written with this in mind.
 3. **One name everywhere:** **Because of ADAM: Allies in the Drowning Awareness Movement.** (Our IRS record still says "Adolescent," see #1.) Use exactly this in the legal filing, the logo and every social profile. The Facebook page's web address is still `@AdamsVillageofHope`; "Adam's Village of Hope" can stay as the name for our community. Heads up: **"Project ADAM"** is an unrelated CPR/AED program UPMC Children's runs in Blair County, so do a quick trademark search ([USPTO](https://tmsearch.uspto.gov/)) before paying for a logo.
+4. **Keeping the nonprofit and Dad's lessons separate.** Dad's ISR lessons are his own paid business, and he's family of the people running the nonprofit. That's completely fine, as long as the nonprofit never looks like it's selling, funding or steering people to his lessons. Our rules:
+   - The nonprofit site **tells the story** (why Dad became an instructor) and **teaches what ISR is**, but has **no sign-up links, prices or intake forms** for his lessons. The only "find lessons" path is ISR's official instructor map, which lists every certified instructor (Dad included).
+   - The **intake form and sign-ups live on Dad's own business page** (Little Explorer Swim ISR), never on becauseofadam.org and never paid for by the nonprofit.
+   - **Nonprofit money never pays for lessons from Dad**: no scholarships, vouchers or "free lessons" funded by donations. If we ever want to fund lessons, a CPA or attorney should sign off, the board members who aren't family should vote, and families should be free to pick any certified instructor.
+   - **Dad volunteering** for the nonprofit (free water safety talks, CPR demos, speaking at events) is great, as long as it isn't used to sell lessons.
+   - Adopt a written **conflict-of-interest policy** (the IRS has a sample in the Form 1023 instructions) and have the board sign it every year.
 
 ---
 
@@ -115,7 +121,7 @@ The site is built and written. These are the last things to confirm, all doable 
 - [ ] **Mom & Dad go through the [questions](STORY-QUESTIONNAIRE.md)**: the 90 minutes and the priest, naming Lea, how much medical detail, Adam's age and grade, who to thank
 - [ ] **Photos**: 6–10 favorites (Adam then and now, all of us, events, Dad teaching). Upload them in the Studio. Get written consent for any kids who aren't ours ([release form](PHOTO-AND-STORY-RELEASE.md))
 - [ ] **Events**: add each fishing rodeo and cornhole tournament with the year, place, what it raised, and a photo (**Studio → Events & fundraisers**)
-- [ ] **Dad's ISR details**: where, when, and a sign-up link or phone number (**Studio → Pages → ISR Swim Lessons — Dad's program details**)
+- [ ] **Dad's story box**: a photo of Dad teaching (with the parents' OK) (**Studio → Pages → ISR Swim Lessons — Dad's story box**). No sign-up links; see #4 at the top
 - [ ] **Mission statement**: make sure the About page wording matches our legal paperwork
 - [ ] **Board & team**: names, roles, short bios and photos (**Studio → Our team**)
 - [ ] **Fact check**: click every source link on The Facts page and make sure each number still matches (details in [RESEARCH.md](RESEARCH.md))
