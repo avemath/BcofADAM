@@ -33,6 +33,7 @@ Our Facebook page: **[Because of ADAM (@AdamsVillageofHope)](https://www.faceboo
 - **The garden** (2020): *"To plant a garden is to believe in tomorrow."* The "Planting seeds" section.
 - **"Skills before thrills. Sometimes there are no do-overs."** On Adam's Story, the home page and the ISR page.
 - **"Pause and find kindness."** Mom's plea not to judge families after a drowning. On the Survivors page.
+- **The heart on Adam's scan** (Mom's post, Sept. 6, 2018): in September 2017, a SPECT scan showed the part of Adam's brain hurt by the lack of oxygen as a dark area "in the shape of a perfect heart." *"Rather than devastation, I was flooded with immense hope."* She tied it to 1 Corinthians 13:13: *"Three things will last forever: faith, hope, and love, and the greatest of these is love."* It's our logo, and the story is on the About page and in Adam's Story. (The same post has her "They made a Deal" story about Adam and Jesus; that one stays on Facebook.)
 - **Lea's cannonball** (July 2018): after weeks of self-rescue practice with us in the pool, she yelled *"Mom. Brother, watch this!"*, cannonballed off the diving board and swam 40 feet, floating on her back when she needed a breath. On Adam's Story.
 - **The fireflies** (July 2018): a single firefly in the garage, then thousands lighting up Adam's tree and our field. *"God, I see you."* and *"Our village shines just as bright as the fireflies' village."* The second one is on Adam's Story.
 - Also worth using in posts: **"I can't, but I know a guy"** (2024), **"My stick family can beat up your stick family,"** and Lea's **"Adam the attention diva"** Amazing Race dream.
@@ -70,7 +71,7 @@ Kept off the site: hospital and medical photos, bath and pool photos (even happy
 The site is meant to be striking, not morbid, and some things are just ours. So the website does **not** include:
 - graphic rescue details (the driveway, the pavement, the imagery from "The Color of Love")
 - the child-services investigation
-- the brain scan
+- the brain scan images themselves (we tell the heart story in words, and the logo is our drawing of it)
 - seizure descriptions, and surgery and medication details
 - Mom's hardest grief posts, like the backyard and the anger at the pool in July 2018 (we use the fireflies, Lea's swim and the rodeo from that post)
 

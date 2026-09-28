@@ -64,6 +64,8 @@ Adam spent months in hospitals and therapy before he finally came home that fall
 
 Adam had other plans. Within weeks, he cried when Mom read to him. And when nothing else was getting a reaction, his therapist asked me to talk to him the way I normally would at home. The last thing he did before the accident was steal my yellow hairbrush and run off squealing. So I leaned over his crib and snapped, *“Adam. Get out of my room!”* His eyes shot open. We all lost it. His smile took 15 months to come back, and it was worth every single day.
 
+That fall, a scan of Adam’s brain showed the part that was hurt by the lack of oxygen. It was shaped like a perfect heart. Mom wrote, *“Rather than devastation, I was flooded with immense hope.”* That heart became [our logo](/about).
+
 The next summer, Lea wanted to swim again, so we got back in the pool with her. For weeks we worked on self-rescue: swim, roll onto your back, float, breathe, keep going. Then one day she yelled, *“Mom. Brother, watch this!”*, cannonballed off the diving board and swam 40 feet to the other side, rolling onto her back to float whenever she needed a breath. Adam watched the whole thing.
 
 Life after a nonfatal drowning means a trach, a feeding tube, therapies, surgeries and more hospital stays than we can count. It also means a family that shows up for Adam, and for each other, every time. Like Mom says, we’ll “happily carry him through this Amazing Race we call life.”

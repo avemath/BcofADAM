@@ -51,9 +51,9 @@ Defined at the top of [`src/styles/global.css`](../src/styles/global.css). Chang
 Warm, honest, urgent, never blaming. See [CONTENT-PLAN.md §4](CONTENT-PLAN.md#4-voice-and-words) for the words to use and avoid.
 
 ## Logo
-Our mark is a **top-down view of a brain with a heart inside it**, in teal, purple, magenta and orange (September 2026). The heart is the part of Adam's brain that was hurt by the lack of oxygen. On his scans, that area just happened to be shaped like a heart. To us, it's about finding hope in hopeless places. ("Because of Adam, I know so much about the brain," as Lea says.)
+Our mark is a **top-down view of a brain with a heart inside it**, in teal, purple, magenta and orange (September 2026). In September 2017, a SPECT scan of Adam's brain showed the part hurt by the lack of oxygen as a dark area, and it was shaped like a perfect heart. Mom wrote, *"Rather than devastation, I was flooded with immense hope."* To us, it's about finding hope in hopeless places. The story is on the About page and in Adam's Story. ("Because of Adam, I know so much about the brain," as Lea says.)
 
-**A redraw is in progress.** The first version's bottom half (a stem running down from the heart, and folds and lobes meeting at the bottom center) could be misread, so we're keeping the view, the heart and the colors, and smoothing out the bottom. Whatever the final version is, keep the heart as the clear focus and avoid shapes that meet or split at the bottom center.
+**Versions:** the first version's bottom half (a stem running down from the heart, and folds and lobes meeting at the bottom center) could be misread. The site now uses a cleaned-up version with the stem and bottom lobes removed, and a redrawn version (smooth, rounded back of the brain, folds out on the sides) will replace it. Whatever the final version is, keep the heart as the clear focus and avoid shapes that meet or split at the bottom center.
 
 | File | Use |
 |---|---|
