@@ -430,9 +430,10 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
   .stats {
     padding-top: clamp(40px, 6vw, 72px);
   }
+  /* Number, then the bar, then what it means. Sources line up along the bottom. */
   .stat {
-    border-top: 4px solid var(--aqua);
-    padding-top: 18px;
+    display: flex;
+    flex-direction: column;
   }
   .stat__num {
     font-family: var(--font-display);
@@ -442,9 +443,18 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     color: var(--ocean);
     margin-bottom: 12px;
   }
+  .stat .stat__num {
+    padding-bottom: 16px;
+    border-bottom: 4px solid var(--aqua);
+    margin-bottom: 16px;
+  }
   .stat__label {
     font-weight: 600;
     margin-bottom: 8px;
+  }
+  .stat .source {
+    margin-top: auto;
+    align-self: flex-start;
   }
 
   /* ---------- Clock ---------- */
