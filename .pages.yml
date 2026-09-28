@@ -269,6 +269,32 @@ content:
           - name: photoAlt
             label: Describe the photo
             type: string
+      - name: pediatricians
+        label: ISR Swim Lessons — What pediatricians say
+        type: file
+        path: src/data/pediatricians.json
+        format: json
+        fields:
+          - name: title
+            label: Heading
+            type: string
+          - name: summary
+            label: What the AAP recommends, in plain words
+            type: text
+            description: Shows next to our ISR content on the ISR page and the home page. Keep it matching the AAP's current advice.
+          - name: points
+            label: Key points
+            type: string
+            list: true
+          - name: source
+            label: Source name
+            type: string
+          - name: sourceUrl
+            label: Source link
+            type: string
+          - name: policyUrl
+            label: Link to the full AAP policy
+            type: string
       - name: about-photo
         label: About Us — family photo
         type: file

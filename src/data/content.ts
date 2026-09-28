@@ -6,6 +6,7 @@ import teamJson from './team.json';
 import anywhereJson from './anywhere.json';
 import aboutJson from './about.json';
 import isrJson from './isr.json';
+import pediatriciansJson from './pediatricians.json';
 
 export interface Fact {
   stat: string;
@@ -61,4 +62,13 @@ export const resourceGroups: { title: string; items: Resource[] }[] = resourcesJ
 export const team: TeamMember[] = teamJson;
 export const about: { photo?: string; photoAlt?: string; caption?: string } = aboutJson;
 export const isr: IsrBox = isrJson;
+/** "What pediatricians say" box on the ISR page and the home page. */
+export const pediatricians: {
+  title?: string;
+  summary?: string;
+  points?: string[];
+  source?: string;
+  sourceUrl?: string;
+  policyUrl?: string;
+} = pediatriciansJson;
 export const anywhere: Omit<typeof anywhereJson, 'places'> & { places: AnywherePlace[] } = anywhereJson;
