@@ -372,6 +372,12 @@ content:
             label: Blanks to fill in (address, phone numbers…)
             type: string
             list: true
+      - name: accessibility
+        label: Accessibility statement
+        type: file
+        path: src/content/pages/accessibility.md
+        format: yaml-frontmatter
+        fields: *pageFields
       - name: press
         label: Press & Media
         type: file
