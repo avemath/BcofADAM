@@ -376,8 +376,10 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     color: #fff;
     margin-bottom: 1.5rem;
   }
+  /* White, not gold: the moving light in the hero can sit right behind this label on phones. */
   .hero__eyebrow strong {
-    color: var(--sun-text);
+    color: #fff;
+    font-weight: 800;
   }
   .hero__title {
     font-size: clamp(3rem, 8.4vw + 0.5rem, 7.6rem);
