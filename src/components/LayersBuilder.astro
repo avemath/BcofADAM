@@ -151,8 +151,7 @@ const list = (items: string[]) => items.slice(0, -1).join(', ') + ' and ' + item
       <strong>0 of 6 turned on.</strong> Nothing stands between a curious toddler and the water.
     </p>
     <p class="builder__note">
-      This backyard shows {shownLayers.length} of the {layers.length} layers of protection. The other {otherLayers.length},
-      {list(otherLayers)}, go with your family everywhere, not just at home.
+      {`This backyard shows ${shownLayers.length} of the ${layers.length} layers of protection. The other ${otherLayers.length}, ${list(otherLayers)}, go with your family everywhere, not just at home.`}
     </p>
   </div>
 </div>
