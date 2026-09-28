@@ -1,66 +1,97 @@
 ---
 title: Adam’s Story
 eyebrow: Because of Adam
-lede: A little warrior, a village of hope, and the day that started a movement.
+lede: The youngest of five, a smile worth waiting for, and a family that decided to plant seeds.
 description: Meet Adam, a nonfatal drowning survivor from Duncansville, Pennsylvania, and learn why his family started a drowning awareness movement.
 ---
 
 <div class="todo">
-<strong>Family, please review.</strong> This draft was pieced together from public news coverage (WJAC-TV, WTAJ, Home Nursing Agency’s Summer 2019 newsletter) and captions on the Because of ADAM Facebook page. Please fix anything that’s wrong, tell it in your own words, and delete anything you’d rather keep private. Delete each yellow box once that section is final. See <code>docs/STORY-QUESTIONNAIRE.md</code> for prompts.
+<strong>Family, please review.</strong> This version is drawn from the family’s own Facebook posts (2017–2025), with short quotes from Adam’s mom. It deliberately leaves out the most painful medical and rescue details. Fix anything that’s wrong, and delete anything you’d rather keep off the website. Delete each yellow box once that section is final.
 </div>
 
 ## Meet Adam
 
-Adam is a little warrior with a big smile. He loves a good tickle. He’ll happily listen to his dad’s singing (well, mostly). He has been known to “play possum” and fall asleep the minute his therapy is all set up. His brothers and sisters are his biggest cheerleaders, and he is the reason our family does everything we do.
+Adam, or AJ, is the youngest of five. He loves music (especially when Mom sings), Mickey Mouse, Pooh Bear, Spider-Man, fast cars, his favorite movies, and long walks around the neighborhood with his nurse. His happy place is his swing in the backyard. He has a big brother and three big sisters who would do anything for him, and a best friend in his sister Lea.
 
-Adam is also a drowning survivor.
+Adam can’t move his body or speak, but he sees, hears, and understands. He plays games and picks his favorite songs with an eye-gaze computer that follows his eyes. His teachers come to our house for school. And he has a way of saying everything with his eyes and his smile.
 
-<div class="todo">
-Add: Adam’s age today, his favorite things, and a few of the moments that make him <em>him</em>. The Facebook captions are full of these (“May your day be full of tickles!”, the green-screen Jedi movie, “a voice only a son could love”). Choose your favorites.
-</div>
-
-## The day everything changed
-
-June 5, 2017 was supposed to be one of the happiest days of the year. Our oldest son was graduating from high school, our daughter had her first softball game, and our house in Duncansville, Pennsylvania was full of family who had come to celebrate.
-
-Adam was 14 months old. With people coming and going and everyone getting ready to head out the door, he slipped outside without anyone noticing. About three minutes later, he was found in our backyard pool.
-
-His parents and grandparents started CPR right away. First responders took over, and then the emergency team at our local hospital. Everyone kept fighting for him, and so did Adam. He was flown to UPMC Children’s Hospital of Pittsburgh.
-
-Doctors prepared us for the worst. Adam had other plans.
+> We have a secret language that does not need words to communicate.
+>
+> <cite>Adam’s mom</cite>
 
 <div class="todo">
-Verify: the year (one news story says 2016, the others say 2017), how long Adam was out of sight, and who found him. Decide whether to include how long the team worked on him (reports vary from about 45 to more than 80 minutes) and the baptism in the ER. They were shared in past interviews, but you don’t have to include them here.
+Verify: Adam’s current age and grade, and his favorite things today. Keep or remove the eye-gaze and home-school details. Do you want to name Lea here?
 </div>
 
-## Life after a nonfatal drowning
+## June 5, 2017
 
-Adam survived. But surviving a drowning isn’t the end of the story. It’s the beginning of a new one.
+It was a busy, happy week. Our oldest son had just graduated from high school, and family had flown in from Louisiana to celebrate. That Monday afternoon, the girls were in their uniforms for the first softball game of the season. Mom was braiding Avery’s hair. Adam, 14 months old, was playing in a tent in the living room with Lea, bringing in his toys.
 
-For our family, that new story has meant trach life, PICU stays, and more therapy than we can count: early intervention at home in Blair County, hyperbaric oxygen therapy in Louisiana, intensive therapy at a brain center in Orlando, hydrotherapy sessions with Dad, and plenty of days when therapy stopped and we made up our own.
+He was right there. And then, quietly, he wasn’t. He slipped through the kitchen door and headed straight for the pool.
 
-It has also meant celebrating victories other families might never notice: a smile, a laugh, a new sound, a little more strength than yesterday. Adam keeps defying the predictions, in his own time. We call that *Adam rocks*.
+About three minutes later, his mom found him in the water. She started CPR, then his grandfather, then his dad, then the first responders and the emergency team at the hospital. Nobody gave up on him. **After 90 minutes without a pulse, Adam’s heart started beating again**, at the moment a priest anointed him. Adam was flown to UPMC Children’s Hospital of Pittsburgh, where our family’s “after” began.
 
 <div class="todo">
-Verify: each therapy and detail above comes from Facebook captions or news stories. Keep, change or remove any of them, and decide whether to name a diagnosis (for example, brain injury or hearing loss) or specific providers. Add 2–4 photos (see docs/EDITING-GUIDE.md).
+Decide: the 90 minutes and the priest are both in your own posts. Keep them, shorten them, or remove them.
 </div>
 
-## Why we’re speaking up
+## What we wish we’d known
 
-> It only takes a second.
+We’re not careless people. We loved this baby with everything we had. Our doors were kept locked and had alarms. We just didn’t understand how drowning really happens. These are the lessons we learned the hard way, so you don’t have to:
 
-We had alarms on our doors. That day, with a house full of people coming and going, they were switched off. We share that not to blame anyone, but because it’s exactly how drowning happens to loving, careful families: on a busy day, in a moment nobody expected, without a sound.
+- **He wasn’t “missing.”** We had seen him only minutes before. Drowning doesn’t wait for a child to be gone long enough to worry about.
+- **It was quiet.** No splash, no cry. Young children often slip under without a sound.
+- **It wasn’t swim time.** Just days before, we cheered as Adam jumped into the pool into our arms. Three days later, he tried it again when no one was there to catch him.
+- **One layer isn’t enough.** Locked doors and door alarms weren’t enough on their own. A four-sided pool fence would have stood between Adam and the water. Self-rescue swim lessons weren’t available anywhere near us, and he was too young for regular lessons.
+
+> Skills before thrills. Sometimes there are no do-overs.
+>
+> <cite>Adam’s mom</cite>
+
+## Life after
+
+Adam spent months in the hospital before coming home that fall. The doctors told us he had a severe brain injury from the lack of oxygen, and that he might never hear us again.
+
+Adam had other plans. Within weeks, he cried when his mom read to him. When nothing else was getting a reaction, his big sister Avery leaned over his crib and snapped, just like old times, *“Adam. Get out of my room!”* His eyes shot open. His smile took 15 months to come back, and it was worth every day.
+
+Life after a nonfatal drowning means a trach, a feeding tube, therapies, surgeries, and more hospital stays than we can count. It also means a family that shows up for Adam, and for each other, every single time. As his mom says, we’ll “happily carry him through this Amazing Race we call life.”
 
 <div class="todo">
-Decide: this door-alarm detail comes from a news interview. It’s a powerful prevention lesson, but only keep it if you’re comfortable sharing it.
+Verify: how much medical detail to include. This is intentionally brief. Your posts go much deeper, and the website doesn’t need to.
 </div>
 
-The good news is that it only takes a second to latch a gate, switch on an alarm, or put down the phone, too. Because of Adam, our family started teaching others. Rickey teaches infant swim lessons. We talk to anyone who will listen about pool fences, alarms, Water Watchers and CPR. We started **Because of ADAM: A Drowning Awareness Movement** so that other families can learn these lessons the easy way.
+## Planting seeds
+
+The spring before Adam drowned, Lea and her dad started a garden together while Adam watched from his walker. That summer the garden died, and for a long time no one could bear to replant it.
+
+In 2020, we did.
+
+> To plant a garden is to believe in tomorrow.
+>
+> <cite>Audrey Hepburn, and a favorite of Adam’s mom</cite>
+
+That same year, Adam’s brother and sisters created **Because of ADAM** to teach water safety using the lessons of the past, education in the present, and the generations of the future, to end childhood drowning. Adam’s dad became a Red Cross CPR instructor and an ISR self-rescue swim instructor (Little Explorer Swim ISR), teaching babies to roll over and float. Adam’s mom went back to school and became a nurse, to care for children like Adam.
+
+<div class="todo">
+Verify: the founding year and who founded it, the exact mission wording, and whether to name Little Explorer Swim ISR here (see the conflict-of-interest note in docs/CONTENT-PLAN.md).
+</div>
+
+## Because of Adam
+
+When Lea was 7, she and her mom were talking about time machines. Her mom assumed they’d both go back to June 5. Lea had a different answer:
+
+> I love brother just the way he is. He smiles when I sing, and every time he sees me, he is happy. Because of Adam, I know so much about the brain, you learned how to take care of him, and just think of how many babies are going to live because Dad can teach them to float. Everyone loves Adam, and we are all better and smarter people because of him.
+>
+> <cite>Lea, Adam’s sister, age 7</cite>
+
+That’s where our name comes from. Everything we do is because of Adam.
 
 ## Adam’s village
 
-Thousands of people follow Adam’s journey through our Facebook page. They pray for him, cheer for every milestone, and show up for our family again and again. That village is the heart of this movement, and there’s always room for one more.
+For years, thousands of people have followed Adam’s journey, prayed for him, cheered every milestone, and shown up for our family again and again. Nurses, doctors, teachers, therapists, first responders, friends, neighbors, and complete strangers. That village is the heart of this movement.
+
+**Every June 5, we wear blue** for Adam’s hope, his strength, and every family we can reach. We’d love for you to join us.
 
 <div class="todo">
-Add: what “village” means to your family, and a thank-you to the people, churches, businesses and care teams who have carried you.
+Add: a thank-you to the specific people, churches, businesses and care teams you want to name.
 </div>
