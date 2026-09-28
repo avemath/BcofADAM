@@ -1,0 +1,276 @@
+---
+/**
+ * "Not just pools. Not just summer." Where and when kids drown besides a pool in July.
+ * The words come from src/data/anywhere.json (Studio → Home page: Anywhere, anytime).
+ */
+import { anywhere } from '../data/content';
+import { url } from '../lib/url';
+
+const words = anywhere.rotateWords.filter((w) => w.trim() !== '');
+const last = words.at(-1) ?? '';
+// What screen readers hear instead of the moving line.
+const bare = (w: string) => w.trim().replace(/[.!]+$/, '');
+const spoken =
+  words.length > 1
+    ? `${anywhere.rotatePrefix} ${words.slice(0, -1).map(bare).join(', ')}. ${anywhere.rotatePrefix} ${last}`
+    : `${anywhere.rotatePrefix} ${last}`;
+---
+
+<section class="section section--deep anywhere" aria-labelledby="anywhere-title">
+  <div class="anywhere__glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="anywhere__head">
+      <span class="eyebrow">{anywhere.eyebrow}</span>
+      <h2 id="anywhere-title">{anywhere.title}</h2>
+      {
+        words.length > 0 && (
+          <>
+            <p class="anywhere__rotator" data-rotator data-words={JSON.stringify(words)} aria-hidden="true">
+              <span>{anywhere.rotatePrefix}</span> <span class="anywhere__word" data-word>{last}</span>
+            </p>
+            <p class="visually-hidden">{spoken}</p>
+          </>
+        )
+      }
+      <p class="lede">{anywhere.lede}</p>
+    </div>
+
+    <p class="anywhere__swipe" aria-hidden="true">Swipe for more →</p>
+    <div class="grid grid--3 anywhere__grid">
+      {
+        anywhere.places.map((p) => (
+          <article class="card anywhere__card reveal">
+            <span class="anywhere__icon" aria-hidden="true">
+              {p.icon}
+            </span>
+            <h3>{p.title}</h3>
+            <p>{p.text}</p>
+            {p.tip && (
+              <p class="anywhere__tip">
+                <strong>What helps:</strong> {p.tip}
+              </p>
+            )}
+            {p.link && (
+              <a class="anywhere__link" href={url(p.link)}>
+                {p.linkLabel || 'Learn more'} →
+              </a>
+            )}
+            {p.source && (
+              <p class="source">
+                Source:{' '}
+                {p.sourceUrl ? (
+                  <a href={p.sourceUrl} rel="noopener" target="_blank">
+                    {p.source}
+                  </a>
+                ) : (
+                  p.source
+                )}
+              </p>
+            )}
+          </article>
+        ))
+      }
+    </div>
+
+    {
+      anywhere.quote && (
+        <figure class="anywhere__quote reveal">
+          <blockquote>“{anywhere.quote}”</blockquote>
+          {anywhere.quoteBy && <figcaption>{anywhere.quoteBy}</figcaption>}
+        </figure>
+      )
+    }
+
+    <div class="btn-row anywhere__cta">
+      <a class="btn" href={url('/water-safety')}>See every layer of protection</a>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Flip through the words once when the section scrolls into view, then stop on the last one.
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll<HTMLElement>('[data-rotator]').forEach((line) => {
+    const word = line.querySelector<HTMLElement>('[data-word]');
+    const words: string[] = JSON.parse(line.dataset.words ?? '[]');
+    if (!word || words.length < 2 || reduce) return;
+
+    let i = 0;
+    const show = () => {
+      word.textContent = words[i];
+      word.classList.remove('is-in');
+      void word.offsetWidth; // restart the animation
+      word.classList.add('is-in');
+      if (i < words.length - 1) {
+        i += 1;
+        window.setTimeout(show, i === words.length - 1 ? 1900 : 1500);
+      }
+    };
+
+    const watcher = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          watcher.disconnect();
+          show();
+        }
+      },
+      { threshold: 0.8 },
+    );
+    watcher.observe(line);
+  });
+</script>
+
+<style>
+  .anywhere {
+    position: relative;
+    overflow: hidden;
+    background:
+      radial-gradient(60% 50% at 85% 0%, rgb(26 166 183 / 0.28), transparent 70%),
+      radial-gradient(50% 40% at 10% 100%, rgb(255 183 3 / 0.1), transparent 70%),
+      var(--deep);
+  }
+  .anywhere__glow {
+    position: absolute;
+    top: -120px;
+    right: -80px;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgb(255 244 214 / 0.18), transparent 65%);
+    pointer-events: none;
+  }
+  .anywhere .wrap {
+    position: relative;
+  }
+  .anywhere__head {
+    max-width: 980px;
+    margin-inline: auto;
+    text-align: center;
+  }
+  .anywhere__head h2 {
+    color: #fff;
+  }
+  .anywhere__rotator {
+    font-family: var(--font-display);
+    font-size: clamp(1.7rem, 2.6vw + 0.7rem, 2.8rem);
+    font-weight: 600;
+    line-height: 1.15;
+    color: var(--on-dark);
+    margin: 0.4em 0 0.6em;
+    /* Room for two lines on phones, so the page doesn't jump as the words change. */
+    min-height: 2.3em;
+  }
+  @media (min-width: 1000px) {
+    .anywhere__rotator {
+      min-height: 1.15em;
+    }
+  }
+  .anywhere__word {
+    display: inline-block;
+    color: var(--sun);
+  }
+  .anywhere__word.is-in {
+    animation: word-in 0.45s ease-out both;
+  }
+  @keyframes word-in {
+    from {
+      opacity: 0;
+      transform: translateY(0.35em);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  .anywhere__head .lede {
+    margin-inline: auto;
+  }
+  .anywhere__grid {
+    margin-top: clamp(32px, 5vw, 56px);
+  }
+  .anywhere__swipe {
+    display: none;
+  }
+  /* Phones: a row of cards you swipe through, instead of one very long column. */
+  @media (max-width: 759px) {
+    .anywhere__grid {
+      grid-auto-flow: column;
+      grid-auto-columns: 84%;
+      gap: 14px;
+      overflow-x: auto;
+      overscroll-behavior-x: contain;
+      scroll-snap-type: x mandatory;
+      margin-inline: calc(-1 * var(--gutter));
+      padding: 4px var(--gutter) 16px;
+      scroll-padding-inline: var(--gutter);
+      scrollbar-width: thin;
+    }
+    .anywhere__card {
+      scroll-snap-align: start;
+    }
+    .anywhere__swipe {
+      display: block;
+      margin: 18px 0 0;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--on-dark-soft);
+    }
+  }
+  .anywhere__card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+  }
+  .anywhere__icon {
+    display: grid;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgb(255 255 255 / 0.1);
+    font-size: 1.7rem;
+    margin-bottom: 0.4em;
+  }
+  .anywhere__card h3 {
+    color: #fff;
+  }
+  .anywhere__tip {
+    margin-top: 0.4em;
+    padding-top: 0.8em;
+    border-top: 1px solid rgb(255 255 255 / 0.14);
+    color: var(--on-dark);
+  }
+  .anywhere__tip strong {
+    color: var(--sun);
+  }
+  .anywhere__link {
+    font-weight: 700;
+  }
+  .anywhere__card .source {
+    margin-top: auto;
+    padding-top: 0.6em;
+  }
+  .anywhere__quote {
+    margin: clamp(40px, 6vw, 72px) auto 0;
+    max-width: 760px;
+    text-align: center;
+  }
+  .anywhere__quote blockquote {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 2vw + 0.8rem, 2.2rem);
+    font-style: italic;
+    line-height: 1.3;
+    color: #fff;
+  }
+  .anywhere__quote figcaption {
+    margin-top: 0.6em;
+    color: var(--on-dark-soft);
+  }
+  .anywhere__quote figcaption::before {
+    content: '— ';
+  }
+  .anywhere__cta {
+    justify-content: center;
+  }
+</style>

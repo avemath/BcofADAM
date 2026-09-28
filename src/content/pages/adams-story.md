@@ -30,7 +30,8 @@ My parents are not careless people. Adam was loved and watched over like crazy. 
 - **He wasn’t “missing.”** Mom had seen him just minutes before. Drowning doesn’t wait for a child to be gone long enough to worry about.
 - **It was quiet.** No splash, no cry. Little kids often slip under without a sound.
 - **It wasn’t swim time.** Just days before, we cheered him on as he jumped into the pool and into our arms. Three days later he tried it again, when no one was there to catch him.
-- **One layer isn’t enough.** Locked doors and alarms weren’t enough on their own. A four-sided pool fence would have stood between Adam and the water. And the closest [ISR self-rescue lessons](/swim-lessons) were two hours away, so he never got the chance to learn to roll onto his back and float.
+- **Alarms have blind spots.** Our door alarms went quiet when a door was pulled mostly shut but never latched. Test yours, and make sure every door to the pool closes and latches on its own.
+- **One layer isn’t enough.** Locked doors and alarms weren’t enough on their own. Like a lot of families, we didn’t want a fence blocking our view of the pool. A four-sided pool fence would have stood between Adam and the water. And the closest [ISR self-rescue lessons](/swim-lessons) were two hours away, so he never got the chance to learn to roll onto his back and float.
 
 > Skills before thrills. Sometimes there are no do-overs.
 >
@@ -41,6 +42,8 @@ My parents are not careless people. Adam was loved and watched over like crazy. 
 Adam spent months in hospitals and therapy before he finally came home that fall. Doctors told us he had a severe brain injury from the lack of oxygen, and that he might never hear us again.
 
 Adam had other plans. Within weeks, he cried when Mom read to him. And when nothing else was getting a reaction, his therapist asked me to talk to him the way I normally would at home. The last thing he did before the accident was steal my yellow hairbrush and run off squealing. So I leaned over his crib and snapped, *“Adam. Get out of my room!”* His eyes shot open. We all lost it. His smile took 15 months to come back, and it was worth every single day.
+
+The next summer, Lea wanted to swim again, so we got back in the pool with her. For weeks we worked on self-rescue: swim, roll onto your back, float, breathe, keep going. Then one day she yelled, *“Mom. Brother, watch this!”*, cannonballed off the diving board and swam 40 feet to the other side, rolling onto her back to float whenever she needed a breath. Adam watched the whole thing.
 
 Life after a nonfatal drowning means a trach, a feeding tube, therapies, surgeries and more hospital stays than we can count. It also means a family that shows up for Adam, and for each other, every time. Like Mom says, we’ll “happily carry him through this Amazing Race we call life.”
 
@@ -54,7 +57,7 @@ In 2020, we did.
 >
 > *— Audrey Hepburn (one of Mom’s favorites)*
 
-That same year, my brother, sisters and I started **Because of ADAM: Allies in the Drowning Awareness Movement** to teach water safety through the lessons of the past, education in the present and the generations of the future, and to end childhood drowning. We’ve been hosting [fishing rodeos, cornhole tournaments and awareness events](/events) ever since.
+That same year, my brother, sisters and I started **Because of ADAM: Allies in the Drowning Awareness Movement** to teach water safety through the lessons of the past, education in the present and the generations of the future, and to end childhood drowning. We’ve been hosting [cornhole tournaments, awareness days and more](/events) ever since.
 
 Dad became a Red Cross CPR instructor and a certified [ISR instructor](/swim-lessons), and now teaches babies and toddlers to roll onto their backs and float. Mom went back to school and became a nurse, so she could care for kids like Adam.
 
@@ -71,5 +74,11 @@ That’s where our name comes from. Everything we do is because of Adam.
 ## Adam’s village
 
 For years, thousands of you have followed Adam’s journey, prayed for him, cheered for every milestone and shown up for our family again and again: nurses, doctors, teachers, therapists, first responders, friends, neighbors and total strangers. That village is the heart of this movement.
+
+The summer after Adam drowned, our family and our hometown of Jean Lafitte, Louisiana threw a [fishing rodeo](/events) for him. They made shirts, cups and trophies, ran raffles and auctions, and brought the music and the food, with local businesses donating everything they could. It paid for Adam’s first stem cell treatment at Duke. That same summer, Mom looked out over our field one night and saw thousands of fireflies lighting up Adam’s tree.
+
+> Our village shines just as bright as the fireflies’ village.
+>
+> *— Mom*
 
 **Every June 5, we wear blue** for Adam’s hope, his strength, and every family we can reach. We’d love for you to wear it with us.

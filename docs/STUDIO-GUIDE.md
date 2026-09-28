@@ -21,6 +21,7 @@ That's it. From then on, everyone signs in at `/studio` with their email.
 |---|---|
 | ⚙️ **Site settings** | Donation link, show/hide the Facebook feed, contact email, social links, 501(c)(3) status, the **launch** switch |
 | 🏠 **Home page** | The intro, the "Meet Adam" text, Adam's photo, the quote under the clock |
+| 🌙 **Home page — Anywhere, anytime** | The "Not just pools. Not just summer." section: the words that flip by, the six cards (bathtub, winter clothes…), and Mom's quote |
 | 📄 **Pages** | Adam's Story, ISR Swim Lessons (and Dad's story box), Privacy policy |
 | 🎣 **Events & fundraisers** | Add a fishing rodeo, cornhole tournament or any event, with photos and results |
 | 📰 **News & updates** | Post an update about Adam, an event recap, a water safety reminder |

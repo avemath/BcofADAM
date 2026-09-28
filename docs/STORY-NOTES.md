@@ -13,12 +13,13 @@ Our Facebook page: **[Because of ADAM (@AdamsVillageofHope)](https://www.faceboo
 | **The date** | Monday, **June 5, 2017**. (One old news story says 2016; it's wrong.) |
 | **Our family** | Adam ("AJ") is the youngest of five: Rickey (18 at the time), Grace (15), me, Avery (14), and Lea (4). We're originally from Jean Lafitte, Louisiana, and moved to Pennsylvania. |
 | **That day** | Graduation week for Rickey, with family visiting from Louisiana. Grace and I were getting ready for our first softball game and Mom was braiding my hair. Adam was playing in a tent in the living room with Lea, then crept out through the kitchen door. |
-| **The doors** | "The doors are kept locked and have alarms. We still don't know how he slipped out" (June 2017). "We lulled ourselves into thinking our door alarms would be enough" (2021). *The website uses this, not the news report that said the alarms were switched off.* |
+| **The doors** | "The doors are kept locked and have alarms. We still don't know how he slipped out" (June 2017). The alarms "stop signaling when the door is mostly closed but not completely shut" (July 2018). "We lulled ourselves into thinking our door alarms would be enough" (2021). *The website uses these, not the news report that said the alarms were switched off.* |
+| **The fence** | No fence between the house and the pool. Mom: "WHY did I worry more about the view and not fully concern myself about that layer of safety?" (July 2018). The site says it gently: "Like a lot of families, we didn't want a fence blocking our view of the pool." |
 | **How long** | About 3 minutes in the water (3–5 in Mom's first post). |
 | **The rescue** | Mom started CPR, then Pops, then Dad, then EMS and the UPMC ER. |
 | **Pulse** | "80 minutes" in Mom's first post; **"90 minutes without a pulse"** in every post since. The site says 90. |
 | **Faith** | His heart started again when a priest anointed him. The ER doctor cried. |
-| **After** | Flown to UPMC Children's Hospital of Pittsburgh. PICU, trach and feeding tube, and months away before coming home that fall. |
+| **After** | Flown to UPMC Children's Hospital of Pittsburgh. PICU, trach and feeding tube, and months away before coming home that fall. First stem cell treatment at Duke University in summer 2018, paid for by the Jean Lafitte fishing rodeo. |
 | **Adam's injuries** | Anoxic brain injury, seizures, neuromuscular scoliosis (spinal growing rods since 2020), and hip/knee surgery plus a 7-week hospital stay with liver failure in 2024. |
 | **Adam today** | Can't move his body or talk, but sees, hears and understands. Uses an eye-gaze computer. School at home. Loves his swing, the ballpark, walks with his nurse, music, Mom's singing, Mickey, Pooh, Spider-Man and fast cars. |
 | **Because of ADAM** | We started it in 2020 as **"Because of ADAM: Allies in the Drowning Awareness Movement"** (a 2019 newsletter and our IRS record say "Adolescent Drowning Awareness Movement"; we use "Allies" now), to teach water safety "using the lessons of the past, education in the present, and generations of the future to end childhood drowning." |
@@ -32,6 +33,8 @@ Our Facebook page: **[Because of ADAM (@AdamsVillageofHope)](https://www.faceboo
 - **The garden** (2020): *"To plant a garden is to believe in tomorrow."* The "Planting seeds" section.
 - **"Skills before thrills. Sometimes there are no do-overs."** On Adam's Story, the home page and the ISR page.
 - **"Pause and find kindness."** Mom's plea not to judge families after a drowning. On the Survivors page.
+- **Lea's cannonball** (July 2018): after weeks of self-rescue practice with us in the pool, she yelled *"Mom. Brother, watch this!"*, cannonballed off the diving board and swam 40 feet, floating on her back when she needed a breath. On Adam's Story.
+- **The fireflies** (July 2018): a single firefly in the garage, then thousands lighting up Adam's tree and our field. *"God, I see you."* and *"Our village shines just as bright as the fireflies' village."* The second one is on Adam's Story.
 - Also worth using in posts: **"I can't, but I know a guy"** (2024), **"My stick family can beat up your stick family,"** and Lea's **"Adam the attention diva"** Amazing Race dream.
 
 ## Our prevention lessons, in our words
@@ -40,6 +43,7 @@ Our Facebook page: **[Because of ADAM (@AdamsVillageofHope)](https://www.faceboo
 - **It was quiet.** "When Adam left the tent area, he was very quiet."
 - **It wasn't swim time.** Days before, we coached him to "Jump in!" Three days later, during a non-swim time, nobody was there to catch him.
 - **Layers.** "ISR not available. Too young to swim. Without a four-sided fence, he didn't stand a chance."
+- **Alarms have blind spots.** Our door alarms went quiet when a door was mostly closed but not latched.
 - **Everywhere there's water.** "A pool, a bathtub, a pond, the bayou, and even a bucket."
 
 ## What we keep off the website
@@ -49,12 +53,13 @@ The site is meant to be striking, not morbid, and some things are just ours. So 
 - the child-services investigation
 - the brain scan
 - seizure descriptions, and surgery and medication details
+- Mom's hardest grief posts, like the backyard and the anger at the pool in July 2018 (we use the fireflies, Lea's swim and the rodeo from that post)
 
 Those stay on Facebook, where people choose to follow along.
 
 ## Hashtags and campaigns
 
-**#BecauseofADAM** · **#LearnfromourPastProtectYourFuture** (our tagline) · **#WearBlueJune5th** (every June 5) · **#SkillsbeforeThrills** · **#LayerUp** · **#DrowningisPreventable** · #AdamsVillage · #AdamsArmy · #AdamRocks · #StillSurviving · #inHisTime
+**#BecauseofADAM** · **#LearnfromourPastProtectYourFuture** (our tagline) · **#WearBlueJune5th** (every June 5) · **#SkillsbeforeThrills** · **#LayerUp** · **#DrowningisPreventable** · #AdamsVillage · #AdamsVillageofHope · #WereTheVillage · #AdamsArmy · #AdamRocks · #IseeYou · #StillSurviving · #inHisTime
 
 ## Our Facebook page
 
@@ -67,9 +72,9 @@ Those stay on Facebook, where people choose to follow along.
 
 - **Cornhole Tournament**, Saturday, Sept. 26, 2020, Duncansville: raised money for local ISR swim lessons and CPR education ([Facebook event](https://www.facebook.com/events/705135283403437/))
 - **Mardi Gras 2020**: family in Louisiana made parade throws to spread drowning awareness in Adam's honor
-- **Fishing rodeo(s)**: we still need to add the dates, place and results in the Studio
+- **Fishing rodeo**, summer 2018, Jean Lafitte, Louisiana: our family and hometown put it on (shirts, cups, fans, trophies, raffles, music, games, auctions, food, all donated). It "completely paid for our first Stem Cell Treatment and travel to Duke University" (Mom, July 22, 2018). Because the money went to Adam's own care before the nonprofit existed, the Events page lists it as a **Community** event and says so. Still need: the exact date, a photo, and whether there were any later rodeos for Because of ADAM.
 - **Wear Blue on June 5**: every year
-- (The Oct. 2017 vendor fair in Duncansville raised money for Adam's own care, before the nonprofit existed, so it isn't listed as a Because of ADAM event.)
+- (The Oct. 2017 vendor fair in Duncansville also raised money for Adam's own care, before the nonprofit existed. It isn't on the site, but it could be added the same way as the rodeo.)
 
 ## News coverage we've had
 

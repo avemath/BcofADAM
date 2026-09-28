@@ -28,13 +28,14 @@ Related: [Launch checklist](LAUNCH-CHECKLIST.md) · [Research & sources](RESEARC
 
 ## 3. Messaging pillars
 
-Use these five ideas consistently across the site, social media, talks and printed materials.
+Use these six ideas consistently across the site, social media, talks and printed materials.
 
 1. **Drowning is silent.** It happens in seconds, often with adults nearby, with no splashing or screaming. *(Home hero; The Facts)*
-2. **It only takes a second.** Mom and Dad's own words. Adam slipped out during a busy graduation celebration and was found minutes later. *(Home clock; Adam's Story)*
-3. **No single layer is enough, so stack them.** Supervision, barriers, alarms, covers, swim skills, life jackets and CPR. Layers fail on busy days, so every family needs more than one. *(Layers builder; Water Safety)*
-4. **Surviving is only the beginning.** Nonfatal drowning can mean a lifetime of brain injury, therapy and cost. *(Survivors & Families)*
-5. **It takes a village.** From *Adam's Village of Hope* to a movement. *(About; Get Involved)*
+2. **Not just pools. Not just summer.** Bathtubs, buckets, toilets, ponds, hot tubs and the pool in the off-season. Kids wake up at night, sleepwalk, wander, and fall in fully dressed in winter clothes. Drowning is silent and unforgiving, anywhere and anytime. *(Home "Anywhere, anytime" section; Water Safety)*
+3. **It only takes a second.** Mom and Dad's own words. Adam slipped out during a busy graduation celebration and was found minutes later. *(Home clock; Adam's Story)*
+4. **No single layer is enough, so stack them.** Supervision, barriers, alarms, covers, swim skills, life jackets and CPR. Layers fail on busy days, so every family needs more than one. *(Layers builder; Water Safety)*
+5. **Surviving is only the beginning.** Nonfatal drowning can mean a lifetime of brain injury, therapy and cost. *(Survivors & Families)*
+6. **It takes a village.** From *Adam's Village of Hope* to a movement. *(About; Get Involved)*
 
 **The one line everyone should remember:** *If a child is missing, check the water first.* (It's in every page's footer.)
 
@@ -65,7 +66,7 @@ The goal is to make a parent stop and act, not to frighten or grieve them. Mom's
 
 | Page | Purpose | Key content | Main call to action | Status |
 |---|---|---|---|---|
-| **Home** `/` | Hook, emotion, first action | "Drowning is silent. We won't be." hero · 4 headline stats · Meet Adam · time-on-page clock · interactive layers builder · 7 layers · Dad's ISR lessons · survivors · events · Facebook feed · pledge band · ways to help | Read Adam's story / Learn the layers | ✍️ Adam's photo |
+| **Home** `/` | Hook, emotion, first action | "Drowning is silent. We won't be." hero · 4 headline stats · "Not just pools. Not just summer." (anywhere, anytime) · Meet Adam · time-on-page clock · interactive layers builder · 7 layers · Dad's ISR lessons · survivors · events · Facebook feed · pledge band · ways to help | Read Adam's story / Learn the layers | ✍️ Adam's photo |
 | **Adam's Story** `/adams-story` | The heart of the site, told by Avery | Meet Adam · June 5, 2017 · what we wish we'd known · life after · planting seeds · because of Adam · Adam's village | Learn the layers / ISR / Take the pledge | ✍️ Mom & Dad's final OK |
 | **ISR Swim Lessons** `/swim-lessons` | Why self-rescue lessons matter so much to us | What ISR is · how lessons work · why it's vital · one layer, not the only one · why Dad teaches ISR (story only, with a separation note) · **find a certified instructor by ZIP** | Find an instructor | ✍️ photo of Dad |
 | **Events** `/events` | Show the village in action | Fishing rodeos · cornhole tournaments · awareness days (upcoming and past) | Come / host one | ✍️ dates, results, photos |
@@ -89,7 +90,8 @@ The goal is to make a parent stop and act, not to frighten or grieve them. Mom's
 - **Water-level bar:** a thin "water line" on the left edge rises as you scroll.
 - **Pledge with printable card:** tick all six promises, then print a Water Watcher card to laminate and put on a lanyard.
 - **One-tap share text:** ready-made posts with #BecauseOfADAM.
-- **Live Facebook feed** on the home and News pages (can be turned off in the Studio).
+- **"It can happen in…" line:** flips through a bathtub, a bucket, a pool in January… and lands on *seconds.* Swipeable cards on phones.
+- **Live Facebook feed** on the home and News pages. It grows to fit big screens and shrinks to fit phones, and can be turned off in the Studio.
 - **ISR instructor finder:** type a ZIP code, land on ISR's official instructor search.
 - All motion respects the "reduce motion" accessibility setting, and everything works with a keyboard and screen reader.
 

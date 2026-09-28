@@ -9,7 +9,7 @@ Most of Adam's story on the website comes straight from Mom's Facebook posts (se
 2. The site names all of us (Rickey, Grace, me, Lea) and quotes Lea's time-machine answer from when she was 7. **Is Lea OK with that?**
 3. The site mentions Adam's **trach, feeding tube, eye-gaze computer and home school**. Too much, or just right?
 4. Adam's **age and grade** right now, so we can add them to "Meet Adam."
-5. Anything you'd add to **"What we wish we'd known"**?
+5. Anything you'd add to **"What we wish we'd known"**? It now includes two lessons from Mom's July 2018 post: the door alarms that went quiet when a door wasn't latched, and not wanting a fence blocking the view of the pool. **Mom, are you OK with both?**
 6. Who do you want to **thank by name** (doctors, nurses, first responders, churches, businesses, therapists)?
 
 ## Dad's ISR lessons
@@ -19,7 +19,7 @@ Most of Adam's story on the website comes straight from Mom's Facebook posts (se
 10. A **photo** of you teaching (with the parents' OK for any kids in it).
 
 ## Events
-11. For each **fishing rodeo** and **cornhole tournament**: the year, where, about how much it raised, and how many people or teams came. Any photos?
+11. The **2018 fishing rodeo** in Jean Lafitte: the exact date and a photo or two. **Were there any rodeos after 2020** that raised money for Because of ADAM? For each **cornhole tournament**: the year, where, about how much it raised, and how many people or teams came. Any photos?
 12. Any other events we should list (Wear Blue June 5, water safety days, talks at schools or daycares)?
 
 ## The nonprofit

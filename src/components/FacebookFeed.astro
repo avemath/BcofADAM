@@ -2,43 +2,60 @@
 /**
  * Live feed from our Facebook page, using Facebook's official Page Plugin.
  * Turn it on or off in the Studio (Site settings → Show Facebook feed).
+ *
+ * Facebook won't draw the feed wider than 500px, so on bigger screens we
+ * scale it up to fill its space (up to 1.5×). On phones it shrinks to fit.
+ * The height follows the screen too, up to `maxHeight`.
+ *
  * Some browsers and ad blockers hide Facebook embeds, so there's always a
  * plain link underneath.
  */
 import { site } from '../data/site';
 
 interface Props {
-  height?: number;
+  maxHeight?: number;
 }
-const { height = 720 } = Astro.props;
+const { maxHeight = 900 } = Astro.props;
 
 const pageUrl = site.facebookUrl;
-const src =
-  'https://www.facebook.com/plugins/page.php?' +
-  new URLSearchParams({
-    href: pageUrl,
-    tabs: 'timeline',
-    width: '500',
-    height: String(height),
-    small_header: 'false',
-    adapt_container_width: 'true',
-    hide_cover: 'false',
-    show_facepile: 'false',
-  }).toString();
+const title = 'Latest posts from the Because of ADAM Facebook page';
+
+/** Facebook's plugin address for a given size. The script below builds the same thing in the browser. */
+function feedSrc(width: number, height: number) {
+  return (
+    'https://www.facebook.com/plugins/page.php?' +
+    new URLSearchParams({
+      href: pageUrl,
+      tabs: 'timeline',
+      width: String(width),
+      height: String(height),
+      small_header: 'false',
+      adapt_container_width: 'true',
+      hide_cover: 'false',
+      show_facepile: 'false',
+    }).toString()
+  );
+}
 ---
 
 {
   site.showFacebookFeed && pageUrl && (
-    <div class="fb-feed">
-      <div class="fb-feed__frame" style={`--h:${height}px`}>
+    <div class="fb-feed" data-fb-feed data-href={pageUrl} style={`--max-h:${maxHeight}px`}>
+      <div class="fb-feed__frame">
         <iframe
-          src={src}
-          title="Latest posts from the Because of ADAM Facebook page"
-          width="500"
-          height={height}
+          data-fb-iframe
+          title={title}
           loading="lazy"
           allow="encrypted-media; picture-in-picture; web-share"
         />
+        <noscript>
+          <iframe
+            src={feedSrc(500, 640)}
+            title={title}
+            loading="lazy"
+            allow="encrypted-media; picture-in-picture; web-share"
+          />
+        </noscript>
       </div>
       <p class="fb-feed__fallback">
         Don’t see our posts? Some browsers block Facebook.{' '}
@@ -51,15 +68,71 @@ const src =
   )
 }
 
+<script>
+  const FB_MAX_WIDTH = 500; // the widest Facebook will draw the feed
+  const FB_MIN_WIDTH = 180; // the narrowest
+
+  function fit(feed: HTMLElement) {
+    const frame = feed.querySelector<HTMLElement>('.fb-feed__frame');
+    const iframe = feed.querySelector<HTMLIFrameElement>('[data-fb-iframe]');
+    if (!frame || !iframe) return;
+
+    // How much room the feed has on this screen (set by the CSS below).
+    const boxW = frame.clientWidth;
+    const boxH = frame.clientHeight;
+    if (!boxW || !boxH) return;
+
+    const width = Math.max(FB_MIN_WIDTH, Math.min(FB_MAX_WIDTH, Math.floor(boxW)));
+    const scale = boxW > FB_MAX_WIDTH ? boxW / FB_MAX_WIDTH : 1;
+    // Round the height so small changes don't reload the feed.
+    const height = Math.round(boxH / scale / 10) * 10;
+
+    iframe.style.width = `${width}px`;
+    iframe.style.height = `${height}px`;
+    iframe.style.transform = scale > 1 ? `scale(${scale})` : '';
+
+    // Only reload the feed when Facebook needs to redraw it at a new size.
+    const size = `${width}x${height}`;
+    if (iframe.dataset.size === size) return;
+    iframe.dataset.size = size;
+    iframe.src =
+      'https://www.facebook.com/plugins/page.php?' +
+      new URLSearchParams({
+        href: feed.dataset.href ?? '',
+        tabs: 'timeline',
+        width: String(width),
+        height: String(height),
+        small_header: 'false',
+        adapt_container_width: 'true',
+        hide_cover: 'false',
+        show_facepile: 'false',
+      }).toString();
+  }
+
+  const feeds = [...document.querySelectorAll<HTMLElement>('[data-fb-feed]')];
+  feeds.forEach(fit);
+
+  // Refit when the window is resized or the phone is turned sideways, once it settles.
+  // (The height uses svh, so a phone's address bar sliding away doesn't reload the feed.)
+  let timer: number | undefined;
+  window.addEventListener('resize', () => {
+    window.clearTimeout(timer);
+    timer = window.setTimeout(() => feeds.forEach(fit), 300);
+  });
+</script>
+
 <style>
   .fb-feed {
     width: 100%;
-    max-width: 500px;
+    /* 500px is Facebook's widest; we scale it up to 1.5× on big screens. */
+    max-width: 750px;
   }
   .fb-feed__frame {
     position: relative;
     width: 100%;
-    height: var(--h);
+    /* Most of the screen's height, but never tiny and never taller than maxHeight. */
+    height: clamp(480px, 80vh, var(--max-h));
+    height: clamp(480px, 80svh, var(--max-h));
     border-radius: var(--radius);
     overflow: hidden;
     background:
@@ -82,6 +155,11 @@ const src =
     height: 100%;
     border: 0;
     display: block;
+    transform-origin: 0 0;
+  }
+  /* Without JavaScript, show the plain 500px feed from <noscript> instead. */
+  :global(html:not(.js)) .fb-feed [data-fb-iframe] {
+    display: none;
   }
   .fb-feed__fallback {
     font-size: 0.85rem;

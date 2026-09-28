@@ -9,6 +9,7 @@ import { headline, nonfatal } from '../data/content';
 import { layers } from '../data/layers';
 import { home as story } from '../data/content';
 import FacebookFeed from '../components/FacebookFeed.astro';
+import AnywhereAnytime from '../components/AnywhereAnytime.astro';
 import EventCard from '../components/EventCard.astro';
 import { getEvents, splitEvents } from '../lib/events';
 import { site, hasDonate } from '../data/site';
@@ -78,6 +79,11 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
       </div>
     </div>
   </section>
+
+  <!-- ANYWHERE, ANYTIME -->
+  <Wave color="var(--deep)" bg="var(--sand)" />
+  <AnywhereAnytime />
+  <Wave color="var(--foam)" bg="var(--deep)" />
 
   <!-- ADAM -->
   <section class="section section--foam">
@@ -206,7 +212,7 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
         <div class="wrap">
           <span class="eyebrow">Events & fundraisers</span>
           <h2>Fishing rodeos, cornhole & a whole lot of village.</h2>
-          <p class="lede">Every event raises money and awareness, and puts water safety in front of families who need it.</p>
+          <p class="lede">Every one brings Adam’s village together and puts water safety in front of families who need it.</p>
           <div class="grid grid--3" style="margin-top: 32px">
             {homeEvents.map((e) => <EventCard event={e} />)}
           </div>
@@ -234,7 +240,7 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
               <a class="btn btn--ocean" href={site.facebookUrl} rel="noopener" target="_blank">Follow us on Facebook</a>
             </div>
           </div>
-          <FacebookFeed height={640} />
+          <FacebookFeed maxHeight={860} />
         </div>
       </section>
     )
@@ -508,6 +514,16 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
   }
   .fb-split :global(.fb-feed) {
     justify-self: center;
+  }
+  /* Give the feed the bigger side on wide screens so it can scale up. */
+  @media (min-width: 900px) {
+    .fb-split {
+      grid-template-columns: minmax(260px, 0.75fr) minmax(0, 1.25fr);
+    }
+    .fb-split > :first-child {
+      position: sticky;
+      top: 110px;
+    }
   }
 
   /* ---------- Join ---------- */

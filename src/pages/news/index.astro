@@ -36,7 +36,7 @@ const fmt = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeZone: 'UTC
         site.showFacebookFeed && (
           <aside>
             <h2 class="news-aside__title">Latest on Facebook</h2>
-            <FacebookFeed height={900} />
+            <FacebookFeed maxHeight={1000} />
           </aside>
         )
       }
@@ -51,7 +51,7 @@ const fmt = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeZone: 'UTC
   }
   @media (min-width: 1000px) {
     .news-layout {
-      grid-template-columns: minmax(0, 1fr) 500px;
+      grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
       align-items: start;
     }
   }

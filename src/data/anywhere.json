@@ -1,0 +1,82 @@
+{
+  "eyebrow": "Anywhere. Anytime.",
+  "title": "Not just pools. Not just summer.",
+  "lede": "Drowning is silent and unforgiving. It takes seconds and as little as an inch or two of water, and it doesn’t wait for swim season. Any water a little one can reach needs a layer of protection.",
+  "rotatePrefix": "It can happen in",
+  "rotateWords": [
+    "a bathtub.",
+    "a bucket.",
+    "a backyard pond.",
+    "a toilet.",
+    "a hot tub.",
+    "a pool in January.",
+    "a cooler of melted ice.",
+    "a drainage ditch.",
+    "the bayou.",
+    "seconds."
+  ],
+  "places": [
+    {
+      "icon": "🛁",
+      "title": "The bathtub",
+      "text": "Most child drownings inside the home happen in the bathtub, usually during a quick break in supervision. For babies under 1, it’s the most common place of all.",
+      "tip": "Stay within arm’s reach until bath time is over. If you have to step away, even for a second, take the baby with you.",
+      "source": "American Academy of Pediatrics; CDC",
+      "sourceUrl": "https://www.healthychildren.org/English/safety-prevention/at-play/Pages/Water-Safety-And-Young-Children.aspx",
+      "link": "",
+      "linkLabel": ""
+    },
+    {
+      "icon": "🪣",
+      "title": "An inch or two of water",
+      "text": "Buckets, toilets, coolers of melted ice, kiddie pools and the puddle on top of a pool cover. A toddler can drown in as little as an inch or two of water.",
+      "tip": "Empty buckets, coolers and kiddie pools right after you use them, and put latches on toilet lids.",
+      "source": "American Academy of Pediatrics",
+      "sourceUrl": "https://www.healthychildren.org/English/safety-prevention/at-play/Pages/Water-Safety-And-Young-Children.aspx",
+      "link": "",
+      "linkLabel": ""
+    },
+    {
+      "icon": "🌙",
+      "title": "While the house is asleep",
+      "text": "Kids wake up early, sleepwalk and wander. Children with autism are about 160 times as likely as other kids to die from drowning, often after wandering away.",
+      "tip": "Keep doors to the water locked and alarmed at night too, latch the pool gate every time, and make a wandering plan if your child has autism.",
+      "source": "Guan & Li, American Journal of Public Health, 2017",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/28590851/",
+      "link": "",
+      "linkLabel": ""
+    },
+    {
+      "icon": "🧥",
+      "title": "In winter clothes",
+      "text": "Kids who fall in aren’t dressed to swim. Jeans, boots and a heavy coat soak up water fast, and water colder than 70°F can make anyone gasp and lose control of their breathing.",
+      "tip": "Self-rescue lessons like ISR have kids practice floating in their clothes and shoes, because that’s how it really happens.",
+      "source": "Pennsylvania Fish & Boat Commission",
+      "sourceUrl": "https://www.pa.gov/agencies/fishandboat/boating/regulations/cold-weather-life-jacket",
+      "link": "/swim-lessons",
+      "linkLabel": "About ISR lessons"
+    },
+    {
+      "icon": "❄️",
+      "title": "Off-season water",
+      "text": "Pool drownings peak in summer, but bathtubs, hot tubs, ponds and covered pools don’t take the winter off. Rain and snowmelt collect on pool covers, and pond ice can look solid when it isn’t.",
+      "tip": "Keep the fence and gate locked all year, use a certified safety cover and pump the water off it, and keep kids off the ice.",
+      "source": "CPSC, 2026 report",
+      "sourceUrl": "https://www.cpsc.gov/Newsroom/News-Releases/2026/CPSC-Report-Highlights-Persistent-Risk-of-Childhood-Drowning",
+      "link": "",
+      "linkLabel": ""
+    },
+    {
+      "icon": "🎉",
+      "title": "On the busiest days",
+      "text": "Holidays, birthday parties, a house full of company. When everyone is watching, no one is. Adam slipped out during a week full of family celebrations.",
+      "tip": "Name a Water Watcher any time kids and water are together, and check that doors, gates and alarms are still set when the company leaves.",
+      "source": "",
+      "sourceUrl": "",
+      "link": "/water-watcher",
+      "linkLabel": "Take the Water Watcher pledge"
+    }
+  ],
+  "quote": "A pool, a bathtub, a pond, the bayou, and even a bucket.",
+  "quoteBy": "Our mom"
+}
