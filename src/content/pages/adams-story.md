@@ -22,8 +22,8 @@ photos:
     caption: Lea and Adam, best friends.
   - section: Adam’s village
     photo: ""
-    alt: A packed pavilion full of people wearing blue Adam’s Hope shirts
-    caption: Adam’s village in blue Adam’s Hope shirts at the 2017 benefit on the bayou in Lafitte, Louisiana.
+    alt: Painting of a little boy on a swing hanging from a tree, under a glowing full moon, with fireflies below
+    caption: Our mom’s painting of Adam’s swing, under the moon and the fireflies. It’s on every Adam’s Hope shirt.
 ---
 
 ## Meet Adam

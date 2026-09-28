@@ -271,6 +271,21 @@ content:
           - name: photoAlt
             label: Describe the photo
             type: string
+      - name: about-photo
+        label: About Us — family photo
+        type: file
+        path: src/data/about.json
+        format: json
+        fields:
+          - name: photo
+            label: Photo (shows right under "It started with our little brother.")
+            type: image
+          - name: photoAlt
+            label: Describe the photo (for people who can't see it)
+            type: string
+          - name: caption
+            label: Caption under the photo
+            type: string
       - name: privacy
         label: Privacy policy
         type: file

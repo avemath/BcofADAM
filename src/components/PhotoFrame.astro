@@ -12,13 +12,15 @@ interface Props {
   caption?: string;
   hint?: string;
   ratio?: string;
+  /** Show the photo in its own shape (tall or wide) instead of cropping it. */
+  natural?: boolean;
 }
-const { src, alt = '', caption, hint = 'Add a photo', ratio = '4 / 5' } = Astro.props;
+const { src, alt = '', caption, hint = 'Add a photo', ratio = '4 / 5', natural = false } = Astro.props;
 // Unique ids so several placeholders can share a page.
 const uid = Math.random().toString(36).slice(2, 8);
 ---
 
-<figure class="photo" style={`--ratio:${ratio}`}>
+<figure class:list={['photo', { 'photo--natural': natural }]} style={`--ratio:${ratio}`}>
   {
     src ? (
       <img src={url(src)} alt={alt} loading="lazy" decoding="async" />
@@ -63,6 +65,14 @@ const uid = Math.random().toString(36).slice(2, 8);
   .photo__placeholder {
     position: relative;
     overflow: hidden;
+  }
+  .photo--natural img {
+    aspect-ratio: auto;
+    width: auto;
+    max-width: 100%;
+    max-height: min(640px, 80vh);
+    margin-inline: auto;
+    display: block;
   }
   .photo__placeholder svg {
     width: 100%;
