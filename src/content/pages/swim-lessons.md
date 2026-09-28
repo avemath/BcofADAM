@@ -37,7 +37,7 @@ We don’t want our kids to love the water before they know how to save themselv
 
 ## What ISR is
 
-**Infant Swimming Resource (ISR)** was founded in 1966 by Dr. Harvey Barnett ([infantswim.com](https://www.infantswim.com/about/)), with one mission: *Not One More Child Drowns.* It teaches self-rescue to kids from 6 months to 6 years old. The idea is simple: if a child ends up in the water alone, they should know what to do to survive until an adult gets to them. ISR has delivered millions of lessons and shares hundreds of documented stories of kids who used their skills to save themselves.
+**Infant Swimming Resource (ISR)** has taught survival swimming lessons to infants and young children since 1966 ([infantswim.com](https://www.infantswim.com/about/)), with one mission: *Not One More Child Drowns.* It teaches self-rescue to kids from 6 months to 6 years old. The idea is simple: if a child ends up in the water alone, they should know what to do to survive until an adult gets to them. ISR has delivered millions of lessons and shares hundreds of documented stories of kids who used their skills to save themselves.
 
 This isn’t “mommy and me” splash time. It’s survival skills, taught one child at a time by a certified instructor.
 
@@ -47,10 +47,10 @@ This isn’t “mommy and me” splash time. It’s survival skills, taught one 
 ## How lessons work
 
 - **One-on-one** with a certified ISR instructor, never in a group.
-- **10 minutes a day, 5 days a week,** for about 4–6 weeks (usually 20–30 lessons). Short, daily lessons are how little bodies learn and remember the skills.
+- **About 10 minutes a day, most days of the week,** for several weeks. Short, frequent lessons are how little bodies learn and remember the skills.
 - **Safety checks every day.** Before lessons start, ISR’s medical review team looks over each child’s health history. Then, before every lesson, the instructor checks in with the parent about sleep, eating and diapers.
 - **Practice in clothes.** Most kids who fall in aren’t wearing a swimsuit, so once they’re skilled, every student practices in summer and winter clothes, shoes and all.
-- **Highly trained instructors.** ISR instructors train for weeks in the water with an ISR Master Instructor, study child development and water safety, and must recertify every single year.
+- **Highly trained instructors.** ISR instructors go through intensive training before they teach. Our dad spent eight weeks training in Florida.
 - **Refreshers** as kids grow, so their skills keep up with their bigger bodies.
 
 ## No ISR instructor near you?
