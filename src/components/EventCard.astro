@@ -17,7 +17,15 @@ const icon: Record<string, string> = {
 };
 // A few friendly icons picked from the event name.
 const t = e.title.toLowerCase();
-const art = /fish|rodeo/.test(t) ? '🎣' : /cornhole/.test(t) ? '🎯' : /mardi gras/.test(t) ? '🎭' : (icon[e.kind] ?? '💙');
+const art = /fish|rodeo/.test(t)
+  ? '🎣'
+  : /cornhole/.test(t)
+    ? '🎯'
+    : /mardi gras/.test(t)
+      ? '🎭'
+      : /booth|tent/.test(t)
+        ? '⛺'
+        : (icon[e.kind] ?? '💙');
 ---
 
 <article class="event card">

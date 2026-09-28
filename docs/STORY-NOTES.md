@@ -57,9 +57,15 @@ The site is meant to be striking, not morbid, and some things are just ours. So 
 
 Those stay on Facebook, where people choose to follow along.
 
+## Lines from our banner (2021)
+
+- *"We will end childhood drowning. Join the movement. Become an Ally!"* (now on the Get Involved page)
+- *"Learn from our past. Protect their future."*
+- The banner also says "2 children drown every day" and "69% during a non swim time." The website doesn't use the first one (it's an older CDC figure for all kids under 15). If we use the 69%, we say it's from a 1980s CPSC study (see [Research](RESEARCH.md)).
+
 ## Hashtags and campaigns
 
-**#BecauseofADAM** · **#LearnfromourPastProtectYourFuture** (our tagline) · **#WearBlueJune5th** (every June 5) · **#SkillsbeforeThrills** · **#LayerUp** · **#DrowningisPreventable** · #AdamsVillage · #AdamsVillageofHope · #WereTheVillage · #AdamsArmy · #AdamRocks · #IseeYou · #StillSurviving · #inHisTime
+**#BecauseofADAM** · **#LearnfromourPastProtectYourFuture** (our tagline; the booth banner says "Protect *their* future") · **#WearBlueJune5th** (every June 5) · **#SkillsbeforeThrills** · **#LayerUp** · **#DrowningisPreventable** · #AdamsVillage · #AdamsVillageofHope · #WereTheVillage · #AdamsArmy · #AdamRocks · #IseeYou · #StillSurviving · #inHisTime
 
 ## Our Facebook page
 
@@ -70,7 +76,8 @@ Those stay on Facebook, where people choose to follow along.
 
 ## Our events so far
 
-- **Cornhole Tournament**, Saturday, Sept. 26, 2020, Duncansville: raised money for local ISR swim lessons and CPR education ([Facebook event](https://www.facebook.com/events/705135283403437/))
+- **Cornhole Tournament**, Saturday, Sept. 26, 2020, Duncansville ([Facebook event](https://www.facebook.com/events/705135283403437/)). From the flyer (posted Sept. 14, 2020): double elimination; $25 per player, $10 spectators; $150 to 1st place and $50 to 2nd; entry included a pulled pork sandwich (or 2 hot dogs), jambalaya side, dessert and a drink, BYOB; snack cart, poker darts, cornhole-boards raffle and cash drawings; registration at noon, bags flying at 1 p.m.; ages 12 and up. The flyer said the money went to "local awareness, education & survival ISR swim/CPR scholarships," and took payment through venmo.com/bcofadam and paypal.me/prayersforadam (see the [launch checklist](LAUNCH-CHECKLIST.md) about both). *The site leaves off the street address, the prices and the scholarship line.*
+- **Water safety booth**, July 2021 (posted July 15, 2021 by Little Explorer Swim, "with Because of ADAM"): our blue tent at a summer community event, with Adam, a "Never swim alone" poster, a water safety table and our banner. It was a shared booth with Dad's Little Explorer Swim banner, so the site doesn't use that photo as is. We still need the name and place of the event.
 - **Mardi Gras 2020**: family in Louisiana made parade throws to spread drowning awareness in Adam's honor
 - **Fishing rodeo**, summer 2018, Jean Lafitte, Louisiana: our family and hometown put it on (shirts, cups, fans, trophies, raffles, music, games, auctions, food, all donated). It "completely paid for our first Stem Cell Treatment and travel to Duke University" (Mom, July 22, 2018). Because the money went to Adam's own care before the nonprofit existed, the Events page lists it as a **Community** event and says so. Still need: the exact date, a photo, and whether there were any later rodeos for Because of ADAM.
 - **Wear Blue on June 5**: every year

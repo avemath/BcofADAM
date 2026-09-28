@@ -10,7 +10,9 @@ How we keep the website, social posts, flyers and Water Watcher cards looking an
 
 ## Tagline options
 - *Drowning is silent. We won't be.* (home page headline)
-- *Learn from our past. Protect your future.* (our own hashtag, on the About page)
+- *Learn from our past. Protect your future.* (our own hashtag, on the About page; the 2021 banner says "their future")
+- *We will end childhood drowning.* (our banner)
+- *Join the movement. Become an Ally!* (our banner; on Get Involved)
 - *Skills before thrills.*
 - *It only takes a second.* (Mom and Dad's words)
 - *No single layer is enough.*

@@ -4,7 +4,7 @@ kind: Fundraiser
 date: 2020-09-26
 when: ""
 location: Duncansville, PA
-summary: Bags, boards and a whole lot of village. We raised money and awareness for water safety and CPR education in our community.
+summary: "A double-elimination tournament with pulled pork (or two hot dogs), a jambalaya side, dessert, a snack cart, poker darts and a cornhole-board raffle. Bags started flying at 1 p.m., and the day raised money and awareness for water safety and CPR education in our community."
 highlight: ""
 photo: ""
 link: ""
