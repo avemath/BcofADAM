@@ -28,5 +28,7 @@ Most of Adam's story on the website comes straight from Mom's Facebook posts (se
 15. Which **donation platform** do you want to use? (Zeffy is free for us.) The Venmo from 2020 can't send donation receipts.
 
 ## Photos and video
+- Is photo **#71** (the crowd in blue shirts) from the **Sept. 30, 2017 benefit in Lafitte**? And is **#68** from Halloween 2017?
+- Who painted the **moonlit swing** on the Adam's Hope shirts? We'd love to use it on the site with their OK.
 16. Pick **6–10 favorite photos**: Adam then and now, all of us together, events, Dad teaching.
 17. Any **videos** we should feature? (The Christmas tickles reel, the Father's Day reel, the HBOT milestone video?)

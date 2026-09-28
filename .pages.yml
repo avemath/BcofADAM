@@ -188,6 +188,49 @@ content:
         type: file
         path: src/content/pages/adams-story.md
         format: yaml-frontmatter
+        fields:
+          - name: title
+            label: Page title
+            type: string
+          - name: eyebrow
+            label: Small label above the title
+            type: string
+          - name: lede
+            label: Intro under the title
+            type: text
+          - name: description
+            label: Short description for Google
+            type: text
+          - name: photos
+            label: Photos in the story
+            description: Each photo shows right under the heading you pick. Use full-size photos (download them from Facebook, not screenshots). A spot with no photo is hidden once the site launches.
+            type: object
+            list: true
+            fields:
+              - name: section
+                label: Show under this heading
+                type: select
+                options:
+                  values: ["Meet Adam", "June 5, 2017", "What we wish we’d known", "Life after", "Planting seeds", "Because of Adam", "Adam’s village"]
+              - name: photo
+                label: Photo
+                type: image
+              - name: alt
+                label: Describe the photo (for people who can't see it)
+                type: string
+              - name: caption
+                label: Caption under the photo (optional)
+                type: string
+          - name: body
+            label: Page text
+            type: rich-text
+            options:
+              format: markdown
+      - name: swim-lessons
+        label: ISR Swim Lessons
+        type: file
+        path: src/content/pages/swim-lessons.md
+        format: yaml-frontmatter
         fields: &pageFields
           - name: title
             label: Page title
@@ -206,12 +249,6 @@ content:
             type: rich-text
             options:
               format: markdown
-      - name: swim-lessons
-        label: ISR Swim Lessons
-        type: file
-        path: src/content/pages/swim-lessons.md
-        format: yaml-frontmatter
-        fields: *pageFields
       - name: isr-program
         label: ISR Swim Lessons — Dad's story box
         type: file

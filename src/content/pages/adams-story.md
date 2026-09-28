@@ -3,6 +3,27 @@ title: Adam’s Story
 eyebrow: Because of Adam
 lede: The youngest of five, a smile worth waiting for, and a family that decided to plant seeds. Told by his big sister, Avery.
 description: Meet Adam, a nonfatal drowning survivor from Blair County, Pennsylvania, and learn why his brother and sisters started a drowning awareness movement.
+photos:
+  - section: Meet Adam
+    photo: ""
+    alt: Mom holding Adam on her lap and smiling down at him
+    caption: Adam and Mom.
+  - section: June 5, 2017
+    photo: ""
+    alt: Rickey in his blue cap and gown leaning down to Adam, who is sitting on his red trike on the track
+    caption: Rickey’s graduation, just days before June 5, 2017.
+  - section: Life after
+    photo: ""
+    alt: Adam in a captain’s hat and sunglasses, riding in a cardboard boat called the S.S. Adam built around his wheelchair, next to Lea dressed as a mermaid
+    caption: "Halloween: Captain Adam of the S.S. Adam, with Lea the mermaid."
+  - section: Because of Adam
+    photo: ""
+    alt: Lea kissing Adam’s cheek as they lie on the floor together
+    caption: Lea and Adam, best friends.
+  - section: Adam’s village
+    photo: ""
+    alt: A packed pavilion full of people wearing blue Adam’s Hope shirts
+    caption: Adam’s village in blue Adam’s Hope shirts at the 2017 benefit on the bayou in Lafitte, Louisiana.
 ---
 
 ## Meet Adam

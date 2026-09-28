@@ -48,6 +48,9 @@ That's it. From then on, everyone signs in at `/studio` with their email.
 ### Change Adam's photo on the home page
 **Home page** → **Photo of Adam** → upload → describe the photo in the next box (for example, *Adam laughing on his swing*) → **Save**.
 
+### Add the photos in Adam's Story
+**Pages** → **Adam's Story** → **Photos in the story**. Five spots are already set up (Meet Adam, June 5 2017, Life after, Because of Adam, Adam's village), with the description and caption written. Just upload the photo into each one and **Save**. To add another, click **Add an entry**, pick the heading it should sit under, and upload. Until we launch, empty spots show a sunny placeholder; after launch, they're hidden.
+
 ### Edit Adam's Story
 **Pages** → **Adam's Story**. The editor works like Word or Google Docs. Quotes are the ones with the bar on the left; the last line of a quote in *italics* (like *— Mom*) becomes the name under it.
 
@@ -80,7 +83,8 @@ Suggested folders in the shared folder: `Adam (then & now)`, `Family`, `Events/2
 | Each event (cornhole, rodeo, booth, Wear Blue) | **Events & fundraisers** → the event → Photo |
 | Each of us | **Team** → Photo |
 | Dad teaching (only with the parents' OK for any kids in it) | **Pages** → ISR Swim Lessons — Dad's story box → Photo |
-| Photos inside Adam's Story or a news post | The picture button in the editor |
+| One photo under each chapter of Adam's Story (5 spots are ready, with captions written) | **Pages** → Adam's Story → **Photos in the story** |
+| Photos inside a news post | The picture button in the editor |
 
 **Before you upload one:**
 - **Size:** under about 1 MB is best. Phone photos are often 3–5 MB, so shrink them first (on iPhone, email it to yourself and pick *Medium*, or use [squoosh.app](https://squoosh.app)).
