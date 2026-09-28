@@ -17,6 +17,8 @@ import { isr } from '../data/content';
 import { url } from '../lib/url';
 
 const events = await getEvents();
+const countWord = (n: number) =>
+  ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten'][n] ?? String(n);
 const { upcoming } = splitEvents(events);
 // Home shows upcoming events first, then anything marked "Show on the home page".
 // Highlight the key phrase in the hero intro if it's there.
@@ -131,12 +133,12 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
   <section class="section" style="padding-top: clamp(32px, 5vw, 64px)">
     <div class="wrap">
       <span class="eyebrow">The layers</span>
-      <h2>Seven ways to protect a child</h2>
+      <h2>{countWord(layers.length)} layers of protection</h2>
       <ol class="layer-cards grid grid--4">
         {
           layers.map((l, i) => (
             <li class="card reveal">
-              <span class="layer-cards__num">{i + 1}</span>
+              <span class="layer-cards__num" aria-hidden="true">{i + 1}</span>
               <h3>{l.title.split(':')[0]}</h3>
               <p>{l.short}</p>
               <a href={url(`/water-safety#${l.id}`)} aria-label={`Learn more about ${l.title.split(':')[0]}`}>
@@ -145,12 +147,14 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
             </li>
           ))
         }
-        <li class="card layer-cards__cta reveal">
-          <h3>If a child is missing…</h3>
-          <p><strong>Check the water first.</strong> Every second counts.</p>
-          <a href={url('/water-safety')}>The full guide →</a>
-        </li>
       </ol>
+      <div class="missing-callout reveal" role="note">
+        <h3>If a child is missing, check the water first.</h3>
+        <p>
+          Pools, hot tubs, ponds, bathtubs, even buckets. Every second counts. Call 911 and start CPR if you’re trained.
+        </p>
+        <a href={url('/water-safety#emergency')}>What to do in an emergency →</a>
+      </div>
     </div>
   </section>
 
@@ -452,15 +456,21 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     font-weight: 700;
     text-decoration: none;
   }
-  .layer-cards__cta {
-    background: var(--deep) !important;
+  .missing-callout {
+    margin-top: 28px;
+    padding: 22px 26px;
+    border-radius: var(--radius);
+    background: var(--deep);
     color: var(--on-dark);
+    border-left: 8px solid var(--sun);
   }
-  .layer-cards__cta strong {
+  .missing-callout h3 {
     color: var(--sun);
+    margin-bottom: 0.3em;
   }
-  .layer-cards__cta a {
+  .missing-callout a {
     color: var(--shallow);
+    font-weight: 700;
   }
 
   /* ---------- Survivors ---------- */
