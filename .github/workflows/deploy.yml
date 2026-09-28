@@ -11,7 +11,8 @@ name: Deploy site
 on:
   push:
     branches: [main]
-  # Rebuild every Monday so events move from "Coming up" to "What we've done" on their own.
+  # Rebuild every Monday so events move from "Coming up" to "Past events" on their own,
+  # and yearly events (like Wear Blue on June 5) show their next date.
   schedule:
     - cron: '23 10 * * 1'
   workflow_dispatch:
