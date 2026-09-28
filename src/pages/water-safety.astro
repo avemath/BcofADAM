@@ -102,7 +102,11 @@ const moreHtml = more ? withPlaceholders(withBase(more.rendered?.html ?? '')) : 
               <p>{r.body}</p>
               {r.source && (
                 <p class="source">
-                  Source: <a href={r.sourceUrl} rel="noopener" target="_blank">{r.source}</a>
+                  Source:{' '}
+                  <a href={r.sourceUrl} rel="noopener" target="_blank">
+                    {r.source}
+                    <span class="visually-hidden"> (source for “{r.title}”, opens in a new tab)</span>
+                  </a>
                 </p>
               )}
             </div>
@@ -171,8 +175,8 @@ const moreHtml = more ? withPlaceholders(withBase(more.rendered?.html ?? '')) : 
     font-size: 4rem;
     font-weight: 300;
     line-height: 1;
-    color: var(--aqua);
-    opacity: 0.5;
+    color: var(--aqua-text);
+    opacity: 0.75;
     margin-bottom: 8px;
   }
   .checklist {

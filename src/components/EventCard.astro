@@ -57,6 +57,7 @@ const art = /fish|rodeo/.test(t)
       e.link && (
         <a class="btn btn--ocean event__btn" href={url(e.link)} rel="noopener">
           {e.linkLabel || 'Learn more'}
+          <span class="visually-hidden"> about {e.title}</span>
         </a>
       )
     }
@@ -84,7 +85,7 @@ const art = /fish|rodeo/.test(t)
     place-items: center;
     background:
       radial-gradient(60% 80% at 80% 0%, rgb(255 214 120 / 0.55), transparent 70%),
-      linear-gradient(160deg, #1784a0, var(--deep));
+      linear-gradient(160deg, var(--ocean-bright), var(--deep));
     font-size: 3.2rem;
   }
   .event__body {
@@ -105,7 +106,7 @@ const art = /fish|rodeo/.test(t)
     margin-bottom: 8px;
   }
   .event__kind {
-    color: var(--aqua);
+    color: var(--aqua-text);
   }
   .event h3 {
     font-size: 1.45rem;

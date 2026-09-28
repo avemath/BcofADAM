@@ -27,8 +27,8 @@ const { eyebrow, title, lede, next = 'var(--sand)' } = Astro.props;
     position: relative;
     overflow: hidden;
     background:
-      radial-gradient(45% 60% at 90% -10%, rgb(255 214 120 / 0.4) 0%, transparent 70%),
-      radial-gradient(120% 90% at 80% 0%, #1784a0 0%, var(--ocean) 50%, var(--deep) 100%);
+      radial-gradient(45% 60% at 90% -10%, rgb(255 214 120 / 0.3) 0%, transparent 70%),
+      radial-gradient(120% 90% at 80% 0%, var(--ocean-bright) 0%, var(--ocean) 50%, var(--deep) 100%);
     color: #fff;
   }
   .page-hero__light {
@@ -36,7 +36,7 @@ const { eyebrow, title, lede, next = 'var(--sand)' } = Astro.props;
     inset: -40% -10% auto -10%;
     height: 140%;
     background:
-      radial-gradient(40% 30% at 20% 30%, rgb(255 255 255 / 0.14), transparent 70%),
+      radial-gradient(40% 30% at 20% 30%, rgb(255 255 255 / 0.08), transparent 70%),
       radial-gradient(30% 25% at 75% 20%, rgb(255 244 214 / 0.2), transparent 70%);
     animation: shimmer 14s ease-in-out infinite alternate;
     pointer-events: none;
@@ -55,7 +55,7 @@ const { eyebrow, title, lede, next = 'var(--sand)' } = Astro.props;
     max-width: 18ch;
   }
   .page-hero .eyebrow {
-    color: var(--sun);
+    color: var(--sun-text);
   }
   .page-hero .lede {
     color: var(--on-dark);

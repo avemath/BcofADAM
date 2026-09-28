@@ -39,7 +39,7 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
         Because of <strong>ADAM</strong> · <span>{site.tagline}</span>
       </p>
       <h1 class="hero__title">
-        <span class="hero__line">Drowning is silent.</span>
+        <span class="hero__line">Drowning is silent.</span>{' '}
         <span class="hero__line hero__line--2">We won’t be.</span>
       </h1>
       <p class="hero__lede">
@@ -75,6 +75,7 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
               <p class="stat__label">{f.label}</p>
               <a class="source" href={f.sourceUrl} rel="noopener" target="_blank">
                 Source: {f.source}
+                <span class="visually-hidden"> for “{f.stat}” (opens in a new tab)</span>
               </a>
             </article>
           ))
@@ -215,7 +216,10 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
       <div class="survivor-stat card reveal">
         <p class="stat__num">{nonfatal[1].stat}</p>
         <p>{nonfatal[1].label}</p>
-        <a class="source" href={nonfatal[1].sourceUrl} rel="noopener" target="_blank">Source: {nonfatal[1].source}</a>
+        <a class="source" href={nonfatal[1].sourceUrl} rel="noopener" target="_blank">
+          Source: {nonfatal[1].source}
+          <span class="visually-hidden"> for “{nonfatal[1].stat}” (opens in a new tab)</span>
+        </a>
       </div>
     </div>
   </section>
@@ -319,7 +323,7 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     background:
       radial-gradient(50% 45% at 85% -5%, rgb(255 214 120 / 0.55) 0%, transparent 70%),
       radial-gradient(120% 70% at 70% -10%, #3fb3c4 0%, transparent 60%),
-      linear-gradient(180deg, #1784a0 0%, var(--ocean) 48%, var(--deep) 100%);
+      linear-gradient(180deg, var(--ocean-bright) 0%, var(--ocean) 48%, var(--deep) 100%);
   }
   .hero__caustics {
     position: absolute;
@@ -509,8 +513,8 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
   }
   .isr-card {
     background:
-      radial-gradient(70% 90% at 90% 0%, rgb(255 214 120 / 0.35), transparent 70%),
-      linear-gradient(160deg, #1784a0, var(--ocean));
+      radial-gradient(50% 60% at 100% 100%, rgb(255 214 120 / 0.18), transparent 70%),
+      linear-gradient(340deg, var(--ocean-bright), var(--ocean));
     border-radius: var(--radius);
     padding: clamp(28px, 4vw, 44px);
     color: #fff;
@@ -521,7 +525,7 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     letter-spacing: 0.14em;
     font-size: 0.8rem;
     font-weight: 700;
-    color: var(--sun);
+    color: var(--sun-text);
     margin-bottom: 6px;
   }
   .isr-card__name {
