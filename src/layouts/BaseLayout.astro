@@ -52,9 +52,9 @@ const ogImage = new URL(url(image), Astro.site);
     <a class="skip-link" href="#main">Skip to content</a>
     {
       !site.launchReady && (
-        <div class="preview-ribbon" role="note">
+        <aside class="preview-ribbon" aria-label="Preview notice">
           Preview site: we’re still putting the finishing touches on this.
-        </div>
+        </aside>
       )
     }
     <Header />

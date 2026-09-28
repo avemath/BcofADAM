@@ -15,7 +15,7 @@ After Adam drowned, Dad decided to be the change we wanted to see. He spent eigh
 
 > Skills before thrills. No matter the cost, the time commitment or the distance, sometimes there are no do-overs.
 >
-> *— Mom*
+> *Mom*
 
 ## What ISR is
 
