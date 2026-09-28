@@ -51,7 +51,9 @@ Defined at the top of [`src/styles/global.css`](../src/styles/global.css). Chang
 Warm, honest, urgent, never blaming. See [CONTENT-PLAN.md §4](CONTENT-PLAN.md#4-voice-and-words) for the words to use and avoid.
 
 ## Logo
-Our mark is a **brain with a heart at its center**, in teal, purple, magenta and orange (September 2026). It's Adam's brain injury and the love around him in one picture ("Because of Adam, I know so much about the brain," as Lea says).
+Our mark is a **top-down view of a brain with a heart inside it**, in teal, purple, magenta and orange (September 2026). The heart is the part of Adam's brain that was hurt by the lack of oxygen. On his scans, that area just happened to be shaped like a heart. To us, it's about finding hope in hopeless places. ("Because of Adam, I know so much about the brain," as Lea says.)
+
+**A redraw is in progress.** The first version's bottom half (a stem running down from the heart, and folds and lobes meeting at the bottom center) could be misread, so we're keeping the view, the heart and the colors, and smoothing out the bottom. Whatever the final version is, keep the heart as the clear focus and avoid shapes that meet or split at the bottom center.
 
 | File | Use |
 |---|---|
