@@ -1,6 +1,7 @@
 ---
 import Logo from './Logo.astro';
 import Wave from './Wave.astro';
+import NewsletterForm from './NewsletterForm.astro';
 import { site, nav, footerNav, nonprofitLine } from '../data/site';
 import { url } from '../lib/url';
 
@@ -64,14 +65,22 @@ const year = new Date().getFullYear();
 
         <div>
           <h2 class="site-footer__heading">Stay in the loop</h2>
-          <p>Water safety reminders, Adam's updates and events — a few times a year.</p>
-          <a
-            class="btn"
-            href={site.newsletterUrl || url('/contact')}
-            rel={site.newsletterUrl ? 'noopener' : undefined}
-          >
-            Join the movement
-          </a>
+          <p>Water safety reminders, Adam’s updates and events, a few times a year.</p>
+          {
+            site.newsletterFormAction.trim() ? (
+              <NewsletterForm dark />
+            ) : site.newsletterUrl.trim() ? (
+              <a class="btn" href={site.newsletterUrl} rel="noopener" target="_blank">
+                Sign up for emails
+              </a>
+            ) : (
+              site.facebookUrl && (
+                <a class="btn" href={site.facebookUrl} rel="noopener" target="_blank">
+                  Follow on Facebook
+                </a>
+              )
+            )
+          }
         </div>
       </div>
 

@@ -14,5 +14,13 @@
   "showFacebookFeed": true,
   "instagramUrl": "",
   "tiktokUrl": "",
-  "youtubeUrl": ""
+  "youtubeUrl": "",
+  "areaServed": "Blair County, Pennsylvania",
+  "contactFormKey": "",
+  "newsletterFormAction": "",
+  "newsletterEmailField": "email",
+  "linkedinUrl": "",
+  "themeColor": "#083349",
+  "analyticsProvider": "none",
+  "analyticsSite": ""
 }

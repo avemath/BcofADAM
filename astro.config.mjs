@@ -21,7 +21,7 @@ export default defineConfig({
       filter: (page) =>
         !page.includes('/studio') &&
         !page.includes('/404') &&
-        (settings.donateUrl.trim() !== '' || !page.includes('/donate')),
+        ((settings.donateUrl ?? '').trim() !== '' || !page.includes('/donate')),
     }),
     // Warns about TODOs and review boxes in preview; stops the build if launchReady is on and any remain.
     launchGuard(settings),
