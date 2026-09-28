@@ -400,6 +400,12 @@ content:
             label: Blanks to fill in (address, phone numbers…)
             type: string
             list: true
+      - name: terms
+        label: Terms of use
+        type: file
+        path: src/content/pages/terms.md
+        format: yaml-frontmatter
+        fields: *pageFields
       - name: accessibility
         label: Accessibility statement
         type: file

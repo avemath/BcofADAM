@@ -113,6 +113,7 @@ export const layers: Layer[] = [
       'Bystander CPR begun right away can make a life-saving difference while emergency crews are on the way. Our mom, our Pops, our dad and the first responders all did CPR on Adam.',
     ],
     tips: [
+      'In an emergency, call 911. If a child is missing, check the water first.',
       'Take a CPR class that includes infant and child CPR, and renew it every two years. After a drowning, CPR with rescue breaths matters.',
       'Keep a charged phone and rescue equipment (a reaching pole and a ring buoy) at the pool.',
       'Post emergency numbers and your home address near the pool.',

@@ -80,5 +80,6 @@ export const footerNav = [
   { label: 'Press', href: '/press' },
   { label: 'Contact', href: '/contact' },
   { label: 'Privacy', href: '/privacy' },
+  { label: 'Terms', href: '/terms' },
   { label: 'Accessibility', href: '/accessibility' },
 ];
