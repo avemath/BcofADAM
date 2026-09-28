@@ -6,10 +6,10 @@ A starting point to keep the website, social posts, flyers and Water Watcher car
 - **Full:** Because of ADAM: A Drowning Awareness Movement
 - **Short:** Because of ADAM (always capitalize **ADAM** when it refers to the movement; "Adam" when it's him)
 - **Community:** Adam's Village / Adam's Village of Hope
-- **Hashtag:** #BecauseOfAdam
+- **Hashtags (already used on Facebook):** #BecauseofADAM (primary) · #AdamsVillage · #AdamRocks · #inHisTime · #smallmiracles
 
 ## Tagline options
-- *Drowning is silent. We won't be.*
+- *Drowning is silent. We won't be.* (home page headline)
 - *It only takes a second.* (the family's own words)
 - *No single layer is enough.*
 - *Check the water first.*

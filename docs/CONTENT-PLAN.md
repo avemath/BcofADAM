@@ -40,6 +40,18 @@ Use these five ideas consistently across the site, social media, talks and print
 
 ## 4. Voice and words
 
+### Striking, not morbid
+
+The goal is to make a parent stop and act, not to frighten or grieve them. The family's own Facebook voice (joyful, funny, proud, faith-filled) is the model.
+
+1. **Lead with life.** Introduce Adam as a person ("a tickle-loving little warrior") before the day he drowned.
+2. **Keep the day brief and non-graphic.** No "face down," "lifeless," "blue," or minute-by-minute resuscitation details. "He was found in our backyard pool" is enough.
+3. **Pair every hard fact with a hopeful turn or an action.** "It only takes a second" is followed by "It only takes a second to latch a gate, too." The Facts page ends with *What protects children*.
+4. **Soften the verbs, not the truth.** Use "leading cause of death" once, where it matters. Otherwise prefer "lives lost," "fatal drownings" or "survive" over "kills" or "die."
+5. **Sunlit water, not the deep end.** Visuals use bright, sunlit blues with warm yellow for hope. Never show images of children in distress or alone near water.
+6. **Humor and faith are welcome** in the family's own sections (Adam's Story, news posts). Keep the practical pages neutral so they work for every family.
+7. **Celebrate survivors.** Small victories count: a smile, a laugh, "97%, so close!"
+
 - **Warm, honest, urgent, never preachy or blaming.** Drowning happens to loving, attentive families. Shame keeps people silent.
 - **Plain language.** Aim for a 7th–8th grade reading level. Short sentences.
 - **Say:** "nonfatal drowning," "drowning survivor," "Water Watcher," "layers of protection," "check the water first."
@@ -53,7 +65,7 @@ Use these five ideas consistently across the site, social media, talks and print
 
 | Page | Purpose | Key content | Main call to action | Status |
 |---|---|---|---|---|
-| **Home** `/` | Hook, emotion, first action | "Drowning is silent" hero · 4 headline stats · Adam teaser · time-on-page clock · interactive layers builder · 7 layers · survivors teaser · pledge band · ways to help | Read Adam's story / Learn the layers | ✍️ photo, story lines |
+| **Home** `/` | Hook, emotion, first action | "Drowning is silent. We won't be." hero · 4 headline stats · Adam teaser · time-on-page clock · interactive layers builder · 7 layers · survivors teaser · pledge band · ways to help | Read Adam's story / Learn the layers | ✍️ photo, story lines |
 | **Adam's Story** `/adams-story` | The heart of the site | June 5, 2017 · the fight for his life · life after · why we speak up · Adam's village | Learn the layers / Take the pledge | ✍️ **family must review every section** |
 | **Water Safety** `/water-safety` | The practical guide | Layers builder · 7 layers with checklists · high-risk moments (slipping away, full house, others' homes, bathtub, summer, autism) | Take the pledge | ✅ |
 | **The Facts** `/the-facts` | Credibility, shareable numbers | Grouped stats with sources · note on words | See the layers | ✅ (click-verify sources) |
@@ -74,7 +86,7 @@ Use these five ideas consistently across the site, social media, talks and print
 - **Build your layers:** a top-down backyard. Switch on door alarm, fence, gate, pool alarm, cover and Water Watcher, and watch barriers appear on the toddler's path to the pool.
 - **Water-level bar:** a thin "water line" on the left edge rises as you scroll.
 - **Pledge with printable card:** tick all six promises, then print a Water Watcher card to laminate and put on a lanyard.
-- **One-tap share text:** ready-made posts with #BecauseOfAdam.
+- **One-tap share text:** ready-made posts with #BecauseOfADAM.
 - All motion respects the "reduce motion" accessibility setting, and everything works with a keyboard and screen reader.
 
 ## 6. What to add next (roadmap)

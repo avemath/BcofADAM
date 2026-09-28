@@ -12,6 +12,7 @@ import { story } from '../data/story';
   <p class="clock__compare">{story.timeCompare}</p>
   <p class="clock__quote">“{story.familyQuote}”</p>
   <p class="clock__cite">{story.familyQuoteBy}</p>
+  <p class="clock__hope">{story.hopeTurn}</p>
 </div>
 
 <script>
@@ -64,5 +65,14 @@ import { story } from '../data/story';
   .clock__cite {
     font-size: 0.9rem;
     color: var(--on-dark-soft);
+  }
+  .clock__hope {
+    font-size: clamp(1.15rem, 0.8vw + 1rem, 1.45rem);
+    font-weight: 600;
+    color: #fff;
+    max-width: 34ch;
+    margin: 2em auto 0;
+    padding-top: 1.5em;
+    border-top: 1px solid rgb(255 255 255 / 0.18);
   }
 </style>

@@ -48,3 +48,9 @@ Answer as much or as little as you want, in any order, in your own words. Voice 
 27. Choose 6–10 photos: Adam before the accident (if you want), in the hospital (only if you're comfortable), therapy milestones, Adam today, the whole family, events.
 28. Is there any video of Adam, or of you speaking about him (news clips, Facebook videos) we could use or link to?
 29. Anyone in the photos besides your family? You'll need their permission (see [PHOTO-AND-STORY-RELEASE.md](PHOTO-AND-STORY-RELEASE.md)).
+
+## From the Facebook page
+30. The draft mentions trach life, PICU stays, hearing, hyperbaric oxygen in Louisiana, Plasticity Brain Center in Orlando, and hydrotherapy with Dad (all from your captions). Which should the website include?
+31. May the website name Adam's siblings (e.g. Lea, "his biggest cheerleader"), or keep them as "his brothers and sisters"?
+32. Which reels or videos are your favorites to feature or link (the Christmas tickles, the Father's Day reel, the HBOT milestone)?
+33. Who are "Wanda Jane" and the other people your posts thank? Would they like to be thanked on the site?

@@ -1,25 +1,54 @@
 # Facebook page audit: "Because of ADAM" (@AdamsVillageofHope)
 
 **Page:** https://www.facebook.com/AdamsVillageofHope/
-**Audited:** September 28, 2026
+**Audited:** September 28, 2026 (updated after facebook.com access was enabled)
 
-## Important: what we could and couldn't see
+## What we could and couldn't see
 
-Facebook blocks automated tools unless you're logged in, and this build environment's network policy also blocked facebook.com. **We could not read the page's posts, photos or About section directly.** Everything below comes from search engines' snapshot of the page and from **public news coverage** of Adam.
+With network access to facebook.com enabled, we loaded the page as a logged-out visitor would. Facebook shows the intro, the most recent post, and the Reels/Videos lists publicly, then asks you to log in to keep scrolling. **Individual reels and videos show their captions publicly**, so we read 18 of them. Older text posts and photo captions stay behind the login wall.
 
-**To complete the audit, the family can do any one of these:**
-1. **Paste the text in.** Copy the page's About/Intro text, pinned post, and 10–20 of your most important posts (milestones, fundraisers, the anniversary posts) into a GitHub issue or a message to Claude.
-2. **Download your page data.** Facebook → Settings → *Your Facebook information* → *Download your information* → choose the page. That gives you every post and photo, which is great for building the Adam timeline and choosing photos.
-3. **Allow facebook.com** in this Claude environment's network settings and ask Claude to try again. (This may still be blocked by Facebook's login wall.)
+**To fill in the rest:** download your page data (Facebook → Settings → *Your Facebook information* → *Download your information* → choose the page). It includes every post and photo, which is ideal for building Adam's timeline and choosing photos.
 
-## What the public record shows
+## The page today (September 28, 2026)
 
-### About the page (search-engine snapshot, date unknown)
-- Page name: **Because of ADAM** · handle **@AdamsVillageofHope**
-- Description: *"highlights Adam's journey as a non-fatal drowning survivor from the #1 cause of death for kids 1-4."*
-- About **6,700 likes**, which is a real community to bring to the website.
+| | |
+|---|---|
+| **Name / handle** | Because of ADAM · `@AdamsVillageofHope` |
+| **Followers** | ~6,660 followers · 119 following |
+| **Intro** | *"Highlighting Adam's journey as a non fatal drowning survivor from the #1 cause of death for kids 1-4."* |
+| **Category** | Page · **Personal blog** |
+| **Contact** | bcofadam@gmail.com (now used on the website's Contact page) |
+| **Link** | paypal.me/prayersforadam |
+| **Profile photo** | Baby Adam in a "Child of God" hat with a "Hello, my name is Adam" sticker |
+| **Cover photo** | Adam's brothers and sisters together at Christmas |
+| **Latest post** | July 13: a shared Live Like Jake video, *"(PLEASE KNOW THIS CHILD SURVIVED)…"* |
+| **Reels** | Consistently 3K–8K views each. One HBOT milestone video reached **20K views and 809 reactions**. Video is the page's strongest format |
 
-### Adam's story, as reported publicly
+### The family's voice, in their own words (public reel and video captions)
+
+- *"May your day be full of tickles! Merry Christmas!"* (8.2K views)
+- *"So proud of my little warrior and thankful for such a wonderful support group that cheers him on every step of the way!!"* #inHisTime
+- *"With everything he's dealing with, he still has a smile for us… a happier note of my man from yesterday in the PICU, waiting for his dad to watch the game."* #AdamRocks #ThatSmileThough
+- *"A voice only a son could love… But look at that smile!!"* #BabyTigerAlways
+- *"Enjoying a little hydrotherapy session with his dad… he's so relaxed in here, he fell asleep."* #AdamsVillage #WhenTherapyStopsWeMakeOurOwnIEP
+- *"Get everything set up, then he either falls asleep or needs suctioning. Lea, his biggest cheerleader, cracks me up: 'mom he's snoring!'"* #TrachLife #CaughtPlayingPossum
+- *"'I closed my mouth and spoke to you in a hundred silent ways.' …and you always listened. Happy Fathers Day Daddy. From our first day at Plasticity Brain Center, Orlando."* #AdamRocksAgain
+- *"And so this happened today… nothing but happy tears and many thanks to Adam's Prayer Warriors! God is listening…"* #HBOTisworking #smallmiracles (20K views)
+- *"Emmy Award winning footage clip from the next Jedi. Green screen masters!!"*
+- *"My heart… that laugh. Shortly after his first birthday. 13 months."*
+- *"97% - so close!"*
+
+**Hashtags in use:** #BecauseofADAM · #AdamsVillage · #AdamRocks · #inHisTime · #smallmiracles · #TrachLife · #BabyTigerAlways
+
+**What this tells us about tone.** The page is **joyful, funny, proud and faith-filled**. It celebrates Adam's personality and small victories and is honest about hard days (trach care, PICU stays, therapy), but it never dwells on the accident. The website now follows the same pattern: lead with Adam's life, keep the day itself brief and non-graphic, and turn every hard fact into something a parent can do. See "Striking, not morbid" in [CONTENT-PLAN.md](CONTENT-PLAN.md#4-voice-and-words).
+
+### Things to act on from the page
+- **The PayPal link (prayersforadam)** raises money for Adam's own care. That's fine as a *personal* fundraiser, but keep it completely separate from the nonprofit's donate button and bank account (see the private-benefit note in the [launch checklist](LAUNCH-CHECKLIST.md)).
+- **The page category is "Personal blog."** Once the nonprofit is registered, consider a separate organization page (or switching this one to "Nonprofit organization") so Facebook fundraising tools are available.
+- **Video wins.** Post short reels that link to the site: a 30-second "Water Watcher" explainer, "Adam rocks" milestone clips, and a door-alarm or gate-latch demo.
+- **Live Like Jake** is already in your feed. They're a natural partner (ISR scholarships, support for critical-care families).
+
+## Adam's story, as reported by local news
 
 | Detail | What the sources say | Source |
 |---|---|---|
@@ -51,18 +80,6 @@ Facebook blocks automated tools unless you're logged in, and this build environm
 - **"Adam's Hope"** and **"Adams Hope House"**: unrelated charities
 - **Project ADAM**: a CPR/AED program run by UPMC Children's in Blair County, unrelated, and a possible name-confusion issue
 - **Eden Carlson**: a well-known HBOT/drowning case, not connected to Adam
-
-## Tone and themes to carry onto the website
-
-| Theme from the page and coverage | How the website uses it |
-|---|---|
-| **"It only takes a second"** (the family's own words) | Home page clock section; Adam's Story |
-| **"#1 cause of death for kids 1–4"** | Home hero; The Facts |
-| **Hope and defying the prognosis** ("Village of Hope," "miracle child") | Adam's Story, Survivors page, "Adam's village" |
-| **Faith** | Included in the Adam's Story draft *only as a flagged option*. The family decides |
-| **Action** (swim lessons, education) | Water Safety page, Get Involved, Resources |
-
-We couldn't confirm any hashtags (e.g. #BecauseOfAdam, #AdamsVillage) or the page's visual style (colors, cover photo). The website uses water blues with a warm sunshine yellow for hope. If the Facebook page has established colors, or Adam has a favorite color, we can switch the palette in minutes.
 
 ## Recommendations for the Facebook page
 
