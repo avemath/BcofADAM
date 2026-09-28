@@ -52,6 +52,8 @@ export interface TeamMember {
 export interface IsrBox {
   programName: string;
   blurb: string;
+  /** Why we recommend ISR specifically (shown in the home page ISR section). */
+  stance?: string;
   disclosure?: string;
   photo?: string;
   photoAlt?: string;

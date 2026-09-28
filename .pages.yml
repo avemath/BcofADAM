@@ -293,6 +293,9 @@ content:
           - name: blurb
             label: Short story
             type: text
+          - name: stance
+            label: Why we recommend ISR (home page, one or two sentences)
+            type: text
           - name: disclosure
             label: Separation note (please keep this)
             type: text

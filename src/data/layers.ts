@@ -84,7 +84,7 @@ export const layers: Layer[] = [
     ],
     tips: [
       'Look for lessons that teach water competency: getting back to the wall, floating and turning.',
-      'For babies and toddlers, look into ISR self-rescue lessons, which teach them to roll onto their backs and float. Our Swim Lessons page can help you find an instructor.',
+      'For babies and toddlers, we recommend ISR self-rescue lessons, which teach them to roll onto their backs and float, even fully dressed. Water play classes are fun, but they don’t teach a child what to do alone. Our Swim Lessons page can help you find an instructor.',
       'Children with autism or other disabilities can benefit from adaptive swim lessons.',
       'Practice in clothes and in different places (pool, lake, beach).',
       'Lessons add to supervision and barriers. They never replace them.',
