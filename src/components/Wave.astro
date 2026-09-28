@@ -45,8 +45,10 @@ const { color = 'var(--deep)', bg = 'transparent', flip = false, animated = fals
     margin-bottom: 0;
     margin-top: -1px;
   }
+  /* Twice as wide as the screen so it can drift without showing an edge. */
   .wave--animated svg {
     width: 200%;
+    max-width: none;
     animation: drift 18s linear infinite alternate;
   }
   .wave--animated .wave__back {
