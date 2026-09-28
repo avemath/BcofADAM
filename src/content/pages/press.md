@@ -28,6 +28,8 @@ We say **nonfatal drowning**, the term the [CDC](https://www.cdc.gov/drowning/da
 
 ## Photos
 
-{{TODO: approved press photos}}
+Need a photo of Adam or our family for your story? Email our media contact (it’s in the fact sheet on this page) and tell us a little about the story. We’ll send photos the family has approved for press use.
+
+You’re welcome to use [our logo](/images/logo-mark-large.png) in stories about Because of ADAM.
 
 Please don’t use photos from our Facebook page or this website without asking first. Many of them show Adam and our family, and we want to be sure everyone in a photo has said yes.
