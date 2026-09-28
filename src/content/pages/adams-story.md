@@ -77,7 +77,7 @@ That same year, my brother, sisters and I started **Because of ADAM: Allies in t
 
 Dad became a Red Cross CPR instructor and a certified [ISR instructor](/swim-lessons), and now teaches babies and toddlers to roll onto their backs and float. Mom went back to school and became a nurse, so she could care for kids like Adam.
 
-![Mom holding her nursing diploma, surrounded by our family, with Adam in his wheelchair in front](/images/uploads/mom-nurse.jpg)
+![](/images/uploads/mom-nurse-1.jpg)
 
 *Mom became a nurse, and we were all there to cheer her on.*
 
