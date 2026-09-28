@@ -82,6 +82,10 @@ content:
         label: EIN (tax ID number)
         type: string
         description: 'Replace {{TODO: EIN}} with our EIN, like 12-3456789. The site can''t launch until this is filled in.'
+      - name: themeColor
+        label: Browser color (theme color)
+        type: string
+        description: 'The color phones use for the browser bar, as a hex code like #083349. If the logo colors change, update this to match.'
       - name: launchReady
         label: Launch the site (removes the "Preview" banner and lets Google find us)
         type: boolean

@@ -12,7 +12,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "check": "node scripts/check-studio-config.mjs && astro check",
-    "astro": "astro"
+    "astro": "astro",
+    "icons": "node scripts/generate-icons.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",

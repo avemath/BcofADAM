@@ -17,3 +17,6 @@ npm-debug.log*
 .vscode/*
 !.vscode/extensions.json
 .idea/
+
+# Favicon previews from npm run icons
+.icon-previews/
