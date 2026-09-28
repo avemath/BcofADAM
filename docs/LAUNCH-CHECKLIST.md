@@ -100,10 +100,10 @@ Everything we still need to do to get Because of ADAM and the website fully up a
 We're using **[Porkbun](https://porkbun.com/)**: $7.98 for the first year of a .org, $11.84/yr after that, with free WHOIS privacy (our address stays private) and free email forwarding. [Cloudflare Registrar](https://www.cloudflare.com/products/registrar/) is just as good on price ($8.50, then $11.20/yr, no markup ever), but its dashboard is more technical, and its orange-cloud "proxy" setting has to be turned off for GitHub Pages. Skip GoDaddy, Network Solutions and website-builder bundles: cheap first year, expensive renewals and lots of upsells. *(Prices checked September 28, 2026. `becauseofadam.org` and `becauseofadam.com` were both still unregistered.)*
 
 - [x] Made our Porkbun account (Avery's), with two-factor sign-in on
-- [ ] Buy **becauseofadam.org** (our main address) and **becauseofadam.com** (so no one else takes it). About $20 for both the first year. Leave WHOIS privacy on, and click the **verify your contact info** email Porkbun sends within 15 days
+- [x] Bought **becauseofadam.org** (our main address) and **becauseofadam.com** (so no one else takes it) on September 28, 2026. Both renew **September 28, 2027**, so auto-renew matters
+- [ ] Click the **verify your contact info** email Porkbun sends (within 15 days, or the domains get suspended)
 - [ ] In Porkbun, check that **auto-renew** and **domain lock** are on for both, and write down where the login is for one other family member. If the domain ever lapses, someone else can buy it
 - [ ] Keep the Porkbun account on a **personal email**. Never switch it to an `@becauseofadam.org` address: if the domain ever had a problem, its renewal and warning emails would go to an inbox that no longer works
-- [ ] In GitHub: **Settings → Pages → Custom domain** → `becauseofadam.org` → **Save**
 - [ ] In Porkbun: **Domain Management → becauseofadam.org → DNS**. Delete Porkbun's default "parked" records, then add ([GitHub's guide](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)):
 
   | Type | Host | Answer |
@@ -118,11 +118,12 @@ We're using **[Porkbun](https://porkbun.com/)**: $7.98 for the first year of a .
   | AAAA | *(blank)* | 2606:50c0:8003::153 |
   | CNAME | www | avemath.github.io |
 
+- [ ] **Then** in GitHub: **Settings → Pages → Custom domain** → `becauseofadam.org` → **Save**. (DNS first, so the site never points at an address that doesn't work yet)
+- [ ] Right away, re-run the **Deploy site** workflow (**Actions → Deploy site → Run workflow**), so every link switches from `/BcofADAM/...` to the new address
 - [ ] **Verify the domain** in GitHub (your profile **Settings → Pages → Add a domain**, then add the TXT record it shows in Porkbun). This stops anyone else from ever pointing it at their own GitHub site
 - [ ] Wait for GitHub's DNS check to turn green (minutes to a few hours), then tick **Enforce HTTPS** (Google Ad Grants requires HTTPS)
 - [ ] In Porkbun, forward **becauseofadam.com** to `https://becauseofadam.org` (the domain's **URL Forwarding** option)
 - [ ] Set up free **email forwarding** in Porkbun (**Domain Management → becauseofadam.org → Email**): `hello@becauseofadam.org` → Avery's email (add more family members if they should get messages too). Send it a test, then put `hello@becauseofadam.org` in **Studio → Site settings → Contact email**. This replaces the old bcofADAM@gmail.com from our 2020–2021 flyers, so we don't need a new Gmail
-- [ ] Re-run the **Deploy site** workflow (Actions → Deploy site → Run workflow). The site picks up the new address on its own, and every link moves from `avemath.github.io/BcofADAM` to `becauseofadam.org`
 - [ ] Add the new address to the Facebook page intro, the pinned post and our Water Watcher cards
 
 ### Step 3: Email, forms and analytics
