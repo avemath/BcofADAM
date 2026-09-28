@@ -86,6 +86,16 @@ content:
         label: Browser color (theme color)
         type: string
         description: 'The color phones use for the browser bar, as a hex code like #083349. If the logo colors change, update this to match.'
+      - name: analyticsProvider
+        label: Analytics
+        type: select
+        options:
+          values: [none, plausible, fathom, cloudflare]
+        description: Privacy-friendly visitor counts with no cookies. Pick the service you signed up for, or none.
+      - name: analyticsSite
+        label: Analytics site ID
+        type: string
+        description: 'Plausible: your domain (becauseofadam.org). Fathom: the site ID. Cloudflare: the token from the snippet.'
       - name: launchReady
         label: Launch the site (removes the "Preview" banner and lets Google find us)
         type: boolean
@@ -227,8 +237,15 @@ content:
             label: Intro under the title
             type: text
           - name: description
-            label: Short description for Google
+            label: Short description for Google (under 155 characters)
             type: text
+          - name: image
+            label: Share picture (optional)
+            type: image
+            description: Shows when this page is shared on Facebook or in a text. Leave empty to use the site's share card.
+          - name: imageAlt
+            label: Describe the share picture
+            type: string
           - name: body
             label: Page text
             type: rich-text
@@ -250,8 +267,15 @@ content:
             label: Intro under the title
             type: text
           - name: description
-            label: Short description for Google
+            label: Short description for Google (under 155 characters)
             type: text
+          - name: image
+            label: Share picture (optional)
+            type: image
+            description: Shows when this page is shared on Facebook or in a text. Leave empty to use the site's share card.
+          - name: imageAlt
+            label: Describe the share picture
+            type: string
           - name: body
             label: Page text
             type: rich-text
