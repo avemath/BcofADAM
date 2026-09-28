@@ -137,7 +137,7 @@ content:
 
   # ───────────────────────────── Pages ─────────────────────────────
   - name: anywhere
-    label: 🌙 Home page — Anywhere, anytime
+    label: 🌙 Home page: Anywhere, anytime
     type: file
     path: src/data/anywhere.json
     format: json
@@ -254,7 +254,7 @@ content:
             options:
               format: markdown
       - name: isr-program
-        label: ISR Swim Lessons — Dad's story box
+        label: ISR Swim Lessons: Dad's story box
         type: file
         path: src/data/isr.json
         format: json
@@ -276,7 +276,7 @@ content:
             label: Describe the photo
             type: string
       - name: pediatricians
-        label: ISR Swim Lessons — What pediatricians say
+        label: ISR Swim Lessons: What pediatricians say
         type: file
         path: src/data/pediatricians.json
         format: json
@@ -302,7 +302,7 @@ content:
             label: Link to the full AAP policy
             type: string
       - name: about-photo
-        label: About Us — family photo
+        label: About Us: family photo
         type: file
         path: src/data/about.json
         format: json
@@ -329,7 +329,7 @@ content:
         format: yaml-frontmatter
         fields: *pageFields
       - name: water-safety-more
-        label: Water Safety — more ways to stay safe (teens, life jackets, recall, CPR)
+        label: Water Safety: more ways to stay safe (teens, life jackets, recall, CPR)
         type: file
         path: src/content/pages/water-safety-more.md
         format: yaml-frontmatter
@@ -514,7 +514,7 @@ content:
         list:
           collapsible:
             collapsed: true
-            summary: "{stat} — {label}"
+            summary: "{stat}: {label}"
         fields: &factFields
           - name: stat
             label: Big number
@@ -537,7 +537,7 @@ content:
         list:
           collapsible:
             collapsed: true
-            summary: "{stat} — {label}"
+            summary: "{stat}: {label}"
         fields: *factFields
       - name: risks
         label: High-risk moments (Water Safety page)
@@ -572,7 +572,7 @@ content:
             list:
               collapsible:
                 collapsed: true
-                summary: "{stat} — {label}"
+                summary: "{stat}: {label}"
             fields: *factFields
 
   - name: resources
