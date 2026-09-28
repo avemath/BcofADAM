@@ -33,6 +33,8 @@ export interface AnywherePlace {
   tip?: string;
   source?: string;
   sourceUrl?: string;
+  source2?: string;
+  sourceUrl2?: string;
   link?: string;
   linkLabel?: string;
 }

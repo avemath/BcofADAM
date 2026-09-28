@@ -42,6 +42,11 @@ import { url } from '../lib/url';
       </nav>
 
       <div class="layers-list">
+        <p class="layers-intro">
+          These layers build on the National Drowning Prevention Alliance’s{' '}
+          <a href="https://ndpa.org/layers/" rel="noopener" target="_blank">5 Layers of Protection</a>, with barriers,
+          alarms and covers each counted as a layer of its own. Use as many as you can, every time.
+        </p>
         {
           layers.map((l, i) => (
             <article id={l.id} class="layer-detail reveal">
@@ -122,6 +127,10 @@ import { url } from '../lib/url';
     display: grid;
     gap: clamp(48px, 7vw, 88px);
     max-width: 760px;
+  }
+  .layers-intro {
+    font-size: 1.1rem;
+    margin: 0 0 calc(-1 * clamp(24px, 4vw, 48px));
   }
   .layer-detail {
     position: relative;
