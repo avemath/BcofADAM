@@ -1,26 +1,31 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
-import { site } from '../data/site';
+import { site, hasDonate } from '../data/site';
 import { url } from '../lib/url';
 
+// No donation link yet? Send visitors to Get Involved instead of a dead end.
+// Add the link in the Studio (Site settings → Donation link) and this page
+// and every Donate button appear automatically.
+if (!hasDonate) return Astro.redirect(url('/get-involved'));
+
 /**
- * What a gift does. Only list programs you actually run or have committed to.
- * (A 501(c)(3) can't raise money for one specific child's care. Keep gifts
+ * What a gift does. Only list programs we actually run or have committed to.
+ * (A 501(c)(3) can't raise money for one specific child's care, so gifts stay
  * tied to the mission: education, prevention tools, and support for families.)
  */
 const impact = [
   {
     title: 'Water Watcher tags & cards',
-    body: 'Put Water Watcher tags in the hands of parents, grandparents and babysitters at events, pediatric offices and pool stores.',
+    body: 'Water Watcher tags in the hands of parents, grandparents and babysitters at events, pediatric offices and pool stores.',
   },
   {
     title: 'Layers of protection',
-    body: 'Help families add door alarms, pool alarms and other layers that buy precious seconds.',
+    body: 'Door alarms, pool alarms and other layers that buy families precious seconds.',
   },
   {
     title: 'Swim lessons & CPR',
-    body: 'Scholarships so more children learn water competency, and CPR classes so more adults are ready to act.',
+    body: 'Help for families who want self-rescue swim lessons, and CPR classes so more adults are ready to act.',
   },
   {
     title: 'Survivor families',
@@ -31,7 +36,7 @@ const impact = [
 
 <BaseLayout
   title="Donate"
-  description="Support Because of ADAM's drowning awareness and prevention work in our community."
+  description="Support Because of ADAM's drowning awareness and prevention work."
 >
   <PageHero
     eyebrow="Give"
@@ -43,10 +48,6 @@ const impact = [
     <div class="wrap split">
       <div>
         <h2>What your gift makes possible</h2>
-        <div class="todo" style="margin-bottom: 24px">
-          Family: keep only the programs you run or have committed to, and add real numbers once you have them
-          (e.g. “$25 puts Water Watcher tags in 10 homes”). Delete this box when done.
-        </div>
         <div class="grid">
           {
             impact.map((i) => (
@@ -60,29 +61,9 @@ const impact = [
       </div>
 
       <div class="donate-box card">
-        {
-          site.donateUrl ? (
-            <>
-              <h2>Give securely online</h2>
-              <p>You’ll be taken to our secure giving page. Monthly gifts help us plan ahead.</p>
-              <a class="btn" href={site.donateUrl} rel="noopener">
-                Donate now
-              </a>
-            </>
-          ) : (
-            <>
-              <h2>Online giving is coming soon.</h2>
-              <p>
-                We’re setting up secure online donations. In the meantime, the best way to help is to share Adam’s
-                story and take the Water Watcher pledge.
-              </p>
-              <div class="btn-row">
-                <a class="btn" href={url('/water-watcher')}>Take the pledge</a>
-                <a class="btn btn--ghost" href={url('/contact')}>Contact us</a>
-              </div>
-            </>
-          )
-        }
+        <h2>Give securely online</h2>
+        <p>You’ll go to our secure giving page. Monthly gifts help us plan ahead. Thank you for being part of Adam’s village.</p>
+        <a class="btn" href={site.donateUrl} rel="noopener">Donate now</a>
         <p class="source" style="margin-top: 24px">
           {
             site.taxExempt

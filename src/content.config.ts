@@ -2,26 +2,52 @@ import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 
-/** Long-form pages written in Markdown (Adam's story, privacy policy, …). */
+/**
+ * Everything here is edited in the Studio (Pages CMS, see .pages.yml).
+ * Fields are forgiving on purpose: an empty box in the Studio should never
+ * break the website.
+ */
+const text = () => z.string().nullish().transform((v) => v ?? '');
+
+/** Long-form pages written in Markdown (Adam's story, ISR lessons, privacy). */
 const pages = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/pages' }),
   schema: z.object({
     title: z.string(),
-    eyebrow: z.string().optional(),
-    lede: z.string().optional(),
-    description: z.string().optional(),
+    eyebrow: text(),
+    lede: text(),
+    description: text(),
   }),
 });
 
-/** News & updates. Add a new .md file in src/content/news to post an update. */
+/** News & updates. */
 const news = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/news' }),
   schema: z.object({
     title: z.string(),
     date: z.coerce.date(),
-    summary: z.string(),
+    summary: text(),
     draft: z.boolean().default(false),
   }),
 });
 
-export const collections = { pages, news };
+/** Fundraisers and awareness events (fishing rodeo, cornhole tournaments…). */
+const events = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/events' }),
+  schema: z.object({
+    title: z.string(),
+    kind: z.enum(['Fundraiser', 'Awareness', 'Swim & safety', 'Community']).catch('Fundraiser'),
+    date: z.union([z.coerce.date(), z.literal(''), z.null()]).optional().transform((v) => (v ? v : undefined)),
+    when: text(),
+    location: text(),
+    summary: text(),
+    highlight: text(),
+    photo: text(),
+    link: text(),
+    linkLabel: text(),
+    featured: z.boolean().default(false),
+    draft: z.boolean().default(false),
+  }),
+});
+
+export const collections = { pages, news, events };

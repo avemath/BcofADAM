@@ -1,0 +1,109 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { url } from '../lib/url';
+
+interface Props {
+  event: CollectionEntry<'events'>;
+}
+const { event } = Astro.props;
+const e = event.data;
+const fmt = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeZone: 'UTC' });
+const when = e.date ? fmt.format(e.date) : e.when;
+const icon: Record<string, string> = {
+  Fundraiser: '🎣',
+  Awareness: '💙',
+  'Swim & safety': '🏊',
+  Community: '🤝',
+};
+---
+
+<article class="event card">
+  {
+    e.photo ? (
+      <img class="event__photo" src={url(e.photo)} alt="" loading="lazy" />
+    ) : (
+      <div class="event__art" aria-hidden="true">
+        <span>{icon[e.kind] ?? '💙'}</span>
+      </div>
+    )
+  }
+  <div class="event__body">
+    <p class="event__meta">
+      <span class="event__kind">{e.kind}</span>
+      {when && <span>{when}</span>}
+    </p>
+    <h3>{e.title}</h3>
+    {e.location && <p class="event__where">{e.location}</p>}
+    {e.summary && <p>{e.summary}</p>}
+    {e.highlight && <p class="event__highlight">{e.highlight}</p>}
+    {
+      e.link && (
+        <a class="btn btn--ocean event__btn" href={url(e.link)} rel="noopener">
+          {e.linkLabel || 'Learn more'}
+        </a>
+      )
+    }
+  </div>
+</article>
+
+<style>
+  .event {
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .event__photo,
+  .event__art {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+  .event__art {
+    display: grid;
+    place-items: center;
+    background:
+      radial-gradient(60% 80% at 80% 0%, rgb(255 214 120 / 0.55), transparent 70%),
+      linear-gradient(160deg, #1784a0, var(--deep));
+    font-size: 3.2rem;
+  }
+  .event__body {
+    padding: 22px 24px 26px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .event__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 8px;
+  }
+  .event__kind {
+    color: var(--aqua);
+  }
+  .event h3 {
+    font-size: 1.45rem;
+    margin-bottom: 0.3em;
+  }
+  .event__where {
+    font-weight: 600;
+    color: var(--ocean);
+    margin-bottom: 0.6em;
+  }
+  .event__highlight {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--ocean);
+  }
+  .event__btn {
+    margin-top: auto;
+    align-self: flex-start;
+  }
+</style>

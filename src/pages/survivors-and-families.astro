@@ -2,9 +2,10 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import CtaBand from '../components/CtaBand.astro';
-import { nonfatal } from '../data/facts';
-import { survivorResources } from '../data/resources';
+import { nonfatal } from '../data/content';
+import { survivorResources } from '../data/content';
 import { url } from '../lib/url';
+import { hasDonate } from '../data/site';
 
 const realities = [
   {
@@ -135,7 +136,7 @@ const realities = [
       <h2>How to support a family after a drowning</h2>
       <blockquote class="big-quote reveal">
         <p>“For every tragic story you read, there are family members in horrendous pain blaming themselves. When you hear these stories, pause and find kindness.”</p>
-        <cite>Adam’s mom</cite>
+        <cite>Our mom, Shannon</cite>
       </blockquote>
       <ul class="support-list">
         <li><strong>Don’t judge.</strong> Drowning happens to loving, careful families. Skip the comments section.</li>
@@ -149,9 +150,15 @@ const realities = [
 
   <CtaBand
     title="Help us support survivor families."
-    text="Your gift helps families facing life after a drowning, and helps keep other families from ever facing it."
+    text={hasDonate
+      ? 'Your gift helps families facing life after a drowning, and helps keep other families from ever facing it.'
+      : 'Share what you learn, take the pledge, and help us keep other families from ever facing this.'}
   >
-    <a class="btn" href={url('/donate')}>Give today</a>
+    {hasDonate ? (
+      <a class="btn" href={url('/donate')}>Give today</a>
+    ) : (
+      <a class="btn" href={url('/get-involved')}>Get involved</a>
+    )}
     <a class="btn btn--ghost" href={url('/adams-story')}>Read Adam’s story</a>
   </CtaBand>
 </BaseLayout>

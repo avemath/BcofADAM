@@ -1,0 +1,35 @@
+---
+/**
+ * becauseofadam.org/studio → the Studio (Pages CMS), where the family edits
+ * the website. Bookmark this page.
+ */
+const studio = 'https://app.pagescms.org';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta http-equiv="refresh" content={`0; url=${studio}`} />
+    <title>Studio | Because of ADAM</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background: #083349;
+        color: #fff;
+      }
+      a {
+        color: #ffb703;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Opening the Studio… <a href={studio}>Click here</a> if nothing happens.</p>
+  </body>
+</html>

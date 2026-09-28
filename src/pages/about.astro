@@ -4,6 +4,7 @@ import PageHero from '../components/PageHero.astro';
 import CtaBand from '../components/CtaBand.astro';
 import { site } from '../data/site';
 import { url } from '../lib/url';
+import { team } from '../data/content';
 
 const values = [
   { title: 'Honest', body: 'We tell the truth about drowning, including the hard parts, and we cite our sources.' },
@@ -12,12 +13,6 @@ const values = [
   { title: 'Community', body: 'It takes a village. We work alongside parents, schools, first responders, swim instructors and other drowning prevention groups.' },
 ];
 
-/** Board & team. Add real people when ready; photos go in /public/images/team/. */
-const team = [
-  { name: 'Shannon Matherne', role: 'Adam’s mom · Nurse' },
-  { name: 'Rickey Matherne', role: 'Adam’s dad · Red Cross CPR instructor & ISR swim instructor' },
-  { name: 'Adam’s brother & sisters', role: 'Founders, 2020' },
-];
 ---
 
 <BaseLayout
@@ -26,8 +21,8 @@ const team = [
 >
   <PageHero
     eyebrow="About us"
-    title="It started with one little boy."
-    lede="Adam survived a drowning in his family’s backyard pool at 14 months old. In 2020, his brother and sisters started Because of ADAM (Allies in the Drowning Awareness Movement) so other families could learn from his story. His village has been growing ever since."
+    title="It started with our little brother."
+    lede="Adam survived a drowning in our backyard pool when he was 14 months old. In 2020, his big brother and sisters (that’s us) started Because of ADAM: Allies in the Drowning Awareness Movement, so other families could learn from his story. His village has been growing ever since."
   />
 
   <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
@@ -36,7 +31,6 @@ const team = [
         <span class="eyebrow">Our mission</span>
         <h2 class="mission">To end childhood drowning by teaching water safety through the lessons of the past, education in the present, and the generations of the future.</h2>
         <p class="lede">Learn from our past. Protect your future.</p>
-        <div class="todo">Family: this mission is adapted from your 2020 Facebook post announcing the nonprofit. Make sure it matches your Articles of Incorporation and IRS filing.</div>
       </div>
       <div class="acronym reveal" aria-label="ADAM stands for Allies in the Drowning Awareness Movement">
         <p><span>A</span>llies</p>
@@ -79,16 +73,14 @@ const team = [
     <div class="wrap">
       <span class="eyebrow">Who we are</span>
       <h2>Our team</h2>
-      <div class="todo" style="margin-bottom: 28px">
-        Family: add the board of directors and volunteers (name, role, one-sentence bio, photo). Funders and Google
-        Ad Grants reviewers look for a real, named board.
-      </div>
-      <ul class="grid grid--4 team">
+      <ul class="grid grid--3 team" style="margin-top: 28px">
         {
           team.map((m) => (
-            <li class="card">
+            <li class="card team__card">
+              {m.photo && <img src={url(m.photo)} alt={m.name} loading="lazy" />}
               <h3>{m.name}</h3>
-              <p>{m.role}</p>
+              <p class="team__role">{m.role}</p>
+              {m.bio && <p>{m.bio}</p>}
             </li>
           ))
         }
@@ -104,7 +96,7 @@ const team = [
         {
           site.taxExempt
             ? `${site.name} is a registered 501(c)(3) nonprofit organization${site.ein ? ` (EIN ${site.ein})` : ''}.`
-            : `${site.name} is a family-led nonprofit effort. We’ll post our registration details here as soon as they are finalized.`
+            : `${site.name} is a family-run nonprofit effort. We’ll post our registration details here as soon as they’re final.`
         }{' '}
         We’ll share annual reports and IRS filings on this page as they become available.
       </p>
@@ -157,6 +149,18 @@ const team = [
     text-transform: uppercase;
     font-size: 0.85rem;
     color: var(--sun);
+  }
+  .team__card img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    margin-bottom: 16px;
+  }
+  .team__role {
+    font-weight: 700;
+    color: var(--ocean);
+    margin-bottom: 0.5em;
   }
   .team {
     list-style: none;

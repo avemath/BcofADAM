@@ -1,0 +1,85 @@
+---
+/**
+ * "Find a certified ISR instructor near you." Sends the visitor to Infant
+ * Swimming Resource's official instructor search. Only ISR-certified
+ * instructors appear there.
+ */
+const SEARCH_PAGE = 'https://www.infantswim.com/find-an-instructor/';
+---
+
+<div class="finder">
+  <span class="eyebrow">Find an instructor</span>
+  <h2>Find a certified ISR instructor near you.</h2>
+  <p class="lede">
+    Only certified ISR instructors can teach ISR Self-Rescue® lessons. Enter your ZIP code and we’ll take you to
+    Infant Swimming Resource’s official instructor search.
+  </p>
+  <form class="finder__form" action={SEARCH_PAGE} method="get" target="_blank" data-isr-finder>
+    <label class="visually-hidden" for="isr-zip">Your ZIP code</label>
+    <input
+      id="isr-zip"
+      name="zip"
+      inputmode="numeric"
+      autocomplete="postal-code"
+      pattern="[0-9]{5}"
+      maxlength="5"
+      placeholder="ZIP code"
+      required
+    />
+    <button class="btn" type="submit">Find instructors</button>
+  </form>
+  <p class="finder__note">
+    Opens infantswim.com in a new tab. No luck nearby? Ask an instructor about traveling for lessons. Adam’s nearest
+    instructor was two hours away, and we wish we’d made the drive.
+  </p>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLFormElement>('[data-isr-finder]').forEach((form) => {
+    form.addEventListener('submit', (e) => {
+      const zip = (form.elements.namedItem('zip') as HTMLInputElement).value.trim();
+      const target = form.dataset.searchUrl?.replace('{zip}', encodeURIComponent(zip));
+      if (target) {
+        e.preventDefault();
+        window.open(target, '_blank', 'noopener');
+      }
+    });
+  });
+</script>
+
+<style>
+  .finder {
+    text-align: center;
+  }
+  .finder .lede {
+    margin-inline: auto;
+  }
+  .finder__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin: 28px 0 16px;
+  }
+  .finder__form input {
+    font: 600 1.2rem var(--font-body);
+    width: 11ch;
+    padding: 12px 18px;
+    border-radius: 999px;
+    border: 2px solid rgb(255 255 255 / 0.4);
+    background: rgb(255 255 255 / 0.95);
+    color: var(--ink);
+    text-align: center;
+    letter-spacing: 0.1em;
+  }
+  .finder__form input:focus {
+    outline: 3px solid var(--sun);
+    outline-offset: 2px;
+  }
+  .finder__note {
+    font-size: 0.9rem;
+    color: var(--on-dark-soft);
+    max-width: 52ch;
+    margin-inline: auto;
+  }
+</style>

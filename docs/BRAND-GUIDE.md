@@ -1,18 +1,18 @@
-# Brand guide (starter)
+# Our brand guide
 
-A starting point to keep the website, social posts, flyers and Water Watcher cards looking and sounding like one organization. Update it once you have a designed logo.
+How we keep the website, social posts, flyers and Water Watcher cards looking and sounding like one organization. We'll update it once we have a real logo.
 
 ## Name
-- **Full:** Because of ADAM: Allies in the Drowning Awareness Movement (the name the siblings chose in 2020)
+- **Full:** Because of ADAM: Allies in the Drowning Awareness Movement (the name we chose when we started it in 2020)
 - **Short:** Because of ADAM (always capitalize **ADAM** when it refers to the movement; "Adam" when it's him)
 - **Community:** Adam's Village / Adam's Village of Hope
 - **Hashtags (already used on Facebook):** #BecauseofADAM (primary) · #AdamsVillage · #AdamRocks · #inHisTime · #smallmiracles
 
 ## Tagline options
 - *Drowning is silent. We won't be.* (home page headline)
-- *Learn from our past. Protect your future.* (the family's own hashtag, now on the About page)
+- *Learn from our past. Protect your future.* (our own hashtag, on the About page)
 - *Skills before thrills.*
-- *It only takes a second.* (the family's own words)
+- *It only takes a second.* (Mom and Dad's words)
 - *No single layer is enough.*
 - *Check the water first.*
 
@@ -48,7 +48,7 @@ Defined at the top of [`src/styles/global.css`](../src/styles/global.css). Chang
 Warm, honest, urgent, never blaming. See [CONTENT-PLAN.md §4](CONTENT-PLAN.md#4-voice-and-words) for the words to use and avoid.
 
 ## Logo
-The site currently uses a simple text logo (sun over waves), in [`src/components/Logo.astro`](../src/components/Logo.astro). When you get a designed logo:
+The site currently uses a simple text logo (sun over waves), in [`src/components/Logo.astro`](../src/components/Logo.astro). When we get a designed logo:
 - Ask for **SVG** + **PNG** versions: full color, all-white (for dark backgrounds), and a square icon (for social profiles and the browser tab).
 - Get a written **copyright assignment** to the organization from the designer.
 - Replace `public/favicon.svg` and the markup in `Logo.astro`, and regenerate `public/images/share-card.png` (1200×630).

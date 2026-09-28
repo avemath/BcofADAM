@@ -325,7 +325,8 @@ a:hover {
 .prose blockquote p {
   margin-bottom: 0.4em;
 }
-.prose blockquote cite {
+/* A last line like "*— Mom*" in a Markdown quote becomes the attribution. */
+.prose blockquote p:last-child:not(:first-child) > em:only-child {
   display: block;
   font-family: var(--font-body);
   font-style: normal;
@@ -334,9 +335,6 @@ a:hover {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--ink-soft);
-}
-.prose blockquote cite::before {
-  content: '— ';
 }
 .prose img {
   border-radius: var(--radius);
