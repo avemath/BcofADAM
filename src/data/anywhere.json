@@ -39,10 +39,10 @@
     {
       "icon": "🌙",
       "title": "While the house is asleep",
-      "text": "Kids wake up early, sleepwalk and wander. Children with autism are about 160 times as likely as other kids to die from drowning, often after wandering away.",
+      "text": "Kids wake up early, sleepwalk and wander. Among people with autism, deaths are nearly 40 times as likely to be caused by drowning as deaths in the general population.",
       "tip": "Keep doors to the water locked and alarmed at night too, latch the pool gate every time, and make a wandering plan if your child has autism.",
-      "source": "Guan & Li, American Journal of Public Health, 2017",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/28590851/",
+      "source": "CDC",
+      "sourceUrl": "https://www.cdc.gov/drowning/risk-factors/index.html",
       "link": "",
       "linkLabel": ""
     },
@@ -61,10 +61,12 @@
     {
       "icon": "❄️",
       "title": "Off-season water",
-      "text": "Pool drownings peak in summer, but bathtubs, hot tubs, ponds and covered pools don’t take the winter off. Rain and snowmelt collect on pool covers, and pond ice can look solid when it isn’t.",
+      "text": "Pool drownings peak in summer, but bathtubs, hot tubs, ponds and covered pools don’t take the winter off. Rain and snowmelt collect on pool covers, and a child can drown in less than 2 inches of water.",
       "tip": "Keep the fence and gate locked all year, use a certified safety cover and pump the water off it, and keep kids off the ice.",
       "source": "CPSC, 2026 report",
       "sourceUrl": "https://www.cpsc.gov/Newsroom/News-Releases/2026/CPSC-Report-Highlights-Persistent-Risk-of-Childhood-Drowning",
+      "source2": "American Academy of Pediatrics",
+      "sourceUrl2": "https://www.healthychildren.org/English/safety-prevention/at-play/Pages/Pool-Dangers-Drowning-Prevention-When-Not-Swimming-Time.aspx",
       "link": "",
       "linkLabel": ""
     },

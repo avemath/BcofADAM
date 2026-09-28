@@ -102,11 +102,20 @@ const moreHtml = more ? withPlaceholders(withBase(more.rendered?.html ?? '')) : 
               <p>{r.body}</p>
               {r.source && (
                 <p class="source">
-                  Source:{' '}
+                  {r.source2 ? 'Sources: ' : 'Source: '}
                   <a href={r.sourceUrl} rel="noopener" target="_blank">
                     {r.source}
                     <span class="visually-hidden"> (source for “{r.title}”, opens in a new tab)</span>
                   </a>
+                  {r.source2 && r.sourceUrl2 && (
+                    <>
+                      {'; '}
+                      <a href={r.sourceUrl2} rel="noopener" target="_blank">
+                        {r.source2}
+                        <span class="visually-hidden"> (source for “{r.title}”, opens in a new tab)</span>
+                      </a>
+                    </>
+                  )}
                 </p>
               )}
             </div>
