@@ -48,7 +48,20 @@ Our Facebook page: **[Because of ADAM (@AdamsVillageofHope)](https://www.faceboo
 
 ## Photos from our Facebook photo doc
 
-Our Word doc of Facebook photos (193 small thumbnails) is mapped to the site in a photo map: #130 Meet Adam, #176 June 5 2017 (or #97), #68 Life after (or #59), #44 Because of Adam, #71 Adam's village, and #14 for our sibling card on the About page. Upload **full-size** copies (from Facebook's Download option or the original phone photo), never the thumbnails. Extras worth using: #192, #167, #75, #193, #107, #60.
+Our Word doc of Facebook photos (193 small thumbnails, numbered in order) is mapped to the site:
+
+| Photo | Where |
+|---|---|
+| #130 Adam and Mom | Adam's Story, under "Meet Adam" (a recent photo of Adam would be even better) |
+| #176 (or #97) Rickey's graduation, Adam on his trike | Adam's Story, under "June 5, 2017" |
+| #68 (or #59) the S.S. Adam, Halloween 2017 | Adam's Story, under "Life after" |
+| #44 Lea kissing Adam | Adam's Story, under "Because of Adam" |
+| Mom's swing painting (#26, but photograph the real painting) | Adam's Story, under "Adam's village" |
+| #167 "It's a boy!" | About Us, top of the page |
+| #14 Christmas 2017, all five of us | About Us, team card for Rickey, Grace, Avery & Lea |
+| #71 the sea of blue shirts | Events: Adam's Hope Benefit on the Bayou, 2017 |
+
+Upload **full-size** copies (the original phone photo, or Facebook's Download option), never the thumbnails. Extras worth using on Facebook: #192, #22, #75, #107, #193, #60.
 
 Kept off the site: hospital and medical photos, bath and pool photos (even happy ones), the newspaper photo, siblings' personal photos (prom, senior pictures, sports), the pink tent, and flyers with phone numbers or the prayersforadam PayPal.
 
@@ -87,9 +100,9 @@ Those stay on Facebook, where people choose to follow along.
 - **Water safety booth**, July 2021 (posted July 15, 2021 by Little Explorer Swim, "with Because of ADAM"): our blue tent, most likely at Duncansville Community Days the same week (to confirm), with Adam, a "Never swim alone" poster, a water safety table and our banner. It was a shared booth with Dad's Little Explorer Swim banner, so the site doesn't use that photo as is.
 - **ADAMs Hope** is Mom's firefly page for Adam (the firefly-and-light-bulb logo on the 2021 flyer). The firefly ties right back to her fireflies story, and could be a lovely piece of a future Because of ADAM logo. Like the prayersforadam PayPal, anything raised for Adam through ADAMs Hope stays separate from the nonprofit's money.
 - **Mardi Gras 2020**: family in Louisiana made parade throws to spread drowning awareness in Adam's honor
-- **Adam's Hope benefit on the bayou**, Saturday, Sept. 30, 2017, Jules Nunez Seafood Pavilion, Lafitte, LA ("A Benefit for the Medical Treatments of AJ's Near Drowning"): poker run, cornhole tournament, car show, live music, silent and live auction, baskets, 50/50, kids fair. A sea of blue Adam's Hope shirts (photo #71 in our Facebook photo doc). For Adam's care, before the nonprofit, so it's in Adam's Story, not on the Events page.
+- **Adam's Hope benefit on the bayou**, Saturday, Sept. 30, 2017, Jules Nunez Seafood Pavilion, Lafitte, LA ("A Benefit for the Medical Treatments of AJ's Near Drowning"): poker run, cornhole tournament, car show, live music, silent and live auction, baskets, 50/50, kids fair. A sea of blue Adam's Hope shirts (photo #71 in our Facebook photo doc, confirmed). For Adam's care, before the nonprofit, so the Events page lists it as a **Community** event and says so.
 - **Adam's Hope benefit dinner, drawing & dance**, Saturday, Oct. 14, 2017, Duncansville Community Center, PA. Also for Adam's care.
-- **Adam's Hope benefit T-shirts** (2017): royal blue, with Mom's firefly logo on the front and the moonlit swing painting ("Not all those who wander are lost") on the back.
+- **Adam's Hope benefit T-shirts** (2017): royal blue, with Mom's firefly logo on the front and **Mom's own painting** of Adam's swing under the moon, with fireflies ("Not all those who wander are lost"), on the back.
 - **Fishing rodeo**, summer 2018, Jean Lafitte, Louisiana: our family and hometown put it on (shirts, cups, fans, trophies, raffles, music, games, auctions, food, all donated). It "completely paid for our first Stem Cell Treatment and travel to Duke University" (Mom, July 22, 2018). Because the money went to Adam's own care before the nonprofit existed, the Events page lists it as a **Community** event and says so. Still need: the exact date, a photo, and whether there were any later rodeos for Because of ADAM.
 - **Wear Blue on June 5**: every year
 - (The Oct. 2017 vendor fair in Duncansville also raised money for Adam's own care, before the nonprofit existed. It isn't on the site, but it could be added the same way as the rodeo.)

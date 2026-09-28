@@ -4,7 +4,8 @@ import PageHero from '../components/PageHero.astro';
 import CtaBand from '../components/CtaBand.astro';
 import { site } from '../data/site';
 import { url } from '../lib/url';
-import { team } from '../data/content';
+import PhotoFrame from '../components/PhotoFrame.astro';
+import { about, team } from '../data/content';
 
 const values = [
   { title: 'Honest', body: 'We tell the truth about drowning, including the hard parts, and we cite our sources.' },
@@ -24,6 +25,16 @@ const values = [
     title="It started with our little brother."
     lede="Adam survived a drowning in our backyard pool when he was 14 months old. In 2020, his big brother and sisters (that’s us) started Because of ADAM: Allies in the Drowning Awareness Movement, so other families could learn from his story. His village has been growing ever since."
   />
+
+  {
+    (about.photo || !site.launchReady) && (
+      <section class="section about-photo" style="padding-block: clamp(40px, 6vw, 72px) 0">
+        <div class="wrap narrow reveal">
+          <PhotoFrame src={about.photo} alt={about.photoAlt} caption={about.caption} ratio="3 / 2" natural hint="Family photo goes here: add it in the Studio" />
+        </div>
+      </section>
+    )
+  }
 
   <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
     <div class="wrap split">
