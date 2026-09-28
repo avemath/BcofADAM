@@ -5,6 +5,7 @@ import resourcesJson from './resources.json';
 import teamJson from './team.json';
 import anywhereJson from './anywhere.json';
 import aboutJson from './about.json';
+import isrJson from './isr.json';
 
 export interface Fact {
   stat: string;
@@ -39,6 +40,15 @@ export interface TeamMember {
   role: string;
   bio?: string;
   photo?: string;
+  photoAlt?: string;
+}
+/** Dad's ISR story box. The Studio drops empty fields when it saves, so most of these are optional. */
+export interface IsrBox {
+  programName: string;
+  blurb: string;
+  disclosure?: string;
+  photo?: string;
+  photoAlt?: string;
 }
 
 export const home = homeJson;
@@ -49,5 +59,6 @@ export const factGroups: { title: string; intro?: string; facts: Fact[] }[] = fa
 export const survivorResources: Resource[] = resourcesJson.survivor;
 export const resourceGroups: { title: string; items: Resource[] }[] = resourcesJson.groups;
 export const team: TeamMember[] = teamJson;
-export const about = aboutJson;
+export const about: { photo?: string; photoAlt?: string; caption?: string } = aboutJson;
+export const isr: IsrBox = isrJson;
 export const anywhere: Omit<typeof anywhereJson, 'places'> & { places: AnywherePlace[] } = anywhereJson;
