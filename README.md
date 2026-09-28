@@ -1,4 +1,4 @@
-# Because of ADAM: A Drowning Awareness Movement
+# Because of ADAM: Allies in the Drowning Awareness Movement
 
 The website for **Because of ADAM**, a family-founded movement to prevent childhood drowning, the #1 cause of death for children ages 1–4, and to support families living life after a nonfatal drowning.
 
