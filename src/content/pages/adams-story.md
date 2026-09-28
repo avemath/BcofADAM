@@ -23,7 +23,7 @@ Adam can’t move his body or talk, but he sees, hears and understands everythin
 
 ## June 5, 2017
 
-![Rickey in his blue cap and gown bending down to Adam, who is sitting on his red trike on the track](/images/uploads/ricgradredbikeb4acc.jpg)
+![](/images/uploads/ricgradredbikeb4acc-1.jpg)
 
 *Rickey’s graduation, just days before June 5, 2017.*
 
