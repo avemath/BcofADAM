@@ -1,16 +1,24 @@
 ---
 /**
- * "Build your layers" — a top-down backyard. Turning on each layer draws it
+ * "Build your layers": a top-down backyard. Turning on each protection draws it
  * into the scene and places a stop between the back door and the pool.
+ * Each switch is tagged with the layer it belongs to (names from src/data/layers.ts),
+ * so the builder and the list of layers always use the same names.
  */
+import { layers } from '../data/layers';
+
+const layerName = (id: string) => layers.find((l) => l.id === id)?.title.split(':')[0] ?? '';
 const toggles = [
-  { id: 'door', label: 'Door alarm', note: 'Sounds the moment the back door opens.' },
-  { id: 'fence', label: '4-sided pool fence', note: 'Separates the pool from the house and yard.' },
-  { id: 'gate', label: 'Self-latching gate', note: 'Closes and latches on its own, out of reach.' },
-  { id: 'poolalarm', label: 'Pool alarm', note: 'Alerts you if something enters the water.' },
-  { id: 'cover', label: 'Safety cover', note: 'Closes off the water when the pool isn’t in use.' },
-  { id: 'watcher', label: 'Water Watcher', note: 'One adult, eyes on the water, no phone.' },
+  { id: 'door', layer: 'alarms', label: 'Door alarm', note: 'Sounds the moment the back door opens.' },
+  { id: 'fence', layer: 'barriers', label: '4-sided pool fence', note: 'Separates the pool from the house and yard.' },
+  { id: 'gate', layer: 'barriers', label: 'Self-latching gate', note: 'Closes and latches on its own, out of reach.' },
+  { id: 'poolalarm', layer: 'alarms', label: 'Pool alarm', note: 'Alerts you if something enters the water.' },
+  { id: 'cover', layer: 'covers', label: 'Safety cover', note: 'Closes off the water when the pool isn’t in use.' },
+  { id: 'watcher', layer: 'supervision', label: 'Water Watcher', note: 'One adult, eyes on the water, no phone.' },
 ];
+const shownLayers = [...new Set(toggles.map((t) => t.layer))];
+const otherLayers = layers.filter((l) => !shownLayers.includes(l.id)).map((l) => l.title.split(':')[0].toLowerCase());
+const list = (items: string[]) => items.slice(0, -1).join(', ') + ' and ' + items.at(-1);
 ---
 
 <div class="builder" data-builder>
@@ -125,7 +133,9 @@ const toggles = [
                 <span class="toggle__switch" aria-hidden="true" />
                 <span class="toggle__text">
                   <strong>{t.label}</strong>
-                  <small>{t.note}</small>
+                  <small>
+                    <span class="toggle__layer">{layerName(t.layer)}:</span> {t.note}
+                  </small>
                 </span>
               </label>
             </li>
@@ -138,7 +148,11 @@ const toggles = [
       <span class="meter__fill"></span>
     </div>
     <p class="builder__status" role="status" aria-live="polite">
-      <strong>0 of 6 layers.</strong> Nothing stands between a curious toddler and the water.
+      <strong>0 of 6 turned on.</strong> Nothing stands between a curious toddler and the water.
+    </p>
+    <p class="builder__note">
+      This backyard shows {shownLayers.length} of the {layers.length} layers of protection. The other {otherLayers.length},
+      {list(otherLayers)}, go with your family everywhere, not just at home.
     </p>
   </div>
 </div>
@@ -172,7 +186,7 @@ const toggles = [
       const n = on.size;
       if (fill) fill.style.transform = `scaleX(${n / inputs.length})`;
       if (status)
-        status.innerHTML = `<strong>${n} of ${inputs.length} layers.</strong> ${messages[n]}`;
+        status.innerHTML = `<strong>${n} of ${inputs.length} turned on.</strong> ${messages[n]}`;
       root.classList.toggle('is-complete', n === inputs.length);
     };
 
@@ -356,6 +370,14 @@ const toggles = [
     transform-origin: left;
     transform: scaleX(0);
     transition: transform 0.5s ease;
+  }
+  .toggle__layer {
+    font-weight: 700;
+  }
+  .builder__note {
+    margin-top: 12px;
+    font-size: 0.9rem;
+    opacity: 0.85;
   }
   .builder__status {
     min-height: 3.2em;
