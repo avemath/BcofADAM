@@ -2,6 +2,14 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import { resourceGroups, survivorResources } from '../data/content';
+import { url } from '../lib/url';
+
+const guides = [
+  { name: 'Printable home water safety checklist', href: '/checklist', description: 'Walk through your home and yard layer by layer, plus a half-page for babysitters and grandparents.' },
+  { name: 'Water safety in Pennsylvania', href: '/pennsylvania', description: 'Lakes and rivers near Blair County, cold water, ice, flash floods and Pennsylvania’s life jacket rules.' },
+  { name: 'Water Watcher pledge and card', href: '/water-watcher', description: 'Make the promise and print a Water Watcher card for your pool bag.' },
+  { name: 'Teens, life jackets and CPR', href: '/water-safety#more', description: 'Water safety for older kids, how to pick a life jacket, a pool recall to check, and where to learn CPR.' },
+];
 
 const groups = [...resourceGroups, { title: 'For survivors & families', items: survivorResources }];
 ---
@@ -18,6 +26,21 @@ const groups = [...resourceGroups, { title: 'For survivors & families', items: s
 
   <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
     <div class="wrap">
+      <div class="res-group reveal">
+        <h2>Our guides</h2>
+        <ul class="grid grid--2">
+          {
+            guides.map((g) => (
+              <li class="card">
+                <h3>
+                  <a href={url(g.href)}>{g.name}</a>
+                </h3>
+                <p>{g.description}</p>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
       {
         groups.map((g) => (
           <div class="res-group reveal">
