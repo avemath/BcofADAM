@@ -5,11 +5,17 @@ import CtaBand from '../components/CtaBand.astro';
 import EventCard from '../components/EventCard.astro';
 import { getEvents, splitEvents } from '../lib/events';
 import { url } from '../lib/url';
+import { event as eventLd } from '../lib/seo';
 
 const { upcoming, past } = splitEvents(await getEvents());
+const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
+const origin = new URL(url('/'), Astro.site).href.replace(/\/$/, '');
+// Upcoming events (including the yearly ones) as structured data for search engines.
+const jsonLd = upcoming.map((e) => eventLd(e, origin, pageUrl)).filter((x) => x !== undefined);
 ---
 
 <BaseLayout
+  jsonLd={jsonLd}
   title="Events & Fundraisers"
   description="Fishing rodeos, cornhole tournaments and water safety events from Adam’s village, spreading the word about childhood drowning."
 >
@@ -34,7 +40,7 @@ const { upcoming, past } = splitEvents(await getEvents());
 
   <section class={upcoming.length > 0 ? 'section section--foam' : 'section'} style="padding-top: clamp(40px, 6vw, 72px)">
     <div class="wrap">
-      <h2>{upcoming.length > 0 ? 'What we’ve done' : 'Our events'}</h2>
+      <h2>Past events</h2>
       {past.length === 0 && <p>Events are coming soon. Follow us on Facebook for dates.</p>}
       <div class="grid grid--3" style="margin-top: 28px">
         {past.map((e) => <EventCard event={e} />)}

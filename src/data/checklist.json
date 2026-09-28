@@ -1,0 +1,77 @@
+{
+  "title": "Home water safety checklist",
+  "intro": "Walk through your home and yard with this list. Check off every layer you have, and make a plan for the ones you don’t. No single layer is enough.",
+  "sections": [
+    {
+      "title": "Supervision",
+      "items": [
+        "We name one adult as the Water Watcher any time kids are in or near water.",
+        "The Water Watcher puts the phone away and hands off to another adult every 15 minutes.",
+        "Toddlers and weak swimmers stay within arm’s reach."
+      ]
+    },
+    {
+      "title": "Barriers",
+      "items": [
+        "A fence at least 4 feet tall surrounds the pool on all four sides. The house is not one of the sides.",
+        "The gate closes and latches by itself, and we never prop it open.",
+        "Chairs, toys and planters are away from the fence so no one can climb it."
+      ]
+    },
+    {
+      "title": "Alarms",
+      "items": [
+        "Every door and window that opens toward the pool has an alarm.",
+        "We have a pool alarm or a wearable wristband alarm.",
+        "Alarms stay on, especially when we have guests, and we test them and keep spare batteries."
+      ]
+    },
+    {
+      "title": "Covers & drains",
+      "items": [
+        "The pool has a certified safety cover (ASTM F1346), and we pump standing water off it.",
+        "We empty and flip kiddie pools, buckets and coolers after every use.",
+        "Pool and spa drains have anti-entrapment covers, and above-ground pool ladders come out after swimming.",
+        "We checked our above-ground pool against the CPSC compression strap recall."
+      ]
+    },
+    {
+      "title": "Swim skills",
+      "items": [
+        "Our babies and toddlers are learning self-rescue (ISR), and our older kids are in swim lessons.",
+        "The adults in our house can swim, too."
+      ]
+    },
+    {
+      "title": "Life jackets",
+      "items": [
+        "Every child has a U.S. Coast Guard-approved life jacket that fits their weight.",
+        "Kids wear them at lakes, rivers and on boats, even on shore."
+      ]
+    },
+    {
+      "title": "Emergency ready",
+      "items": [
+        "Everyone who watches our kids knows to check the water first if a child is missing.",
+        "At least one adult in the house knows infant and child CPR.",
+        "A charged phone, a reaching pole and a ring buoy are at the pool.",
+        "Our address and emergency numbers are posted near the pool."
+      ]
+    }
+  ],
+  "sitterTitle": "For babysitters and grandparents",
+  "sitterIntro": "Thank you for watching our kids. Around water, here’s how we do it:",
+  "sitterItems": [
+    "If a child is missing, check the water first: pool, hot tub, bathtub, buckets. Then call 911.",
+    "When kids are in or near water, you’re the Water Watcher. Phone away, eyes on the water.",
+    "Toddlers stay within arm’s reach, in the pool and in the bath.",
+    "The pool gate stays closed and the alarms stay on. Please don’t prop doors open.",
+    "Empty buckets and kiddie pools when you’re done."
+  ],
+  "sitterBlanks": [
+    "Our address",
+    "Parent phone",
+    "Second contact",
+    "Pool and bath rules"
+  ]
+}

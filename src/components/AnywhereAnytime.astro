@@ -35,7 +35,10 @@ const spoken =
       <p class="lede">{anywhere.lede}</p>
     </div>
 
-    <p class="anywhere__swipe" aria-hidden="true">Swipe for more →</p>
+    <p class="anywhere__swipe" aria-hidden="true">
+      <span class="anywhere__swipe--touch">Swipe for more →</span>
+      <span class="anywhere__swipe--mouse">Scroll sideways for more →</span>
+    </p>
     <div class="grid grid--3 anywhere__grid">
       {
         anywhere.places.map((p) => (
@@ -52,19 +55,31 @@ const spoken =
             )}
             {p.link && (
               <a class="anywhere__link" href={url(p.link)}>
-                {p.linkLabel || 'Learn more'} →
+                {p.linkLabel || 'Learn more'}
+                <span class="visually-hidden"> ({p.title})</span> →
               </a>
             )}
             {p.source && (
               <p class="source">
-                Source:{' '}
-                {p.sourceUrl ? (
-                  <a href={p.sourceUrl} rel="noopener" target="_blank">
-                    {p.source}
-                  </a>
-                ) : (
-                  p.source
-                )}
+                {p.source2 ? 'Sources: ' : 'Source: '}
+                {[
+                  [p.source, p.sourceUrl],
+                  [p.source2, p.sourceUrl2],
+                ]
+                  .filter(([name]) => name)
+                  .map(([name, href], i) => (
+                    <>
+                      {i > 0 && '; '}
+                      {href ? (
+                        <a href={href} rel="noopener" target="_blank">
+                          {name}
+                          <span class="visually-hidden"> (source for “{p.title}”, opens in a new tab)</span>
+                        </a>
+                      ) : (
+                        name
+                      )}
+                    </>
+                  ))}
               </p>
             )}
           </article>
@@ -216,6 +231,18 @@ const spoken =
       color: var(--on-dark-soft);
     }
   }
+  /* "Swipe" only makes sense on touch screens. */
+  .anywhere__swipe--touch {
+    display: none;
+  }
+  @media (hover: none) {
+    .anywhere__swipe--touch {
+      display: inline;
+    }
+    .anywhere__swipe--mouse {
+      display: none;
+    }
+  }
   .anywhere__card {
     display: flex;
     flex-direction: column;
@@ -266,9 +293,6 @@ const spoken =
   .anywhere__quote figcaption {
     margin-top: 0.6em;
     color: var(--on-dark-soft);
-  }
-  .anywhere__quote figcaption::before {
-    content: '— ';
   }
   .anywhere__cta {
     justify-content: center;

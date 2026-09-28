@@ -1,7 +1,7 @@
 ---
 title: Welcome to the movement
 date: 2026-09-28
-summary: Why we built this website, and what's coming next.
+summary: Why we built this website, and what’s coming next.
 draft: false
 ---
 
@@ -13,4 +13,4 @@ Here you’ll find Adam’s story, the layers of protection that keep little one
 
 Thank you for being part of Adam’s village.
 
-*— Avery, Rickey, Grace & Lea*
+*Avery, Rickey, Grace & Lea*

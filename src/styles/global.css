@@ -1,20 +1,23 @@
 /*
- * Because of ADAM — global styles
+ * Because of ADAM: global styles
  * Brand colors live in :root below. Change them here and the whole site follows.
  */
 
 :root {
-  /* Water — from surface light to the deep end */
+  /* Water: from surface light to the deep end */
   --foam: #eef8f8;
   --shallow: #bfe7ea;
-  --aqua: #1aa6b7;
+  --aqua: #1aa6b7; /* decoration only: borders, bars, focus rings. Too light for text on light backgrounds. */
+  --aqua-text: #0a7483; /* aqua for text on light backgrounds (5:1 or better on white, sand and foam) */
   --ocean: #0b5470;
+  --ocean-bright: #0c6180; /* the light end of ocean gradients; white text stays above 6:1 */
   --deep: #083349;
   --abyss: #041d2b;
 
   /* Warmth & hope */
   --sand: #fbf6ee;
   --sun: #ffb703;
+  --sun-text: #ffd873; /* gold for small text on ocean gradients, where --sun is too dark to read */
   --sun-deep: #e89a00;
   --coral: #e85d4f;
 
@@ -114,7 +117,7 @@ a {
   text-underline-offset: 3px;
 }
 a:hover {
-  color: var(--aqua);
+  color: var(--aqua-text);
 }
 
 :focus-visible {
@@ -157,8 +160,8 @@ a:hover {
 .section--foam {
   background: var(--foam);
 }
-.section--deep a,
-.section--abyss a {
+.section--deep a:not(.btn),
+.section--abyss a:not(.btn) {
   color: var(--shallow);
 }
 
@@ -169,12 +172,12 @@ a:hover {
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--aqua);
+  color: var(--aqua-text);
   margin-bottom: 1rem;
 }
 .section--deep .eyebrow,
 .section--abyss .eyebrow {
-  color: var(--sun);
+  color: var(--sun-text);
 }
 
 .lede {
@@ -325,7 +328,7 @@ a:hover {
 .prose blockquote p {
   margin-bottom: 0.4em;
 }
-/* A last line like "*— Mom*" in a Markdown quote becomes the attribution. */
+/* A last line in italics, like "*Mom*", in a Markdown quote becomes the attribution. */
 .prose blockquote p:last-child:not(:first-child) > em:only-child {
   display: block;
   font-family: var(--font-body);
@@ -391,7 +394,24 @@ a:hover {
   font-size: 0.95rem;
 }
 
+/* {{TODO: ...}} notes left for the family, highlighted so they're easy to find in preview */
+.placeholder {
+  background: #fff2cc;
+  color: #6b4b00;
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+  font-weight: 700;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
 /* ---------- Misc ---------- */
+
+/* Photos get wrapped in <picture> at build time (integrations/optimize-images.mjs);
+   this keeps layouts treating the <img> as if it were on its own. */
+picture {
+  display: contents;
+}
 
 .visually-hidden {
   position: absolute !important;
@@ -423,6 +443,12 @@ a:hover {
 .source {
   font-size: 0.8rem;
   color: var(--ink-soft);
+}
+/* A source link on its own (not inside a sentence) gets a comfortable tap target. */
+a.source {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
 }
 .section--deep .source,
 .section--abyss .source {

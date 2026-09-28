@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
-import { site } from '../data/site';
+import SiteForm, { type Field } from '../components/SiteForm.astro';
 
 const topics = [
   'General question',
@@ -11,9 +11,15 @@ const topics = [
   'Partnership',
   'Media / press',
 ];
+const fields: Field[] = [
+  { name: 'name', label: 'Your name', required: true, autocomplete: 'name' },
+  { name: 'email', label: 'Email', type: 'email', required: true, autocomplete: 'email' },
+  { name: 'topic', label: 'What’s this about?', type: 'select', options: topics },
+  { name: 'message', label: 'Message', type: 'textarea', required: true },
+];
 ---
 
-<BaseLayout title="Contact" description="Get in touch with Because of ADAM: questions, speaking requests, partnerships, media, or to share your family's story.">
+<BaseLayout title="Contact" description="Get in touch with Because of ADAM: questions, speaking requests, partnerships, media, or to share your family’s story.">
   <PageHero
     eyebrow="Contact"
     title="We’d love to hear from you."
@@ -23,49 +29,7 @@ const topics = [
   <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
     <div class="wrap split">
       <div>
-        {
-          site.contactFormAction ? (
-            <form class="contact-form card" action={site.contactFormAction} method="POST">
-              <div class="field">
-                <label for="name">Your name</label>
-                <input id="name" name="name" type="text" autocomplete="name" required />
-              </div>
-              <div class="field">
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" autocomplete="email" required />
-              </div>
-              <div class="field">
-                <label for="topic">What’s this about?</label>
-                <select id="topic" name="topic">
-                  {topics.map((t) => <option>{t}</option>)}
-                </select>
-              </div>
-              <div class="field">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="6" required />
-              </div>
-              <input type="text" name="_gotcha" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true" />
-              <button class="btn btn--ocean" type="submit">Send message</button>
-            </form>
-          ) : (
-            <div class="card">
-              <h2>Send us a message</h2>
-              {site.email ? (
-                <p>
-                  Email us at <a href={`mailto:${site.email}`}>{site.email}</a>. We read every message.
-                </p>
-              ) : (
-                <p>
-                  Our contact form is coming soon. For now, message us on{' '}
-                  <a href={site.social.facebook} rel="noopener" target="_blank">
-                    Facebook
-                  </a>
-                  .
-                </p>
-              )}
-            </div>
-          )
-        }
+        <SiteForm id="contact" fields={fields} subject="Message from the website" submitLabel="Send message" fallbackTitle="Send us a message" />
       </div>
       <div class="callout callout--warn">
         <strong>In an emergency, call 911.</strong>
@@ -76,35 +40,6 @@ const topics = [
 </BaseLayout>
 
 <style>
-  .contact-form {
-    display: grid;
-    gap: 18px;
-  }
-  .field {
-    display: grid;
-    gap: 6px;
-  }
-  .field label {
-    font-weight: 700;
-  }
-  .field input,
-  .field select,
-  .field textarea {
-    font: inherit;
-    padding: 12px 14px;
-    border: 2px solid var(--line);
-    border-radius: var(--radius-sm);
-    background: #fff;
-  }
-  .field input:focus,
-  .field select:focus,
-  .field textarea:focus {
-    border-color: var(--aqua);
-    outline: none;
-  }
-  .contact-form .btn {
-    justify-self: start;
-  }
   @media (min-width: 900px) {
     .split {
       align-items: start;

@@ -1,0 +1,213 @@
+---
+/**
+ * One form for Contact, Request a talk and Volunteer. It posts to the form
+ * service set in the Studio (Site settings → Contact form link: Formspree or
+ * Web3Forms). Until that's set, it shows our email address instead, with a list
+ * of what to include.
+ */
+import { site } from '../data/site';
+import { url } from '../lib/url';
+
+export interface Field {
+  name: string;
+  label: string;
+  type?: 'text' | 'email' | 'date' | 'textarea' | 'select' | 'checkboxes';
+  required?: boolean;
+  autocomplete?: string;
+  options?: string[];
+  hint?: string;
+}
+interface Props {
+  id: string;
+  fields: Field[];
+  subject: string;
+  submitLabel: string;
+  /** Shown when there's no form service yet. */
+  fallbackTitle: string;
+}
+const { id, fields, subject, submitLabel, fallbackTitle } = Astro.props;
+const action = site.contactFormAction.trim();
+const key = site.contactFormKey.trim();
+const mailto = `mailto:${site.email}?subject=${encodeURIComponent(subject)}`;
+---
+
+{
+  action ? (
+    <form class="site-form card" id={id} action={action} method="POST" data-site-form>
+      {key && <input type="hidden" name="access_key" value={key} />}
+      <input type="hidden" name="subject" value={subject} />
+      {fields.map((f) => {
+        const fid = `${id}-${f.name}`;
+        const hintId = f.hint ? `${fid}-hint` : undefined;
+        if (f.type === 'checkboxes') {
+          return (
+            <fieldset class="field">
+              <legend>{f.label}</legend>
+              {f.hint && <p class="field__hint">{f.hint}</p>}
+              <div class="checks">
+                {f.options?.map((o, i) => (
+                  <label class="check" for={`${fid}-${i}`}>
+                    <input id={`${fid}-${i}`} type="checkbox" name={f.name} value={o} /> {o}
+                  </label>
+                ))}
+              </div>
+            </fieldset>
+          );
+        }
+        return (
+          <div class="field">
+            <label for={fid}>
+              {f.label}
+              {!f.required && <span class="field__optional"> (optional)</span>}
+            </label>
+            {f.hint && <p class="field__hint" id={hintId}>{f.hint}</p>}
+            {f.type === 'textarea' ? (
+              <textarea id={fid} name={f.name} rows="5" required={f.required} aria-describedby={hintId} />
+            ) : f.type === 'select' ? (
+              <select id={fid} name={f.name} required={f.required} aria-describedby={hintId}>
+                <option value="">Choose one</option>
+                {f.options?.map((o) => <option>{o}</option>)}
+              </select>
+            ) : (
+              <input
+                id={fid}
+                name={f.name}
+                type={f.type ?? 'text'}
+                required={f.required}
+                autocomplete={f.autocomplete}
+                aria-describedby={hintId}
+              />
+            )}
+          </div>
+        );
+      })}
+      <input type="text" name="_gotcha" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true" />
+      <button class="btn btn--ocean" type="submit">{submitLabel}</button>
+      <p class="site-form__status" role="status" aria-live="polite" data-status></p>
+      <p class="site-form__privacy">
+        We only use this to reply to you. See our <a href={url('/privacy')}>privacy policy</a>.
+      </p>
+    </form>
+  ) : (
+    <div class="card site-form site-form--fallback">
+      <h2>{fallbackTitle}</h2>
+      <p>
+        Email us at <a href={mailto}>{site.email}</a> and include:
+      </p>
+      <ul>
+        {fields.filter((f) => f.name !== 'email').map((f) => <li>{f.label.replace(/\?$/, '')}</li>)}
+      </ul>
+      <p class="site-form__privacy">We read every message and reply as soon as we can.</p>
+    </div>
+  )
+}
+
+<script>
+  document.querySelectorAll<HTMLFormElement>('[data-site-form]').forEach((form) => {
+    const status = form.querySelector<HTMLElement>('[data-status]');
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (!status) return form.submit();
+      const button = form.querySelector<HTMLButtonElement>('button[type=submit]');
+      if (button) button.disabled = true;
+      status.textContent = 'Sending…';
+      status.dataset.state = '';
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' },
+        });
+        if (!res.ok) throw new Error(String(res.status));
+        form.reset();
+        status.dataset.state = 'ok';
+        status.textContent = 'Thank you! Your message is on its way. We’ll reply as soon as we can.';
+      } catch {
+        status.dataset.state = 'error';
+        status.textContent = 'Sorry, that didn’t go through. Please try again, or email us directly.';
+      } finally {
+        if (button) button.disabled = false;
+      }
+    });
+  });
+</script>
+
+<style>
+  .site-form {
+    display: grid;
+    gap: 18px;
+  }
+  .field {
+    display: grid;
+    gap: 6px;
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+  .field label,
+  .field legend {
+    font-weight: 700;
+  }
+  .field__optional,
+  .field__hint {
+    font-weight: 400;
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  .field input,
+  .field select,
+  .field textarea {
+    font: inherit;
+    padding: 12px 14px;
+    min-height: 48px;
+    border: 2px solid var(--line);
+    border-radius: var(--radius-sm);
+    background: #fff;
+    color: var(--ink);
+  }
+  .field input:focus-visible,
+  .field select:focus-visible,
+  .field textarea:focus-visible {
+    outline: 3px solid var(--aqua);
+    outline-offset: 2px;
+    border-color: var(--ocean);
+  }
+  .checks {
+    display: grid;
+    gap: 8px;
+  }
+  .check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 44px;
+    font-weight: 400;
+  }
+  .check input {
+    width: 22px;
+    height: 22px;
+    min-height: 0;
+  }
+  .site-form__status:empty {
+    display: none;
+  }
+  .site-form__status {
+    font-weight: 700;
+    margin: 0;
+  }
+  .site-form__status[data-state='ok'] {
+    color: var(--ocean);
+  }
+  .site-form__status[data-state='error'] {
+    color: #a3261b;
+  }
+  .site-form__privacy {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+  .site-form--fallback ul {
+    margin: 0 0 0.5em;
+  }
+</style>

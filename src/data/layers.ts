@@ -53,7 +53,7 @@ export const layers: Layer[] = [
     ],
     tips: [
       'Put alarms on every door and window that opens toward the pool. Code-compliant door alarms (UL 2017) sound within seconds of the door opening.',
-      'In Pennsylvania, building code still lets the house be one side of the pool barrier if doors to the pool have alarms. A four-sided fence is safer.',
+      'In Pennsylvania, building code still lets the house be one side of the pool barrier if doors to the pool have alarms (or the pool has a certified safety cover). A four-sided fence is safer.',
       'Add a pool alarm or a wearable wristband alarm as an extra layer.',
       'Test alarms regularly and keep spare batteries on hand.',
       'Make “alarms stay on” a house rule, especially when you have guests.',
@@ -84,7 +84,7 @@ export const layers: Layer[] = [
     ],
     tips: [
       'Look for lessons that teach water competency: getting back to the wall, floating and turning.',
-      'For babies and toddlers, look into ISR self-rescue lessons, which teach them to roll onto their backs and float. Our Swim Lessons page can help you find an instructor.',
+      'For babies and toddlers, we recommend ISR self-rescue lessons, which teach them to roll onto their backs and float, even fully dressed. Water play classes are fun, but they don’t teach a child what to do alone. Our Swim Lessons page can help you find an instructor.',
       'Children with autism or other disabilities can benefit from adaptive swim lessons.',
       'Practice in clothes and in different places (pool, lake, beach).',
       'Lessons add to supervision and barriers. They never replace them.',
@@ -96,7 +96,7 @@ export const layers: Layer[] = [
     short: 'U.S. Coast Guard-approved, fitted and fastened.',
     body: [
       'Weak swimmers and young children should wear a U.S. Coast Guard-approved life jacket around open water, on boats and at the beach.',
-      'Air-filled toys like water wings, noodles and inner tubes are toys. They aren’t safety devices, and they can give adults a false sense of security.',
+      'Air-filled toys like water wings, noodles and inner tubes are toys. They aren’t safety devices, and they can slip off.',
     ],
     tips: [
       'Check the label for U.S. Coast Guard approval and the right weight range.',
@@ -113,6 +113,7 @@ export const layers: Layer[] = [
       'Bystander CPR begun right away can make a life-saving difference while emergency crews are on the way. Our mom, our Pops, our dad and the first responders all did CPR on Adam.',
     ],
     tips: [
+      'In an emergency, call 911. If a child is missing, check the water first.',
       'Take a CPR class that includes infant and child CPR, and renew it every two years. After a drowning, CPR with rescue breaths matters.',
       'Keep a charged phone and rescue equipment (a reaching pole and a ring buoy) at the pool.',
       'Post emergency numbers and your home address near the pool.',

@@ -4,15 +4,16 @@ import PhotoFrame from '../components/PhotoFrame.astro';
 import CtaBand from '../components/CtaBand.astro';
 import { home as story } from '../data/content';
 import { url } from '../lib/url';
+import { site } from '../data/site';
 ---
 
-<ProseLayout slug="adams-story">
+<ProseLayout slug="adams-story" type="Article">
   <aside class="story-aside">
     <PhotoFrame src={story.photo} alt={story.photoAlt} hint="Add a photo of Adam" />
     <div class="card story-aside__card">
       <p class="eyebrow">Adam’s Village of Hope</p>
       <p>Follow Adam’s journey and join the thousands of people cheering him on.</p>
-      <a class="btn btn--ocean" href="https://www.facebook.com/AdamsVillageofHope/" rel="noopener" target="_blank">
+      <a class="btn btn--ocean" href={site.facebookUrl} rel="noopener" target="_blank">
         Follow on Facebook
       </a>
     </div>

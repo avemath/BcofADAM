@@ -31,11 +31,14 @@ Follow Adam's journey on Facebook: [Adam's Village of Hope](https://www.facebook
 
 - **Home**: "Drowning is silent. We won't be." Plus the key facts, "Not just pools. Not just summer." (bathtubs, buckets, nighttime, winter clothes), Adam, a live "time on this page" clock, an interactive backyard where you build the layers of protection, Dad's ISR lessons, our events and our Facebook feed
 - **Adam's Story**, told by me
-- **Water Safety**: the seven layers of protection
-- **ISR Swim Lessons**: what Infant Swimming Resource is, why it matters so much to us, Dad's program, and a search for certified instructors near you
-- **The Facts**, **Survivors & Families**, **Events**, **Water Watcher Pledge** (with a printable card), **Get Involved**, **About**, **Resources**, **News**, **Contact**, **Privacy**
+- **Water Safety**: the seven layers of protection, plus teens, life jackets, the above-ground pool recall and CPR
+- **Water Safety in Pennsylvania**: lakes and rivers near us, cold water, ice, flash floods and PA's life jacket rules
+- **ISR Swim Lessons**: what Infant Swimming Resource is, what pediatricians say, why it matters so much to us, other ways to find lessons, and a search for certified instructors near you
+- **The Facts**, **Survivors & Families**, **Events**, **Water Watcher Pledge** (with a printable card), **Home checklist** (printable), **Get Involved**, **Request a Talk**, **About**, **Resources**, **News**, **Press**, **Contact**, **Privacy**, **Terms**, **Accessibility**
 
-The **Donate** buttons stay hidden until a donation link is added in the Studio. The yellow **Preview** banner stays up (and Google stays away) until we flip the launch switch.
+The **Donate** buttons stay hidden until a donation link is added in the Studio. The yellow **Preview** banner stays up (and Google stays away) until we flip the launch switch. Once the switch is on, the build refuses to publish if anything marked `{{TODO: ...}}`, a photo without a description, or a missing email or location is left (see [launch-guard.mjs](integrations/launch-guard.mjs)).
+
+Hosting, DNS, security headers and email setup: [HOSTING_NOTES.md](HOSTING_NOTES.md). Moving the private planning docs out of this public repo: [PRIVATE_DOCS_MIGRATION.md](PRIVATE_DOCS_MIGRATION.md).
 
 ## How it's published
 
@@ -50,8 +53,9 @@ Built with [Astro](https://astro.build). Requires Node.js 22.12+.
 ```bash
 npm install
 npm run dev       # http://localhost:4321
-npm run check     # type-check
-npm run build     # output in dist/
+npm run check     # Studio config check + type-check
+npm run build     # output in dist/ (also makes AVIF/WebP photos and runs the launch guard)
+npm run icons -- path/to/logo.png   # remake every favicon and app icon from one logo file
 ```
 
 ```
@@ -59,11 +63,13 @@ npm run build     # output in dist/
 src/
   data/          ← settings, home page, facts, resources, team, Dad's ISR story box (JSON, edited in the Studio)
   content/
-    pages/       ← Adam's Story, ISR Swim Lessons, Privacy (Markdown)
+    pages/       ← Adam's Story, ISR Swim Lessons, Pennsylvania, Press, Privacy, Terms and more (Markdown)
     events/      ← events & fundraisers (Markdown)
     news/        ← news posts (Markdown)
   pages/         ← one file per page
   components/    ← header, footer, layers builder, Facebook feed, ISR finder…
   styles/        ← global.css (colors and fonts at the top)
+integrations/    ← build steps: launch guard, photo optimizer
+scripts/         ← Studio config check, icon generator
 public/images/   ← images (Studio uploads go in public/images/uploads)
 ```

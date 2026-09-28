@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import CtaBand from '../components/CtaBand.astro';
-import { site } from '../data/site';
+import { site, nonprofitLine } from '../data/site';
 import { url } from '../lib/url';
 import PhotoFrame from '../components/PhotoFrame.astro';
 import { about, team } from '../data/content';
@@ -18,7 +18,7 @@ const values = [
 
 <BaseLayout
   title="About Us"
-  description="Because of ADAM: Allies in the Drowning Awareness Movement was founded by Adam's family to prevent childhood drowning and support families affected by it."
+  description={`${site.name}: ${site.tagline} was founded by Adam’s family to prevent childhood drowning and support families affected by it.`}
 >
   <PageHero
     eyebrow="About us"
@@ -43,7 +43,7 @@ const values = [
         <h2 class="mission">To end childhood drowning by teaching water safety through the lessons of the past, education in the present, and the generations of the future.</h2>
         <p class="lede">Learn from our past. Protect your future.</p>
       </div>
-      <div class="acronym reveal" aria-label="ADAM stands for Allies in the Drowning Awareness Movement">
+      <div class="acronym reveal" aria-label={`ADAM stands for ${site.tagline}`}>
         <p><span>A</span>llies</p>
         <p class="acronym__small">in the</p>
         <p><span>D</span>rowning</p>
@@ -109,7 +109,7 @@ const values = [
           team.map((m) => (
             <li class="card team__card">
               {m.photo ? (
-                <img src={url(m.photo)} alt={m.name} loading="lazy" />
+                <img src={url(m.photo)} sizes="(min-width: 1000px) 300px, (min-width: 600px) 50vw, 100vw" alt={m.photoAlt || m.name} data-missing-alt={!m.photoAlt || undefined} loading="lazy" />
               ) : (
                 !site.launchReady && <PhotoFrame ratio="4 / 3" hint="Add a photo in the Studio" />
               )}
@@ -129,9 +129,8 @@ const values = [
       <h2>Accountable to our village</h2>
       <p>
         {
-          site.taxExempt
-            ? `${site.name} is a registered 501(c)(3) nonprofit organization${site.ein ? ` (EIN ${site.ein})` : ''}.`
-            : `${site.name} is a family-run nonprofit effort. We’ll post our registration details here as soon as they’re final.`
+          nonprofitLine ||
+          `${site.name} is a family-run nonprofit effort. We’ll post our registration details here as soon as they’re final.`
         }{' '}
         We’ll share annual reports and IRS filings on this page as they become available.
       </p>

@@ -44,8 +44,19 @@ content:
         label: Contact form link (optional)
         type: string
         description: From Web3Forms or Formspree. Leave empty to show the email address instead.
+      - name: contactFormKey
+        label: Web3Forms access key (only if the contact form uses Web3Forms)
+        type: string
+      - name: newsletterFormAction
+        label: Newsletter form address (optional)
+        type: string
+        description: 'The form "action" address from Mailchimp, Buttondown, MailerLite, etc. The email sign-up shows in the footer as soon as this is filled in.'
+      - name: newsletterEmailField
+        label: Newsletter email field name
+        type: string
+        description: 'Usually "email". Mailchimp uses "EMAIL".'
       - name: newsletterUrl
-        label: Newsletter sign-up link (optional)
+        label: Newsletter sign-up page link (optional, used if there's no form address)
         type: string
       - name: instagramUrl
         label: Instagram link
@@ -56,25 +67,46 @@ content:
       - name: youtubeUrl
         label: YouTube link
         type: string
-      - name: location
-        label: Location shown in the footer
+      - name: linkedinUrl
+        label: LinkedIn link
         type: string
+      - name: location
+        label: Where we're based
+        type: string
+        description: 'Shown in the footer and used across the site (currently "Blair County, Pennsylvania").'
       - name: taxExempt
-        label: We have our 501(c)(3) letter from the IRS
+        label: We're an IRS-approved 501(c)(3)
         type: boolean
-        description: Only turn this on once the IRS approves us. It lets the site say donations are tax-deductible.
+        description: 'Shows "Because of ADAM is a 501(c)(3) nonprofit organization. EIN ..." in the footer and on the About and Donate pages.'
       - name: ein
         label: EIN (tax ID number)
         type: string
+        description: 'Replace {{TODO: EIN}} with our EIN, like 12-3456789. The site can''t launch until this is filled in.'
+      - name: themeColor
+        label: Browser color (theme color)
+        type: string
+        description: 'The color phones use for the browser bar, as a hex code like #083349. If the logo colors change, update this to match.'
+      - name: analyticsProvider
+        label: Analytics
+        type: select
+        options:
+          values: [none, plausible, fathom, cloudflare]
+        description: Privacy-friendly visitor counts with no cookies. Pick the service you signed up for, or none.
+      - name: analyticsSite
+        label: Analytics site ID
+        type: string
+        description: 'Plausible: your domain (becauseofadam.org). Fathom: the site ID. Cloudflare: the token from the snippet.'
       - name: launchReady
         label: Launch the site (removes the "Preview" banner and lets Google find us)
         type: boolean
+        description: 'The site won''t publish with this on while any {{TODO}} or "Family, please review" box is left. If a save doesn''t show up, check the Actions tab on GitHub for the list.'
       - name: name
         label: Organization name
         type: string
       - name: tagline
-        label: What ADAM stands for
+        label: Full name (what ADAM stands for)
         type: string
+        description: 'Allies in the Drowning Awareness Movement. Used in page titles, the footer, the About page and search results.'
       - name: description
         label: Short description (used by Google and link previews)
         type: text
@@ -119,7 +151,7 @@ content:
 
   # ───────────────────────────── Pages ─────────────────────────────
   - name: anywhere
-    label: 🌙 Home page — Anywhere, anytime
+    label: "🌙 Home page: Anywhere, anytime"
     type: file
     path: src/data/anywhere.json
     format: json
@@ -165,6 +197,12 @@ content:
           - name: sourceUrl
             label: Source link
             type: string
+          - name: source2
+            label: Second source (optional)
+            type: string
+          - name: sourceUrl2
+            label: Second source link
+            type: string
           - name: link
             label: Link to another page (optional)
             type: string
@@ -199,8 +237,15 @@ content:
             label: Intro under the title
             type: text
           - name: description
-            label: Short description for Google
+            label: Short description for Google (under 155 characters)
             type: text
+          - name: image
+            label: Share picture (optional)
+            type: image
+            description: Shows when this page is shared on Facebook or in a text. Leave empty to use the site's share card.
+          - name: imageAlt
+            label: Describe the share picture
+            type: string
           - name: body
             label: Page text
             type: rich-text
@@ -222,15 +267,22 @@ content:
             label: Intro under the title
             type: text
           - name: description
-            label: Short description for Google
+            label: Short description for Google (under 155 characters)
             type: text
+          - name: image
+            label: Share picture (optional)
+            type: image
+            description: Shows when this page is shared on Facebook or in a text. Leave empty to use the site's share card.
+          - name: imageAlt
+            label: Describe the share picture
+            type: string
           - name: body
             label: Page text
             type: rich-text
             options:
               format: markdown
       - name: isr-program
-        label: ISR Swim Lessons — Dad's story box
+        label: "ISR Swim Lessons: Dad's story box"
         type: file
         path: src/data/isr.json
         format: json
@@ -240,6 +292,9 @@ content:
             type: string
           - name: blurb
             label: Short story
+            type: text
+          - name: stance
+            label: Why we recommend ISR (home page, one or two sentences)
             type: text
           - name: disclosure
             label: Separation note (please keep this)
@@ -251,8 +306,34 @@ content:
           - name: photoAlt
             label: Describe the photo
             type: string
+      - name: pediatricians
+        label: "ISR Swim Lessons: What pediatricians say"
+        type: file
+        path: src/data/pediatricians.json
+        format: json
+        fields:
+          - name: title
+            label: Heading
+            type: string
+          - name: summary
+            label: What the AAP recommends, in plain words
+            type: text
+            description: Shows next to our ISR content on the ISR page and the home page. Keep it matching the AAP's current advice.
+          - name: points
+            label: Key points
+            type: string
+            list: true
+          - name: source
+            label: Source name
+            type: string
+          - name: sourceUrl
+            label: Source link
+            type: string
+          - name: policyUrl
+            label: Link to the full AAP policy
+            type: string
       - name: about-photo
-        label: About Us — family photo
+        label: "About Us: family photo"
         type: file
         path: src/data/about.json
         format: json
@@ -270,6 +351,74 @@ content:
         label: Privacy policy
         type: file
         path: src/content/pages/privacy.md
+        format: yaml-frontmatter
+        fields: *pageFields
+      - name: pennsylvania
+        label: Water Safety in Pennsylvania
+        type: file
+        path: src/content/pages/pennsylvania.md
+        format: yaml-frontmatter
+        fields: *pageFields
+      - name: water-safety-more
+        label: "Water Safety: more ways to stay safe (teens, life jackets, recall, CPR)"
+        type: file
+        path: src/content/pages/water-safety-more.md
+        format: yaml-frontmatter
+        fields: *pageFields
+      - name: checklist
+        label: Home water safety checklist (printable)
+        type: file
+        path: src/data/checklist.json
+        format: json
+        fields:
+          - name: title
+            label: Title
+            type: string
+          - name: intro
+            label: Intro
+            type: text
+          - name: sections
+            label: Checklist sections (one per layer)
+            type: object
+            list: true
+            fields:
+              - name: title
+                label: Section title
+                type: string
+              - name: items
+                label: Checklist items
+                type: string
+                list: true
+          - name: sitterTitle
+            label: Babysitter half-page title
+            type: string
+          - name: sitterIntro
+            label: Babysitter half-page intro
+            type: text
+          - name: sitterItems
+            label: Babysitter rules
+            type: string
+            list: true
+          - name: sitterBlanks
+            label: Blanks to fill in (address, phone numbers…)
+            type: string
+            list: true
+      - name: terms
+        label: Terms of use
+        type: file
+        path: src/content/pages/terms.md
+        format: yaml-frontmatter
+        fields: *pageFields
+      - name: accessibility
+        label: Accessibility statement
+        type: file
+        path: src/content/pages/accessibility.md
+        format: yaml-frontmatter
+        fields: *pageFields
+      - name: press
+        label: Press & Media
+        type: file
+        path: src/content/pages/press.md
         format: yaml-frontmatter
         fields: *pageFields
 
@@ -298,9 +447,13 @@ content:
         options:
           values: [Fundraiser, Awareness, Swim & safety, Community]
       - name: date
-        label: Date (leave empty if it's a yearly event with no set date)
+        label: Date
         type: date
         default: ""
+      - name: repeatsYearly
+        label: Happens every year on this date
+        type: boolean
+        description: Yearly events (like Wear Blue on June 5) always show under "Coming up" with their next date.
       - name: when
         label: When, in words (e.g. "Every June", "Summer 2023")
         type: string
@@ -316,6 +469,14 @@ content:
       - name: photo
         label: Photo
         type: image
+      - name: photoAlt
+        label: Describe the photo (required if there's a photo)
+        type: string
+        description: For people who can't see it, e.g. "Teams playing cornhole under a big white tent".
+      - name: photoWhole
+        label: Show the whole picture (for flyers)
+        type: boolean
+        description: Turn on for flyers or wide pictures so nothing gets cut off.
       - name: link
         label: Link for sign-ups, tickets or photos (optional)
         type: string
@@ -387,6 +548,10 @@ content:
       - name: photo
         label: Photo
         type: image
+      - name: photoAlt
+        label: Describe the photo (needed for every photo)
+        type: string
+        description: For people who can't see it, e.g. "Mom and Adam at the beach". The site won't go live while a photo has no description.
 
   - name: facts
     label: 📊 Statistics (every number needs a source)
@@ -400,7 +565,7 @@ content:
         list:
           collapsible:
             collapsed: true
-            summary: "{stat} — {label}"
+            summary: "{stat}: {label}"
         fields: &factFields
           - name: stat
             label: Big number
@@ -423,7 +588,7 @@ content:
         list:
           collapsible:
             collapsed: true
-            summary: "{stat} — {label}"
+            summary: "{stat}: {label}"
         fields: *factFields
       - name: risks
         label: High-risk moments (Water Safety page)
@@ -440,6 +605,12 @@ content:
           - name: source
             type: string
           - name: sourceUrl
+            type: string
+          - name: source2
+            label: Second source (optional)
+            type: string
+          - name: sourceUrl2
+            label: Second source link
             type: string
       - name: groups
         label: The Facts page sections
@@ -458,7 +629,7 @@ content:
             list:
               collapsible:
                 collapsed: true
-                summary: "{stat} — {label}"
+                summary: "{stat}: {label}"
             fields: *factFields
 
   - name: resources
