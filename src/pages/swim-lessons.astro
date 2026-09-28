@@ -1,0 +1,122 @@
+---
+import { getEntry } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import CtaBand from '../components/CtaBand.astro';
+import IsrFinder from '../components/IsrFinder.astro';
+import isr from '../data/isr.json';
+import { url, withBase } from '../lib/url';
+
+const entry = await getEntry('pages', 'swim-lessons');
+if (!entry) throw new Error('Missing src/content/pages/swim-lessons.md');
+const html = withBase(entry.rendered?.html ?? '');
+const { title, eyebrow, lede, description } = entry.data;
+---
+
+<BaseLayout title={title} description={description || lede}>
+  <PageHero eyebrow={eyebrow} title={title} lede={lede}>
+    <div class="btn-row">
+      <a class="btn" href="#find">Find an ISR instructor near you</a>
+      <a class="btn btn--ghost" href="#dad">Our dad’s lessons</a>
+    </div>
+  </PageHero>
+
+  <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
+    <div class="wrap isr-layout">
+      <article class="prose" set:html={html} />
+
+      <aside class="isr-aside">
+        <div id="dad" class="program card">
+          {isr.photo && <img src={url(isr.photo)} alt={isr.photoAlt || isr.programName} loading="lazy" />}
+          <p class="program__label">Our dad’s program</p>
+          <h2 class="program__name">{isr.programName}</h2>
+          <dl>
+            {isr.instructor && (<><dt>Instructor</dt><dd>{isr.instructor}</dd></>)}
+            {isr.location && (<><dt>Where</dt><dd>{isr.location}</dd></>)}
+            {isr.season && (<><dt>When</dt><dd>{isr.season}</dd></>)}
+            {isr.contact && (<><dt>Contact</dt><dd>{isr.contact}</dd></>)}
+          </dl>
+          {
+            isr.bookingUrl ? (
+              <a class="btn" href={isr.bookingUrl} rel="noopener">Sign up or ask about lessons</a>
+            ) : (
+              <a class="btn" href={url('/contact')}>Ask about lessons</a>
+            )
+          }
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="find" class="section section--deep finder-section">
+    <div class="wrap narrow">
+      <IsrFinder />
+    </div>
+  </section>
+
+  <CtaBand
+    title="Lessons are one layer. Stack them."
+    text="Even the best swim skills never replace an adult watching, a four-sided fence, alarms and CPR."
+  >
+    <a class="btn" href={url('/water-safety')}>All the layers</a>
+    <a class="btn btn--ghost" href={url('/water-watcher')}>Take the pledge</a>
+  </CtaBand>
+</BaseLayout>
+
+<style>
+  .isr-layout {
+    display: grid;
+    gap: 48px;
+  }
+  @media (min-width: 1000px) {
+    .isr-layout {
+      grid-template-columns: minmax(0, 1fr) 360px;
+      align-items: start;
+    }
+    .isr-aside {
+      position: sticky;
+      top: 100px;
+    }
+  }
+  .program {
+    background:
+      radial-gradient(70% 90% at 90% 0%, rgb(255 214 120 / 0.35), transparent 70%),
+      linear-gradient(160deg, #1784a0, var(--ocean));
+    color: #fff;
+    border: 0;
+    scroll-margin-top: 100px;
+  }
+  .program img {
+    width: 100%;
+    border-radius: var(--radius-sm);
+    margin-bottom: 18px;
+  }
+  .program__label {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--sun);
+    margin-bottom: 4px;
+  }
+  .program__name {
+    font-size: 1.9rem;
+    margin-bottom: 0.6em;
+  }
+  .program dl {
+    margin: 0 0 20px;
+  }
+  .program dt {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    color: var(--shallow);
+  }
+  .program dd {
+    margin: 0 0 12px;
+  }
+  .finder-section {
+    scroll-margin-top: 80px;
+  }
+</style>

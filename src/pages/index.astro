@@ -5,10 +5,22 @@ import PhotoFrame from '../components/PhotoFrame.astro';
 import TimeOnPage from '../components/TimeOnPage.astro';
 import LayersBuilder from '../components/LayersBuilder.astro';
 import CtaBand from '../components/CtaBand.astro';
-import { headline, nonfatal } from '../data/facts';
+import { headline, nonfatal } from '../data/content';
 import { layers } from '../data/layers';
-import { story } from '../data/story';
+import { home as story } from '../data/content';
+import FacebookFeed from '../components/FacebookFeed.astro';
+import EventCard from '../components/EventCard.astro';
+import { getEvents, splitEvents } from '../lib/events';
+import { site, hasDonate } from '../data/site';
+import isr from '../data/isr.json';
 import { url } from '../lib/url';
+
+const events = await getEvents();
+const { upcoming } = splitEvents(events);
+// Home shows upcoming events first, then anything marked "Show on the home page".
+// Highlight the key phrase in the hero intro if it's there.
+const ledeParts = story.heroLede.split('#1 cause of death');
+const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upcoming.includes(e))].slice(0, 3);
 ---
 
 <BaseLayout>
@@ -27,9 +39,17 @@ import { url } from '../lib/url';
         <span class="hero__line hero__line--2">We won’t be.</span>
       </h1>
       <p class="hero__lede">
-        Drowning is the <strong>#1 cause of death</strong> for children ages 1–4. It happens in seconds, often with
-        adults nearby, and it’s preventable. Because of Adam, we’re helping families put layers of protection
-        between little ones and the water.
+        {
+          ledeParts.length === 2 ? (
+            <>
+              {ledeParts[0]}
+              <strong>#1 cause of death</strong>
+              {ledeParts[1]}
+            </>
+          ) : (
+            story.heroLede
+          )
+        }
       </p>
       <div class="btn-row">
         <a class="btn" href={url('/adams-story')}>Read Adam’s story</a>
@@ -67,12 +87,9 @@ import { url } from '../lib/url';
       </div>
       <div class="reveal">
         <span class="eyebrow">Adam’s story</span>
-        <h2>Meet Adam.</h2>
+        <h2>{story.meetTitle}</h2>
         <p class="lede">{story.teaser}</p>
-        <p>
-          Adam is a drowning survivor, and the reason for everything we do. We started this movement so other
-          families can learn what we learned the easy way.
-        </p>
+        {story.teaserMore && <p>{story.teaserMore}</p>}
         <div class="btn-row">
           <a class="btn btn--ocean" href={url('/adams-story')}>Read Adam’s story</a>
         </div>
@@ -131,8 +148,37 @@ import { url } from '../lib/url';
     </div>
   </section>
 
+  <!-- ISR -->
+  <Wave color="var(--deep)" bg="var(--sand)" />
+  <section class="section section--deep isr-band">
+    <div class="wrap split">
+      <div class="reveal">
+        <span class="eyebrow">Infant Swimming Resource (ISR)</span>
+        <h2>Teaching babies to save themselves.</h2>
+        <p class="lede">{isr.blurb}</p>
+        <ul class="isr-points">
+          <li><strong>6–12 months:</strong> roll onto their back, float and breathe</li>
+          <li><strong>1–6 years:</strong> swim, roll over to float and rest, then swim again</li>
+          <li><strong>One-on-one,</strong> about 10 minutes a day with a certified instructor</li>
+        </ul>
+        <div class="btn-row">
+          <a class="btn" href={url('/swim-lessons')}>About ISR lessons</a>
+          <a class="btn btn--ghost" href={url('/swim-lessons#find')}>Find an instructor near you</a>
+        </div>
+      </div>
+      <div class="isr-card reveal">
+        <p class="isr-card__label">Our dad’s program</p>
+        <p class="isr-card__name">{isr.programName}</p>
+        {isr.location && <p>{isr.location}</p>}
+        {isr.season && <p>{isr.season}</p>}
+        <p class="isr-card__quote">“Skills before thrills. Sometimes there are no do-overs.”</p>
+      </div>
+    </div>
+  </section>
+  <Wave color="var(--foam)" bg="var(--deep)" />
+
   <!-- SURVIVORS -->
-  <section class="section section--foam">
+  <section class="section section--foam" style="padding-top: clamp(32px, 5vw, 64px)">
     <div class="wrap split split--wide-left">
       <div class="reveal">
         <span class="eyebrow">Survivors & families</span>
@@ -154,6 +200,47 @@ import { url } from '../lib/url';
     </div>
   </section>
 
+  <!-- EVENTS -->
+  {
+    homeEvents.length > 0 && (
+      <section class="section">
+        <div class="wrap">
+          <span class="eyebrow">Events & fundraisers</span>
+          <h2>Fishing rodeos, cornhole & a whole lot of village.</h2>
+          <p class="lede">Every event raises money and awareness, and puts water safety in front of families who need it.</p>
+          <div class="grid grid--3" style="margin-top: 32px">
+            {homeEvents.map((e) => <EventCard event={e} />)}
+          </div>
+          <div class="btn-row">
+            <a class="btn btn--ocean" href={url('/events')}>All our events</a>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <!-- FACEBOOK -->
+  {
+    site.showFacebookFeed && (
+      <section class="section section--foam">
+        <div class="wrap split fb-split">
+          <div class="reveal">
+            <span class="eyebrow">Follow along</span>
+            <h2>Adam’s Village of Hope</h2>
+            <p class="lede">
+              Thousands of people follow Adam’s journey on Facebook. It’s where we share his milestones, our events, and
+              water safety reminders all year long.
+            </p>
+            <div class="btn-row">
+              <a class="btn btn--ocean" href={site.facebookUrl} rel="noopener" target="_blank">Follow us on Facebook</a>
+            </div>
+          </div>
+          <FacebookFeed height={640} />
+        </div>
+      </section>
+    )
+  }
+
   <!-- PLEDGE -->
   <CtaBand
     title="Be the Water Watcher."
@@ -169,11 +256,21 @@ import { url } from '../lib/url';
       <span class="eyebrow">Join the movement</span>
       <h2>Adam’s village is growing.</h2>
       <div class="grid grid--3" style="margin-top: 32px">
-        <a class="card join reveal" href={url('/donate')}>
-          <h3>Give</h3>
-          <p>Help put Water Watcher tags, alarms, swim lessons and CPR within reach of more families.</p>
-          <span class="join__go">Donate →</span>
-        </a>
+        {
+          hasDonate ? (
+            <a class="card join reveal" href={url('/donate')}>
+              <h3>Give</h3>
+              <p>Help put Water Watcher tags, alarms, swim lessons and CPR within reach of more families.</p>
+              <span class="join__go">Donate →</span>
+            </a>
+          ) : (
+            <a class="card join reveal" href={url('/water-watcher')}>
+              <h3>Pledge</h3>
+              <p>Promise to be a Water Watcher, print your card, and ask your family to do the same.</p>
+              <span class="join__go">Take the pledge →</span>
+            </a>
+          )
+        }
         <a class="card join reveal" href={url('/get-involved')}>
           <h3>Share</h3>
           <p>Ready-to-post messages that put water safety in front of the people you love.</p>
@@ -364,6 +461,54 @@ import { url } from '../lib/url';
   /* ---------- Survivors ---------- */
   .survivor-stat .stat__num {
     font-size: clamp(3.5rem, 6vw, 5.5rem);
+  }
+
+  /* ---------- ISR ---------- */
+  .isr-band {
+    padding-bottom: clamp(40px, 6vw, 72px);
+  }
+  .isr-points {
+    padding-left: 1.2em;
+    margin: 0 0 8px;
+    display: grid;
+    gap: 6px;
+  }
+  .isr-card {
+    background:
+      radial-gradient(70% 90% at 90% 0%, rgb(255 214 120 / 0.35), transparent 70%),
+      linear-gradient(160deg, #1784a0, var(--ocean));
+    border-radius: var(--radius);
+    padding: clamp(28px, 4vw, 44px);
+    color: #fff;
+    box-shadow: 0 30px 60px -30px rgb(0 0 0 / 0.6);
+  }
+  .isr-card__label {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--sun);
+    margin-bottom: 6px;
+  }
+  .isr-card__name {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 2vw + 1rem, 2.6rem);
+    font-weight: 600;
+    line-height: 1.1;
+  }
+  .isr-card__quote {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.2rem;
+    margin: 1.2em 0 0;
+    padding-top: 1em;
+    border-top: 1px solid rgb(255 255 255 / 0.25);
+  }
+  .fb-split {
+    align-items: start;
+  }
+  .fb-split :global(.fb-feed) {
+    justify-self: center;
   }
 
   /* ---------- Join ---------- */

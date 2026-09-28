@@ -1,0 +1,420 @@
+# The Studio: our website editor (Pages CMS, https://app.pagescms.org)
+# This file tells the Studio what can be edited and how each box is labeled.
+# Every save goes straight to the website. It's live in about 2 minutes.
+
+media:
+  input: public/images/uploads
+  output: /images/uploads
+  categories: [image]
+  rename: safe
+
+settings:
+  content:
+    merge: true
+  commit:
+    identity: user
+    templates:
+      create: "Add {filename} ({userName})"
+      update: "Update {filename} ({userName})"
+      delete: "Remove {filename} ({userName})"
+      rename: "Rename {oldFilename} to {newFilename} ({userName})"
+
+content:
+  # ───────────────────────────── Settings ─────────────────────────────
+  - name: settings
+    label: ⚙️ Site settings (donate link, Facebook, email)
+    type: file
+    path: src/data/settings.json
+    format: json
+    fields:
+      - name: donateUrl
+        label: Donation link
+        type: string
+        description: Paste the full link to your donation page (Zeffy, Givebutter, etc.). The Donate buttons appear on the site as soon as this has a link. Leave it empty to hide every Donate button.
+      - name: showFacebookFeed
+        label: Show our Facebook feed on the website
+        type: boolean
+      - name: facebookUrl
+        label: Facebook page link
+        type: string
+      - name: email
+        label: Contact email
+        type: string
+      - name: contactFormAction
+        label: Contact form link (optional)
+        type: string
+        description: From Web3Forms or Formspree. Leave empty to show the email address instead.
+      - name: newsletterUrl
+        label: Newsletter sign-up link (optional)
+        type: string
+      - name: instagramUrl
+        label: Instagram link
+        type: string
+      - name: tiktokUrl
+        label: TikTok link
+        type: string
+      - name: youtubeUrl
+        label: YouTube link
+        type: string
+      - name: location
+        label: Location shown in the footer
+        type: string
+      - name: taxExempt
+        label: We have our 501(c)(3) letter from the IRS
+        type: boolean
+        description: Only turn this on once the IRS approves us. It lets the site say donations are tax-deductible.
+      - name: ein
+        label: EIN (tax ID number)
+        type: string
+      - name: launchReady
+        label: Launch the site (removes the "Preview" banner and lets Google find us)
+        type: boolean
+      - name: name
+        label: Organization name
+        type: string
+      - name: tagline
+        label: What ADAM stands for
+        type: string
+      - name: description
+        label: Short description (used by Google and link previews)
+        type: text
+
+  # ───────────────────────────── Home page ─────────────────────────────
+  - name: home
+    label: 🏠 Home page
+    type: file
+    path: src/data/home.json
+    format: json
+    fields:
+      - name: heroLede
+        label: Intro under "Drowning is silent. We won't be."
+        type: text
+      - name: meetTitle
+        label: "\"Meet Adam\" heading"
+        type: string
+      - name: teaser
+        label: "\"Meet Adam\" paragraph"
+        type: text
+      - name: teaserMore
+        label: Second paragraph
+        type: text
+      - name: photo
+        label: Photo of Adam
+        type: image
+      - name: photoAlt
+        label: Describe the photo (for people who can't see it)
+        type: string
+      - name: timeCompare
+        label: Line under the clock
+        type: string
+      - name: familyQuote
+        label: Big quote
+        type: string
+      - name: familyQuoteBy
+        label: Who said it
+        type: string
+      - name: hopeTurn
+        label: Hopeful line after the quote
+        type: string
+
+  # ───────────────────────────── Pages ─────────────────────────────
+  - name: pages
+    label: 📄 Pages
+    type: group
+    items:
+      - name: adams-story
+        label: Adam's Story
+        type: file
+        path: src/content/pages/adams-story.md
+        format: yaml-frontmatter
+        fields: &pageFields
+          - name: title
+            label: Page title
+            type: string
+          - name: eyebrow
+            label: Small label above the title
+            type: string
+          - name: lede
+            label: Intro under the title
+            type: text
+          - name: description
+            label: Short description for Google
+            type: text
+          - name: body
+            label: Page text
+            type: rich-text
+            options:
+              format: markdown
+      - name: swim-lessons
+        label: ISR Swim Lessons
+        type: file
+        path: src/content/pages/swim-lessons.md
+        format: yaml-frontmatter
+        fields: *pageFields
+      - name: isr-program
+        label: ISR Swim Lessons — Dad's program details
+        type: file
+        path: src/data/isr.json
+        format: json
+        fields:
+          - name: programName
+            label: Program name
+            type: string
+          - name: instructor
+            label: Instructor
+            type: string
+          - name: location
+            label: Where lessons happen
+            type: string
+          - name: season
+            label: When lessons run
+            type: string
+          - name: blurb
+            label: Short description
+            type: text
+          - name: bookingUrl
+            label: Link to sign up or learn more
+            type: string
+          - name: contact
+            label: Phone or email for lessons
+            type: string
+          - name: photo
+            label: Photo
+            type: image
+          - name: photoAlt
+            label: Describe the photo
+            type: string
+      - name: privacy
+        label: Privacy policy
+        type: file
+        path: src/content/pages/privacy.md
+        format: yaml-frontmatter
+        fields: *pageFields
+
+  # ───────────────────────────── Events ─────────────────────────────
+  - name: events
+    label: 🎣 Events & fundraisers
+    type: collection
+    path: src/content/events
+    format: yaml-frontmatter
+    filename: "{primary}.md"
+    view:
+      fields: [title, date, kind]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Event name
+        type: string
+        required: true
+      - name: kind
+        label: Type of event
+        type: select
+        options:
+          values: [Fundraiser, Awareness, Swim & safety, Community]
+      - name: date
+        label: Date (leave empty if it's a yearly event with no set date)
+        type: date
+        default: ""
+      - name: when
+        label: When, in words (e.g. "Every June", "Summer 2023")
+        type: string
+      - name: location
+        label: Where
+        type: string
+      - name: summary
+        label: One or two sentences about it
+        type: text
+      - name: highlight
+        label: Big result (e.g. "$4,000 raised", "32 teams")
+        type: string
+      - name: photo
+        label: Photo
+        type: image
+      - name: link
+        label: Link for sign-ups, tickets or photos (optional)
+        type: string
+      - name: linkLabel
+        label: Button text for that link
+        type: string
+      - name: featured
+        label: Show on the home page
+        type: boolean
+      - name: draft
+        label: Hide this event (draft)
+        type: boolean
+      - name: body
+        label: More about the event (optional)
+        type: rich-text
+        options:
+          format: markdown
+
+  # ───────────────────────────── News ─────────────────────────────
+  - name: news
+    label: 📰 News & updates
+    type: collection
+    path: src/content/news
+    format: yaml-frontmatter
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      fields: [title, date]
+      primary: title
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Headline
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+      - name: summary
+        label: One-sentence summary
+        type: text
+      - name: draft
+        label: Hide this post (draft)
+        type: boolean
+      - name: body
+        label: Post
+        type: rich-text
+        options:
+          format: markdown
+
+  # ───────────────────────────── People & facts ─────────────────────────────
+  - name: team
+    label: 👨‍👩‍👧‍👦 Our team (About page)
+    type: file
+    path: src/data/team.json
+    format: json
+    list: true
+    fields:
+      - name: name
+        label: Name
+        type: string
+      - name: role
+        label: Role
+        type: string
+      - name: bio
+        label: One or two sentences
+        type: text
+      - name: photo
+        label: Photo
+        type: image
+
+  - name: facts
+    label: 📊 Statistics (every number needs a source)
+    type: file
+    path: src/data/facts.json
+    format: json
+    fields:
+      - name: headline
+        label: Home page numbers (keep 4)
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{stat} — {label}"
+        fields: &factFields
+          - name: stat
+            label: Big number
+            type: string
+          - name: label
+            label: What it means
+            type: text
+          - name: detail
+            label: Extra detail (optional)
+            type: text
+          - name: source
+            label: Source name
+            type: string
+          - name: sourceUrl
+            label: Source link
+            type: string
+      - name: nonfatal
+        label: Survivors page numbers
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{stat} — {label}"
+        fields: *factFields
+      - name: risks
+        label: High-risk moments (Water Safety page)
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            type: string
+          - name: body
+            type: text
+          - name: source
+            type: string
+          - name: sourceUrl
+            type: string
+      - name: groups
+        label: The Facts page sections
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            type: string
+          - name: intro
+            type: text
+          - name: facts
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{stat} — {label}"
+            fields: *factFields
+
+  - name: resources
+    label: 🔗 Resource links
+    type: file
+    path: src/data/resources.json
+    format: json
+    fields:
+      - name: survivor
+        label: Help for survivor families
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{name}"
+        fields: &resourceFields
+          - name: name
+            type: string
+          - name: url
+            label: Link
+            type: string
+          - name: description
+            type: text
+      - name: groups
+        label: Resource sections
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            type: string
+          - name: items
+            label: Links
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{name}"
+            fields: *resourceFields

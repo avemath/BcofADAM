@@ -85,6 +85,7 @@ const year = new Date().getFullYear();
           The information on this site is for education and awareness and is not a substitute for
           professional medical advice.
         </p>
+        <p><a class="studio-link" href={url('/studio')} rel="nofollow">Family Studio</a></p>
       </div>
     </div>
   </div>
@@ -164,5 +165,10 @@ const year = new Date().getFullYear();
   }
   .site-footer__legal p {
     margin-bottom: 0.4em;
+  }
+  .site-footer .studio-link {
+    color: var(--on-dark-soft);
+    font-size: 0.8rem;
+    text-decoration: underline;
   }
 </style>

@@ -84,6 +84,7 @@ export const layers: Layer[] = [
     ],
     tips: [
       'Look for lessons that teach water competency: getting back to the wall, floating and turning.',
+      'For babies and toddlers, look into ISR self-rescue lessons, which teach them to roll onto their backs and float. Our Swim Lessons page can help you find an instructor.',
       'Children with autism or other disabilities can benefit from adaptive swim lessons.',
       'Practice in clothes and in different places (pool, lake, beach).',
       'Lessons add to supervision and barriers. They never replace them.',
@@ -109,7 +110,7 @@ export const layers: Layer[] = [
     short: 'Learn CPR, keep a phone close, check the water first.',
     body: [
       'When a child is missing, check the water first: pools, spas, ponds, bathtubs. Seconds matter.',
-      'Bystander CPR begun right away can make a life-saving difference while emergency crews are on the way. Adam’s family, grandparents and first responders all did CPR on him.',
+      'Bystander CPR begun right away can make a life-saving difference while emergency crews are on the way. Our mom, our Pops, our dad and the first responders all did CPR on Adam.',
     ],
     tips: [
       'Take a CPR class that includes infant and child CPR, and renew it every two years. After a drowning, CPR with rescue breaths matters.',
