@@ -21,33 +21,34 @@ const CDC_FACTS = 'https://www.cdc.gov/drowning/data-research/facts/index.html';
 const CPSC_2026 =
   'https://www.cpsc.gov/Newsroom/News-Releases/2026/CPSC-Report-Highlights-Persistent-Risk-of-Childhood-Drowning';
 const CPSC_BARRIERS = 'https://www.cpsc.gov/s3fs-public/pdfs/blk_media_SafetyBarrierGuidelinesResPools.pdf';
+const COCHRANE_FENCING =
+  'https://www.cochrane.org/evidence/CD001047_fencing-which-completely-encloses-all-sides-swimming-pool-and-isolates-it-home-effective-preventing';
 
-/** The big numbers on the home page. */
+/** The big numbers on the home page: the problem, the survivors, where, and what works. */
 export const headline: Fact[] = [
   {
     stat: '#1',
-    label: 'Drowning kills more children ages 1–4 than any other cause of death.',
+    label: 'Drowning is the leading cause of death for children ages 1–4. It’s also preventable.',
     source: 'CDC',
     sourceUrl: CDC_FACTS,
   },
   {
     stat: '7',
-    label: 'For every child who dies from drowning, another 7 get emergency care for a nonfatal drowning.',
+    label: 'For every child lost to drowning, 7 more survive one and need emergency care. Kids like Adam.',
     source: 'CDC',
     sourceUrl: CDC_FACTS,
   },
   {
-    stat: '~80%',
-    label: 'Nearly 4 in 5 children who die in pools and spas are younger than 5.',
+    stat: '70%+',
+    label: 'More than 7 in 10 fatal child pool drownings happen at a home: their own, a grandparent’s, a friend’s or a neighbor’s.',
     source: 'CPSC, 2026 report',
     sourceUrl: CPSC_2026,
   },
   {
-    stat: '70%+',
-    label:
-      'More than 70% of child pool and spa drowning deaths happen at a home: their own, a relative’s, a friend’s or a neighbor’s.',
-    source: 'CPSC, 2026 report',
-    sourceUrl: CPSC_2026,
+    stat: '83%',
+    label: 'Lower odds of drowning when a pool is fenced on all four sides instead of three. Layers work.',
+    source: 'Cochrane review',
+    sourceUrl: COCHRANE_FENCING,
   },
 ];
 
@@ -88,7 +89,7 @@ export const risks: { title: string; body: string; source?: string; sourceUrl?: 
   },
   {
     title: 'At someone else’s home',
-    body: 'Grandparents’, neighbors’ and friends’ pools count too. More than 70% of child pool and spa drowning deaths happen at a home, including the homes of family, friends and neighbors.',
+    body: 'Grandparents’, neighbors’ and friends’ pools count too. More than 70% of fatal child pool and spa drownings happen at a home, including the homes of family, friends and neighbors.',
     source: 'CPSC, 2026 report',
     sourceUrl: CPSC_2026,
   },
@@ -100,13 +101,13 @@ export const risks: { title: string; body: string; source?: string; sourceUrl?: 
   },
   {
     title: 'In summer',
-    body: 'Child drowning deaths in pools and spas peak in June, July and August, but pools, tubs and ponds are dangerous all year.',
+    body: 'Child drownings in pools and spas peak in June, July and August. Pools, tubs and ponds need layers of protection all year, though.',
     source: 'CPSC, 2026 report',
     sourceUrl: CPSC_2026,
   },
   {
     title: 'Children with autism',
-    body: 'Children with autism are far more likely to die from drowning than other children. One study estimated about 160 times as likely, often after wandering. Door alarms, adaptive swim lessons and a wandering plan save lives.',
+    body: 'Children with autism face a much higher drowning risk, often after wandering. One study put their risk of a fatal drowning at about 160 times that of other children. Door alarms, adaptive swim lessons and a wandering plan save lives.',
     source: 'Guan & Li, American Journal of Public Health, 2017',
     sourceUrl: 'https://pubmed.ncbi.nlm.nih.gov/28590851/',
   },
@@ -120,13 +121,13 @@ export const factGroups: { title: string; intro?: string; facts: Fact[] }[] = [
       {
         stat: '#1',
         label: 'Drowning is the leading cause of death for children ages 1–4.',
-        detail: 'More children this age die from drowning than from any other cause.',
+        detail: 'It happens most often in home pools, and layers of protection help prevent it.',
         source: 'CDC',
         sourceUrl: CDC_FACTS,
       },
       {
         stat: '376',
-        label: 'Children under 15 who died in pool or spa drownings each year, on average (2021–2023).',
+        label: 'Children under 15 lost to pool or spa drownings each year, on average (2021–2023).',
         detail: 'Nearly 80% of them were younger than 5.',
         source: 'CPSC, 2026 report',
         sourceUrl: CPSC_2026,
@@ -145,7 +146,7 @@ export const factGroups: { title: string; intro?: string; facts: Fact[] }[] = [
     facts: [
       {
         stat: '4,500+',
-        label: 'People died from unintentional drowning each year in the U.S. in 2020–2022.',
+        label: 'Lives lost to unintentional drowning each year in the U.S. (2020–2022).',
         detail: 'That’s about 500 more each year than in 2019.',
         source: 'CDC Vital Signs, 2024',
         sourceUrl: 'https://www.cdc.gov/vitalsigns/drowning/index.html',
@@ -168,7 +169,7 @@ export const factGroups: { title: string; intro?: string; facts: Fact[] }[] = [
   {
     title: 'Nonfatal drowning',
     intro:
-      'Drowning doesn’t always end in death. Survivors can have no lasting injuries, or very serious ones such as brain damage or permanent disability.',
+      'Many children survive a drowning. Some recover completely. Others, like Adam, live with injuries that last a lifetime, such as brain injury or permanent disability.',
     facts: nonfatal,
   },
   {
@@ -188,13 +189,39 @@ export const factGroups: { title: string; intro?: string; facts: Fact[] }[] = [
         source: 'CPSC',
         sourceUrl: CPSC_BARRIERS,
       },
+    ],
+  },
+  {
+    title: 'What protects children',
+    intro: 'The good news: drowning is preventable, and the layers of protection work best together.',
+    facts: [
       {
-        stat: '4 sides',
-        label: 'A fence that completely isolates the pool on all four sides is far more protective than one that uses the house as a side.',
-        detail: 'A research review found 83% lower odds of drowning with four-sided isolation fencing than with three-sided fencing.',
+        stat: '83%',
+        label: 'Lower odds of drowning with a fence that isolates the pool on all four sides, compared with three-sided fencing.',
+        detail: 'When the house is one side of the fence, a toddler can walk straight out the back door to the water.',
         source: 'Cochrane review (Thompson & Rivara)',
-        sourceUrl:
-          'https://www.cochrane.org/evidence/CD001047_fencing-which-completely-encloses-all-sides-swimming-pool-and-isolates-it-home-effective-preventing',
+        sourceUrl: COCHRANE_FENCING,
+      },
+      {
+        stat: 'Arm’s reach',
+        label: 'Toddlers and weak swimmers need an adult within arm’s reach, “touch supervision,” whenever they’re in or near water.',
+        detail: 'Name a Water Watcher so there’s never a question of who’s watching.',
+        source: 'American Academy of Pediatrics',
+        sourceUrl: 'https://www.healthychildren.org/English/news/Pages/AAP-releases-updated-drowning-prevention-recommendations.aspx',
+      },
+      {
+        stat: 'Age 1+',
+        label: 'Swim lessons starting after age 1 are linked to a lower drowning risk for young children.',
+        detail: 'The benefit is real but hard to size precisely, and lessons never replace supervision or barriers.',
+        source: 'AAP; Brenner et al., 2009',
+        sourceUrl: 'https://pubmed.ncbi.nlm.nih.gov/19255386/',
+      },
+      {
+        stat: 'CPR',
+        label: 'Fast CPR with rescue breaths matters after a drowning. Adam’s family started CPR right away.',
+        detail: 'Take an infant and child CPR class, and renew it every two years.',
+        source: 'American Heart Association & AAP, 2024',
+        sourceUrl: 'https://newsroom.heart.org/news/updated-guidance-reaffirms-cpr-with-breaths-essential-for-cardiac-arrest-following-drowning',
       },
     ],
   },

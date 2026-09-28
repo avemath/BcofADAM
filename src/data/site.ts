@@ -33,8 +33,11 @@ export const site = {
 
   /** Links. Paste full URLs, e.g. 'https://www.zeffy.com/...' */
   donateUrl: '',
-  /** Contact email, e.g. 'hello@becauseofadam.org' */
-  email: '',
+  /**
+   * Contact email. This is the address listed on the Facebook page. Switch to
+   * an address on your own domain (e.g. 'hello@becauseofadam.org') once you have one.
+   */
+  email: 'bcofadam@gmail.com',
   /** City/State shown in the footer, e.g. 'Louisiana' */
   location: '',
   /**
