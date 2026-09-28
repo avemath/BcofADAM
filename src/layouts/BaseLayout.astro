@@ -6,6 +6,10 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { site } from '../data/site';
 import { url } from '../lib/url';
+import fs from 'node:fs';
+
+// scripts/generate-icons.mjs only makes favicon.svg when the logo source is an SVG.
+const hasSvgIcon = fs.existsSync('public/favicon.svg');
 
 interface Props {
   title?: string;
@@ -30,11 +34,12 @@ const ogImage = new URL(url(image), Astro.site);
     <link rel="canonical" href={canonical} />
     {!site.launchReady && <meta name="robots" content="noindex, nofollow" />}
     <link rel="icon" href={url('/favicon.ico')} sizes="48x48" />
+    {hasSvgIcon && <link rel="icon" href={url('/favicon.svg')} type="image/svg+xml" />}
     <link rel="icon" href={url('/icon-192.png')} type="image/png" sizes="192x192" />
     <link rel="apple-touch-icon" href={url('/apple-touch-icon.png')} />
     <link rel="manifest" href={url('/site.webmanifest')} />
     <link rel="sitemap" href={url('/sitemap-index.xml')} />
-    <meta name="theme-color" content="#083349" />
+    <meta name="theme-color" content={site.themeColor} />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={site.name} />
