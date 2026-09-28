@@ -17,7 +17,7 @@
     },
     {
       "name": "Pennsylvania Early Intervention (CONNECT Helpline)",
-      "url": "https://www.pa.gov/agencies/dhs/resources/early-intervention.html",
+      "url": "https://www.pa.gov/agencies/dhs/resources/early-learning-child-care/early-intervention-services",
       "description": "Free developmental support for infants and toddlers. Call CONNECT at 1-800-692-7288 to get started."
     },
     {
@@ -71,9 +71,9 @@
           "description": "In-person and blended CPR/First Aid classes, including infant and child CPR."
         },
         {
-          "name": "American Heart Association: CPR & First Aid",
-          "url": "https://cpr.heart.org/",
-          "description": "Find a CPR course near you or learn Hands-Only CPR."
+          "name": "American Heart Association: Find a CPR class",
+          "url": "https://atlas.heart.org/",
+          "description": "Search for American Heart Association CPR and first aid classes near you."
         }
       ]
     },
@@ -87,7 +87,7 @@
         },
         {
           "name": "USA Swimming Foundation",
-          "url": "https://www.usaswimmingfoundation.org/",
+          "url": "https://www.usaswimming.org/foundation",
           "description": "Learn-to-swim grants and a directory of lesson providers."
         },
         {

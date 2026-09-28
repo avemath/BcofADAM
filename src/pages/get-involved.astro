@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import CtaBand from '../components/CtaBand.astro';
+import SiteForm, { type Field } from '../components/SiteForm.astro';
 import { url } from '../lib/url';
 import { hasDonate } from '../data/site';
 
@@ -33,7 +34,7 @@ const ways = [
   {
     title: 'Invite us to speak',
     body: 'Schools, daycares, churches, moms’ groups, pediatric offices and pool stores: we’ll come tell Adam’s story and teach the layers of protection.',
-    href: '/contact',
+    href: '/request-a-talk',
     cta: 'Request a talk',
   },
   {
@@ -66,11 +67,24 @@ const shareText = [
   'Skills before thrills. Learn from our past, protect your future. #BecauseOfADAM #LayerUp',
   'If a child is missing, check the water first. Every second counts. #BecauseOfADAM',
 ];
+
+const volunteerFields: Field[] = [
+  { name: 'name', label: 'Your name', required: true, autocomplete: 'name' },
+  { name: 'email', label: 'Email', type: 'email', required: true, autocomplete: 'email' },
+  { name: 'area', label: 'Town or area', required: true, autocomplete: 'address-level2' },
+  {
+    name: 'interests',
+    label: 'I’d like to help with',
+    type: 'checkboxes',
+    options: ['Events', 'Water safety talks', 'Sharing on social media', 'Fundraising', 'Something else'],
+  },
+  { name: 'message', label: 'Anything else?', type: 'textarea' },
+];
 ---
 
 <BaseLayout
   title="Get Involved"
-  description="Join the movement: take the Water Watcher pledge, share Adam's story, give, host a fundraiser, or invite Because of ADAM to speak."
+  description="Join the movement: take the Water Watcher pledge, share Adam’s story, give, host a fundraiser, or invite Because of ADAM to speak."
 >
   <PageHero
     eyebrow="Join the movement. Become an Ally."
@@ -111,6 +125,21 @@ const shareText = [
           ))
         }
       </ul>
+    </div>
+  </section>
+
+  <section class="section" id="volunteer">
+    <div class="wrap narrow">
+      <span class="eyebrow">Volunteer</span>
+      <h2>Lend a hand.</h2>
+      <p class="lede">Tell us where you are and what you’d like to help with, and we’ll reach out when something comes up.</p>
+      <SiteForm
+        id="volunteer-form"
+        fields={volunteerFields}
+        subject="Volunteer sign-up from the website"
+        submitLabel="Sign me up"
+        fallbackTitle="Volunteer with us"
+      />
     </div>
   </section>
 

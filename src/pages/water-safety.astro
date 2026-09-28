@@ -6,12 +6,18 @@ import CtaBand from '../components/CtaBand.astro';
 import Wave from '../components/Wave.astro';
 import { layers } from '../data/layers';
 import { risks } from '../data/content';
-import { url } from '../lib/url';
+import { url, withBase } from '../lib/url';
+import { withPlaceholders } from '../lib/placeholders';
+import { getEntry } from 'astro:content';
+
+// "More ways to stay safe" (teens, life jackets, pool recall, CPR), edited in the Studio.
+const more = await getEntry('pages', 'water-safety-more');
+const moreHtml = more ? withPlaceholders(withBase(more.rendered?.html ?? '')) : '';
 ---
 
 <BaseLayout
   title="Water Safety: Layers of Protection"
-  description="No single safety measure is enough. Learn the layers of protection (supervision, fences, alarms, covers, swim skills, life jackets and CPR) that keep young children safe around water."
+  description="No single layer is enough. Learn the layers of protection, from supervision and fences to alarms, life jackets and CPR, that keep kids safe around water."
 >
   <PageHero
     eyebrow="Layers of protection"
@@ -42,6 +48,11 @@ import { url } from '../lib/url';
       </nav>
 
       <div class="layers-list">
+        <p class="layers-intro">
+          These layers build on the National Drowning Prevention Alliance’s{' '}
+          <a href="https://ndpa.org/layers/" rel="noopener" target="_blank">5 Layers of Protection</a>, with barriers,
+          alarms and covers each counted as a layer of its own. Use as many as you can, every time.
+        </p>
         {
           layers.map((l, i) => (
             <article id={l.id} class="layer-detail reveal">
@@ -57,6 +68,23 @@ import { url } from '../lib/url';
       </div>
     </div>
   </section>
+
+  {
+    more && (
+      <section class="section more-safety" id="more" aria-labelledby="more-title">
+        <div class="wrap narrow">
+          {more.data.eyebrow && <span class="eyebrow">{more.data.eyebrow}</span>}
+          <h2 id="more-title">{more.data.title}</h2>
+          {more.data.lede && <p class="lede">{more.data.lede}</p>}
+          <p>
+            Live in or near Pennsylvania? See <a href={url('/pennsylvania')}>water safety in Pennsylvania</a> for
+            lakes, rivers, cold water, ice and our state’s life jacket rules.
+          </p>
+          <div class="prose more-safety__body" set:html={moreHtml} />
+        </div>
+      </section>
+    )
+  }
 
   <section class="section section--foam">
     <div class="wrap">
@@ -74,7 +102,20 @@ import { url } from '../lib/url';
               <p>{r.body}</p>
               {r.source && (
                 <p class="source">
-                  Source: <a href={r.sourceUrl} rel="noopener" target="_blank">{r.source}</a>
+                  {r.source2 ? 'Sources: ' : 'Source: '}
+                  <a href={r.sourceUrl} rel="noopener" target="_blank">
+                    {r.source}
+                    <span class="visually-hidden"> (source for “{r.title}”, opens in a new tab)</span>
+                  </a>
+                  {r.source2 && r.sourceUrl2 && (
+                    <>
+                      {'; '}
+                      <a href={r.sourceUrl2} rel="noopener" target="_blank">
+                        {r.source2}
+                        <span class="visually-hidden"> (source for “{r.title}”, opens in a new tab)</span>
+                      </a>
+                    </>
+                  )}
                 </p>
               )}
             </div>
@@ -89,6 +130,7 @@ import { url } from '../lib/url';
     text="Take the Water Watcher pledge, print a Water Watcher card, and share this page with every parent, grandparent and babysitter you know."
   >
     <a class="btn" href={url('/water-watcher')}>Take the pledge</a>
+    <a class="btn btn--ghost" href={url('/checklist')}>Print the home checklist</a>
     <a class="btn btn--ghost" href={url('/resources')}>More resources</a>
   </CtaBand>
 </BaseLayout>
@@ -123,6 +165,15 @@ import { url } from '../lib/url';
     gap: clamp(48px, 7vw, 88px);
     max-width: 760px;
   }
+  .more-safety__body :global(h2) {
+    font-size: clamp(1.5rem, 1.5vw + 1rem, 2rem);
+    margin-top: 2.2em;
+    scroll-margin-top: 100px;
+  }
+  .layers-intro {
+    font-size: 1.1rem;
+    margin: 0 0 calc(-1 * clamp(24px, 4vw, 48px));
+  }
   .layer-detail {
     position: relative;
     scroll-margin-top: 100px;
@@ -133,8 +184,8 @@ import { url } from '../lib/url';
     font-size: 4rem;
     font-weight: 300;
     line-height: 1;
-    color: var(--aqua);
-    opacity: 0.5;
+    color: var(--aqua-text);
+    opacity: 0.75;
     margin-bottom: 8px;
   }
   .checklist {

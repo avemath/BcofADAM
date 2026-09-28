@@ -5,18 +5,27 @@ import BaseLayout from './BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import { withBase } from '../lib/url';
 import { withFigures } from '../lib/figures';
+import { withPlaceholders } from '../lib/placeholders';
 
 interface Props {
   slug: string;
+  /** 'Article' for stories; other pages are a WebPage. */
+  type?: 'WebPage' | 'Article';
 }
 const entry = await getEntry('pages', Astro.props.slug);
 if (!entry) throw new Error(`Missing src/content/pages/${Astro.props.slug}.md`);
-const { title, eyebrow, lede, description } = entry.data;
+const { title, eyebrow, lede, description, image, imageAlt } = entry.data;
 
-const html = withFigures(withBase(entry.rendered?.html ?? ''));
+const html = withPlaceholders(withFigures(withBase(entry.rendered?.html ?? '')));
 ---
 
-<BaseLayout title={title} description={description ?? lede}>
+<BaseLayout
+  title={title}
+  description={description || lede}
+  image={image || undefined}
+  imageAlt={imageAlt || undefined}
+  type={Astro.props.type}
+>
   <PageHero eyebrow={eyebrow} title={title} lede={lede} />
   <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
     <div class="wrap prose-layout">

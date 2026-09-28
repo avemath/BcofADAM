@@ -1,7 +1,8 @@
 ---
 import Logo from './Logo.astro';
 import Wave from './Wave.astro';
-import { site, nav, footerNav } from '../data/site';
+import NewsletterForm from './NewsletterForm.astro';
+import { site, nav, footerNav, nonprofitLine } from '../data/site';
 import { url } from '../lib/url';
 
 const socials = Object.entries(site.social).filter(([, href]) => href);
@@ -14,7 +15,7 @@ const year = new Date().getFullYear();
     <div class="wrap">
       <div class="emergency">
         <strong>If a child is missing, check the water first.</strong>
-        Every second counts. Call 911 and start CPR if you're trained.
+        Every second counts. Call 911 and start CPR if you’re trained.
       </div>
 
       <div class="site-footer__grid">
@@ -64,28 +65,32 @@ const year = new Date().getFullYear();
 
         <div>
           <h2 class="site-footer__heading">Stay in the loop</h2>
-          <p>Water safety reminders, Adam's updates and events — a few times a year.</p>
-          <a
-            class="btn"
-            href={site.newsletterUrl || url('/contact')}
-            rel={site.newsletterUrl ? 'noopener' : undefined}
-          >
-            Join the movement
-          </a>
+          <p>A few emails a year with water safety reminders, news about Adam and upcoming events.</p>
+          {
+            site.newsletterFormAction.trim() ? (
+              <NewsletterForm dark />
+            ) : site.newsletterUrl.trim() ? (
+              <a class="btn" href={site.newsletterUrl} rel="noopener" target="_blank">
+                Sign up for emails
+              </a>
+            ) : (
+              site.facebookUrl && (
+                <a class="btn" href={site.facebookUrl} rel="noopener" target="_blank">
+                  Follow on Facebook
+                </a>
+              )
+            )
+          }
         </div>
       </div>
 
       <div class="site-footer__legal">
-        <p>
-          © {year} {site.name}{site.location && ` · ${site.location}`}
-          {site.ein && ` · EIN ${site.ein}`}
-          {site.taxExempt && ' · A 501(c)(3) nonprofit organization'}
-        </p>
+        <p>© {year} {site.name}{site.location && ` · ${site.location}`}</p>
+        {nonprofitLine && <p>{nonprofitLine}</p>}
         <p>
           The information on this site is for education and awareness and is not a substitute for
           professional medical advice.
         </p>
-        <p><a class="studio-link" href={url('/studio')} rel="nofollow">Family Studio</a></p>
       </div>
     </div>
   </div>
@@ -165,10 +170,5 @@ const year = new Date().getFullYear();
   }
   .site-footer__legal p {
     margin-bottom: 0.4em;
-  }
-  .site-footer .studio-link {
-    color: var(--on-dark-soft);
-    font-size: 0.8rem;
-    text-decoration: underline;
   }
 </style>

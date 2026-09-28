@@ -6,18 +6,57 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { site } from '../data/site';
 import { url } from '../lib/url';
+import { organization, website, page } from '../lib/seo';
+import Analytics from '../components/Analytics.astro';
+import fs from 'node:fs';
+
+// scripts/generate-icons.mjs only makes favicon.svg when the logo source is an SVG.
+const hasSvgIcon = fs.existsSync('public/favicon.svg');
 
 interface Props {
+  /** Page name; " | Because of ADAM" is added after it. */
   title?: string;
+  /** The whole title tag, when a page needs something other than "Title | Because of ADAM". */
+  documentTitle?: string;
   description?: string;
   /** Social share image, relative to /public (e.g. '/images/share.jpg'). */
   image?: string;
+  /** Describes the share image for people who can't see it. */
+  imageAlt?: string;
+  /** A different title for social shares (defaults to the page title). */
+  shareTitle?: string;
+  /** 'Article' for news posts and stories; everything else is a WebPage. */
+  type?: 'WebPage' | 'Article';
+  published?: Date;
+  /** Extra structured data for this page, like upcoming events. */
+  jsonLd?: Record<string, unknown>[];
 }
 
-const { title, description = site.description, image = '/images/share-card.png' } = Astro.props;
-const fullTitle = title ? `${title} | ${site.name}` : `${site.name}: ${site.tagline}`;
+const {
+  title,
+  documentTitle,
+  description = site.description,
+  image = '/images/share-card.png',
+  imageAlt = `${site.name}: ${site.tagline}`,
+  shareTitle,
+  type = 'WebPage',
+  published,
+  jsonLd = [],
+} = Astro.props;
+const fullTitle = documentTitle ?? (title ? `${title} | ${site.name}` : `${site.name}: ${site.tagline}`);
 const canonical = new URL(Astro.url.pathname, Astro.site);
-const ogImage = new URL(url(image), Astro.site);
+const origin = canonical.origin + (import.meta.env.BASE_URL === '/' ? '' : import.meta.env.BASE_URL.replace(/\/$/, ''));
+const ogImage = new URL(url(image), Astro.site).href;
+const ogTitle = shareTitle ?? fullTitle;
+const ld = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    organization(origin, new URL(url('/images/logo-mark-large.png'), Astro.site).href),
+    website(origin),
+    page({ origin, url: canonical.href, title: fullTitle, description, image: ogImage, type, published }),
+    ...jsonLd,
+  ],
+};
 ---
 
 <!doctype html>
@@ -27,22 +66,34 @@ const ogImage = new URL(url(image), Astro.site);
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <link rel="canonical" href={canonical} />
     {!site.launchReady && <meta name="robots" content="noindex, nofollow" />}
     <link rel="icon" href={url('/favicon.ico')} sizes="48x48" />
+    {hasSvgIcon && <link rel="icon" href={url('/favicon.svg')} type="image/svg+xml" />}
     <link rel="icon" href={url('/icon-192.png')} type="image/png" sizes="192x192" />
     <link rel="apple-touch-icon" href={url('/apple-touch-icon.png')} />
     <link rel="manifest" href={url('/site.webmanifest')} />
     <link rel="sitemap" href={url('/sitemap-index.xml')} />
-    <meta name="theme-color" content="#083349" />
+    <meta name="theme-color" content={site.themeColor} />
 
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={type === 'Article' ? 'article' : 'website'} />
     <meta property="og:site_name" content={site.name} />
-    <meta property="og:title" content={fullTitle} />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content={ogTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImage} />
+    <meta property="og:image:alt" content={imageAlt} />
+    {published && <meta property="article:published_time" content={published.toISOString()} />}
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={ogTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content={imageAlt} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(ld).replace(/</g, '\\u003c')} />
+    <Analytics />
 
     <script is:inline>
       document.documentElement.classList.add('js');
@@ -52,9 +103,9 @@ const ogImage = new URL(url(image), Astro.site);
     <a class="skip-link" href="#main">Skip to content</a>
     {
       !site.launchReady && (
-        <div class="preview-ribbon" role="note">
+        <aside class="preview-ribbon" aria-label="Preview notice">
           Preview site: we’re still putting the finishing touches on this.
-        </div>
+        </aside>
       )
     }
     <Header />

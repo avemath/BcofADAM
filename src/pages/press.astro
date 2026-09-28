@@ -1,0 +1,84 @@
+---
+import ProseLayout from '../layouts/ProseLayout.astro';
+import { site, ein } from '../data/site';
+import { url } from '../lib/url';
+
+const socials = Object.entries(site.social).filter(([, href]) => href);
+const label: Record<string, string> = {
+  facebook: 'Facebook',
+  instagram: 'Instagram',
+  tiktok: 'TikTok',
+  youtube: 'YouTube',
+  linkedin: 'LinkedIn',
+};
+---
+
+<ProseLayout slug="press">
+  <aside class="card fact-sheet" aria-labelledby="fact-sheet-title">
+    <h2 id="fact-sheet-title">Fact sheet</h2>
+    <dl>
+      <dt>Name</dt>
+      <dd>{site.name}: {site.tagline}</dd>
+      <dt>Based in</dt>
+      <dd>{site.location}</dd>
+      {
+        site.taxExempt && (
+          <>
+            <dt>Status</dt>
+            <dd>501(c)(3) nonprofit organization</dd>
+            <dt>EIN</dt>
+            <dd>{ein}</dd>
+          </>
+        )
+      }
+      <dt>Media contact</dt>
+      <dd><a href={`mailto:${site.email}?subject=${encodeURIComponent('Media request')}`}>{site.email}</a></dd>
+      {
+        socials.length > 0 && (
+          <>
+            <dt>Follow us</dt>
+            <dd>
+              {socials.map(([name, href], i) => (
+                <>
+                  {i > 0 && ', '}
+                  <a href={href} rel="noopener" target="_blank">
+                    {label[name] ?? name}
+                  </a>
+                </>
+              ))}
+            </dd>
+          </>
+        )
+      }
+    </dl>
+    <p class="fact-sheet__more">
+      Planning an event or class? <a href={url('/request-a-talk')}>Request a talk</a>.
+    </p>
+  </aside>
+</ProseLayout>
+
+<style>
+  .fact-sheet h2 {
+    font-size: 1.3rem;
+    margin-top: 0;
+  }
+  .fact-sheet dl {
+    margin: 0;
+  }
+  .fact-sheet dt {
+    font-weight: 800;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-soft);
+    margin-top: 14px;
+  }
+  .fact-sheet dd {
+    margin: 2px 0 0;
+    overflow-wrap: anywhere;
+  }
+  .fact-sheet__more {
+    margin: 20px 0 0;
+    font-size: 0.95rem;
+  }
+</style>

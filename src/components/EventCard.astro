@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { url } from '../lib/url';
+import { eventDate } from '../lib/events';
 
 interface Props {
   event: CollectionEntry<'events'>;
@@ -8,7 +9,12 @@ interface Props {
 const { event } = Astro.props;
 const e = event.data;
 const fmt = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeZone: 'UTC' });
-const when = e.date ? fmt.format(e.date) : e.when;
+const monthYear = new Intl.DateTimeFormat('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+const next = eventDate(event);
+// Yearly events read "Every June 5 · Next: June 5, 2027" (or "Every May · Next: May 2027"
+// for a whole month); one-time events show their date.
+const nextLabel = next && (/\d/.test(e.when ?? '') ? fmt.format(next) : monthYear.format(next));
+const when = e.repeatsYearly && next ? `${e.when || 'Every year'} · Next: ${nextLabel}` : e.date ? fmt.format(e.date) : e.when;
 const icon: Record<string, string> = {
   Fundraiser: '🎉',
   Awareness: '💙',
@@ -31,7 +37,7 @@ const art = /fish|rodeo/.test(t)
 <article class="event card">
   {
     e.photo ? (
-      <img class="event__photo" src={url(e.photo)} alt="" loading="lazy" />
+      <img class:list={['event__photo', { 'event__photo--whole': e.photoWhole }]} sizes="(min-width: 1000px) 380px, (min-width: 700px) 50vw, 100vw" src={url(e.photo)} alt={e.photoAlt || e.title} data-missing-alt={!e.photoAlt || undefined} loading="lazy" />
     ) : (
       <div class="event__art" aria-hidden="true">
         <span>{art}</span>
@@ -51,6 +57,7 @@ const art = /fish|rodeo/.test(t)
       e.link && (
         <a class="btn btn--ocean event__btn" href={url(e.link)} rel="noopener">
           {e.linkLabel || 'Learn more'}
+          <span class="visually-hidden"> about {e.title}</span>
         </a>
       )
     }
@@ -73,12 +80,18 @@ const art = /fish|rodeo/.test(t)
   .event__photo {
     object-position: center 55%;
   }
+  /* Flyers and wide pictures: show all of it on the card's blue background. */
+  .event__photo--whole {
+    object-fit: contain;
+    object-position: center;
+    background: linear-gradient(160deg, var(--ocean-bright), var(--deep));
+  }
   .event__art {
     display: grid;
     place-items: center;
     background:
       radial-gradient(60% 80% at 80% 0%, rgb(255 214 120 / 0.55), transparent 70%),
-      linear-gradient(160deg, #1784a0, var(--deep));
+      linear-gradient(160deg, var(--ocean-bright), var(--deep));
     font-size: 3.2rem;
   }
   .event__body {
@@ -99,7 +112,7 @@ const art = /fish|rodeo/.test(t)
     margin-bottom: 8px;
   }
   .event__kind {
-    color: var(--aqua);
+    color: var(--aqua-text);
   }
   .event h3 {
     font-size: 1.45rem;

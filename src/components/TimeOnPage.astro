@@ -7,7 +7,8 @@ import { home as story } from '../data/content';
 ---
 
 <div class="clock" data-clock>
-  <p class="clock__label">You’ve been on this page for</p>
+  <p class="visually-hidden">A timer here counts how long you’ve been reading this page.</p>
+  <p class="clock__label" aria-hidden="true">You’ve been on this page for</p>
   <p class="clock__time" aria-hidden="true"><span data-clock-time>0:00</span></p>
   <p class="clock__compare">{story.timeCompare}</p>
   <p class="clock__quote">“{story.familyQuote}”</p>
@@ -16,14 +17,23 @@ import { home as story } from '../data/content';
 </div>
 
 <script>
+  // The clock is hidden from screen readers (the sentence above describes it), so
+  // it isn't read out every second. With reduced motion on, it shows whole minutes
+  // and changes once a minute instead of every second.
   const start = performance.now();
+  const calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   document.querySelectorAll<HTMLElement>('[data-clock-time]').forEach((el) => {
     const tick = () => {
       const s = Math.floor((performance.now() - start) / 1000);
-      el.textContent = `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
+      const m = Math.floor(s / 60);
+      el.textContent = calm
+        ? m < 1
+          ? 'under 1 min'
+          : `${m} min`
+        : `${m}:${String(s % 60).padStart(2, '0')}`;
     };
     tick();
-    setInterval(tick, 1000);
+    setInterval(tick, calm ? 15000 : 1000);
   });
 </script>
 

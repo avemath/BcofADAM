@@ -17,6 +17,9 @@ const pages = defineCollection({
     eyebrow: text(),
     lede: text(),
     description: text(),
+    /** Picture shown when the page is shared on social media (optional). */
+    image: text(),
+    imageAlt: text(),
   }),
 });
 
@@ -43,6 +46,11 @@ const events = defineCollection({
     summary: text(),
     highlight: text(),
     photo: text(),
+    photoAlt: text(),
+    /** Show the whole picture instead of filling the frame (for flyers and wide images). */
+    photoWhole: z.boolean().default(false),
+    /** Yearly events (like Wear Blue on June 5) always show their next date under "Coming up". */
+    repeatsYearly: z.boolean().default(false),
     link: text(),
     linkLabel: text(),
     featured: z.boolean().default(false),

@@ -15,11 +15,29 @@ After Adam drowned, Dad decided to be the change we wanted to see. He spent eigh
 
 > Skills before thrills. No matter the cost, the time commitment or the distance, sometimes there are no do-overs.
 >
-> *— Mom*
+> *Mom*
+
+## Why we recommend ISR, not just swim lessons
+
+{{TODO: family review}}
+
+Our family recommends **ISR self-rescue lessons** for babies and toddlers. Not just any swim lessons, and not “mommy and me” classes.
+
+Here’s why. Little kids usually don’t drown during swim time. They drown when they get to the water alone and nobody expects them to be there. In a CPSC study of young children who drowned in pools, 69% weren’t expected to be at or in the pool at all ([CPSC](https://www.cpsc.gov/s3fs-public/pdfs/blk_media_359.pdf)). So the question that matters is simple: what will your child do in the water if you aren’t there?
+
+ISR is built around that moment. Every lesson is about getting to air and staying there: roll onto your back, float, breathe, and, once they’re older, swim to the wall. And they practice it fully dressed, because that’s how kids fall in.
+
+## Why we don’t recommend “mommy and me”
+
+“Mommy and me” classes are sweet, and the [American Academy of Pediatrics](https://www.healthychildren.org/English/safety-prevention/at-play/Pages/Swim-Lessons.aspx) says water play classes are fine for helping babies get used to the pool. We see it differently.
+
+In those classes, a parent is always holding on, and what a baby learns is that the water is a fun place to be. Getting comfortable in the water isn’t the same as knowing what to do in it. The day it counts, there’s no parent in the water.
+
+We don’t want our kids to love the water before they know how to save themselves in it. Skills before thrills.
 
 ## What ISR is
 
-**Infant Swimming Resource (ISR)** was founded in 1966 by Dr. Harvey Barnett ([infantswim.com](https://www.infantswim.com/about/)), with one mission: *Not One More Child Drowns.* It teaches self-rescue to kids from 6 months to 6 years old. The idea is simple: if a child ends up in the water alone, they should know what to do to survive until an adult gets to them. ISR has delivered millions of lessons and shares hundreds of documented stories of kids who used their skills to save themselves.
+**Infant Swimming Resource (ISR)** has taught survival swimming lessons to infants and young children since 1966 ([infantswim.com](https://www.infantswim.com/about/)), with one mission: *Not One More Child Drowns.* It teaches self-rescue to kids from 6 months to 6 years old. The idea is simple: if a child ends up in the water alone, they should know what to do to survive until an adult gets to them. ISR has delivered millions of lessons and shares hundreds of documented stories of kids who used their skills to save themselves.
 
 This isn’t “mommy and me” splash time. It’s survival skills, taught one child at a time by a certified instructor.
 
@@ -29,11 +47,22 @@ This isn’t “mommy and me” splash time. It’s survival skills, taught one 
 ## How lessons work
 
 - **One-on-one** with a certified ISR instructor, never in a group.
-- **10 minutes a day, 5 days a week,** for about 4–6 weeks (usually 20–30 lessons). Short, daily lessons are how little bodies learn and remember the skills.
-- **Safety checks every day.** Before lessons start, a team that includes a pediatric nurse reviews each child’s health history. Then, before every lesson, the instructor checks in with the parent about sleep, eating and diapers.
+- **About 10 minutes a day, most days of the week,** for several weeks. Short, frequent lessons are how little bodies learn and remember the skills.
+- **Safety checks every day.** Before lessons start, ISR’s medical review team looks over each child’s health history. Then, before every lesson, the instructor checks in with the parent about sleep, eating and diapers.
 - **Practice in clothes.** Most kids who fall in aren’t wearing a swimsuit, so once they’re skilled, every student practices in summer and winter clothes, shoes and all.
-- **Highly trained instructors.** ISR instructors train for weeks in the water with an ISR Master Instructor, study child development and water safety, and must recertify every single year.
+- **Highly trained instructors.** ISR instructors go through intensive training before they teach. Our dad spent eight weeks training in Florida.
 - **Refreshers** as kids grow, so their skills keep up with their bigger bodies.
+
+## No ISR instructor near you?
+
+Check [ISR’s instructor map](#find) first. It can be worth the drive.
+
+If ISR just isn’t possible, look for lessons that teach self-rescue skills, like floating on their back and getting to the wall, and ask if your child can practice in clothes. Here are places to look:
+
+- **American Red Cross.** [Find a Red Cross Learn-to-Swim provider](https://www.redcross.org/take-a-class/swimming/learn-to-swim-providers) near you.
+- **Your local YMCA.** Near us, the [Blair Regional YMCA](https://blairregionalymca.org/programs/swimming-lessons/) in Hollidaysburg offers group, semi-private and private swim lessons.
+- **Parks and recreation and community pools.** Check with your town’s recreation department or public pool. {{TODO: local lesson partners}}
+- **Adapted lessons.** The [American Academy of Pediatrics](https://www.healthychildren.org/English/safety-prevention/at-play/Pages/Swim-Lessons.aspx) says swim lessons can be adapted for children with special health needs and developmental disabilities, such as autism, and that these programs reduce drowning risk. Ask local pools about adapted or one-on-one lessons.
 
 ## One layer, not the only layer
 

@@ -3,18 +3,21 @@
     "name": "Shannon Matherne",
     "role": "Mom · Nurse",
     "bio": "Adam’s biggest advocate. She went back to school to become a nurse so she could care for kids like Adam.",
-    "photo": "/images/uploads/mom.jpg"
+    "photo": "/images/uploads/mom.jpg",
+    "photoAlt": "Mom leaning on Adam’s hospital bed, smiling, as Adam looks up at her"
   },
   {
     "name": "Rickey Matherne",
     "role": "Dad · ISR & Red Cross CPR instructor",
     "bio": "Teaches babies and toddlers to roll onto their backs and float, and teaches CPR to anyone who will learn it.",
-    "photo": "/images/uploads/dad.jpg"
+    "photo": "/images/uploads/dad.jpg",
+    "photoAlt": "Dad in a ball cap leaning over Adam in his hospital bed"
   },
   {
     "name": "Rickey, Grace, Avery & Lea",
     "role": "Adam’s brother & sisters · Founders, 2020",
     "bio": "We started Because of ADAM so our little brother’s story could keep other kids safe.",
-    "photo": "/images/uploads/xmaspic.jpg"
+    "photo": "/images/uploads/xmaspic.jpg",
+    "photoAlt": "The kids cuddled under a plaid Christmas blanket, reading a picture book together"
   }
 ]

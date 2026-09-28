@@ -1,0 +1,33 @@
+---
+import ProseLayout from '../layouts/ProseLayout.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { url } from '../lib/url';
+---
+
+<ProseLayout slug="pennsylvania">
+  <aside class="card pa-aside">
+    <p class="eyebrow">Keep it handy</p>
+    <p>Print our home water safety checklist, with a page for babysitters and grandparents.</p>
+    <a class="btn btn--ocean" href={url('/checklist')}>Print the checklist</a>
+  </aside>
+  <CtaBand
+    slot="after"
+    title="Every layer, every season."
+    text="Pools, lakes, creeks and bathtubs don’t take the winter off. Stack the layers of protection wherever kids and water are together."
+  >
+    <a class="btn" href={url('/water-safety')}>All the layers</a>
+    <a class="btn btn--ghost" href={url('/water-watcher')}>Take the pledge</a>
+  </CtaBand>
+</ProseLayout>
+
+<style>
+  .pa-aside p:not(.eyebrow) {
+    margin-bottom: 1rem;
+  }
+  @media (min-width: 1000px) {
+    .pa-aside {
+      position: sticky;
+      top: 100px;
+    }
+  }
+</style>

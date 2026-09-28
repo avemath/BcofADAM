@@ -8,13 +8,13 @@
     },
     {
       "stat": "7",
-      "label": "For every child lost to drowning, 7 more survive one and need emergency care. Kids like Adam.",
-      "source": "CDC",
-      "sourceUrl": "https://www.cdc.gov/drowning/data-research/facts/index.html"
+      "label": "For every child lost to drowning, 7 more survive one and need emergency care.",
+      "source": "CDC, 2026",
+      "sourceUrl": "https://www.cdc.gov/drowning/prevention/summer-swim-safety.html"
     },
     {
       "stat": "70%+",
-      "label": "More than 7 in 10 fatal child pool drownings happen at a home: their own, a grandparent’s, a friend’s or a neighbor’s.",
+      "label": "More than 7 in 10 fatal child pool drownings (2021–2023) happen at a home: their own, a grandparent’s, a friend’s or a neighbor’s.",
       "source": "CPSC, 2026 report",
       "sourceUrl": "https://www.cpsc.gov/Newsroom/News-Releases/2026/CPSC-Report-Highlights-Persistent-Risk-of-Childhood-Drowning"
     },
@@ -34,9 +34,9 @@
     },
     {
       "stat": "~40%",
-      "label": "Nearly 4 in 10 drownings treated in emergency departments need hospital admission or transfer for more care, about 4 times the rate for all unintentional injuries.",
-      "source": "CDC",
-      "sourceUrl": "https://www.cdc.gov/drowning/data-research/facts/index.html"
+      "label": "Nearly 4 in 10 drownings treated in emergency departments need a hospital stay or transfer for more care. That’s 3 times the rate for other unintentional injuries.",
+      "source": "CDC, 2026",
+      "sourceUrl": "https://www.cdc.gov/drowning/prevention/summer-swim-safety.html"
     },
     {
       "stat": "5,900",
@@ -48,9 +48,9 @@
   "risks": [
     {
       "title": "When they slip away",
-      "body": "In a landmark CPSC study of young children who drowned in pools, 46% were last seen in the house, 69% weren’t expected to be at or in the pool, and 77% had been missing for 5 minutes or less.",
-      "source": "CPSC Safety Barrier Guidelines (study data from the late 1980s)",
-      "sourceUrl": "https://www.cpsc.gov/s3fs-public/pdfs/blk_media_SafetyBarrierGuidelinesResPools.pdf"
+      "body": "In a CPSC study of young children who drowned in pools in Arizona, California and Florida, 46% were last seen in the house, 69% weren’t expected to be at or in the pool, and 77% had been missing for 5 minutes or less.",
+      "source": "CPSC Publication 359",
+      "sourceUrl": "https://www.cpsc.gov/s3fs-public/pdfs/blk_media_359.pdf"
     },
     {
       "title": "When the house is full",
@@ -67,8 +67,10 @@
     {
       "title": "In the bathtub",
       "body": "Babies under 1 most often drown in bathtubs. Young children can drown in just an inch or two of water, so stay within arm’s reach at bath time and empty buckets and kiddie pools.",
-      "source": "CDC; American Academy of Pediatrics",
-      "sourceUrl": "https://www.cdc.gov/drowning/risk-factors/index.html"
+      "source": "CDC",
+      "sourceUrl": "https://www.cdc.gov/drowning/risk-factors/index.html",
+      "source2": "American Academy of Pediatrics",
+      "sourceUrl2": "https://www.healthychildren.org/English/safety-prevention/at-play/Pages/Water-Safety-And-Young-Children.aspx"
     },
     {
       "title": "In summer, and all year",
@@ -78,9 +80,11 @@
     },
     {
       "title": "Children with autism",
-      "body": "Children with autism face a much higher drowning risk, often after wandering. One study put their risk of a fatal drowning at about 160 times that of other children. Door alarms, adaptive swim lessons and a wandering plan save lives.",
-      "source": "Guan & Li, American Journal of Public Health, 2017",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/28590851/"
+      "body": "Among people with autism, deaths are nearly 40 times as likely to be caused by drowning as deaths in the general population. Children on the autism spectrum may be drawn to water and not always recognize the danger. Door alarms, adapted swim lessons and a wandering plan help.",
+      "source": "CDC",
+      "sourceUrl": "https://www.cdc.gov/drowning/risk-factors/index.html",
+      "source2": "American Academy of Pediatrics",
+      "sourceUrl2": "https://www.healthychildren.org/English/safety-prevention/at-play/Pages/water-safety-for-children-with-special-health-care-needs.aspx"
     }
   ],
   "groups": [
@@ -105,7 +109,7 @@
           "stat": "12–36 mo",
           "label": "Toddlers between 1 and 3 years old are at the highest risk.",
           "detail": "They are newly mobile, curious, and drawn to water, but have no sense of danger.",
-          "source": "American Academy of Pediatrics",
+          "source": "American Academy of Pediatrics, 2021 (2014–2018 data)",
           "sourceUrl": "https://publications.aap.org/pediatrics/article/148/2/e2021052227/179784/Prevention-of-Drowning"
         }
       ],
@@ -130,8 +134,8 @@
         },
         {
           "stat": "7.6×",
-          "label": "Black children ages 10–14 drown in swimming pools at 7.6 times the rate of White children.",
-          "detail": "Access to swim lessons is a big part of that gap.",
+          "label": "Black children ages 10–14 drown in swimming pools at 7.6 times the rate of White children (1999–2019).",
+          "detail": "",
           "source": "CDC",
           "sourceUrl": "https://www.cdc.gov/drowning/health-equity/index.html"
         }
@@ -151,9 +155,9 @@
         },
         {
           "stat": "~40%",
-          "label": "Nearly 4 in 10 drownings treated in emergency departments need hospital admission or transfer for more care, about 4 times the rate for all unintentional injuries.",
-          "source": "CDC",
-          "sourceUrl": "https://www.cdc.gov/drowning/data-research/facts/index.html",
+          "label": "Nearly 4 in 10 drownings treated in emergency departments need a hospital stay or transfer for more care. That’s 3 times the rate for other unintentional injuries.",
+          "source": "CDC, 2026",
+          "sourceUrl": "https://www.cdc.gov/drowning/prevention/summer-swim-safety.html",
           "detail": ""
         },
         {
@@ -178,9 +182,9 @@
         {
           "stat": "69%",
           "label": "Of young children who drowned in pools weren’t expected to be at or in the pool.",
-          "detail": "And 77% had been missing for 5 minutes or less (CPSC study, late-1980s data).",
-          "source": "CPSC",
-          "sourceUrl": "https://www.cpsc.gov/s3fs-public/pdfs/blk_media_SafetyBarrierGuidelinesResPools.pdf"
+          "detail": "And 77% had been missing for 5 minutes or less (CPSC study of pool drownings in Arizona, California and Florida).",
+          "source": "CPSC Publication 359",
+          "sourceUrl": "https://www.cpsc.gov/s3fs-public/pdfs/blk_media_359.pdf"
         }
       ],
       "intro": ""
@@ -213,7 +217,7 @@
         {
           "stat": "CPR",
           "label": "Fast CPR with rescue breaths matters after a drowning. Our mom started CPR on Adam right away.",
-          "detail": "Take an infant and child CPR class, and renew it every two years.",
+          "detail": "In an emergency, call 911. Take an infant and child CPR class, and renew it every two years.",
           "source": "American Heart Association & AAP, 2024",
           "sourceUrl": "https://newsroom.heart.org/news/updated-guidance-reaffirms-cpr-with-breaths-essential-for-cardiac-arrest-following-drowning"
         }

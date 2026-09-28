@@ -9,14 +9,17 @@ import { headline, nonfatal } from '../data/content';
 import { layers } from '../data/layers';
 import { home as story } from '../data/content';
 import FacebookFeed from '../components/FacebookFeed.astro';
+import PediatriciansSay from '../components/PediatriciansSay.astro';
 import AnywhereAnytime from '../components/AnywhereAnytime.astro';
 import EventCard from '../components/EventCard.astro';
 import { getEvents, splitEvents } from '../lib/events';
 import { site, hasDonate } from '../data/site';
-import isr from '../data/isr.json';
+import { isr } from '../data/content';
 import { url } from '../lib/url';
 
 const events = await getEvents();
+const countWord = (n: number) =>
+  ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten'][n] ?? String(n);
 const { upcoming } = splitEvents(events);
 // Home shows upcoming events first, then anything marked "Show on the home page".
 // Highlight the key phrase in the hero intro if it's there.
@@ -24,7 +27,11 @@ const ledeParts = story.heroLede.split('#1 cause of death');
 const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upcoming.includes(e))].slice(0, 3);
 ---
 
-<BaseLayout>
+<BaseLayout
+  documentTitle={`${site.name} | Water Safety and Drowning Prevention in PA`}
+  shareTitle={`${site.name}: ${site.tagline}`}
+  description="Drowning is the #1 cause of death for kids ages 1 to 4. Adam survived. Learn the layers of protection that keep children safe around water."
+>
   <!-- HERO -->
   <section class="hero">
     <div class="hero__caustics" aria-hidden="true"></div>
@@ -33,10 +40,10 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     </div>
     <div class="wrap hero__inner">
       <p class="hero__eyebrow">
-        Because of <strong>ADAM</strong> · <span>Allies in the Drowning Awareness Movement</span>
+        Because of <strong>ADAM</strong> · <span>{site.tagline}</span>
       </p>
       <h1 class="hero__title">
-        <span class="hero__line">Drowning is silent.</span>
+        <span class="hero__line">Drowning is silent.</span>{' '}
         <span class="hero__line hero__line--2">We won’t be.</span>
       </h1>
       <p class="hero__lede">
@@ -72,6 +79,7 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
               <p class="stat__label">{f.label}</p>
               <a class="source" href={f.sourceUrl} rel="noopener" target="_blank">
                 Source: {f.source}
+                <span class="visually-hidden"> for “{f.stat}” (opens in a new tab)</span>
               </a>
             </article>
           ))
@@ -131,12 +139,17 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
   <section class="section" style="padding-top: clamp(32px, 5vw, 64px)">
     <div class="wrap">
       <span class="eyebrow">The layers</span>
-      <h2>Seven ways to protect a child</h2>
+      <h2>{countWord(layers.length)} layers of protection</h2>
+      <p class="lede layers-lede">
+        These build on the National Drowning Prevention Alliance’s{' '}
+        <a href="https://ndpa.org/layers/" rel="noopener" target="_blank">5 Layers of Protection</a>, with barriers,
+        alarms and covers each counted as a layer of its own.
+      </p>
       <ol class="layer-cards grid grid--4">
         {
           layers.map((l, i) => (
             <li class="card reveal">
-              <span class="layer-cards__num">{i + 1}</span>
+              <span class="layer-cards__num" aria-hidden="true">{i + 1}</span>
               <h3>{l.title.split(':')[0]}</h3>
               <p>{l.short}</p>
               <a href={url(`/water-safety#${l.id}`)} aria-label={`Learn more about ${l.title.split(':')[0]}`}>
@@ -145,12 +158,14 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
             </li>
           ))
         }
-        <li class="card layer-cards__cta reveal">
-          <h3>If a child is missing…</h3>
-          <p><strong>Check the water first.</strong> Every second counts.</p>
-          <a href={url('/water-safety')}>The full guide →</a>
-        </li>
       </ol>
+      <div class="missing-callout reveal" role="note">
+        <h3>If a child is missing, check the water first.</h3>
+        <p>
+          Pools, hot tubs, ponds, bathtubs, even buckets. Every second counts. Call 911 and start CPR if you’re trained.
+        </p>
+        <a href={url('/water-safety#emergency')}>What to do in an emergency →</a>
+      </div>
     </div>
   </section>
 
@@ -167,16 +182,29 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
           <li><strong>1–6 years:</strong> swim, roll over to float and rest, then swim again</li>
           <li><strong>One-on-one,</strong> about 10 minutes a day with a certified instructor</li>
         </ul>
+        {
+          isr.stance && (
+            <p class="isr-stance">
+              {isr.stance}{' '}
+              <a href={url('/swim-lessons#why-we-recommend-isr-not-just-swim-lessons')}>Why we recommend ISR</a>
+            </p>
+          )
+        }
         <div class="btn-row">
           <a class="btn" href={url('/swim-lessons')}>About ISR lessons</a>
           <a class="btn btn--ghost" href={url('/swim-lessons#find')}>Find an instructor near you</a>
         </div>
       </div>
+      <div class="isr-side">
       <div class="isr-card reveal">
         <p class="isr-card__label">Why this is personal</p>
         <p class="isr-card__name">Adam’s nearest ISR instructor was two hours away.</p>
-        <p>After Adam drowned, our dad became one, so families near us wouldn’t have to make that drive.</p>
+        <p>After Adam drowned, our dad became one, so families in {site.location} wouldn’t have to make that drive.</p>
         <p class="isr-card__quote">“Skills before thrills. Sometimes there are no do-overs.”</p>
+      </div>
+      <div class="isr-peds reveal">
+        <PediatriciansSay level={3} />
+      </div>
       </div>
     </div>
   </section>
@@ -200,7 +228,10 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
       <div class="survivor-stat card reveal">
         <p class="stat__num">{nonfatal[1].stat}</p>
         <p>{nonfatal[1].label}</p>
-        <a class="source" href={nonfatal[1].sourceUrl} rel="noopener" target="_blank">Source: {nonfatal[1].source}</a>
+        <a class="source" href={nonfatal[1].sourceUrl} rel="noopener" target="_blank">
+          Source: {nonfatal[1].source}
+          <span class="visually-hidden"> for “{nonfatal[1].stat}” (opens in a new tab)</span>
+        </a>
       </div>
     </div>
   </section>
@@ -281,7 +312,7 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
           <p>Ready-to-post messages that put water safety in front of the people you love.</p>
           <span class="join__go">Get the toolkit →</span>
         </a>
-        <a class="card join reveal" href={url('/contact')}>
+        <a class="card join reveal" href={url('/request-a-talk')}>
           <h3>Invite us</h3>
           <p>Schools, daycares, churches and community groups: we’ll share Adam’s story and the layers of protection.</p>
           <span class="join__go">Request a talk →</span>
@@ -304,7 +335,7 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     background:
       radial-gradient(50% 45% at 85% -5%, rgb(255 214 120 / 0.55) 0%, transparent 70%),
       radial-gradient(120% 70% at 70% -10%, #3fb3c4 0%, transparent 60%),
-      linear-gradient(180deg, #1784a0 0%, var(--ocean) 48%, var(--deep) 100%);
+      linear-gradient(180deg, var(--ocean-bright) 0%, var(--ocean) 48%, var(--deep) 100%);
   }
   .hero__caustics {
     position: absolute;
@@ -353,8 +384,10 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     color: #fff;
     margin-bottom: 1.5rem;
   }
+  /* White, not gold: the moving light in the hero can sit right behind this label on phones. */
   .hero__eyebrow strong {
-    color: var(--sun);
+    color: #fff;
+    font-weight: 800;
   }
   .hero__title {
     font-size: clamp(3rem, 8.4vw + 0.5rem, 7.6rem);
@@ -424,6 +457,10 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     max-width: 760px;
     margin-bottom: clamp(32px, 5vw, 56px);
   }
+  .layers-lede {
+    max-width: 62ch;
+    margin-bottom: 2rem;
+  }
   .layer-cards {
     list-style: none;
     padding: 0;
@@ -452,15 +489,24 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     font-weight: 700;
     text-decoration: none;
   }
-  .layer-cards__cta {
-    background: var(--deep) !important;
+  .missing-callout {
+    margin-top: 28px;
+    padding: 22px 26px;
+    border-radius: var(--radius);
+    background: var(--deep);
     color: var(--on-dark);
+    border-left: 8px solid var(--sun);
   }
-  .layer-cards__cta strong {
+  .missing-callout h3 {
     color: var(--sun);
+    margin-bottom: 0.3em;
   }
-  .layer-cards__cta a {
+  .missing-callout a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 24px;
     color: var(--shallow);
+    font-weight: 700;
   }
 
   /* ---------- Survivors ---------- */
@@ -478,10 +524,22 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     display: grid;
     gap: 6px;
   }
+  .isr-stance {
+    margin-top: 1.25rem;
+    padding-left: 14px;
+    border-left: 3px solid var(--sun);
+    color: var(--on-dark);
+    font-weight: 600;
+    max-width: 52ch;
+  }
+  .isr-side {
+    display: grid;
+    gap: 24px;
+  }
   .isr-card {
     background:
-      radial-gradient(70% 90% at 90% 0%, rgb(255 214 120 / 0.35), transparent 70%),
-      linear-gradient(160deg, #1784a0, var(--ocean));
+      radial-gradient(50% 60% at 100% 100%, rgb(255 214 120 / 0.18), transparent 70%),
+      linear-gradient(340deg, var(--ocean-bright), var(--ocean));
     border-radius: var(--radius);
     padding: clamp(28px, 4vw, 44px);
     color: #fff;
@@ -492,7 +550,7 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     letter-spacing: 0.14em;
     font-size: 0.8rem;
     font-weight: 700;
-    color: var(--sun);
+    color: var(--sun-text);
     margin-bottom: 6px;
   }
   .isr-card__name {
