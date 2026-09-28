@@ -51,7 +51,16 @@ Defined at the top of [`src/styles/global.css`](../src/styles/global.css). Chang
 Warm, honest, urgent, never blaming. See [CONTENT-PLAN.md §4](CONTENT-PLAN.md#4-voice-and-words) for the words to use and avoid.
 
 ## Logo
-The site currently uses a simple text logo (sun over waves), in [`src/components/Logo.astro`](../src/components/Logo.astro). When we get a designed logo:
-- Ask for **SVG** + **PNG** versions: full color, all-white (for dark backgrounds), and a square icon (for social profiles and the browser tab).
-- Get a written **copyright assignment** to the organization from the designer.
-- Replace `public/favicon.svg` and the markup in `Logo.astro`, and regenerate `public/images/share-card.png` (1200×630).
+Our mark is a **brain with a heart at its center**, in teal, purple, magenta and orange (September 2026). It's Adam's brain injury and the love around him in one picture ("Because of Adam, I know so much about the brain," as Lea says).
+
+| File | Use |
+|---|---|
+| `public/images/logo-mark-large.png` | Full-size mark on a transparent background, for flyers, shirts and social posts |
+| `public/images/logo-mark.png` | The small mark next to "Because of ADAM" in the site header and footer ([`Logo.astro`](../src/components/Logo.astro)) |
+| `public/favicon.ico`, `icon-192.png`, `icon-512.png` | Browser tab and bookmark icons |
+| `public/apple-touch-icon.png` | iPhone home-screen icon (on our sand background) |
+| `public/images/share-card.png` | The picture Facebook and texts show when someone shares our link (1200×630) |
+
+- The mark works on light and dark backgrounds. Don't stretch it, recolor it, or put it on a busy photo.
+- Always leave a little space around it, about the width of the teal ring.
+- For print or embroidery, ask a designer for an **SVG** (vector) version traced from `logo-mark-large.png`, plus a one-color version. If someone else designed it, get a written OK for the organization to use it.
