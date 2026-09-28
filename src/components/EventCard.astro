@@ -37,7 +37,7 @@ const art = /fish|rodeo/.test(t)
 <article class="event card">
   {
     e.photo ? (
-      <img class="event__photo" src={url(e.photo)} alt={e.photoAlt || e.title} loading="lazy" />
+      <img class="event__photo" src={url(e.photo)} alt={e.photoAlt || e.title} data-missing-alt={!e.photoAlt || undefined} loading="lazy" />
     ) : (
       <div class="event__art" aria-hidden="true">
         <span>{art}</span>
