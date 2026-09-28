@@ -46,4 +46,4 @@ Our mom, our Pops, our dad and the first responders all did CPR on Adam. Take a 
 - [American Red Cross: find a CPR class](https://www.redcross.org/take-a-class/cpr)
 - [American Heart Association: find a class](https://atlas.heart.org/)
 
-{{TODO: local class partners}}
+Near us, the [Southern Alleghenies EMS Council](https://saems.com/courses/) in Altoona is an American Heart Association training center, and some of its classes are open to the public. Call them at 814-201-2265 and ask whether an upcoming class includes infant and child CPR.
