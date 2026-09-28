@@ -51,16 +51,17 @@ Our Facebook page: **[Because of ADAM (@AdamsVillageofHope)](https://www.faceboo
 
 Our Word doc of Facebook photos (193 small thumbnails, numbered in order) is mapped to the site:
 
-| Photo | Where |
+| Photo | Where it is now |
 |---|---|
-| #130 Adam and Mom | Adam's Story, under "Meet Adam" (a recent photo of Adam would be even better) |
-| #176 (or #97) Rickey's graduation, Adam on his trike | Adam's Story, under "June 5, 2017" |
-| #68 (or #59) the S.S. Adam, Halloween 2017 | Adam's Story, under "Life after" |
-| #44 Lea kissing Adam | Adam's Story, under "Because of Adam" |
-| Mom's swing painting (#26, but photograph the real painting) | Adam's Story, under "Adam's village" |
-| #167 "It's a boy!" | About Us, top of the page |
-| #14 Christmas 2017, all five of us | About Us, team card for Rickey, Grace, Avery & Lea |
-| #71 the sea of blue shirts | Events: Adam's Hope Benefit on the Bayou, 2017 |
+| Mom, Dad and baby Adam (#22) | Adam's Story, "Meet Adam" |
+| Rickey's graduation with Adam on his trike (#176) | Adam's Story, "June 5, 2017" (**still the small thumbnail; swap in the full-size photo**) |
+| Mom holding Adam in the PICU | Adam's Story, "Life after" (the one hospital photo on the site) |
+| Mom's nursing graduation | Adam's Story, "Planting seeds" |
+| Lea curled up with Adam | Adam's Story, "Because of Adam" |
+| The sea of blue shirts in Lafitte (#71) | Adam's Story, "Adam's village", and the fishing rodeo on the Events page |
+| Christmas 2017, all five of us (#14) | About Us, sibling team card |
+| Mom's swing painting | Events: Wear Blue on June 5 |
+| Still open | About Us family photo ("It's a boy!" #167), Mom's and Dad's team cards, Dad teaching ISR, other event photos |
 
 Upload **full-size** copies (the original phone photo, or Facebook's Download option), never the thumbnails. Extras worth using on Facebook: #192, #22, #75, #107, #193, #60.
 
