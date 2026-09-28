@@ -24,8 +24,9 @@ Most of Adam's story on the website comes straight from Mom's Facebook posts (se
 
 ## The nonprofit
 13. Our IRS record (EIN 85-0723376, from December 2020) shows no annual filings. **Has anyone been filing the 990-N each year?** Do we have the IRS letter? And for the CPA: **where did the 2020 and 2021 cornhole money go** (both flyers mention ISR swim and CPR scholarships), and did any of it land in the prayersforadam PayPal? (See the [launch checklist](LAUNCH-CHECKLIST.md).)
-14. Which **donation platform** do you want to use? (Zeffy is free for us.) The Venmo from 2020 can't send donation receipts.
+14. Who made **bcofADAM@gmail.com** (it's on the 2020 and 2021 cornhole flyers), and does anyone still have the password? We're moving to `hello@becauseofadam.org`, but old flyers and posts point people to the Gmail, so someone should check it for messages.
+15. Which **donation platform** do you want to use? (Zeffy is free for us.) The Venmo from 2020 can't send donation receipts.
 
 ## Photos and video
-15. Pick **6–10 favorite photos**: Adam then and now, all of us together, events, Dad teaching.
-16. Any **videos** we should feature? (The Christmas tickles reel, the Father's Day reel, the HBOT milestone video?)
+16. Pick **6–10 favorite photos**: Adam then and now, all of us together, events, Dad teaching.
+17. Any **videos** we should feature? (The Christmas tickles reel, the Father's Day reel, the HBOT milestone video?)

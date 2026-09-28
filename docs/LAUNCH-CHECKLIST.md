@@ -99,9 +99,9 @@ Everything we still need to do to get Because of ADAM and the website fully up a
 ### Step 2: Your own web address
 We're using **[Porkbun](https://porkbun.com/)**: $7.98 for the first year of a .org, $11.84/yr after that, with free WHOIS privacy (our address stays private) and free email forwarding. [Cloudflare Registrar](https://www.cloudflare.com/products/registrar/) is just as good on price ($8.50, then $11.20/yr, no markup ever), but its dashboard is more technical, and its orange-cloud "proxy" setting has to be turned off for GitHub Pages. Skip GoDaddy, Network Solutions and website-builder bundles: cheap first year, expensive renewals and lots of upsells. *(Prices checked September 28, 2026. `becauseofadam.org` and `becauseofadam.com` were both still unregistered.)*
 
-- [ ] **Make the Porkbun account with bcofadam@gmail.com**, not a personal email, and turn on two-factor sign-in. Put the login in a place at least one other family member can get to. If the domain ever lapses, someone else can buy it
-- [ ] Buy **becauseofadam.org** (our main address) and **becauseofadam.com** (so no one else takes it). About $20 for both the first year
-- [ ] At checkout: put **Because of ADAM** as the organization, register for **2+ years**, and leave **auto-renew** and **domain lock** on
+- [x] Bought **becauseofadam.org** (our main address) and **becauseofadam.com** (so no one else takes it) on Porkbun, September 28, 2026, on Avery's account
+- [ ] In Porkbun, check that **auto-renew** and **domain lock** are on for both, turn on **two-factor sign-in**, and write down where the login is for one other family member. If the domain ever lapses, someone else can buy it
+- [ ] Keep the Porkbun account on a **personal email**. Never switch it to an `@becauseofadam.org` address: if the domain ever had a problem, its renewal and warning emails would go to an inbox that no longer works
 - [ ] In GitHub: **Settings → Pages → Custom domain** → `becauseofadam.org` → **Save**
 - [ ] In Porkbun: **Domain Management → becauseofadam.org → DNS**. Delete Porkbun's default "parked" records, then add ([GitHub's guide](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)):
 
@@ -120,12 +120,12 @@ We're using **[Porkbun](https://porkbun.com/)**: $7.98 for the first year of a .
 - [ ] **Verify the domain** in GitHub (your profile **Settings → Pages → Add a domain**, then add the TXT record it shows in Porkbun). This stops anyone else from ever pointing it at their own GitHub site
 - [ ] Wait for GitHub's DNS check to turn green (minutes to a few hours), then tick **Enforce HTTPS** (Google Ad Grants requires HTTPS)
 - [ ] In Porkbun, forward **becauseofadam.com** to `https://becauseofadam.org` (the domain's **URL Forwarding** option)
-- [ ] Set up free **email forwarding** in Porkbun, e.g. `hello@becauseofadam.org` → bcofadam@gmail.com, and put that address in **Studio → Site settings → Contact email**
+- [ ] Set up free **email forwarding** in Porkbun (**Domain Management → becauseofadam.org → Email**): `hello@becauseofadam.org` → Avery's email (add more family members if they should get messages too). Send it a test, then put `hello@becauseofadam.org` in **Studio → Site settings → Contact email**. This replaces the old bcofADAM@gmail.com from our 2020–2021 flyers, so we don't need a new Gmail
 - [ ] Re-run the **Deploy site** workflow (Actions → Deploy site → Run workflow). The site picks up the new address on its own, and every link moves from `avemath.github.io/BcofADAM` to `becauseofadam.org`
 - [ ] Add the new address to the Facebook page intro, the pinned post and our Water Watcher cards
 
 ### Step 3: Email, forms and analytics
-- [ ] **Email on our domain** (e.g. `hello@becauseofadam.org`): Google Workspace for Nonprofits is **free** once we're verified. Apply through [Google for Nonprofits](https://www.google.com/nonprofits/) *before* starting any paid Workspace trial. Put the address in the **Studio → Site settings → Contact email**
+- [ ] **A real inbox on our domain** (so we can *send* from `hello@becauseofadam.org`, not just receive): Google Workspace for Nonprofits is **free** once we're verified. Until then, Porkbun's forwarding (Step 2) covers incoming email. Apply through [Google for Nonprofits](https://www.google.com/nonprofits/) *before* starting any paid Workspace trial. Put the address in the **Studio → Site settings → Contact email**
 - [ ] **Contact form**: create a free form at [Web3Forms](https://web3forms.com/) (250 submissions/month free) or [Formspree](https://formspree.io/) (50/month free). Paste the endpoint into **Studio → Site settings → Contact form link**, and send a test message
 - [ ] **Newsletter** (optional): MailerLite (30% nonprofit discount), Mailchimp (15%), Buttondown (50%). Paste the sign-up link into **Studio → Site settings**
 - [ ] **Analytics** (privacy-friendly, no cookie banner needed): [Cloudflare Web Analytics](https://www.cloudflare.com/web-analytics/) (free) or Plausible ($9/mo, 15% nonprofit discount)
