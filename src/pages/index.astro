@@ -182,6 +182,14 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
           <li><strong>1–6 years:</strong> swim, roll over to float and rest, then swim again</li>
           <li><strong>One-on-one,</strong> about 10 minutes a day with a certified instructor</li>
         </ul>
+        {
+          isr.stance && (
+            <p class="isr-stance">
+              {isr.stance}{' '}
+              <a href={url('/swim-lessons#why-we-recommend-isr-not-just-swim-lessons')}>Why we recommend ISR</a>
+            </p>
+          )
+        }
         <div class="btn-row">
           <a class="btn" href={url('/swim-lessons')}>About ISR lessons</a>
           <a class="btn btn--ghost" href={url('/swim-lessons#find')}>Find an instructor near you</a>
@@ -515,6 +523,14 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     margin: 0 0 8px;
     display: grid;
     gap: 6px;
+  }
+  .isr-stance {
+    margin-top: 1.25rem;
+    padding-left: 14px;
+    border-left: 3px solid var(--sun);
+    color: var(--on-dark);
+    font-weight: 600;
+    max-width: 52ch;
   }
   .isr-side {
     display: grid;
