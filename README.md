@@ -57,7 +57,7 @@ npm run build     # output in dist/
 ```
 .pages.yml       ← Studio (Pages CMS) setup: what the family can edit
 src/
-  data/          ← settings, home page, facts, resources, team, Dad's ISR program (JSON, edited in the Studio)
+  data/          ← settings, home page, facts, resources, team, Dad's ISR story box (JSON, edited in the Studio)
   content/
     pages/       ← Adam's Story, ISR Swim Lessons, Privacy (Markdown)
     events/      ← events & fundraisers (Markdown)

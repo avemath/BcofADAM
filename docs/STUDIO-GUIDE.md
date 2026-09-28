@@ -21,7 +21,7 @@ That's it. From then on, everyone signs in at `/studio` with their email.
 |---|---|
 | ⚙️ **Site settings** | Donation link, show/hide the Facebook feed, contact email, social links, 501(c)(3) status, the **launch** switch |
 | 🏠 **Home page** | The intro, the "Meet Adam" text, Adam's photo, the quote under the clock |
-| 📄 **Pages** | Adam's Story, ISR Swim Lessons (and Dad's program details), Privacy policy |
+| 📄 **Pages** | Adam's Story, ISR Swim Lessons (and Dad's story box), Privacy policy |
 | 🎣 **Events & fundraisers** | Add a fishing rodeo, cornhole tournament or any event, with photos and results |
 | 📰 **News & updates** | Post an update about Adam, an event recap, a water safety reminder |
 | 👨‍👩‍👧‍👦 **Our team** | Names, roles, short bios and photos on the About page |
@@ -50,8 +50,8 @@ That's it. From then on, everyone signs in at `/studio` with their email.
 ### Edit Adam's Story
 **Pages** → **Adam's Story**. The editor works like Word or Google Docs. Quotes are the ones with the bar on the left; the last line of a quote in *italics* (like *— Mom*) becomes the name under it.
 
-### Update Dad's ISR lesson details
-**Pages** → **ISR Swim Lessons — Dad's program details**: where, when, a sign-up link and contact info.
+### Update Dad's story box on the ISR page
+**Pages** → **ISR Swim Lessons — Dad's story box**: the short story and a photo. **Please don't add sign-up links, prices or intake forms for Dad's lessons.** His lessons are his own business, and keeping them off the nonprofit site keeps everything clean (see "Keeping the nonprofit and Dad's lessons separate" in the [launch checklist](LAUNCH-CHECKLIST.md)).
 
 ### Turn the Facebook feed off (or back on)
 **Site settings** → **Show our Facebook feed on the website**.

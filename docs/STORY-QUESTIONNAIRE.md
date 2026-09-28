@@ -13,9 +13,9 @@ Most of Adam's story on the website comes straight from Mom's Facebook posts (se
 6. Who do you want to **thank by name** (doctors, nurses, first responders, churches, businesses, therapists)?
 
 ## Dad's ISR lessons
-7. Is **Little Explorer Swim ISR** still the name? **Where and when** do you teach now (still Summit Athletic Club in Altoona)?
-8. Is there a **sign-up link**, or a phone number or email for lessons?
-9. How many kids have you taught so far? Any **stories** we can share (with the parents' OK)?
+7. Is **Little Explorer Swim ISR** still the name? Is the "Rickey Matherne, Jr" listing on ISR's instructor map you?
+8. Sign-ups and the intake form belong on **your own** Little Explorer page, not the nonprofit site. Is your Facebook page the best place for that? (Avery built an intake form you can use there.)
+9. Any **stories** we can share on our Facebook page (with the parents' OK)?
 10. A **photo** of you teaching (with the parents' OK for any kids in it).
 
 ## Events

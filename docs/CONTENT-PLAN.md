@@ -67,7 +67,7 @@ The goal is to make a parent stop and act, not to frighten or grieve them. Mom's
 |---|---|---|---|---|
 | **Home** `/` | Hook, emotion, first action | "Drowning is silent. We won't be." hero · 4 headline stats · Meet Adam · time-on-page clock · interactive layers builder · 7 layers · Dad's ISR lessons · survivors · events · Facebook feed · pledge band · ways to help | Read Adam's story / Learn the layers | ✍️ Adam's photo |
 | **Adam's Story** `/adams-story` | The heart of the site, told by Avery | Meet Adam · June 5, 2017 · what we wish we'd known · life after · planting seeds · because of Adam · Adam's village | Learn the layers / ISR / Take the pledge | ✍️ Mom & Dad's final OK |
-| **ISR Swim Lessons** `/swim-lessons` | Why self-rescue lessons matter so much to us | What ISR is · how lessons work · why it's vital · one layer, not the only one · Dad's program · **find a certified instructor by ZIP** | Find an instructor | ✍️ Dad's details |
+| **ISR Swim Lessons** `/swim-lessons` | Why self-rescue lessons matter so much to us | What ISR is · how lessons work · why it's vital · one layer, not the only one · why Dad teaches ISR (story only, with a separation note) · **find a certified instructor by ZIP** | Find an instructor | ✍️ photo of Dad |
 | **Events** `/events` | Show the village in action | Fishing rodeos · cornhole tournaments · awareness days (upcoming and past) | Come / host one | ✍️ dates, results, photos |
 | **Water Safety** `/water-safety` | The practical guide | Layers builder · 7 layers with checklists · high-risk moments (slipping away, full house, others' homes, bathtub, summer, autism) | Take the pledge | ✅ |
 | **The Facts** `/the-facts` | Credibility, shareable numbers | Grouped stats with sources · note on words | See the layers | ✅ (click-verify sources) |
@@ -111,7 +111,7 @@ The goal is to make a parent stop and act, not to frighten or grieve them. Mom's
 **Programs the site could grow into** (only list them once they're real)
 - Water Watcher tag distribution (events, pediatric offices, pool stores)
 - Door/pool alarm giveaways for families with young children
-- Swim lesson scholarships. ⚠️ If lessons are taught by a board member's or founder's own business (like Dad's ISR classes), scholarships paid to that business create a **conflict of interest / private benefit** issue. Get legal advice, disclose it, and have the unrelated board members approve it, or route scholarships to other providers.
+- Swim lesson scholarships. ⚠️ Because Dad's ISR lessons are a family business, scholarships that could end up paying him create a **conflict of interest / private benefit** problem. Only with a CPA's or attorney's sign-off, a vote by the board members who aren't family, and families free to choose any certified instructor. Until then, no. (See #4 at the top of the [launch checklist](LAUNCH-CHECKLIST.md).)
 - Infant/child CPR classes with a certified partner
 - Talks for schools, daycares, churches, MOPS groups, pediatric offices
 - Survivor family support: connection, resource navigation, partnership with Project One Cause

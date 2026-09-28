@@ -152,7 +152,7 @@ content:
         format: yaml-frontmatter
         fields: *pageFields
       - name: isr-program
-        label: ISR Swim Lessons — Dad's program details
+        label: ISR Swim Lessons — Dad's story box
         type: file
         path: src/data/isr.json
         format: json
@@ -160,24 +160,13 @@ content:
           - name: programName
             label: Program name
             type: string
-          - name: instructor
-            label: Instructor
-            type: string
-          - name: location
-            label: Where lessons happen
-            type: string
-          - name: season
-            label: When lessons run
-            type: string
           - name: blurb
-            label: Short description
+            label: Short story
             type: text
-          - name: bookingUrl
-            label: Link to sign up or learn more
-            type: string
-          - name: contact
-            label: Phone or email for lessons
-            type: string
+          - name: disclosure
+            label: Separation note (please keep this)
+            type: text
+            description: Keeps the nonprofit and Dad's swim lessons clearly separate. Please don't add sign-up links, prices or intake forms for Dad's lessons to the nonprofit site. Those belong on his own business page.
           - name: photo
             label: Photo
             type: image
