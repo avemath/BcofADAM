@@ -1,0 +1,189 @@
+---
+import Logo from './Logo.astro';
+import { nav } from '../data/site';
+import { url } from '../lib/url';
+
+const current = Astro.url.pathname.replace(/\/$/, '');
+const isCurrent = (href: string) => current === url(href).replace(/\/$/, '');
+---
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a href={url('/')} class="site-header__brand" aria-label="Because of ADAM — home">
+      <Logo />
+    </a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="site-nav"
+    >
+      <span class="menu-toggle__bars" aria-hidden="true"></span>
+      <span class="menu-toggle__label">Menu</span>
+    </button>
+
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        {
+          nav.map((item) => (
+            <li>
+              <a href={url(item.href)} aria-current={isCurrent(item.href) ? 'page' : undefined}>
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <a href={url('/donate')} class="btn site-nav__donate">Donate</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle');
+  const navEl = document.getElementById('site-nav');
+  toggle?.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!open));
+    navEl?.classList.toggle('is-open', !open);
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navEl?.classList.contains('is-open')) {
+      toggle?.setAttribute('aria-expanded', 'false');
+      navEl.classList.remove('is-open');
+      toggle?.focus();
+    }
+  });
+</script>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgb(251 246 238 / 0.92);
+    backdrop-filter: saturate(1.4) blur(10px);
+    -webkit-backdrop-filter: saturate(1.4) blur(10px);
+    border-bottom: 1px solid rgb(8 51 73 / 0.08);
+  }
+  .site-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 72px;
+  }
+  .site-header__brand {
+    text-decoration: none;
+  }
+
+  .site-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .site-nav a:not(.btn) {
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.98rem;
+  }
+  .site-nav a:not(.btn):hover,
+  .site-nav a[aria-current='page'] {
+    color: var(--ocean);
+    text-decoration: underline;
+    text-decoration-color: var(--aqua);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 8px;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 8px 14px;
+    border: 2px solid var(--deep);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--deep);
+    font: 700 0.95rem var(--font-body);
+    cursor: pointer;
+  }
+  .menu-toggle__bars,
+  .menu-toggle__bars::before,
+  .menu-toggle__bars::after {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background: currentColor;
+    border-radius: 2px;
+    position: relative;
+    transition: transform 0.2s ease;
+  }
+  .menu-toggle__bars::before,
+  .menu-toggle__bars::after {
+    content: '';
+    position: absolute;
+  }
+  .menu-toggle__bars::before {
+    top: -6px;
+  }
+  .menu-toggle__bars::after {
+    top: 6px;
+  }
+  .menu-toggle[aria-expanded='true'] .menu-toggle__bars {
+    background: transparent;
+  }
+  .menu-toggle[aria-expanded='true'] .menu-toggle__bars::before {
+    transform: translateY(6px) rotate(45deg);
+  }
+  .menu-toggle[aria-expanded='true'] .menu-toggle__bars::after {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  /* Mobile: slide-down panel */
+  @media (max-width: 1023px) {
+    .site-nav {
+      display: none;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 100%;
+      background: var(--sand);
+      border-bottom: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      padding: 8px var(--gutter) 24px;
+    }
+    .site-nav.is-open {
+      display: block;
+    }
+    .site-nav li a:not(.btn) {
+      display: block;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 1.1rem;
+    }
+    .site-nav__donate {
+      margin-top: 20px;
+      width: 100%;
+    }
+  }
+
+  /* Desktop: inline */
+  @media (min-width: 1024px) {
+    .menu-toggle {
+      display: none;
+    }
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    .site-nav ul {
+      display: flex;
+      gap: 24px;
+    }
+  }
+</style>

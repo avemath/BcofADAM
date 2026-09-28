@@ -1,0 +1,126 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { site } from '../data/site';
+import { url } from '../lib/url';
+
+const values = [
+  { title: 'Honest', body: 'We tell the truth about drowning, including the hard parts, and we cite our sources.' },
+  { title: 'Hopeful', body: 'Adam is proof that hope matters. Drowning is preventable, and every family can add layers of protection.' },
+  { title: 'Without blame', body: 'Drowning happens to loving, careful families. Shame keeps people silent, and silence costs lives.' },
+  { title: 'Community', body: 'It takes a village. We work alongside parents, schools, first responders, swim instructors and other drowning prevention groups.' },
+];
+
+/** Board & team. Add real people when ready; photos go in /public/images/team/. */
+const team = [
+  { name: 'Rickey Matherne', role: 'Co-founder' },
+  { name: 'Shannon Matherne', role: 'Co-founder' },
+];
+---
+
+<BaseLayout
+  title="About Us"
+  description="Because of ADAM: A Drowning Awareness Movement was founded by Adam's family to prevent childhood drowning and support families affected by it."
+>
+  <PageHero
+    eyebrow="About us"
+    title="A family turning the worst day of their lives into a movement."
+    lede="Because of ADAM (A Drowning Awareness Movement) was started by Adam’s parents after he survived a drowning in the family’s backyard pool at 14 months old."
+  />
+
+  <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
+    <div class="wrap split">
+      <div class="reveal">
+        <span class="eyebrow">Our mission</span>
+        <h2>To prevent childhood drowning through awareness, education and layers of protection, and to support the families it touches.</h2>
+        <div class="todo">Family: confirm or rewrite the mission statement so it matches your Articles of Incorporation and IRS filing.</div>
+      </div>
+      <div class="acronym reveal" aria-label="ADAM stands for A Drowning Awareness Movement">
+        <p><span>A</span></p>
+        <p><span>D</span>rowning</p>
+        <p><span>A</span>wareness</p>
+        <p><span>M</span>ovement</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--foam">
+    <div class="wrap">
+      <span class="eyebrow">What we believe</span>
+      <h2>Our values</h2>
+      <div class="grid grid--4" style="margin-top: 28px">
+        {
+          values.map((v) => (
+            <div class="card reveal">
+              <h3>{v.title}</h3>
+              <p>{v.body}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <span class="eyebrow">Who we are</span>
+      <h2>Our team</h2>
+      <div class="todo" style="margin-bottom: 28px">
+        Family: add the board of directors and volunteers (name, role, one-sentence bio, photo). Funders and Google
+        Ad Grants reviewers look for a real, named board.
+      </div>
+      <ul class="grid grid--4 team">
+        {
+          team.map((m) => (
+            <li class="card">
+              <h3>{m.name}</h3>
+              <p>{m.role}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--deep">
+    <div class="wrap narrow">
+      <span class="eyebrow">Transparency</span>
+      <h2>Accountable to our village</h2>
+      <p>
+        {
+          site.taxExempt
+            ? `${site.name} is a registered 501(c)(3) nonprofit organization${site.ein ? ` (EIN ${site.ein})` : ''}.`
+            : `${site.name} is a family-led nonprofit effort. We’ll post our registration details here as soon as they are finalized.`
+        }
+        We’ll share annual reports and IRS filings on this page as they become available.
+      </p>
+    </div>
+  </section>
+
+  <CtaBand title="Walk with us." text="Follow Adam’s journey, share what you learn, and join the movement.">
+    <a class="btn" href={url('/get-involved')}>Get involved</a>
+    <a class="btn btn--ghost" href={url('/contact')}>Contact us</a>
+  </CtaBand>
+</BaseLayout>
+
+<style>
+  .acronym {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 4vw + 1rem, 4rem);
+    line-height: 1.05;
+    color: var(--ink-soft);
+  }
+  .acronym p {
+    margin: 0;
+  }
+  .acronym span {
+    color: var(--ocean);
+    font-weight: 700;
+  }
+  .team {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+</style>

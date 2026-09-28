@@ -1,0 +1,146 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { url } from '../lib/url';
+
+const ways = [
+  {
+    title: 'Take the pledge',
+    body: 'Promise to be a Water Watcher, print your card, and ask your family to do the same.',
+    href: '/water-watcher',
+    cta: 'Take the pledge',
+  },
+  {
+    title: 'Share Adam’s story',
+    body: 'Every share puts water safety in front of a parent, grandparent or babysitter who might need it this summer.',
+    href: '/adams-story',
+    cta: 'Read & share',
+  },
+  {
+    title: 'Give',
+    body: 'Help put Water Watcher tags, alarms, swim lessons and CPR training within reach of more families.',
+    href: '/donate',
+    cta: 'Donate',
+  },
+  {
+    title: 'Invite us to speak',
+    body: 'Schools, daycares, churches, moms’ groups, pediatric offices and pool stores: we’ll come tell Adam’s story and teach the layers of protection.',
+    href: '/contact',
+    cta: 'Request a talk',
+  },
+  {
+    title: 'Host a fundraiser',
+    body: 'A bake sale, a swim-a-thon, a vendor fair or a birthday fundraiser. We’ll help with materials and ideas.',
+    href: '/contact',
+    cta: 'Tell us your idea',
+  },
+  {
+    title: 'Partner with us',
+    body: 'Pool builders, swim schools, realtors, insurers and local businesses can help new pool owners get the layers right from day one.',
+    href: '/contact',
+    cta: 'Become a partner',
+  },
+];
+
+const shareText = [
+  'Drowning is the #1 cause of death for kids ages 1–4. It’s fast and silent. Learn the layers of protection: fences, alarms, Water Watchers, swim skills and CPR. #BecauseOfAdam',
+  'When everyone is watching, no one is. Name a Water Watcher every time kids are near water. #BecauseOfAdam',
+  'If a child is missing, check the water first. Every second counts. #BecauseOfAdam',
+];
+---
+
+<BaseLayout
+  title="Get Involved"
+  description="Join the movement: take the Water Watcher pledge, share Adam's story, give, host a fundraiser, or invite Because of ADAM to speak."
+>
+  <PageHero
+    eyebrow="Join the movement"
+    title="Adam’s village is bigger than one family."
+    lede="Everyone who shares, pledges, gives or speaks up becomes another layer of protection for a child they may never meet."
+  />
+
+  <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
+    <div class="wrap grid grid--3">
+      {
+        ways.map((w) => (
+          <article class="card way reveal">
+            <h2 class="way__title">{w.title}</h2>
+            <p>{w.body}</p>
+            <a class="btn btn--ocean" href={url(w.href)}>
+              {w.cta}
+            </a>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section section--foam">
+    <div class="wrap narrow">
+      <span class="eyebrow">Share toolkit</span>
+      <h2>Copy, paste, post.</h2>
+      <p class="lede">Use these anywhere: Facebook, Instagram, the group chat, the church bulletin.</p>
+      <ul class="share-list">
+        {
+          shareText.map((t) => (
+            <li class="card">
+              <p>{t}</p>
+              <button type="button" class="btn btn--ghost copy-btn" data-copy={t}>
+                Copy text
+              </button>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <CtaBand title="Have another idea?" text="We’d love to hear it. Tell us how you want to help.">
+    <a class="btn" href={url('/contact')}>Get in touch</a>
+  </CtaBand>
+</BaseLayout>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('[data-copy]').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(btn.dataset.copy!);
+        btn.textContent = 'Copied!';
+        setTimeout(() => (btn.textContent = 'Copy text'), 2000);
+      } catch {
+        /* clipboard unavailable */
+      }
+    });
+  });
+</script>
+
+<style>
+  .way {
+    display: flex;
+    flex-direction: column;
+  }
+  .way__title {
+    font-size: 1.6rem;
+  }
+  .way .btn {
+    margin-top: auto;
+    align-self: flex-start;
+  }
+  .share-list {
+    list-style: none;
+    padding: 0;
+    margin: 28px 0 0;
+    display: grid;
+    gap: 16px;
+  }
+  .share-list p {
+    font-size: 1.05rem;
+  }
+  .copy-btn {
+    min-height: 40px;
+    padding: 0.5em 1.1em;
+    font-size: 0.9rem;
+    color: var(--ocean);
+  }
+</style>

@@ -1,0 +1,44 @@
+---
+/** Wraps a Markdown page from src/content/pages in the site's hero + prose styles. */
+import { getEntry } from 'astro:content';
+import BaseLayout from './BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import { withBase } from '../lib/url';
+
+interface Props {
+  slug: string;
+}
+const entry = await getEntry('pages', Astro.props.slug);
+if (!entry) throw new Error(`Missing src/content/pages/${Astro.props.slug}.md`);
+const html = withBase(entry.rendered?.html ?? '');
+const { title, eyebrow, lede, description } = entry.data;
+---
+
+<BaseLayout title={title} description={description ?? lede}>
+  <PageHero eyebrow={eyebrow} title={title} lede={lede} />
+  <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
+    <div class="wrap prose-layout">
+      <article class="prose">
+        <Fragment set:html={html} />
+      </article>
+      <slot />
+    </div>
+  </section>
+  <slot name="after" />
+</BaseLayout>
+
+<style>
+  .prose-layout {
+    display: grid;
+    gap: 48px;
+  }
+  @media (min-width: 1000px) {
+    .prose-layout {
+      grid-template-columns: minmax(0, 1fr) 320px;
+      align-items: start;
+    }
+  }
+  .prose-layout :global(.todo) {
+    margin: 1.5em 0;
+  }
+</style>

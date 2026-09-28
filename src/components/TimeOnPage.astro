@@ -1,0 +1,68 @@
+---
+/**
+ * Counts how long the visitor has been on the page and sets it beside a
+ * moment from Adam's story. The words come from src/data/story.ts.
+ */
+import { story } from '../data/story';
+---
+
+<div class="clock" data-clock>
+  <p class="clock__label">You’ve been on this page for</p>
+  <p class="clock__time" aria-hidden="true"><span data-clock-time>0:00</span></p>
+  <p class="clock__compare">{story.timeCompare}</p>
+  <p class="clock__quote">“{story.familyQuote}”</p>
+  <p class="clock__cite">{story.familyQuoteBy}</p>
+</div>
+
+<script>
+  const start = performance.now();
+  document.querySelectorAll<HTMLElement>('[data-clock-time]').forEach((el) => {
+    const tick = () => {
+      const s = Math.floor((performance.now() - start) / 1000);
+      el.textContent = `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
+    };
+    tick();
+    setInterval(tick, 1000);
+  });
+</script>
+
+<style>
+  .clock {
+    text-align: center;
+  }
+  .clock__label {
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--on-dark-soft);
+    margin-bottom: 0;
+  }
+  .clock__time {
+    font-family: var(--font-display);
+    font-variant-numeric: tabular-nums;
+    font-size: clamp(5rem, 16vw, 11rem);
+    line-height: 1;
+    font-weight: 300;
+    color: #fff;
+    margin: 0.1em 0 0.2em;
+    text-shadow: 0 0 60px rgb(26 166 183 / 0.6);
+  }
+  .clock__compare {
+    font-size: clamp(1.2rem, 1vw + 1rem, 1.6rem);
+    max-width: 34ch;
+    margin-inline: auto;
+    color: var(--on-dark);
+  }
+  .clock__quote {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: clamp(1.6rem, 2.4vw + 1rem, 2.6rem);
+    color: var(--sun);
+    margin: 1.2em 0 0.2em;
+  }
+  .clock__cite {
+    font-size: 0.9rem;
+    color: var(--on-dark-soft);
+  }
+</style>

@@ -1,0 +1,168 @@
+---
+import Logo from './Logo.astro';
+import Wave from './Wave.astro';
+import { site, nav, footerNav } from '../data/site';
+import { url } from '../lib/url';
+
+const socials = Object.entries(site.social).filter(([, href]) => href);
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <Wave color="var(--abyss)" />
+  <div class="site-footer__body">
+    <div class="wrap">
+      <div class="emergency">
+        <strong>If a child is missing, check the water first.</strong>
+        Every second counts. Call 911 and start CPR if you're trained.
+      </div>
+
+      <div class="site-footer__grid">
+        <div>
+          <Logo light />
+          <p class="site-footer__tag">{site.tagline}</p>
+          {
+            socials.length > 0 && (
+              <ul class="socials" aria-label="Social media">
+                {socials.map(([name, href]) => (
+                  <li>
+                    <a href={href} rel="noopener" target="_blank">
+                      {name.charAt(0).toUpperCase() + name.slice(1)}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )
+          }
+        </div>
+
+        <nav aria-label="Footer: explore">
+          <h2 class="site-footer__heading">Explore</h2>
+          <ul>
+            {
+              nav.map((item) => (
+                <li>
+                  <a href={url(item.href)}>{item.label}</a>
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+
+        <nav aria-label="Footer: organization">
+          <h2 class="site-footer__heading">Organization</h2>
+          <ul>
+            {
+              footerNav.map((item) => (
+                <li>
+                  <a href={url(item.href)}>{item.label}</a>
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+
+        <div>
+          <h2 class="site-footer__heading">Stay in the loop</h2>
+          <p>Water safety reminders, Adam's updates and events — a few times a year.</p>
+          <a
+            class="btn"
+            href={site.newsletterUrl || url('/contact')}
+            rel={site.newsletterUrl ? 'noopener' : undefined}
+          >
+            Join the movement
+          </a>
+        </div>
+      </div>
+
+      <div class="site-footer__legal">
+        <p>
+          © {year} {site.name}{site.location && ` · ${site.location}`}
+          {site.ein && ` · EIN ${site.ein}`}
+          {site.taxExempt && ' · A 501(c)(3) nonprofit organization'}
+        </p>
+        <p>
+          The information on this site is for education and awareness and is not a substitute for
+          professional medical advice.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    margin-top: auto;
+    color: var(--on-dark-soft);
+  }
+  .site-footer__body {
+    background: var(--abyss);
+    padding: 32px 0 40px;
+  }
+  .emergency {
+    background: rgb(255 183 3 / 0.12);
+    border: 1px solid rgb(255 183 3 / 0.4);
+    color: #fff;
+    border-radius: var(--radius);
+    padding: 18px 22px;
+    margin-bottom: 48px;
+  }
+  .emergency strong {
+    color: var(--sun);
+    margin-right: 0.35em;
+  }
+  .site-footer__grid {
+    display: grid;
+    gap: 36px;
+  }
+  @media (min-width: 760px) {
+    .site-footer__grid {
+      grid-template-columns: 1.3fr 1fr 1fr 1.4fr;
+    }
+  }
+  .site-footer__tag {
+    margin-top: 12px;
+    font-family: var(--font-display);
+    font-style: italic;
+    color: var(--on-dark);
+  }
+  .site-footer__heading {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--sun);
+    margin-bottom: 1rem;
+  }
+  .site-footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .site-footer li {
+    margin-bottom: 0.5rem;
+  }
+  .site-footer a:not(.btn) {
+    color: var(--on-dark);
+    text-decoration: none;
+  }
+  .site-footer a:not(.btn):hover {
+    color: var(--sun);
+    text-decoration: underline;
+  }
+  .socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 16px !important;
+  }
+  .site-footer__legal {
+    border-top: 1px solid rgb(255 255 255 / 0.1);
+    margin-top: 48px;
+    padding-top: 24px;
+    font-size: 0.85rem;
+  }
+  .site-footer__legal p {
+    margin-bottom: 0.4em;
+  }
+</style>

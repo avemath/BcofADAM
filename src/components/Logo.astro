@@ -1,0 +1,70 @@
+---
+/**
+ * Text-based logo placeholder. Swap for the real logo when it's designed:
+ * put the file in /public/images/ and replace the markup below with an <img>.
+ */
+interface Props {
+  light?: boolean;
+}
+const { light = false } = Astro.props;
+---
+
+<span class:list={['logo', { 'logo--light': light }]}>
+  <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true">
+    <circle cx="20" cy="20" r="19" fill="currentColor" opacity="0.12"></circle>
+    <path
+      d="M5 23c3.5 0 3.5-3 7-3s3.5 3 7 3 3.5-3 7-3 3.5 3 7 3 3.5-3 5-3"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2.6"
+      stroke-linecap="round"></path>
+    <path
+      d="M7 29c3 0 3-2.5 6.2-2.5S16.4 29 19.6 29s3.2-2.5 6.4-2.5S29.2 29 32.4 29"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2.2"
+      stroke-linecap="round"
+      opacity="0.55"></path>
+    <circle cx="20" cy="12" r="4" fill="#ffb703"></circle>
+  </svg>
+  <span class="logo__text">
+    <span class="logo__small">Because of</span>
+    <span class="logo__big">ADAM</span>
+  </span>
+</span>
+
+<style>
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--deep);
+    line-height: 1;
+  }
+  .logo--light {
+    color: #fff;
+  }
+  .logo__mark {
+    width: 40px;
+    height: 40px;
+    flex: none;
+  }
+  .logo__text {
+    display: flex;
+    flex-direction: column;
+  }
+  .logo__small {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.8;
+  }
+  .logo__big {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+  }
+</style>

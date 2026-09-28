@@ -1,0 +1,65 @@
+---
+/**
+ * Decorative wave used to join two sections.
+ * `color` is the section BELOW the wave, `bg` is the section ABOVE it.
+ */
+interface Props {
+  color?: string;
+  bg?: string;
+  flip?: boolean;
+  animated?: boolean;
+}
+const { color = 'var(--deep)', bg = 'transparent', flip = false, animated = false } = Astro.props;
+---
+
+<div
+  class:list={['wave', { 'wave--flip': flip, 'wave--animated': animated }]}
+  style={`background:${bg}`}
+  aria-hidden="true"
+>
+  <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+    <path
+      class="wave__back"
+      d="M0 40 C 180 10 360 70 540 44 C 720 18 900 66 1080 42 C 1260 18 1350 40 1440 34 L1440 80 L0 80 Z"
+      fill={color}
+      opacity="0.45"></path>
+    <path
+      class="wave__front"
+      d="M0 52 C 200 30 380 78 600 54 C 820 30 1000 76 1200 52 C 1320 38 1400 50 1440 48 L1440 80 L0 80 Z"
+      fill={color}></path>
+  </svg>
+</div>
+
+<style>
+  .wave {
+    line-height: 0;
+    margin-bottom: -1px;
+    overflow: hidden;
+  }
+  .wave svg {
+    width: 100%;
+    height: clamp(36px, 5vw, 72px);
+  }
+  .wave--flip {
+    transform: rotate(180deg);
+    margin-bottom: 0;
+    margin-top: -1px;
+  }
+  .wave--animated svg {
+    width: 200%;
+    animation: drift 18s linear infinite alternate;
+  }
+  .wave--animated .wave__back {
+    animation: bob 6s ease-in-out infinite alternate;
+  }
+  @keyframes drift {
+    to {
+      transform: translateX(-25%);
+    }
+  }
+  @keyframes bob {
+    to {
+      transform: translateY(6px);
+    }
+  }
+</style>

@@ -1,0 +1,364 @@
+---
+/**
+ * "Build your layers" — a top-down backyard. Turning on each layer draws it
+ * into the scene and places a stop between the back door and the pool.
+ */
+const toggles = [
+  { id: 'door', label: 'Door alarm', note: 'Sounds the moment the back door opens.' },
+  { id: 'fence', label: '4-sided pool fence', note: 'Separates the pool from the house and yard.' },
+  { id: 'gate', label: 'Self-latching gate', note: 'Closes and latches on its own, out of reach.' },
+  { id: 'poolalarm', label: 'Pool alarm', note: 'Alerts you if something enters the water.' },
+  { id: 'cover', label: 'Safety cover', note: 'Closes off the water when the pool isn’t in use.' },
+  { id: 'watcher', label: 'Water Watcher', note: 'One adult, eyes on the water, no phone.' },
+];
+---
+
+<div class="builder" data-builder>
+  <div class="builder__scene">
+    <svg viewBox="0 0 640 400" role="img" aria-labelledby="builder-title builder-desc">
+      <title id="builder-title">A backyard seen from above</title>
+      <desc id="builder-desc">
+        A house on the left and a pool on the right, with a child’s footprints leading from the
+        back door to the water. Protective layers appear as you turn them on.
+      </desc>
+      <defs>
+        <linearGradient id="pool-water" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#7fd6e0"></stop>
+          <stop offset="1" stop-color="#1aa6b7"></stop>
+        </linearGradient>
+        <pattern id="cover-hatch" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+          <rect width="12" height="12" fill="#35536a"></rect>
+          <line x1="0" y1="0" x2="0" y2="12" stroke="#4b6a82" stroke-width="5"></line>
+        </pattern>
+        <pattern id="grass" width="18" height="18" patternUnits="userSpaceOnUse">
+          <rect width="18" height="18" fill="#d6ebcf"></rect>
+          <path d="M4 12 l2-5 M12 6 l1-4 M14 16 l2-4" stroke="#bcdcb2" stroke-width="1.5"></path>
+        </pattern>
+      </defs>
+
+      <!-- Yard -->
+      <rect width="640" height="400" fill="url(#grass)"></rect>
+
+      <!-- House -->
+      <rect x="16" y="40" width="160" height="320" rx="6" fill="#f6efe4" stroke="#083349" stroke-width="3"></rect>
+      <text x="96" y="92" text-anchor="middle" class="svg-label">HOUSE</text>
+      <!-- Back door (gap + swing) -->
+      <rect x="172" y="176" width="8" height="48" fill="#f6efe4"></rect>
+      <path d="M176 176 A 44 44 0 0 1 216 214" fill="none" stroke="#083349" stroke-width="1.5" stroke-dasharray="4 4"></path>
+      <line x1="176" y1="176" x2="212" y2="190" stroke="#083349" stroke-width="3"></line>
+
+      <!-- Patio + pool -->
+      <rect x="356" y="96" width="232" height="208" rx="18" fill="#efe4d2"></rect>
+      <rect x="380" y="120" width="184" height="160" rx="14" fill="url(#pool-water)"></rect>
+      <path class="ripple" d="M400 170 q 20 -10 40 0 t 40 0 t 40 0 t 40 0" fill="none" stroke="#fff" stroke-opacity="0.6" stroke-width="2"></path>
+      <path class="ripple ripple--2" d="M400 230 q 20 -10 40 0 t 40 0 t 40 0 t 40 0" fill="none" stroke="#fff" stroke-opacity="0.45" stroke-width="2"></path>
+
+      <!-- Footprints: back door → pool -->
+      <g class="steps" fill="#e85d4f">
+        {
+          Array.from({ length: 11 }, (_, i) => {
+            const x = 196 + i * 17;
+            const y = 200 + (i % 2 === 0 ? -5 : 5);
+            return <ellipse cx={x} cy={y} rx="5" ry="3.2" />;
+          })
+        }
+      </g>
+
+      <!-- LAYER: safety cover -->
+      <g class="layer" data-layer="cover">
+        <rect x="380" y="120" width="184" height="160" rx="14" fill="url(#cover-hatch)" opacity="0.92"></rect>
+        <rect x="380" y="120" width="184" height="160" rx="14" fill="none" stroke="#ffb703" stroke-width="3"></rect>
+      </g>
+
+      <!-- LAYER: pool alarm -->
+      <g class="layer" data-layer="poolalarm">
+        <circle cx="530" cy="146" r="16" fill="none" stroke="#ffb703" stroke-width="2" class="pulse"></circle>
+        <circle cx="530" cy="146" r="9" fill="#ffb703" stroke="#083349" stroke-width="2"></circle>
+      </g>
+
+      <!-- LAYER: fence (with a gap where the gate goes) -->
+      <g class="layer" data-layer="fence">
+        <path d="M332 176 V72 H612 V328 H332 V224" fill="none" stroke="#6b4f3a" stroke-width="7" stroke-linejoin="round"></path>
+        <path d="M332 176 V72 H612 V328 H332 V224" fill="none" stroke="#f6efe4" stroke-width="3" stroke-dasharray="3 9"></path>
+      </g>
+
+      <!-- LAYER: self-latching gate -->
+      <g class="layer" data-layer="gate">
+        <line x1="332" y1="176" x2="332" y2="224" stroke="#ffb703" stroke-width="8" stroke-linecap="round"></line>
+        <circle cx="332" cy="182" r="5" fill="#083349"></circle>
+      </g>
+
+      <!-- LAYER: door alarm -->
+      <g class="layer" data-layer="door">
+        <rect x="170" y="172" width="14" height="56" rx="4" fill="#ffb703"></rect>
+        <g transform="translate(198 150)">
+          <path d="M0 -12 a 9 9 0 0 1 9 9 v 7 l 4 5 h -26 l 4 -5 v -7 a 9 9 0 0 1 9 -9 z" fill="#ffb703" stroke="#083349" stroke-width="2"></path>
+          <circle cx="0" cy="12" r="3" fill="#083349"></circle>
+        </g>
+      </g>
+
+      <!-- LAYER: water watcher -->
+      <g class="layer" data-layer="watcher">
+        <circle cx="380" cy="334" r="26" fill="#fff" stroke="#ffb703" stroke-width="3"></circle>
+        <circle cx="380" cy="326" r="7" fill="#083349"></circle>
+        <path d="M367 348 q 13 -16 26 0" fill="#083349"></path>
+        <rect x="376" y="336" width="8" height="10" rx="2" fill="#ffb703"></rect>
+        <path d="M392 322 L 452 244" stroke="#ffb703" stroke-width="2" stroke-dasharray="4 5"></path>
+      </g>
+
+      <!-- Stops that appear on the path -->
+      <g class="stop" data-stop="door"><circle cx="190" cy="200" r="11"></circle><path d="M185 195 l10 10 M195 195 l-10 10"></path></g>
+      <g class="stop" data-stop="gate"><circle cx="332" cy="200" r="11"></circle><path d="M327 195 l10 10 M337 195 l-10 10"></path></g>
+      <g class="stop" data-stop="cover"><circle cx="386" cy="200" r="11"></circle><path d="M381 195 l10 10 M391 195 l-10 10"></path></g>
+    </svg>
+  </div>
+
+  <div class="builder__controls">
+    <fieldset>
+      <legend>Add layers of protection</legend>
+      <ul>
+        {
+          toggles.map((t) => (
+            <li>
+              <label class="toggle">
+                <input type="checkbox" value={t.id} />
+                <span class="toggle__switch" aria-hidden="true" />
+                <span class="toggle__text">
+                  <strong>{t.label}</strong>
+                  <small>{t.note}</small>
+                </span>
+              </label>
+            </li>
+          ))
+        }
+      </ul>
+    </fieldset>
+
+    <div class="meter" aria-hidden="true">
+      <span class="meter__fill"></span>
+    </div>
+    <p class="builder__status" role="status" aria-live="polite">
+      <strong>0 of 6 layers.</strong> Nothing stands between a curious toddler and the water.
+    </p>
+  </div>
+</div>
+
+<script>
+  const messages = [
+    'Nothing stands between a curious toddler and the water.',
+    'A start. One layer can fail, get switched off, or be left open.',
+    'Better. Each layer buys precious seconds.',
+    'Now a child who slips out has to get past several barriers.',
+    'Strong protection. Keep every layer working, every day.',
+    'Almost there. Layers only work when they’re used, especially when guests are over.',
+    'Every layer is in place. No single layer is perfect, but together they save lives.',
+  ];
+
+  document.querySelectorAll<HTMLElement>('[data-builder]').forEach((root) => {
+    const inputs = root.querySelectorAll<HTMLInputElement>('input[type=checkbox]');
+    const status = root.querySelector<HTMLElement>('.builder__status');
+    const fill = root.querySelector<HTMLElement>('.meter__fill');
+
+    const update = () => {
+      const on = new Set([...inputs].filter((i) => i.checked).map((i) => i.value));
+      root.querySelectorAll<SVGGElement>('[data-layer]').forEach((g) => {
+        g.classList.toggle('is-on', on.has(g.dataset.layer!));
+      });
+      root.querySelectorAll<SVGGElement>('[data-stop]').forEach((g) => {
+        const key = g.dataset.stop!;
+        const active = key === 'gate' ? on.has('gate') && on.has('fence') : on.has(key);
+        g.classList.toggle('is-on', active);
+      });
+      const n = on.size;
+      if (fill) fill.style.transform = `scaleX(${n / inputs.length})`;
+      if (status)
+        status.innerHTML = `<strong>${n} of ${inputs.length} layers.</strong> ${messages[n]}`;
+      root.classList.toggle('is-complete', n === inputs.length);
+    };
+
+    inputs.forEach((i) => i.addEventListener('change', update));
+    update();
+  });
+</script>
+
+<style>
+  .builder {
+    display: grid;
+    gap: clamp(20px, 3vw, 40px);
+    align-items: center;
+  }
+  @media (min-width: 960px) {
+    .builder {
+      grid-template-columns: 1.35fr 1fr;
+    }
+  }
+  .builder__scene {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 10px;
+    box-shadow: 0 30px 60px -30px rgb(0 0 0 / 0.6);
+  }
+  .builder__scene svg {
+    width: 100%;
+    border-radius: calc(var(--radius) - 6px);
+  }
+  .svg-label {
+    font: 700 13px var(--font-body);
+    letter-spacing: 0.2em;
+    fill: #083349;
+    opacity: 0.55;
+  }
+  .layer,
+  .stop {
+    opacity: 0;
+    transition:
+      opacity 0.45s ease,
+      transform 0.45s ease;
+  }
+  .layer {
+    transform: translateY(-6px);
+  }
+  .layer.is-on,
+  .stop.is-on {
+    opacity: 1;
+    transform: none;
+  }
+  .stop circle {
+    fill: #fff;
+    stroke: #083349;
+    stroke-width: 3;
+  }
+  .stop path {
+    stroke: #e85d4f;
+    stroke-width: 3;
+    stroke-linecap: round;
+  }
+  .steps {
+    transition: opacity 0.4s ease;
+  }
+  .is-complete .steps {
+    opacity: 0.35;
+  }
+  .pulse {
+    transform-origin: 530px 146px;
+    animation: pulse 1.8s ease-out infinite;
+  }
+  @keyframes pulse {
+    from {
+      transform: scale(0.6);
+      opacity: 1;
+    }
+    to {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
+  .ripple {
+    animation: ripple 5s ease-in-out infinite alternate;
+  }
+  .ripple--2 {
+    animation-delay: -2.5s;
+  }
+  @keyframes ripple {
+    to {
+      transform: translateX(-12px);
+    }
+  }
+
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  legend {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .builder__controls ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 8px;
+  }
+  .toggle {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: rgb(255 255 255 / 0.06);
+    border: 1px solid rgb(255 255 255 / 0.12);
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  .toggle:hover {
+    background: rgb(255 255 255 / 0.12);
+  }
+  .toggle input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+  }
+  .toggle__switch {
+    flex: none;
+    width: 46px;
+    height: 26px;
+    border-radius: 999px;
+    background: rgb(255 255 255 / 0.25);
+    position: relative;
+    transition: background 0.2s ease;
+  }
+  .toggle__switch::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    transition: transform 0.2s ease;
+  }
+  .toggle input:checked + .toggle__switch {
+    background: var(--sun);
+  }
+  .toggle input:checked + .toggle__switch::after {
+    transform: translateX(20px);
+  }
+  .toggle input:focus-visible + .toggle__switch {
+    outline: 3px solid var(--sun);
+    outline-offset: 3px;
+  }
+  .toggle__text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+  }
+  .toggle__text small {
+    color: var(--on-dark-soft);
+    font-size: 0.88rem;
+  }
+  .meter {
+    height: 10px;
+    border-radius: 999px;
+    background: rgb(255 255 255 / 0.15);
+    overflow: hidden;
+    margin: 20px 0 12px;
+  }
+  .meter__fill {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, var(--aqua), var(--sun));
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+  }
+  .builder__status {
+    min-height: 3.2em;
+    margin: 0;
+  }
+</style>

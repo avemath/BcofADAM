@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { factGroups } from '../data/facts';
+import { url } from '../lib/url';
+---
+
+<BaseLayout
+  title="The Facts About Drowning"
+  description="Drowning is the leading cause of death for children ages 1–4. The facts about child drowning and nonfatal drowning, with sources."
+>
+  <PageHero
+    eyebrow="The facts"
+    title="Drowning is fast, silent, and preventable."
+    lede="These numbers are children, families and communities. We use the most current data from trusted public health sources and link to every one."
+  />
+
+  <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
+    <div class="wrap">
+      {
+        factGroups.map((g) => (
+          <div class="fact-group">
+            <h2 class="reveal">{g.title}</h2>
+            {g.intro && <p class="lede reveal">{g.intro}</p>}
+            <div class="grid grid--3">
+              {g.facts.map((f) => (
+                <article class="fact reveal">
+                  <p class="fact__stat">{f.stat}</p>
+                  <p class="fact__label">{f.label}</p>
+                  {f.detail && <p class="fact__detail">{f.detail}</p>}
+                  <p class="source">
+                    Source:{' '}
+                    <a href={f.sourceUrl} rel="noopener" target="_blank">
+                      {f.source}
+                    </a>
+                  </p>
+                </article>
+              ))}
+            </div>
+          </div>
+        ))
+      }
+
+      <div class="callout">
+        <strong>A note on words.</strong>
+        We say <em>nonfatal drowning</em>, not “near-drowning.” And “dry drowning” and “secondary drowning”
+        aren’t medical terms. If a child has trouble breathing, keeps coughing, or seems unusually sleepy or
+        confused after being in the water, get medical care right away.
+      </div>
+    </div>
+  </section>
+
+  <CtaBand title="Facts don’t save lives. People do." text="Put the layers of protection in place today.">
+    <a class="btn" href={url('/water-safety')}>See the layers</a>
+    <a class="btn btn--ghost" href={url('/water-watcher')}>Take the pledge</a>
+  </CtaBand>
+</BaseLayout>
+
+<style>
+  .fact-group {
+    margin-bottom: clamp(56px, 8vw, 96px);
+  }
+  .fact-group .grid {
+    margin-top: 28px;
+  }
+  .fact {
+    border-top: 4px solid var(--aqua);
+    padding-top: 20px;
+  }
+  .fact__stat {
+    font-family: var(--font-display);
+    font-size: clamp(2.8rem, 4vw + 1rem, 4.2rem);
+    font-weight: 600;
+    line-height: 1;
+    color: var(--ocean);
+    margin-bottom: 12px;
+  }
+  .fact__label {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+  .fact__detail {
+    color: var(--ink-soft);
+    margin-bottom: 8px;
+  }
+</style>

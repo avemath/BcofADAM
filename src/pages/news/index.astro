@@ -1,0 +1,62 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import { url } from '../../lib/url';
+
+const posts = (await getCollection('news', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+const fmt = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeZone: 'UTC' });
+---
+
+<BaseLayout title="News & Updates" description="Updates on Adam, events, and drowning prevention news from Because of ADAM.">
+  <PageHero eyebrow="News" title="News & updates" lede="Adam’s milestones, upcoming events, and water safety reminders." />
+  <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
+    <div class="wrap narrow">
+      {posts.length === 0 && <p>No updates yet. Check back soon.</p>}
+      <ul class="posts">
+        {
+          posts.map((p) => (
+            <li class="card">
+              <time datetime={p.data.date.toISOString()}>{fmt.format(p.data.date)}</time>
+              <h2>
+                <a href={url(`/news/${p.id}`)}>{p.data.title}</a>
+              </h2>
+              <p>{p.data.summary}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .posts {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 20px;
+  }
+  .posts time {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--aqua);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .posts h2 {
+    font-size: 1.6rem;
+    margin-top: 6px;
+  }
+  .posts h2 a {
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .posts h2 a:hover {
+    color: var(--ocean);
+    text-decoration: underline;
+  }
+</style>

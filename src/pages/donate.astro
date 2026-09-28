@@ -1,0 +1,114 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import { site } from '../data/site';
+import { url } from '../lib/url';
+
+/**
+ * What a gift does. Only list programs you actually run or have committed to.
+ * (A 501(c)(3) can't raise money for one specific child's care. Keep gifts
+ * tied to the mission: education, prevention tools, and support for families.)
+ */
+const impact = [
+  {
+    title: 'Water Watcher tags & cards',
+    body: 'Put Water Watcher tags in the hands of parents, grandparents and babysitters at events, pediatric offices and pool stores.',
+  },
+  {
+    title: 'Layers of protection',
+    body: 'Help families add door alarms, pool alarms and other layers that buy precious seconds.',
+  },
+  {
+    title: 'Swim lessons & CPR',
+    body: 'Scholarships so more children learn water competency, and CPR classes so more adults are ready to act.',
+  },
+  {
+    title: 'Survivor families',
+    body: 'Resources and connection for families facing life after a nonfatal drowning.',
+  },
+];
+---
+
+<BaseLayout
+  title="Donate"
+  description="Support Because of ADAM's drowning awareness and prevention work in our community."
+>
+  <PageHero
+    eyebrow="Give"
+    title="Every gift adds a layer of protection."
+    lede="Your support helps us teach families about drowning, put prevention tools in their hands, and stand beside families after a drowning."
+  />
+
+  <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
+    <div class="wrap split">
+      <div>
+        <h2>What your gift makes possible</h2>
+        <div class="todo" style="margin-bottom: 24px">
+          Family: keep only the programs you run or have committed to, and add real numbers once you have them
+          (e.g. “$25 puts Water Watcher tags in 10 homes”). Delete this box when done.
+        </div>
+        <div class="grid">
+          {
+            impact.map((i) => (
+              <div class="card">
+                <h3>{i.title}</h3>
+                <p>{i.body}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      <div class="donate-box card">
+        {
+          site.donateUrl ? (
+            <>
+              <h2>Give securely online</h2>
+              <p>You’ll be taken to our secure giving page. Monthly gifts help us plan ahead.</p>
+              <a class="btn" href={site.donateUrl} rel="noopener">
+                Donate now
+              </a>
+            </>
+          ) : (
+            <>
+              <h2>Online giving is coming soon.</h2>
+              <p>
+                We’re setting up secure online donations. In the meantime, the best way to help is to share Adam’s
+                story and take the Water Watcher pledge.
+              </p>
+              <div class="btn-row">
+                <a class="btn" href={url('/water-watcher')}>Take the pledge</a>
+                <a class="btn btn--ghost" href={url('/contact')}>Contact us</a>
+              </div>
+            </>
+          )
+        }
+        <p class="source" style="margin-top: 24px">
+          {
+            site.taxExempt
+              ? `${site.name} is a 501(c)(3) nonprofit organization${site.ein ? ` (EIN ${site.ein})` : ''}. Donations are tax-deductible to the extent allowed by law.`
+              : 'Our 501(c)(3) tax-exempt status isn’t confirmed yet, so please don’t count gifts as tax-deductible for now. We’ll update this page when it is.'
+          }
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .donate-box {
+    background: var(--deep);
+    color: var(--on-dark);
+    border: 0;
+  }
+  .donate-box .source {
+    color: var(--on-dark-soft);
+  }
+  @media (min-width: 900px) {
+    .donate-box {
+      position: sticky;
+      top: 100px;
+      align-self: start;
+    }
+  }
+</style>

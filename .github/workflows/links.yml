@@ -1,0 +1,34 @@
+# Once a month, checks every link on the site (including every statistic's
+# source) and fails if any are broken. Also runs on demand from the Actions tab.
+# If it fails, open the run, look at the summary, and fix or replace the link
+# (usually in src/data/facts.ts or src/data/resources.ts).
+name: Check links
+
+on:
+  schedule:
+    - cron: '17 13 1 * *'
+  workflow_dispatch:
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - uses: lycheeverse/lychee-action@v2
+        with:
+          # Facebook blocks automated checkers, so it's skipped.
+          args: >-
+            --no-progress
+            --root-dir "${{ github.workspace }}/dist"
+            --exclude "facebook\.com"
+            --exclude "localhost"
+            --max-retries 3
+            --accept 200,206,429
+            "dist/**/*.html"
+          fail: true

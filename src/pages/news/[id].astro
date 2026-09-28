@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import { url, withBase } from '../../lib/url';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('news', ({ data }) => !data.draft);
+  return posts.map((post) => ({ params: { id: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const html = withBase(post.rendered?.html ?? '');
+const fmt = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeZone: 'UTC' });
+---
+
+<BaseLayout title={post.data.title} description={post.data.summary}>
+  <PageHero eyebrow={fmt.format(post.data.date)} title={post.data.title} lede={post.data.summary} />
+  <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
+    <div class="wrap">
+      <article class="prose">
+        <Fragment set:html={html} />
+      </article>
+      <p style="margin-top: 48px"><a href={url('/news')}>← All news</a></p>
+    </div>
+  </section>
+</BaseLayout>
