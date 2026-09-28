@@ -121,7 +121,7 @@ The goal is to make a parent stop and act, not to frighten or grieve them. The f
 | Jan–Feb | Indoor water, bath time | Bathtub safety, buckets, winter ice/ponds |
 | Mar–Apr | Get ready | Sign up for swim lessons now · CPR class push · fence/alarm checks before pool opening |
 | **May** | **National Water Safety Month** | Daily posts · press · Water Watcher tag giveaways · pledge drive |
-| **June 5** | **Adam's day** | Annual family update: where Adam is now |
+| **June 5** | **Adam's day: #WearBlueJune5th** | Annual family update on where Adam is now. Ask followers to wear blue and share one water safety tip |
 | June–Aug | Peak season | "Pool party? Name a Water Watcher" · holiday reminders (Memorial Day, July 4, Labor Day) · vacation/lake safety · life jackets |
 | **July 25** | **World Drowning Prevention Day** | Share the global picture; local event |
 | Sep–Oct | Back to school / reflection | Thank the village · survivor stories · annual report |

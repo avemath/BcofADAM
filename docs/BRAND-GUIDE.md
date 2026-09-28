@@ -10,6 +10,8 @@ A starting point to keep the website, social posts, flyers and Water Watcher car
 
 ## Tagline options
 - *Drowning is silent. We won't be.* (home page headline)
+- *Learn from our past. Protect your future.* (the family's own hashtag, now on the About page)
+- *Skills before thrills.*
 - *It only takes a second.* (the family's own words)
 - *No single layer is enough.*
 - *Check the water first.*

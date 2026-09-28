@@ -2,6 +2,8 @@
 
 Answer as much or as little as you want, in any order, in your own words. Voice memos transcribed into text are great. The answers become the **Adam's Story** page ([`src/content/pages/adams-story.md`](../src/content/pages/adams-story.md)), the home page snippets ([`src/data/story.ts`](../src/data/story.ts)), and future social posts and press materials.
 
+> ✅ **Many of these are now answered** by the Facebook posts the family shared (see [FACEBOOK-AUDIT.md](FACEBOOK-AUDIT.md#posts-shared-by-the-family-18-posts-june-2017--july-2025)), including 3, 4, 5, 8, 9, 13, 16, 20 and 22. The open ones: current age and grade, what to name or leave out, and who to thank.
+
 > **Nothing here has to be public.** For each answer, mark it ✅ *OK to share*, 🔒 *private (just for context)*, or ❓ *not sure yet*.
 
 ---
@@ -14,7 +16,7 @@ Answer as much or as little as you want, in any order, in your own words. Voice 
 3. Was it **June 5, 2016 or 2017**? (News stories disagree.)
 4. What was happening that day? (The draft says: oldest son's graduation, daughter's first softball game, house full of family.)
 5. How did Adam get outside? How long was he out of sight? Who found him?
-6. **Door alarms:** a news story says they were turned off that day because of guests. Do you want that on the website? *(It's a powerful lesson about why layers matter, but only if you're comfortable.)*
+6. **Door alarms:** your posts say the doors were locked and alarmed and you still don't know how he got out. The website now says that. Is that how you want it told?
 7. Was the pool fenced? Were there other layers (a cover, a pool alarm)? What do you wish had been in place?
 
 ## The rescue and hospital

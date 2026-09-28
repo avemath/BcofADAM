@@ -15,7 +15,7 @@ Everything needed to get the nonprofit and the website set up and running, in ro
    - [ ] Search [ProPublica Nonprofit Explorer](https://projects.propublica.org/nonprofits/) and [Candid](https://www.guidestar.org/search)
    - Then follow **Path A** (not registered yet) or **Path B** (already registered) in Phase 1.
 2. **Donations to a 501(c)(3) can't pay for Adam's own care.** That's "private benefit," and it can cost the organization its tax exemption. Keep personal medical fundraising (e.g. the Facebook page's `paypal.me/prayersforadam` link, or HBOT costs) completely separate, through a personal crowdfund or a special-needs trust. Nonprofit money has to serve the public mission: education, prevention tools, and support for *families in general*. Talk this through with an attorney before you raise money. The website copy is already written to respect this.
-3. **Pick one name and use it everywhere.** The Facebook page is titled "Because of ADAM" but its web address is `@AdamsVillageofHope`. Choose the legal name (e.g. *Because of ADAM*) and whether "Adam's Village of Hope" stays as a program or community name. Also note **"Project ADAM"**, an unrelated CPR/AED program that UPMC Children's runs in Blair County. Do a quick trademark search ([USPTO](https://tmsearch.uspto.gov/)) before investing in a logo.
+3. **Pick one name and use it everywhere.** Note: the 2020 announcement post expanded ADAM as *"Allies in the Drowning Awareness Movement"*; the website uses *"A Drowning Awareness Movement."* Pick one for the legal filing and the logo. The Facebook page is titled "Because of ADAM" but its web address is `@AdamsVillageofHope`. Choose the legal name (e.g. *Because of ADAM*) and whether "Adam's Village of Hope" stays as a program or community name. Also note **"Project ADAM"**, an unrelated CPR/AED program that UPMC Children's runs in Blair County. Do a quick trademark search ([USPTO](https://tmsearch.uspto.gov/)) before investing in a logo.
 
 ---
 
@@ -55,7 +55,7 @@ Everything needed to get the nonprofit and the website set up and running, in ro
 ## Phase 2: Money
 
 - [ ] Open a **nonprofit bank account** (you'll need the EIN, Articles and a board resolution). Never mix it with personal accounts
-- [ ] Pick a **donation platform** and paste its link into `donateUrl` in [`src/data/site.ts`](../src/data/site.ts)
+- [ ] Pick a **donation platform** and paste its link into `donateUrl` in [`src/data/site.ts`](../src/data/site.ts). The 2020 post pointed donors to **venmo.com/bcofADAM**. Venmo doesn't send donation receipts, and personal Venmo accounts aren't meant for charities, so move to a real giving platform and retire the Venmo link (or switch it to a verified Venmo charity profile)
 
 | Platform | Cost to you | Good to know |
 |---|---|---|
