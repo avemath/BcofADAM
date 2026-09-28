@@ -35,8 +35,15 @@ This guide moves them to a private repo and then removes them from this repo's h
    git clone https://github.com/avemath/BcofADAM.git bcofadam-clean
    cd bcofadam-clean
 
-   # Remove docs/ from every commit
-   git filter-repo --path docs/ --invert-paths
+   # Remove docs/ from every commit, plus the full cornhole flyers (they show
+   # personal phone numbers, a Venmo, a PayPal link and the old email) and the
+   # Little Explorer Swim ad. The site already stopped using all of these.
+   git filter-repo --invert-paths \
+     --path docs/ \
+     --path public/images/uploads/cornhole.jpg \
+     --path public/images/uploads/cornhole-1.jpg \
+     --path public/images/uploads/dadisr.jpg \
+     --path public/images/uploads/dadisr-1.jpg
 
    # Optional: also rewrite commit messages that mention private details (list below)
    # Put one replacement per line in a file, e.g. messages.txt:
