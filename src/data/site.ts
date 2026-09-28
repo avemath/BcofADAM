@@ -60,15 +60,54 @@ export const nonprofitLine = site.taxExempt
 /** True once a donation link has been added in the Studio. */
 export const hasDonate = site.donateUrl.trim() !== '';
 
+export interface NavLink {
+  label: string;
+  href: string;
+}
+export interface NavItem extends NavLink {
+  /** Pages that open from the little arrow next to this item. */
+  children?: NavLink[];
+}
+
 /** Main navigation. Order here = order on the site. */
-export const nav = [
-  { label: 'Water Safety', href: '/water-safety' },
+export const nav: NavItem[] = [
+  {
+    label: 'Water Safety',
+    href: '/water-safety',
+    children: [
+      { label: 'Layers of protection', href: '/water-safety' },
+      { label: 'The facts', href: '/the-facts' },
+      { label: 'Water Watcher pledge', href: '/water-watcher' },
+      { label: 'Home safety checklist', href: '/checklist' },
+      { label: 'Water safety in Pennsylvania', href: '/pennsylvania' },
+      { label: 'Teens, life jackets & CPR', href: '/water-safety#more' },
+      { label: 'Resources', href: '/resources' },
+    ],
+  },
   { label: 'Adam’s Story', href: '/adams-story' },
   { label: 'ISR Swim Lessons', href: '/swim-lessons' },
-  { label: 'The Facts', href: '/the-facts' },
   { label: 'Survivors & Families', href: '/survivors-and-families' },
-  { label: 'Get Involved', href: '/get-involved' },
-  { label: 'About', href: '/about' },
+  {
+    label: 'Get Involved',
+    href: '/get-involved',
+    children: [
+      { label: 'Ways to help', href: '/get-involved' },
+      { label: 'Events', href: '/events' },
+      { label: 'Request a talk', href: '/request-a-talk' },
+      { label: 'Volunteer', href: '/get-involved#volunteer' },
+      ...(hasDonate ? [{ label: 'Donate', href: '/donate' }] : []),
+    ],
+  },
+  {
+    label: 'About',
+    href: '/about',
+    children: [
+      { label: 'About us', href: '/about' },
+      { label: 'News', href: '/news' },
+      { label: 'Press', href: '/press' },
+      { label: 'Contact', href: '/contact' },
+    ],
+  },
 ];
 
 export const footerNav = [
