@@ -53,7 +53,7 @@ Warm, honest, urgent, never blaming. See [CONTENT-PLAN.md §4](CONTENT-PLAN.md#4
 ## Logo
 Our mark is a **top-down view of a brain with a heart inside it**, in teal, purple, magenta and orange (September 2026). In September 2017, a SPECT scan of Adam's brain showed the part hurt by the lack of oxygen as a dark area, and it was shaped like a perfect heart. Mom wrote, *"Rather than devastation, I was flooded with immense hope."* To us, it's about finding hope in hopeless places. The story is on the About page and in Adam's Story. ("Because of Adam, I know so much about the brain," as Lea says.)
 
-**Versions:** the first version's bottom half (a stem running down from the heart, and folds and lobes meeting at the bottom center) could be misread. The site now uses a cleaned-up version with the stem and bottom lobes removed, and a redrawn version (smooth, rounded back of the brain, folds out on the sides) will replace it. Whatever the final version is, keep the heart as the clear focus and avoid shapes that meet or split at the bottom center.
+**This is the redrawn version** (September 28, 2026). The first draft had a stem running down from the heart and folds and lobes meeting at the bottom center, which could be misread, so the back of the brain is now one smooth, rounded shape with the folds out on the sides. If it's ever redrawn again, keep the heart as the clear focus and avoid shapes that meet or split at the bottom center.
 
 | File | Use |
 |---|---|
