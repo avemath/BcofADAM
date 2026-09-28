@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { url } from '../lib/url';
+import { eventDate } from '../lib/events';
 
 interface Props {
   event: CollectionEntry<'events'>;
@@ -8,7 +9,12 @@ interface Props {
 const { event } = Astro.props;
 const e = event.data;
 const fmt = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeZone: 'UTC' });
-const when = e.date ? fmt.format(e.date) : e.when;
+const monthYear = new Intl.DateTimeFormat('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+const next = eventDate(event);
+// Yearly events read "Every June 5 · Next: June 5, 2027" (or "Every May · Next: May 2027"
+// for a whole month); one-time events show their date.
+const nextLabel = next && (/\d/.test(e.when ?? '') ? fmt.format(next) : monthYear.format(next));
+const when = e.repeatsYearly && next ? `${e.when || 'Every year'} · Next: ${nextLabel}` : e.date ? fmt.format(e.date) : e.when;
 const icon: Record<string, string> = {
   Fundraiser: '🎉',
   Awareness: '💙',
@@ -31,7 +37,7 @@ const art = /fish|rodeo/.test(t)
 <article class="event card">
   {
     e.photo ? (
-      <img class="event__photo" src={url(e.photo)} alt="" loading="lazy" />
+      <img class="event__photo" src={url(e.photo)} alt={e.photoAlt || e.title} loading="lazy" />
     ) : (
       <div class="event__art" aria-hidden="true">
         <span>{art}</span>

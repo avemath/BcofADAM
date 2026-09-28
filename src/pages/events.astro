@@ -34,7 +34,7 @@ const { upcoming, past } = splitEvents(await getEvents());
 
   <section class={upcoming.length > 0 ? 'section section--foam' : 'section'} style="padding-top: clamp(40px, 6vw, 72px)">
     <div class="wrap">
-      <h2>{upcoming.length > 0 ? 'What we’ve done' : 'Our events'}</h2>
+      <h2>Past events</h2>
       {past.length === 0 && <p>Events are coming soon. Follow us on Facebook for dates.</p>}
       <div class="grid grid--3" style="margin-top: 28px">
         {past.map((e) => <EventCard event={e} />)}

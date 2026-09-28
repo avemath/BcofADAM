@@ -316,9 +316,13 @@ content:
         options:
           values: [Fundraiser, Awareness, Swim & safety, Community]
       - name: date
-        label: Date (leave empty if it's a yearly event with no set date)
+        label: Date
         type: date
         default: ""
+      - name: repeatsYearly
+        label: Happens every year on this date
+        type: boolean
+        description: Yearly events (like Wear Blue on June 5) always show under "Coming up" with their next date.
       - name: when
         label: When, in words (e.g. "Every June", "Summer 2023")
         type: string
@@ -334,6 +338,10 @@ content:
       - name: photo
         label: Photo
         type: image
+      - name: photoAlt
+        label: Describe the photo (required if there's a photo)
+        type: string
+        description: For people who can't see it, e.g. "Teams playing cornhole under a big white tent".
       - name: link
         label: Link for sign-ups, tickets or photos (optional)
         type: string
