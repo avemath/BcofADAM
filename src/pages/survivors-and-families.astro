@@ -1,0 +1,224 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { nonfatal } from '../data/facts';
+import { survivorResources } from '../data/resources';
+import { url } from '../lib/url';
+
+const realities = [
+  {
+    title: 'The hospital stay',
+    body: 'Intensive care, ventilators, scans, and days or weeks of waiting to learn what the future holds. Families often live out of a hospital room far from home, with other children to care for.',
+  },
+  {
+    title: 'Brain injury',
+    body: 'When the brain goes without oxygen, the injury can affect movement, speech, eating, vision, learning and behavior. Every child’s recovery looks different.',
+  },
+  {
+    title: 'Therapy, equipment & costs',
+    body: 'Physical, occupational and speech therapy, specialists, equipment and home changes. Some treatments aren’t covered by insurance, and the costs keep going for years.',
+  },
+  {
+    title: 'The whole family',
+    body: 'Parents carry grief, guilt and exhaustion. Siblings carry their own worry. Friendships, jobs and marriages are all tested. Families need support that lasts.',
+  },
+  {
+    title: 'The victories',
+    body: 'Survivor families learn to celebrate everything: a smile, a laugh, a new sound, a little more strength than yesterday. Progress comes in its own time, and every bit of it counts.',
+  },
+  {
+    title: 'The village',
+    body: 'Nobody gets through this alone. It takes prayer warriors, meal trains, therapists, teachers, and friends who keep showing up. That’s what a village looks like.',
+  },
+];
+---
+
+<BaseLayout
+  title="Survivors & Families"
+  description="Nonfatal drowning can change a child's life forever. Information and support for survivors of nonfatal drowning and the families who love them."
+>
+  <PageHero
+    eyebrow="Nonfatal drowning"
+    title="Surviving is only the beginning."
+    lede="Adam survived. Many children do. But a nonfatal drowning can change a child’s life, and a family’s, forever. These families are often left out of the conversation, and we want to change that."
+  />
+
+  <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
+    <div class="wrap split split--wide-left">
+      <div class="reveal">
+        <h2>What “nonfatal drowning” means</h2>
+        <p>
+          Health experts define drowning as having trouble breathing because the body went under or
+          into water. Many children survive a drowning. Some recover completely. Others, like Adam,
+          live with injuries that last a lifetime.
+        </p>
+        <p>
+          That’s why we say Adam <em>is</em> a drowning survivor. He didn’t “almost drown.” He drowned,
+          and he survived.
+        </p>
+      </div>
+      <div class="card reveal">
+        <p class="eyebrow">By the numbers</p>
+        <ul class="nf-stats">
+          {
+            nonfatal.map((f) => (
+              <li>
+                <strong>{f.stat}</strong>
+                <span>{f.label}</span>
+                <a class="source" href={f.sourceUrl} rel="noopener" target="_blank">
+                  {f.source}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--foam">
+    <div class="wrap">
+      <span class="eyebrow">What families face</span>
+      <h2>Life after a drowning</h2>
+      <div class="grid grid--2" style="margin-top: 32px">
+        {
+          realities.map((r) => (
+            <div class="card reveal">
+              <h3>{r.title}</h3>
+              <p>{r.body}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap narrow">
+      <span class="eyebrow">If this is your family</span>
+      <h2>You are not alone, and it’s not only your story to carry.</h2>
+      <p class="lede">
+        Drowning happens to loving, careful families. If your child is a drowning survivor, we would be
+        honored to hear from you, whether you want to talk, find resources, or share your child’s story
+        to help protect other children.
+      </p>
+      <div class="btn-row">
+        <a class="btn btn--ocean" href={url('/contact')}>Reach out to our family</a>
+      </div>
+
+      <h3 style="margin-top: 56px">Places to find help</h3>
+      <ul class="resource-list">
+        {
+          survivorResources.map((r) => (
+            <li>
+              <a href={r.url} rel="noopener" target="_blank">
+                {r.name}
+              </a>
+              <span>{r.description}</span>
+            </li>
+          ))
+        }
+      </ul>
+      <p class="callout" style="margin-top: 32px">
+        <strong>A note on treatment.</strong>
+        Families of drowning survivors often hear about many different therapies. Our family shares what
+        helped Adam, but every child is different. Please make treatment decisions with your child’s
+        medical team.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--foam">
+    <div class="wrap narrow">
+      <span class="eyebrow">For friends, neighbors and everyone else</span>
+      <h2>How to support a family after a drowning</h2>
+      <blockquote class="big-quote reveal">
+        <p>“For every tragic story you read, there are family members in horrendous pain blaming themselves. When you hear these stories, pause and find kindness.”</p>
+        <cite>Adam’s mom</cite>
+      </blockquote>
+      <ul class="support-list">
+        <li><strong>Don’t judge.</strong> Drowning happens to loving, careful families. Skip the comments section.</li>
+        <li><strong>Keep showing up.</strong> Months and years later, not just the first week.</li>
+        <li><strong>Help with the ordinary.</strong> Meals, laundry, and rides to school and practice for the brothers and sisters.</li>
+        <li><strong>Say the child’s name.</strong> Ask how they’re doing, and celebrate every milestone with them.</li>
+        <li><strong>Never say “move on.”</strong> Some things can’t be fixed. They can only be carried, together.</li>
+      </ul>
+    </div>
+  </section>
+
+  <CtaBand
+    title="Help us support survivor families."
+    text="Your gift helps families facing life after a drowning, and helps keep other families from ever facing it."
+  >
+    <a class="btn" href={url('/donate')}>Give today</a>
+    <a class="btn btn--ghost" href={url('/adams-story')}>Read Adam’s story</a>
+  </CtaBand>
+</BaseLayout>
+
+<style>
+  .nf-stats {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 20px;
+  }
+  .nf-stats strong {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 2.4rem;
+    line-height: 1;
+    color: var(--ocean);
+  }
+  .nf-stats span {
+    display: block;
+    margin: 6px 0 2px;
+  }
+  .big-quote {
+    margin: 32px 0;
+    padding-left: 24px;
+    border-left: 4px solid var(--aqua);
+  }
+  .big-quote p {
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 1.4vw + 1rem, 1.9rem);
+    line-height: 1.35;
+    color: var(--ocean);
+    margin-bottom: 0.5em;
+  }
+  .big-quote cite {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .support-list {
+    padding-left: 1.2em;
+    display: grid;
+    gap: 10px;
+  }
+  .resource-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 14px;
+  }
+  .resource-list li {
+    padding: 16px 20px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+  }
+  .resource-list a {
+    font-weight: 700;
+    display: block;
+  }
+  .resource-list span {
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+  }
+</style>

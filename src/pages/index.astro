@@ -1,0 +1,389 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Wave from '../components/Wave.astro';
+import PhotoFrame from '../components/PhotoFrame.astro';
+import TimeOnPage from '../components/TimeOnPage.astro';
+import LayersBuilder from '../components/LayersBuilder.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { headline, nonfatal } from '../data/facts';
+import { layers } from '../data/layers';
+import { story } from '../data/story';
+import { url } from '../lib/url';
+---
+
+<BaseLayout>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__caustics" aria-hidden="true"></div>
+    <div class="hero__bubbles" aria-hidden="true">
+      {Array.from({ length: 14 }, (_, i) => <span style={`--i:${i}`} />)}
+    </div>
+    <div class="wrap hero__inner">
+      <p class="hero__eyebrow">
+        Because of <strong>ADAM</strong> · <span>Allies in the Drowning Awareness Movement</span>
+      </p>
+      <h1 class="hero__title">
+        <span class="hero__line">Drowning is silent.</span>
+        <span class="hero__line hero__line--2">We won’t be.</span>
+      </h1>
+      <p class="hero__lede">
+        Drowning is the <strong>#1 cause of death</strong> for children ages 1–4. It happens in seconds, often with
+        adults nearby, and it’s preventable. Because of Adam, we’re helping families put layers of protection
+        between little ones and the water.
+      </p>
+      <div class="btn-row">
+        <a class="btn" href={url('/adams-story')}>Read Adam’s story</a>
+        <a class="btn btn--ghost" href="#layers">Learn the layers of protection</a>
+      </div>
+    </div>
+    <Wave color="var(--sand)" animated />
+  </section>
+
+  <!-- HEADLINE STATS -->
+  <section class="section stats" aria-labelledby="stats-title">
+    <div class="wrap">
+      <h2 id="stats-title" class="visually-hidden">Drowning by the numbers</h2>
+      <div class="grid grid--4">
+        {
+          headline.map((f) => (
+            <article class="stat reveal">
+              <p class="stat__num">{f.stat}</p>
+              <p class="stat__label">{f.label}</p>
+              <a class="source" href={f.sourceUrl} rel="noopener" target="_blank">
+                Source: {f.source}
+              </a>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ADAM -->
+  <section class="section section--foam">
+    <div class="wrap split">
+      <div class="reveal">
+        <PhotoFrame src={story.photo} alt={story.photoAlt} hint="Add a photo of Adam" />
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">Adam’s story</span>
+        <h2>Meet Adam.</h2>
+        <p class="lede">{story.teaser}</p>
+        <p>
+          Adam is a drowning survivor, and the reason for everything we do. We started this movement so other
+          families can learn what we learned the easy way.
+        </p>
+        <div class="btn-row">
+          <a class="btn btn--ocean" href={url('/adams-story')}>Read Adam’s story</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOCK -->
+  <Wave color="var(--deep)" bg="var(--foam)" />
+  <section class="section section--deep clock-section">
+    <div class="wrap narrow reveal">
+      <TimeOnPage />
+    </div>
+  </section>
+
+  <!-- LAYERS BUILDER -->
+  <section id="layers" class="section section--abyss">
+    <div class="wrap">
+      <div class="layers-intro reveal">
+        <span class="eyebrow">Layers of protection</span>
+        <h2>No single layer is enough.</h2>
+        <p class="lede">
+          Alarms get switched off. Gates get propped open. Adults look away. Each layer you add catches what the
+          last one misses. Turn them on and see the difference.
+        </p>
+      </div>
+      <LayersBuilder />
+    </div>
+  </section>
+  <Wave color="var(--sand)" bg="var(--abyss)" />
+
+  <!-- LAYER SUMMARY -->
+  <section class="section" style="padding-top: clamp(32px, 5vw, 64px)">
+    <div class="wrap">
+      <span class="eyebrow">The layers</span>
+      <h2>Seven ways to protect a child</h2>
+      <ol class="layer-cards grid grid--4">
+        {
+          layers.map((l, i) => (
+            <li class="card reveal">
+              <span class="layer-cards__num">{i + 1}</span>
+              <h3>{l.title.split(':')[0]}</h3>
+              <p>{l.short}</p>
+              <a href={url(`/water-safety#${l.id}`)} aria-label={`Learn more about ${l.title.split(':')[0]}`}>
+                Learn more →
+              </a>
+            </li>
+          ))
+        }
+        <li class="card layer-cards__cta reveal">
+          <h3>If a child is missing…</h3>
+          <p><strong>Check the water first.</strong> Every second counts.</p>
+          <a href={url('/water-safety')}>The full guide →</a>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- SURVIVORS -->
+  <section class="section section--foam">
+    <div class="wrap split split--wide-left">
+      <div class="reveal">
+        <span class="eyebrow">Survivors & families</span>
+        <h2>Surviving is only the beginning.</h2>
+        <p class="lede">
+          For every child lost to drowning, seven more survive one. Some, like Adam, come home with injuries that
+          change everything, and families who need a village around them. We want every one of them to know
+          they’re not alone.
+        </p>
+        <div class="btn-row">
+          <a class="btn btn--ocean" href={url('/survivors-and-families')}>Support for families</a>
+        </div>
+      </div>
+      <div class="survivor-stat card reveal">
+        <p class="stat__num">{nonfatal[1].stat}</p>
+        <p>{nonfatal[1].label}</p>
+        <a class="source" href={nonfatal[1].sourceUrl} rel="noopener" target="_blank">Source: {nonfatal[1].source}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLEDGE -->
+  <CtaBand
+    title="Be the Water Watcher."
+    text="When everyone is watching, no one is. Promise to name one adult whose only job is to watch the water, and print your Water Watcher card."
+  >
+    <a class="btn" href={url('/water-watcher')}>Take the pledge</a>
+    <a class="btn btn--ghost" href={url('/get-involved')}>More ways to help</a>
+  </CtaBand>
+
+  <!-- GET INVOLVED -->
+  <section class="section">
+    <div class="wrap">
+      <span class="eyebrow">Join the movement</span>
+      <h2>Adam’s village is growing.</h2>
+      <div class="grid grid--3" style="margin-top: 32px">
+        <a class="card join reveal" href={url('/donate')}>
+          <h3>Give</h3>
+          <p>Help put Water Watcher tags, alarms, swim lessons and CPR within reach of more families.</p>
+          <span class="join__go">Donate →</span>
+        </a>
+        <a class="card join reveal" href={url('/get-involved')}>
+          <h3>Share</h3>
+          <p>Ready-to-post messages that put water safety in front of the people you love.</p>
+          <span class="join__go">Get the toolkit →</span>
+        </a>
+        <a class="card join reveal" href={url('/contact')}>
+          <h3>Invite us</h3>
+          <p>Schools, daycares, churches and community groups: we’ll share Adam’s story and the layers of protection.</p>
+          <span class="join__go">Request a talk →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    min-height: min(100svh, 920px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #fff;
+    background:
+      radial-gradient(50% 45% at 85% -5%, rgb(255 214 120 / 0.55) 0%, transparent 70%),
+      radial-gradient(120% 70% at 70% -10%, #3fb3c4 0%, transparent 60%),
+      linear-gradient(180deg, #1784a0 0%, var(--ocean) 48%, var(--deep) 100%);
+  }
+  .hero__caustics {
+    position: absolute;
+    inset: -20%;
+    background:
+      radial-gradient(12% 8% at 20% 20%, rgb(255 255 255 / 0.3), transparent 70%),
+      radial-gradient(10% 6% at 60% 12%, rgb(255 244 214 / 0.35), transparent 70%),
+      radial-gradient(14% 9% at 85% 30%, rgb(255 255 255 / 0.22), transparent 70%),
+      radial-gradient(9% 7% at 40% 38%, rgb(255 255 255 / 0.18), transparent 70%),
+      conic-gradient(from 200deg at 80% -20%, transparent 0 40%, rgb(255 244 214 / 0.16) 45%, transparent 50% 60%, rgb(255 255 255 / 0.12) 64%, transparent 70%);
+    filter: blur(8px);
+    animation: caustics 16s ease-in-out infinite alternate;
+  }
+  @keyframes caustics {
+    to {
+      transform: translate3d(4%, 3%, 0) rotate(3deg) scale(1.08);
+    }
+  }
+  .hero__bubbles span {
+    position: absolute;
+    bottom: -20px;
+    left: calc(var(--i) * 7.3%);
+    width: calc(4px + (var(--i) * 7 % 9) * 1px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 1px solid rgb(255 255 255 / 0.45);
+    background: rgb(255 255 255 / 0.08);
+    animation: rise calc(10s + var(--i) * 1.3s) linear infinite;
+    animation-delay: calc(var(--i) * -1.7s);
+  }
+  @keyframes rise {
+    to {
+      transform: translate3d(calc(sin(var(--i)) * 30px), -110vh, 0);
+      opacity: 0;
+    }
+  }
+  .hero__inner {
+    position: relative;
+    padding-top: clamp(80px, 14vh, 160px);
+    padding-bottom: clamp(24px, 6vh, 64px);
+  }
+  .hero__eyebrow {
+    font-size: 0.85rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 1.5rem;
+  }
+  .hero__eyebrow strong {
+    color: var(--sun);
+  }
+  .hero__title {
+    font-size: clamp(3rem, 8.4vw + 0.5rem, 7.6rem);
+    text-shadow: 0 2px 30px rgb(4 29 43 / 0.35);
+    font-weight: 500;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.35em;
+  }
+  .hero__line {
+    display: block;
+    animation: surface 1.4s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+  .hero__line--2 {
+    font-style: italic;
+    color: var(--sun);
+    animation-delay: 0.6s;
+  }
+  @keyframes surface {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+      filter: blur(8px);
+    }
+  }
+  .hero__lede {
+    font-size: clamp(1.15rem, 0.8vw + 1rem, 1.5rem);
+    max-width: 44ch;
+    color: var(--on-dark);
+    animation: surface 1.4s 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+  .hero__lede strong {
+    color: var(--sun);
+  }
+  .hero .btn-row {
+    animation: surface 1.4s 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+
+  /* ---------- Stats ---------- */
+  .stats {
+    padding-top: clamp(40px, 6vw, 72px);
+  }
+  .stat {
+    border-top: 4px solid var(--aqua);
+    padding-top: 18px;
+  }
+  .stat__num {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 4vw + 1rem, 4.6rem);
+    font-weight: 600;
+    line-height: 1;
+    color: var(--ocean);
+    margin-bottom: 12px;
+  }
+  .stat__label {
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  /* ---------- Clock ---------- */
+  .clock-section {
+    padding-block: clamp(56px, 9vw, 112px);
+  }
+
+  /* ---------- Layers ---------- */
+  .layers-intro {
+    max-width: 760px;
+    margin-bottom: clamp(32px, 5vw, 56px);
+  }
+  .layer-cards {
+    list-style: none;
+    padding: 0;
+    margin: 32px 0 0;
+  }
+  .layer-cards li {
+    display: flex;
+    flex-direction: column;
+  }
+  .layer-cards__num {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--foam);
+    color: var(--ocean);
+    font-weight: 800;
+    margin-bottom: 14px;
+  }
+  .layer-cards h3 {
+    font-size: 1.3rem;
+  }
+  .layer-cards a {
+    margin-top: auto;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .layer-cards__cta {
+    background: var(--deep) !important;
+    color: var(--on-dark);
+  }
+  .layer-cards__cta strong {
+    color: var(--sun);
+  }
+  .layer-cards__cta a {
+    color: var(--shallow);
+  }
+
+  /* ---------- Survivors ---------- */
+  .survivor-stat .stat__num {
+    font-size: clamp(3.5rem, 6vw, 5.5rem);
+  }
+
+  /* ---------- Join ---------- */
+  .join {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--ink);
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+  .join:hover {
+    color: var(--ink);
+    transform: translateY(-4px);
+    box-shadow: 0 24px 40px -20px rgb(4 29 43 / 0.45);
+  }
+  .join__go {
+    margin-top: auto;
+    font-weight: 700;
+    color: var(--ocean);
+  }
+</style>

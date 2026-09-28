@@ -1,0 +1,24 @@
+name: Fact check / statistic update
+description: Report a statistic that's outdated or needs a better source.
+title: "[Fact] "
+labels: [facts]
+body:
+  - type: textarea
+    id: current
+    attributes:
+      label: What the site says now
+    validations:
+      required: true
+  - type: textarea
+    id: correct
+    attributes:
+      label: What it should say
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source link
+      description: A primary source (CDC, CPSC, AAP, WHO, peer-reviewed study) whenever possible.
+    validations:
+      required: true
