@@ -3,7 +3,7 @@
 A starting point to keep the website, social posts, flyers and Water Watcher cards looking and sounding like one organization. Update it once you have a designed logo.
 
 ## Name
-- **Full:** Because of ADAM: A Drowning Awareness Movement
+- **Full:** Because of ADAM: Allies in the Drowning Awareness Movement (the name the siblings chose in 2020)
 - **Short:** Because of ADAM (always capitalize **ADAM** when it refers to the movement; "Adam" when it's him)
 - **Community:** Adam's Village / Adam's Village of Hope
 - **Hashtags (already used on Facebook):** #BecauseofADAM (primary) · #AdamsVillage · #AdamRocks · #inHisTime · #smallmiracles

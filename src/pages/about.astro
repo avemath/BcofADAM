@@ -22,12 +22,12 @@ const team = [
 
 <BaseLayout
   title="About Us"
-  description="Because of ADAM: A Drowning Awareness Movement was founded by Adam's family to prevent childhood drowning and support families affected by it."
+  description="Because of ADAM: Allies in the Drowning Awareness Movement was founded by Adam's family to prevent childhood drowning and support families affected by it."
 >
   <PageHero
     eyebrow="About us"
     title="It started with one little boy."
-    lede="Adam survived a drowning in his family’s backyard pool at 14 months old. In 2020, his brother and sisters started Because of ADAM (A Drowning Awareness Movement) so other families could learn from his story. His village has been growing ever since."
+    lede="Adam survived a drowning in his family’s backyard pool at 14 months old. In 2020, his brother and sisters started Because of ADAM (Allies in the Drowning Awareness Movement) so other families could learn from his story. His village has been growing ever since."
   />
 
   <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
@@ -38,8 +38,9 @@ const team = [
         <p class="lede">Learn from our past. Protect your future.</p>
         <div class="todo">Family: this mission is adapted from your 2020 Facebook post announcing the nonprofit. Make sure it matches your Articles of Incorporation and IRS filing.</div>
       </div>
-      <div class="acronym reveal" aria-label="ADAM stands for A Drowning Awareness Movement">
-        <p><span>A</span></p>
+      <div class="acronym reveal" aria-label="ADAM stands for Allies in the Drowning Awareness Movement">
+        <p><span>A</span>llies</p>
+        <p class="acronym__small">in the</p>
         <p><span>D</span>rowning</p>
         <p><span>A</span>wareness</p>
         <p><span>M</span>ovement</p>
@@ -129,6 +130,11 @@ const team = [
   }
   .acronym p {
     margin: 0;
+  }
+  .acronym__small {
+    font-size: 0.45em;
+    font-style: italic;
+    padding-left: 0.2em;
   }
   .acronym span {
     color: var(--ocean);

@@ -4,7 +4,7 @@
 
 ---
 
-**Because of ADAM: A Drowning Awareness Movement**
+**Because of ADAM: Allies in the Drowning Awareness Movement**
 **Consent to Use Photographs, Video and Personal Story**
 
 I, ______________________________ (parent/legal guardian), give Because of ADAM ("the Organization") permission to use the following for drowning awareness, education and fundraising:

@@ -9,7 +9,7 @@ export const site = {
   /** Full legal/display name. */
   name: 'Because of ADAM',
   /** What ADAM stands for. */
-  tagline: 'A Drowning Awareness Movement',
+  tagline: 'Allies in the Drowning Awareness Movement',
   /** One-sentence description used by Google and social media previews. */
   description:
     'Because of ADAM is a family-founded drowning awareness movement sharing Adam’s story as a nonfatal drowning survivor and helping families put layers of protection between young children and the water.',
