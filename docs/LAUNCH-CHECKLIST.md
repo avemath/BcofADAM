@@ -120,10 +120,10 @@ We're using **[Porkbun](https://porkbun.com/)**: $7.98 for the first year of a .
 
 - [x] **Then** in GitHub: **Settings → Pages → Custom domain** → `becauseofadam.org` → **Save**. (DNS first, so the site never points at an address that doesn't work yet)
 - [x] Right away, re-run the **Deploy site** workflow (**Actions → Deploy site → Run workflow**), so every link switches from `/BcofADAM/...` to the new address
-- [ ] **Verify the domain** in GitHub (your profile **Settings → Pages → Add a domain**, then add the TXT record it shows in Porkbun). This stops anyone else from ever pointing it at their own GitHub site
-- [ ] Tick **Enforce HTTPS** (the certificate was ready on September 28, 2026) (Google Ad Grants requires HTTPS)
-- [ ] In Porkbun, forward **becauseofadam.com** to `https://becauseofadam.org` (the domain's **URL Forwarding** option)
-- [ ] Set up free **email forwarding** in Porkbun (**Domain Management → becauseofadam.org → Email**): `hello@becauseofadam.org` → Avery's email (add more family members if they should get messages too). Send it a test, then put `hello@becauseofadam.org` in **Studio → Site settings → Contact email**. This replaces the old bcofADAM@gmail.com from our 2020–2021 flyers, so we don't need a new Gmail
+- [x] **Verify the domain** in GitHub (your profile **Settings → Pages → Add a domain**, then add the TXT record it shows in Porkbun). This stops anyone else from ever pointing it at their own GitHub site
+- [x] Tick **Enforce HTTPS** (the certificate was ready on September 28, 2026) (Google Ad Grants requires HTTPS)
+- [x] In Porkbun, forward **becauseofadam.com** to `https://becauseofadam.org` (the domain's **URL Forwarding** option)
+- [x] Set up free **email forwarding** in Porkbun (**Domain Management → becauseofadam.org → Email**): `hello@becauseofadam.org` → Avery's email (add more family members if they should get messages too). Send it a test, then put `hello@becauseofadam.org` in **Studio → Site settings → Contact email**. This replaces the old bcofADAM@gmail.com from our 2020–2021 flyers, so we don't need a new Gmail
 - [ ] Add the new address to the Facebook page intro, the pinned post and our Water Watcher cards
 
 ### Step 3: Email, forms and analytics
