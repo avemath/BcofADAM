@@ -1,0 +1,22 @@
+# Checks that the site still builds for every pull request and every branch
+# other than main. If this goes red, the site won't deploy. Click into the run
+# to see which file has the problem.
+name: Check site builds
+
+on:
+  pull_request:
+  push:
+    branches-ignore: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - run: npm run build

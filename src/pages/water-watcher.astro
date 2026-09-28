@@ -1,0 +1,219 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import Logo from '../components/Logo.astro';
+import { site } from '../data/site';
+
+const promises = [
+  'When children are in or near the water, I will name one adult as the Water Watcher.',
+  'When I’m the Water Watcher, I will put my phone away and keep my eyes on the water.',
+  'I will stay within arm’s reach of toddlers and weak swimmers.',
+  'I will keep pool gates closed and alarms on, especially when we have guests.',
+  'If a child is missing, I will check the water first.',
+  'I will learn CPR, and I will share what I know with the people I love.',
+];
+---
+
+<BaseLayout
+  title="Take the Water Watcher Pledge"
+  description="Promise to be a Water Watcher: one adult, eyes on the water, no distractions. Take the pledge and print your Water Watcher card."
+>
+  <PageHero
+    eyebrow="Water Watcher pledge"
+    title="When everyone is watching, no one is."
+    lede="A Water Watcher is one adult whose only job is to watch the water, until they hand the job to the next adult. Make the promise, print a card, and pass it on."
+  />
+
+  <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
+    <div class="wrap split">
+      <form class="pledge card" data-pledge>
+        <h2>I promise…</h2>
+        <ul>
+          {
+            promises.map((p, i) => (
+              <li>
+                <label>
+                  <input type="checkbox" name={`p${i}`} />
+                  <span>{p}</span>
+                </label>
+              </li>
+            ))
+          }
+        </ul>
+        <p class="pledge__done" role="status" aria-live="polite"></p>
+        <div class="btn-row no-print">
+          <button type="button" class="btn" data-share>Share the pledge</button>
+          <button type="button" class="btn btn--ghost" data-print>Print my Water Watcher card</button>
+        </div>
+      </form>
+
+      <div>
+        <h2 class="visually-hidden">Printable Water Watcher card</h2>
+        <div class="ww-card" id="ww-card">
+          <div class="ww-card__top">
+            <span class="ww-card__eyebrow">I am the</span>
+            <span class="ww-card__title">Water Watcher</span>
+          </div>
+          <ul>
+            <li>I watch the water. Nothing else.</li>
+            <li>No phone. No distractions.</li>
+            <li>Toddlers stay within arm’s reach.</li>
+            <li>I keep this tag until I hand it to another adult.</li>
+          </ul>
+          <p class="ww-card__time">
+            On duty until: <span></span>
+          </p>
+          <div class="ww-card__foot">
+            <Logo light />
+            <span>Missing child? <strong>Check the water first.</strong> Call 911.</span>
+          </div>
+        </div>
+        <p class="source" style="margin-top: 12px">
+          Print it, laminate it, punch a hole and add a lanyard. Keep one at every pool, lake bag and beach bag.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script define:vars={{ siteName: site.name }}>
+  const form = document.querySelector('[data-pledge]');
+  const boxes = form.querySelectorAll('input[type=checkbox]');
+  const done = form.querySelector('.pledge__done');
+  const update = () => {
+    const all = [...boxes].every((b) => b.checked);
+    form.classList.toggle('is-complete', all);
+    done.textContent = all ? 'Thank you. You’re a Water Watcher. Now pass it on.' : '';
+  };
+  boxes.forEach((b) => b.addEventListener('change', update));
+
+  form.querySelector('[data-print]').addEventListener('click', () => window.print());
+  form.querySelector('[data-share]').addEventListener('click', async () => {
+    const data = {
+      title: `Take the Water Watcher pledge | ${siteName}`,
+      text: 'I took the Water Watcher pledge. When kids are near water, one adult watches, no distractions. Will you?',
+      url: location.href,
+    };
+    try {
+      if (navigator.share) await navigator.share(data);
+      else {
+        await navigator.clipboard.writeText(`${data.text} ${data.url}`);
+        done.textContent = 'Link copied. Paste it anywhere to share.';
+      }
+    } catch {
+      /* user cancelled */
+    }
+  });
+</script>
+
+<style>
+  .pledge ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px;
+    display: grid;
+    gap: 10px;
+  }
+  .pledge label {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 12px 14px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--line);
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  .pledge label:hover {
+    background: var(--foam);
+  }
+  .pledge input {
+    flex: none;
+    width: 22px;
+    height: 22px;
+    margin-top: 3px;
+    accent-color: var(--ocean);
+  }
+  .pledge__done {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    color: var(--ocean);
+    min-height: 1.5em;
+    margin: 0;
+  }
+
+  .ww-card {
+    background: linear-gradient(160deg, var(--ocean), var(--abyss));
+    color: #fff;
+    border-radius: 22px;
+    padding: 28px;
+    max-width: 440px;
+    margin-inline: auto;
+    box-shadow: 0 30px 60px -30px rgb(4 29 43 / 0.7);
+    border: 3px solid var(--sun);
+  }
+  .ww-card__top {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+  }
+  .ww-card__eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--sun);
+  }
+  .ww-card__title {
+    font-family: var(--font-display);
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .ww-card ul {
+    padding-left: 1.1em;
+    margin: 0 0 18px;
+  }
+  .ww-card li {
+    margin-bottom: 6px;
+  }
+  .ww-card__time span {
+    display: inline-block;
+    min-width: 120px;
+    border-bottom: 2px solid rgb(255 255 255 / 0.6);
+  }
+  .ww-card__foot {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgb(255 255 255 / 0.2);
+    padding-top: 16px;
+    font-size: 0.85rem;
+  }
+  .ww-card__foot strong {
+    color: var(--sun);
+  }
+
+  @media print {
+    :global(.page-hero),
+    :global(.skip-link),
+    .pledge,
+    .source {
+      display: none !important;
+    }
+    :global(.split) {
+      display: block !important;
+    }
+    :global(main .section) {
+      padding: 0 !important;
+    }
+    .ww-card {
+      margin: 0;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      box-shadow: none;
+    }
+  }
+</style>

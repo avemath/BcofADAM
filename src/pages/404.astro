@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import { url } from '../lib/url';
+---
+
+<BaseLayout title="Page not found">
+  <PageHero eyebrow="404" title="This page drifted away." lede="The page you’re looking for isn’t here, but these are.">
+    <div class="btn-row">
+      <a class="btn" href={url('/')}>Home</a>
+      <a class="btn btn--ghost" href={url('/water-safety')}>Water safety</a>
+      <a class="btn btn--ghost" href={url('/adams-story')}>Adam’s story</a>
+    </div>
+  </PageHero>
+  <div style="height: 80px"></div>
+</BaseLayout>

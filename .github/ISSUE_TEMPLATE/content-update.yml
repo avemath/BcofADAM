@@ -1,0 +1,25 @@
+name: Content update
+description: Ask for a change to words, photos or links on the website.
+title: "[Content] "
+labels: [content]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Which page?
+      description: Paste the web address, or name the page (e.g. "Adam's Story").
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: What should change?
+      description: Paste the new wording, or describe what's wrong. Drag photos straight into this box to attach them.
+    validations:
+      required: true
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Photos of children
+      options:
+        - label: If this includes a photo of a child, a parent/guardian has given written permission to use it.
