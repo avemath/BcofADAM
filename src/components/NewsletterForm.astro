@@ -1,0 +1,104 @@
+---
+/**
+ * Email sign-up. It posts to the newsletter provider set in the Studio
+ * (Site settings → Newsletter form address). Until that's set, nothing shows
+ * and the footer points people to Facebook instead.
+ */
+import { site } from '../data/site';
+import { url } from '../lib/url';
+
+interface Props {
+  /** Dark background (footer) or light. */
+  dark?: boolean;
+}
+const { dark = false } = Astro.props;
+const action = site.newsletterFormAction.trim();
+const field = site.newsletterEmailField.trim() || 'email';
+const uid = Math.random().toString(36).slice(2, 7);
+---
+
+{
+  action && (
+    <form class:list={['newsletter', { 'newsletter--dark': dark }]} action={action} method="POST" target="_blank" data-newsletter>
+      <label for={`nl-${uid}`}>Your email</label>
+      <div class="newsletter__row">
+        <input id={`nl-${uid}`} name={field} type="email" autocomplete="email" required placeholder="you@example.com" />
+        <button class="btn" type="submit">Sign up</button>
+      </div>
+      <p class="newsletter__note">
+        We’ll email you to confirm. A few emails a year, and you can unsubscribe any time. See our{' '}
+        <a href={url('/privacy')}>privacy policy</a>.
+      </p>
+      <p class="newsletter__status" role="status" aria-live="polite" data-status></p>
+    </form>
+  )
+}
+
+<script>
+  document.querySelectorAll<HTMLFormElement>('[data-newsletter]').forEach((form) => {
+    const status = form.querySelector<HTMLElement>('[data-status]');
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (!status) return form.submit();
+      status.dataset.state = '';
+      status.textContent = 'Signing you up…';
+      try {
+        // Newsletter services don't allow reading the reply from another site, so a finished
+        // request counts as success; they send the confirmation email themselves.
+        await fetch(form.action, { method: 'POST', body: new FormData(form), mode: 'no-cors' });
+        form.reset();
+        status.dataset.state = 'ok';
+        status.textContent = 'Almost done! Check your inbox and click the link to confirm.';
+      } catch {
+        status.dataset.state = 'error';
+        status.textContent = 'Sorry, that didn’t go through. Please check your connection and try again.';
+      }
+    });
+  });
+</script>
+
+<style>
+  .newsletter {
+    display: grid;
+    gap: 8px;
+  }
+  .newsletter label {
+    font-weight: 700;
+  }
+  .newsletter__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .newsletter input {
+    flex: 1 1 200px;
+    min-height: 48px;
+    padding: 10px 14px;
+    font: inherit;
+    border: 2px solid var(--line);
+    border-radius: 999px;
+    background: #fff;
+    color: var(--ink);
+  }
+  .newsletter__note {
+    font-size: 0.85rem;
+    margin: 0;
+  }
+  .newsletter__status:empty {
+    display: none;
+  }
+  .newsletter__status {
+    font-weight: 700;
+    margin: 0;
+  }
+  .newsletter--dark label {
+    color: #fff;
+  }
+  .newsletter--dark .newsletter__note,
+  .newsletter--dark .newsletter__status {
+    color: var(--on-dark);
+  }
+  .newsletter--dark a {
+    color: var(--on-dark);
+  }
+</style>

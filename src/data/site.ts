@@ -2,15 +2,50 @@
  * Site settings come from settings.json, which the family edits in the Studio
  * (Pages CMS). This file just shapes that data for the rest of the site.
  */
-import settings from './settings.json';
+import settingsJson from './settings.json';
+
+/**
+ * Every setting, with a safe default. The Studio drops empty fields when it
+ * saves, so the site never assumes a setting is there.
+ */
+const defaults = {
+  name: 'Because of ADAM',
+  tagline: '',
+  description: '',
+  launchReady: false,
+  taxExempt: false,
+  ein: '',
+  donateUrl: '',
+  email: '',
+  location: '',
+  areaServed: '',
+  contactFormAction: '',
+  contactFormKey: '',
+  newsletterFormAction: '',
+  newsletterEmailField: 'email',
+  newsletterUrl: '',
+  facebookUrl: '',
+  showFacebookFeed: true,
+  instagramUrl: '',
+  tiktokUrl: '',
+  youtubeUrl: '',
+  linkedinUrl: '',
+  themeColor: '#083349',
+  analyticsProvider: 'none',
+  analyticsSite: '',
+};
+export type Settings = typeof defaults;
+export const settings: Settings = { ...defaults, ...(settingsJson as Partial<Settings>) };
 
 export const site = {
   ...settings,
+  /** Only the links that are filled in show up on the site. */
   social: {
     facebook: settings.facebookUrl,
     instagram: settings.instagramUrl,
     tiktok: settings.tiktokUrl,
     youtube: settings.youtubeUrl,
+    linkedin: settings.linkedinUrl,
   },
 };
 

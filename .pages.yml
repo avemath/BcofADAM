@@ -44,8 +44,19 @@ content:
         label: Contact form link (optional)
         type: string
         description: From Web3Forms or Formspree. Leave empty to show the email address instead.
+      - name: contactFormKey
+        label: Web3Forms access key (only if the contact form uses Web3Forms)
+        type: string
+      - name: newsletterFormAction
+        label: Newsletter form address (optional)
+        type: string
+        description: 'The form "action" address from Mailchimp, Buttondown, MailerLite, etc. The email sign-up shows in the footer as soon as this is filled in.'
+      - name: newsletterEmailField
+        label: Newsletter email field name
+        type: string
+        description: 'Usually "email". Mailchimp uses "EMAIL".'
       - name: newsletterUrl
-        label: Newsletter sign-up link (optional)
+        label: Newsletter sign-up page link (optional, used if there's no form address)
         type: string
       - name: instagramUrl
         label: Instagram link
@@ -55,6 +66,9 @@ content:
         type: string
       - name: youtubeUrl
         label: YouTube link
+        type: string
+      - name: linkedinUrl
+        label: LinkedIn link
         type: string
       - name: location
         label: Where we're based
