@@ -37,7 +37,7 @@ const art = /fish|rodeo/.test(t)
 <article class="event card">
   {
     e.photo ? (
-      <img class="event__photo" sizes="(min-width: 1000px) 380px, (min-width: 700px) 50vw, 100vw" src={url(e.photo)} alt={e.photoAlt || e.title} data-missing-alt={!e.photoAlt || undefined} loading="lazy" />
+      <img class:list={['event__photo', { 'event__photo--whole': e.photoWhole }]} sizes="(min-width: 1000px) 380px, (min-width: 700px) 50vw, 100vw" src={url(e.photo)} alt={e.photoAlt || e.title} data-missing-alt={!e.photoAlt || undefined} loading="lazy" />
     ) : (
       <div class="event__art" aria-hidden="true">
         <span>{art}</span>
@@ -79,6 +79,12 @@ const art = /fish|rodeo/.test(t)
   }
   .event__photo {
     object-position: center 55%;
+  }
+  /* Flyers and wide pictures: show all of it on the card's blue background. */
+  .event__photo--whole {
+    object-fit: contain;
+    object-position: center;
+    background: linear-gradient(160deg, var(--ocean-bright), var(--deep));
   }
   .event__art {
     display: grid;
