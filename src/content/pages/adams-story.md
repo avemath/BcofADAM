@@ -15,7 +15,7 @@ description: Meet Adam, a nonfatal drowning survivor from Blair County,
 
 My little brother Adam (AJ to us) is the youngest of five. He loves music, especially when Mom sings, and he’s a big fan of Mickey Mouse, Pooh Bear, Spider-Man, fast cars and his favorite movies. His happy place is the swing in our backyard, and he loves going on long walks around the neighborhood with his nurse. He has a big brother and three big sisters who would do anything for him, and his best friend is our sister Lea.
 
-{{TODO: one sentence on the family's ties to Louisiana and Pennsylvania, and that Because of ADAM is based in Blair County, PA}}
+We’re originally from Jean Lafitte, Louisiana, but Pennsylvania is home now, and that’s where Because of ADAM is based, in Blair County.
 
 Adam can’t move his body or talk, but he sees, hears and understands everything. He plays games and picks his favorite songs on an eye-gaze computer that follows his eyes, and his teachers come to our house for school. Trust me, he can say a whole lot with just his eyes and that smile.
 
