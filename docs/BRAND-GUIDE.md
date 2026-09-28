@@ -13,6 +13,7 @@ How we keep the website, social posts, flyers and Water Watcher cards looking an
 - *Learn from our past. Protect your future.* (our own hashtag, on the About page; the 2021 banner says "their future")
 - *We will end childhood drowning.* (our banner)
 - *Join the movement. Become an Ally!* (our banner; on Get Involved)
+- *Providing awareness to end childhood drowning.* (our 2021 flyer)
 - *Skills before thrills.*
 - *It only takes a second.* (Mom and Dad's words)
 - *No single layer is enough.*
