@@ -15,6 +15,8 @@ description: Meet Adam, a nonfatal drowning survivor from Blair County,
 
 My little brother Adam (AJ to us) is the youngest of five. He loves music, especially when Mom sings. He loves Mickey Mouse, Pooh Bear, Spider-Man, fast cars, his favorite movies, and long walks around the neighborhood with his nurse. His happy place is the swing in our backyard. He has a big brother and three big sisters who would do anything for him, and a best friend in our sister Lea.
 
+{{TODO: one sentence on the family's ties to Louisiana and Pennsylvania, and that Because of ADAM is based in Blair County, PA}}
+
 Adam can’t move his body or talk, but he sees, hears and understands everything. He plays games and picks his favorite songs on an eye-gaze computer that follows his eyes. His teachers come to our house for school. And trust me, he can say a whole lot with just his eyes and that smile.
 
 > We have a secret language that does not need words to communicate.
