@@ -57,14 +57,25 @@ const spoken =
             )}
             {p.source && (
               <p class="source">
-                Source:{' '}
-                {p.sourceUrl ? (
-                  <a href={p.sourceUrl} rel="noopener" target="_blank">
-                    {p.source}
-                  </a>
-                ) : (
-                  p.source
-                )}
+                {p.source2 ? 'Sources: ' : 'Source: '}
+                {[
+                  [p.source, p.sourceUrl],
+                  [p.source2, p.sourceUrl2],
+                ]
+                  .filter(([name]) => name)
+                  .map(([name, href], i) => (
+                    <>
+                      {i > 0 && '; '}
+                      {href ? (
+                        <a href={href} rel="noopener" target="_blank">
+                          {name}
+                          <span class="visually-hidden"> (source for “{p.title}”, opens in a new tab)</span>
+                        </a>
+                      ) : (
+                        name
+                      )}
+                    </>
+                  ))}
               </p>
             )}
           </article>

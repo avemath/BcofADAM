@@ -135,6 +135,11 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     <div class="wrap">
       <span class="eyebrow">The layers</span>
       <h2>{countWord(layers.length)} layers of protection</h2>
+      <p class="lede layers-lede">
+        These build on the National Drowning Prevention Alliance’s{' '}
+        <a href="https://ndpa.org/layers/" rel="noopener" target="_blank">5 Layers of Protection</a>, with barriers,
+        alarms and covers each counted as a layer of its own.
+      </p>
       <ol class="layer-cards grid grid--4">
         {
           layers.map((l, i) => (
@@ -433,6 +438,10 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
   .layers-intro {
     max-width: 760px;
     margin-bottom: clamp(32px, 5vw, 56px);
+  }
+  .layers-lede {
+    max-width: 62ch;
+    margin-bottom: 2rem;
   }
   .layer-cards {
     list-style: none;

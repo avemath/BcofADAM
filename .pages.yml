@@ -183,6 +183,12 @@ content:
           - name: sourceUrl
             label: Source link
             type: string
+          - name: source2
+            label: Second source (optional)
+            type: string
+          - name: sourceUrl2
+            label: Second source link
+            type: string
           - name: link
             label: Link to another page (optional)
             type: string
