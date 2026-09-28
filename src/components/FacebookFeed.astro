@@ -1,0 +1,91 @@
+---
+/**
+ * Live feed from our Facebook page, using Facebook's official Page Plugin.
+ * Turn it on or off in the Studio (Site settings → Show Facebook feed).
+ * Some browsers and ad blockers hide Facebook embeds, so there's always a
+ * plain link underneath.
+ */
+import { site } from '../data/site';
+
+interface Props {
+  height?: number;
+}
+const { height = 720 } = Astro.props;
+
+const pageUrl = site.facebookUrl;
+const src =
+  'https://www.facebook.com/plugins/page.php?' +
+  new URLSearchParams({
+    href: pageUrl,
+    tabs: 'timeline',
+    width: '500',
+    height: String(height),
+    small_header: 'false',
+    adapt_container_width: 'true',
+    hide_cover: 'false',
+    show_facepile: 'false',
+  }).toString();
+---
+
+{
+  site.showFacebookFeed && pageUrl && (
+    <div class="fb-feed">
+      <div class="fb-feed__frame" style={`--h:${height}px`}>
+        <iframe
+          src={src}
+          title="Latest posts from the Because of ADAM Facebook page"
+          width="500"
+          height={height}
+          loading="lazy"
+          allow="encrypted-media; picture-in-picture; web-share"
+        />
+      </div>
+      <p class="fb-feed__fallback">
+        Don’t see our posts? Some browsers block Facebook.{' '}
+        <a href={pageUrl} rel="noopener" target="_blank">
+          Open our Facebook page
+        </a>
+        .
+      </p>
+    </div>
+  )
+}
+
+<style>
+  .fb-feed {
+    width: 100%;
+    max-width: 500px;
+  }
+  .fb-feed__frame {
+    position: relative;
+    width: 100%;
+    height: var(--h);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background:
+      linear-gradient(135deg, rgb(255 255 255 / 0.9), rgb(255 255 255 / 0.7)),
+      var(--foam);
+    box-shadow: var(--shadow);
+  }
+  .fb-feed__frame::before {
+    content: 'Loading our latest posts…';
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+  }
+  .fb-feed iframe {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+  .fb-feed__fallback {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    margin-top: 10px;
+  }
+</style>

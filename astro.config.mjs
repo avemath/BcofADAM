@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import settings from './src/data/settings.json' with { type: 'json' };
 
 // SITE_URL and BASE_PATH are filled in automatically by the GitHub Pages
 // deploy workflow (.github/workflows/deploy.yml). Locally they fall back to
@@ -13,5 +14,10 @@ export default defineConfig({
   site,
   base,
   trailingSlash: 'ignore',
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      // Keep the Studio shortcut (and Donate, until there's a donation link) out of Google.
+      filter: (page) => !page.includes('/studio') && (settings.donateUrl.trim() !== '' || !page.includes('/donate')),
+    }),
+  ],
 });

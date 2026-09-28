@@ -1,6 +1,6 @@
 ---
 import Logo from './Logo.astro';
-import { nav } from '../data/site';
+import { nav, hasDonate } from '../data/site';
 import { url } from '../lib/url';
 
 const current = Astro.url.pathname.replace(/\/$/, '');
@@ -35,7 +35,7 @@ const isCurrent = (href: string) => current === url(href).replace(/\/$/, '');
           ))
         }
       </ul>
-      <a href={url('/donate')} class="btn site-nav__donate">Donate</a>
+      {hasDonate && <a href={url('/donate')} class="btn site-nav__donate">Donate</a>}
     </nav>
   </div>
 </header>

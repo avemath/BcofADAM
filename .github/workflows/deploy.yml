@@ -11,6 +11,9 @@ name: Deploy site
 on:
   push:
     branches: [main]
+  # Rebuild every Monday so events move from "Coming up" to "What we've done" on their own.
+  schedule:
+    - cron: '23 10 * * 1'
   workflow_dispatch:
 
 permissions:

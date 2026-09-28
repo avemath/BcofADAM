@@ -1,8 +1,8 @@
 # Research notes & sources
 
-The evidence behind every statistic and recommendation on the site. The numbers shown on the website live in [`src/data/facts.ts`](../src/data/facts.ts). This file explains where they come from and what to avoid.
+Where every statistic on our site comes from, and which popular "facts" we avoid. The numbers on the site are edited in the Studio (**Statistics**); this file explains the sources behind them.
 
-> **Researched September 28, 2026.** Our research tools couldn't open cdc.gov, cpsc.gov and several other sites directly (network restrictions), so figures were taken from the sources' published text as indexed by search engines. Items marked **[verify]** had conflicting text. **Before launch, click each link and confirm the exact wording.** Re-check every spring before National Water Safety Month.
+> **Gathered in September 2026.** Before launch, we should click each source link and make sure the wording still matches. Items marked **[verify]** had conflicting wording in different places. We'll re-check everything every spring before National Water Safety Month, when CDC and CPSC usually release new numbers.
 
 ---
 
@@ -62,7 +62,7 @@ The evidence behind every statistic and recommendation on the site. The numbers 
 
 - **Slipping away** (CPSC study of children under 5 in AZ, CA, FL, late-1980s data, still reproduced in current CPSC barrier guidelines): **46%** last seen in the house; **69%** not expected to be at or in the pool; **77%** missing **5 minutes or less**; 65% at the family's own pool, 33% at relatives' or friends' pools. *Always cite as a 1980s study.*
 - **No permission to be in the water:** in a study of U.S. pool/spa incidents (2000–2017), 86% of children had no permission to be in the water and 80% were alone. ([PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8392632/)) [verify authors/journal before using]
-- **Parties/gatherings:** no primary national statistic found. Use the Water Watcher message rather than a number. (Safe Kids' 2004 "Clear Danger" report found 88% of child drownings happened with at least one adult present. It's dated, so cite the year if you use it.)
+- **Parties/gatherings:** no primary national statistic found. Use the Water Watcher message rather than a number. (Safe Kids' 2004 "Clear Danger" report found 88% of child drownings happened with at least one adult present. It's dated, so cite the year if we use it.)
 - **Toddlers 12–36 months** are at highest risk. ([AAP 2021](https://publications.aap.org/pediatrics/article/148/2/e2021052227/179784/Prevention-of-Drowning))
 - **Autism:** children with autism are about **160×** as likely to die from drowning as the general pediatric population. ([Guan & Li, *AJPH*, 2017](https://pubmed.ncbi.nlm.nih.gov/28590851/)) AAP 2026 recommends adaptive swim lessons.
 

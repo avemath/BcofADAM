@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import CtaBand from '../components/CtaBand.astro';
+import EventCard from '../components/EventCard.astro';
+import { getEvents, splitEvents } from '../lib/events';
+import { url } from '../lib/url';
+
+const { upcoming, past } = splitEvents(await getEvents());
+---
+
+<BaseLayout
+  title="Events & Fundraisers"
+  description="Fishing rodeos, cornhole tournaments and water safety events that raise money and awareness for drowning prevention."
+>
+  <PageHero
+    eyebrow="Events & fundraisers"
+    title="Rodeos, cornhole & a whole lot of village."
+    lede="Since 2020 we’ve turned fishing rodeos, cornhole tournaments and community days into money and awareness for drowning prevention. Every one puts water safety in front of families who need it."
+  />
+
+  {
+    upcoming.length > 0 && (
+      <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
+        <div class="wrap">
+          <h2>Coming up</h2>
+          <div class="grid grid--3" style="margin-top: 28px">
+            {upcoming.map((e) => <EventCard event={e} />)}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <section class={upcoming.length > 0 ? 'section section--foam' : 'section'} style="padding-top: clamp(40px, 6vw, 72px)">
+    <div class="wrap">
+      <h2>{upcoming.length > 0 ? 'What we’ve done' : 'Our events'}</h2>
+      {past.length === 0 && <p>Events are coming soon. Follow us on Facebook for dates.</p>}
+      <div class="grid grid--3" style="margin-top: 28px">
+        {past.map((e) => <EventCard event={e} />)}
+      </div>
+    </div>
+  </section>
+
+  <CtaBand
+    title="Want to host one?"
+    text="Tournaments, rodeos, swim days, bake sales, birthday fundraisers: we’ll help with water safety materials and spreading the word."
+  >
+    <a class="btn" href={url('/contact')}>Tell us your idea</a>
+    <a class="btn btn--ghost" href={url('/get-involved')}>More ways to help</a>
+  </CtaBand>
+</BaseLayout>
