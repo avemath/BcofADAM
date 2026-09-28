@@ -61,7 +61,7 @@ If ISR just isn’t possible, look for lessons that teach self-rescue skills, li
 
 - **American Red Cross.** [Find a Red Cross Learn-to-Swim provider](https://www.redcross.org/take-a-class/swimming/learn-to-swim-providers) near you.
 - **Your local YMCA.** Near us, the [Blair Regional YMCA](https://blairregionalymca.org/programs/swimming-lessons/) in Hollidaysburg offers group, semi-private and private swim lessons.
-- **Parks and recreation and community pools.** Check with your town’s recreation department or public pool. {{TODO: local lesson partners}}
+- **Parks and recreation and community pools.** Check with your town’s recreation department or public pool. Near us, the [Bellwood-Antis Community Pool](https://blairregionalymca.org/venue/bellwood-antis-community-pool/) offers group, semi-private and private lessons for all ages each summer, and you don’t have to live in Bellwood or Antis Township to sign up. Altoona’s [Prospect Pool](https://prospectpoolaltoona.com/) is closed for renovation in 2026 and plans to reopen in 2027.
 - **Adapted lessons.** The [American Academy of Pediatrics](https://www.healthychildren.org/English/safety-prevention/at-play/Pages/Swim-Lessons.aspx) says swim lessons can be adapted for children with special health needs and developmental disabilities, such as autism, and that these programs reduce drowning risk. Ask local pools about adapted or one-on-one lessons.
 
 ## One layer, not the only layer
