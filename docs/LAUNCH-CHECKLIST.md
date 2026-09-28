@@ -99,8 +99,9 @@ Everything we still need to do to get Because of ADAM and the website fully up a
 ### Step 2: Your own web address
 We're using **[Porkbun](https://porkbun.com/)**: $7.98 for the first year of a .org, $11.84/yr after that, with free WHOIS privacy (our address stays private) and free email forwarding. [Cloudflare Registrar](https://www.cloudflare.com/products/registrar/) is just as good on price ($8.50, then $11.20/yr, no markup ever), but its dashboard is more technical, and its orange-cloud "proxy" setting has to be turned off for GitHub Pages. Skip GoDaddy, Network Solutions and website-builder bundles: cheap first year, expensive renewals and lots of upsells. *(Prices checked September 28, 2026. `becauseofadam.org` and `becauseofadam.com` were both still unregistered.)*
 
-- [x] Bought **becauseofadam.org** (our main address) and **becauseofadam.com** (so no one else takes it) on Porkbun, September 28, 2026, on Avery's account
-- [ ] In Porkbun, check that **auto-renew** and **domain lock** are on for both, turn on **two-factor sign-in**, and write down where the login is for one other family member. If the domain ever lapses, someone else can buy it
+- [x] Made our Porkbun account (Avery's), with two-factor sign-in on
+- [ ] Buy **becauseofadam.org** (our main address) and **becauseofadam.com** (so no one else takes it). About $20 for both the first year. Leave WHOIS privacy on, and click the **verify your contact info** email Porkbun sends within 15 days
+- [ ] In Porkbun, check that **auto-renew** and **domain lock** are on for both, and write down where the login is for one other family member. If the domain ever lapses, someone else can buy it
 - [ ] Keep the Porkbun account on a **personal email**. Never switch it to an `@becauseofadam.org` address: if the domain ever had a problem, its renewal and warning emails would go to an inbox that no longer works
 - [ ] In GitHub: **Settings → Pages → Custom domain** → `becauseofadam.org` → **Save**
 - [ ] In Porkbun: **Domain Management → becauseofadam.org → DNS**. Delete Porkbun's default "parked" records, then add ([GitHub's guide](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)):
