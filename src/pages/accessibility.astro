@@ -1,0 +1,16 @@
+---
+import ProseLayout from '../layouts/ProseLayout.astro';
+import { site } from '../data/site';
+---
+
+<ProseLayout slug="accessibility">
+  <aside class="card">
+    <p class="eyebrow">Accessibility feedback</p>
+    <p>Found a problem, or need something in another format? Email us:</p>
+    <p>
+      <a href={`mailto:${site.email}?subject=${encodeURIComponent('Accessibility feedback')}`}>
+        <strong>{site.email}</strong>
+      </a>
+    </p>
+  </aside>
+</ProseLayout>

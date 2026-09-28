@@ -144,7 +144,7 @@ const isCurrent = (href: string) => current === url(href).replace(/\/$/, '');
   }
 
   /* Mobile: slide-down panel */
-  @media (max-width: 1023px) {
+  @media (max-width: 1199px) {
     .site-nav {
       display: none;
       position: absolute;
@@ -172,18 +172,22 @@ const isCurrent = (href: string) => current === url(href).replace(/\/$/, '');
   }
 
   /* Desktop: inline */
-  @media (min-width: 1024px) {
+  /* Seven links fit on one line from 1200px up; below that, the Menu button. */
+  @media (min-width: 1200px) {
     .menu-toggle {
       display: none;
     }
     .site-nav {
       display: flex;
       align-items: center;
-      gap: 28px;
+      gap: 24px;
     }
     .site-nav ul {
       display: flex;
-      gap: 24px;
+      gap: 22px;
+    }
+    .site-nav li a {
+      white-space: nowrap;
     }
   }
 </style>

@@ -62,12 +62,13 @@ export const hasDonate = site.donateUrl.trim() !== '';
 
 /** Main navigation. Order here = order on the site. */
 export const nav = [
-  { label: 'Adam’s Story', href: '/adams-story' },
   { label: 'Water Safety', href: '/water-safety' },
+  { label: 'Adam’s Story', href: '/adams-story' },
   { label: 'ISR Swim Lessons', href: '/swim-lessons' },
   { label: 'The Facts', href: '/the-facts' },
   { label: 'Survivors & Families', href: '/survivors-and-families' },
   { label: 'Get Involved', href: '/get-involved' },
+  { label: 'About', href: '/about' },
 ];
 
 export const footerNav = [
@@ -79,4 +80,5 @@ export const footerNav = [
   { label: 'Press', href: '/press' },
   { label: 'Contact', href: '/contact' },
   { label: 'Privacy', href: '/privacy' },
+  { label: 'Accessibility', href: '/accessibility' },
 ];
