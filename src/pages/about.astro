@@ -109,7 +109,7 @@ const values = [
           team.map((m) => (
             <li class="card team__card">
               {m.photo ? (
-                <img src={url(m.photo)} alt={m.photoAlt || m.name} data-missing-alt={!m.photoAlt || undefined} loading="lazy" />
+                <img src={url(m.photo)} sizes="(min-width: 1000px) 300px, (min-width: 600px) 50vw, 100vw" alt={m.photoAlt || m.name} data-missing-alt={!m.photoAlt || undefined} loading="lazy" />
               ) : (
                 !site.launchReady && <PhotoFrame ratio="4 / 3" hint="Add a photo in the Studio" />
               )}

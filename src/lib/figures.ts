@@ -11,6 +11,7 @@ export function withFigures(html: string): string {
       // No description and no caption: still flagged, so the launch guard can list it.
       let tag = img.replace(/\salt=""/, plain ? ` alt="${plain}"` : ' alt="" data-missing-alt');
       if (!/\bloading=/.test(tag)) tag = tag.replace(/^<img\b/, '<img loading="lazy" decoding="async"');
+      if (!/\bsizes=/.test(tag)) tag = tag.replace(/^<img\b/, '<img sizes="(min-width: 1000px) 700px, 100vw"');
       return `<figure class="story-figure">${tag}${caption ? `<figcaption>${caption}</figcaption>` : ''}</figure>`;
     },
   );

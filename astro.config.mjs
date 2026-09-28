@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import launchGuard from './integrations/launch-guard.mjs';
+import optimizeImages from './integrations/optimize-images.mjs';
 import settings from './src/data/settings.json' with { type: 'json' };
 
 // SITE_URL and BASE_PATH are filled in automatically by the GitHub Pages
@@ -24,6 +25,8 @@ export default defineConfig({
         !page.includes('/checklist') &&
         ((settings.donateUrl ?? '').trim() !== '' || !page.includes('/donate')),
     }),
+    // Serves Studio photos as AVIF/WebP at several sizes, with width and height.
+    optimizeImages({ base }),
     // Warns about TODOs and review boxes in preview; stops the build if launchReady is on and any remain.
     launchGuard(settings),
   ],
