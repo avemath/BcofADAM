@@ -43,6 +43,9 @@ const events = defineCollection({
     summary: text(),
     highlight: text(),
     photo: text(),
+    photoAlt: text(),
+    /** Yearly events (like Wear Blue on June 5) always show their next date under "Coming up". */
+    repeatsYearly: z.boolean().default(false),
     link: text(),
     linkLabel: text(),
     featured: z.boolean().default(false),
