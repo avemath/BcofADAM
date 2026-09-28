@@ -67,8 +67,11 @@ const art = /fish|rodeo/.test(t)
   .event__photo,
   .event__art {
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
+  }
+  .event__photo {
+    object-position: center 55%;
   }
   .event__art {
     display: grid;

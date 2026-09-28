@@ -201,26 +201,6 @@ content:
           - name: description
             label: Short description for Google
             type: text
-          - name: photos
-            label: Photos in the story
-            description: Each photo shows right under the heading you pick. Use full-size photos (download them from Facebook, not screenshots). A spot with no photo is hidden once the site launches.
-            type: object
-            list: true
-            fields:
-              - name: section
-                label: Show under this heading
-                type: select
-                options:
-                  values: ["Meet Adam", "June 5, 2017", "What we wish we’d known", "Life after", "Planting seeds", "Because of Adam", "Adam’s village"]
-              - name: photo
-                label: Photo
-                type: image
-              - name: alt
-                label: Describe the photo (for people who can't see it)
-                type: string
-              - name: caption
-                label: Caption under the photo (optional)
-                type: string
           - name: body
             label: Page text
             type: rich-text

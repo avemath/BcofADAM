@@ -108,7 +108,11 @@ const values = [
         {
           team.map((m) => (
             <li class="card team__card">
-              {m.photo && <img src={url(m.photo)} alt={m.name} loading="lazy" />}
+              {m.photo ? (
+                <img src={url(m.photo)} alt={m.name} loading="lazy" />
+              ) : (
+                !site.launchReady && <PhotoFrame ratio="4 / 3" hint="Add a photo in the Studio" />
+              )}
               <h3>{m.name}</h3>
               <p class="team__role">{m.role}</p>
               {m.bio && <p>{m.bio}</p>}
@@ -220,10 +224,14 @@ const values = [
     text-transform: uppercase;
     color: var(--ocean);
   }
+  .team__card :global(.photo) {
+    margin-bottom: 16px;
+  }
   .team__card img {
     width: 100%;
-    aspect-ratio: 1;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
+    object-position: center 35%;
     border-radius: var(--radius-sm);
     margin-bottom: 16px;
   }

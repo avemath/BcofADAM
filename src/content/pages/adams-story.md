@@ -6,31 +6,12 @@ lede: The youngest of five, a smile worth waiting for, and a family that decided
 description: Meet Adam, a nonfatal drowning survivor from Blair County,
   Pennsylvania, and learn why his brother and sisters started a drowning
   awareness movement.
-photos:
-  - section: Meet Adam
-    alt: Mom holding Adam on her lap and smiling down at him
-    caption: Adam and Mom.
-  - section: June 5, 2017
-    alt: Rickey in his blue cap and gown leaning down to Adam, who is sitting on his
-      red trike on the track
-    caption: Rickey’s graduation, just days before June 5, 2017.
-  - section: Life after
-    alt: Adam in a captain’s hat and sunglasses, riding in a cardboard boat called
-      the S.S. Adam built around his wheelchair, next to Lea dressed as a
-      mermaid
-    caption: "Halloween: Captain Adam of the S.S. Adam, with Lea the mermaid."
-  - section: Because of Adam
-    alt: Lea kissing Adam’s cheek as they lie on the floor together
-    caption: Lea and Adam, best friends.
-  - section: Adam’s village
-    alt: Painting of a little boy on a swing hanging from a tree, under a glowing
-      full moon, with fireflies below
-    caption: Our mom’s painting of Adam’s swing, under the moon and the fireflies.
-      It’s on every Adam’s Hope shirt.
 ---
 ## Meet Adam
 
-![](/images/uploads/momdadaj-1.jpg)
+![Dad and Mom cheek to cheek with baby Adam, all three smiling](/images/uploads/momdadaj-1.jpg)
+
+*Mom, Dad and Adam.*
 
 My little brother Adam (AJ to us) is the youngest of five. He loves music, especially when Mom sings. He loves Mickey Mouse, Pooh Bear, Spider-Man, fast cars, his favorite movies, and long walks around the neighborhood with his nurse. His happy place is the swing in our backyard. He has a big brother and three big sisters who would do anything for him, and a best friend in our sister Lea.
 
@@ -42,7 +23,9 @@ Adam can’t move his body or talk, but he sees, hears and understands everythin
 
 ## June 5, 2017
 
-![](/images/uploads/ricgradredbikeb4acc.jpg)
+![Rickey in his blue cap and gown bending down to Adam, who is sitting on his red trike on the track](/images/uploads/ricgradredbikeb4acc.jpg)
+
+*Rickey’s graduation, just days before June 5, 2017.*
 
 It was a busy, happy week. Our brother Rickey had just graduated from high school, and family had flown in from Louisiana to celebrate. That Monday afternoon, Grace and I were in our uniforms for the first softball game of the season, and Mom was braiding my hair. Adam, 14 months old, was playing in a tent in the living room with Lea, bringing in his toys.
 
@@ -66,7 +49,9 @@ My parents are not careless people. Adam was loved and watched over like crazy. 
 
 ## Life after
 
-![](/images/uploads/picu.jpg)
+![Mom holding Adam in the hospital, with his breathing tube and wires](/images/uploads/picu.jpg)
+
+*Mom and Adam in the PICU, summer 2017.*
 
 Adam spent months in hospitals and therapy before he finally came home that fall. Doctors told us he had a severe brain injury from the lack of oxygen, and that he might never hear us again.
 
@@ -92,7 +77,9 @@ That same year, my brother, sisters and I started **Because of ADAM: Allies in t
 
 Dad became a Red Cross CPR instructor and a certified [ISR instructor](/swim-lessons), and now teaches babies and toddlers to roll onto their backs and float. Mom went back to school and became a nurse, so she could care for kids like Adam.
 
-![](/images/uploads/mom-nurse.jpg)
+![Mom holding her nursing diploma, surrounded by our family, with Adam in his wheelchair in front](/images/uploads/mom-nurse.jpg)
+
+*Mom became a nurse, and we were all there to cheer her on.*
 
 ## Because of Adam
 
@@ -104,13 +91,17 @@ When Lea was 7, she and Mom were talking about time machines. Mom figured they�
 
 That’s where our name comes from. Everything we do is because of Adam.
 
-![](/images/uploads/leaaj2.jpg)
+![Lea curled up with Adam in a big armchair, her hand on his cheek](/images/uploads/leaaj2.jpg)
+
+*Lea and Adam, best friends.*
 
 ## Adam’s village
 
 For years, thousands of you have followed Adam’s journey, prayed for him, cheered for every milestone and shown up for our family again and again: nurses, doctors, teachers, therapists, first responders, friends, neighbors and total strangers. That village is the heart of this movement.
 
-![](/images/uploads/fishingrodeo.jpg)
+![A packed pavilion full of people in blue shirts](/images/uploads/fishingrodeo.jpg)
+
+*Adam’s village, showing up for him in Lafitte, Louisiana.*
 
 The summer after Adam drowned, our family and our hometown of Jean Lafitte, Louisiana threw a [fishing rodeo](/events) for him. They made shirts, cups and trophies, ran raffles and auctions, and brought the music and the food, with local businesses donating everything they could. It paid for Adam’s first stem cell treatment at Duke. That same summer, Mom looked out over our field one night and saw thousands of fireflies lighting up Adam’s tree.
 

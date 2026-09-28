@@ -48,8 +48,10 @@ That's it. From then on, everyone signs in at `/studio` with their email.
 ### Change Adam's photo on the home page
 **Home page** → **Photo of Adam** → upload → describe the photo in the next box (for example, *Adam laughing on his swing*) → **Save**.
 
-### Add the photos in Adam's Story
-**Pages** → **Adam's Story** → **Photos in the story**. Five spots are already set up (Meet Adam, June 5 2017, Life after, Because of Adam, Adam's village), with the description and caption written. Photos keep their own shape, so tall and wide photos both work. Just upload the photo into each one and **Save**. To add another, click **Add an entry**, pick the heading it should sit under, and upload. Until we launch, empty spots show a sunny placeholder; after launch, they're hidden.
+### Add a photo to Adam's Story (or any page)
+1. **Pages** → **Adam's Story**. In the page text, click where the photo should go and use the **picture button**.
+2. On the line right under the photo, type a short caption in *italics* (for example, *Lea and Adam, best friends.*). It shows under the photo, and people who use screen readers hear it too.
+3. **Save.** Photos keep their own shape, and small photos are never blown up (so use full-size ones).
 
 ### Edit Adam's Story
 **Pages** → **Adam's Story**. The editor works like Word or Google Docs. Quotes are the ones with the bar on the left; the last line of a quote in *italics* (like *— Mom*) becomes the name under it.
@@ -83,7 +85,7 @@ Suggested folders in the shared folder: `Adam (then & now)`, `Family`, `Events/2
 | Each event (cornhole, rodeo, booth, Wear Blue) | **Events & fundraisers** → the event → Photo |
 | Each of us | **Team** → Photo |
 | Dad teaching (only with the parents' OK for any kids in it) | **Pages** → ISR Swim Lessons — Dad's story box → Photo |
-| One photo under each chapter of Adam's Story (5 spots are ready, with captions written) | **Pages** → Adam's Story → **Photos in the story** |
+| Photos in Adam's Story | **Pages** → Adam's Story → the picture button in the page text (caption in italics right under it) |
 | The family photo at the top of About Us ("It's a boy!") | **Pages** → **About Us — family photo** |
 | Photos inside a news post | The picture button in the editor |
 

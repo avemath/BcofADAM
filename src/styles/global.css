@@ -340,6 +340,24 @@ a:hover {
   border-radius: var(--radius);
   margin: 2em 0;
 }
+/* Photos in the story: shown at their own shape and never blown up past their real size. */
+.prose .story-figure {
+  margin: 2em 0;
+}
+.prose .story-figure img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: min(620px, 78vh);
+  margin: 0 auto;
+  box-shadow: 0 30px 60px -30px rgb(4 29 43 / 0.55);
+}
+.prose .story-figure figcaption {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
 
 /* ---------- Callouts ---------- */
 
