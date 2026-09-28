@@ -9,6 +9,6 @@ highlight: ""
 photo: ""
 link: ""
 linkLabel: ""
-featured: true
+featured: false
 draft: false
 ---
