@@ -8,7 +8,8 @@
  *   - makes AVIF and WebP copies at a few widths (in /_img/),
  *   - wraps the <img> in a <picture> so browsers pick the smallest good one,
  *   - adds width and height so the page doesn't jump while photos load,
- *   - keeps loading="lazy" on everything except the first photo on a page.
+ *   - keeps loading="lazy" on everything except the first photo on a page
+ *     (that one loads right away, but without jumping ahead of fonts and styles).
  * The original JPG or PNG stays as the fallback. Nothing in the repo changes.
  * Converted images are cached in node_modules/.cache so rebuilds are quick.
  */
@@ -125,7 +126,7 @@ export default function optimizeImages({ base = '/' } = {}) {
             // The first photo in the page's main content loads right away; the rest wait until they're near.
             const isFirst = first && (match.index ?? 0) > inMain;
             if (isFirst) {
-              img = img.replace(/\sloading="lazy"/i, '').replace(/^<img\b/i, '<img loading="eager" fetchpriority="high"');
+              img = img.replace(/\sloading="lazy"/i, '').replace(/^<img\b/i, '<img loading="eager"');
               first = false;
             } else if (!attr(img, 'loading')) {
               img = img.replace(/^<img\b/i, '<img loading="lazy"');
