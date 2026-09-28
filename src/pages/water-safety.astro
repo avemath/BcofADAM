@@ -1,0 +1,166 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import LayersBuilder from '../components/LayersBuilder.astro';
+import CtaBand from '../components/CtaBand.astro';
+import Wave from '../components/Wave.astro';
+import { layers } from '../data/layers';
+import { risks } from '../data/facts';
+import { url } from '../lib/url';
+---
+
+<BaseLayout
+  title="Water Safety: Layers of Protection"
+  description="No single safety measure is enough. Learn the layers of protection (supervision, fences, alarms, covers, swim skills, life jackets and CPR) that keep young children safe around water."
+>
+  <PageHero
+    eyebrow="Layers of protection"
+    title="No single layer is enough. Stack them."
+    lede="Every layer between a child and the water buys precious seconds. When one layer fails, like a gate left open, an alarm switched off or an adult looking away, the next one is there to catch it."
+    next="var(--deep)"
+  />
+
+  <section class="section section--deep" style="padding-top: 24px">
+    <div class="wrap">
+      <LayersBuilder />
+    </div>
+  </section>
+
+  <Wave color="var(--sand)" bg="var(--deep)" />
+
+  <section class="section">
+    <div class="wrap layers-page">
+      <nav class="layers-toc" aria-label="Layers on this page">
+        <p class="eyebrow">Jump to a layer</p>
+        <ol>
+          {layers.map((l) => (
+            <li>
+              <a href={`#${l.id}`}>{l.title.split(':')[0]}</a>
+            </li>
+          ))}
+        </ol>
+      </nav>
+
+      <div class="layers-list">
+        {
+          layers.map((l, i) => (
+            <article id={l.id} class="layer-detail reveal">
+              <span class="layer-detail__num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+              <h2>{l.title}</h2>
+              {l.body.map((p) => <p>{p}</p>)}
+              <ul class="checklist">
+                {l.tips.map((t) => <li>{t}</li>)}
+              </ul>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--foam">
+    <div class="wrap">
+      <span class="eyebrow">High-risk moments</span>
+      <h2>When families are most at risk</h2>
+      <p class="lede">
+        Most drownings of young children don’t happen during swim time. They happen when nobody expects
+        the child to be near the water.
+      </p>
+      <div class="grid grid--2" style="margin-top: 40px">
+        {
+          risks.map((r) => (
+            <div class="card reveal">
+              <h3>{r.title}</h3>
+              <p>{r.body}</p>
+              {r.source && (
+                <p class="source">
+                  Source: <a href={r.sourceUrl} rel="noopener" target="_blank">{r.source}</a>
+                </p>
+              )}
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <CtaBand
+    title="Make it a promise."
+    text="Take the Water Watcher pledge, print a Water Watcher card, and share this page with every parent, grandparent and babysitter you know."
+  >
+    <a class="btn" href={url('/water-watcher')}>Take the pledge</a>
+    <a class="btn btn--ghost" href={url('/resources')}>More resources</a>
+  </CtaBand>
+</BaseLayout>
+
+<style>
+  .layers-page {
+    display: grid;
+    gap: 40px;
+  }
+  @media (min-width: 1000px) {
+    .layers-page {
+      grid-template-columns: 240px minmax(0, 1fr);
+    }
+    .layers-toc {
+      position: sticky;
+      top: 100px;
+      align-self: start;
+    }
+  }
+  .layers-toc ol {
+    margin: 0;
+    padding-left: 1.2em;
+    display: grid;
+    gap: 6px;
+  }
+  .layers-toc a {
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .layers-list {
+    display: grid;
+    gap: clamp(48px, 7vw, 88px);
+    max-width: 760px;
+  }
+  .layer-detail {
+    position: relative;
+    scroll-margin-top: 100px;
+  }
+  .layer-detail__num {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 4rem;
+    font-weight: 300;
+    line-height: 1;
+    color: var(--aqua);
+    opacity: 0.5;
+    margin-bottom: 8px;
+  }
+  .checklist {
+    list-style: none;
+    padding: 20px 24px;
+    margin: 24px 0 0;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    display: grid;
+    gap: 10px;
+  }
+  .checklist li {
+    position: relative;
+    padding-left: 32px;
+  }
+  .checklist li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.3em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--aqua)
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3 3 7-7' fill='none' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+      center / 100% no-repeat;
+  }
+</style>

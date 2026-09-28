@@ -1,0 +1,61 @@
+---
+import Wave from './Wave.astro';
+
+interface Props {
+  eyebrow?: string;
+  title: string;
+  lede?: string;
+  /** Background color of the section that follows (for the wave). */
+  next?: string;
+}
+const { eyebrow, title, lede, next = 'var(--sand)' } = Astro.props;
+---
+
+<section class="page-hero">
+  <div class="page-hero__light" aria-hidden="true"></div>
+  <div class="wrap page-hero__inner">
+    {eyebrow && <span class="eyebrow">{eyebrow}</span>}
+    <h1>{title}</h1>
+    {lede && <p class="lede">{lede}</p>}
+    <slot />
+  </div>
+  <Wave color={next} />
+</section>
+
+<style>
+  .page-hero {
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(120% 90% at 80% 0%, var(--ocean) 0%, var(--deep) 55%, var(--abyss) 100%);
+    color: #fff;
+  }
+  .page-hero__light {
+    position: absolute;
+    inset: -40% -10% auto -10%;
+    height: 140%;
+    background:
+      radial-gradient(40% 30% at 20% 30%, rgb(26 166 183 / 0.28), transparent 70%),
+      radial-gradient(30% 25% at 75% 20%, rgb(191 231 234 / 0.18), transparent 70%);
+    animation: shimmer 14s ease-in-out infinite alternate;
+    pointer-events: none;
+  }
+  @keyframes shimmer {
+    to {
+      transform: translate3d(3%, 4%, 0) scale(1.05);
+    }
+  }
+  .page-hero__inner {
+    position: relative;
+    padding-top: clamp(56px, 9vw, 120px);
+    padding-bottom: clamp(24px, 4vw, 48px);
+  }
+  .page-hero h1 {
+    max-width: 18ch;
+  }
+  .page-hero .eyebrow {
+    color: var(--sun);
+  }
+  .page-hero .lede {
+    color: var(--on-dark-soft);
+  }
+</style>
