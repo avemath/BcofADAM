@@ -377,7 +377,7 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     margin-bottom: 1.5rem;
   }
   .hero__eyebrow strong {
-    color: var(--sun);
+    color: var(--sun-text);
   }
   .hero__title {
     font-size: clamp(3rem, 8.4vw + 0.5rem, 7.6rem);
@@ -492,6 +492,9 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     margin-bottom: 0.3em;
   }
   .missing-callout a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 24px;
     color: var(--shallow);
     font-weight: 700;
   }

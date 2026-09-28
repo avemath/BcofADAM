@@ -444,6 +444,12 @@ picture {
   font-size: 0.8rem;
   color: var(--ink-soft);
 }
+/* A source link on its own (not inside a sentence) gets a comfortable tap target. */
+a.source {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+}
 .section--deep .source,
 .section--abyss .source {
   color: var(--on-dark-soft);
