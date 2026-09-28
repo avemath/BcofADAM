@@ -46,6 +46,12 @@ Our Facebook page: **[Because of ADAM (@AdamsVillageofHope)](https://www.faceboo
 - **Alarms have blind spots.** Our door alarms went quiet when a door was mostly closed but not latched.
 - **Everywhere there's water.** "A pool, a bathtub, a pond, the bayou, and even a bucket."
 
+## Photos from our Facebook photo doc
+
+Our Word doc of Facebook photos (193 small thumbnails) is mapped to the site in a photo map: #130 Meet Adam, #176 June 5 2017 (or #97), #68 Life after (or #59), #44 Because of Adam, #71 Adam's village, and #14 for our sibling card on the About page. Upload **full-size** copies (from Facebook's Download option or the original phone photo), never the thumbnails. Extras worth using: #192, #167, #75, #193, #107, #60.
+
+Kept off the site: hospital and medical photos, bath and pool photos (even happy ones), the newspaper photo, siblings' personal photos (prom, senior pictures, sports), the pink tent, and flyers with phone numbers or the prayersforadam PayPal.
+
 ## What we keep off the website
 
 The site is meant to be striking, not morbid, and some things are just ours. So the website does **not** include:
@@ -81,11 +87,16 @@ Those stay on Facebook, where people choose to follow along.
 - **Water safety booth**, July 2021 (posted July 15, 2021 by Little Explorer Swim, "with Because of ADAM"): our blue tent, most likely at Duncansville Community Days the same week (to confirm), with Adam, a "Never swim alone" poster, a water safety table and our banner. It was a shared booth with Dad's Little Explorer Swim banner, so the site doesn't use that photo as is.
 - **ADAMs Hope** is Mom's firefly page for Adam (the firefly-and-light-bulb logo on the 2021 flyer). The firefly ties right back to her fireflies story, and could be a lovely piece of a future Because of ADAM logo. Like the prayersforadam PayPal, anything raised for Adam through ADAMs Hope stays separate from the nonprofit's money.
 - **Mardi Gras 2020**: family in Louisiana made parade throws to spread drowning awareness in Adam's honor
+- **Adam's Hope benefit on the bayou**, Saturday, Sept. 30, 2017, Jules Nunez Seafood Pavilion, Lafitte, LA ("A Benefit for the Medical Treatments of AJ's Near Drowning"): poker run, cornhole tournament, car show, live music, silent and live auction, baskets, 50/50, kids fair. A sea of blue Adam's Hope shirts (photo #71 in our Facebook photo doc). For Adam's care, before the nonprofit, so it's in Adam's Story, not on the Events page.
+- **Adam's Hope benefit dinner, drawing & dance**, Saturday, Oct. 14, 2017, Duncansville Community Center, PA. Also for Adam's care.
+- **Adam's Hope benefit T-shirts** (2017): royal blue, with Mom's firefly logo on the front and the moonlit swing painting ("Not all those who wander are lost") on the back.
 - **Fishing rodeo**, summer 2018, Jean Lafitte, Louisiana: our family and hometown put it on (shirts, cups, fans, trophies, raffles, music, games, auctions, food, all donated). It "completely paid for our first Stem Cell Treatment and travel to Duke University" (Mom, July 22, 2018). Because the money went to Adam's own care before the nonprofit existed, the Events page lists it as a **Community** event and says so. Still need: the exact date, a photo, and whether there were any later rodeos for Because of ADAM.
 - **Wear Blue on June 5**: every year
 - (The Oct. 2017 vendor fair in Duncansville also raised money for Adam's own care, before the nonprofit existed. It isn't on the site, but it could be added the same way as the rodeo.)
 
 ## News coverage we've had
+
+- The Times-Picayune (New Orleans): **"A Mother's Love,"** a print story about Mom and Adam (2017, with the "80 minutes" figure from her first posts). We still need the date and a link.
 
 - WJAC-TV: ["Duncansville couple warns other parents: 'It only takes a second'"](https://wjactv.com/news/local/duncansville-couple-warns-other-parents-it-only-takes-a-second)
 - WTAJ: ["Infant swim classes being offered at Altoona facility"](https://www.wtaj.com/studio814/infant-swim-classes-being-offered-at-altoona-facility/)

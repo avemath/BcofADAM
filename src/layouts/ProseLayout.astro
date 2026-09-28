@@ -3,6 +3,8 @@
 import { getEntry } from 'astro:content';
 import BaseLayout from './BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
+import PhotoFrame from '../components/PhotoFrame.astro';
+import { site } from '../data/site';
 import { withBase } from '../lib/url';
 
 interface Props {
@@ -11,7 +13,27 @@ interface Props {
 const entry = await getEntry('pages', Astro.props.slug);
 if (!entry) throw new Error(`Missing src/content/pages/${Astro.props.slug}.md`);
 const html = withBase(entry.rendered?.html ?? '');
-const { title, eyebrow, lede, description } = entry.data;
+const { title, eyebrow, lede, description, photos } = entry.data;
+
+// Split the page at each heading so photos can sit right under the heading picked in the Studio.
+// Until launch, empty photo spots show a placeholder so the family can see where photos go.
+const plain = (s: string) =>
+  s
+    .replace(/<[^>]+>/g, '')
+    .replace(/&#39;|&#x27;|&rsquo;|’/g, "'")
+    .replace(/&amp;/g, '&')
+    .trim()
+    .toLowerCase();
+const shown = photos.filter((p) => p.photo || !site.launchReady);
+const sections = html.split(/(?=<h2[\s>])/).map((part) => {
+  const end = part.startsWith('<h2') ? part.indexOf('</h2>') + 5 : 0;
+  const heading = part.slice(0, end);
+  return {
+    heading,
+    body: part.slice(end),
+    photos: heading ? shown.filter((p) => plain(p.section) === plain(heading)) : [],
+  };
+});
 ---
 
 <BaseLayout title={title} description={description ?? lede}>
@@ -19,7 +41,25 @@ const { title, eyebrow, lede, description } = entry.data;
   <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
     <div class="wrap prose-layout">
       <article class="prose">
-        <Fragment set:html={html} />
+        {
+          sections.map((s) => (
+            <>
+              <Fragment set:html={s.heading} />
+              {s.photos.map((p) => (
+                <div class="story-photo">
+                  <PhotoFrame
+                    src={p.photo}
+                    alt={p.alt}
+                    caption={p.caption}
+                    ratio="4 / 3"
+                    hint="Photo goes here: add it in the Studio"
+                  />
+                </div>
+              ))}
+              <Fragment set:html={s.body} />
+            </>
+          ))
+        }
       </article>
       <slot />
     </div>
@@ -40,5 +80,8 @@ const { title, eyebrow, lede, description } = entry.data;
   }
   .prose-layout :global(.todo) {
     margin: 1.5em 0;
+  }
+  .story-photo {
+    margin: 1.2em 0 1.6em;
   }
 </style>

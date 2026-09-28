@@ -17,6 +17,11 @@ const pages = defineCollection({
     eyebrow: text(),
     lede: text(),
     description: text(),
+    /** Photos shown under a heading of the page (Adam's Story uses these). */
+    photos: z
+      .array(z.object({ section: text(), photo: text(), alt: text(), caption: text() }))
+      .nullish()
+      .transform((v) => v ?? []),
   }),
 });
 
