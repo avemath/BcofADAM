@@ -6,10 +6,11 @@ import CtaBand from '../components/CtaBand.astro';
 import IsrFinder from '../components/IsrFinder.astro';
 import { isr } from '../data/content';
 import { url, withBase } from '../lib/url';
+import { withPlaceholders } from '../lib/placeholders';
 
 const entry = await getEntry('pages', 'swim-lessons');
 if (!entry) throw new Error('Missing src/content/pages/swim-lessons.md');
-const html = withBase(entry.rendered?.html ?? '');
+const html = withPlaceholders(withBase(entry.rendered?.html ?? ''));
 const { title, eyebrow, lede, description } = entry.data;
 ---
 

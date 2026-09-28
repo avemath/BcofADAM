@@ -391,6 +391,17 @@ a:hover {
   font-size: 0.95rem;
 }
 
+/* {{TODO: ...}} notes left for the family, highlighted so they're easy to find in preview */
+.placeholder {
+  background: #fff2cc;
+  color: #6b4b00;
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+  font-weight: 700;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
 /* ---------- Misc ---------- */
 
 .visually-hidden {

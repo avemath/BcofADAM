@@ -76,6 +76,7 @@ export const footerNav = [
   { label: 'Water Watcher Pledge', href: '/water-watcher' },
   { label: 'Resources', href: '/resources' },
   { label: 'News', href: '/news' },
+  { label: 'Press', href: '/press' },
   { label: 'Contact', href: '/contact' },
   { label: 'Privacy', href: '/privacy' },
 ];

@@ -290,6 +290,12 @@ content:
         path: src/content/pages/privacy.md
         format: yaml-frontmatter
         fields: *pageFields
+      - name: press
+        label: Press & Media
+        type: file
+        path: src/content/pages/press.md
+        format: yaml-frontmatter
+        fields: *pageFields
 
   # ───────────────────────────── Events ─────────────────────────────
   - name: events
