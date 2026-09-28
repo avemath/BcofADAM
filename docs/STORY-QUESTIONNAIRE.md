@@ -23,7 +23,7 @@ Most of Adam's story on the website comes straight from Mom's Facebook posts (se
 12. Any other events we should list (Wear Blue June 5, water safety days, talks at schools or daycares)?
 
 ## The nonprofit
-13. Is Because of ADAM **registered** yet (state and IRS)? Do we have an **EIN**? (See the [launch checklist](LAUNCH-CHECKLIST.md).)
+13. Our IRS record (EIN 85-0723376, from December 2020) shows no annual filings. **Has anyone been filing the 990-N each year?** Do we have the IRS letter? (See the [launch checklist](LAUNCH-CHECKLIST.md).)
 14. Which **donation platform** do you want to use? (Zeffy is free for us.) The Venmo from 2020 can't send donation receipts.
 
 ## Photos and video

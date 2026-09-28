@@ -10,11 +10,14 @@ const e = event.data;
 const fmt = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeZone: 'UTC' });
 const when = e.date ? fmt.format(e.date) : e.when;
 const icon: Record<string, string> = {
-  Fundraiser: '🎣',
+  Fundraiser: '🎉',
   Awareness: '💙',
   'Swim & safety': '🏊',
   Community: '🤝',
 };
+// A few friendly icons picked from the event name.
+const t = e.title.toLowerCase();
+const art = /fish|rodeo/.test(t) ? '🎣' : /cornhole/.test(t) ? '🎯' : /mardi gras/.test(t) ? '🎭' : (icon[e.kind] ?? '💙');
 ---
 
 <article class="event card">
@@ -23,7 +26,7 @@ const icon: Record<string, string> = {
       <img class="event__photo" src={url(e.photo)} alt="" loading="lazy" />
     ) : (
       <div class="event__art" aria-hidden="true">
-        <span>{icon[e.kind] ?? '💙'}</span>
+        <span>{art}</span>
       </div>
     )
   }
