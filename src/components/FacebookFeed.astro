@@ -1,16 +1,18 @@
 ---
 /**
- * Live feed from our Facebook page, using Facebook's official Page Plugin.
+ * Our Facebook page's latest posts, using Facebook's official Page Plugin.
  * Turn it on or off in the Studio (Site settings → Show Facebook feed).
+ *
+ * Facebook only loads when a visitor clicks "Show our latest posts", so nobody
+ * gets Facebook's cookies or trackers just for visiting our site. Until then
+ * it's a simple card with a link to the page.
  *
  * Facebook won't draw the feed wider than 500px, so on bigger screens we
  * scale it up to fill its space (up to 1.5×). On phones it shrinks to fit.
  * The height follows the screen too, up to `maxHeight`.
- *
- * Some browsers and ad blockers hide Facebook embeds, so there's always a
- * plain link underneath.
  */
 import { site } from '../data/site';
+import { url } from '../lib/url';
 
 interface Props {
   maxHeight?: number;
@@ -20,50 +22,32 @@ const { maxHeight = 900 } = Astro.props;
 const pageUrl = site.facebookUrl;
 const title = 'Latest posts from the Because of ADAM Facebook page';
 
-/** Facebook's plugin address for a given size. The script below builds the same thing in the browser. */
-function feedSrc(width: number, height: number) {
-  return (
-    'https://www.facebook.com/plugins/page.php?' +
-    new URLSearchParams({
-      href: pageUrl,
-      tabs: 'timeline',
-      width: String(width),
-      height: String(height),
-      small_header: 'false',
-      adapt_container_width: 'true',
-      hide_cover: 'false',
-      show_facepile: 'false',
-    }).toString()
-  );
-}
 ---
 
 {
   site.showFacebookFeed && pageUrl && (
     <div class="fb-feed" data-fb-feed data-href={pageUrl} style={`--max-h:${maxHeight}px`}>
-      <div class="fb-feed__frame">
-        <iframe
-          data-fb-iframe
-          title={title}
-          loading="lazy"
-          allow="encrypted-media; picture-in-picture; web-share"
-        />
-        <noscript>
-          <iframe
-            src={feedSrc(500, 640)}
-            title={title}
-            loading="lazy"
-            allow="encrypted-media; picture-in-picture; web-share"
-          />
-        </noscript>
+      <div class="fb-feed__frame" data-fb-frame hidden>
+        <iframe data-fb-iframe title={title} allow="encrypted-media; picture-in-picture; web-share" />
       </div>
-      <p class="fb-feed__fallback">
-        Don’t see our posts? Some browsers block Facebook.{' '}
-        <a href={pageUrl} rel="noopener" target="_blank">
-          Open our Facebook page
-        </a>
-        .
-      </p>
+      <div class="fb-feed__card card" data-fb-card>
+        <img class="fb-feed__logo" src={url('/images/logo-mark.png')} alt="" width="64" height="64" />
+        <div>
+          <p class="fb-feed__name">{site.name} on Facebook</p>
+          <p class="fb-feed__note">
+            Updates on Adam, events and water safety reminders. Showing the posts here loads content from
+            Facebook, which may set its own cookies.
+          </p>
+          <div class="fb-feed__actions">
+            <button class="btn btn--ocean" type="button" data-fb-load hidden>
+              Show our latest posts
+            </button>
+            <a class="btn btn--ghost" href={pageUrl} rel="noopener" target="_blank">
+              Open our Facebook page<span class="visually-hidden"> (opens in a new tab)</span>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
@@ -109,8 +93,19 @@ function feedSrc(width: number, height: number) {
       }).toString();
   }
 
-  const feeds = [...document.querySelectorAll<HTMLElement>('[data-fb-feed]')];
-  feeds.forEach(fit);
+  const feeds: HTMLElement[] = [];
+  document.querySelectorAll<HTMLElement>('[data-fb-feed]').forEach((feed) => {
+    const button = feed.querySelector<HTMLButtonElement>('[data-fb-load]');
+    if (!button) return;
+    button.hidden = false; // the button only works with JavaScript
+    button.addEventListener('click', () => {
+      feed.querySelector<HTMLElement>('[data-fb-frame]')?.removeAttribute('hidden');
+      feed.querySelector<HTMLElement>('[data-fb-card]')?.setAttribute('hidden', '');
+      feeds.push(feed);
+      fit(feed);
+      feed.querySelector<HTMLIFrameElement>('[data-fb-iframe]')?.focus();
+    });
+  });
 
   // Refit when the window is resized or the phone is turned sideways, once it settles.
   // (The height uses svh, so a phone's address bar sliding away doesn't reload the feed.)
@@ -157,13 +152,37 @@ function feedSrc(width: number, height: number) {
     display: block;
     transform-origin: 0 0;
   }
-  /* Without JavaScript, show the plain 500px feed from <noscript> instead. */
-  :global(html:not(.js)) .fb-feed [data-fb-iframe] {
+  .fb-feed__frame[hidden],
+  .fb-feed__card[hidden] {
     display: none;
   }
-  .fb-feed__fallback {
-    font-size: 0.85rem;
+  .fb-feed__card {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+  }
+  .fb-feed__logo {
+    flex: none;
+    width: 64px;
+    height: 64px;
+  }
+  .fb-feed__name {
+    font-weight: 800;
+    font-size: 1.15rem;
+    margin: 0 0 6px;
+  }
+  .fb-feed__note {
     color: var(--ink-soft);
-    margin-top: 10px;
+    margin: 0 0 16px;
+  }
+  .fb-feed__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  @media (max-width: 480px) {
+    .fb-feed__card {
+      flex-direction: column;
+    }
   }
 </style>
