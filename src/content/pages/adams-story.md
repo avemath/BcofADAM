@@ -21,7 +21,7 @@ Adam can’t move his body or talk, but he sees, hears and understands everythin
 
 > We have a secret language that does not need words to communicate.
 >
-> *— Mom*
+> *Mom*
 
 ## June 5, 2017
 
@@ -47,7 +47,7 @@ My parents are not careless people. Adam was loved and watched over like crazy. 
 
 > Skills before thrills. Sometimes there are no do-overs.
 >
-> *— Mom*
+> *Mom*
 
 ## Life after
 
@@ -73,7 +73,7 @@ In 2020, we did.
 
 > To plant a garden is to believe in tomorrow.
 >
-> *— Audrey Hepburn (one of Mom’s favorites)*
+> *Audrey Hepburn (one of Mom’s favorites)*
 
 That same year, my brother, sisters and I started **Because of ADAM: Allies in the Drowning Awareness Movement** to teach water safety through the lessons of the past, education in the present and the generations of the future, and to end childhood drowning. We’ve been hosting [cornhole tournaments, awareness days and more](/events) ever since.
 
@@ -89,7 +89,7 @@ When Lea was 7, she and Mom were talking about time machines. Mom figured they�
 
 > I love brother just the way he is. He smiles when I sing, and every time he sees me, he is happy. Because of Adam, I know so much about the brain, you learned how to take care of him, and just think of how many babies are going to live because Dad can teach them to float. Everyone loves Adam, and we are all better and smarter people because of him.
 >
-> *— Lea, age 7*
+> *Lea, age 7*
 
 That’s where our name comes from. Everything we do is because of Adam.
 
@@ -109,6 +109,6 @@ The summer after Adam drowned, our family and our hometown of Jean Lafitte, Loui
 
 > Our village shines just as bright as the fireflies’ village.
 >
-> *— Mom*
+> *Mom*
 
 **Every June 5, we wear blue** for Adam’s hope, his strength, and every family we can reach. We’d love for you to wear it with us.

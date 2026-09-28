@@ -5,7 +5,7 @@
 #
 # The site will then be live at https://avemath.github.io/BcofADAM/
 # After you connect a custom domain (Settings → Pages → Custom domain), the
-# workflow picks it up automatically — no code changes needed.
+# workflow picks it up automatically, no code changes needed.
 name: Deploy site
 
 on:

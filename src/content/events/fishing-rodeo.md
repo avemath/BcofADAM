@@ -1,5 +1,5 @@
 ---
-title: Adam's Fishing Rodeo
+title: Adam’s Fishing Rodeo
 kind: Community
 date: ""
 when: Summer 2018
