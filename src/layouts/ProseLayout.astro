@@ -5,6 +5,7 @@ import BaseLayout from './BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import { withBase } from '../lib/url';
 import { withFigures } from '../lib/figures';
+import { withPlaceholders } from '../lib/placeholders';
 
 interface Props {
   slug: string;
@@ -13,7 +14,7 @@ const entry = await getEntry('pages', Astro.props.slug);
 if (!entry) throw new Error(`Missing src/content/pages/${Astro.props.slug}.md`);
 const { title, eyebrow, lede, description } = entry.data;
 
-const html = withFigures(withBase(entry.rendered?.html ?? ''));
+const html = withPlaceholders(withFigures(withBase(entry.rendered?.html ?? '')));
 ---
 
 <BaseLayout title={title} description={description ?? lede}>
