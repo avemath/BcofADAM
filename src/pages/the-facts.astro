@@ -65,9 +65,13 @@ import { url } from '../lib/url';
   .fact-group .grid {
     margin-top: 28px;
   }
+  /* Number, then the bar, then what it means. Sources line up along the bottom. */
   .fact {
-    border-top: 4px solid var(--aqua);
-    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .fact .source {
+    margin-top: auto;
   }
   .fact__stat {
     font-family: var(--font-display);
@@ -75,7 +79,9 @@ import { url } from '../lib/url';
     font-weight: 600;
     line-height: 1;
     color: var(--ocean);
-    margin-bottom: 12px;
+    padding-bottom: 16px;
+    border-bottom: 4px solid var(--aqua);
+    margin-bottom: 16px;
   }
   .fact__label {
     font-weight: 600;
