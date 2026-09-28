@@ -29,7 +29,7 @@ Follow Adam's journey on Facebook: [Adam's Village of Hope](https://www.facebook
 
 ## What's on the site
 
-- **Home**: "Drowning is silent. We won't be." Plus the key facts, Adam, a live "time on this page" clock, an interactive backyard where you build the layers of protection, Dad's ISR lessons, our events and our Facebook feed
+- **Home**: "Drowning is silent. We won't be." Plus the key facts, "Not just pools. Not just summer." (bathtubs, buckets, nighttime, winter clothes), Adam, a live "time on this page" clock, an interactive backyard where you build the layers of protection, Dad's ISR lessons, our events and our Facebook feed
 - **Adam's Story**, told by me
 - **Water Safety**: the seven layers of protection
 - **ISR Swim Lessons**: what Infant Swimming Resource is, why it matters so much to us, Dad's program, and a search for certified instructors near you

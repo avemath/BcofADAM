@@ -1,11 +1,11 @@
 ---
-title: Because of ADAM Fishing Rodeo
-kind: Fundraiser
+title: Adam's Fishing Rodeo
+kind: Community
 date: ""
-when: ""
-location: ""
-summary: Families out on the water, fishing for a good cause. Our fishing rodeo raises money and puts water safety in front of every family who comes out.
-highlight: ""
+when: Summer 2018
+location: Jean Lafitte, Louisiana
+summary: "Our family and our hometown of Jean Lafitte threw a fishing rodeo for Adam, with shirts, trophies, raffles, auctions, music and food, all donated. It paid for his first stem cell treatment at Duke. It came before Because of ADAM, and it showed us what a village can do."
+highlight: "#WereTheVillage"
 photo: ""
 link: ""
 linkLabel: ""

@@ -3,6 +3,7 @@ import homeJson from './home.json';
 import factsJson from './facts.json';
 import resourcesJson from './resources.json';
 import teamJson from './team.json';
+import anywhereJson from './anywhere.json';
 
 export interface Fact {
   stat: string;
@@ -22,6 +23,16 @@ export interface Resource {
   url: string;
   description: string;
 }
+export interface AnywherePlace {
+  icon: string;
+  title: string;
+  text: string;
+  tip?: string;
+  source?: string;
+  sourceUrl?: string;
+  link?: string;
+  linkLabel?: string;
+}
 export interface TeamMember {
   name: string;
   role: string;
@@ -37,3 +48,4 @@ export const factGroups: { title: string; intro?: string; facts: Fact[] }[] = fa
 export const survivorResources: Resource[] = resourcesJson.survivor;
 export const resourceGroups: { title: string; items: Resource[] }[] = resourcesJson.groups;
 export const team: TeamMember[] = teamJson;
+export const anywhere: Omit<typeof anywhereJson, 'places'> & { places: AnywherePlace[] } = anywhereJson;

@@ -118,6 +118,67 @@ content:
         type: string
 
   # ───────────────────────────── Pages ─────────────────────────────
+  - name: anywhere
+    label: 🌙 Home page — Anywhere, anytime
+    type: file
+    path: src/data/anywhere.json
+    format: json
+    fields:
+      - name: eyebrow
+        label: Small label above the heading
+        type: string
+      - name: title
+        label: Heading
+        type: string
+      - name: rotatePrefix
+        label: Start of the moving line
+        type: string
+        description: For example "It can happen in"
+      - name: rotateWords
+        label: Words that flip by
+        type: string
+        list: true
+        description: They flip by one at a time when someone scrolls to this part of the page. The last one stays on screen.
+      - name: lede
+        label: Intro
+        type: text
+      - name: places
+        label: Places & times
+        type: object
+        list: true
+        fields:
+          - name: icon
+            label: Icon (one emoji)
+            type: string
+          - name: title
+            label: Title
+            type: string
+          - name: text
+            label: What to know
+            type: text
+          - name: tip
+            label: What helps
+            type: text
+          - name: source
+            label: Source (needed for any number)
+            type: string
+          - name: sourceUrl
+            label: Source link
+            type: string
+          - name: link
+            label: Link to another page (optional)
+            type: string
+            description: For example /swim-lessons
+          - name: linkLabel
+            label: Link text
+            type: string
+      - name: quote
+        label: Quote at the bottom
+        type: text
+      - name: quoteBy
+        label: Who said it
+        type: string
+
   - name: pages
     label: 📄 Pages
     type: group
