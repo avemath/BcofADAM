@@ -561,6 +561,12 @@ content:
             type: string
           - name: sourceUrl
             type: string
+          - name: source2
+            label: Second source (optional)
+            type: string
+          - name: sourceUrl2
+            label: Second source link
+            type: string
       - name: groups
         label: The Facts page sections
         type: object

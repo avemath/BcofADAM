@@ -21,6 +21,8 @@ export interface Risk {
   body: string;
   source?: string;
   sourceUrl?: string;
+  source2?: string;
+  sourceUrl2?: string;
 }
 export interface Resource {
   name: string;

@@ -53,7 +53,7 @@ export const layers: Layer[] = [
     ],
     tips: [
       'Put alarms on every door and window that opens toward the pool. Code-compliant door alarms (UL 2017) sound within seconds of the door opening.',
-      'In Pennsylvania, building code still lets the house be one side of the pool barrier if doors to the pool have alarms. A four-sided fence is safer.',
+      'In Pennsylvania, building code still lets the house be one side of the pool barrier if doors to the pool have alarms (or the pool has a certified safety cover). A four-sided fence is safer.',
       'Add a pool alarm or a wearable wristband alarm as an extra layer.',
       'Test alarms regularly and keep spare batteries on hand.',
       'Make “alarms stay on” a house rule, especially when you have guests.',
@@ -96,7 +96,7 @@ export const layers: Layer[] = [
     short: 'U.S. Coast Guard-approved, fitted and fastened.',
     body: [
       'Weak swimmers and young children should wear a U.S. Coast Guard-approved life jacket around open water, on boats and at the beach.',
-      'Air-filled toys like water wings, noodles and inner tubes are toys. They aren’t safety devices, and they can give adults a false sense of security.',
+      'Air-filled toys like water wings, noodles and inner tubes are toys. They aren’t safety devices, and they can slip off.',
     ],
     tips: [
       'Check the label for U.S. Coast Guard approval and the right weight range.',
