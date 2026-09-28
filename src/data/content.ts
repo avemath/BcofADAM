@@ -7,6 +7,7 @@ import anywhereJson from './anywhere.json';
 import aboutJson from './about.json';
 import isrJson from './isr.json';
 import pediatriciansJson from './pediatricians.json';
+import checklistJson from './checklist.json';
 
 export interface Fact {
   stat: string;
@@ -74,3 +75,13 @@ export const pediatricians: {
   policyUrl?: string;
 } = pediatriciansJson;
 export const anywhere: Omit<typeof anywhereJson, 'places'> & { places: AnywherePlace[] } = anywhereJson;
+/** Printable home water safety checklist (/checklist). The Studio drops empty lists, so they default to []. */
+export const checklist = {
+  title: checklistJson.title ?? 'Home water safety checklist',
+  intro: checklistJson.intro ?? '',
+  sections: (checklistJson.sections ?? []).map((s: { title: string; items?: string[] }) => ({ title: s.title, items: s.items ?? [] })),
+  sitterTitle: checklistJson.sitterTitle ?? 'For babysitters and grandparents',
+  sitterIntro: checklistJson.sitterIntro ?? '',
+  sitterItems: (checklistJson.sitterItems ?? []) as string[],
+  sitterBlanks: (checklistJson.sitterBlanks ?? []) as string[],
+};

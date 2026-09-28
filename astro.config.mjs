@@ -17,10 +17,11 @@ export default defineConfig({
   trailingSlash: 'ignore',
   integrations: [
     sitemap({
-      // Keep the Studio shortcut, the 404 page (and Donate, until there's a donation link) out of Google.
+      // Keep the Studio shortcut, the 404 page, the print-only checklist (and Donate, until there's a donation link) out of Google.
       filter: (page) =>
         !page.includes('/studio') &&
         !page.includes('/404') &&
+        !page.includes('/checklist') &&
         ((settings.donateUrl ?? '').trim() !== '' || !page.includes('/donate')),
     }),
     // Warns about TODOs and review boxes in preview; stops the build if launchReady is on and any remain.
