@@ -1,0 +1,25 @@
+---
+/**
+ * Privacy-friendly analytics, set in the Studio (Site settings → Analytics).
+ * All three options count visits without cookies. Nothing loads in local
+ * development, or when the provider is "none" or the site ID is empty.
+ */
+import { site } from '../data/site';
+
+const provider = site.analyticsProvider;
+const id = site.analyticsSite.trim();
+const on = import.meta.env.PROD && provider !== 'none' && id !== '';
+---
+
+{on && provider === 'plausible' && <script is:inline defer data-domain={id} src="https://plausible.io/js/script.js" />}
+{on && provider === 'fathom' && <script is:inline defer data-site={id} src="https://cdn.usefathom.com/script.js" />}
+{
+  on && provider === 'cloudflare' && (
+    <script
+      is:inline
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon={JSON.stringify({ token: id })}
+    />
+  )
+}

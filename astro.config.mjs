@@ -8,7 +8,7 @@ import settings from './src/data/settings.json' with { type: 'json' };
 // deploy workflow (.github/workflows/deploy.yml). Locally they fall back to
 // the values below. Once you connect a custom domain (e.g. becauseofadam.org),
 // GitHub Pages reports an empty base path and everything keeps working.
-const site = process.env.SITE_URL || 'http://localhost:4321';
+const site = process.env.SITE_URL || 'https://becauseofadam.org';
 const base = process.env.BASE_PATH || '/';
 
 export default defineConfig({

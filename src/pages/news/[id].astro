@@ -14,7 +14,7 @@ const html = withBase(post.rendered?.html ?? '');
 const fmt = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeZone: 'UTC' });
 ---
 
-<BaseLayout title={post.data.title} description={post.data.summary}>
+<BaseLayout title={post.data.title} description={post.data.summary} type="Article" published={post.data.date}>
   <PageHero eyebrow={fmt.format(post.data.date)} title={post.data.title} lede={post.data.summary} />
   <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
     <div class="wrap">

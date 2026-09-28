@@ -27,7 +27,11 @@ const ledeParts = story.heroLede.split('#1 cause of death');
 const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upcoming.includes(e))].slice(0, 3);
 ---
 
-<BaseLayout>
+<BaseLayout
+  documentTitle={`${site.name} | Water Safety and Drowning Prevention in PA`}
+  shareTitle={`${site.name}: ${site.tagline}`}
+  description="Drowning is the #1 cause of death for kids ages 1 to 4. Adam survived. Learn the layers of protection that keep children safe around water."
+>
   <!-- HERO -->
   <section class="hero">
     <div class="hero__caustics" aria-hidden="true"></div>
