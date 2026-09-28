@@ -19,7 +19,7 @@ Most of Adam's story on the website comes straight from Mom's Facebook posts (se
 10. A **photo** of you teaching (with the parents' OK for any kids in it).
 
 ## Events
-11. The **2018 fishing rodeo** in Jean Lafitte: the exact date and a photo or two. **Were there any rodeos after 2020** that raised money for Because of ADAM? For each **cornhole tournament**: the year, where, about how much it raised, and how many people or teams came. Any photos? And the **July 2021 booth**: was it at Duncansville Community Days, like the July 17 tournament? And what is **ADAMs Hope** (the firefly logo on the 2021 flyer)?
+11. The **2018 fishing rodeo** in Jean Lafitte: the exact date and a photo or two. **Were there any rodeos after 2020** that raised money for Because of ADAM? For each **cornhole tournament**: the year, where, about how much it raised, and how many people or teams came. Any photos? And the **July 2021 booth**: was it at Duncansville Community Days, like the July 17 tournament?
 12. Any other events we should list (Wear Blue June 5, water safety days, talks at schools or daycares)?
 
 ## The nonprofit

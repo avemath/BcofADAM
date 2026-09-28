@@ -97,11 +97,32 @@ Everything we still need to do to get Because of ADAM and the website fully up a
 - [ ] Everyone bookmarks `/studio` on the website
 
 ### Step 2: Your own web address
-- [ ] Buy the domain. On 2026-09-28 these all showed as **available**: `becauseofadam.org` (recommended), `becauseofadam.com`, `adamsvillageofhope.org`. About $8–12/yr for a .org at [Cloudflare Registrar](https://www.cloudflare.com/products/registrar/) or [Porkbun](https://porkbun.com/). Buy the **.org** as the main one and the **.com** so no one else takes it
-- [ ] In GitHub **Settings → Pages → Custom domain**, enter `becauseofadam.org`, then add the DNS records GitHub shows at our registrar ([guide](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site))
-- [ ] Tick **Enforce HTTPS** once it's available (Google Ad Grants requires HTTPS)
-- [ ] Point the `.com` to the `.org` (a redirect at the registrar)
-- [ ] Re-run the "Deploy site" workflow so links use the new address
+We're using **[Porkbun](https://porkbun.com/)**: $7.98 for the first year of a .org, $11.84/yr after that, with free WHOIS privacy (our address stays private) and free email forwarding. [Cloudflare Registrar](https://www.cloudflare.com/products/registrar/) is just as good on price ($8.50, then $11.20/yr, no markup ever), but its dashboard is more technical, and its orange-cloud "proxy" setting has to be turned off for GitHub Pages. Skip GoDaddy, Network Solutions and website-builder bundles: cheap first year, expensive renewals and lots of upsells. *(Prices checked September 28, 2026. `becauseofadam.org` and `becauseofadam.com` were both still unregistered.)*
+
+- [ ] **Make the Porkbun account with bcofadam@gmail.com**, not a personal email, and turn on two-factor sign-in. Put the login in a place at least one other family member can get to. If the domain ever lapses, someone else can buy it
+- [ ] Buy **becauseofadam.org** (our main address) and **becauseofadam.com** (so no one else takes it). About $20 for both the first year
+- [ ] At checkout: put **Because of ADAM** as the organization, register for **2+ years**, and leave **auto-renew** and **domain lock** on
+- [ ] In GitHub: **Settings → Pages → Custom domain** → `becauseofadam.org` → **Save**
+- [ ] In Porkbun: **Domain Management → becauseofadam.org → DNS**. Delete Porkbun's default "parked" records, then add ([GitHub's guide](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)):
+
+  | Type | Host | Answer |
+  |---|---|---|
+  | A | *(blank)* | 185.199.108.153 |
+  | A | *(blank)* | 185.199.109.153 |
+  | A | *(blank)* | 185.199.110.153 |
+  | A | *(blank)* | 185.199.111.153 |
+  | AAAA | *(blank)* | 2606:50c0:8000::153 |
+  | AAAA | *(blank)* | 2606:50c0:8001::153 |
+  | AAAA | *(blank)* | 2606:50c0:8002::153 |
+  | AAAA | *(blank)* | 2606:50c0:8003::153 |
+  | CNAME | www | avemath.github.io |
+
+- [ ] **Verify the domain** in GitHub (your profile **Settings → Pages → Add a domain**, then add the TXT record it shows in Porkbun). This stops anyone else from ever pointing it at their own GitHub site
+- [ ] Wait for GitHub's DNS check to turn green (minutes to a few hours), then tick **Enforce HTTPS** (Google Ad Grants requires HTTPS)
+- [ ] In Porkbun, forward **becauseofadam.com** to `https://becauseofadam.org` (the domain's **URL Forwarding** option)
+- [ ] Set up free **email forwarding** in Porkbun, e.g. `hello@becauseofadam.org` → bcofadam@gmail.com, and put that address in **Studio → Site settings → Contact email**
+- [ ] Re-run the **Deploy site** workflow (Actions → Deploy site → Run workflow). The site picks up the new address on its own, and every link moves from `avemath.github.io/BcofADAM` to `becauseofadam.org`
+- [ ] Add the new address to the Facebook page intro, the pinned post and our Water Watcher cards
 
 ### Step 3: Email, forms and analytics
 - [ ] **Email on our domain** (e.g. `hello@becauseofadam.org`): Google Workspace for Nonprofits is **free** once we're verified. Apply through [Google for Nonprofits](https://www.google.com/nonprofits/) *before* starting any paid Workspace trial. Put the address in the **Studio → Site settings → Contact email**
