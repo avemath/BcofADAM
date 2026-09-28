@@ -57,24 +57,28 @@ content:
         label: YouTube link
         type: string
       - name: location
-        label: Location shown in the footer
+        label: Where we're based
         type: string
+        description: Shown in the footer and used across the site (currently "Blair County, Pennsylvania").
       - name: taxExempt
-        label: We have our 501(c)(3) letter from the IRS
+        label: We're an IRS-approved 501(c)(3)
         type: boolean
-        description: Only turn this on once the IRS approves us. It lets the site say donations are tax-deductible.
+        description: Shows "Because of ADAM is a 501(c)(3) nonprofit organization. EIN ..." in the footer and on the About and Donate pages.
       - name: ein
         label: EIN (tax ID number)
         type: string
+        description: Replace {{TODO: EIN}} with our EIN, like 12-3456789. The site can't launch until this is filled in.
       - name: launchReady
         label: Launch the site (removes the "Preview" banner and lets Google find us)
         type: boolean
+        description: The site won't publish with this on while any {{TODO}} or "Family, please review" box is left. If a save doesn't show up, check the Actions tab on GitHub for the list.
       - name: name
         label: Organization name
         type: string
       - name: tagline
-        label: What ADAM stands for
+        label: Full name (what ADAM stands for)
         type: string
+        description: Allies in the Drowning Awareness Movement. Used in page titles, the footer, the About page and search results.
       - name: description
         label: Short description (used by Google and link previews)
         type: text

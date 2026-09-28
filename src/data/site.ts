@@ -14,6 +14,14 @@ export const site = {
   },
 };
 
+/** The EIN from the Studio, or a visible placeholder until it's filled in. */
+export const ein = site.ein.trim() || '{{TODO: EIN}}';
+
+/** "Because of ADAM is a 501(c)(3) nonprofit organization. EIN: …" Shown only when taxExempt is on. */
+export const nonprofitLine = site.taxExempt
+  ? `${site.name} is a 501(c)(3) nonprofit organization. EIN: ${ein}.`
+  : '';
+
 /** True once a donation link has been added in the Studio. */
 export const hasDonate = site.donateUrl.trim() !== '';
 

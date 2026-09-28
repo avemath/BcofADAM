@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
-import { site, hasDonate } from '../data/site';
+import { site, hasDonate, nonprofitLine } from '../data/site';
 import { url } from '../lib/url';
 
 // No donation link yet? Send visitors to Get Involved instead of a dead end.
@@ -67,7 +67,7 @@ const impact = [
         <p class="source" style="margin-top: 24px">
           {
             site.taxExempt
-              ? `${site.name} is a 501(c)(3) nonprofit organization${site.ein ? ` (EIN ${site.ein})` : ''}. Donations are tax-deductible to the extent allowed by law.`
+              ? `${nonprofitLine} Donations are tax-deductible to the extent allowed by law.`
               : 'Our 501(c)(3) tax-exempt status isn’t confirmed yet, so please don’t count gifts as tax-deductible for now. We’ll update this page when it is.'
           }
         </p>
