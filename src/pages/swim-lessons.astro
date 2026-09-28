@@ -32,7 +32,7 @@ const { title, eyebrow, lede, description } = entry.data;
 
       <aside class="isr-aside">
         <div id="dad" class="program card">
-          {isr.photo && <img src={url(isr.photo)} alt={isr.photoAlt || 'Our dad teaching an ISR lesson'} loading="lazy" />}
+          {isr.photo && <img src={url(isr.photo)} alt={isr.photoAlt || 'Our dad teaching an ISR lesson'} data-missing-alt={!isr.photoAlt || undefined} loading="lazy" />}
           <p class="program__label">Our dad teaches ISR</p>
           <h2 class="program__name">{isr.programName}</h2>
           <p>{isr.blurb}</p>

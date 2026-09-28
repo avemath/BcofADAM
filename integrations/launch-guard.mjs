@@ -5,8 +5,8 @@
  *
  * - "Family, please review" boxes: always counted and reported.
  * - {{TODO ...}} placeholders (including the EIN), a missing contact email or
- *   location, and review boxes: while the site is in preview (launchReady is
- *   false) these are only warnings. Once launchReady is true, any of them
+ *   location, photos with no description (alt text), and review boxes: while
+ *   the site is in preview (launchReady is false) these are only warnings. Once launchReady is true, any of them
  *   stops the build, so the live site stays on the last good version.
  */
 import fs from 'node:fs';
@@ -53,6 +53,8 @@ export default function launchGuard(settings) {
         const todos = new Map();
         /** @type {Map<string, number>} */
         const reviews = new Map();
+        /** @type {Set<string>} */
+        const missingAlt = new Set();
 
         for (const file of htmlFiles(root)) {
           const page = '/' + path.relative(root, file).replace(/\\/g, '/').replace(/index\.html$/, '');
@@ -60,6 +62,10 @@ export default function launchGuard(settings) {
           let boxes = 0;
           for (const marker of REVIEW_MARKERS) boxes += (html.match(marker) || []).length;
           if (boxes) reviews.set(page, boxes);
+          for (const img of html.match(/<img\b[^>]*\bdata-missing-alt\b[^>]*>/gi) || []) {
+            const src = img.match(/\bsrc="([^"]+)"/i)?.[1] ?? '(unknown photo)';
+            missingAlt.add(`${src} on ${page}`);
+          }
           for (const todo of plain(html).match(TODO_PATTERN) || []) {
             if (!todos.has(todo)) todos.set(todo, new Set());
             todos.get(todo)?.add(page);
@@ -75,6 +81,7 @@ export default function launchGuard(settings) {
           const list = [...pages];
           problems.push(`${todo} on ${list.slice(0, 4).join(', ')}${list.length > 4 ? ` and ${list.length - 4} more pages` : ''}`);
         }
+        for (const photo of missingAlt) problems.push(`Photo with no description (alt text): ${photo}`);
         const reviewTotal = [...reviews.values()].reduce((a, b) => a + b, 0);
         if (reviewTotal) {
           problems.push(

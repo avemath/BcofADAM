@@ -8,7 +8,8 @@ export function withFigures(html: string): string {
     /<p>\s*(<img\b[^>]*>)\s*<\/p>(?:\s*<p>\s*<em>([\s\S]*?)<\/em>\s*<\/p>)?/g,
     (_match, img: string, caption?: string) => {
       const plain = (caption ?? '').replace(/<[^>]+>/g, '').replace(/"/g, '&quot;');
-      let tag = img.replace(/\salt=""/, plain ? ` alt="${plain}"` : ' alt=""');
+      // No description and no caption: still flagged, so the launch guard can list it.
+      let tag = img.replace(/\salt=""/, plain ? ` alt="${plain}"` : ' alt="" data-missing-alt');
       if (!/\bloading=/.test(tag)) tag = tag.replace(/^<img\b/, '<img loading="lazy" decoding="async"');
       return `<figure class="story-figure">${tag}${caption ? `<figcaption>${caption}</figcaption>` : ''}</figure>`;
     },

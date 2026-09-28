@@ -511,6 +511,10 @@ content:
       - name: photo
         label: Photo
         type: image
+      - name: photoAlt
+        label: Describe the photo (needed for every photo)
+        type: string
+        description: For people who can't see it, e.g. "Mom and Adam at the beach". The site won't go live while a photo has no description.
 
   - name: facts
     label: 📊 Statistics (every number needs a source)

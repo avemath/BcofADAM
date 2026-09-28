@@ -23,7 +23,7 @@ const uid = Math.random().toString(36).slice(2, 8);
 <figure class:list={['photo', { 'photo--natural': natural }]} style={`--ratio:${ratio}`}>
   {
     src ? (
-      <img src={url(src)} alt={alt} loading="lazy" decoding="async" />
+      <img src={url(src)} alt={alt} data-missing-alt={!alt.trim() || undefined} loading="lazy" decoding="async" />
     ) : (
       <div class="photo__placeholder" role="img" aria-label="Illustration of sunlight on water">
         <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
