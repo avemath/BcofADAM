@@ -8,14 +8,18 @@ Everything we still need to do to get Because of ADAM and the website fully up a
 
 ## ⚠️ First: three things that shape everything else
 
-1. **Confirm whether Because of ADAM is already a legal nonprofit.** A WTAJ story says Mom and Dad "started a non-profit organization called 'Because of Adam'," but we couldn't find an EIN, IRS listing or Pennsylvania record in a quick online search. Check our own paperwork first, then:
-   - [ ] Look for an IRS EIN letter (CP 575) or IRS determination letter in our files
-   - [ ] Search [IRS Tax Exempt Organization Search](https://apps.irs.gov/app/eos/), including the **auto-revocation list** (status is revoked automatically after 3 years of missed 990-N filings)
-   - [ ] Search the [PA Department of State business search](https://file.dos.pa.gov/search/business)
-   - [ ] Search [ProPublica Nonprofit Explorer](https://projects.propublica.org/nonprofits/) and [Candid](https://www.guidestar.org/search)
-   - Then follow **Path A** (not registered yet) or **Path B** (already registered) in Phase 1.
+1. **We're already registered with the IRS, but we need to check our status right away.** ProPublica lists a 501(c)(3) for us:
+   - **Name on file:** "Becasue Of Adam Adolescent Drowning Awareness Movement". *Because* is misspelled, and it says **Adolescent**, not **Allies**.
+   - **EIN:** 85-0723376 · **IRS ruling:** December 2020 · Duncansville, PA
+   - **No annual filings are listed.** The IRS automatically revokes tax-exempt status after **3 years in a row** without a 990-N/990-EZ, so this is urgent.
+   - [ ] Look up EIN 85-0723376 in [IRS Tax Exempt Organization Search](https://apps.irs.gov/app/eos/), including the **auto-revocation list** ([ProPublica record](https://projects.propublica.org/nonprofits/organizations/850723376))
+   - [ ] If we were revoked, apply for **reinstatement** (IRS Rev. Proc. 2014-11; a 1023-EZ may qualify). A CPA or nonprofit attorney can help
+   - [ ] If we're still active, **file any missing 990-N e-Postcards** right away (free at IRS.gov)
+   - [ ] **Fix the name** with the IRS (a letter signed by an officer) and with PA if we incorporated there, so it reads *Because of ADAM: Allies in the Drowning Awareness Movement*
+   - [ ] Search the [PA Department of State business search](https://file.dos.pa.gov/search/business) to see whether we're a PA corporation and whether our annual reports are current
+   - Then follow **Path B** (already registered) in Phase 1.
 2. **Donations to a 501(c)(3) can't pay for Adam's own care.** That's "private benefit," and it can cost the organization its tax exemption. Keep personal medical fundraising (e.g. the Facebook page's `paypal.me/prayersforadam` link, or HBOT costs) completely separate, through a personal crowdfund or a special-needs trust. Nonprofit money has to serve the public mission: education, prevention tools, and support for *families in general*. We'll talk this through with an attorney before raising money. The website is already written with this in mind.
-3. **One name everywhere:** **Because of ADAM: Allies in the Drowning Awareness Movement.** Use exactly this in the legal filing, the logo and every social profile. The Facebook page's web address is still `@AdamsVillageofHope`; "Adam's Village of Hope" can stay as the name for our community. Heads up: **"Project ADAM"** is an unrelated CPR/AED program UPMC Children's runs in Blair County, so do a quick trademark search ([USPTO](https://tmsearch.uspto.gov/)) before paying for a logo.
+3. **One name everywhere:** **Because of ADAM: Allies in the Drowning Awareness Movement.** (Our IRS record still says "Adolescent," see #1.) Use exactly this in the legal filing, the logo and every social profile. The Facebook page's web address is still `@AdamsVillageofHope`; "Adam's Village of Hope" can stay as the name for our community. Heads up: **"Project ADAM"** is an unrelated CPR/AED program UPMC Children's runs in Blair County, so do a quick trademark search ([USPTO](https://tmsearch.uspto.gov/)) before paying for a logo.
 
 ---
 
@@ -67,7 +71,7 @@ Everything we still need to do to get Because of ADAM and the website fully up a
 
 - [ ] Set up **automatic receipts**. The IRS requires a written acknowledgment for any single gift of **$250+**, and a quid-pro-quo disclosure when a donor gets something worth more than **$75** in return (gala tickets, merch bundles)
 - [ ] Decide on a simple **bookkeeping** system (a spreadsheet at first; Wave or QuickBooks for Nonprofits later) and who approves spending
-- [ ] Once 501(c)(3) is confirmed: in the **Studio → Site settings**, check the 501(c)(3) box and add our EIN. The site will then say "tax-deductible" everywhere automatically
+- [ ] Once our 501(c)(3) status is confirmed active: in the **Studio → Site settings**, check the 501(c)(3) box and add our EIN (85-0723376). The site will then say "tax-deductible" everywhere automatically
 - 💡 Message to use in 2026+: starting with 2026 taxes, people who *don't itemize* can deduct up to $1,000 (single) / $2,000 (married filing jointly) in cash gifts to charity
 
 ---

@@ -21,8 +21,8 @@ Our Facebook page: **[Because of ADAM (@AdamsVillageofHope)](https://www.faceboo
 | **After** | Flown to UPMC Children's Hospital of Pittsburgh. PICU, trach and feeding tube, and months away before coming home that fall. |
 | **Adam's injuries** | Anoxic brain injury, seizures, neuromuscular scoliosis (spinal growing rods since 2020), and hip/knee surgery plus a 7-week hospital stay with liver failure in 2024. |
 | **Adam today** | Can't move his body or talk, but sees, hears and understands. Uses an eye-gaze computer. School at home. Loves his swing, the ballpark, walks with his nurse, music, Mom's singing, Mickey, Pooh, Spider-Man and fast cars. |
-| **Because of ADAM** | We started it in 2020 as **"Because of ADAM: Allies in the Drowning Awareness Movement"**, to teach water safety "using the lessons of the past, education in the present, and generations of the future to end childhood drowning." |
-| **Dad** | Red Cross CPR instructor and certified ISR instructor (**Little Explorer Swim ISR**). |
+| **Because of ADAM** | We started it in 2020 as **"Because of ADAM: Allies in the Drowning Awareness Movement"** (a 2019 newsletter and our IRS record say "Adolescent Drowning Awareness Movement"; we use "Allies" now), to teach water safety "using the lessons of the past, education in the present, and generations of the future to end childhood drowning." |
+| **Dad** | Red Cross CPR instructor and certified ISR instructor (**Little Explorer Swim ISR**). Trained 8 weeks in Florida; nearly 100 kids through his lessons by 2022 (WTAJ). ISR's instructor map lists him in Duncansville. His old ISR web page (littleexplorerswim.com) no longer works, so we point people to his [Facebook page](https://www.facebook.com/LittleExplorerSwimISR/). |
 | **Mom** | Went to nursing school to care for kids with anoxic brain injuries. |
 
 ## The moments we use on the site
@@ -62,6 +62,14 @@ Those stay on Facebook, where people choose to follow along.
 - The **"Personal blog"** category and the **paypal.me/prayersforadam** link are from the early days. The PayPal link raises money for Adam's own care. That's fine on its own, but it has to stay completely separate from the nonprofit's donations (see the [launch checklist](LAUNCH-CHECKLIST.md)).
 - To-dos: add the website link to the page intro and a pinned post, and link posts back to pages on the site (pledge, ISR, events) so people take action.
 - Once a year, download a copy of the page (Settings → *Your Facebook information* → *Download your information*). It's Adam's history.
+
+## Our events so far
+
+- **Cornhole Tournament**, Saturday, Sept. 26, 2020, Duncansville: raised money for local ISR swim lessons and CPR education ([Facebook event](https://www.facebook.com/events/705135283403437/))
+- **Mardi Gras 2020**: family in Louisiana made parade throws to spread drowning awareness in Adam's honor
+- **Fishing rodeo(s)**: we still need to add the dates, place and results in the Studio
+- **Wear Blue on June 5**: every year
+- (The Oct. 2017 vendor fair in Duncansville raised money for Adam's own care, before the nonprofit existed, so it isn't listed as a Because of ADAM event.)
 
 ## News coverage we've had
 

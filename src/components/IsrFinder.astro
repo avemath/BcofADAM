@@ -1,29 +1,28 @@
 ---
 /**
- * "Find a certified ISR instructor near you." Sends the visitor to Infant
- * Swimming Resource's official instructor search. Only ISR-certified
- * instructors appear there.
+ * "Find a certified ISR instructor near you." Sends the visitor straight to
+ * the results in Infant Swimming Resource's official instructor locator
+ * (locator.infantswim.com/?address=16635). Only ISR-certified instructors
+ * appear there. If ISR ever changes the locator, update SEARCH_PAGE.
  */
-const SEARCH_PAGE = 'https://www.infantswim.com/find-an-instructor/';
+const SEARCH_PAGE = 'https://locator.infantswim.com/';
 ---
 
 <div class="finder">
   <span class="eyebrow">Find an instructor</span>
   <h2>Find a certified ISR instructor near you.</h2>
   <p class="lede">
-    Only certified ISR instructors can teach ISR Self-Rescue® lessons. Enter your ZIP code and we’ll take you to
-    Infant Swimming Resource’s official instructor search.
+    Only certified ISR instructors can teach ISR Self-Rescue® lessons. Type your ZIP code or town and we’ll take
+    you to Infant Swimming Resource’s official instructor map.
   </p>
-  <form class="finder__form" action={SEARCH_PAGE} method="get" target="_blank" data-isr-finder>
-    <label class="visually-hidden" for="isr-zip">Your ZIP code</label>
+  <form class="finder__form" action={SEARCH_PAGE} method="get" target="_blank" rel="noopener">
+    <label class="visually-hidden" for="isr-zip">Your ZIP code or town</label>
     <input
       id="isr-zip"
-      name="zip"
-      inputmode="numeric"
+      name="address"
       autocomplete="postal-code"
-      pattern="[0-9]{5}"
-      maxlength="5"
-      placeholder="ZIP code"
+      maxlength="80"
+      placeholder="ZIP code or town"
       required
     />
     <button class="btn" type="submit">Find instructors</button>
@@ -34,18 +33,6 @@ const SEARCH_PAGE = 'https://www.infantswim.com/find-an-instructor/';
   </p>
 </div>
 
-<script>
-  document.querySelectorAll<HTMLFormElement>('[data-isr-finder]').forEach((form) => {
-    form.addEventListener('submit', (e) => {
-      const zip = (form.elements.namedItem('zip') as HTMLInputElement).value.trim();
-      const target = form.dataset.searchUrl?.replace('{zip}', encodeURIComponent(zip));
-      if (target) {
-        e.preventDefault();
-        window.open(target, '_blank', 'noopener');
-      }
-    });
-  });
-</script>
 
 <style>
   .finder {
@@ -63,14 +50,14 @@ const SEARCH_PAGE = 'https://www.infantswim.com/find-an-instructor/';
   }
   .finder__form input {
     font: 600 1.2rem var(--font-body);
-    width: 11ch;
+    width: 16ch;
     padding: 12px 18px;
     border-radius: 999px;
     border: 2px solid rgb(255 255 255 / 0.4);
     background: rgb(255 255 255 / 0.95);
     color: var(--ink);
     text-align: center;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.04em;
   }
   .finder__form input:focus {
     outline: 3px solid var(--sun);
