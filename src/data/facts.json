@@ -8,13 +8,13 @@
     },
     {
       "stat": "7",
-      "label": "For every child lost to drowning, 7 more survive one and need emergency care. Kids like Adam.",
-      "source": "CDC",
-      "sourceUrl": "https://www.cdc.gov/drowning/data-research/facts/index.html"
+      "label": "For every child lost to drowning, 7 more survive one and need emergency care.",
+      "source": "CDC, 2026",
+      "sourceUrl": "https://www.cdc.gov/drowning/prevention/summer-swim-safety.html"
     },
     {
       "stat": "70%+",
-      "label": "More than 7 in 10 fatal child pool drownings happen at a home: their own, a grandparent’s, a friend’s or a neighbor’s.",
+      "label": "More than 7 in 10 fatal child pool drownings (2021–2023) happen at a home: their own, a grandparent’s, a friend’s or a neighbor’s.",
       "source": "CPSC, 2026 report",
       "sourceUrl": "https://www.cpsc.gov/Newsroom/News-Releases/2026/CPSC-Report-Highlights-Persistent-Risk-of-Childhood-Drowning"
     },
@@ -34,9 +34,9 @@
     },
     {
       "stat": "~40%",
-      "label": "Nearly 4 in 10 drownings treated in emergency departments need hospital admission or transfer for more care, about 4 times the rate for all unintentional injuries.",
-      "source": "CDC",
-      "sourceUrl": "https://www.cdc.gov/drowning/data-research/facts/index.html"
+      "label": "Nearly 4 in 10 drownings treated in emergency departments need a hospital stay or transfer for more care. That’s 3 times the rate for other unintentional injuries.",
+      "source": "CDC, 2026",
+      "sourceUrl": "https://www.cdc.gov/drowning/prevention/summer-swim-safety.html"
     },
     {
       "stat": "5,900",
@@ -151,9 +151,9 @@
         },
         {
           "stat": "~40%",
-          "label": "Nearly 4 in 10 drownings treated in emergency departments need hospital admission or transfer for more care, about 4 times the rate for all unintentional injuries.",
-          "source": "CDC",
-          "sourceUrl": "https://www.cdc.gov/drowning/data-research/facts/index.html",
+          "label": "Nearly 4 in 10 drownings treated in emergency departments need a hospital stay or transfer for more care. That’s 3 times the rate for other unintentional injuries.",
+          "source": "CDC, 2026",
+          "sourceUrl": "https://www.cdc.gov/drowning/prevention/summer-swim-safety.html",
           "detail": ""
         },
         {
