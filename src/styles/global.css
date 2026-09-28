@@ -407,6 +407,12 @@ a:hover {
 
 /* ---------- Misc ---------- */
 
+/* Photos get wrapped in <picture> at build time (integrations/optimize-images.mjs);
+   this keeps layouts treating the <img> as if it were on its own. */
+picture {
+  display: contents;
+}
+
 .visually-hidden {
   position: absolute !important;
   width: 1px;
