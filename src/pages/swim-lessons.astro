@@ -4,6 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import CtaBand from '../components/CtaBand.astro';
 import IsrFinder from '../components/IsrFinder.astro';
+import PediatriciansSay from '../components/PediatriciansSay.astro';
 import { isr } from '../data/content';
 import { url, withBase } from '../lib/url';
 import { withPlaceholders } from '../lib/placeholders';
@@ -24,7 +25,10 @@ const { title, eyebrow, lede, description } = entry.data;
 
   <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
     <div class="wrap isr-layout">
-      <article class="prose" set:html={html} />
+      <div class="isr-main">
+        <PediatriciansSay />
+        <article class="prose" set:html={html} />
+      </div>
 
       <aside class="isr-aside">
         <div id="dad" class="program card">
@@ -99,6 +103,11 @@ const { title, eyebrow, lede, description } = entry.data;
     color: var(--on-dark);
     border-top: 1px solid rgb(255 255 255 / 0.25);
     padding-top: 14px;
+  }
+  .isr-main {
+    display: grid;
+    gap: 40px;
+    min-width: 0;
   }
   .finder-section {
     scroll-margin-top: 80px;

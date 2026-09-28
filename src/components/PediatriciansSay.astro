@@ -1,0 +1,105 @@
+---
+/**
+ * "What pediatricians say": the AAP's advice on swim lessons, shown next to
+ * our ISR content so parents get the full picture. Edit it in the Studio
+ * (Pages → What pediatricians say).
+ */
+import { pediatricians as p } from '../data/content';
+
+interface Props {
+  /** Heading level, so it fits the page's outline. */
+  level?: 2 | 3;
+}
+const { level = 2 } = Astro.props;
+const Heading = `h${level}` as 'h2' | 'h3';
+---
+
+<aside class="peds" aria-labelledby="peds-title">
+  <p class="peds__icon" aria-hidden="true">🩺</p>
+  <div>
+    <Heading class="peds__title" id="peds-title">{p.title || 'What pediatricians say'}</Heading>
+    <p>{p.summary}</p>
+    {
+      p.points && p.points.length > 0 && (
+        <ul>
+          {p.points.map((point) => (
+            <li>{point}</li>
+          ))}
+        </ul>
+      )
+    }
+    <p class="peds__source">
+      {
+        p.sourceUrl && (
+          <a href={p.sourceUrl} rel="noopener" target="_blank">
+            Source: {p.source || 'American Academy of Pediatrics'}
+            <span class="visually-hidden"> (the AAP’s drowning prevention recommendations, opens in a new tab)</span>
+          </a>
+        )
+      }
+      {
+        p.policyUrl && (
+          <>
+            {' · '}
+            <a href={p.policyUrl} rel="noopener" target="_blank">
+              Read the full policy<span class="visually-hidden"> from the American Academy of Pediatrics (opens in a new tab)</span>
+            </a>
+          </>
+        )
+      }
+    </p>
+  </div>
+</aside>
+
+<style>
+  .peds {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    background: #fff;
+    color: var(--ink);
+    border: 2px solid var(--line);
+    border-left: 6px solid var(--ocean);
+    border-radius: var(--radius);
+    padding: 22px 24px;
+    box-shadow: var(--shadow);
+  }
+  .peds__icon {
+    flex: none;
+    font-size: 1.8rem;
+    line-height: 1;
+    margin: 0;
+  }
+  .peds__title {
+    font-size: 1.3rem;
+    margin: 0 0 0.4em;
+    color: var(--deep);
+  }
+  .peds p,
+  .peds li {
+    font-size: 1rem;
+    color: var(--ink);
+  }
+  .peds ul {
+    margin: 0.6em 0;
+    padding-left: 1.2em;
+  }
+  .peds li + li {
+    margin-top: 0.3em;
+  }
+  .peds__source {
+    margin: 0.8em 0 0;
+    font-size: 0.9rem !important;
+  }
+  .peds__source a {
+    color: var(--ocean);
+    font-weight: 700;
+  }
+  @media (max-width: 480px) {
+    .peds {
+      flex-direction: column;
+      gap: 8px;
+      padding: 18px;
+    }
+  }
+</style>

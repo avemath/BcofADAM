@@ -35,6 +35,15 @@ This isn’t “mommy and me” splash time. It’s survival skills, taught one 
 - **Highly trained instructors.** ISR instructors train for weeks in the water with an ISR Master Instructor, study child development and water safety, and must recertify every single year.
 - **Refreshers** as kids grow, so their skills keep up with their bigger bodies.
 
+## Other ways to find swim lessons
+
+ISR is one kind of lesson, and it isn’t offered everywhere. Any good swim lesson adds a layer of protection. Here are other places to look:
+
+- **American Red Cross.** [Find a Red Cross Learn-to-Swim provider](https://www.redcross.org/take-a-class/swimming/learn-to-swim-providers) near you.
+- **Your local YMCA.** Near us, the [Blair Regional YMCA](https://blairregionalymca.org/programs/swimming-lessons/) in Hollidaysburg offers group, semi-private and private swim lessons.
+- **Parks and recreation and community pools.** Check with your town’s recreation department or public pool. {{TODO: local lesson partners}}
+- **Adapted lessons.** The [American Academy of Pediatrics](https://www.healthychildren.org/English/safety-prevention/at-play/Pages/Swim-Lessons.aspx) says swim lessons can be adapted for children with special health needs and developmental disabilities, such as autism, and that these programs reduce drowning risk. Ask local pools about adapted or one-on-one lessons.
+
 ## One layer, not the only layer
 
 Swim skills are one layer of protection. They never replace the others, and ISR says the same thing: no child is ever “drown-proof,” and supervision is the first and most important defense.
