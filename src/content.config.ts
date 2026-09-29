@@ -8,6 +8,9 @@ import { z } from 'astro/zod';
  * break the website.
  */
 const text = () => z.string().nullish().transform((v) => v ?? '');
+/** A date that may be left empty in the Studio. */
+const optionalDate = () =>
+  z.union([z.coerce.date(), z.literal(''), z.null()]).optional().transform((v) => (v ? v : undefined));
 
 /** Long-form pages written in Markdown (Adam's story, ISR lessons, privacy). */
 const pages = defineCollection({
@@ -40,7 +43,9 @@ const events = defineCollection({
   schema: z.object({
     title: z.string(),
     kind: z.enum(['Fundraiser', 'Awareness', 'Swim & safety', 'Community']).catch('Fundraiser'),
-    date: z.union([z.coerce.date(), z.literal(''), z.null()]).optional().transform((v) => (v ? v : undefined)),
+    date: optionalDate(),
+    /** Last day, for events that run more than one day (like all of May for Water Safety Month). */
+    endDate: optionalDate(),
     when: text(),
     location: text(),
     summary: text(),

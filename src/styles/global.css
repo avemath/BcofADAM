@@ -59,8 +59,10 @@ html {
   *::before,
   *::after {
     animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
   }
 }
 
@@ -487,6 +489,11 @@ a.source {
   }
   body {
     background: #fff;
+  }
+  /* Sections that fade in on scroll print even if nobody scrolled to them. */
+  .js .reveal {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
 

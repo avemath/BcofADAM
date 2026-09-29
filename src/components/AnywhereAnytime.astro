@@ -6,7 +6,7 @@
 import { anywhere } from '../data/content';
 import { url } from '../lib/url';
 
-const words = anywhere.rotateWords.filter((w) => w.trim() !== '');
+const words = (anywhere.rotateWords ?? []).filter((w) => w?.trim());
 const last = words.at(-1) ?? '';
 // What screen readers hear instead of the moving line.
 const bare = (w: string) => w.trim().replace(/[.!]+$/, '');
@@ -41,7 +41,7 @@ const spoken =
     </p>
     <div class="grid grid--3 anywhere__grid">
       {
-        anywhere.places.map((p) => (
+        (anywhere.places ?? []).map((p) => (
           <article class="card anywhere__card reveal">
             <span class="anywhere__icon" aria-hidden="true">
               {p.icon}

@@ -50,7 +50,8 @@ const SEARCH_PAGE = 'https://locator.infantswim.com/';
   }
   .finder__form input {
     font: 600 1.2rem var(--font-body);
-    width: 16ch;
+    /* Wide enough for the whole "ZIP code or town" hint, which is also its visible label. */
+    width: min(100%, 20ch);
     padding: 12px 18px;
     border-radius: 999px;
     border: 2px solid rgb(255 255 255 / 0.4);

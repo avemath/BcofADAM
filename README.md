@@ -42,7 +42,7 @@ Hosting, DNS, security headers and email setup: [HOSTING_NOTES.md](HOSTING_NOTES
 
 ## How it's published
 
-- Every change made in the Studio, or merged into `main`, goes live automatically in about 2 minutes on GitHub Pages ([deploy.yml](.github/workflows/deploy.yml)). The site also rebuilds every Monday so upcoming events move to "past" on their own.
+- Every change made in the Studio, or merged into `main`, goes live automatically in about 2 minutes on GitHub Pages ([deploy.yml](.github/workflows/deploy.yml)). The site also rebuilds every morning so events move to "past" the day after they end.
 - Every proposed change is checked to make sure the site still builds ([ci.yml](.github/workflows/ci.yml)).
 - Once a month, every link on the site is checked, including every statistic's source ([links.yml](.github/workflows/links.yml)).
 

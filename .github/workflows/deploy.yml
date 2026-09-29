@@ -11,10 +11,11 @@ name: Deploy site
 on:
   push:
     branches: [main]
-  # Rebuild every Monday so events move from "Coming up" to "Past events" on their own,
-  # and yearly events (like Wear Blue on June 5) show their next date.
+  # Rebuild every morning (about 5 a.m. in Pennsylvania) so events move from "Coming up" to
+  # "Past events" the day after they end, and yearly events (like Wear Blue on June 5) show
+  # their next date. GitHub pauses scheduled runs after 60 days with no commits; see HOSTING_NOTES.md.
   schedule:
-    - cron: '23 10 * * 1'
+    - cron: '17 9 * * *'
   workflow_dispatch:
 
 permissions:

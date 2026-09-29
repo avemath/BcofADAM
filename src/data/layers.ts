@@ -9,7 +9,18 @@ export interface Layer {
   short: string;
   body: string[];
   tips: string[];
+  /** Shown under the tips on the Water Safety page. */
+  sources?: { name: string; url: string }[];
 }
+
+const CPSC_BARRIERS = {
+  name: 'CPSC Safety Barrier Guidelines for Residential Pools',
+  url: 'https://www.cpsc.gov/s3fs-public/pdfs/blk_media_SafetyBarrierGuidelinesResPools.pdf',
+};
+const AAP_2026 = {
+  name: 'American Academy of Pediatrics, 2026',
+  url: 'https://www.healthychildren.org/English/news/Pages/AAP-releases-updated-drowning-prevention-recommendations.aspx',
+};
 
 export const layers: Layer[] = [
   {
@@ -26,13 +37,14 @@ export const layers: Layer[] = [
       'Keep watching during breaks and cleanup, not just “swim time.”',
       'No alcohol, phones or books while you’re the Water Watcher.',
     ],
+    sources: [AAP_2026, { name: 'Safe Kids Worldwide', url: 'https://www.safekids.org/tip/swimming-safety-tips' }],
   },
   {
     id: 'barriers',
     title: 'Barriers: fence the pool on all four sides',
     short: 'A fence that separates the pool from the house and yard.',
     body: [
-      'Most toddlers who drown in home pools were not expected to be swimming. They got to the water when no one realized they were gone.',
+      'Toddlers can slip out of the house and reach the pool in seconds, often when no one realizes they’re gone. A fence is the layer that’s still there when that happens.',
       'An isolation fence surrounds the pool on all four sides and separates it from the house. Pool safety guidance calls for a fence at least 4 feet tall, hard to climb, with a gate that closes and latches by itself.',
     ],
     tips: [
@@ -42,6 +54,7 @@ export const layers: Layer[] = [
       'Never prop the gate open.',
       'Keep chairs, toys and planters away from the fence so children can’t climb them.',
     ],
+    sources: [CPSC_BARRIERS, AAP_2026],
   },
   {
     id: 'alarms',
@@ -58,6 +71,13 @@ export const layers: Layer[] = [
       'Test alarms regularly and keep spare batteries on hand.',
       'Make “alarms stay on” a house rule, especially when you have guests.',
     ],
+    sources: [
+      CPSC_BARRIERS,
+      {
+        name: 'Pennsylvania Code § 403.26',
+        url: 'https://www.pacodeandbulletin.gov/Display/pacode?file=%2Fsecure%2Fpacode%2Fdata%2F034%2Fchapter403%2Fs403.26.html',
+      },
+    ],
   },
   {
     id: 'covers',
@@ -73,13 +93,14 @@ export const layers: Layer[] = [
       'Make sure pool and spa drains have anti-entrapment covers.',
       'Remove ladders from above-ground pools when they’re not being used.',
     ],
+    sources: [CPSC_BARRIERS, { name: 'Pool Safely (CPSC)', url: 'https://www.poolsafely.gov/' }],
   },
   {
     id: 'skills',
     title: 'Swim skills: teach children, and adults too',
     short: 'Water competency for every age.',
     body: [
-      'The American Academy of Pediatrics supports swim lessons for most children starting after age 1. Research suggests lessons lower the risk for young children, but they don’t make any child “drown-proof.”',
+      'The American Academy of Pediatrics recommends swim lessons for children after their first birthday. Research suggests lessons lower the risk for young children, but they don’t make any child “drown-proof.”',
       'Adults need water skills too, both to keep themselves safe and to help someone else without becoming a second victim.',
     ],
     tips: [
@@ -89,6 +110,12 @@ export const layers: Layer[] = [
       'Practice in clothes and in different places (pool, lake, beach).',
       'Lessons add to supervision and barriers. They never replace them.',
     ],
+    sources: [
+      {
+        name: 'American Academy of Pediatrics: swim lessons',
+        url: 'https://www.healthychildren.org/English/safety-prevention/at-play/Pages/Swim-Lessons.aspx',
+      },
+    ],
   },
   {
     id: 'lifejackets',
@@ -96,12 +123,18 @@ export const layers: Layer[] = [
     short: 'U.S. Coast Guard-approved, fitted and fastened.',
     body: [
       'Weak swimmers and young children should wear a U.S. Coast Guard-approved life jacket around open water, on boats and at the beach.',
-      'Air-filled toys like water wings, noodles and inner tubes are toys. They aren’t safety devices, and they can slip off.',
+      'Water wings, pool noodles and inner tubes are toys. They aren’t safety devices, and they can slip off.',
     ],
     tips: [
       'Check the label for U.S. Coast Guard approval and the right weight range.',
       'Fasten every strap. It should not ride up over the chin.',
       'Keep a life jacket on children at open-water outings, even on shore.',
+    ],
+    sources: [
+      {
+        name: 'U.S. Coast Guard Boating Safety',
+        url: 'https://www.uscgboating.org/recreational-boaters/life-jacket-wear-wearing-your-life-jacket.php',
+      },
     ],
   },
   {
@@ -119,5 +152,6 @@ export const layers: Layer[] = [
       'Post emergency numbers and your home address near the pool.',
       'Teach everyone in the house to check the water first.',
     ],
+    sources: [AAP_2026, { name: 'American Red Cross: CPR classes', url: 'https://www.redcross.org/take-a-class/cpr' }],
   },
 ];

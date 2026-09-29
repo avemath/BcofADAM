@@ -23,7 +23,9 @@ const countWord = (n: number) =>
 const { upcoming } = splitEvents(events);
 // Home shows upcoming events first, then anything marked "Show on the home page".
 // Highlight the key phrase in the hero intro if it's there.
-const ledeParts = story.heroLede.split('#1 cause of death');
+const ledeParts = (story.heroLede ?? '').split('#1 cause of death');
+// The second survivors number (hospital stays) sits next to the survivors section.
+const survivorStat = nonfatal[1] ?? nonfatal[0];
 const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upcoming.includes(e))].slice(0, 3);
 ---
 
@@ -199,7 +201,7 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
       <div class="isr-card reveal">
         <p class="isr-card__label">Why this is personal</p>
         <p class="isr-card__name">Adam’s nearest ISR instructor was two hours away.</p>
-        <p>After Adam drowned, our dad became one, so families in {site.location} wouldn’t have to make that drive.</p>
+        <p>After Adam drowned, our dad became one. Wherever you live, ISR’s map lists every certified instructor near you.</p>
         <p class="isr-card__quote">“Skills before thrills. Sometimes there are no do-overs.”</p>
       </div>
       <div class="isr-peds reveal">
@@ -225,14 +227,18 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
           <a class="btn btn--ocean" href={url('/survivors-and-families')}>Support for families</a>
         </div>
       </div>
-      <div class="survivor-stat card reveal">
-        <p class="stat__num">{nonfatal[1].stat}</p>
-        <p>{nonfatal[1].label}</p>
-        <a class="source" href={nonfatal[1].sourceUrl} rel="noopener" target="_blank">
-          Source: {nonfatal[1].source}
-          <span class="visually-hidden"> for “{nonfatal[1].stat}” (opens in a new tab)</span>
-        </a>
-      </div>
+      {
+        survivorStat && (
+          <div class="survivor-stat card reveal">
+            <p class="stat__num">{survivorStat.stat}</p>
+            <p>{survivorStat.label}</p>
+            <a class="source" href={survivorStat.sourceUrl} rel="noopener" target="_blank">
+              Source: {survivorStat.source}
+              <span class="visually-hidden"> for “{survivorStat.stat}” (opens in a new tab)</span>
+            </a>
+          </div>
+        )
+      }
     </div>
   </section>
 

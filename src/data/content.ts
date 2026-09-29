@@ -8,6 +8,7 @@ import aboutJson from './about.json';
 import isrJson from './isr.json';
 import pediatriciansJson from './pediatricians.json';
 import checklistJson from './checklist.json';
+import quizJson from './quiz.json';
 
 export interface Fact {
   stat: string;
@@ -60,13 +61,13 @@ export interface IsrBox {
 }
 
 export const home = homeJson;
-export const headline: Fact[] = factsJson.headline;
-export const nonfatal: Fact[] = factsJson.nonfatal;
-export const risks: Risk[] = factsJson.risks;
-export const factGroups: { title: string; intro?: string; facts: Fact[] }[] = factsJson.groups;
-export const survivorResources: Resource[] = resourcesJson.survivor;
-export const resourceGroups: { title: string; items: Resource[] }[] = resourcesJson.groups;
-export const team: TeamMember[] = teamJson;
+export const headline: Fact[] = factsJson.headline ?? [];
+export const nonfatal: Fact[] = factsJson.nonfatal ?? [];
+export const risks: Risk[] = factsJson.risks ?? [];
+export const factGroups: { title: string; intro?: string; facts: Fact[] }[] = factsJson.groups ?? [];
+export const survivorResources: Resource[] = resourcesJson.survivor ?? [];
+export const resourceGroups: { title: string; items: Resource[] }[] = resourcesJson.groups ?? [];
+export const team: TeamMember[] = teamJson ?? [];
 export const about: { photo?: string; photoAlt?: string; caption?: string } = aboutJson;
 export const isr: IsrBox = isrJson;
 /** "What pediatricians say" box on the ISR page and the home page. */
@@ -88,4 +89,44 @@ export const checklist = {
   sitterIntro: checklistJson.sitterIntro ?? '',
   sitterItems: (checklistJson.sitterItems ?? []) as string[],
   sitterBlanks: (checklistJson.sitterBlanks ?? []) as string[],
+};
+
+export interface QuizQuestion {
+  question: string;
+  choices: string[];
+  answer: string;
+  explain: string;
+  source: string;
+  sourceUrl: string;
+}
+const quizData = quizJson as Partial<{
+  title: string;
+  intro: string;
+  questions: Partial<QuizQuestion>[];
+  certificateTitle: string;
+  certificateText: string;
+}>;
+/**
+ * Water safety quiz (/quiz). A question only shows when its answer matches one of its choices
+ * word for word, so a typo in the Studio skips that question instead of marking every answer wrong.
+ */
+export const quiz = {
+  title: quizData.title || 'How water safe is your family?',
+  intro: quizData.intro ?? '',
+  certificateTitle: quizData.certificateTitle || 'Water Safety Champion',
+  certificateText: quizData.certificateText ?? '',
+  questions: (quizData.questions ?? [])
+    .map((q) => ({
+      question: q.question?.trim() ?? '',
+      choices: (q.choices ?? []).map((c) => c?.trim() ?? '').filter(Boolean),
+      answer: q.answer?.trim() ?? '',
+      explain: q.explain ?? '',
+      source: q.source ?? '',
+      sourceUrl: q.sourceUrl ?? '',
+    }))
+    .filter((q) => {
+      const ok = q.question && q.choices.length > 1 && q.choices.includes(q.answer);
+      if (!ok && q.question) console.warn(`[quiz] Skipping "${q.question}": its answer doesn't match any of its choices.`);
+      return ok;
+    }),
 };

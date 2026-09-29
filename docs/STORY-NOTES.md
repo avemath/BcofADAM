@@ -11,7 +11,7 @@ Our Facebook page: **[Because of ADAM (@AdamsVillageofHope)](https://www.faceboo
 | Topic | What we've shared |
 |---|---|
 | **The date** | Monday, **June 5, 2017**. (One old news story says 2016; it's wrong.) |
-| **Our family** | Adam ("AJ") is the youngest of five: Rickey (18 at the time), Grace (15), me, Avery (14), and Lea (4). We're originally from Jean Lafitte, Louisiana, and moved to Pennsylvania. |
+| **Our family** | Adam ("AJ") is the youngest of five: Rickey III (18 at the time; Dad is Rickey Jr.), Grace (15), me, Avery (14), and Lea (4). We're originally from Jean Lafitte, Louisiana, and moved to Pennsylvania. |
 | **That day** | Graduation week for Rickey, with family visiting from Louisiana. Grace and I were getting ready for our first softball game and Mom was braiding my hair. Adam was playing in a tent in the living room with Lea, then crept out through the kitchen door. |
 | **The doors** | "The doors are kept locked and have alarms. We still don't know how he slipped out" (June 2017). The alarms "stop signaling when the door is mostly closed but not completely shut" (July 2018). "We lulled ourselves into thinking our door alarms would be enough" (2021). *The website uses these, not the news report that said the alarms were switched off.* |
 | **The fence** | No fence between the house and the pool. Mom: "WHY did I worry more about the view and not fully concern myself about that layer of safety?" (July 2018). The site says it gently: "Like a lot of families, we didn't want a fence blocking our view of the pool." |
@@ -58,7 +58,7 @@ Our Word doc of Facebook photos (193 small thumbnails, numbered in order) is map
 | Mom holding Adam in the PICU | Adam's Story, "Life after" (the one hospital photo on the site) |
 | Mom's nursing graduation | Adam's Story, "Planting seeds" |
 | Lea curled up with Adam | Adam's Story, "Because of Adam" |
-| The sea of blue shirts in Lafitte (#71) | Adam's Story, "Adam's village", and the fishing rodeo on the Events page |
+| The sea of blue shirts in Lafitte (#71) | Adam's Story, "Adam's village", and the 2017 Adam's Hope benefit on the Events page (not the 2018 rodeo, which still needs its own photo) |
 | Christmas 2017, all five of us (#14) | About Us, sibling team card |
 | Mom's swing painting | Events: Wear Blue on June 5 |
 | Still open | About Us family photo ("It's a boy!" #167), Mom's and Dad's team cards, Dad teaching ISR, other event photos |
@@ -107,7 +107,7 @@ Those stay on Facebook, where people choose to follow along.
 - **Adam's Hope benefit T-shirts** (2017): royal blue, with Mom's firefly logo on the front and **Mom's own painting** of Adam's swing under the moon, with fireflies ("Not all those who wander are lost"), on the back.
 - **Fishing rodeo**, summer 2018, Jean Lafitte, Louisiana: our family and hometown put it on (shirts, cups, fans, trophies, raffles, music, games, auctions, food, all donated). It "completely paid for our first Stem Cell Treatment and travel to Duke University" (Mom, July 22, 2018). Because the money went to Adam's own care before the nonprofit existed, the Events page lists it as a **Community** event and says so. Still need: the exact date, a photo, and whether there were any later rodeos for Because of ADAM.
 - **Wear Blue on June 5**: every year
-- (The Oct. 2017 vendor fair in Duncansville also raised money for Adam's own care, before the nonprofit existed. It isn't on the site, but it could be added the same way as the rodeo.)
+- **Vendor fair**, October 2017, Duncansville: also raised money for Adam's own care, before the nonprofit existed. On the Events page as a **Community** event, like the rodeo. Still need: the exact date and a photo.
 
 ## News coverage we've had
 
