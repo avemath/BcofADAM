@@ -107,8 +107,9 @@ const promises = [
           await navigator.clipboard.writeText(`${data.text} ${data.url}`);
           done.textContent = 'Link copied. Paste it anywhere to share.';
         }
-      } catch {
-        /* user cancelled */
+      } catch (error) {
+        // Closing the share sheet is fine. Anything else (like no clipboard access): show the link to copy.
+        if (error?.name !== 'AbortError') done.textContent = `Copy this link to share: ${data.url}`;
       }
     });
   </script>
