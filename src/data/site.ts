@@ -3,6 +3,7 @@
  * (Pages CMS). This file just shapes that data for the rest of the site.
  */
 import settingsJson from './settings.json';
+import { webLink } from '../lib/url';
 
 /**
  * Every setting, with a safe default. The Studio drops empty fields when it
@@ -35,7 +36,16 @@ const defaults = {
   analyticsSite: '',
 };
 export type Settings = typeof defaults;
-export const settings: Settings = { ...defaults, ...(settingsJson as Partial<Settings>) };
+const saved = settingsJson as Partial<Record<keyof Settings, unknown>>;
+// A box cleared in the Studio can come through as null: use the default instead of breaking the build.
+const merged = Object.fromEntries(
+  Object.entries(defaults).map(([key, value]) => [key, saved[key as keyof Settings] ?? value]),
+) as Settings;
+// Web addresses typed without https:// still link to the right place.
+for (const key of ['donateUrl', 'newsletterUrl', 'facebookUrl', 'instagramUrl', 'tiktokUrl', 'youtubeUrl', 'linkedinUrl'] as const) {
+  merged[key] = webLink(String(merged[key]));
+}
+export const settings: Settings = merged;
 
 export const site = {
   ...settings,
