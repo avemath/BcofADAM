@@ -288,7 +288,7 @@ content:
         format: json
         fields:
           - name: programName
-            label: Program name
+            label: Box heading (keep it about ISR, not the business name)
             type: string
           - name: blurb
             label: Short story
