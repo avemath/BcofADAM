@@ -34,8 +34,9 @@ const mailto = `mailto:${site.email}?subject=${encodeURIComponent(subject)}`;
 {
   action ? (
     <form class="site-form card" id={id} action={action} method="POST" data-site-form>
+      {/* Web3Forms (has an access key) and Formspree name the subject and spam-trap fields differently. */}
       {key && <input type="hidden" name="access_key" value={key} />}
-      <input type="hidden" name="subject" value={subject} />
+      <input type="hidden" name={key ? 'subject' : '_subject'} value={subject} />
       {fields.map((f) => {
         const fid = `${id}-${f.name}`;
         const hintId = f.hint ? `${fid}-hint` : undefined;
@@ -81,7 +82,13 @@ const mailto = `mailto:${site.email}?subject=${encodeURIComponent(subject)}`;
           </div>
         );
       })}
-      <input type="text" name="_gotcha" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true" />
+      {
+        key ? (
+          <input type="checkbox" name="botcheck" style="display: none" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        ) : (
+          <input type="text" name="_gotcha" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        )
+      }
       <button class="btn btn--ocean" type="submit">{submitLabel}</button>
       <p class="site-form__status" role="status" aria-live="polite" data-status></p>
       <p class="site-form__privacy">

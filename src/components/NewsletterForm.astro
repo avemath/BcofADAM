@@ -35,23 +35,17 @@ const uid = Math.random().toString(36).slice(2, 7);
 }
 
 <script>
+  // The form opens the newsletter service in a new tab, so people see its real answer
+  // (confirmation, "already subscribed" or a problem). Reading that answer from our own
+  // page isn't allowed, so we never claim it worked when it might not have.
   document.querySelectorAll<HTMLFormElement>('[data-newsletter]').forEach((form) => {
     const status = form.querySelector<HTMLElement>('[data-status]');
-    form.addEventListener('submit', async (event) => {
-      event.preventDefault();
-      if (!status) return form.submit();
-      status.dataset.state = '';
-      status.textContent = 'Signing you up…';
-      try {
-        // Newsletter services don't allow reading the reply from another site, so a finished
-        // request counts as success; they send the confirmation email themselves.
-        await fetch(form.action, { method: 'POST', body: new FormData(form), mode: 'no-cors' });
-        form.reset();
-        status.dataset.state = 'ok';
-        status.textContent = 'Almost done! Check your inbox and click the link to confirm.';
-      } catch {
-        status.dataset.state = 'error';
-        status.textContent = 'Sorry, that didn’t go through. Please check your connection and try again.';
+    const button = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+    form.addEventListener('submit', () => {
+      if (status) status.textContent = 'Finish signing up in the new tab. Then check your inbox for the confirmation email.';
+      if (button) {
+        button.disabled = true;
+        setTimeout(() => (button.disabled = false), 4000);
       }
     });
   });
