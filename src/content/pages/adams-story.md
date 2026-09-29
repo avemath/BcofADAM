@@ -103,7 +103,7 @@ Adam’s village is huge: nurses, doctors, teachers, therapists, first responder
 
 ![A packed pavilion full of people in blue shirts](/images/uploads/fishingrodeo.jpg)
 
-*Adam’s village, showing up for him in Lafitte, Louisiana.*
+*Adam’s village at the Adam’s Hope benefit in Lafitte, Louisiana, in 2017.*
 
 The summer after Adam drowned, our family and our hometown of Jean Lafitte, Louisiana, threw a [fishing rodeo](/events) for him. Everyone pitched in with shirts, cups and trophies, raffles and auctions, music and food, and local businesses donated everything they could. It paid for Adam’s first stem cell treatment at Duke. That same summer, Mom looked out over our field one night and saw thousands of fireflies lighting up Adam’s tree.
 
