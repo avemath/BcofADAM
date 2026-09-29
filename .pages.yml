@@ -364,7 +364,21 @@ content:
         type: file
         path: src/content/pages/water-safety-more.md
         format: yaml-frontmatter
-        fields: *pageFields
+        fields:
+          - name: title
+            label: Section heading
+            type: string
+          - name: eyebrow
+            label: Small label above the heading
+            type: string
+          - name: lede
+            label: Intro under the heading
+            type: text
+          - name: body
+            label: Section text
+            type: rich-text
+            options:
+              format: markdown
       - name: checklist
         label: Home water safety checklist (printable)
         type: file

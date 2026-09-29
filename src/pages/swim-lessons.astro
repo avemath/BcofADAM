@@ -6,16 +6,16 @@ import CtaBand from '../components/CtaBand.astro';
 import IsrFinder from '../components/IsrFinder.astro';
 import PediatriciansSay from '../components/PediatriciansSay.astro';
 import { isr } from '../data/content';
-import { url, withBase } from '../lib/url';
-import { withPlaceholders } from '../lib/placeholders';
+import { url } from '../lib/url';
+import { prose } from '../lib/prose';
 
 const entry = await getEntry('pages', 'swim-lessons');
 if (!entry) throw new Error('Missing src/content/pages/swim-lessons.md');
-const html = withPlaceholders(withBase(entry.rendered?.html ?? ''));
-const { title, eyebrow, lede, description } = entry.data;
+const html = prose(entry.rendered?.html);
+const { title, eyebrow, lede, description, image, imageAlt } = entry.data;
 ---
 
-<BaseLayout title={title} description={description || lede}>
+<BaseLayout title={title} description={description || lede} image={image || undefined} imageAlt={imageAlt || undefined}>
   <PageHero eyebrow={eyebrow} title={title} lede={lede}>
     <div class="btn-row">
       <a class="btn" href="#find">Find an ISR instructor near you</a>

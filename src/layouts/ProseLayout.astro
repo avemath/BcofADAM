@@ -3,9 +3,7 @@
 import { getEntry } from 'astro:content';
 import BaseLayout from './BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
-import { withBase } from '../lib/url';
-import { withFigures } from '../lib/figures';
-import { withPlaceholders } from '../lib/placeholders';
+import { prose } from '../lib/prose';
 
 interface Props {
   slug: string;
@@ -16,7 +14,7 @@ const entry = await getEntry('pages', Astro.props.slug);
 if (!entry) throw new Error(`Missing src/content/pages/${Astro.props.slug}.md`);
 const { title, eyebrow, lede, description, image, imageAlt } = entry.data;
 
-const html = withPlaceholders(withFigures(withBase(entry.rendered?.html ?? '')));
+const html = prose(entry.rendered?.html);
 ---
 
 <BaseLayout
