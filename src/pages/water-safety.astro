@@ -62,6 +62,20 @@ const moreHtml = more ? prose(more.rendered?.html) : '';
               <ul class="checklist">
                 {l.tips.map((t) => <li>{t}</li>)}
               </ul>
+              {l.sources && l.sources.length > 0 && (
+                <p class="source">
+                  {l.sources.length > 1 ? 'Sources: ' : 'Source: '}
+                  {l.sources.map((s, j) => (
+                    <>
+                      {j > 0 && '; '}
+                      <a href={s.url} rel="noopener" target="_blank">
+                        {s.name}
+                        <span class="visually-hidden"> (opens in a new tab)</span>
+                      </a>
+                    </>
+                  ))}
+                </p>
+              )}
             </article>
           ))
         }
