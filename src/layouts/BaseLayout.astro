@@ -30,6 +30,8 @@ interface Props {
   published?: Date;
   /** Extra structured data for this page, like upcoming events. */
   jsonLd?: Record<string, unknown>[];
+  /** Keep this page out of Google even after launch (the 404 page, the print-only checklist). */
+  noindex?: boolean;
 }
 
 const {
@@ -42,6 +44,7 @@ const {
   type = 'WebPage',
   published,
   jsonLd = [],
+  noindex = false,
 } = Astro.props;
 const fullTitle = documentTitle ?? (title ? `${title} | ${site.name}` : `${site.name}: ${site.tagline}`);
 const canonical = new URL(Astro.url.pathname, Astro.site);
@@ -68,7 +71,7 @@ const ld = {
     <meta name="description" content={description} />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <link rel="canonical" href={canonical} />
-    {!site.launchReady && <meta name="robots" content="noindex, nofollow" />}
+    {!site.launchReady ? <meta name="robots" content="noindex, nofollow" /> : noindex && <meta name="robots" content="noindex" />}
     <link rel="icon" href={url('/favicon.ico')} sizes="48x48" />
     {hasSvgIcon && <link rel="icon" href={url('/favicon.svg')} type="image/svg+xml" />}
     <link rel="icon" href={url('/icon-192.png')} type="image/png" sizes="192x192" />
