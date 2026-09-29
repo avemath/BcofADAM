@@ -417,6 +417,49 @@ content:
             label: Blanks to fill in (address, phone numbers…)
             type: string
             list: true
+      - name: quiz
+        label: Water safety quiz
+        type: file
+        path: src/data/quiz.json
+        format: json
+        fields:
+          - name: title
+            label: Title
+            type: string
+          - name: intro
+            label: Intro
+            type: text
+          - name: questions
+            label: Questions
+            type: object
+            list: true
+            fields:
+              - name: question
+                label: Question
+                type: text
+              - name: choices
+                label: Choices
+                type: string
+                list: true
+              - name: answer
+                label: Right answer (copy it exactly from the choices above)
+                type: string
+                description: If this doesn't match one of the choices word for word, the question is skipped so it can't mark every answer wrong.
+              - name: explain
+                label: Why (shown after they answer)
+                type: text
+              - name: source
+                label: Source name (e.g. CDC)
+                type: string
+              - name: sourceUrl
+                label: Source link
+                type: string
+          - name: certificateTitle
+            label: Certificate title
+            type: string
+          - name: certificateText
+            label: Certificate text (after the person's name)
+            type: text
       - name: terms
         label: Terms of use
         type: file
