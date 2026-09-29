@@ -6,13 +6,13 @@ import CtaBand from '../components/CtaBand.astro';
 import Wave from '../components/Wave.astro';
 import { layers } from '../data/layers';
 import { risks } from '../data/content';
-import { url, withBase } from '../lib/url';
-import { withPlaceholders } from '../lib/placeholders';
+import { url } from '../lib/url';
+import { prose } from '../lib/prose';
 import { getEntry } from 'astro:content';
 
 // "More ways to stay safe" (teens, life jackets, pool recall, CPR), edited in the Studio.
 const more = await getEntry('pages', 'water-safety-more');
-const moreHtml = more ? withPlaceholders(withBase(more.rendered?.html ?? '')) : '';
+const moreHtml = more ? prose(more.rendered?.html) : '';
 ---
 
 <BaseLayout
@@ -62,6 +62,20 @@ const moreHtml = more ? withPlaceholders(withBase(more.rendered?.html ?? '')) : 
               <ul class="checklist">
                 {l.tips.map((t) => <li>{t}</li>)}
               </ul>
+              {l.sources && l.sources.length > 0 && (
+                <p class="source">
+                  {l.sources.length > 1 ? 'Sources: ' : 'Source: '}
+                  {l.sources.map((s, j) => (
+                    <>
+                      {j > 0 && '; '}
+                      <a href={s.url} rel="noopener" target="_blank">
+                        {s.name}
+                        <span class="visually-hidden"> (opens in a new tab)</span>
+                      </a>
+                    </>
+                  ))}
+                </p>
+              )}
             </article>
           ))
         }

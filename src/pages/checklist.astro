@@ -13,6 +13,7 @@ const host = Astro.site?.host ?? 'becauseofadam.org';
 ---
 
 <BaseLayout
+  noindex
   title="Printable Home Water Safety Checklist"
   description="A printable checklist of the layers of protection for your home and yard, with a half-page for babysitters and grandparents."
 >
@@ -24,6 +25,10 @@ const host = Astro.site?.host ?? 'becauseofadam.org';
         <button type="button" class="btn btn--ocean" data-print>Print or save as PDF</button>
         <a class="btn btn--ghost" href={url('/water-safety')}>Learn about each layer</a>
       </div>
+      <p class="no-print checklist-saved" data-saved-note hidden>
+        Your checks are saved on this device, so you can come back and finish later.
+        <button type="button" class="link-button" data-clear>Clear my checks</button>
+      </p>
 
       <article class="sheet" aria-labelledby="checklist-title">
         <header class="sheet__head">
@@ -86,11 +91,61 @@ const host = Astro.site?.host ?? 'becauseofadam.org';
 
 <script>
   document.querySelector('[data-print]')?.addEventListener('click', () => window.print());
+
+  // Remember checked boxes on this device (by their wording, so edits in the Studio don't mix them up).
+  // Private browsing can block storage; then the checklist just works without remembering.
+  const KEY = 'becauseofadam-checklist';
+  const boxes = [...document.querySelectorAll<HTMLInputElement>('.sheet input[type="checkbox"]')];
+  const note = document.querySelector<HTMLElement>('[data-saved-note]');
+  const keyFor = (box: HTMLInputElement) => box.closest('label')?.textContent?.trim() ?? box.name;
+  let saved: Record<string, boolean> = {};
+  try {
+    saved = JSON.parse(localStorage.getItem(KEY) ?? '{}') ?? {};
+  } catch {
+    saved = {};
+  }
+  const save = () => {
+    try {
+      localStorage.setItem(KEY, JSON.stringify(saved));
+      if (note) note.hidden = !Object.values(saved).some(Boolean);
+    } catch {
+      /* storage blocked: nothing to do */
+    }
+  };
+  boxes.forEach((box) => {
+    if (saved[keyFor(box)]) box.checked = true;
+    box.addEventListener('change', () => {
+      saved[keyFor(box)] = box.checked;
+      save();
+    });
+  });
+  if (note) note.hidden = !boxes.some((b) => b.checked);
+  document.querySelector('[data-clear]')?.addEventListener('click', () => {
+    boxes.forEach((b) => (b.checked = false));
+    saved = {};
+    save();
+  });
 </script>
 
 <style>
   .checklist-page {
     padding-top: clamp(32px, 5vw, 56px);
+  }
+  .checklist-saved {
+    margin: -16px 0 28px;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+  }
+  .link-button {
+    border: 0;
+    background: none;
+    padding: 0 4px;
+    min-height: 24px;
+    font: inherit;
+    font-weight: 700;
+    color: var(--ocean);
+    text-decoration: underline;
+    cursor: pointer;
   }
   .checklist-actions {
     display: flex;

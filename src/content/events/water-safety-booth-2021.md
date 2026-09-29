@@ -6,8 +6,8 @@ location: Duncansville, PA
 summary: "We set up our blue tent at Duncansville Community Days with water
   safety info, a “Never swim alone” poster and our banner: “We will end
   childhood drowning. Join the movement. Become an Ally!”"
-photo: /images/uploads/lesisrddays.jpg
-photoAlt: Our blue tent at Duncansville Community Days, with water safety banners and a table of information
+photo: ""
+photoAlt: ""
 featured: false
 draft: false
 ---

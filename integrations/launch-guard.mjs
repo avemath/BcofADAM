@@ -28,12 +28,17 @@ function htmlFiles(dir) {
   return out;
 }
 
-/** Strip tags so a TODO split across markup still reads as one line. */
+/**
+ * Strip tags so a TODO split across markup still reads as one line. Text people see or hear
+ * inside tags (photo descriptions, share descriptions, labels) is kept, so a TODO there is caught too.
+ */
 const plain = (/** @type {string} */ html) =>
   html
     .replace(/<script[\s\S]*?<\/script>/gi, '')
     .replace(/<style[\s\S]*?<\/style>/gi, '')
-    .replace(/<[^>]+>/g, ' ')
+    .replace(/<[^>]+>/g, (tag) =>
+      [...tag.matchAll(/\b(?:alt|content|title|aria-label|placeholder)="([^"]*)"/gi)].map((m) => ` ${m[1]} `).join('') || ' ',
+    )
     .replace(/&#39;|&#x27;/g, "'")
     .replace(/&quot;/g, '"')
     .replace(/&amp;/g, '&')

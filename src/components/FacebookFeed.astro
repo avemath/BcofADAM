@@ -28,7 +28,7 @@ const title = 'Latest posts from the Because of ADAM Facebook page';
   site.showFacebookFeed && pageUrl && (
     <div class="fb-feed" data-fb-feed data-href={pageUrl} style={`--max-h:${maxHeight}px`}>
       <div class="fb-feed__frame" data-fb-frame hidden>
-        <iframe data-fb-iframe title={title} allow="encrypted-media; picture-in-picture; web-share" />
+        <iframe data-fb-iframe title={title} allow="encrypted-media; picture-in-picture" />
       </div>
       <div class="fb-feed__card card" data-fb-card>
         <img class="fb-feed__logo" src={url('/images/logo-mark.png')} alt="" width="54" height="64" />

@@ -4,7 +4,7 @@ import PageHero from '../components/PageHero.astro';
 import { url } from '../lib/url';
 ---
 
-<BaseLayout title="Page not found" description="We couldn’t find that page. Try our water safety guide, Adam’s story or the home page.">
+<BaseLayout noindex title="Page not found" description="We couldn’t find that page. Try our water safety guide, Adam’s story or the home page.">
   <PageHero eyebrow="404" title="This page drifted away." lede="The page you’re looking for isn’t here, but these are.">
     <div class="btn-row">
       <a class="btn" href={url('/')}>Home</a>

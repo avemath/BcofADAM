@@ -2,7 +2,8 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/PageHero.astro';
-import { url, withBase } from '../../lib/url';
+import { url } from '../../lib/url';
+import { prose } from '../../lib/prose';
 
 export async function getStaticPaths() {
   const posts = await getCollection('news', ({ data }) => !data.draft);
@@ -10,11 +11,11 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
-const html = withBase(post.rendered?.html ?? '');
+const html = prose(post.rendered?.html);
 const fmt = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeZone: 'UTC' });
 ---
 
-<BaseLayout title={post.data.title} description={post.data.summary} type="Article" published={post.data.date}>
+<BaseLayout title={post.data.title} description={post.data.summary || undefined} type="Article" published={post.data.date}>
   <PageHero eyebrow={fmt.format(post.data.date)} title={post.data.title} lede={post.data.summary} />
   <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
     <div class="wrap">

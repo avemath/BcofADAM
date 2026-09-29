@@ -9,7 +9,7 @@ For years, thousands of you have followed Adam’s journey on our Facebook page.
 
 Now we have a home for everything we’ve learned, so more families can learn about drowning *before* it happens to them.
 
-Here you’ll find Adam’s story, the layers of protection that keep little ones safe around water, Dad’s ISR swim lessons, our events, and resources for families living life after a nonfatal drowning.
+Here you’ll find Adam’s story, the layers of protection that keep little ones safe around water, why we recommend ISR self-rescue lessons, our events, and resources for families living life after a nonfatal drowning.
 
 Thank you for being part of Adam’s village.
 
