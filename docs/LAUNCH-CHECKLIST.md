@@ -9,6 +9,7 @@ Everything we still need to do to get Because of ADAM and the website fully up a
 ## ⚠️ First: four things that shape everything else
 
 1. **We're already registered with the IRS, but we need to check our status right away.** ProPublica lists a 501(c)(3) for us:
+   - **Update, Sept. 2026:** Mom says a filing was missed and our tax-exempt status is paused. Until it's restored, the site doesn't call us a 501(c)(3) or mention tax-deductible gifts (**Site settings → "We're an IRS-approved 501(c)(3)"** is off). Turn it back on once the IRS confirms reinstatement.
    - **Name on file:** "Becasue Of Adam Adolescent Drowning Awareness Movement". *Because* is misspelled, and it says **Adolescent**, not **Allies**.
    - **EIN:** 85-0723376 · **IRS ruling:** December 2020 · Duncansville, PA
    - **No annual filings are listed.** The IRS automatically revokes tax-exempt status after **3 years in a row** without a 990-N/990-EZ, so this is urgent.
