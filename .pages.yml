@@ -464,12 +464,17 @@ content:
         label: Date
         type: date
         default: ""
+      - name: endDate
+        label: Last day (only for events that run more than one day)
+        type: date
+        default: ""
+        description: Leave empty for one-day events. For National Water Safety Month, the date is May 1 and the last day is May 31.
       - name: repeatsYearly
         label: Happens every year on this date
         type: boolean
         description: Yearly events (like Wear Blue on June 5) always show under "Coming up" with their next date.
       - name: when
-        label: When, in words (e.g. "Every June", "Summer 2023")
+        label: When, in words (e.g. "Every June", "Summer 2023", or a time like "1 to 5 p.m.")
         type: string
       - name: location
         label: Where

@@ -4,7 +4,7 @@ How becauseofadam.org is hosted, what to check in GitHub and at Porkbun, and wha
 
 ## Where the site lives today
 
-- **Hosting:** GitHub Pages, published by `.github/workflows/deploy.yml` every time something is merged into `main`, and every Monday morning (so events move to "Past events" on their own).
+- **Hosting:** GitHub Pages, published by `.github/workflows/deploy.yml` every time something is merged into `main`, and every morning (so events move to "Past events" the day after they end). GitHub pauses these scheduled rebuilds if the repo goes 60 days with no commits, and emails the owner. If that happens, open Actions → Deploy site and click "Enable workflow", or just save any change in the Studio.
 - **Domain:** becauseofadam.org, registered at Porkbun.
 - **Studio:** Pages CMS at becauseofadam.org/studio saves straight to this repo, which triggers a new deploy.
 
