@@ -87,6 +87,7 @@ export const nav: NavItem[] = [
     children: [
       { label: 'Layers of protection', href: '/water-safety' },
       { label: 'The facts', href: '/the-facts' },
+      { label: 'Water safety quiz', href: '/quiz' },
       { label: 'Water Watcher pledge', href: '/water-watcher' },
       { label: 'Home safety checklist', href: '/checklist' },
       { label: 'Water safety in Pennsylvania', href: '/pennsylvania' },
