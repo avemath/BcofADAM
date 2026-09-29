@@ -14,7 +14,7 @@
     },
     {
       "stat": "70%+",
-      "label": "More than 7 in 10 fatal child pool drownings (2021–2023) happen at a home: their own, a grandparent’s, a friend’s or a neighbor’s.",
+      "label": "More than 7 in 10 fatal child pool and spa drownings (2021–2023) happen at a home: their own, a grandparent’s, a friend’s or a neighbor’s.",
       "source": "CPSC, 2026 report",
       "sourceUrl": "https://www.cpsc.gov/Newsroom/News-Releases/2026/CPSC-Report-Highlights-Persistent-Risk-of-Childhood-Drowning"
     },
@@ -106,11 +106,11 @@
           "sourceUrl": "https://www.cpsc.gov/Newsroom/News-Releases/2026/CPSC-Report-Highlights-Persistent-Risk-of-Childhood-Drowning"
         },
         {
-          "stat": "12–36 mo",
-          "label": "Toddlers between 1 and 3 years old are at the highest risk.",
-          "detail": "They are newly mobile, curious, and drawn to water, but have no sense of danger.",
-          "source": "American Academy of Pediatrics, 2021 (2014–2018 data)",
-          "sourceUrl": "https://publications.aap.org/pediatrics/article/148/2/e2021052227/179784/Prevention-of-Drowning"
+          "stat": "Toddlers",
+          "label": "Toddlers are at the highest risk of drowning.",
+          "detail": "They can slip away without anyone noticing, even under the best of circumstances.",
+          "source": "American Academy of Pediatrics, 2026",
+          "sourceUrl": "https://www.healthychildren.org/English/news/Pages/AAP-releases-updated-drowning-prevention-recommendations.aspx"
         }
       ],
       "intro": ""
@@ -209,7 +209,7 @@
         },
         {
           "stat": "Age 1+",
-          "label": "Swim lessons starting after age 1 are linked to a lower drowning risk for young children.",
+          "label": "Swim lessons after a child’s first birthday are linked to a lower drowning risk for young children.",
           "detail": "The benefit is real but hard to size precisely, and lessons never replace supervision or barriers.",
           "source": "AAP; Brenner et al., 2009",
           "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/19255386/"
