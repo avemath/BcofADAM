@@ -23,6 +23,8 @@ import { home as story } from '../data/content';
   const start = performance.now();
   const calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   document.querySelectorAll<HTMLElement>('[data-clock-time]').forEach((el) => {
+    // "under 1 min" is longer than "0:07", so it gets a smaller size to stay on one line.
+    el.parentElement?.classList.toggle('clock__time--calm', calm);
     const tick = () => {
       const s = Math.floor((performance.now() - start) / 1000);
       const m = Math.floor(s / 60);
@@ -58,6 +60,10 @@ import { home as story } from '../data/content';
     color: #fff;
     margin: 0.1em 0 0.2em;
     text-shadow: 0 0 60px rgb(26 166 183 / 0.6);
+  }
+  .clock__time--calm {
+    font-size: clamp(3rem, 10vw, 6.5rem);
+    white-space: nowrap;
   }
   .clock__compare {
     font-size: clamp(1.2rem, 1vw + 1rem, 1.6rem);
