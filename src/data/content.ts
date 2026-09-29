@@ -60,13 +60,13 @@ export interface IsrBox {
 }
 
 export const home = homeJson;
-export const headline: Fact[] = factsJson.headline;
-export const nonfatal: Fact[] = factsJson.nonfatal;
-export const risks: Risk[] = factsJson.risks;
-export const factGroups: { title: string; intro?: string; facts: Fact[] }[] = factsJson.groups;
-export const survivorResources: Resource[] = resourcesJson.survivor;
-export const resourceGroups: { title: string; items: Resource[] }[] = resourcesJson.groups;
-export const team: TeamMember[] = teamJson;
+export const headline: Fact[] = factsJson.headline ?? [];
+export const nonfatal: Fact[] = factsJson.nonfatal ?? [];
+export const risks: Risk[] = factsJson.risks ?? [];
+export const factGroups: { title: string; intro?: string; facts: Fact[] }[] = factsJson.groups ?? [];
+export const survivorResources: Resource[] = resourcesJson.survivor ?? [];
+export const resourceGroups: { title: string; items: Resource[] }[] = resourcesJson.groups ?? [];
+export const team: TeamMember[] = teamJson ?? [];
 export const about: { photo?: string; photoAlt?: string; caption?: string } = aboutJson;
 export const isr: IsrBox = isrJson;
 /** "What pediatricians say" box on the ISR page and the home page. */
