@@ -121,9 +121,9 @@ export const nav: NavItem[] = [
 ];
 
 export const footerNav = [
-  { label: 'About Us', href: '/about' },
+  { label: 'About us', href: '/about' },
   { label: 'Events', href: '/events' },
-  { label: 'Water Watcher Pledge', href: '/water-watcher' },
+  { label: 'Water Watcher pledge', href: '/water-watcher' },
   { label: 'Resources', href: '/resources' },
   { label: 'News', href: '/news' },
   { label: 'Press', href: '/press' },

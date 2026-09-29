@@ -49,7 +49,7 @@ This isn’t “mommy and me” splash time. It’s survival skills, taught one 
 - **One-on-one** with a certified ISR instructor, never in a group.
 - **About 10 minutes a day, most days of the week,** for several weeks. Short, frequent lessons are how little bodies learn and remember the skills.
 - **Safety checks every day.** Before lessons start, ISR’s medical review team looks over each child’s health history. Then, before every lesson, the instructor checks in with the parent about sleep, eating and diapers.
-- **Practice in clothes.** Most kids who fall in aren’t wearing a swimsuit, so once they’re skilled, every student practices in summer and winter clothes, shoes and all.
+- **Practice in clothes.** Kids who fall in usually aren’t dressed to swim, so once they’re skilled, every student practices in summer and winter clothes, shoes and all.
 - **Highly trained instructors.** ISR instructors go through intensive training before they teach. Our dad spent eight weeks training in Florida.
 - **Refreshers** as kids grow, so their skills keep up with their bigger bodies.
 
@@ -61,7 +61,7 @@ If ISR just isn’t possible, look for lessons that teach self-rescue skills, li
 
 - **American Red Cross.** [Find a Red Cross Learn-to-Swim provider](https://www.redcross.org/take-a-class/swimming/learn-to-swim-providers) near you.
 - **Your local YMCA.** Near us, the [Blair Regional YMCA](https://blairregionalymca.org/programs/swimming-lessons/) in Hollidaysburg offers group, semi-private and private swim lessons.
-- **Parks and recreation and community pools.** Check with your town’s recreation department or public pool. Near us, the [Bellwood-Antis Community Pool](https://blairregionalymca.org/venue/bellwood-antis-community-pool/) offers group, semi-private and private lessons for all ages each summer, and you don’t have to live in Bellwood or Antis Township to sign up. Altoona’s [Prospect Pool](https://prospectpoolaltoona.com/) is closed for renovation in 2026 and plans to reopen in 2027.
+- **Parks and recreation and community pools.** Check with your town’s recreation department or public pool. Near us, the [Bellwood-Antis Community Pool](https://blairregionalymca.org/venue/bellwood-antis-community-pool/) offers group, semi-private and private lessons for all ages each summer, and you don’t have to live in Bellwood or Antis Township to sign up. Altoona’s [Prospect Pool](https://prospectpoolaltoona.com/) closed for the 2026 season for a full renovation, so check its website for when it reopens.
 - **Adapted lessons.** The [American Academy of Pediatrics](https://www.healthychildren.org/English/safety-prevention/at-play/Pages/Swim-Lessons.aspx) says swim lessons can be adapted for children with special health needs and developmental disabilities, such as autism, and that these programs reduce drowning risk. Ask local pools about adapted or one-on-one lessons.
 
 ## One layer, not the only layer
