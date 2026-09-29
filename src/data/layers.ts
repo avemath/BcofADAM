@@ -100,7 +100,7 @@ export const layers: Layer[] = [
     title: 'Swim skills: teach children, and adults too',
     short: 'Water competency for every age.',
     body: [
-      'The American Academy of Pediatrics supports swim lessons for most children starting after age 1. Research suggests lessons lower the risk for young children, but they don’t make any child “drown-proof.”',
+      'The American Academy of Pediatrics recommends swim lessons for children after their first birthday. Research suggests lessons lower the risk for young children, but they don’t make any child “drown-proof.”',
       'Adults need water skills too, both to keep themselves safe and to help someone else without becoming a second victim.',
     ],
     tips: [
