@@ -81,11 +81,21 @@ const slug = (label: string) => label.toLowerCase().replace(/[^a-z]+/g, '-').rep
   };
   const closeSubs = (except?: HTMLButtonElement) => subToggles.forEach((b) => b !== except && setSub(b, false));
 
-  // Main menu button (phones and tablets).
-  toggle?.addEventListener('click', () => {
-    const open = toggle.getAttribute('aria-expanded') === 'true';
-    toggle.setAttribute('aria-expanded', String(!open));
-    navEl?.classList.toggle('is-open', !open);
+  // Main menu button (phones and tablets). While it's open, the page behind it doesn't scroll.
+  const setMenu = (open: boolean) => {
+    toggle?.setAttribute('aria-expanded', String(open));
+    navEl?.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('menu-open', open);
+  };
+  const menuOpen = () => navEl?.classList.contains('is-open') ?? false;
+  toggle?.addEventListener('click', () => setMenu(!menuOpen()));
+
+  // A link to a spot on the same page (like "Volunteer") scrolls there, so close the menu first.
+  navEl?.addEventListener('click', (e) => {
+    if (e.target instanceof Element && e.target.closest('a')) {
+      closeSubs();
+      if (menuOpen()) setMenu(false);
+    }
   });
 
   // The little arrows open each section's pages. Only one list is open at a time.
@@ -97,9 +107,16 @@ const slug = (label: string) => label.toLowerCase().replace(/[^a-z]+/g, '-').rep
     }),
   );
 
-  // Close lists when clicking elsewhere or tabbing away from the menu.
+  // Close lists (and the phone menu) when clicking elsewhere or tabbing away.
   document.addEventListener('click', (e) => {
-    if (!(e.target instanceof Node) || !navEl?.contains(e.target)) closeSubs();
+    const target = e.target instanceof Node ? e.target : null;
+    if (!target || !navEl?.contains(target)) closeSubs();
+    if (menuOpen() && target && !navEl?.contains(target) && !toggle?.contains(target)) setMenu(false);
+  });
+  navEl?.addEventListener('focusin', (e) => {
+    subToggles.forEach((b) => {
+      if (e.target instanceof Node && !b.closest('.site-nav__item')?.contains(e.target)) setSub(b, false);
+    });
   });
   navEl?.addEventListener('focusout', (e) => {
     const next = e.relatedTarget;
@@ -112,9 +129,8 @@ const slug = (label: string) => label.toLowerCase().replace(/[^a-z]+/g, '-').rep
     if (openSub) {
       setSub(openSub, false);
       openSub.focus();
-    } else if (navEl?.classList.contains('is-open')) {
-      toggle?.setAttribute('aria-expanded', 'false');
-      navEl.classList.remove('is-open');
+    } else if (menuOpen()) {
+      setMenu(false);
       toggle?.focus();
     }
   });
@@ -296,6 +312,25 @@ const slug = (label: string) => label.toLowerCase().replace(/[^a-z]+/g, '-').rep
     .site-nav__donate {
       margin-top: 20px;
       width: 100%;
+    }
+    :global(html.menu-open) {
+      overflow: hidden;
+    }
+    /* Without JavaScript the Menu button can't open anything, so show the menu under the logo. */
+    :global(html:not(.js)) .menu-toggle {
+      display: none;
+    }
+    :global(html:not(.js)) .site-header__inner {
+      flex-wrap: wrap;
+    }
+    :global(html:not(.js)) .site-nav {
+      display: block;
+      position: static;
+      flex-basis: 100%;
+      box-shadow: none;
+      border-bottom: 0;
+      max-height: none;
+      padding: 0 0 16px;
     }
   }
 
