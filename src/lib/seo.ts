@@ -4,7 +4,7 @@
  */
 import type { CollectionEntry } from 'astro:content';
 import { site, ein } from '../data/site';
-import { eventDate } from './events';
+import { eventDate, eventEnd } from './events';
 
 type Json = Record<string, unknown>;
 
@@ -76,6 +76,7 @@ export function website(origin: string): Json {
 /** An upcoming event. Yearly awareness days (like Wear Blue on June 5) use their next date. */
 export function event(e: CollectionEntry<'events'>, origin: string, pageUrl: string): Json | undefined {
   const start = eventDate(e);
+  const end = eventEnd(e);
   if (!start) return undefined;
   const d = e.data;
   const inPerson = d.location && !/everywhere|online/i.test(d.location);
@@ -84,6 +85,7 @@ export function event(e: CollectionEntry<'events'>, origin: string, pageUrl: str
     name: d.title,
     description: d.summary,
     startDate: start.toISOString().slice(0, 10),
+    ...(end && end > start && { endDate: end.toISOString().slice(0, 10) }),
     eventStatus: 'https://schema.org/EventScheduled',
     eventAttendanceMode: inPerson
       ? 'https://schema.org/OfflineEventAttendanceMode'
@@ -91,7 +93,8 @@ export function event(e: CollectionEntry<'events'>, origin: string, pageUrl: str
     location: inPerson
       ? { '@type': 'Place', name: d.location, address: d.location }
       : { '@type': 'VirtualLocation', url: pageUrl },
-    ...(d.photo && { image: new URL(d.photo, `${origin}/`).href }),
+    // Relative to the site's own address, so it keeps any sub-folder the site is served from.
+    ...(d.photo && { image: new URL(d.photo.replace(/^\//, ''), `${origin}/`).href }),
     organizer: { '@id': `${origin}/#organization` },
   };
 }

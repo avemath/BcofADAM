@@ -2,6 +2,7 @@
 title: National Water Safety Month
 kind: Awareness
 date: 2026-05-01
+endDate: 2026-05-31
 repeatsYearly: true
 when: Every May
 location: Everywhere
