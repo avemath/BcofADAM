@@ -13,7 +13,12 @@
     {
       "name": "Brain Injury Association of Pennsylvania",
       "url": "https://www.biapa.org/",
-      "description": "Pennsylvania resources, support groups and advocacy for brain injury survivors and families."
+      "description": "Pennsylvania resources, support groups and advocacy for brain injury survivors and families. Call the free Brain Injury Resource Line at 1-800-444-6443, leave your number, and a volunteer calls you back."
+    },
+    {
+      "name": "BrainSTEPS school re-entry program (Pennsylvania)",
+      "url": "https://www.biapa.org/school-re-entry-4",
+      "description": "Free help for Pennsylvania students going back to school after any kind of brain injury. A local team works with your family and your child’s school."
     },
     {
       "name": "Pennsylvania Early Intervention (CONNECT Helpline)",
@@ -119,6 +124,11 @@
           "name": "The ZAC Foundation",
           "url": "https://thezacfoundation.org/",
           "description": "ZAC Camps and water safety education for kids and families."
+        },
+        {
+          "name": "American Red Cross: Longfellow’s WHALE Tales",
+          "url": "https://www.redcross.org/take-a-class/teach-water-safety/whale-tales-resources",
+          "description": "Free water safety lessons for kindergarten through 5th grade, with videos, posters and lesson plans in English and Spanish. Teachers, scout leaders and parents can teach it without a certification."
         }
       ]
     },
