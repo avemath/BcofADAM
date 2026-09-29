@@ -24,7 +24,7 @@ Adam drowned in our backyard pool on June 5, 2017, when he was 14 months old. He
 
 ## A note on words
 
-We say **nonfatal drowning**, the term the [CDC](https://www.cdc.gov/drowning/data-research/facts/index.html) uses, instead of “near drowning.” Adam didn’t almost drown. He drowned, and he survived.
+We say **nonfatal drowning**, the term the [CDC](https://www.cdc.gov/drowning/data-research/facts/index.html) uses, instead of “near-drowning.” Adam didn’t almost drown. He drowned, and he survived.
 
 ## Photos
 

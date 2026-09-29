@@ -10,7 +10,7 @@ import { layers } from '../data/layers';
 const layerName = (id: string) => layers.find((l) => l.id === id)?.title.split(':')[0] ?? '';
 const toggles = [
   { id: 'door', layer: 'alarms', label: 'Door alarm', note: 'Sounds the moment the back door opens.' },
-  { id: 'fence', layer: 'barriers', label: '4-sided pool fence', note: 'Separates the pool from the house and yard.' },
+  { id: 'fence', layer: 'barriers', label: 'Four-sided pool fence', note: 'Separates the pool from the house and yard.' },
   { id: 'gate', layer: 'barriers', label: 'Self-latching gate', note: 'Closes and latches on its own, out of reach.' },
   { id: 'poolalarm', layer: 'alarms', label: 'Pool alarm', note: 'Alerts you if something enters the water.' },
   { id: 'cover', layer: 'covers', label: 'Safety cover', note: 'Closes off the water when the pool isn’t in use.' },
@@ -151,7 +151,7 @@ const list = (items: string[]) => items.slice(0, -1).join(', ') + ' and ' + item
       <strong>0 of 6 turned on.</strong> Nothing stands between a curious toddler and the water.
     </p>
     <p class="builder__note">
-      {`This backyard shows ${shownLayers.length} of the ${layers.length} layers of protection. The other ${otherLayers.length}, ${list(otherLayers)}, go with your family everywhere, not just at home.`}
+      {`This backyard shows ${shownLayers.length} of the ${layers.length} layers of protection. The other ${otherLayers.length} (${list(otherLayers)}) go with your family everywhere, not just at home.`}
     </p>
   </div>
 </div>
