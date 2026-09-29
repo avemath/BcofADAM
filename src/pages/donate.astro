@@ -7,7 +7,8 @@ import { url } from '../lib/url';
 // No donation link yet? Send visitors to Get Involved instead of a dead end.
 // Add the link in the Studio (Site settings → Donation link) and this page
 // and every Donate button appear automatically.
-if (!hasDonate) return Astro.redirect(url('/get-involved'));
+// 301 makes the static redirect page send people on right away (a 302 waits 2 seconds).
+if (!hasDonate) return Astro.redirect(url('/get-involved'), 301);
 
 /**
  * What a gift does. Only list programs we actually run or have committed to.
