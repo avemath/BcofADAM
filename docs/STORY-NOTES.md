@@ -58,7 +58,7 @@ Our Word doc of Facebook photos (193 small thumbnails, numbered in order) is map
 | Mom holding Adam in the PICU | Adam's Story, "Life after" (the one hospital photo on the site) |
 | Mom's nursing graduation | Adam's Story, "Planting seeds" |
 | Lea curled up with Adam | Adam's Story, "Because of Adam" |
-| The sea of blue shirts in Lafitte (#71) | Adam's Story, "Adam's village", and the fishing rodeo on the Events page |
+| The sea of blue shirts in Lafitte (#71) | Adam's Story, "Adam's village", and the 2017 Adam's Hope benefit on the Events page (not the 2018 rodeo, which still needs its own photo) |
 | Christmas 2017, all five of us (#14) | About Us, sibling team card |
 | Mom's swing painting | Events: Wear Blue on June 5 |
 | Still open | About Us family photo ("It's a boy!" #167), Mom's and Dad's team cards, Dad teaching ISR, other event photos |
