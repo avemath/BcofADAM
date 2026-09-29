@@ -1,7 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { url, href } from '../lib/url';
-import { eventDate, eventEnd, isHappening } from '../lib/events';
+import { eventDate, eventEnd, isHappening, today } from '../lib/events';
 import { prose } from '../lib/prose';
 
 interface Props {
@@ -28,6 +28,8 @@ if (e.repeatsYearly && start && end) {
 } else if (e.date && start && end) {
   when = [range(start, end), e.when].filter(Boolean).join(' · ');
 }
+// Upcoming events get an "Add to calendar" file (src/pages/events/[id].ics.ts).
+const upcoming = !!end && end >= today();
 // "More about the event" from the Studio, tucked under a "More" toggle.
 const more = event.body?.trim() ? prose(event.rendered?.html) : '';
 const icon: Record<string, string> = {
@@ -74,6 +76,13 @@ const art = /fish|rodeo/.test(t)
           <summary>More about this event</summary>
           <div class="prose" set:html={more} />
         </details>
+      )
+    }
+    {
+      upcoming && (
+        <a class="event__cal" href={url(`/events/${event.id}.ics`)} download={`${event.id}.ics`}>
+          Add to my calendar<span class="visually-hidden">: {e.title}</span>
+        </a>
       )
     }
     {
@@ -164,6 +173,19 @@ const art = /fish|rodeo/.test(t)
   .event__more .prose {
     margin-top: 0.6em;
     font-size: 0.95rem;
+  }
+  .event__cal {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 24px;
+    margin: 0 0 1rem;
+    font-weight: 700;
+    align-self: flex-start;
+  }
+  .event__cal::before {
+    content: '📅';
+    text-decoration: none;
   }
   .event__btn {
     margin-top: auto;
