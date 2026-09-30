@@ -22,6 +22,8 @@ Adam drowned in our backyard pool on June 5, 2017, when he was 14 months old. He
 - Life after a nonfatal drowning, for the survivor and the whole family.
 - Wear Blue on June 5, our yearly day of awareness.
 
+**Good times to run a water safety story:** May (National Water Safety Month, right before pools open), June 5 (the day our family wears blue for Adam), the week before the Fourth of July, and July 25 ([World Drowning Prevention Day](https://www.who.int/campaigns/world-drowning-prevention-day)).
+
 ## A note on words
 
 We say **nonfatal drowning**, the term the [CDC](https://www.cdc.gov/drowning/data-research/facts/index.html) uses, instead of “near-drowning.” Adam didn’t almost drown. He drowned, and he survived.
