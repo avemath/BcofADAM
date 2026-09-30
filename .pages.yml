@@ -148,6 +148,16 @@ content:
       - name: hopeTurn
         label: Hopeful line after the quote
         type: string
+      - name: tonightTitle
+        label: "\"Things to do tonight\" heading"
+        type: string
+      - name: tonightIntro
+        label: Line under that heading
+        type: text
+      - name: tonight
+        label: Things to do tonight (keep them quick)
+        type: string
+        list: true
 
   # ───────────────────────────── Pages ─────────────────────────────
   - name: anywhere

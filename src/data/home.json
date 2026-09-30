@@ -1,12 +1,21 @@
 {
   "heroLede": "Drowning is the #1 cause of death for children ages 1–4. It happens in seconds, often with adults nearby, and it’s preventable. Because of Adam, we’re helping families put layers of protection between little ones and the water.",
   "meetTitle": "Meet Adam.",
-  "teaser": "Adam is our little brother, the youngest of five, a music lover with a smile worth waiting for. At 14 months old, during a busy week of family celebrations, he slipped quietly out the kitchen door and into our backyard pool. After 90 minutes without a pulse, his heart started beating again. He’s been defying the odds ever since.",
+  "teaser": "Adam is our little brother, the youngest of five, a music lover with a smile worth waiting for. At 14 months old, during a busy week of family celebrations, he slipped quietly out the kitchen door and into our backyard pool. After 90 minutes without a pulse, his heart started beating again. Doctors said he might never hear us again. Within weeks, he was crying when Mom read to him. His smile took 15 months to come back, and it was worth every single day.",
   "teaserMore": "Adam is a drowning survivor and the reason we do all of this. His big brother and sisters (that’s us) started Because of ADAM in 2020 so other families could learn what we learned, without having to learn it the way we did.",
   "photo": "/images/uploads/adamchildofgodheadshot.jpg",
   "photoAlt": "Adam smiling in a “Child of God” headband and a “Hello, my name is Adam” shirt, surrounded by his stuffed animals",
   "timeCompare": "Adam was out of sight for about three minutes.",
   "familyQuote": "It only takes a second.",
   "familyQuoteBy": "Our mom and dad",
-  "hopeTurn": "It only takes a second to latch a gate, switch on an alarm, or put down the phone, too."
+  "hopeTurn": "It only takes a second to latch a gate, switch on an alarm, or put down the phone, too.",
+  "tonightTitle": "Five things you can do tonight",
+  "tonightIntro": "You don’t have to do everything at once. Start here, then work through the rest of the layers.",
+  "tonight": [
+    "Pull each door to the pool almost shut. Does the alarm still sound?",
+    "Walk away from the pool gate. Does it close and latch by itself?",
+    "Empty buckets, coolers and kiddie pools, and flip them over.",
+    "Look up an infant and child CPR class near you.",
+    "Pick tomorrow’s Water Watcher before anyone gets in the water."
+  ]
 }
