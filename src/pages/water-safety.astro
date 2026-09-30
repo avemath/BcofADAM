@@ -22,7 +22,7 @@ const moreHtml = more ? prose(more.rendered?.html) : '';
   <PageHero
     eyebrow="Layers of protection"
     title="No single layer is enough. Stack them."
-    lede="Every layer between a child and the water buys precious seconds. When one layer fails, like a gate left open, an alarm switched off or an adult looking away, the next one is there to catch it."
+    lede="Every layer between a child and the water buys precious seconds. When one layer fails, like a gate left open, a door alarm that never sounded or an adult looking away, the next one is there to catch it."
     next="var(--deep)"
   />
 
@@ -66,6 +66,20 @@ const moreHtml = more ? prose(more.rendered?.html) : '';
               <span class="layer-detail__num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
               <h2>{l.title}</h2>
               {l.body.map((p) => <p>{p}</p>)}
+              {l.family && (
+                <blockquote class="layer-family">
+                  <p>“{l.family.quote}”</p>
+                  <cite>
+                    {l.family.by}
+                    {l.family.link && (
+                      <>
+                        {' · '}
+                        <a href={url(l.family.link.href)}>{l.family.link.text}</a>
+                      </>
+                    )}
+                  </cite>
+                </blockquote>
+              )}
               <ul class="checklist">
                 {l.tips.map((t) => <li>{t}</li>)}
               </ul>
@@ -190,6 +204,26 @@ const moreHtml = more ? prose(more.rendered?.html) : '';
     font-size: clamp(1.5rem, 1.5vw + 1rem, 2rem);
     margin-top: 2.2em;
     scroll-margin-top: 100px;
+  }
+  .layer-family {
+    margin: 1.25em 0;
+    padding: 14px 18px;
+    border-left: 4px solid var(--sun);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    background: #fff;
+  }
+  .layer-family p {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    line-height: 1.4;
+    color: var(--ocean);
+    margin: 0 0 0.4em;
+  }
+  .layer-family cite {
+    font-style: normal;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--ink-soft);
   }
   .family-quote {
     margin: 0 0 clamp(24px, 4vw, 40px);

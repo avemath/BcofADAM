@@ -23,7 +23,8 @@
       "items": [
         "Every door and window that opens toward the pool has an alarm.",
         "We have a pool alarm or a wearable wristband alarm.",
-        "Alarms stay on, especially when we have guests, and we test them and keep spare batteries."
+        "Alarms stay on, especially when we have guests, and we test them and keep spare batteries.",
+        "We test door alarms with the door pulled almost shut, not just wide open."
       ]
     },
     {
@@ -56,6 +57,14 @@
         "At least one adult in the house knows infant and child CPR.",
         "A charged phone, a reaching pole and a ring buoy are at the pool.",
         "Our address and emergency numbers are posted near the pool."
+      ]
+    },
+    {
+      "title": "Away from home",
+      "items": [
+        "At Grandma’s, a friend’s house or a vacation rental, we find every pool, pond and hot tub before the kids do.",
+        "We bring a portable door or pool alarm when we travel.",
+        "We name a Water Watcher at every gathering, and keep watching after swim time is over."
       ]
     }
   ],

@@ -148,6 +148,16 @@ content:
       - name: hopeTurn
         label: Hopeful line after the quote
         type: string
+      - name: tonightTitle
+        label: "\"Things to do tonight\" heading"
+        type: string
+      - name: tonightIntro
+        label: Line under that heading
+        type: text
+      - name: tonight
+        label: Things to do tonight (keep them quick)
+        type: string
+        list: true
 
   # ───────────────────────────── Pages ─────────────────────────────
   - name: anywhere
@@ -415,6 +425,74 @@ content:
             list: true
           - name: sitterBlanks
             label: Blanks to fill in (address, phone numbers…)
+            type: string
+            list: true
+      - name: flyer
+        label: Printable flyer for pediatricians and daycares
+        type: file
+        path: src/data/flyer.json
+        format: json
+        fields:
+          - name: title
+            label: Big headline
+            type: string
+          - name: intro
+            label: Intro under the headline
+            type: text
+          - name: facts
+            label: Three facts (keep a source for each)
+            type: object
+            list: true
+            fields:
+              - name: stat
+                label: Big number or word (e.g. "#1")
+                type: string
+              - name: label
+                label: What it means
+                type: string
+              - name: source
+                label: Source name (e.g. CDC)
+                type: string
+              - name: sourceUrl
+                label: Source link
+                type: string
+          - name: layersTitle
+            label: Layers heading
+            type: string
+          - name: layers
+            label: Layers of protection (one line each)
+            type: object
+            list: true
+            fields:
+              - name: name
+                label: Layer
+                type: string
+              - name: text
+                label: What to do
+                type: text
+          - name: storyTitle
+            label: Story heading
+            type: string
+          - name: story
+            label: Adam's story (a few sentences)
+            type: text
+          - name: quote
+            label: Quote
+            type: text
+          - name: quoteBy
+            label: Who said it
+            type: string
+          - name: qrLabel
+            label: Words next to the QR code
+            type: text
+          - name: cardTitle
+            label: Handout card headline
+            type: string
+          - name: cardLead
+            label: Handout card line above the list
+            type: text
+          - name: cardItems
+            label: Handout card list
             type: string
             list: true
       - name: quiz

@@ -5,9 +5,41 @@ summary: Mom wrote this poem the night before the first anniversary of Adam’s 
 draft: false
 ---
 
-On June 4, 2018, the night before the first anniversary of Adam’s drowning, Mom shared this poem on Facebook. It’s lightly edited here for typos.
+On June 4, 2018, the night before the first anniversary of Adam’s drowning, Mom shared a poem on Facebook called “The Color of Love.” It walks through that day one color at a time, and it ends here:
 
-*This poem describes the day Adam drowned.*
+BLUE is where I picture Adam\
+on his swing staring at the moon.\
+Part of his soul remains too blessed for earth,\
+but his job unfinished to be gone so soon.
+
+Or maybe Adam’s just fishing\
+on the YELLOW sunset of a lake.\
+Until the day I ask God, Why?\
+these are the adventures I imagine he will make.
+
+For I believe Adam’s here to serve a purpose\
+which we are unworthy yet to see.\
+Only he and God will decide\
+what it is and when it shall be.
+
+Until then, I’ll hope with every breath I have\
+and wait for His direction.\
+**Today I choose to wear BLUE for\
+Adam’s hope, his strength, and our journey’s reflection.**
+
+HEAVEN is now the COLOR of his life.\
+When he’s in my arms, it’s all I can see.\
+Blessed by His miracle, perspective I’ve gained,\
+LOVE, the purest of colors, God and Adam invented just for me.
+
+*Mom (Shannon Matherne)*
+
+That’s why we wear blue every June 5: for Adam’s hope, his strength, and every family we can reach. Wear it with us and share one water safety tip with #WearBlueJune5th. [Add Wear Blue on June 5 to your calendar](/events).
+
+<details class="poem-full">
+<summary>Read the whole poem</summary>
+
+*The whole poem describes the day Adam drowned. It’s lightly edited here for typos.*
 
 **THE COLOR OF LOVE**
 
@@ -111,6 +143,4 @@ When he’s in my arms, it’s all I can see.\
 Blessed by His miracle, perspective I’ve gained,\
 LOVE, the purest of colors, God and Adam invented just for me.
 
-*Mom (Shannon Matherne)*
-
-Every June 5, wear blue with us and share one water safety tip with #WearBlueJune5th. [Add Wear Blue on June 5 to your calendar](/events).
+</details>

@@ -1,0 +1,452 @@
+---
+/**
+ * Printable flyer (page 1) and four cut-apart handout cards (page 2) for pediatricians'
+ * offices, daycares, church nurseries and sitters. Edit the wording in the Studio
+ * (Pages → Printable flyer). The QR codes are made when the site is built.
+ */
+import QRCode from 'qrcode';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Logo from '../components/Logo.astro';
+import { flyer as f } from '../data/content';
+import { site } from '../data/site';
+import { url } from '../lib/url';
+
+const target = new URL(url('/water-safety'), Astro.site ?? 'https://becauseofadam.org');
+const shortLink = `${target.host}${target.pathname.replace(/\/$/, '')}`;
+const qr = await QRCode.toString(target.href, {
+  type: 'svg',
+  margin: 0,
+  errorCorrectionLevel: 'M',
+  color: { dark: '#083349', light: '#ffffff' },
+});
+const qrImg = `data:image/svg+xml;utf8,${encodeURIComponent(qr)}`;
+const sources = [...new Set(f.facts.map((x) => x.source))];
+---
+
+<BaseLayout
+  title="Printable Water Safety Flyer for Pediatricians, Daycares and Sitters"
+  description="A free one-page drowning prevention flyer and cut-apart handout cards for pediatricians’ offices, daycares, church nurseries and babysitters."
+>
+  <section class="section flyer-page">
+    <div class="wrap narrow">
+      <div class="no-print flyer-intro">
+        <span class="eyebrow">Free to print and share</span>
+        <h1>A flyer for your pediatrician, daycare or sitter</h1>
+        <p class="lede">
+          Page 1 is a poster for a waiting room, classroom door or fridge. Page 2 has four handout cards to cut apart
+          and give to parents. Print as many as you like.
+        </p>
+        <div class="btn-row">
+          <button type="button" class="btn btn--ocean" data-print>Print or save as PDF</button>
+          <a class="btn btn--ghost" href={url('/request-a-talk')}>Request a talk for your staff or parents</a>
+        </div>
+        <p class="flyer-tip">
+          Tip: print in color on letter paper, and in your print settings choose “Background graphics” so the blue
+          bands show.
+        </p>
+      </div>
+
+      <article class="poster" aria-labelledby="poster-title">
+        <header class="poster__band">
+          <Logo light />
+          <span>{site.tagline}</span>
+        </header>
+
+        <h2 id="poster-title" class="poster__title">{f.title}</h2>
+        <p class="poster__intro">{f.intro}</p>
+
+        <ul class="poster__facts">
+          {
+            f.facts.map((x) => (
+              <li>
+                <strong>{x.stat}</strong>
+                <span>{x.label}</span>
+              </li>
+            ))
+          }
+        </ul>
+
+        <h3 class="poster__subhead">{f.layersTitle}</h3>
+        <ol class="poster__layers">
+          {
+            f.layers.map((l) => (
+              <li>
+                <b>{l.name}.</b> {l.text}
+              </li>
+            ))
+          }
+        </ol>
+
+        <div class="poster__bottom">
+          <div class="poster__story">
+            <h3>{f.storyTitle}</h3>
+            <p>{f.story}</p>
+            {
+              f.quote && (
+                <blockquote>
+                  <p>“{f.quote}”</p>
+                  {f.quoteBy && <cite>{f.quoteBy}</cite>}
+                </blockquote>
+              )
+            }
+          </div>
+          <div class="poster__qr">
+            <img src={qrImg} alt={`QR code for ${shortLink}`} width="120" height="120" />
+            <p>{f.qrLabel}</p>
+            <p class="poster__link">{shortLink}</p>
+          </div>
+        </div>
+
+        <footer class="poster__foot">
+          <b>In an emergency, call 911.</b>
+          <span>Sources: {sources.join('; ')}. Full sources at {target.host}/the-facts.</span>
+        </footer>
+      </article>
+
+      <article class="cards" aria-label="Handout cards to cut apart">
+        <p class="cards__cut" aria-hidden="true">✂ Cut along the dotted lines</p>
+        <div class="cards__grid">
+          {
+            [0, 1, 2, 3].map((n) => (
+              <div class:list={['card-out', { 'card-out--copy': n > 0 }]}>
+                <div class="card-out__top">
+                  <Logo />
+                </div>
+                <p class="card-out__title">{f.cardTitle}</p>
+                <p class="card-out__lead">{f.cardLead}</p>
+                <ul>
+                  {f.cardItems.map((item) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+                <div class="card-out__foot">
+                  <img src={qrImg} alt="" width="84" height="84" />
+                  <span>
+                    <b>{shortLink}</b>
+                    In an emergency, call 911.
+                  </span>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </article>
+
+      <p class="no-print flyer-sources">
+        Sources:{' '}
+        {
+          f.facts.map((x, i) => (
+            <>
+              {i > 0 && '; '}
+              <a href={x.sourceUrl} rel="noopener" target="_blank">
+                {x.source}
+                <span class="visually-hidden"> (source for “{x.stat}”, opens in a new tab)</span>
+              </a>
+            </>
+          ))
+        }
+        . Every layer has its sources on our <a href={url('/water-safety')}>Water Safety</a> page.
+      </p>
+    </div>
+  </section>
+
+  <script>
+    document.querySelector('[data-print]')?.addEventListener('click', () => window.print());
+  </script>
+</BaseLayout>
+
+<style>
+  .flyer-page {
+    padding-top: clamp(32px, 5vw, 56px);
+  }
+  .flyer-intro {
+    margin-bottom: 32px;
+  }
+  .flyer-intro h1 {
+    font-size: clamp(2rem, 2.5vw + 1rem, 2.8rem);
+  }
+  .flyer-tip,
+  .flyer-sources {
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+  }
+
+  /* ---------- Page 1: the poster ---------- */
+  .poster {
+    background: #fff;
+    border: 2px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-bottom: 32px;
+    font-size: 1rem;
+  }
+  .poster__band {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px 16px;
+    padding: 14px 24px;
+    background: linear-gradient(135deg, var(--ocean-bright), var(--deep));
+    color: var(--on-dark);
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  .poster__title {
+    margin: 22px 24px 6px;
+    font-size: clamp(2rem, 3vw + 1rem, 2.9rem);
+    line-height: 1.05;
+    color: var(--deep);
+  }
+  .poster__intro {
+    margin: 0 24px 16px;
+    font-size: 1.08rem;
+  }
+  .poster__facts {
+    list-style: none;
+    margin: 0 24px 18px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .poster__facts li {
+    display: grid;
+    gap: 2px;
+    padding: 10px 12px;
+    border-radius: var(--radius-sm);
+    background: var(--foam);
+    border-top: 4px solid var(--aqua);
+    font-size: 0.88rem;
+    line-height: 1.3;
+  }
+  .poster__facts strong {
+    font-family: var(--font-display);
+    font-size: 1.9rem;
+    line-height: 1;
+    color: var(--ocean);
+  }
+  .poster__subhead {
+    margin: 0 24px 8px;
+    font-size: 1.35rem;
+    color: var(--deep);
+  }
+  .poster__layers {
+    margin: 0 24px 18px;
+    padding-left: 1.4em;
+    columns: 2;
+    column-gap: 28px;
+    font-size: 0.92rem;
+    line-height: 1.35;
+  }
+  .poster__layers li {
+    break-inside: avoid;
+    margin-bottom: 7px;
+  }
+  .poster__layers b {
+    color: var(--ocean);
+  }
+  .poster__bottom {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 18px;
+    align-items: start;
+    margin: 0 24px 16px;
+    padding: 16px 18px;
+    border-radius: var(--radius-sm);
+    background: var(--sand);
+    border-left: 6px solid var(--sun);
+  }
+  .poster__story h3 {
+    margin: 0 0 4px;
+    font-size: 1.1rem;
+  }
+  .poster__story p {
+    margin: 0 0 8px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  .poster__story blockquote {
+    margin: 0;
+  }
+  .poster__story blockquote p {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    color: var(--ocean);
+    margin-bottom: 2px;
+  }
+  .poster__story cite {
+    font-style: normal;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .poster__qr {
+    width: 170px;
+    text-align: center;
+    font-size: 0.75rem;
+    line-height: 1.3;
+  }
+  .poster__qr img {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 6px;
+  }
+  .poster__qr p {
+    margin: 0 0 4px;
+  }
+  .poster__link {
+    font-weight: 700;
+    color: var(--ocean);
+    white-space: nowrap;
+    font-size: 0.72rem;
+  }
+  .poster__foot {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 4px 16px;
+    padding: 10px 24px 14px;
+    border-top: 1px solid var(--line);
+    font-size: 0.72rem;
+    color: var(--ink-soft);
+  }
+  .poster__foot b {
+    color: var(--ink);
+    font-size: 0.85rem;
+  }
+
+  /* ---------- Page 2: four handout cards ---------- */
+  .cards__cut {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    margin: 0 0 8px;
+  }
+  .cards__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 2px dashed var(--line);
+  }
+  .card-out {
+    padding: 18px 20px;
+    background: #fff;
+    border: 1px dashed var(--line);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .card-out__title {
+    margin: 6px 0 0;
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.1;
+    color: var(--deep);
+  }
+  .card-out__lead {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.35;
+  }
+  .card-out ul {
+    margin: 0;
+    padding-left: 1.2em;
+    font-size: 1rem;
+    line-height: 1.45;
+  }
+  .card-out__foot {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 8px;
+    font-size: 0.78rem;
+    line-height: 1.3;
+  }
+  .card-out__foot img {
+    width: 84px;
+    height: 84px;
+    flex: none;
+  }
+  .card-out__foot b {
+    display: block;
+    color: var(--ocean);
+    overflow-wrap: anywhere;
+  }
+
+  @media (max-width: 640px) {
+    .poster__facts {
+      grid-template-columns: 1fr;
+    }
+    .poster__layers {
+      columns: 1;
+    }
+    .poster__bottom {
+      grid-template-columns: 1fr;
+    }
+    .poster__qr {
+      width: auto;
+    }
+    .cards__grid {
+      grid-template-columns: 1fr;
+    }
+    /* On a phone, one card is enough to see. All four still print. */
+    .card-out--copy {
+      display: none;
+    }
+  }
+
+  /* ---------- Print: poster on page 1, four cards on page 2 ---------- */
+  @page {
+    size: letter portrait;
+    margin: 0.4in;
+  }
+  @media print {
+    :global(.skip-link) {
+      display: none !important;
+    }
+    .flyer-page {
+      padding: 0 !important;
+    }
+    .flyer-page :global(.wrap) {
+      max-width: none;
+      padding: 0;
+    }
+    .poster,
+    .cards {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .poster {
+      border: 0;
+      border-radius: 0;
+      margin: 0;
+      font-size: 11pt;
+      break-after: page;
+    }
+    .poster__facts {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .poster__layers {
+      columns: 2;
+    }
+    .poster__bottom {
+      grid-template-columns: 1fr auto;
+    }
+    .cards__grid {
+      grid-template-columns: repeat(2, 1fr);
+      height: 9.7in;
+      border: 0;
+    }
+    .card-out {
+      border: 1px dashed #9aa9b2;
+      padding: 0.3in;
+    }
+    .card-out--copy {
+      display: flex;
+    }
+  }
+</style>

@@ -346,6 +346,22 @@ a:hover {
   margin: 2em 0;
 }
 /* Photos in the story: shown at their own shape and never blown up past their real size. */
+.prose details {
+  margin: 2em 0;
+  padding: 16px 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: #fff;
+}
+.prose details summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--ocean);
+  min-height: 24px;
+}
+.prose details[open] summary {
+  margin-bottom: 1em;
+}
 .prose .story-figure {
   margin: 2em 0;
 }

@@ -7,10 +7,12 @@ import { survivorResources } from '../data/content';
 import { url } from '../lib/url';
 import { hasDonate } from '../data/site';
 
-const realities = [
+// Our mom's own words sit under some of these, quoted from her posts on Adam's Facebook page.
+const realities: { title: string; body: string; quote?: string; by?: string }[] = [
   {
     title: 'The hospital stay',
     body: 'Intensive care, ventilators, scans, and days or weeks of waiting to learn what the future holds. Families often live out of a hospital room far from home, with other children to care for.',
+    quote: 'I decided I would be the smartest person in the room when it came to Adam’s care. I would be his voice, his advocate, his warrior mom.',
   },
   {
     title: 'Brain injury',
@@ -23,14 +25,18 @@ const realities = [
   {
     title: 'The whole family',
     body: 'Parents carry grief, guilt and exhaustion. Siblings carry their own worry. Friendships, jobs and marriages are all tested. Families need support that lasts.',
+    quote: 'Every day they faced friends and strangers alike who all asked how their brother was doing. And when the answer “good” was received as “totally healed,” they had to explain that a good day just meant that he’s still alive.',
+    by: 'Our mom, about Adam’s big sisters',
   },
   {
     title: 'The victories',
     body: 'Survivor families learn to celebrate everything: a smile, a laugh, a new sound, a little more strength than yesterday. Progress comes in its own time, and every bit of it counts.',
+    quote: 'For 15 months, all I begged for was his smile to return.',
   },
   {
     title: 'The village',
     body: 'Nobody gets through this alone. It takes prayer warriors, meal trains, therapists, teachers, and friends who keep showing up. That’s what a village looks like.',
+    quote: 'Sometimes we simply lack energy and words. We are so thankful you don’t take it personally and show up for us anyway.',
   },
 ];
 ---
@@ -46,56 +52,6 @@ const realities = [
   />
 
   <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
-    <div class="wrap split split--wide-left">
-      <div class="reveal">
-        <h2>What “nonfatal drowning” means</h2>
-        <p>
-          Health experts define drowning as having trouble breathing because the body went under or
-          into water. Many children survive a drowning. Some recover completely. Others, like Adam,
-          live with injuries that last a lifetime.
-        </p>
-        <p>
-          That’s why we say Adam <em>is</em> a drowning survivor. He didn’t “almost drown.” He drowned,
-          and he survived.
-        </p>
-      </div>
-      <div class="card reveal">
-        <p class="eyebrow">By the numbers</p>
-        <ul class="nf-stats">
-          {
-            nonfatal.map((f) => (
-              <li>
-                <strong>{f.stat}</strong>
-                <span>{f.label}</span>
-                <a class="source" href={f.sourceUrl} rel="noopener" target="_blank">
-                  {f.source}
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--foam">
-    <div class="wrap">
-      <span class="eyebrow">What families face</span>
-      <h2>Life after a drowning</h2>
-      <div class="grid grid--2" style="margin-top: 32px">
-        {
-          realities.map((r) => (
-            <div class="card reveal">
-              <h3>{r.title}</h3>
-              <p>{r.body}</p>
-            </div>
-          ))
-        }
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
     <div class="wrap narrow">
       <span class="eyebrow">If this is your family</span>
       <h2>You are not alone, and it’s not only your story to carry.</h2>
@@ -131,6 +87,62 @@ const realities = [
   </section>
 
   <section class="section section--foam">
+    <div class="wrap split split--wide-left">
+      <div class="reveal">
+        <h2>What “nonfatal drowning” means</h2>
+        <p>
+          Health experts define drowning as having trouble breathing because the body went under or
+          into water. Many children survive a drowning. Some recover completely. Others, like Adam,
+          live with injuries that last a lifetime.
+        </p>
+        <p>
+          That’s why we say Adam <em>is</em> a drowning survivor. He didn’t “almost drown.” He drowned,
+          and he survived.
+        </p>
+      </div>
+      <div class="card reveal">
+        <p class="eyebrow">By the numbers</p>
+        <ul class="nf-stats">
+          {
+            nonfatal.map((f) => (
+              <li>
+                <strong>{f.stat}</strong>
+                <span>{f.label}</span>
+                <a class="source" href={f.sourceUrl} rel="noopener" target="_blank">
+                  {f.source}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <span class="eyebrow">What families face</span>
+      <h2>Life after a drowning</h2>
+      <div class="grid grid--2" style="margin-top: 32px">
+        {
+          realities.map((r) => (
+            <div class="card reveal">
+              <h3>{r.title}</h3>
+              <p>{r.body}</p>
+              {r.quote && (
+                <blockquote class="mom-words">
+                  <p>“{r.quote}”</p>
+                  <cite>{r.by ?? 'Our mom'}</cite>
+                </blockquote>
+              )}
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--foam">
     <div class="wrap narrow">
       <span class="eyebrow">For friends, neighbors and everyone else</span>
       <h2>How to support a family after a drowning</h2>
@@ -143,7 +155,7 @@ const realities = [
         <li><strong>Keep showing up.</strong> Months and years later, not just the first week.</li>
         <li><strong>Help with the ordinary.</strong> Meals, laundry, and rides to school and practice for the brothers and sisters.</li>
         <li><strong>Say the child’s name.</strong> Ask how they’re doing, and celebrate every milestone with them.</li>
-        <li><strong>Never say “move on.”</strong> Some things can’t be fixed. They can only be carried, together.</li>
+        <li><strong>Never say “move on.”</strong> This kind of grief doesn’t end. Help them carry it.</li>
       </ul>
     </div>
   </section>
@@ -181,6 +193,24 @@ const realities = [
   .nf-stats span {
     display: block;
     margin: 6px 0 2px;
+  }
+  .mom-words {
+    margin: 14px 0 0;
+    padding: 10px 0 0 16px;
+    border-left: 3px solid var(--sun);
+  }
+  .mom-words p {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: var(--ocean);
+    margin: 0 0 4px;
+  }
+  .mom-words cite {
+    font-style: normal;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--ink-soft);
   }
   .big-quote {
     margin: 32px 0;
