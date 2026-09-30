@@ -1,7 +1,7 @@
 ---
 title: Welcome to the movement
 date: 2026-09-28
-summary: Why we built this website, and what’s coming next.
+summary: Why we built this website, and what you’ll find here.
 draft: false
 ---
 
