@@ -1,0 +1,71 @@
+{
+  "title": "Drowning is silent. Layer up.",
+  "intro": "Drowning is the #1 cause of death for children ages 1 to 4. It happens in seconds, usually with no splash and no cry for help, and it’s preventable.",
+  "facts": [
+    {
+      "stat": "#1",
+      "label": "cause of death for children ages 1 to 4",
+      "source": "CDC",
+      "sourceUrl": "https://www.cdc.gov/drowning/data-research/facts/index.html"
+    },
+    {
+      "stat": "Silent",
+      "label": "Usually no splashing and no calling for help",
+      "source": "American Academy of Pediatrics",
+      "sourceUrl": "https://www.healthychildren.org/English/safety-prevention/at-play/Pages/Water-Safety-And-Young-Children.aspx"
+    },
+    {
+      "stat": "70%+",
+      "label": "of fatal child pool and spa drownings happen at a home",
+      "source": "CPSC, 2026",
+      "sourceUrl": "https://www.cpsc.gov/Newsroom/News-Releases/2026/CPSC-Report-Highlights-Persistent-Risk-of-Childhood-Drowning"
+    }
+  ],
+  "layersTitle": "No single layer is enough. Stack them.",
+  "layers": [
+    {
+      "name": "Watch",
+      "text": "Name one Water Watcher. Stay within arm’s reach of toddlers. Phones down."
+    },
+    {
+      "name": "Fence",
+      "text": "A fence on all four sides of the pool, with a gate that closes and latches by itself."
+    },
+    {
+      "name": "Alarms",
+      "text": "On every door to the pool, plus a pool alarm. Keep them on, especially with guests."
+    },
+    {
+      "name": "Empty it",
+      "text": "Buckets, coolers, kiddie pools and tubs. Young children can drown in an inch or two of water."
+    },
+    {
+      "name": "Swim skills",
+      "text": "Lessons after the first birthday (we recommend ISR self-rescue). They add to the other layers, never replace them."
+    },
+    {
+      "name": "Life jackets",
+      "text": "U.S. Coast Guard-approved at lakes, rivers and the beach. Water wings and floaties are toys."
+    },
+    {
+      "name": "Be ready",
+      "text": "Learn infant and child CPR. If a child is missing, check the water first. Call 911."
+    }
+  ],
+  "storyTitle": "Why our family cares",
+  "story": "Our little brother Adam was 14 months old when he slipped out during a busy family week and into our backyard pool. He was out of sight for about three minutes. He survived, with a severe brain injury, and he’s still the heart of our family. We started Because of ADAM so other families learn the layers before it happens to them.",
+  "quote": "A four-sided pool fence with a self-closing gate would have saved him.",
+  "quoteBy": "Adam’s mom, Shannon",
+  "qrLabel": "Scan for the layers of protection, a home checklist and the Water Watcher pledge.",
+  "cardTitle": "Check the water first.",
+  "cardLead": "Drowning is fast and silent. No single layer is enough, so layer up:",
+  "cardItems": [
+    "Watch: one adult, within arm’s reach",
+    "Fence the pool on all four sides",
+    "Alarms on doors and the pool",
+    "Empty buckets, tubs and kiddie pools",
+    "Swim lessons after age 1",
+    "Life jackets, not floaties",
+    "Learn infant and child CPR"
+  ]
+}
