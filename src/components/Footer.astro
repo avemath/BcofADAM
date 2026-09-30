@@ -65,7 +65,13 @@ const year = new Date().getFullYear();
 
         <div>
           <h2 class="site-footer__heading">Stay in the loop</h2>
-          <p>A few emails a year with water safety reminders, news about Adam and upcoming events.</p>
+          {
+            site.newsletterFormAction.trim() || site.newsletterUrl.trim() ? (
+              <p>A few emails a year with water safety reminders, news about Adam and upcoming events.</p>
+            ) : (
+              <p>Water safety reminders, news about Adam and upcoming events, all year long on Facebook.</p>
+            )
+          }
           {
             site.newsletterFormAction.trim() ? (
               <NewsletterForm dark />

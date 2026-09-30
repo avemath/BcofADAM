@@ -11,6 +11,8 @@ export interface Layer {
   tips: string[];
   /** Shown under the tips on the Water Safety page. */
   sources?: { name: string; url: string }[];
+  /** Our family's own words about this layer, shown on the Water Safety page. Quote them exactly. */
+  family?: { quote: string; by: string; link?: { href: string; text: string } };
 }
 
 const CPSC_BARRIERS = {
@@ -38,6 +40,11 @@ export const layers: Layer[] = [
       'No alcohol, phones or books while you’re the Water Watcher.',
     ],
     sources: [AAP_2026, { name: 'Safe Kids Worldwide', url: 'https://www.safekids.org/tip/swimming-safety-tips' }],
+    family: {
+      quote:
+        'Do whatever you can to keep your eyes on children that cannot swim, especially during parties. … Even for very good parents, there are no do-overs.',
+      by: 'Our mom, on the Fourth of July',
+    },
   },
   {
     id: 'barriers',
@@ -62,13 +69,13 @@ export const layers: Layer[] = [
     short: 'Door, gate and pool alarms buy you seconds.',
     body: [
       'Children are curious and fast. A door alarm tells you the second a door to the pool area opens. A pool alarm tells you when something enters the water.',
-      'Alarms only work when they’re switched on, and busy days are when they’re most likely to be turned off. Parties, holidays and houses full of guests are exactly when you need them.',
+      'Alarms have blind spots. Ours went quiet when a door was pulled almost shut but never latched. And alarms only help when they’re on, so keep them on during parties, holidays and houses full of guests, exactly when you need them most.',
     ],
     tips: [
       'Put alarms on every door and window that opens toward the pool. Code-compliant door alarms (UL 2017) sound within seconds of the door opening.',
       'In Pennsylvania, building code still lets the house be one side of the pool barrier if doors to the pool have alarms (or the pool has a certified safety cover). A four-sided fence is safer.',
       'Add a pool alarm or a wearable wristband alarm as an extra layer.',
-      'Test alarms regularly and keep spare batteries on hand.',
+      'Test every door alarm with the door pulled almost shut, not just wide open. Ours went quiet that way. Keep spare batteries on hand.',
       'Make “alarms stay on” a house rule, especially when you have guests.',
     ],
     sources: [
@@ -78,6 +85,11 @@ export const layers: Layer[] = [
         url: 'https://www.pacodeandbulletin.gov/Display/pacode?file=%2Fsecure%2Fpacode%2Fdata%2F034%2Fchapter403%2Fs403.26.html',
       },
     ],
+    family: {
+      quote:
+        'At the very least, a $250 floating pool sensor with alarms both outside and inside would have saved him. … I spent more than that on his crib blanket set.',
+      by: 'Our mom, 2019',
+    },
   },
   {
     id: 'covers',
@@ -136,6 +148,12 @@ export const layers: Layer[] = [
         url: 'https://www.uscgboating.org/recreational-boaters/life-jacket-wear-wearing-your-life-jacket.php',
       },
     ],
+    family: {
+      quote:
+        'If a layer of protection fails (supervision, gates, alarms, etc.), would your child know that the device was keeping them afloat, or would they jump in carefree and drown?',
+      by: 'Our mom, on swim vests and floaties',
+      link: { href: '/news/2023-06-21-puddle-jumpers', text: 'Read her whole post' },
+    },
   },
   {
     id: 'emergency',

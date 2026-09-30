@@ -9,6 +9,7 @@ import isrJson from './isr.json';
 import pediatriciansJson from './pediatricians.json';
 import checklistJson from './checklist.json';
 import quizJson from './quiz.json';
+import flyerJson from './flyer.json';
 
 export interface Fact {
   stat: string;
@@ -129,4 +130,22 @@ export const quiz = {
       if (!ok && q.question) console.warn(`[quiz] Skipping "${q.question}": its answer doesn't match any of its choices.`);
       return ok;
     }),
+};
+
+/** Printable flyer and handout cards for pediatricians, daycares and sitters (/flyer). */
+const flyerData = flyerJson as Partial<typeof flyerJson>;
+export const flyer = {
+  title: flyerData.title || 'Drowning is silent. Layer up.',
+  intro: flyerData.intro ?? '',
+  facts: (flyerData.facts ?? []) as Fact[],
+  layersTitle: flyerData.layersTitle || 'No single layer is enough. Stack them.',
+  layers: (flyerData.layers ?? []) as { name: string; text: string }[],
+  storyTitle: flyerData.storyTitle || 'Why our family cares',
+  story: flyerData.story ?? '',
+  quote: flyerData.quote ?? '',
+  quoteBy: flyerData.quoteBy ?? '',
+  qrLabel: flyerData.qrLabel ?? '',
+  cardTitle: flyerData.cardTitle || 'Check the water first.',
+  cardLead: flyerData.cardLead || 'No single layer is enough, so layer up:',
+  cardItems: (flyerData.cardItems ?? []) as string[],
 };

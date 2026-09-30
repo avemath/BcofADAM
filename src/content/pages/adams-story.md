@@ -23,6 +23,14 @@ Adam can’t move his body or talk, but he sees, hears and understands everythin
 >
 > *Mom*
 
+Dad’s favorite memory isn’t one moment. It’s a routine. In 2017, a reporter from back home in Louisiana asked him for one memory that really speaks to the little boy Adam is. He wrote:
+
+> Every day I would come home from work and after dinner it was bath time (his absolute favorite time of the day). We would undress him and I would tickle his belly with my beard while he literally shrieked with laughter. As soon as I would stop he would uncover his belly and wait until I did it again. We would then take a bubble bath with Lea and snuggle with Mom for the night. That routine will be my heaven with him.
+>
+> *Dad*
+
+He said something else in that interview that we all agree with: *“Our lives weren’t perfect but our family was.”*
+
 ## June 5, 2017
 
 ![](/images/uploads/ricgradredbikeb4acc-1.jpg)

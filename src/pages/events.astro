@@ -7,7 +7,13 @@ import { getEvents, splitEvents } from '../lib/events';
 import { url } from '../lib/url';
 import { event as eventLd } from '../lib/seo';
 
-const { upcoming, past } = splitEvents(await getEvents());
+const { upcoming, past: allPast } = splitEvents(await getEvents());
+// Benefits our hometown and friends held for Adam's own care, before we started Because of ADAM in 2020,
+// get their own group so they're not mixed in with the nonprofit's events.
+const beforeUs = (e: (typeof allPast)[number]) =>
+  e.data.kind === 'Community' && (!e.data.date || e.data.date.getUTCFullYear() < 2020);
+const past = allPast.filter((e) => !beforeUs(e));
+const early = allPast.filter(beforeUs);
 const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
 const origin = new URL(url('/'), Astro.site).href.replace(/\/$/, '');
 // Upcoming events (including the yearly ones) as structured data for search engines.
@@ -47,6 +53,23 @@ const jsonLd = upcoming.map((e) => eventLd(e, origin, pageUrl)).filter((x) => x 
       </div>
     </div>
   </section>
+
+  {
+    early.length > 0 && (
+      <section class={upcoming.length > 0 ? 'section' : 'section section--foam'}>
+        <div class="wrap">
+          <h2>Before Because of ADAM</h2>
+          <p class="lede">
+            In 2017 and 2018, before we started Because of ADAM, our hometown and friends held benefits to help with
+            Adam’s care. We’ll never be able to thank them enough.
+          </p>
+          <div class="grid grid--3" style="margin-top: 28px">
+            {early.map((e) => <EventCard event={e} />)}
+          </div>
+        </div>
+      </section>
+    )
+  }
 
   <CtaBand
     title="Want to host one?"

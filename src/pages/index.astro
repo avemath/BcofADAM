@@ -128,8 +128,8 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
         <span class="eyebrow">Layers of protection</span>
         <h2>No single layer is enough.</h2>
         <p class="lede">
-          Alarms get switched off. Gates get propped open. Adults look away. Each layer you add catches what the
-          last one misses. Turn them on and see the difference.
+          Our door alarms went quiet when a door was pulled almost shut but never latched. Gates get propped open.
+          Adults look away. Each layer you add catches what the last one misses. Turn them on and see the difference.
         </p>
       </div>
       <LayersBuilder />
@@ -137,30 +137,26 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
   </section>
   <Wave color="var(--sand)" bg="var(--abyss)" />
 
-  <!-- LAYER SUMMARY -->
+  <!-- TONIGHT -->
   <section class="section" style="padding-top: clamp(32px, 5vw, 64px)">
     <div class="wrap">
-      <span class="eyebrow">The layers</span>
-      <h2>{countWord(layers.length)} layers of protection</h2>
-      <p class="lede layers-lede">
-        These build on the National Drowning Prevention Alliance’s{' '}
-        <a href="https://ndpa.org/layers/" rel="noopener" target="_blank">5 Layers of Protection</a>, with barriers,
-        alarms and covers each counted as a layer of its own.
-      </p>
-      <ol class="layer-cards grid grid--4">
+      <span class="eyebrow">Start tonight</span>
+      <h2>{story.tonightTitle}</h2>
+      {story.tonightIntro && <p class="lede layers-lede">{story.tonightIntro}</p>}
+      <ol class="tonight">
         {
-          layers.map((l, i) => (
+          (story.tonight ?? []).map((t, i) => (
             <li class="card reveal">
-              <span class="layer-cards__num" aria-hidden="true">{i + 1}</span>
-              <h3>{l.title.split(':')[0]}</h3>
-              <p>{l.short}</p>
-              <a href={url(`/water-safety#${l.id}`)} aria-label={`Learn more about ${l.title.split(':')[0]}`}>
-                Learn more →
-              </a>
+              <span class="tonight__num" aria-hidden="true">{i + 1}</span>
+              <p>{t}</p>
             </li>
           ))
         }
       </ol>
+      <div class="btn-row">
+        <a class="btn btn--ocean" href={url('/water-safety')}>See all {countWord(layers.length).toLowerCase()} layers</a>
+        <a class="btn btn--ghost" href={url('/checklist')}>Print the home checklist</a>
+      </div>
       <div class="missing-callout reveal" role="note">
         <h3>If a child is missing, check the water first.</h3>
         <p>
@@ -248,8 +244,8 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
       <section class="section">
         <div class="wrap">
           <span class="eyebrow">Events & fundraisers</span>
-          <h2>Fishing rodeos, cornhole & a whole lot of village.</h2>
-          <p class="lede">Every one brings Adam’s village together and puts water safety in front of families who need it.</p>
+          <h2>Come find Adam’s village.</h2>
+          <p class="lede">Every event brings Adam’s village together and puts water safety in front of families who need it.</p>
           <div class="grid grid--3" style="margin-top: 32px">
             {homeEvents.map((e) => <EventCard event={e} />)}
           </div>
@@ -383,6 +379,15 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     padding-top: clamp(80px, 14vh, 160px);
     padding-bottom: clamp(24px, 6vh, 64px);
   }
+  /* On phones, don't make people scroll past empty sky to reach the words. */
+  @media (max-width: 640px) {
+    .hero {
+      min-height: auto;
+    }
+    .hero__inner {
+      padding-top: 56px;
+    }
+  }
   .hero__eyebrow {
     font-size: 0.85rem;
     letter-spacing: 0.18em;
@@ -477,16 +482,21 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     max-width: 62ch;
     margin-bottom: 2rem;
   }
-  .layer-cards {
+  .tonight {
     list-style: none;
     padding: 0;
-    margin: 32px 0 0;
+    margin: 0 0 8px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
   }
-  .layer-cards li {
-    display: flex;
-    flex-direction: column;
+  .tonight p {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.45;
   }
-  .layer-cards__num {
+  .tonight__num {
     display: grid;
     place-items: center;
     width: 40px;
@@ -496,14 +506,6 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     color: var(--ocean);
     font-weight: 800;
     margin-bottom: 14px;
-  }
-  .layer-cards h3 {
-    font-size: 1.3rem;
-  }
-  .layer-cards a {
-    margin-top: auto;
-    font-weight: 700;
-    text-decoration: none;
   }
   .missing-callout {
     margin-top: 28px;
