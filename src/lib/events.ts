@@ -63,13 +63,18 @@ export function isHappening(e: EventEntry) {
   return !!start && !!end && start <= now && end >= now;
 }
 
-/** When an event happened: its date, or the year (and month) in "when", like "July 2021" or "Summer 2018". */
+/** Seasons count as their middle month, so "Spring 2018" sorts before "Summer 2018". */
+const SEASONS: Record<string, number> = { winter: 0, spring: 3, summer: 6, fall: 9, autumn: 9 };
+
+/** When an event happened: its date, or the year (and month or season) in "when", like "July 2021" or "Summer 2018". */
 function sortKey(e: EventEntry) {
   if (e.data.date) return e.data.date.valueOf();
-  const year = e.data.when.match(/\b(19|20)\d{2}\b/);
+  const when = e.data.when.toLowerCase();
+  const year = when.match(/\b(19|20)\d{2}\b/);
   if (!year) return 0;
-  const month = MONTHS.findIndex((m) => e.data.when.toLowerCase().includes(m));
-  return Date.UTC(Number(year[0]), Math.max(month, 0), 1);
+  const month = MONTHS.findIndex((m) => when.includes(m));
+  const season = Object.keys(SEASONS).find((s) => when.includes(s));
+  return Date.UTC(Number(year[0]), month >= 0 ? month : season ? SEASONS[season] : 0, 1);
 }
 
 /** Published events, newest first. Events with no year at all go last. */

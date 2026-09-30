@@ -11,7 +11,7 @@ When Adam was about 6 months old, we looked for ISR lessons. The closest instruc
 
 They weren’t. Adam was 14 months old when he slipped out of the house and into our pool, and he didn’t know how to roll onto his back and float. Mom has said that if ISR had been available nearby, she believes she might have found him floating on his back, waiting to be rescued.
 
-After Adam drowned, Dad decided to be the change we wanted to see. He spent eight weeks training in Florida, became a certified ISR instructor (and a Red Cross CPR instructor), and started teaching so families in our area wouldn’t have to drive two hours for these lessons. (His lessons are his own business, separate from Because of ADAM. We just want every family to find a certified instructor, wherever they live.)
+After Adam drowned, Dad decided to be the change we wanted to see. He spent eight weeks training in Florida, became a certified ISR instructor (and a Red Cross CPR instructor), and started teaching so families in our area wouldn’t have to drive two hours for these lessons. By 2023, he had taught more than 150 children to self-rescue. (His lessons are his own business, separate from Because of ADAM. We just want every family to find a certified instructor, wherever they live.)
 
 > Skills before thrills. No matter the cost, the time commitment or the distance, sometimes there are no do-overs.
 >
