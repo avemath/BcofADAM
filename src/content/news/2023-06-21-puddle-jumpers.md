@@ -21,4 +21,6 @@ There are far worse things you could be required to do in a day. Trust us.
 
 *Shannon Matherne, mother of a drowning survivor and water safety advocate*
 
+**What the research says:** in a CPSC study of young children who drowned in pools, 69% weren’t expected to be at or in the pool at all, yet they were found in the water ([CPSC Publication 359](https://www.cpsc.gov/s3fs-public/pdfs/blk_media_359.pdf)).
+
 Learn [why we recommend ISR self-rescue lessons](/swim-lessons) and [the layers of protection](/water-safety) that work together.
