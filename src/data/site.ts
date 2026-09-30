@@ -90,6 +90,7 @@ export const nav: NavItem[] = [
       { label: 'Water safety quiz', href: '/quiz' },
       { label: 'Water Watcher pledge', href: '/water-watcher' },
       { label: 'Home safety checklist', href: '/checklist' },
+      { label: 'Flyer for offices & daycares', href: '/flyer' },
       { label: 'Water safety in Pennsylvania', href: '/pennsylvania' },
       { label: 'Teens, life jackets & CPR', href: '/water-safety#more' },
       { label: 'Resources', href: '/resources' },
