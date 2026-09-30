@@ -7,11 +7,28 @@ import { url } from '../lib/url';
 import PhotoFrame from '../components/PhotoFrame.astro';
 import { about, team } from '../data/content';
 
+// Each value ends with our mom's own words, quoted from her posts on Adam's Facebook page.
 const values = [
-  { title: 'Honest', body: 'We tell the truth about drowning, including the hard parts, and we cite our sources.' },
-  { title: 'Hopeful', body: 'Adam is proof that hope matters. Drowning is preventable, and every family can add layers of protection.' },
-  { title: 'Without blame', body: 'Drowning happens to loving, careful families. Shame keeps people silent, and silence costs lives.' },
-  { title: 'Community', body: 'It takes a village. We work alongside parents, schools, first responders, swim instructors and other drowning prevention groups.' },
+  {
+    title: 'Honest',
+    body: 'We tell the truth about drowning, including the hard parts, and we cite our sources.',
+    said: 'Layer up. There are no do-overs.',
+  },
+  {
+    title: 'Hopeful',
+    body: 'Adam is proof that hope matters. Drowning is preventable, and every family can add layers of protection.',
+    said: 'In His time.',
+  },
+  {
+    title: 'Without blame',
+    body: 'Drowning happens to loving, careful families. Shame keeps people silent, and silence costs lives.',
+    said: 'When you hear these stories, pause and find kindness.',
+  },
+  {
+    title: 'Community',
+    body: 'It takes a village. We work alongside parents, schools, first responders, swim instructors and other drowning prevention groups.',
+    said: 'Our village shines just as bright as the fireflies’ village.',
+  },
 ];
 
 ---
@@ -93,6 +110,9 @@ const values = [
             <div class="card reveal">
               <h3>{v.title}</h3>
               <p>{v.body}</p>
+              <p class="value__said">
+                “{v.said}” <span>Mom</span>
+              </p>
             </div>
           ))
         }
@@ -144,6 +164,25 @@ const values = [
 </BaseLayout>
 
 <style>
+  .value__said {
+    margin: 1em 0 0;
+    padding-top: 0.9em;
+    border-top: 1px solid var(--line);
+    font-family: var(--font-display);
+    font-size: 1.08rem;
+    line-height: 1.4;
+    color: var(--ocean);
+  }
+  .value__said span {
+    display: block;
+    margin-top: 4px;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
   .mission {
     font-size: clamp(1.6rem, 1.6vw + 1rem, 2.4rem);
     line-height: 1.25;
