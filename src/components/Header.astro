@@ -65,7 +65,13 @@ const slug = (label: string) => label.toLowerCase().replace(/[^a-z]+/g, '-').rep
           })
         }
       </ul>
-      {hasDonate && <a href={url('/donate')} class="btn site-nav__donate">Donate</a>}
+      {
+        hasDonate ? (
+          <a href={url('/donate')} class="btn site-nav__donate">Donate</a>
+        ) : (
+          <a href={url('/water-watcher')} class="btn site-nav__donate">Take the pledge</a>
+        )
+      }
     </nav>
   </div>
 </header>
@@ -359,6 +365,11 @@ const slug = (label: string) => label.toLowerCase().replace(/[^a-z]+/g, '-').rep
     }
     .site-nav__item > a {
       white-space: nowrap;
+    }
+    .site-nav__donate {
+      flex: none;
+      white-space: nowrap;
+      padding-inline: 18px;
     }
     .site-nav .submenu {
       position: absolute;
