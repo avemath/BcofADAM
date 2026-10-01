@@ -28,7 +28,7 @@ There are five of us: Rickey, Grace, me, Lea and Adam. Dad had really wanted one
 
 That spring, Dad and Lea grew a garden from seed. Lea was 4, and she picked out her favorite fruit and veggie packets herself. Every day the two of them watered the little pots while Adam watched from his walker, and by June the plants were ready to go into the ground.
 
-That Monday was June 5, 2017, and our house was as full as it gets. Rickey had just graduated from high school, family had flown in to celebrate, and Grace and I were in our uniforms for the first game of the season. After the business with my brush, Adam went to play with Lea in a tent in the living room, carrying his toys inside.
+That Monday was June 5, 2017, and our house was as full as it gets. Rickey had just graduated from high school, family had flown in to celebrate, and Grace and I were in our uniforms for the first game of the season. After the business with my brush, Adam went to play with Lea in a tent in the living room, carrying his toys inside, and Dad, Grace and I left for the field. Dad coached our team, so the three of us always went early to warm up.
 
 ![](/images/uploads/ricgradredbikeb4acc-1.jpg)
 
@@ -36,11 +36,11 @@ That Monday was June 5, 2017, and our house was as full as it gets. Rickey had j
 
 He was right there. And then, quietly, he wasn’t.
 
-He had slipped out the kitchen door and gone straight for the pool. Three days earlier, we had all cheered him on as he jumped into the pool and into our arms. This time no one was there to catch him. He had been gone about three minutes when Mom found him in the water. She started CPR, and then everyone who could took a turn: our family, the first responders, the emergency team at the hospital.
+He had slipped out the kitchen door and gone straight for the pool. Three days earlier, we had all cheered him on as he jumped into the pool and into our arms. This time no one was there to catch him. He had been gone about three minutes when Mom found him in the water.
 
-I don’t remember that day in order. I remember sirens, and running to the front yard to show the ambulances the way around to the back.
+We weren’t even two minutes from the house when Dad’s phone rang. He pulled a definitely illegal U-turn in the middle of the road, and I looked at Grace wide-eyed and laughed, thinking, what is going on? Dad raced back while the two of us sat in the back seat, confused and starting to get worried. He threw the car in park and ran for the backyard, and we followed him. That’s when we saw Mom at the edge of the pool, giving Adam CPR, and our grandparents trying to push us back from the door so we wouldn’t see. People were already calling 911, and we could hear the sirens coming. Our driveway winds, so Grace and I ran to the front yard to show the ambulances the way around to the back, so they could get to Adam as fast as possible.
 
-After 90 minutes without a pulse, right as a priest anointed his head, Adam’s heart started beating again. That night he was flown to UPMC Children’s Hospital of Pittsburgh, and Mom and Dad went with him.
+Everyone who could took a turn after Mom: our family, the first responders, the emergency team at the hospital. Ninety minutes without a pulse, and then, right as a priest anointed his head, Adam’s heart started beating again. That night he was life-flighted to UPMC Children’s Hospital of Pittsburgh, and Mom and Dad went with him.
 
 ## She read to him anyway
 
