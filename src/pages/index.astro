@@ -87,7 +87,7 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
         }
       </ol>
       <div class="btn-row">
-        <a class="btn btn--ocean" href={url('/water-safety')}>See all {countWord(layers.length).toLowerCase()} layers</a>
+        <a class="btn btn--ocean" href={url('/water-safety')}>See the {countWord(layers.length).toLowerCase()} layers</a>
         <a class="btn btn--ghost" href={url('/checklist')}>Print the home checklist</a>
       </div>
       <div class="missing-callout reveal" role="note">
@@ -486,12 +486,6 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     }
   }
 
-  /* On phones the event cards skip their placeholder art (real photos stay), so three events don't take three screens. */
-  @media (max-width: 759px) {
-    .home-events :global(.event__art) {
-      display: none;
-    }
-  }
   .home-events {
     max-width: 460px;
   }

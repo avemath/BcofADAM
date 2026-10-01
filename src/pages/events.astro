@@ -29,13 +29,21 @@ const jsonLd = upcoming.map((e) => eventLd(e, origin, pageUrl)).filter((x) => x 
     eyebrow="Events & fundraisers"
     title="Rodeos, cornhole & a whole lot of village."
     lede="Our village has been showing up since 2017: a benefit and a fishing rodeo in our hometown of Jean Lafitte, cornhole in Duncansville and blue shirts every June 5. Today, every event puts water safety in front of families who need it."
-  />
+  >
+    {
+      upcoming.length > 0 && (
+        <p class="next-up">
+          Next up: <a href="#coming-up">{upcoming[0].data.title}</a>
+        </p>
+      )
+    }
+  </PageHero>
 
   {
     upcoming.length > 0 && (
       <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
         <div class="wrap">
-          <h2>Coming up</h2>
+          <h2 id="coming-up">Coming up</h2>
           <div class="grid grid--3" style="margin-top: 28px">
             {upcoming.map((e) => <EventCard event={e} />)}
           </div>
@@ -79,3 +87,14 @@ const jsonLd = upcoming.map((e) => eventLd(e, origin, pageUrl)).filter((x) => x 
     <a class="btn btn--ghost" href={url('/get-involved')}>More ways to help</a>
   </CtaBand>
 </BaseLayout>
+
+<style>
+  .next-up {
+    margin-top: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+  }
+  .next-up a {
+    color: var(--sun);
+  }
+</style>

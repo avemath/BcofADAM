@@ -55,14 +55,11 @@ const art = /fish|rodeo/.test(t)
   {
     e.photo ? (
       <img class:list={['event__photo', { 'event__photo--whole': e.photoWhole }]} sizes="(min-width: 1000px) 380px, (min-width: 700px) 50vw, 100vw" src={url(e.photo)} alt={e.photoAlt || e.title} data-missing-alt={!e.photoAlt || undefined} loading="lazy" />
-    ) : (
-      <div class="event__art" aria-hidden="true">
-        <span>{art}</span>
-      </div>
-    )
+    ) : null
   }
   <div class="event__body">
     <p class="event__meta">
+      {!e.photo && <span class="event__icon" aria-hidden="true">{art}</span>}
       <span class="event__kind">{e.kind}</span>
       {when && <span>{when}</span>}
     </p>
@@ -103,17 +100,14 @@ const art = /fish|rodeo/.test(t)
     display: flex;
     flex-direction: column;
   }
-  .event__photo,
-  .event__art {
+  .event__photo {
     width: 100%;
     aspect-ratio: 4 / 3;
     object-fit: cover;
   }
-  /* On phones, events without a photo get a short band of color, not a photo-sized block of nothing. */
-  @media (max-width: 759px) {
-    .event__art {
-      aspect-ratio: 5 / 2;
-    }
+  .event__icon {
+    font-size: 1.1rem;
+    margin-right: 4px;
   }
   .event__photo {
     object-position: center 55%;
@@ -123,14 +117,6 @@ const art = /fish|rodeo/.test(t)
     object-fit: contain;
     object-position: center;
     background: linear-gradient(160deg, var(--ocean-bright), var(--deep));
-  }
-  .event__art {
-    display: grid;
-    place-items: center;
-    background:
-      radial-gradient(60% 80% at 80% 0%, rgb(255 214 120 / 0.55), transparent 70%),
-      linear-gradient(160deg, var(--ocean-bright), var(--deep));
-    font-size: 3.2rem;
   }
   .event__body {
     padding: 22px 24px 26px;
