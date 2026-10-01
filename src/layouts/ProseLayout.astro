@@ -4,6 +4,7 @@ import { getEntry } from 'astro:content';
 import BaseLayout from './BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import { prose } from '../lib/prose';
+import { withAge } from '../lib/age';
 
 interface Props {
   slug: string;
@@ -12,7 +13,9 @@ interface Props {
 }
 const entry = await getEntry('pages', Astro.props.slug);
 if (!entry) throw new Error(`Missing src/content/pages/${Astro.props.slug}.md`);
-const { title, eyebrow, lede, description, image, imageAlt } = entry.data;
+const { title, eyebrow, image, imageAlt } = entry.data;
+const lede = withAge(entry.data.lede);
+const description = withAge(entry.data.description);
 
 const html = prose(entry.rendered?.html);
 ---
