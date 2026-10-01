@@ -168,6 +168,11 @@ const host = Astro.site?.host ?? 'becauseofadam.org';
         q.classList.add('is-checked', correct ? 'is-right' : 'is-missed');
         if (result) result.textContent = correct ? 'That’s right.' : `Not quite. The answer is: ${answer}.`;
         check.hidden = true;
+        // The button just disappeared from under the keyboard, so move focus to the answer.
+        if (result) {
+          result.tabIndex = -1;
+          result.focus({ preventScroll: true });
+        }
         answered += 1;
         if (correct) right += 1;
         updateProgress();

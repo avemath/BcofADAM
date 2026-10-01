@@ -12,7 +12,7 @@ const posts = (await getCollection('news', ({ data }) => !data.draft)).sort(
 const fmt = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeZone: 'UTC' });
 ---
 
-<BaseLayout title="News & Updates" description="Updates on Adam, events, and drowning prevention news from Because of ADAM.">
+<BaseLayout title="News & Updates" description="What’s new with Adam and our family, upcoming events and the latest in drowning prevention, from Because of ADAM in Blair County, Pennsylvania.">
   <PageHero eyebrow="News" title="News & updates" lede="What’s new with Adam, with us, and with the fight to end childhood drowning. For the day to day, our Facebook page is where Mom writes." />
   <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
     <div class="wrap news-layout">
@@ -34,10 +34,10 @@ const fmt = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeZone: 'UTC
       </div>
       {
         site.showFacebookFeed && (
-          <aside>
+          <div class="news-aside">
             <h2 class="news-aside__title">Latest on Facebook</h2>
             <FacebookFeed maxHeight={1000} />
-          </aside>
+          </div>
         )
       }
     </div>
@@ -66,7 +66,7 @@ const fmt = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeZone: 'UTC
     gap: 20px;
   }
   .posts time {
-    font-size: 0.85rem;
+    font-size: 0.875rem;
     font-weight: 700;
     color: var(--aqua-text);
     text-transform: uppercase;
