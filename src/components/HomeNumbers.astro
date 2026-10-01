@@ -1,0 +1,670 @@
+---
+/**
+ * The numbers under the home page hero. Edit them in the Studio (Statistics → Home page numbers).
+ *
+ * The one marked "Show this one big" leads, as a sentence next to a picture: one child who died,
+ * then a row of children for its number (7 more who end up in the emergency room). One of them is Adam.
+ * The rest follow as short facts that read on from their number ("#1 cause of death for…"), each
+ * with a small picture picked in the Studio: "ages" (children growing from 1 to 4), "homes" (ten houses,
+ * filled in to match the number) or "fence" (a yard where the house is the fourth side, next to one
+ * fenced all the way around). The pictures fill in one piece at a time as they scroll into view.
+ *
+ * People understand a risk faster when they can see the whole group it's about, and they care
+ * more when one of the group is a real child they can name. That's why Adam is in the picture.
+ */
+import { headline, home } from '../data/content';
+import { url } from '../lib/url';
+
+const featured = headline.find((f) => f.feature) ?? headline[0];
+const rest = headline.filter((f) => f !== featured);
+
+// The picture needs a plain whole number (like 7). Anything else just skips the picture.
+const many = featured && /^\d+$/.test(featured.stat.trim()) ? Number(featured.stat) : 0;
+const showKids = many > 0 && many <= 20;
+const adamAt = showKids ? Math.min(3, many - 1) : -1;
+
+// Highlight the number, and the word after it, inside the featured sentence ("7 more").
+let before = featured?.label ?? '';
+let marked = '';
+let after = '';
+const at = featured ? featured.label.indexOf(featured.stat) : -1;
+if (featured && at >= 0) {
+  let end = at + featured.stat.length;
+  end += /^\s+[^\s,.]+/.exec(featured.label.slice(end))?.[0].length ?? 0;
+  before = featured.label.slice(0, at);
+  marked = featured.label.slice(at, end);
+  after = featured.label.slice(end);
+}
+
+const kid = (outline = false) =>
+  `<svg viewBox="0 0 24 40" aria-hidden="true" focusable="false"><circle cx="12" cy="7" r="6"/><path d="M6 16h12a4 4 0 0 1 4 4v8h-4v10H6V28H2v-8a4 4 0 0 1 4-4z"/></svg>`.replace(
+    '<svg ',
+    `<svg class="${outline ? 'kid-svg kid-svg--outline' : 'kid-svg'}" `,
+  );
+const house = (filled: boolean) =>
+  `<svg class="house-svg${filled ? ' house-svg--filled' : ''}" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 11 12 3l9 8v10H3z"/>${
+    filled ? '<rect x="10" y="14" width="4" height="7" class="house-svg__door"/>' : ''
+  }</svg>`;
+// A pool seen from above, with the house along the top and a toddler who just came out the door.
+// `around` = fenced all the way around (the fence stops them). Otherwise the house is the fourth side
+// of the fence, so the door opens straight onto the pool.
+const toddler = (x: number, y: number) =>
+  `<g class="yard-svg__kid" transform="translate(${x} ${y}) scale(0.55)"><circle cx="12" cy="7" r="6"/><path d="M6 16h12a4 4 0 0 1 4 4v8h-4v10H6V28H2v-8a4 4 0 0 1 4-4z"/></g>`;
+const yard = (around: boolean) =>
+  `<svg class="yard-svg" viewBox="0 0 160 112" aria-hidden="true" focusable="false">
+    <rect class="yard-svg__house" x="6" y="4" width="148" height="28" rx="3"/>
+    <text x="80" y="23" text-anchor="middle">HOUSE</text>
+    <rect class="yard-svg__door" x="70" y="29" width="20" height="6" rx="1"/>
+    <rect class="yard-svg__pool" x="46" y="70" width="68" height="32" rx="7"/>
+    ${
+      around
+        ? `<rect class="yard-svg__fence" x="28" y="58" width="104" height="48" rx="3"/>${toddler(73, 36)}`
+        : `<path class="yard-svg__fence" d="M6 32v74h148V32"/>${toddler(73, 38)}<path class="yard-svg__way" d="M80 61v4"/><path class="yard-svg__arrow" d="m74 63 6 7 6-7z"/>`
+    }
+  </svg>`;
+const homesFilled = (stat: string) => {
+  const n = Number.parseInt(stat, 10);
+  return n > 0 && n <= 100 ? Math.max(1, Math.round(n / 10)) : 0;
+};
+const external = (href: string) => /^https?:/.test(href);
+---
+
+<section class="section numbers" aria-labelledby="numbers-title">
+  <div class="wrap">
+    {
+      featured && (
+        <div class:list={['numbers__feature', { 'numbers__feature--text': !showKids }]}>
+          {showKids && (
+            <figure class="kids reveal">
+              <div
+                class="kids__row"
+                role="img"
+                aria-label={`One child who died from drowning, next to ${many} children who ended up in the emergency room. One of them is Adam.`}
+              >
+                <span class="kid kid--lost pop" style="--i: 0" set:html={kid(true)} />
+                {Array.from({ length: many }, (_, i) => (
+                  <span class:list={['kid pop', { 'kid--adam': i === adamAt }]} style={`--i: ${i + 4}`}>
+                    <Fragment set:html={kid()} />
+                    {i === adamAt && <b aria-hidden="true">Adam</b>}
+                  </span>
+                ))}
+              </div>
+              <figcaption class="kids__key" aria-hidden="true">
+                <span>
+                  <i class="kids__swatch" set:html={kid(true)} />1 child dies
+                </span>
+                <span>
+                  <i class="kids__swatch kids__swatch--solid" set:html={kid()} />
+                  {many} more end up in the ER
+                </span>
+              </figcaption>
+            </figure>
+          )}
+          <div class="numbers__text reveal">
+            <h2 id="numbers-title">
+              {before}
+              {marked && <mark>{marked}</mark>}
+              {after}
+            </h2>
+            <p class="numbers__src">
+              <a class="source" href={featured.sourceUrl} rel="noopener" target="_blank">
+                Source: {featured.source}
+                <span class="visually-hidden"> (opens in a new tab)</span>
+              </a>
+            </p>
+            {featured.detail && (
+              <p class="numbers__adam">
+                {home.photo && (
+                  <span class="numbers__avatar">
+                    <img src={url(home.photo)} sizes="64px" alt="" width="64" height="64" loading="lazy" />
+                  </span>
+                )}
+                <span>{featured.detail}</span>
+              </p>
+            )}
+            {featured.link && (
+              <p class="numbers__links">
+                <a class="numbers__go" href={external(featured.link) ? featured.link : url(featured.link)}>
+                  {featured.linkText || 'Learn more'} →
+                </a>
+              </p>
+            )}
+          </div>
+        </div>
+      )
+    }
+
+    {
+      rest.length > 0 && (
+        <div class="numbers__more" data-carousel>
+          <ul class="numbers__facts" aria-label="More numbers every parent should know" data-carousel-track>
+            {rest.map((f) => (
+              <li class="reveal">
+                {f.picture === 'ages' && (
+                  <div class="pic pic--ages" role="img" aria-label="Children ages 1, 2, 3 and 4">
+                    {[1, 2, 3, 4].map((age, i) => (
+                      <span class="pop" style={`--i: ${i}; --h: ${[0.6, 0.73, 0.86, 1][i]}`}>
+                        <Fragment set:html={kid()} />
+                        <small>{age}</small>
+                      </span>
+                    ))}
+                    <em>years old</em>
+                  </div>
+                )}
+                {f.picture === 'homes' && homesFilled(f.stat) > 0 && (
+                  <div class="pic pic--homes" role="img" aria-label={`${homesFilled(f.stat)} of 10 houses filled in`}>
+                    {Array.from({ length: 10 }, (_, i) => (
+                      <span class="pop" style={`--i: ${i}`} set:html={house(i < homesFilled(f.stat))} />
+                    ))}
+                  </div>
+                )}
+                {f.picture === 'fence' && (
+                  <div
+                    class="pic pic--fence"
+                    role="img"
+                    aria-label="Two pools seen from above, each with a toddler coming out the back door. In the first, the house is the fourth side of the fence, so the toddler walks straight to the pool. In the second, the fence goes all the way around the pool and stops them."
+                  >
+                    <span class="yard pop" style="--i: 0">
+                      <Fragment set:html={yard(false)} />
+                      <small>
+                        <b class="yard__no">✗</b> Door opens to the pool
+                      </small>
+                    </span>
+                    <span class="yard pop" style="--i: 3">
+                      <Fragment set:html={yard(true)} />
+                      <small>
+                        <b class="yard__yes">✓</b> Fence stops them
+                      </small>
+                    </span>
+                  </div>
+                )}
+                <p class="numbers__fact">
+                  <b>{f.stat}</b> {f.label}
+                </p>
+                {f.detail && <p class="numbers__detail">{f.detail}</p>}
+                <p class="numbers__links">
+                  {f.link && (
+                    <a class="numbers__go" href={external(f.link) ? f.link : url(f.link)}>
+                      {f.linkText || 'Learn more'} →
+                    </a>
+                  )}
+                  <a class="source" href={f.sourceUrl} rel="noopener" target="_blank">
+                    Source: {f.source}
+                    <span class="visually-hidden"> for “{f.stat}” (opens in a new tab)</span>
+                  </a>
+                </p>
+              </li>
+            ))}
+          </ul>
+          {rest.length > 1 && (
+            <div class="numbers__dots">
+              {rest.map((f, i) => (
+                <button type="button" data-to={i} aria-label={`Show ${f.stat} (${i + 1} of ${rest.length})`} aria-current={i === 0 ? 'true' : 'false'} />
+              ))}
+            </div>
+          )}
+        </div>
+      )
+    }
+  </div>
+</section>
+
+<script>
+  // On phones the three facts are a row you swipe through. The dots show which one you're on,
+  // and tapping a dot slides to it. On bigger screens the facts sit side by side and this does nothing.
+  for (const box of document.querySelectorAll<HTMLElement>('[data-carousel]')) {
+    const track = box.querySelector<HTMLElement>('[data-carousel-track]');
+    if (!track) continue;
+    const items = [...track.children] as HTMLElement[];
+    const dots = [...box.querySelectorAll<HTMLButtonElement>('[data-to]')];
+    const phone = window.matchMedia('(max-width: 759px)');
+    const calm = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const start = (i: number) => items[i].offsetLeft - items[0].offsetLeft;
+    const update = () => {
+      let on = 0;
+      items.forEach((_, i) => {
+        if (Math.abs(start(i) - track.scrollLeft) < Math.abs(start(on) - track.scrollLeft)) on = i;
+      });
+      dots.forEach((d, i) => d.setAttribute('aria-current', String(i === on)));
+    };
+    dots.forEach((d) =>
+      d.addEventListener('click', () => {
+        track.scrollTo({ left: start(Number(d.dataset.to)), behavior: calm.matches ? 'auto' : 'smooth' });
+      }),
+    );
+    let frame = 0;
+    track.addEventListener(
+      'scroll',
+      () => {
+        cancelAnimationFrame(frame);
+        frame = requestAnimationFrame(update);
+      },
+      { passive: true },
+    );
+    // Keyboard users can scroll the row with the arrow keys once it is a row.
+    const sync = () => {
+      if (phone.matches) track.tabIndex = 0;
+      else track.removeAttribute('tabindex');
+      update();
+    };
+    phone.addEventListener('change', sync);
+    sync();
+  }
+</script>
+
+<style>
+  .numbers {
+    padding-top: clamp(40px, 6vw, 72px);
+  }
+
+  /* ---------- The big one: picture + sentence ---------- */
+  .numbers__feature {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(28px, 5vw, 72px);
+    align-items: center;
+    margin-bottom: clamp(36px, 5vw, 56px);
+  }
+  .numbers__feature--text {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 760px;
+  }
+  .kids {
+    margin: 0;
+  }
+  .kids__row {
+    display: flex;
+    align-items: flex-end;
+    gap: clamp(6px, 1.2vw, 12px);
+    padding-bottom: 30px;
+  }
+  .kid {
+    position: relative;
+    flex: 1;
+    max-width: 64px;
+    color: var(--ocean);
+  }
+  .kid :global(.kid-svg) {
+    display: block;
+    width: 100%;
+    height: auto;
+    fill: currentColor;
+  }
+  .kid--lost {
+    color: var(--ink);
+    margin-right: clamp(10px, 2.4vw, 28px);
+  }
+  /* Gold for Adam, with a dark outline so the figure stands out on the light background. */
+  .kid--adam {
+    color: var(--sun);
+  }
+  .kid--adam :global(.kid-svg) {
+    stroke: var(--deep);
+    stroke-width: 1.5;
+  }
+  .kid--adam b {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 6px;
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+  .kids__key {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 20px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--ink-soft);
+  }
+  .kids__key span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .kids__swatch {
+    display: inline-block;
+    width: 11px;
+    color: var(--ink);
+  }
+  .kids__swatch--solid {
+    color: var(--ocean);
+  }
+  .kids__swatch :global(.kid-svg) {
+    display: block;
+    width: 100%;
+    fill: currentColor;
+  }
+  /* The child who died is drawn as an outline: there, and missing. */
+  .kid :global(.kid-svg--outline),
+  .kids__swatch :global(.kid-svg--outline) {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.6;
+  }
+
+  .numbers__text h2 {
+    font-size: clamp(1.9rem, 2.4vw + 1rem, 3rem);
+    line-height: 1.1;
+    margin-bottom: 0.2em;
+  }
+  .numbers__src {
+    margin: 0 0 18px;
+  }
+  .numbers__text mark {
+    color: var(--ocean);
+    background: linear-gradient(transparent 62%, rgb(255 183 3 / 0.5) 62%);
+    padding: 0 2px;
+  }
+  .numbers__adam {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  .numbers__avatar {
+    flex: none;
+  }
+  .numbers__adam img {
+    margin: 0;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--sun);
+  }
+  .numbers__links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 18px;
+    margin: 0;
+  }
+  .numbers__go {
+    display: inline-flex;
+    align-items: center;
+    min-height: 24px;
+    font-weight: 700;
+  }
+  .numbers .source {
+    font-size: 0.82rem;
+    padding-block: 4px;
+  }
+
+  /* ---------- The rest: short facts that read on from their number ---------- */
+  .numbers__facts {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+  }
+  .numbers__facts li {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px 22px;
+    background: #fff;
+    border-radius: var(--radius-sm);
+    border-top: 4px solid var(--aqua);
+    box-shadow: var(--shadow);
+  }
+  .numbers__fact {
+    margin: 0;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  .numbers__fact b {
+    display: block;
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 2vw + 1.2rem, 2.8rem);
+    font-weight: 600;
+    line-height: 1;
+    color: var(--ocean);
+    margin-bottom: 6px;
+  }
+  .numbers__detail {
+    margin: 0;
+    color: var(--ink-soft);
+  }
+  .numbers__facts .numbers__links {
+    margin-top: auto;
+    padding-top: 4px;
+  }
+
+  /* ---------- Small pictures over the three facts ---------- */
+  /* Every picture sits on the same light panel, so the numbers below line up across the cards. */
+  .pic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 156px;
+    padding: 16px;
+    margin-bottom: 8px;
+    border-radius: var(--radius-sm);
+    background: var(--foam);
+  }
+  .pic--ages {
+    align-items: flex-end;
+    gap: 14px;
+    color: var(--ocean);
+  }
+  .pic--ages span {
+    display: grid;
+    justify-items: center;
+    gap: 4px;
+    width: calc(44px * var(--h));
+  }
+  .pic--ages :global(.kid-svg) {
+    display: block;
+    width: 100%;
+    height: auto;
+    fill: currentColor;
+  }
+  .pic--ages small,
+  .pic--ages em {
+    font-size: 0.82rem;
+    font-weight: 800;
+    font-style: normal;
+    color: var(--ink-soft);
+    line-height: 1;
+  }
+  .pic--ages em {
+    align-self: flex-end;
+    margin-left: 2px;
+  }
+  .pic--homes {
+    display: grid;
+    grid-template-columns: repeat(5, 40px);
+    gap: 10px 14px;
+    align-content: center;
+    justify-content: center;
+  }
+  .pic--homes :global(.house-svg) {
+    display: block;
+    width: 40px;
+    fill: none;
+    stroke: var(--ocean);
+    stroke-width: 1.8;
+    stroke-linejoin: round;
+  }
+  .pic--homes :global(.house-svg--filled) {
+    fill: var(--ocean);
+  }
+  .pic--homes :global(.house-svg__door) {
+    fill: #fff;
+    stroke: none;
+  }
+  .pic--fence {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    align-items: start;
+    align-content: center;
+  }
+  .yard {
+    display: grid;
+    gap: 4px;
+    text-align: center;
+  }
+  .yard small {
+    font-size: 0.82rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--ink);
+  }
+  .yard b {
+    font-size: 1rem;
+  }
+  .yard__no {
+    color: var(--coral);
+  }
+  .yard__yes {
+    color: var(--ocean);
+  }
+  .pic--fence :global(.yard-svg) {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .pic--fence :global(.yard-svg__house) {
+    fill: var(--line);
+  }
+  .pic--fence :global(.yard-svg text) {
+    font: 800 12px var(--font-body);
+    letter-spacing: 0.12em;
+    fill: var(--ink-soft);
+  }
+  .pic--fence :global(.yard-svg__door) {
+    fill: var(--ink-soft);
+  }
+  .pic--fence :global(.yard-svg__pool) {
+    fill: var(--aqua);
+  }
+  .pic--fence :global(.yard-svg__fence) {
+    fill: none;
+    stroke: var(--deep);
+    stroke-width: 3;
+    stroke-dasharray: 6 4;
+  }
+  .pic--fence :global(.yard-svg__way) {
+    stroke: var(--coral);
+    stroke-width: 3;
+  }
+  .pic--fence :global(.yard-svg__arrow) {
+    fill: var(--coral);
+  }
+  .pic--fence :global(.yard-svg__kid) {
+    fill: var(--deep);
+  }
+
+  /* ---------- The pictures fill in one piece at a time when they scroll into view ---------- */
+  :global(.js) .reveal .pop {
+    opacity: 0;
+    transform: translateY(10px) scale(0.85);
+    transition:
+      opacity 0.45s ease,
+      transform 0.45s ease;
+    transition-delay: calc(0.25s + var(--i, 0) * 0.11s);
+  }
+  :global(.js) .reveal.is-visible .pop {
+    opacity: 1;
+    transform: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    :global(.js) .reveal .pop {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+  @media print {
+    :global(.js) .reveal .pop {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+
+  .numbers__dots {
+    display: none;
+  }
+
+  /* Phones: the three facts become a row you swipe through, with the next card peeking in. */
+  @media (max-width: 759px) {
+    .numbers__facts {
+      grid-template-columns: none;
+      grid-auto-flow: column;
+      grid-auto-columns: 86%;
+      gap: 12px;
+      overflow-x: auto;
+      overscroll-behavior-x: contain;
+      scroll-snap-type: x mandatory;
+      margin-inline: calc(-1 * var(--gutter));
+      padding: 4px var(--gutter) 24px;
+      scroll-padding-inline: var(--gutter);
+      scrollbar-width: none;
+    }
+    .numbers__facts::-webkit-scrollbar {
+      display: none;
+    }
+    .numbers__facts li {
+      scroll-snap-align: start;
+    }
+    .numbers__facts:focus-visible {
+      outline: 3px solid var(--aqua);
+      outline-offset: -3px;
+    }
+    .numbers__dots {
+      display: flex;
+      justify-content: center;
+      gap: 2px;
+      margin-top: -6px;
+    }
+    .numbers__dots button {
+      display: grid;
+      place-items: center;
+      width: 32px;
+      height: 32px;
+      padding: 0;
+      border: 0;
+      background: none;
+      cursor: pointer;
+    }
+    .numbers__dots button::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      border: 2px solid var(--ink-soft);
+      transition: width 0.25s ease;
+    }
+    .numbers__dots button[aria-current='true']::before {
+      width: 24px;
+      border-color: var(--ocean);
+      background: var(--ocean);
+    }
+  }
+
+  @media (max-width: 760px) {
+    .numbers__feature {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    .numbers__facts li {
+      padding: 16px 18px;
+    }
+    .pic {
+      height: 128px;
+      padding: 12px;
+    }
+    .pic--fence {
+      height: auto;
+    }
+  }
+</style>

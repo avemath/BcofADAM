@@ -15,6 +15,12 @@ export interface Fact {
   stat: string;
   label: string;
   detail?: string;
+  /** Home page only: show this one big, with the picture of children. */
+  feature?: boolean;
+  /** Home page only: a small picture over the number ("ages", "homes" or "fence"). */
+  picture?: string;
+  link?: string;
+  linkText?: string;
   source: string;
   sourceUrl: string;
 }
