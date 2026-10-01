@@ -406,7 +406,10 @@ const external = (href: string) => /^https?:/.test(href);
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 16px;
   }
+  /* position: relative keeps each card's screen-reader-only text inside the card. Without it, that
+     text in an off-screen card of the phone carousel made the whole page scroll sideways. */
   .numbers__facts li {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 8px;
