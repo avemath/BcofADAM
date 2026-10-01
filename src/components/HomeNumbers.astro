@@ -136,69 +136,121 @@ const external = (href: string) => /^https?:/.test(href);
 
     {
       rest.length > 0 && (
-        <ul class="numbers__facts" aria-label="More numbers every parent should know">
-          {rest.map((f) => (
-            <li class="reveal">
-              {f.picture === 'ages' && (
-                <div class="pic pic--ages" role="img" aria-label="Children ages 1, 2, 3 and 4">
-                  {[1, 2, 3, 4].map((age, i) => (
-                    <span class="pop" style={`--i: ${i}; --h: ${[0.6, 0.73, 0.86, 1][i]}`}>
-                      <Fragment set:html={kid()} />
-                      <small>{age}</small>
-                    </span>
-                  ))}
-                  <em>years old</em>
-                </div>
-              )}
-              {f.picture === 'homes' && homesFilled(f.stat) > 0 && (
-                <div class="pic pic--homes" role="img" aria-label={`${homesFilled(f.stat)} of 10 houses filled in`}>
-                  {Array.from({ length: 10 }, (_, i) => (
-                    <span class="pop" style={`--i: ${i}`} set:html={house(i < homesFilled(f.stat))} />
-                  ))}
-                </div>
-              )}
-              {f.picture === 'fence' && (
-                <div
-                  class="pic pic--fence"
-                  role="img"
-                  aria-label="Two pools seen from above, each with a toddler coming out the back door. In the first, the house is the fourth side of the fence, so the toddler walks straight to the pool. In the second, the fence goes all the way around the pool and stops them."
-                >
-                  <span class="yard pop" style="--i: 0">
-                    <Fragment set:html={yard(false)} />
-                    <small>
-                      <b class="yard__no">✗</b> Door opens to the pool
-                    </small>
-                  </span>
-                  <span class="yard pop" style="--i: 3">
-                    <Fragment set:html={yard(true)} />
-                    <small>
-                      <b class="yard__yes">✓</b> Fence stops them
-                    </small>
-                  </span>
-                </div>
-              )}
-              <p class="numbers__fact">
-                <b>{f.stat}</b> {f.label}
-              </p>
-              {f.detail && <p class="numbers__detail">{f.detail}</p>}
-              <p class="numbers__links">
-                {f.link && (
-                  <a class="numbers__go" href={external(f.link) ? f.link : url(f.link)}>
-                    {f.linkText || 'Learn more'} →
-                  </a>
+        <div class="numbers__more" data-carousel>
+          <ul class="numbers__facts" aria-label="More numbers every parent should know" data-carousel-track>
+            {rest.map((f) => (
+              <li class="reveal">
+                {f.picture === 'ages' && (
+                  <div class="pic pic--ages" role="img" aria-label="Children ages 1, 2, 3 and 4">
+                    {[1, 2, 3, 4].map((age, i) => (
+                      <span class="pop" style={`--i: ${i}; --h: ${[0.6, 0.73, 0.86, 1][i]}`}>
+                        <Fragment set:html={kid()} />
+                        <small>{age}</small>
+                      </span>
+                    ))}
+                    <em>years old</em>
+                  </div>
                 )}
-                <a class="source" href={f.sourceUrl} rel="noopener" target="_blank">
-                  Source: {f.source}
-                  <span class="visually-hidden"> for “{f.stat}” (opens in a new tab)</span>
-                </a>
-              </p>
-            </li>
-          ))}
-        </ul>
+                {f.picture === 'homes' && homesFilled(f.stat) > 0 && (
+                  <div class="pic pic--homes" role="img" aria-label={`${homesFilled(f.stat)} of 10 houses filled in`}>
+                    {Array.from({ length: 10 }, (_, i) => (
+                      <span class="pop" style={`--i: ${i}`} set:html={house(i < homesFilled(f.stat))} />
+                    ))}
+                  </div>
+                )}
+                {f.picture === 'fence' && (
+                  <div
+                    class="pic pic--fence"
+                    role="img"
+                    aria-label="Two pools seen from above, each with a toddler coming out the back door. In the first, the house is the fourth side of the fence, so the toddler walks straight to the pool. In the second, the fence goes all the way around the pool and stops them."
+                  >
+                    <span class="yard pop" style="--i: 0">
+                      <Fragment set:html={yard(false)} />
+                      <small>
+                        <b class="yard__no">✗</b> Door opens to the pool
+                      </small>
+                    </span>
+                    <span class="yard pop" style="--i: 3">
+                      <Fragment set:html={yard(true)} />
+                      <small>
+                        <b class="yard__yes">✓</b> Fence stops them
+                      </small>
+                    </span>
+                  </div>
+                )}
+                <p class="numbers__fact">
+                  <b>{f.stat}</b> {f.label}
+                </p>
+                {f.detail && <p class="numbers__detail">{f.detail}</p>}
+                <p class="numbers__links">
+                  {f.link && (
+                    <a class="numbers__go" href={external(f.link) ? f.link : url(f.link)}>
+                      {f.linkText || 'Learn more'} →
+                    </a>
+                  )}
+                  <a class="source" href={f.sourceUrl} rel="noopener" target="_blank">
+                    Source: {f.source}
+                    <span class="visually-hidden"> for “{f.stat}” (opens in a new tab)</span>
+                  </a>
+                </p>
+              </li>
+            ))}
+          </ul>
+          {rest.length > 1 && (
+            <div class="numbers__dots">
+              {rest.map((f, i) => (
+                <button type="button" data-to={i} aria-label={`Show ${f.stat} (${i + 1} of ${rest.length})`} aria-current={i === 0 ? 'true' : 'false'} />
+              ))}
+            </div>
+          )}
+        </div>
       )
     }
   </div>
 </section>
+
+<script>
+  // On phones the three facts are a row you swipe through. The dots show which one you're on,
+  // and tapping a dot slides to it. On bigger screens the facts sit side by side and this does nothing.
+  for (const box of document.querySelectorAll<HTMLElement>('[data-carousel]')) {
+    const track = box.querySelector<HTMLElement>('[data-carousel-track]');
+    if (!track) continue;
+    const items = [...track.children] as HTMLElement[];
+    const dots = [...box.querySelectorAll<HTMLButtonElement>('[data-to]')];
+    const phone = window.matchMedia('(max-width: 759px)');
+    const calm = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const start = (i: number) => items[i].offsetLeft - items[0].offsetLeft;
+    const update = () => {
+      let on = 0;
+      items.forEach((_, i) => {
+        if (Math.abs(start(i) - track.scrollLeft) < Math.abs(start(on) - track.scrollLeft)) on = i;
+      });
+      dots.forEach((d, i) => d.setAttribute('aria-current', String(i === on)));
+    };
+    dots.forEach((d) =>
+      d.addEventListener('click', () => {
+        track.scrollTo({ left: start(Number(d.dataset.to)), behavior: calm.matches ? 'auto' : 'smooth' });
+      }),
+    );
+    let frame = 0;
+    track.addEventListener(
+      'scroll',
+      () => {
+        cancelAnimationFrame(frame);
+        frame = requestAnimationFrame(update);
+      },
+      { passive: true },
+    );
+    // Keyboard users can scroll the row with the arrow keys once it is a row.
+    const sync = () => {
+      if (phone.matches) track.tabIndex = 0;
+      else track.removeAttribute('tabindex');
+      update();
+    };
+    phone.addEventListener('change', sync);
+    sync();
+  }
+</script>
 
 <style>
   .numbers {
@@ -537,6 +589,66 @@ const external = (href: string) => /^https?:/.test(href);
     :global(.js) .reveal .pop {
       opacity: 1 !important;
       transform: none !important;
+    }
+  }
+
+  .numbers__dots {
+    display: none;
+  }
+
+  /* Phones: the three facts become a row you swipe through, with the next card peeking in. */
+  @media (max-width: 759px) {
+    .numbers__facts {
+      grid-template-columns: none;
+      grid-auto-flow: column;
+      grid-auto-columns: 86%;
+      gap: 12px;
+      overflow-x: auto;
+      overscroll-behavior-x: contain;
+      scroll-snap-type: x mandatory;
+      margin-inline: calc(-1 * var(--gutter));
+      padding: 4px var(--gutter) 24px;
+      scroll-padding-inline: var(--gutter);
+      scrollbar-width: none;
+    }
+    .numbers__facts::-webkit-scrollbar {
+      display: none;
+    }
+    .numbers__facts li {
+      scroll-snap-align: start;
+    }
+    .numbers__facts:focus-visible {
+      outline: 3px solid var(--aqua);
+      outline-offset: -3px;
+    }
+    .numbers__dots {
+      display: flex;
+      justify-content: center;
+      gap: 2px;
+      margin-top: -6px;
+    }
+    .numbers__dots button {
+      display: grid;
+      place-items: center;
+      width: 32px;
+      height: 32px;
+      padding: 0;
+      border: 0;
+      background: none;
+      cursor: pointer;
+    }
+    .numbers__dots button::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      border: 2px solid var(--ink-soft);
+      transition: width 0.25s ease;
+    }
+    .numbers__dots button[aria-current='true']::before {
+      width: 24px;
+      border-color: var(--ocean);
+      background: var(--ocean);
     }
   }
 
