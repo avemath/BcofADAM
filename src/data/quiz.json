@@ -1,10 +1,15 @@
 {
   "title": "How water safe is your family?",
-  "intro": "Ten quick questions about how drowning really happens and what stops it. Every answer comes with its source. Finish them all to print your certificate.",
+  "intro": "Ten quick questions about how drowning really happens and what stops it. Most of them are things our family had to learn after the fact. Every answer comes with its source, and finishing prints a certificate.",
   "questions": [
     {
       "question": "What is the leading cause of death for children ages 1 to 4 in the U.S.?",
-      "choices": ["Car crashes", "Drowning", "Choking", "Falls"],
+      "choices": [
+        "Car crashes",
+        "Drowning",
+        "Choking",
+        "Falls"
+      ],
       "answer": "Drowning",
       "explain": "Drowning is the #1 cause of death for children ages 1 to 4. It’s also preventable.",
       "source": "CDC",
@@ -12,7 +17,12 @@
     },
     {
       "question": "What does drowning usually look and sound like?",
-      "choices": ["Lots of splashing and yelling", "Waving and calling for help", "Quiet, often with no splashing at all", "Crying loudly"],
+      "choices": [
+        "Lots of splashing and yelling",
+        "Waving and calling for help",
+        "Quiet, often with no splashing at all",
+        "Crying loudly"
+      ],
       "answer": "Quiet, often with no splashing at all",
       "explain": "Drowning happens in seconds and is often silent. There’s usually no splashing or calling for help, so you have to be watching to see it.",
       "source": "American Academy of Pediatrics",
@@ -20,7 +30,12 @@
     },
     {
       "question": "How much water can a young child drown in?",
-      "choices": ["Only water over their head", "About a foot", "An inch or two", "Only water in a pool"],
+      "choices": [
+        "Only water over their head",
+        "About a foot",
+        "An inch or two",
+        "Only water in a pool"
+      ],
       "answer": "An inch or two",
       "explain": "Young children can drown in just an inch or two of water. Empty buckets, coolers and kiddie pools right after use, and stay within arm’s reach at bath time.",
       "source": "American Academy of Pediatrics",
@@ -28,7 +43,12 @@
     },
     {
       "question": "Where do most fatal child pool drownings happen?",
-      "choices": ["Public pools", "Hotel pools", "At a home: their own, a grandparent’s, a friend’s or a neighbor’s", "Water parks"],
+      "choices": [
+        "Public pools",
+        "Hotel pools",
+        "At a home: their own, a grandparent’s, a friend’s or a neighbor’s",
+        "Water parks"
+      ],
       "answer": "At a home: their own, a grandparent’s, a friend’s or a neighbor’s",
       "explain": "More than 7 in 10 fatal child pool and spa drownings (2021–2023) happened at a home. Grandparents’, neighbors’ and friends’ pools count too.",
       "source": "CPSC, 2026 report",
@@ -36,7 +56,12 @@
     },
     {
       "question": "How close should an adult be to a toddler who is in or near water?",
-      "choices": ["In the same yard", "Within arm’s reach", "Close enough to hear them", "Inside, watching through a window"],
+      "choices": [
+        "In the same yard",
+        "Within arm’s reach",
+        "Close enough to hear them",
+        "Inside, watching through a window"
+      ],
       "answer": "Within arm’s reach",
       "explain": "Toddlers and weak swimmers need “touch supervision”: an adult within arm’s reach whenever they’re in or near water. Name one Water Watcher so everyone knows who’s on duty.",
       "source": "American Academy of Pediatrics",
@@ -44,7 +69,12 @@
     },
     {
       "question": "Which pool fence protects children best?",
-      "choices": ["A fence on three sides, with the house as the fourth", "A fence on all four sides that separates the pool from the house", "A hedge around the yard", "No fence, if the pool has a floating cover"],
+      "choices": [
+        "A fence on three sides, with the house as the fourth",
+        "A fence on all four sides that separates the pool from the house",
+        "A hedge around the yard",
+        "No fence, if the pool has a floating cover"
+      ],
       "answer": "A fence on all four sides that separates the pool from the house",
       "explain": "A fence that isolates the pool on all four sides lowers the odds of drowning by 83% compared with three-sided fencing. When the house is one side, a toddler can walk straight out the back door to the water.",
       "source": "Cochrane review",
@@ -52,7 +82,12 @@
     },
     {
       "question": "Are water wings and other “floaties” safety devices?",
-      "choices": ["Yes, if they fit snugly", "Yes, for children under 3", "No. Use a U.S. Coast Guard-approved life jacket instead", "Only in shallow water"],
+      "choices": [
+        "Yes, if they fit snugly",
+        "Yes, for children under 3",
+        "No. Use a U.S. Coast Guard-approved life jacket instead",
+        "Only in shallow water"
+      ],
       "answer": "No. Use a U.S. Coast Guard-approved life jacket instead",
       "explain": "Water wings and other floaties don’t prevent drowning and can slip off. A Coast Guard-approved life jacket protects better, and it still never replaces an adult watching.",
       "source": "CDC",
@@ -60,7 +95,12 @@
     },
     {
       "question": "A young child is missing. Where should you look first?",
-      "choices": ["Their bedroom", "The car", "The water: the pool, spa, bathtub or pond", "A neighbor’s house"],
+      "choices": [
+        "Their bedroom",
+        "The car",
+        "The water: the pool, spa, bathtub or pond",
+        "A neighbor’s house"
+      ],
       "answer": "The water: the pool, spa, bathtub or pond",
       "explain": "Check the water first, because seconds matter. In a CPSC study of young children who drowned in pools, 77% had been missing for 5 minutes or less.",
       "source": "CPSC Publication 359",
@@ -68,7 +108,12 @@
     },
     {
       "question": "For every child who dies from drowning, how many more survive a drowning and need emergency care?",
-      "choices": ["1", "3", "7", "20"],
+      "choices": [
+        "1",
+        "3",
+        "7",
+        "20"
+      ],
       "answer": "7",
       "explain": "For every child lost to drowning, 7 more survive one and need emergency care. Some, like Adam, come home with injuries that change everything.",
       "source": "CDC, 2026",
@@ -76,7 +121,12 @@
     },
     {
       "question": "After a drowning, what kind of CPR matters?",
-      "choices": ["Chest compressions only", "CPR with rescue breaths", "No CPR: wait for the ambulance", "Patting their back"],
+      "choices": [
+        "Chest compressions only",
+        "CPR with rescue breaths",
+        "No CPR: wait for the ambulance",
+        "Patting their back"
+      ],
       "answer": "CPR with rescue breaths",
       "explain": "After a drowning, fast CPR with rescue breaths matters. Call 911, and take an infant and child CPR class so you’re ready.",
       "source": "American Heart Association & AAP, 2024",
