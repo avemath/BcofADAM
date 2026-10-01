@@ -11,7 +11,7 @@ When Adam was about 6 months old, we looked for ISR lessons. The closest instruc
 
 They weren’t. Adam was 14 months old when he slipped out of the house and into our pool, and he didn’t know how to roll onto his back and float. Mom has said that if ISR had been available nearby, she believes she might have found him floating on his back, waiting to be rescued. In 2019 she put it plainly: ISR lessons “as early as 6 months old (before teaching him that the water was FUN!) would have saved him.”
 
-After Adam drowned, Dad decided to be the change we wanted to see. He spent eight weeks training in Florida, became a certified ISR instructor (and a Red Cross CPR instructor), and started teaching so families in our area wouldn’t have to drive two hours for these lessons. By 2023, he had taught more than 150 children to self-rescue. (His lessons are his own business, separate from Because of ADAM. We just want every family to find a certified instructor, wherever they live.)
+After Adam drowned, Dad decided no family near us should have to make that drive. He spent eight weeks training in Florida, became a certified ISR instructor (and a Red Cross CPR instructor), and started teaching so families in our area wouldn’t have to drive two hours for these lessons. By 2023, he had taught more than 150 children to self-rescue. (His lessons are his own business, separate from Because of ADAM. We just want every family to find a certified instructor, wherever they live.)
 
 > Skills before thrills. No matter the cost, the time commitment or the distance, sometimes there are no do-overs.
 >
@@ -38,8 +38,6 @@ We don’t want our kids to love the water before they know how to save themselv
 ## What ISR is
 
 **Infant Swimming Resource (ISR)** has taught survival swimming lessons to infants and young children since 1966 ([infantswim.com](https://www.infantswim.com/about/)), with one mission: *Not One More Child Drowns.* It teaches self-rescue to kids from 6 months to 6 years old. The idea is simple: if a child ends up in the water alone, they should know what to do to survive until an adult gets to them. ISR counts more than 450,000 graduates and hundreds of documented stories of kids who used their skills to save themselves ([infantswim.com](https://www.infantswim.com/about/)).
-
-This isn’t “mommy and me” splash time. It’s survival skills, taught one child at a time by a certified instructor.
 
 - **Babies 6–12 months** learn the **Rollback-to-Float**: roll onto their back and float, resting and breathing until help arrives.
 - **Kids 1–6 years** (once they’re walking well) learn **Swim-Float-Swim**: swim, roll onto their back to float and rest, then roll over and swim again until they reach the steps, the wall or the shore.
@@ -68,6 +66,6 @@ If ISR just isn’t possible, look for lessons that teach self-rescue skills, li
 
 Swim skills are one layer of protection. They never replace the others, and ISR says the same thing: no child is ever “drown-proof,” and supervision is the first and most important defense.
 
-Talk with your pediatrician about what’s right for your child (see what the American Academy of Pediatrics says at the top of this page). Either way, an adult watching (a Water Watcher), a four-sided pool fence, door and pool alarms, and CPR still matter every single time.
+Talk with your pediatrician about what’s right for your child (see what the American Academy of Pediatrics says on this page). Either way, an adult watching (a Water Watcher), a four-sided pool fence, door and pool alarms, and CPR still matter every single time.
 
 We just want every child to have one more layer than Adam had.
