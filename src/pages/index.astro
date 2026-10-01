@@ -441,8 +441,8 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     padding: 0;
     margin: 0 0 8px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 12px;
+    max-width: 720px;
   }
   .tonight li {
     display: grid;
