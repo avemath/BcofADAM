@@ -70,6 +70,33 @@ const values = [
     </div>
   </section>
 
+  <section class="section section--foam">
+    <div class="wrap narrow letter reveal">
+      <span class="eyebrow">A note from Avery</span>
+      <h2>Why we started this</h2>
+      <p>
+        I was 14 when my little brother drowned in our backyard pool. I was home that afternoon, in my softball
+        uniform, yelling at him for running off with my hairbrush. About three minutes later, everything changed.
+      </p>
+      <p>
+        Adam survived, and I spent the rest of high school growing up alongside his therapies and hospital stays. I
+        learned to take care of him. I also learned how little most families know about how drowning really happens,
+        because we didn’t know either.
+      </p>
+      <p>
+        In 2020, my brother, sisters and I started Because of ADAM so other families could learn what we learned,
+        without having to learn it the way we did. This website is everything we wish someone had told us, in one place,
+        free for anyone who needs it.
+      </p>
+      <p>
+        If you take one thing from it, make it this: no single layer is enough, so stack them. And if you ever can’t
+        find a child, check the water first.
+      </p>
+      <p class="letter__sign">Avery, Adam’s big sister</p>
+      <a class="btn btn--ocean" href={url('/adams-story')}>Read Adam’s story</a>
+    </div>
+  </section>
+
   <section class="section section--deep">
     <div class="wrap narrow name-quote reveal">
       <span class="eyebrow">What our name means</span>
@@ -164,6 +191,16 @@ const values = [
 </BaseLayout>
 
 <style>
+  .letter p:not(.letter__sign) {
+    font-size: 1.1rem;
+  }
+  .letter__sign {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--ocean);
+    margin: 1.4em 0 1.2em;
+  }
   .value__said {
     margin: 1em 0 0;
     padding-top: 0.9em;
