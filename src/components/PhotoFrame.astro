@@ -66,11 +66,17 @@ const uid = Math.random().toString(36).slice(2, 8);
     position: relative;
     overflow: hidden;
   }
+  /* A natural photo shrinks the figure to its own width, so the caption lines up under it. */
+  .photo--natural {
+    width: fit-content;
+    max-width: 100%;
+    margin-inline: auto;
+  }
   .photo--natural img {
     aspect-ratio: auto;
     width: auto;
     max-width: 100%;
-    max-height: min(640px, 80vh);
+    max-height: min(520px, 65vh);
     margin-inline: auto;
     display: block;
   }
@@ -93,5 +99,6 @@ const uid = Math.random().toString(36).slice(2, 8);
     font-size: 0.9rem;
     color: var(--ink-soft);
     margin-top: 10px;
+    text-wrap: balance;
   }
 </style>

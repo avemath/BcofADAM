@@ -97,7 +97,7 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
   </section>
 
   <section class="section section--foam">
-    <div class="wrap split split--wide-left">
+    <div class="wrap split split--wide-left" style="align-items: start">
       <div class="reveal">
         <h2>What “nonfatal drowning” means</h2>
         <p>
@@ -109,9 +109,9 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
           That’s why we say Adam <em>is</em> a drowning survivor. He didn’t “almost drown.” He drowned,
           and he survived.
         </p>
-      </div>
-      <div class="reveal nf-side">
         {survivorsPhotos.photo2 && <PhotoFrame src={survivorsPhotos.photo2} alt={survivorsPhotos.photo2Alt} caption={survivorsPhotos.caption2} ratio="4 / 3" natural />}
+      </div>
+      <div class="reveal">
         <div class="card">
         <p class="eyebrow">By the numbers</p>
         <ul class="nf-stats">
@@ -300,9 +300,7 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
     color: var(--ink-soft);
     font-size: 0.95rem;
   }
-  .nf-side {
-    display: grid;
-    gap: 24px;
-    align-content: start;
+  .split :global(.photo) {
+    margin-top: 28px;
   }
 </style>

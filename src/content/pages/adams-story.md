@@ -38,7 +38,7 @@ That spring, Dad and Lea grew a garden from seed. Lea was 4, and she picked out 
 
 That Monday was June 5, 2017, and our house was as full as it gets. Rickey had just graduated from high school, family had flown in to celebrate, and Grace and I were in our uniforms for the first game of the season. After the business with my brush, Adam went to play with Lea in a tent in the living room, carrying his toys inside, and Dad, Grace and I left for the field. Dad coached our team, so the three of us always went early to warm up.
 
-![](/images/uploads/ricgradredbikeb4acc-1.jpg)
+![Rickey in his blue graduation cap and gown, bending down on the track to Adam, who sits on his red tricycle and reaches up to touch his face](/images/uploads/ricgradredbikeb4acc-1.jpg)
 
 *Rickey’s graduation, days before. Adam’s red tricycle still sits in Mom’s closet.*
 
@@ -52,11 +52,11 @@ Everyone who could took a turn after Mom: our family, the first responders, the 
 
 ## She read to him anyway
 
+Mom stayed with him, first in Pittsburgh, and for the next four months our family lived in two places. One week in, a neurologist told her that Adam would never hear her again. She read to him anyway. For 33 days she wasn’t allowed to hold him, so she stood beside his crib, *“singing, reading, praying and squeezing his hand but nothing more.”* Then one day, while she was reading, he cried.
+
 ![Mom holding Adam in the hospital, with his breathing tube and wires](/images/uploads/picu.jpg)
 
 *Mom and Adam in the PICU, summer 2017.*
-
-Mom stayed in Pittsburgh with him, and for the next four months our family lived in two places. One week in, a neurologist told her that Adam would never hear her again. She read to him anyway. For 33 days she wasn’t allowed to hold him, so she stood beside his crib, *“singing, reading, praying and squeezing his hand but nothing more.”* Then one day, while she was reading, he cried.
 
 Most days, though, nothing seemed to reach him. One day I walked in while Mom and his therapist were working with him and getting nowhere. I was 14, and I didn’t understand that he wasn’t responding the way Mom was hoping he would. The therapist, out of ideas, asked if I would talk to him the way I normally did at home. I leaned over the crib, thought for a second, and snapped, *“Adam. Get out of my room!”* His eyes shot open. I laughed. Mom was shocked, and then she was crying.
 
@@ -66,9 +66,9 @@ Grace and I started a new school year without Mom there. Every day, friends and 
 
 That September, our hometown packed a pavilion with people in blue Adam’s Hope shirts, and two weeks later our Pennsylvania neighbors held a benefit of their own.
 
-![A crowd in blue Adam’s Hope shirts under a tent, with Adam in his stroller in the front row](/images/uploads/adams_village.jpg)
+![A group in light blue Adam’s Hope shirts, with Adam in his stroller in the front row](/images/uploads/adams_village.jpg)
 
-*Adam’s village in blue at the benefit in Lafitte.*
+*Adam’s village in blue Adam’s Hope shirts.*
 
 That same month, a special scan showed that the part of Adam’s brain that was hurt when it went without oxygen was shaped like a perfect heart. *“Rather than devastation, I was flooded with immense hope,”* Mom wrote. That heart is [our logo](/about) now.
 
@@ -104,7 +104,7 @@ Dad became a Red Cross CPR instructor, then spent eight weeks in Florida learnin
 
 In her first months of nursing school, with Dad away in Florida, Adam’s night nurse quit without notice. Three agencies couldn’t staff his 90 hours of approved nursing, so Mom covered his nights herself. Then she threw on her scrubs and walked two icy blocks through downtown Altoona before sunrise to get to clinicals. I spent my senior year working on Because of ADAM and helping coach Lea’s softball team, the 8U Fireflies.
 
-![](/images/uploads/mom-nurse-1.jpg)
+![Mom in her white nursing uniform and cap at her graduation, with the family around her and Adam in his chair in front](/images/uploads/mom-nurse-1.jpg)
 
 *Mom became a nurse, and we were all there to cheer her on.*
 
@@ -120,11 +120,11 @@ I wanted to know everything about taking care of him, so I learned to do what hi
 
 ![Mom sitting on a plaid blanket on the grass with Adam in her lap, a car parked behind them](/images/uploads/mom_and_adam_at_softball_game.jpg)
 
-*Mom and Adam at one of my softball games.*
+*Mom and Adam at a softball game.*
 
 I’m in school in Louisiana now, so I see Adam when I come home. He has nurses around the clock, and most of the time he’s in his bed or his stroller, so I go in to see him when Mom is on shift. I love my mom with my whole heart, and those nights are my favorite part of coming home. It’s just the three of us in his room, me and Mom and Adam, and we can talk about anything. I can tell her whatever I need to. She can tell me her latest conspiracy theory. We gab into the night, and the whole time Adam is right there, hearing the people he loves just living their lives and talking. We don’t bring him into the conversation much, because he can’t answer. We bring him into the moment. I know how simple that sounds. It’s so special to me, and every time I go home I make sure I get one more night like that with them.
 
-![Avery resting her head against Adam’s, his cap pulled low, in a purple Tigers jersey](/images/uploads/avery_and_aj2.jpg)
+![Avery resting her head against Adam’s, his black visor pulled low, in a purple Tigers jersey](/images/uploads/avery_and_aj2.jpg)
 
 *Me and Adam.*
 

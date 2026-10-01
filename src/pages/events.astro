@@ -14,6 +14,8 @@ const beforeUs = (e: (typeof allPast)[number]) =>
   e.data.kind === 'Community' && (!e.data.date || e.data.date.getUTCFullYear() < 2020);
 const past = allPast.filter((e) => !beforeUs(e));
 const early = allPast.filter(beforeUs);
+// Cards with a photo come first in each group, so the text-only cards sit together at the end.
+const photoFirst = <T extends { data: { photo?: string } }>(list: T[]) => [...list].sort((a, b) => Number(!!b.data.photo) - Number(!!a.data.photo));
 const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
 const origin = new URL(url('/'), Astro.site).href.replace(/\/$/, '');
 // Upcoming events (including the yearly ones) as structured data for search engines.
@@ -45,7 +47,7 @@ const jsonLd = upcoming.map((e) => eventLd(e, origin, pageUrl)).filter((x) => x 
         <div class="wrap">
           <h2 id="coming-up">Coming up</h2>
           <div class="grid grid--3" style="margin-top: 28px">
-            {upcoming.map((e) => <EventCard event={e} />)}
+            {photoFirst(upcoming).map((e) => <EventCard event={e} />)}
           </div>
         </div>
       </section>
@@ -57,7 +59,7 @@ const jsonLd = upcoming.map((e) => eventLd(e, origin, pageUrl)).filter((x) => x 
       <h2>Past events</h2>
       {past.length === 0 && <p>Events are coming soon. Follow us on Facebook for dates.</p>}
       <div class="grid grid--3" style="margin-top: 28px">
-        {past.map((e) => <EventCard event={e} />)}
+        {photoFirst(past).map((e) => <EventCard event={e} />)}
       </div>
     </div>
   </section>
@@ -72,7 +74,7 @@ const jsonLd = upcoming.map((e) => eventLd(e, origin, pageUrl)).filter((x) => x 
             Adam’s care. We’ll never be able to thank them enough.
           </p>
           <div class="grid grid--3" style="margin-top: 28px">
-            {early.map((e) => <EventCard event={e} />)}
+            {photoFirst(early).map((e) => <EventCard event={e} />)}
           </div>
         </div>
       </section>
