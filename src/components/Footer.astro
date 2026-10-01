@@ -41,7 +41,7 @@ const year = new Date().getFullYear();
           <h2 class="site-footer__heading">Explore</h2>
           <ul>
             {
-              nav.map((item) => (
+              nav.filter((item) => item.href !== '/about').map((item) => (
                 <li>
                   <a href={url(item.href)}>{item.label}</a>
                 </li>
@@ -125,7 +125,17 @@ const year = new Date().getFullYear();
   }
   .site-footer__grid {
     display: grid;
-    gap: 36px;
+    gap: 36px 24px;
+  }
+  /* On phones the two link lists share a row, so the footer is half as tall. */
+  @media (max-width: 759px) {
+    .site-footer__grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .site-footer__grid > :first-child,
+    .site-footer__grid > :last-child {
+      grid-column: 1 / -1;
+    }
   }
   @media (min-width: 760px) {
     .site-footer__grid {
