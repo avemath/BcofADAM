@@ -4,7 +4,7 @@
  *
  * Family photos are uploaded through the Studio into public/images/uploads,
  * which Astro's own <Image> component can't process. So after the site is
- * built, this finds every uploaded photo on every page and:
+ * built, this finds every photo and logo under /images/ on every page and:
  *   - makes AVIF and WebP copies at a few widths (in /_img/),
  *   - wraps the <img> in a <picture> so browsers pick the smallest good one,
  *   - adds width and height so the page doesn't jump while photos load,
@@ -19,7 +19,7 @@ import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
 
-const WIDTHS = [480, 800, 1200, 1600];
+const WIDTHS = [160, 480, 800, 1200, 1600];
 const FORMATS = /** @type {const} */ (['avif', 'webp']);
 const DEFAULT_SIZES = '(min-width: 840px) 800px, 100vw';
 const CACHE = path.resolve('node_modules/.cache/optimized-images');
@@ -104,7 +104,7 @@ export default function optimizeImages({ base = '/' } = {}) {
           return info;
         }
 
-        const uploads = new RegExp(`^${prefix.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/images/uploads/[^"]+\\.(jpe?g|png)$`, 'i');
+        const photos = new RegExp(`^${prefix.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/images/[^"]+\\.(jpe?g|png)$`, 'i');
         for (const file of htmlFiles(root)) {
           let html = fs.readFileSync(file, 'utf8');
           const inMain = html.indexOf('<main');
@@ -114,7 +114,7 @@ export default function optimizeImages({ base = '/' } = {}) {
           for (const match of html.matchAll(/<img\b[^>]*>/gi)) {
             const tag = match[0];
             const src = attr(tag, 'src');
-            if (!src || !uploads.test(src)) continue;
+            if (!src || !photos.test(src)) continue;
             // Already inside a <picture>? Leave it alone.
             const before = html.slice(Math.max(0, (match.index ?? 0) - 200), match.index);
             if (/<picture[^>]*>\s*(<source[^>]*>\s*)*$/i.test(before)) continue;

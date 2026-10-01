@@ -84,7 +84,7 @@ Our mark is a **top-down view of a brain with a heart inside it**, in teal, purp
 | `public/images/logo-mark.png` | The small mark next to "Because of ADAM" in the site header and footer ([`Logo.astro`](../src/components/Logo.astro)) |
 | `public/favicon.ico`, `icon-192.png`, `icon-512.png` | Browser tab and bookmark icons |
 | `public/apple-touch-icon.png` | iPhone home-screen icon (on our sand background) |
-| `public/images/share-card.png` | The picture Facebook and texts show when someone shares our link (1200×630) |
+| `public/images/share-card.jpg` | The picture Facebook and texts show when someone shares our link (1200×630) |
 
 - The mark works on light and dark backgrounds. Don't stretch it, recolor it, or put it on a busy photo.
 - Always leave a little space around it, about the width of the teal ring.

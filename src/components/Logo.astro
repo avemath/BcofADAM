@@ -7,14 +7,16 @@ import { url } from '../lib/url';
 
 interface Props {
   light?: boolean;
+  /** The footer's logo can wait until it scrolls into view. */
+  loading?: 'eager' | 'lazy';
 }
-const { light = false } = Astro.props;
+const { light = false, loading = 'eager' } = Astro.props;
 ---
 
 <span class:list={['logo', { 'logo--light': light }]}>
-  <img class="logo__mark" src={url('/images/logo-mark.png')} alt="" width="41" height="48" />
+  <img class="logo__mark" src={url('/images/logo-mark.png')} sizes="41px" alt="" width="41" height="48" loading={loading} />
   <span class="logo__text">
-    <span class="logo__small">Because of</span>
+    <span class="logo__small">Because of </span>
     <span class="logo__big">ADAM</span>
   </span>
 </span>
