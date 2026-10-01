@@ -28,7 +28,7 @@ There are five of us: Rickey, Grace, me, Lea and Adam. Dad had really wanted one
 
 That spring, Dad and Lea grew a garden from seed. Lea was 4, and she picked out her favorite fruit and veggie packets herself. Every day the two of them watered the little pots while Adam watched from his walker, and by June the plants were ready to go into the ground.
 
-Then came that Monday, June 5, 2017, and our house was as full as it gets. Rickey had just graduated from high school, family had flown in to celebrate, and Grace and I were in our uniforms for the first game of the season. After the business with my brush, Adam went to play with Lea in a tent in the living room, carrying his toys inside.
+That Monday was June 5, 2017, and our house was as full as it gets. Rickey had just graduated from high school, family had flown in to celebrate, and Grace and I were in our uniforms for the first game of the season. After the business with my brush, Adam went to play with Lea in a tent in the living room, carrying his toys inside.
 
 ![](/images/uploads/ricgradredbikeb4acc-1.jpg)
 
@@ -36,13 +36,13 @@ Then came that Monday, June 5, 2017, and our house was as full as it gets. Ricke
 
 He was right there. And then, quietly, he wasn’t.
 
-He had slipped out the kitchen door and gone straight for the pool. Three days earlier, we had all cheered him on as he jumped into the pool and into our arms, and this time no one was there to catch him. About three minutes later, Mom found him in the water. She started CPR, and then everyone who could took a turn: our family, the first responders, the emergency team at the hospital.
+He had slipped out the kitchen door and gone straight for the pool. Three days earlier, we had all cheered him on as he jumped into the pool and into our arms. This time no one was there to catch him. He had been gone about three minutes when Mom found him in the water. She started CPR, and then everyone who could took a turn: our family, the first responders, the emergency team at the hospital.
 
 I don’t remember that day in order. I remember sirens, and running to the front yard to show the ambulances the way around to the back.
 
-After 90 minutes without a pulse, right as a priest anointed his head, **Adam’s heart started beating again.** That night he was flown to UPMC Children’s Hospital of Pittsburgh. Mom and Dad went with him. The rest of us stayed behind, and what I remember most is not knowing what was going on. That was the start of our family’s “after.”
+After 90 minutes without a pulse, right as a priest anointed his head, Adam’s heart started beating again. That night he was flown to UPMC Children’s Hospital of Pittsburgh. Mom and Dad went with him. The rest of us stayed behind, and what I remember most is not knowing what was going on.
 
-## “Adam. Get out of my room!”
+## She read to him anyway
 
 ![Mom holding Adam in the hospital, with his breathing tube and wires](/images/uploads/picu.jpg)
 
@@ -50,13 +50,11 @@ After 90 minutes without a pulse, right as a priest anointed his head, **Adam’
 
 Mom stayed in Pittsburgh with him, and for the next four months our family lived in two places. One week in, a neurologist told her that Adam would never hear her again. She read to him anyway. For 33 days she wasn’t allowed to hold him, so she stood beside his crib, *“singing, reading, praying and squeezing his hand but nothing more.”* Then one day, while she was reading, he cried.
 
-Most days, though, nothing seemed to reach him. One day I walked in while Mom and his therapist were working with him and getting nowhere. I was 14, and I didn’t really understand that he wasn’t responding the way Mom was hoping he would. The therapist, out of ideas, asked if I would talk to him the way I normally did at home. I leaned over the crib, thought for a second, and snapped, *“Adam. Get out of my room!”* His eyes shot open. I laughed. Mom was shocked, and then she was crying. I didn’t realize until later how big that moment was.
+Most days, though, nothing seemed to reach him. One day I walked in while Mom and his therapist were working with him and getting nowhere. I was 14, and I didn’t understand that he wasn’t responding the way Mom was hoping he would. The therapist, out of ideas, asked if I would talk to him the way I normally did at home. I leaned over the crib, thought for a second, and snapped, *“Adam. Get out of my room!”* His eyes shot open. I laughed. Mom was shocked, and then she was crying.
 
 Back home, the garden didn’t make it. By July the plants, still crammed in their pots, had died, and for a long time Dad couldn’t stand to look at them.
 
 Grace and I started a new school year without Mom there. Every day, friends and strangers asked how our brother was doing, and when we said “good,” they heard “totally healed.” We had to explain that a good day just meant he was still alive.
-
-That fall, a special scan showed that the part of Adam’s brain that was hurt when it went without oxygen was shaped like a perfect heart. *“Rather than devastation, I was flooded with immense hope,”* Mom wrote. That heart is [our logo](/about) now.
 
 That September, our hometown packed a pavilion with people in blue Adam’s Hope shirts, and two weeks later our Pennsylvania neighbors held a benefit of their own.
 
@@ -64,27 +62,31 @@ That September, our hometown packed a pavilion with people in blue Adam’s Hope
 
 *Adam’s village at the Adam’s Hope benefit in Lafitte, Louisiana, in 2017.*
 
+That same month, a special scan showed that the part of Adam’s brain that was hurt when it went without oxygen was shaped like a perfect heart. *“Rather than devastation, I was flooded with immense hope,”* Mom wrote. That heart is [our logo](/about) now.
+
 When Adam finally came home, Mom rolled him into the kitchen while we were all making lunch. It had been more than four months since we’d all sat down together. We sang, we cooked, we ate.
 
 ## Fireflies
 
-On June 5, 2018, we wore blue for Adam’s hope and his strength, the way we have every June 5 since. That summer Lea still loved the water, and somebody had to get in with her, so Dad and I did. For weeks we worked on self-rescue: swim, roll onto your back, float, breathe, keep going. It was a struggle. She was 5.
+On June 5, 2018, we wore blue for Adam. That summer Lea still loved the water, and somebody had to get in with her, so Dad and I did. For weeks we worked on self-rescue: swim, roll onto your back, float, breathe, keep going. It was a struggle. She was 5.
 
-Then one afternoon in July, Mom was out in the garage sorting Adam’s toys into garage sale piles, having a really hard day, when she bent down for his baseball bat, never used, and a single firefly lit up right in front of her face. She caught it in her hands and brought it out to show Lea. As soon as Mom let it go, Lea ran to the diving board and yelled, *“Mom. Brother, watch this!”* She cannonballed in and swam 40 feet to the other side, rolling onto her back to float whenever she needed a breath, while Adam watched the whole thing.
+Then one afternoon in July, Mom was out in the garage sorting Adam’s toys into garage sale piles. She bent down for his baseball bat, never used, and a single firefly lit up right in front of her face. She caught it in her hands and brought it out to show Lea. As soon as Mom let it go, Lea ran to the diving board and yelled, *“Mom. Brother, watch this!”* She cannonballed in and swam 40 feet to the other side, rolling onto her back to float whenever she needed a breath, while Adam watched the whole thing.
 
-That night, Mom looked out over our field and saw thousands of fireflies lighting up Adam’s tree, as if the whole village were sending her messages of hope.
+That night, Mom looked out across our field and saw thousands of fireflies lighting up Adam’s tree. *“As if in Morse code,”* she wrote, *“the entire village was sending me secret messages of Hope.”*
 
-Not long after, we drove down to Louisiana, where our hometown did what Lafitte does: they set a date, went into action, and threw a [fishing rodeo](/events) for Adam. It paid for his first stem cell treatment at Duke. *“Our village shines just as bright as the fireflies’ village,”* Mom wrote.
+Not long after, we drove down to Louisiana, where our hometown did what Lafitte does: they set a date and threw a [fishing rodeo](/events) for Adam. It paid for his stem cell treatment at Duke. *“Our village shines just as bright as the fireflies’ village,”* Mom wrote.
 
 Then October came, the pool was covered for the season, and Adam smiled. It had been 15 months. At first Mom didn’t trust it. Then he did it again, and the next day. *“I did not request it,”* she wrote. *“It was not given on demand. Adam’s smile is on His time.”*
 
 ## Planting seeds
 
-For two more summers, Lea asked for a garden, and for two more summers, Dad couldn’t do it. Then, in the spring of 2020, with COVID keeping everyone home, he pulled out the old trays of soil and we planted it again. Mom shared a line from Audrey Hepburn about it: *“To plant a garden is to believe in tomorrow.”*
+For two more summers, Lea asked for a garden, and for two more summers, Dad couldn’t do it. Then, in the spring of 2020, with COVID keeping everyone home, he pulled out the old trays of soil and we planted it again.
 
-That year we planted something else, too. Rickey, Grace, Lea and I started **Because of ADAM: Allies in the Drowning Awareness Movement**, so other families could learn what we learned without having to learn it the way we did.
+That year, Rickey, Grace, Lea and I started **Because of ADAM: Allies in the Drowning Awareness Movement**, so other families could learn what we learned without having to learn it the way we did.
 
-Dad became a Red Cross CPR instructor, then spent eight weeks in Florida learning to teach [ISR self-rescue](/swim-lessons), the lessons Adam never got to take. He has taught more than 150 children since. Mom went back to school at 43 to become a nurse for kids like Adam. In her first months of nursing school, with Dad away in Florida, Adam’s night nurse quit without notice. Three agencies couldn’t staff the 90 hours, so Mom covered his nights herself. Then she threw on her scrubs and walked two icy blocks through downtown Altoona before sunrise to get to clinicals. I spent my senior year growing Because of ADAM and helping coach Lea’s softball team, the 8U Fireflies.
+Dad became a Red Cross CPR instructor, then spent eight weeks in Florida learning to teach [ISR self-rescue](/swim-lessons), the lessons Adam never got to take, and he has taught more than 150 children since. Mom went back to school at 43 to become a nurse for kids like Adam.
+
+In her first months of nursing school, with Dad away in Florida, Adam’s night nurse quit without notice. Three agencies couldn’t staff his 90 hours of approved nursing, so Mom covered his nights herself. Then she threw on her scrubs and walked two icy blocks through downtown Altoona before sunrise to get to clinicals. I spent my senior year working on Because of ADAM and helping coach Lea’s softball team, the 8U Fireflies.
 
 ![](/images/uploads/mom-nurse-1.jpg)
 
@@ -118,7 +120,7 @@ My parents are not careless people. Mom cut Adam’s grapes in half and brushed 
 - **It was quiet.** No splash, no cry. Little kids often slip under without a sound.
 - **It wasn’t swim time.** Adam had learned the pool was fun, and he went back on his own. Most young children who drown in pools aren’t expected to be at the pool at all ([CPSC](https://www.cpsc.gov/s3fs-public/pdfs/blk_media_359.pdf)).
 - **Alarms have blind spots.** Our door alarms went quiet when a door was pulled mostly shut but never latched. Test yours, and make sure every door to the pool closes and latches on its own.
-- **One layer isn’t enough.** Like a lot of families, we didn’t want a fence blocking our view of the pool, but a four-sided pool fence would have stood between Adam and the water.
+- **Locks and alarms weren’t enough.** Like a lot of families, we didn’t want a fence blocking our view of the pool, but a four-sided pool fence would have stood between Adam and the water.
 - **Self-rescue lessons were too far away.** The closest [ISR lessons](/swim-lessons) were two hours away, so Adam never got the chance to learn to roll onto his back and float.
 
 **Every June 5, we wear blue** for Adam’s hope, his strength, and every family we can reach. Wear it with us. Then go check your doors.
