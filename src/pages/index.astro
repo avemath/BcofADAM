@@ -5,15 +5,13 @@ import PhotoFrame from '../components/PhotoFrame.astro';
 import TimeOnPage from '../components/TimeOnPage.astro';
 import LayersBuilder from '../components/LayersBuilder.astro';
 import CtaBand from '../components/CtaBand.astro';
-import { nonfatal } from '../data/content';
 import HomeNumbers from '../components/HomeNumbers.astro';
 import { layers } from '../data/layers';
 import { home as story } from '../data/content';
-import FacebookFeed from '../components/FacebookFeed.astro';
 import AnywhereAnytime from '../components/AnywhereAnytime.astro';
 import EventCard from '../components/EventCard.astro';
 import { getEvents, splitEvents } from '../lib/events';
-import { site, hasDonate } from '../data/site';
+import { site } from '../data/site';
 import { isr } from '../data/content';
 import { url } from '../lib/url';
 import { withAge } from '../lib/age';
@@ -26,8 +24,7 @@ const { upcoming } = splitEvents(events);
 // Highlight the key phrase in the hero intro if it's there.
 const ledeParts = (story.heroLede ?? '').split('#1 cause of death');
 // The second survivors number (hospital stays) sits next to the survivors section.
-const survivorStat = nonfatal[1] ?? nonfatal[0];
-const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upcoming.includes(e))].slice(0, 3);
+const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upcoming.includes(e))].slice(0, 1);
 ---
 
 <BaseLayout
@@ -43,7 +40,7 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     </div>
     <div class="wrap hero__inner">
       <p class="hero__eyebrow">
-        Because of <strong>ADAM</strong> · <span>{site.tagline}</span>
+        <span class="hero__eyebrow-name">Because of <strong>ADAM</strong> · </span><span>{site.tagline}</span>
       </p>
       <h1 class="hero__title">
         <span class="hero__line">Drowning is silent.</span>{' '}
@@ -72,53 +69,6 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
 
   <!-- THE NUMBERS -->
   <HomeNumbers />
-
-  <!-- ANYWHERE, ANYTIME -->
-  <Wave color="var(--deep)" bg="var(--sand)" />
-  <AnywhereAnytime />
-  <Wave color="var(--foam)" bg="var(--deep)" />
-
-  <!-- ADAM -->
-  <section class="section section--foam">
-    <div class="wrap split">
-      <div class="reveal">
-        <PhotoFrame src={story.photo} alt={story.photoAlt} hint="Add a photo of Adam" />
-      </div>
-      <div class="reveal">
-        <span class="eyebrow">Adam’s story</span>
-        <h2>{story.meetTitle}</h2>
-        <p class="lede">{withAge(story.teaser)}</p>
-        {story.teaserMore && <p>{withAge(story.teaserMore)}</p>}
-        <div class="btn-row">
-          <a class="btn btn--ocean" href={url('/adams-story')}>Read Adam’s story</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CLOCK -->
-  <Wave color="var(--deep)" bg="var(--foam)" />
-  <section class="section section--deep clock-section">
-    <div class="wrap narrow reveal">
-      <TimeOnPage />
-    </div>
-  </section>
-
-  <!-- LAYERS BUILDER -->
-  <section id="layers" class="section section--abyss">
-    <div class="wrap">
-      <div class="layers-intro reveal">
-        <span class="eyebrow">Layers of protection</span>
-        <h2>No single layer is enough.</h2>
-        <p class="lede">
-          Our door alarms went quiet when a door was pulled almost shut but never latched. Gates get propped open.
-          Adults look away. Each layer you add catches what the last one misses. Turn them on and see the difference.
-        </p>
-      </div>
-      <LayersBuilder />
-    </div>
-  </section>
-  <Wave color="var(--sand)" bg="var(--abyss)" />
 
   <!-- TONIGHT -->
   <section class="section" style="padding-top: clamp(32px, 5vw, 64px)">
@@ -150,8 +100,55 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     </div>
   </section>
 
-  <!-- ISR -->
+  <!-- ANYWHERE, ANYTIME -->
   <Wave color="var(--deep)" bg="var(--sand)" />
+  <AnywhereAnytime />
+  <Wave color="var(--foam)" bg="var(--deep)" />
+
+  <!-- ADAM -->
+  <section class="section section--foam">
+    <div class="wrap split">
+      <div class="reveal">
+        <PhotoFrame src={story.photo} alt={story.photoAlt} hint="Add a photo of Adam" />
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">Adam’s story</span>
+        <h2>{story.meetTitle}</h2>
+        <p class="lede">{withAge(story.teaser)}</p>
+        {story.teaserMore && <p>{withAge(story.teaserMore)}</p>}
+        <div class="btn-row">
+          <a class="btn btn--ocean" href={url('/adams-story')}>Read Adam’s story</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOCK -->
+  <Wave color="var(--deep)" bg="var(--foam)" />
+  <section class="section section--deep clock-section">
+    <div class="wrap narrow reveal">
+      <TimeOnPage />
+    </div>
+  </section>
+  <Wave color="var(--abyss)" bg="var(--deep)" />
+
+  <!-- LAYERS BUILDER -->
+  <section id="layers" class="section section--abyss">
+    <div class="wrap">
+      <div class="layers-intro reveal">
+        <span class="eyebrow">Layers of protection</span>
+        <h2>No single layer is enough.</h2>
+        <p class="lede">
+          Our door alarms went quiet when a door was pulled almost shut but never latched. Gates get propped open.
+          Adults look away. Each layer you add catches what the last one misses. Turn them on and see the difference.
+        </p>
+      </div>
+      <LayersBuilder />
+    </div>
+  </section>
+  <Wave color="var(--deep)" bg="var(--abyss)" />
+
+  <!-- ISR -->
   <section class="section section--deep isr-band">
     <div class="wrap split">
       <div class="reveal">
@@ -188,7 +185,7 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
 
   <!-- SURVIVORS -->
   <section class="section section--foam" style="padding-top: clamp(32px, 5vw, 64px)">
-    <div class="wrap split split--wide-left">
+    <div class="wrap narrow">
       <div class="reveal">
         <span class="eyebrow">Survivors & families</span>
         <h2>Surviving is only the beginning.</h2>
@@ -201,20 +198,17 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
           <a class="btn btn--ocean" href={url('/survivors-and-families')}>Support for families</a>
         </div>
       </div>
-      {
-        survivorStat && (
-          <div class="survivor-stat card reveal">
-            <p class="stat__num">{survivorStat.stat}</p>
-            <p>{survivorStat.label}</p>
-            <a class="source" href={survivorStat.sourceUrl} rel="noopener" target="_blank">
-              Source: {survivorStat.source}
-              <span class="visually-hidden"> for “{survivorStat.stat}” (opens in a new tab)</span>
-            </a>
-          </div>
-        )
-      }
     </div>
   </section>
+
+  <!-- PLEDGE -->
+  <CtaBand
+    title="Be the Water Watcher."
+    text="“Do whatever you can to keep your eyes on children that cannot swim, especially during parties.” That’s our mom, July 4, 2019. Promise to be the one adult whose only job is the water, and print your card."
+  >
+    <a class="btn" href={url('/water-watcher')}>Take the pledge</a>
+    <a class="btn btn--ghost" href={url('/quiz')}>Take the quiz</a>
+  </CtaBand>
 
   <!-- EVENTS -->
   {
@@ -222,9 +216,9 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
       <section class="section">
         <div class="wrap">
           <span class="eyebrow">Events & fundraisers</span>
-          <h2>Come find Adam’s village.</h2>
+          <h2>Next up.</h2>
           <p class="lede">Cornhole in Duncansville, blue shirts every June 5, and a tent with a “Never swim alone” poster. Come meet the village.</p>
-          <div class="grid grid--3 home-events" style="margin-top: 32px">
+          <div class="home-events" style="margin-top: 32px">
             {homeEvents.map((e) => <EventCard event={e} />)}
           </div>
           <div class="btn-row">
@@ -235,68 +229,6 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     )
   }
 
-  <!-- FACEBOOK -->
-  {
-    site.showFacebookFeed && (
-      <section class="section section--foam">
-        <div class="wrap split fb-split">
-          <div class="reveal">
-            <span class="eyebrow">Follow along</span>
-            <h2>Adam’s Village of Hope</h2>
-            <p class="lede">
-              Thousands of people follow Adam on Facebook. It’s where Mom shares the small miracles, we post our
-              events, and everyone gets a water safety reminder before the holidays.
-            </p>
-          </div>
-          <FacebookFeed maxHeight={860} />
-        </div>
-      </section>
-    )
-  }
-
-  <!-- PLEDGE -->
-  <CtaBand
-    title="Be the Water Watcher."
-    text="“Do whatever you can to keep your eyes on children that cannot swim, especially during parties.” That’s our mom, July 4, 2019. Promise to be the one adult whose only job is the water, and print your card."
-  >
-    <a class="btn" href={url('/water-watcher')}>Take the pledge</a>
-    <a class="btn btn--ghost" href={url('/get-involved')}>More ways to help</a>
-  </CtaBand>
-
-  <!-- GET INVOLVED -->
-  <section class="section">
-    <div class="wrap">
-      <span class="eyebrow">Join the movement</span>
-      <h2>Adam’s village is growing.</h2>
-      <div class="grid grid--3" style="margin-top: 32px">
-        {
-          hasDonate ? (
-            <a class="card join reveal" href={url('/donate')}>
-              <h3>Give</h3>
-              <p>Help put Water Watcher tags, alarms, CPR and water safety education within reach of more families.</p>
-              <span class="join__go">Donate →</span>
-            </a>
-          ) : (
-            <a class="card join reveal" href={url('/quiz')}>
-              <h3>Test yourself</h3>
-              <p>Ten quick questions on what really keeps little kids safe around water. Then pass it to whoever watches yours.</p>
-              <span class="join__go">Take the quiz →</span>
-            </a>
-          )
-        }
-        <a class="card join reveal" href={url('/get-involved')}>
-          <h3>Share</h3>
-          <p>Ready-to-post messages that put water safety in front of the people you love.</p>
-          <span class="join__go">Get the toolkit →</span>
-        </a>
-        <a class="card join reveal" href={url('/request-a-talk')}>
-          <h3>Invite us</h3>
-          <p>Schools, daycares, churches and community groups: we’ll share Adam’s story and the layers of protection.</p>
-          <span class="join__go">Request a talk →</span>
-        </a>
-      </div>
-    </div>
-  </section>
 </BaseLayout>
 
 <style>
@@ -374,6 +306,11 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
   .hero__eyebrow strong {
     color: #fff;
     font-weight: 800;
+  }
+  @media (max-width: 639px) {
+    .hero__eyebrow-name {
+      display: none;
+    }
   }
   .hero__title {
     font-size: clamp(3rem, 8.4vw + 0.5rem, 7.6rem);
@@ -488,9 +425,6 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
   }
 
   /* ---------- Survivors ---------- */
-  .survivor-stat .stat__num {
-    font-size: clamp(3.5rem, 6vw, 5.5rem);
-  }
 
   /* ---------- ISR ---------- */
   .isr-band {
@@ -541,12 +475,6 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     padding-top: 1em;
     border-top: 1px solid rgb(255 255 255 / 0.25);
   }
-  .fb-split {
-    align-items: start;
-  }
-  .fb-split :global(.fb-feed) {
-    justify-self: center;
-  }
   /* Give the feed the bigger side on wide screens so it can scale up. */
   @media (min-width: 900px) {
     .fb-split {
@@ -564,25 +492,8 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
       display: none;
     }
   }
+  .home-events {
+    max-width: 460px;
+  }
 
-  /* ---------- Join ---------- */
-  .join {
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    color: var(--ink);
-    transition:
-      transform 0.25s ease,
-      box-shadow 0.25s ease;
-  }
-  .join:hover {
-    color: var(--ink);
-    transform: translateY(-4px);
-    box-shadow: 0 24px 40px -20px rgb(4 29 43 / 0.45);
-  }
-  .join__go {
-    margin-top: auto;
-    font-weight: 700;
-    color: var(--ocean);
-  }
 </style>
