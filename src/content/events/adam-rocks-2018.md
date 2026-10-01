@@ -1,13 +1,13 @@
 ---
-title: "Adam Rocks: Painted Rocks for Water Safety"
+title: "Adam Rocks"
 kind: Awareness
 date: ""
 when: Since spring 2018
 location: Louisiana and Pennsylvania
-summary: "Friends painted rocks in honor of Adam’s fighting spirit, from a church group back home in Louisiana to friends in Altoona, and hid them around town to spread the word before summer: drowning is preventable."
+summary: "It started in the spring of 2018: a church group back home painted rocks in honor of Adam’s fighting spirit, and Mom and Lea hid rocks around Altoona before summer with one message: drowning is preventable. Then it grew into something bigger. Our mom carries a rock in her pocket when she needs Adam’s little spirit. We paint rocks for other families’ warriors, too. Find one, post it, pass it on."
 highlight: "#AdamRocks"
-photo: /images/uploads/rocks2.jpg
-photoAlt: "A batch of painted rocks on a dark table: pumpkins, ghosts, a sunflower, a candy corn and more, with orange confetti"
+photo: /images/uploads/rocks.jpg
+photoAlt: "Painted rocks on a wooden table with confetti: Hope, Peace, Joy, #AdamRocks, and one with the name Amelia"
 link: ""
 linkLabel: ""
 featured: false
