@@ -15,6 +15,10 @@ export interface Fact {
   stat: string;
   label: string;
   detail?: string;
+  /** Home page only: show this one big, with the picture of children. */
+  feature?: boolean;
+  link?: string;
+  linkText?: string;
   source: string;
   sourceUrl: string;
 }
