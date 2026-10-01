@@ -12,11 +12,11 @@ import { prose } from '../lib/prose';
 const entry = await getEntry('pages', 'swim-lessons');
 if (!entry) throw new Error('Missing src/content/pages/swim-lessons.md');
 const html = prose(entry.rendered?.html);
-const { title, eyebrow, lede, description, image, imageAlt } = entry.data;
+const { title, lede, description, image, imageAlt } = entry.data;
 ---
 
 <BaseLayout title={title} description={description || lede} image={image || undefined} imageAlt={imageAlt || undefined}>
-  <PageHero eyebrow={eyebrow} title={title} lede={lede}>
+  <PageHero eyebrow="ISR self-rescue lessons" title="The lesson Adam never got." lede={lede}>
     <div class="btn-row">
       <a class="btn" href="#find">Find an ISR instructor near you</a>
       <a class="btn btn--ghost" href="#why-we-recommend-isr-not-just-swim-lessons">Why we recommend ISR</a>
@@ -36,7 +36,7 @@ const { title, eyebrow, lede, description, image, imageAlt } = entry.data;
           <h2 class="program__name">{isr.programName}</h2>
           <p>{isr.blurb}</p>
           <p class="program__note">{isr.disclosure}</p>
-          <a class="btn" href="#find">Find an instructor near you</a>
+          <a class="btn" href="#find">Find an ISR instructor near you</a>
         </div>
         <PediatriciansSay />
       </div>
@@ -53,7 +53,7 @@ const { title, eyebrow, lede, description, image, imageAlt } = entry.data;
     title="Lessons are one layer. Stack them."
     text="Even the best swim skills never replace an adult watching, a four-sided fence, alarms and CPR."
   >
-    <a class="btn" href={url('/water-safety')}>All the layers</a>
+    <a class="btn" href={url('/water-safety')}>See the seven layers</a>
     <a class="btn btn--ghost" href={url('/water-watcher')}>Take the pledge</a>
   </CtaBand>
 </BaseLayout>
