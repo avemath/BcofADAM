@@ -365,6 +365,9 @@ a:hover {
 .prose .story-figure {
   margin: 2em 0;
 }
+.prose h2 + .story-figure {
+  margin-top: 1em;
+}
 .prose .story-figure img {
   display: block;
   width: auto;
