@@ -5,7 +5,7 @@ summary: Why we built this website, and what you’ll find here.
 draft: false
 ---
 
-For years, thousands of you have followed Adam’s journey on our Facebook page. Your prayers, messages and support carried our family through the hardest days of our lives.
+For years, thousands of you have followed along with Adam on our Facebook page. Your prayers, messages and support carried our family through the hardest days of our lives.
 
 Now we have a home for everything we’ve learned, so more families can learn about drowning *before* it happens to them.
 
