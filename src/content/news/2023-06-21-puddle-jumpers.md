@@ -5,7 +5,7 @@ summary: Would your child know what happens if they went back in the water witho
 draft: false
 ---
 
-Mom first shared this on Facebook in June 2023. It’s lightly edited here.
+Mom first shared this on Facebook in June 2023. It’s lightly edited here, and we left out a link to a video and one statistic we couldn’t find a source for (what the research does say is below).
 
 My friend Christi, at the Judah Brown Project, has advocated tirelessly for years against the use of Puddle Jumpers. She, and other families who have lost their child to drowning, receive so much backlash and so many ugly comments from others who think they are trying to deflect and blame anything but themselves for their child drowning. This cannot be further from the truth.
 
