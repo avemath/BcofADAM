@@ -279,6 +279,9 @@ const host = Astro.site?.host ?? 'becauseofadam.org';
   }
 
   @media print {
+    @page {
+      margin: 0.4in;
+    }
     :global(.site-header),
     :global(.site-footer),
     :global(.preview-ribbon),
@@ -293,14 +296,18 @@ const host = Astro.site?.host ?? 'becauseofadam.org';
       border: 0;
       padding: 0;
       margin: 0;
-      font-size: 10.5pt;
+      font-size: 10pt;
     }
     .sheet h1 {
-      font-size: 20pt;
+      font-size: 18pt;
+    }
+    .sheet__head {
+      padding-bottom: 8px;
+      margin-bottom: 10px;
     }
     .sheet__grid {
       grid-template-columns: 1fr 1fr;
-      gap: 10px 18px;
+      gap: 6px 14px;
     }
     .sheet__section label {
       min-height: 0;
