@@ -29,6 +29,9 @@ const promises = [
     <div class="wrap split">
       <form class="pledge card" data-pledge>
         <h2>I promise…</h2>
+        <p class="pledge__why">
+          “YOU are taking the necessary steps to prevent tragedy by being a water watcher.” <cite>Our mom, Shannon, July 2018</cite>
+        </p>
         <ul>
           {
             promises.map((p, i) => (
@@ -145,6 +148,16 @@ const promises = [
     margin-top: 3px;
     accent-color: var(--ocean);
   }
+  .pledge__why {
+    margin: 0 0 1em;
+    color: var(--ink-soft);
+  }
+  .pledge__why cite {
+    display: block;
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 700;
+  }
   .pledge__done {
     font-family: var(--font-display);
     font-size: 1.3rem;
@@ -221,7 +234,7 @@ const promises = [
       padding: 0 !important;
     }
     .ww-card {
-      margin: 0;
+      margin: 0.5in auto;
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
       box-shadow: none;

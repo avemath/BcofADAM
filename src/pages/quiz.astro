@@ -168,6 +168,11 @@ const host = Astro.site?.host ?? 'becauseofadam.org';
         q.classList.add('is-checked', correct ? 'is-right' : 'is-missed');
         if (result) result.textContent = correct ? 'That’s right.' : `Not quite. The answer is: ${answer}.`;
         check.hidden = true;
+        // The button just disappeared from under the keyboard, so move focus to the answer.
+        if (result) {
+          result.tabIndex = -1;
+          result.focus({ preventScroll: true });
+        }
         answered += 1;
         if (correct) right += 1;
         updateProgress();
@@ -184,7 +189,7 @@ const host = Astro.site?.host ?? 'becauseofadam.org';
     document.querySelector('[data-share]')?.addEventListener('click', async () => {
       const data = {
         title: 'How water safe is your family?',
-        text: `I got ${right} of ${total} on the Because of ADAM water safety quiz. Can you beat me?`,
+        text: `I got ${right} of ${total} on the Because of ADAM water safety quiz. Take it, then hand it to whoever watches your kids.`,
         url: location.href.split('#')[0],
       };
       try {

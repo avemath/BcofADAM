@@ -2,6 +2,8 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import SiteForm, { type Field } from '../components/SiteForm.astro';
+import { site } from '../data/site';
+import { url } from '../lib/url';
 
 const topics = [
   'General question',
@@ -22,8 +24,8 @@ const fields: Field[] = [
 <BaseLayout title="Contact" description="Get in touch with Because of ADAM: questions, speaking requests, partnerships, media, or to share your family’s story.">
   <PageHero
     eyebrow="Contact"
-    title="We’d love to hear from you."
-    lede="Questions, speaking requests, partnership ideas, or your own family’s story. Reach out any time."
+    title="Write to us. One of us will write back."
+    lede="Because of ADAM is run by Adam’s brother and sisters, so your message comes straight to our family. Questions, talk requests, fundraiser ideas, or your own family’s story: we read all of it. We’re a family, not an office, so give us a few days."
   />
 
   <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
@@ -31,15 +33,51 @@ const fields: Field[] = [
       <div>
         <SiteForm id="contact" fields={fields} subject="Message from the website" submitLabel="Send message" fallbackTitle="Send us a message" />
       </div>
-      <div class="callout callout--warn">
-        <strong>In an emergency, call 911.</strong>
-        We don’t check messages around the clock. If a child is missing, check the water first.
+      <div class="contact-side">
+        <div class="callout callout--warn">
+          <strong>In an emergency, call 911.</strong>
+          We don’t check messages around the clock. If a child is missing, check the water first.
+        </div>
+        <div class="card contact-card">
+          <h2>If your child is a drowning survivor</h2>
+          <p>
+            We would be honored to hear from you. Whether you want to talk, find resources, or just tell someone who
+            understands, write to us. Our mom has walked this road since 2017, and she’s still walking it.
+          </p>
+          <a href={url('/survivors-and-families')}>Support for survivor families →</a>
+        </div>
+        {
+          site.facebookUrl && (
+            <div class="card contact-card">
+              <h2>Follow along</h2>
+              <p>Our mom posts Adam’s milestones and water safety reminders on his Facebook page all year long.</p>
+              <a href={site.facebookUrl} rel="noopener" target="_blank">
+                Adam’s Village of Hope on Facebook<span class="visually-hidden"> (opens in a new tab)</span>
+              </a>
+            </div>
+          )
+        }
       </div>
     </div>
   </section>
 </BaseLayout>
 
 <style>
+  .contact-side {
+    display: grid;
+    gap: 20px;
+    align-content: start;
+  }
+  .contact-card h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.4em;
+  }
+  .contact-card p {
+    margin-bottom: 0.6em;
+  }
+  .contact-card a {
+    font-weight: 700;
+  }
   @media (min-width: 900px) {
     .split {
       align-items: start;

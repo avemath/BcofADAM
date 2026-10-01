@@ -43,7 +43,7 @@ export const layers: Layer[] = [
     family: {
       quote:
         'Do whatever you can to keep your eyes on children that cannot swim, especially during parties. … Even for very good parents, there are no do-overs.',
-      by: 'Our mom, on the Fourth of July',
+      by: 'Our mom, Shannon, July 4, 2019',
     },
   },
   {
@@ -62,6 +62,11 @@ export const layers: Layer[] = [
       'Keep chairs, toys and planters away from the fence so children can’t climb them.',
     ],
     sources: [CPSC_BARRIERS, AAP_2026],
+    family: {
+      quote: 'ISR not available. Too young to swim. Without a four-sided fence, he didn’t stand a chance.',
+      by: 'Our mom, Shannon, in “The Color of Love,” June 2018',
+      link: { href: '/news/2018-06-04-the-color-of-love', text: 'Read the poem' },
+    },
   },
   {
     id: 'alarms',
@@ -88,7 +93,7 @@ export const layers: Layer[] = [
     family: {
       quote:
         'At the very least, a $250 floating pool sensor with alarms both outside and inside would have saved him. … I spent more than that on his crib blanket set.',
-      by: 'Our mom, 2019',
+      by: 'Our mom, Shannon, March 2019',
     },
   },
   {
@@ -151,7 +156,7 @@ export const layers: Layer[] = [
     family: {
       quote:
         'If a layer of protection fails (supervision, gates, alarms, etc.), would your child know that the device was keeping them afloat, or would they jump in carefree and drown?',
-      by: 'Our mom, on swim vests and floaties',
+      by: 'Our mom, Shannon, June 2023',
       link: { href: '/news/2023-06-21-puddle-jumpers', text: 'Read her whole post' },
     },
   },

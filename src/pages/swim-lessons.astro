@@ -19,18 +19,17 @@ const { title, eyebrow, lede, description, image, imageAlt } = entry.data;
   <PageHero eyebrow={eyebrow} title={title} lede={lede}>
     <div class="btn-row">
       <a class="btn" href="#find">Find an ISR instructor near you</a>
-      <a class="btn btn--ghost" href="#dad">Why our dad teaches ISR</a>
+      <a class="btn btn--ghost" href="#why-we-recommend-isr-not-just-swim-lessons">Why we recommend ISR</a>
     </div>
   </PageHero>
 
   <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
     <div class="wrap isr-layout">
       <div class="isr-main">
-        <PediatriciansSay />
         <article class="prose" set:html={html} />
       </div>
 
-      <aside class="isr-aside">
+      <div class="isr-aside">
         <div id="dad" class="program card">
           {isr.photo && <img sizes="(min-width: 1000px) 320px, 100vw" src={url(isr.photo)} alt={isr.photoAlt || 'Our dad teaching an ISR lesson'} data-missing-alt={!isr.photoAlt || undefined} loading="lazy" />}
           <p class="program__label">Our dad teaches ISR</p>
@@ -39,7 +38,8 @@ const { title, eyebrow, lede, description, image, imageAlt } = entry.data;
           <p class="program__note">{isr.disclosure}</p>
           <a class="btn" href="#find">Find an instructor near you</a>
         </div>
-      </aside>
+        <PediatriciansSay />
+      </div>
     </div>
   </section>
 
@@ -99,7 +99,7 @@ const { title, eyebrow, lede, description, image, imageAlt } = entry.data;
     margin-bottom: 0.6em;
   }
   .program__note {
-    font-size: 0.85rem;
+    font-size: 0.875rem;
     color: var(--on-dark);
     border-top: 1px solid rgb(255 255 255 / 0.25);
     padding-top: 14px;

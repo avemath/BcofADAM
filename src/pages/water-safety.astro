@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import LayersBuilder from '../components/LayersBuilder.astro';
 import CtaBand from '../components/CtaBand.astro';
+import SharePage from '../components/SharePage.astro';
 import Wave from '../components/Wave.astro';
 import { layers } from '../data/layers';
 import { risks } from '../data/content';
@@ -22,7 +23,7 @@ const moreHtml = more ? prose(more.rendered?.html) : '';
   <PageHero
     eyebrow="Layers of protection"
     title="No single layer is enough. Stack them."
-    lede="Every layer between a child and the water buys precious seconds. When one layer fails, like a gate left open, a door alarm that never sounded or an adult looking away, the next one is there to catch it."
+    lede="We had locks and door alarms, and we thought that was enough. A fence, an alarm, a Water Watcher, swim skills, CPR: when one fails on a busy day, the next one is still there."
     next="var(--deep)"
   />
 
@@ -157,6 +158,12 @@ const moreHtml = more ? prose(more.rendered?.html) : '';
           ))
         }
       </div>
+      <div class="ws-share">
+        <SharePage
+          label="Send this page to someone who watches your kids"
+          text="No single layer is enough. The layers of protection that keep little ones safe around water, from a family that learned the hard way."
+        />
+      </div>
     </div>
   </section>
 
@@ -189,9 +196,10 @@ const moreHtml = more ? prose(more.rendered?.html) : '';
     margin: 0;
     padding-left: 1.2em;
     display: grid;
-    gap: 6px;
   }
   .layers-toc a {
+    display: inline-block;
+    padding: 11px 0;
     text-decoration: none;
     font-weight: 600;
   }
@@ -221,9 +229,13 @@ const moreHtml = more ? prose(more.rendered?.html) : '';
   }
   .layer-family cite {
     font-style: normal;
-    font-size: 0.85rem;
+    font-size: 0.875rem;
     font-weight: 700;
     color: var(--ink-soft);
+  }
+  .ws-share {
+    max-width: 640px;
+    margin: clamp(32px, 5vw, 48px) auto 0;
   }
   .family-quote {
     margin: 0 0 clamp(24px, 4vw, 40px);
@@ -240,7 +252,7 @@ const moreHtml = more ? prose(more.rendered?.html) : '';
   .family-quote cite {
     font-style: normal;
     font-weight: 700;
-    font-size: 0.85rem;
+    font-size: 0.875rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--ink-soft);

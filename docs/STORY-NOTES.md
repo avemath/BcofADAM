@@ -38,6 +38,18 @@ Our Facebook page: **[Because of ADAM (@AdamsVillageofHope)](https://www.faceboo
 - **The fireflies** (July 2018): a single firefly in the garage, then thousands lighting up Adam's tree and our field. *"God, I see you."* and *"Our village shines just as bright as the fireflies' village."* The second one is on Adam's Story.
 - Also worth using in posts: **"I can't, but I know a guy"** (2024), **"My stick family can beat up your stick family,"** and Lea's **"Adam the attention diva"** Amazing Race dream.
 
+## What Avery remembers (told in October 2026, used in Adam's Story)
+
+These details are Avery's own memories, told in her words while we wrote the story. They are not in a Facebook post, so this is their source.
+
+- **The crib moment**: she had just walked in on Mom and the therapist "struggling"; being 14, she didn't realize Adam wasn't responding the way Mom was hoping. After she said "Adam. Get out of my room!" and his eyes shot open, she laughed; Mom was shocked and started crying. She didn't realize how big a moment it was until later. (Mom's Aug. 25, 2021 post adds that the therapist asked her to talk to him like she would at home, and that she "thought for a second" first.)
+- **June 5**: Avery doesn't remember the day in order; what she remembers is sirens, and running to the front yard to show the ambulances the way around to the back. That line is on the site (Mom already knows it). The rest of her memory of that night (the kids staying behind, not knowing what was going on) is **kept off the site at her request**. Please don't add it back. The story says only that Adam was flown to Pittsburgh and Mom and Dad went with him (Dad's 2017 Q&A).
+- **Her games**: the family pulled the truck up into the outfield, opened it, set out chairs, and rolled his stroller up with all of his equipment so he could watch from the outfield with them.
+- **The kitchen**: the family likes to be in the kitchen together, Dad is a really good cook (his mom's gumbo, red beans), music and dancing. Not used on the site, because Adam is usually in his bed or stroller rather than in the kitchen. She doesn't remember the specific coming-home lunch (that detail is Mom's).
+- **Now**: she's at school in Louisiana, so she sees Adam when she visits home. He has 24/7 nursing and is usually in his bed or stroller. She visits him when Mom is on shift: just her, Mom and Adam in his room, talking about anything (Mom's latest conspiracy theory), gabbing into the night, with Adam in the room hearing the people he loves living their lives. Not including him in the conversation, because he can't respond, but including him in the moment. She makes sure she gets one of those nights every time she goes home. This is on the site, in her words.
+- **His songs**: Frozen (Elsa) for years; more recently Moana. She doesn't know which songs Lea sings to him.
+- **Unknown to her**: what's in the garden now, where exactly his swing is (she thinks the front yard). So the site doesn't say.
+
 ## Our prevention lessons, in our words
 
 - **He wasn't "missing."** "I had just saw him minutes before."
