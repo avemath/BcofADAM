@@ -10,7 +10,6 @@ import HomeNumbers from '../components/HomeNumbers.astro';
 import { layers } from '../data/layers';
 import { home as story } from '../data/content';
 import FacebookFeed from '../components/FacebookFeed.astro';
-import PediatriciansSay from '../components/PediatriciansSay.astro';
 import AnywhereAnytime from '../components/AnywhereAnytime.astro';
 import EventCard from '../components/EventCard.astro';
 import { getEvents, splitEvents } from '../lib/events';
@@ -177,16 +176,11 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
           <a class="btn btn--ghost" href={url('/swim-lessons#find')}>Find an instructor near you</a>
         </div>
       </div>
-      <div class="isr-side">
       <div class="isr-card reveal">
         <p class="isr-card__label">Why this is personal</p>
         <p class="isr-card__name">Adam’s nearest ISR instructor was two hours away.</p>
         <p>After Adam drowned, our dad became one. Wherever you live, ISR’s map lists every certified instructor near you.</p>
         <p class="isr-card__quote">“Skills before thrills. Sometimes there are no do-overs.”</p>
-      </div>
-      <div class="isr-peds reveal">
-        <PediatriciansSay level={3} />
-      </div>
       </div>
     </div>
   </section>
@@ -230,7 +224,7 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
           <span class="eyebrow">Events & fundraisers</span>
           <h2>Come find Adam’s village.</h2>
           <p class="lede">Cornhole in Duncansville, blue shirts every June 5, and a tent with a “Never swim alone” poster. Come meet the village.</p>
-          <div class="grid grid--3" style="margin-top: 32px">
+          <div class="grid grid--3 home-events" style="margin-top: 32px">
             {homeEvents.map((e) => <EventCard event={e} />)}
           </div>
           <div class="btn-row">
@@ -253,9 +247,6 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
               Thousands of people follow Adam on Facebook. It’s where Mom shares the small miracles, we post our
               events, and everyone gets a water safety reminder before the holidays.
             </p>
-            <div class="btn-row">
-              <a class="btn btn--ocean" href={site.facebookUrl} rel="noopener" target="_blank">Follow us on Facebook</a>
-            </div>
           </div>
           <FacebookFeed maxHeight={860} />
         </div>
@@ -286,10 +277,10 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
               <span class="join__go">Donate →</span>
             </a>
           ) : (
-            <a class="card join reveal" href={url('/water-watcher')}>
-              <h3>Pledge</h3>
-              <p>Promise to be a Water Watcher, print your card, and ask your family to do the same.</p>
-              <span class="join__go">Take the pledge →</span>
+            <a class="card join reveal" href={url('/quiz')}>
+              <h3>Test yourself</h3>
+              <p>Ten quick questions on what really keeps little kids safe around water. Then pass it to whoever watches yours.</p>
+              <span class="join__go">Take the quiz →</span>
             </a>
           )
         }
@@ -450,8 +441,15 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     padding: 0;
     margin: 0 0 8px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 12px;
+  }
+  .tonight li {
+    display: grid;
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 14px;
+    align-items: center;
+    padding: 16px 18px;
   }
   .tonight p {
     margin: 0;
@@ -468,7 +466,6 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     background: var(--foam);
     color: var(--ocean);
     font-weight: 800;
-    margin-bottom: 14px;
   }
   .missing-callout {
     margin-top: 28px;
@@ -512,10 +509,6 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     color: var(--on-dark);
     font-weight: 600;
     max-width: 52ch;
-  }
-  .isr-side {
-    display: grid;
-    gap: 24px;
   }
   .isr-card {
     background:
@@ -562,6 +555,13 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     .fb-split > :first-child {
       position: sticky;
       top: 110px;
+    }
+  }
+
+  /* On phones the event cards skip their placeholder art (real photos stay), so three events don't take three screens. */
+  @media (max-width: 759px) {
+    .home-events :global(.event__art) {
+      display: none;
     }
   }
 
