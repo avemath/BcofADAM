@@ -21,7 +21,7 @@
     },
     {
       "stat": "70%+",
-      "label": "of fatal child pool and spa drownings happen at a home: their own, a grandparent’s, a friend’s or a neighbor’s.",
+      "label": "of children who die in a pool or spa drown at a home: their own, a grandparent’s, a friend’s or a neighbor’s.",
       "picture": "homes",
       "link": "/checklist",
       "linkText": "Check your home",
@@ -53,7 +53,7 @@
     },
     {
       "stat": "5,900",
-      "label": "Estimated ER-treated nonfatal pool and spa drowning injuries each year among children under 15 (2023–2025).",
+      "label": "children under 15 are treated in an ER each year after a nonfatal drowning in a pool or spa (estimated, 2023–2025).",
       "source": "CPSC, 2026 report",
       "sourceUrl": "https://www.cpsc.gov/Newsroom/News-Releases/2026/CPSC-Report-Highlights-Persistent-Risk-of-Childhood-Drowning"
     }
@@ -73,7 +73,7 @@
     },
     {
       "title": "At someone else’s home",
-      "body": "Grandparents’, neighbors’ and friends’ pools count too. More than 70% of fatal child pool and spa drownings happen at a home, including the homes of family, friends and neighbors.",
+      "body": "Grandparents’, neighbors’ and friends’ pools count too. More than 70% of children who die in a pool or spa drown at a home, including the homes of family, friends and neighbors.",
       "source": "CPSC, 2026 report",
       "sourceUrl": "https://www.cpsc.gov/Newsroom/News-Releases/2026/CPSC-Report-Highlights-Persistent-Risk-of-Childhood-Drowning"
     },
@@ -175,7 +175,7 @@
         },
         {
           "stat": "5,900",
-          "label": "Estimated ER-treated nonfatal pool and spa drowning injuries each year among children under 15 (2023–2025).",
+          "label": "children under 15 are treated in an ER each year after a nonfatal drowning in a pool or spa (estimated, 2023–2025).",
           "source": "CPSC, 2026 report",
           "sourceUrl": "https://www.cpsc.gov/Newsroom/News-Releases/2026/CPSC-Report-Highlights-Persistent-Risk-of-Childhood-Drowning",
           "detail": ""
