@@ -20,7 +20,7 @@ const year = new Date().getFullYear();
 
       <div class="site-footer__grid">
         <div>
-          <Logo light />
+          <Logo light loading="lazy" />
           <p class="site-footer__tag">{site.tagline}</p>
           {
             socials.length > 0 && (
@@ -140,7 +140,7 @@ const year = new Date().getFullYear();
   }
   .site-footer__heading {
     font-family: var(--font-body);
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     letter-spacing: 0.16em;
     text-transform: uppercase;
     color: var(--sun);
@@ -152,11 +152,16 @@ const year = new Date().getFullYear();
     margin: 0;
   }
   .site-footer li {
-    margin-bottom: 0.5rem;
+    margin: 0;
   }
   .site-footer a:not(.btn) {
     color: var(--on-dark);
     text-decoration: none;
+  }
+  /* Each footer link is a comfortable thumb-sized row on phones. */
+  .site-footer li > a:not(.btn) {
+    display: inline-block;
+    padding: 8px 0;
   }
   .site-footer a:not(.btn):hover {
     color: var(--sun);
@@ -172,7 +177,7 @@ const year = new Date().getFullYear();
     border-top: 1px solid rgb(255 255 255 / 0.1);
     margin-top: 48px;
     padding-top: 24px;
-    font-size: 0.85rem;
+    font-size: 0.875rem;
   }
   .site-footer__legal p {
     margin-bottom: 0.4em;

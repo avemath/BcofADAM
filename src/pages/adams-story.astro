@@ -9,7 +9,7 @@ import { site } from '../data/site';
 ---
 
 <ProseLayout slug="adams-story" type="Article">
-  <aside class="story-aside">
+  <div class="story-aside">
     <PhotoFrame src={story.photo} alt={story.photoAlt} hint="Add a photo of Adam" />
     <div class="card story-aside__card">
       <p class="eyebrow">Adam’s Village of Hope</p>
@@ -22,7 +22,7 @@ import { site } from '../data/site';
       label="Share Adam’s story"
       text="Adam was 14 months old when he drowned in his family’s backyard pool. He survived. His big sister tells the story, and what the family wishes they’d known."
     />
-  </aside>
+  </div>
 
   <CtaBand
     slot="after"

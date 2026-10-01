@@ -84,6 +84,8 @@ const slug = (label: string) => label.toLowerCase().replace(/[^a-z]+/g, '-').rep
   // Main menu button (phones and tablets). While it's open, the page behind it doesn't scroll.
   const setMenu = (open: boolean) => {
     toggle?.setAttribute('aria-expanded', String(open));
+    const label = toggle?.querySelector('.menu-toggle__label');
+    if (label) label.textContent = open ? 'Close' : 'Menu';
     navEl?.classList.toggle('is-open', open);
     document.documentElement.classList.toggle('menu-open', open);
   };

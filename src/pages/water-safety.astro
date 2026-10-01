@@ -196,9 +196,10 @@ const moreHtml = more ? prose(more.rendered?.html) : '';
     margin: 0;
     padding-left: 1.2em;
     display: grid;
-    gap: 6px;
   }
   .layers-toc a {
+    display: inline-block;
+    padding: 11px 0;
     text-decoration: none;
     font-weight: 600;
   }
@@ -228,7 +229,7 @@ const moreHtml = more ? prose(more.rendered?.html) : '';
   }
   .layer-family cite {
     font-style: normal;
-    font-size: 0.85rem;
+    font-size: 0.875rem;
     font-weight: 700;
     color: var(--ink-soft);
   }
@@ -251,7 +252,7 @@ const moreHtml = more ? prose(more.rendered?.html) : '';
   .family-quote cite {
     font-style: normal;
     font-weight: 700;
-    font-size: 0.85rem;
+    font-size: 0.875rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--ink-soft);

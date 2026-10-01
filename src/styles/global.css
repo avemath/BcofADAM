@@ -170,7 +170,7 @@ a:hover {
 .eyebrow {
   display: inline-block;
   font-family: var(--font-body);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -335,7 +335,7 @@ a:hover {
   display: block;
   font-family: var(--font-body);
   font-style: normal;
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -459,7 +459,7 @@ picture {
 }
 
 .source {
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   color: var(--ink-soft);
 }
 /* A source link on its own (not inside a sentence) gets a comfortable tap target. */
