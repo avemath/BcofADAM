@@ -60,19 +60,27 @@ Mom stayed with him, first in Pittsburgh, and for the next four months our famil
 
 Most days, though, nothing seemed to reach him. One day I walked in while Mom and his therapist were working with him and getting nowhere. I was 14, and I didn’t understand that he wasn’t responding the way Mom was hoping he would. The therapist, out of ideas, asked if I would talk to him the way I normally did at home. I leaned over the crib, thought for a second, and snapped, *“Adam. Get out of my room!”* His eyes shot open. I laughed. Mom was shocked, and then she was crying.
 
+![Lea sitting on the floor of Adam’s hospital room with his stuffed animals lined up in front of her](/images/uploads/lea_stuffed_animals.jpg)
+
+*Lea in Adam’s hospital room, with his stuffed animals.*
+
 Back home, the garden didn’t make it. By July the plants, still crammed in their pots, had died, and for a long time Dad couldn’t stand to look at them.
 
 Grace and I started a new school year without Mom there. Every day, friends and strangers asked how our brother was doing, and when we said “good,” they heard “totally healed.” We had to explain that a good day just meant he was still alive.
 
 That September, our hometown packed a pavilion with people in blue Adam’s Hope shirts, and two weeks later our Pennsylvania neighbors held a benefit of their own.
 
-![A group in light blue Adam’s Hope shirts, with Adam in his stroller in the front row](/images/uploads/adams_village.jpg)
+![A packed pavilion in Lafitte, full of people in light blue Adam’s Hope shirts](/images/uploads/fishingrodeo.jpg)
 
-*Adam’s village in blue Adam’s Hope shirts.*
+*The pavilion in Lafitte, September 2017.*
 
 That same month, a special scan showed that the part of Adam’s brain that was hurt when it went without oxygen was shaped like a perfect heart. *“Rather than devastation, I was flooded with immense hope,”* Mom wrote. That heart is [our logo](/about) now.
 
 When Adam finally came home, Mom rolled him into the kitchen while we were all making lunch. It had been more than four months since we’d all sat down together. We sang, we cooked, we ate.
+
+![Lea in a mermaid costume beside Adam in a captain’s hat, sitting in a cardboard boat labeled S.S. Adam](/images/uploads/captainaj.jpg)
+
+*Our first Halloween home. Lea the mermaid, Adam the captain.*
 
 ## Fireflies
 
