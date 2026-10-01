@@ -5,7 +5,8 @@ import PhotoFrame from '../components/PhotoFrame.astro';
 import TimeOnPage from '../components/TimeOnPage.astro';
 import LayersBuilder from '../components/LayersBuilder.astro';
 import CtaBand from '../components/CtaBand.astro';
-import { headline, nonfatal } from '../data/content';
+import { nonfatal } from '../data/content';
+import HomeNumbers from '../components/HomeNumbers.astro';
 import { layers } from '../data/layers';
 import { home as story } from '../data/content';
 import FacebookFeed from '../components/FacebookFeed.astro';
@@ -69,26 +70,8 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     <Wave color="var(--sand)" animated />
   </section>
 
-  <!-- HEADLINE STATS -->
-  <section class="section stats" aria-labelledby="stats-title">
-    <div class="wrap">
-      <h2 id="stats-title" class="visually-hidden">Drowning by the numbers</h2>
-      <div class="grid grid--4">
-        {
-          headline.map((f) => (
-            <article class="stat reveal">
-              <p class="stat__num">{f.stat}</p>
-              <p class="stat__label">{f.label}</p>
-              <a class="source" href={f.sourceUrl} rel="noopener" target="_blank">
-                Source: {f.source}
-                <span class="visually-hidden"> for “{f.stat}” (opens in a new tab)</span>
-              </a>
-            </article>
-          ))
-        }
-      </div>
-    </div>
-  </section>
+  <!-- THE NUMBERS -->
+  <HomeNumbers />
 
   <!-- ANYWHERE, ANYTIME -->
   <Wave color="var(--deep)" bg="var(--sand)" />
@@ -438,14 +421,6 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
   }
 
   /* ---------- Stats ---------- */
-  .stats {
-    padding-top: clamp(40px, 6vw, 72px);
-  }
-  /* Number, then the bar, then what it means. Sources line up along the bottom. */
-  .stat {
-    display: flex;
-    flex-direction: column;
-  }
   .stat__num {
     font-family: var(--font-display);
     font-size: clamp(3rem, 4vw + 1rem, 4.6rem);
@@ -453,19 +428,6 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     line-height: 1;
     color: var(--ocean);
     margin-bottom: 12px;
-  }
-  .stat .stat__num {
-    padding-bottom: 16px;
-    border-bottom: 4px solid var(--aqua);
-    margin-bottom: 16px;
-  }
-  .stat__label {
-    font-weight: 600;
-    margin-bottom: 8px;
-  }
-  .stat .source {
-    margin-top: auto;
-    align-self: flex-start;
   }
 
   /* ---------- Clock ---------- */
