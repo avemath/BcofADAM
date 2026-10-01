@@ -2,27 +2,32 @@
 import ProseLayout from '../layouts/ProseLayout.astro';
 import PhotoFrame from '../components/PhotoFrame.astro';
 import CtaBand from '../components/CtaBand.astro';
+import SharePage from '../components/SharePage.astro';
 import { home as story } from '../data/content';
 import { url } from '../lib/url';
 import { site } from '../data/site';
 ---
 
 <ProseLayout slug="adams-story" type="Article">
-  <aside class="story-aside">
+  <div class="story-aside">
     <PhotoFrame src={story.photo} alt={story.photoAlt} hint="Add a photo of Adam" />
     <div class="card story-aside__card">
       <p class="eyebrow">Adam’s Village of Hope</p>
-      <p>Follow Adam’s journey and join the thousands of people cheering him on.</p>
+      <p>Follow Adam on Facebook and join the thousands cheering him on.</p>
       <a class="btn btn--ocean" href={site.facebookUrl} rel="noopener" target="_blank">
         Follow on Facebook
       </a>
     </div>
-  </aside>
+    <SharePage
+      label="Share Adam’s story"
+      text="Adam was 14 months old when he drowned in his family’s backyard pool. He survived. His big sister tells the story, and what the family wishes they’d known."
+    />
+  </div>
 
   <CtaBand
     slot="after"
     title="Every family can add a layer today."
-    text="Learn the layers of protection that stand between a curious toddler and the water."
+    text="Learn the layers that stand between a toddler and the water."
   >
     <a class="btn" href={url('/water-safety')}>Learn the layers</a>
     <a class="btn btn--ghost" href={url('/water-watcher')}>Take the pledge</a>

@@ -199,7 +199,7 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
         <span class="eyebrow">Survivors & families</span>
         <h2>Surviving is only the beginning.</h2>
         <p class="lede">
-          For every child lost to drowning, seven more survive one. Some, like Adam, come home with injuries that
+          For every child lost to drowning, seven more end up in the emergency room. Some, like Adam, come home with injuries that
           change everything, and families who need a village around them. We want every one of them to know
           they’re not alone.
         </p>
@@ -229,7 +229,7 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
         <div class="wrap">
           <span class="eyebrow">Events & fundraisers</span>
           <h2>Come find Adam’s village.</h2>
-          <p class="lede">Every event brings Adam’s village together and puts water safety in front of families who need it.</p>
+          <p class="lede">Cornhole in Duncansville, blue shirts every June 5, and a tent with a “Never swim alone” poster. Come meet the village.</p>
           <div class="grid grid--3" style="margin-top: 32px">
             {homeEvents.map((e) => <EventCard event={e} />)}
           </div>
@@ -250,8 +250,8 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
             <span class="eyebrow">Follow along</span>
             <h2>Adam’s Village of Hope</h2>
             <p class="lede">
-              Thousands of people follow Adam’s journey on Facebook. It’s where we share his milestones, our events, and
-              water safety reminders all year long.
+              Thousands of people follow Adam on Facebook. It’s where Mom shares the small miracles, we post our
+              events, and everyone gets a water safety reminder before the holidays.
             </p>
             <div class="btn-row">
               <a class="btn btn--ocean" href={site.facebookUrl} rel="noopener" target="_blank">Follow us on Facebook</a>
@@ -266,7 +266,7 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
   <!-- PLEDGE -->
   <CtaBand
     title="Be the Water Watcher."
-    text="When everyone is watching, no one is. Promise to name one adult whose only job is to watch the water, and print your Water Watcher card."
+    text="“Do whatever you can to keep your eyes on children that cannot swim, especially during parties.” That’s our mom, July 4, 2019. Promise to be the one adult whose only job is the water, and print your card."
   >
     <a class="btn" href={url('/water-watcher')}>Take the pledge</a>
     <a class="btn btn--ghost" href={url('/get-involved')}>More ways to help</a>
@@ -529,7 +529,7 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
   .isr-card__label {
     text-transform: uppercase;
     letter-spacing: 0.14em;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     font-weight: 700;
     color: var(--sun-text);
     margin-bottom: 6px;

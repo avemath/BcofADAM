@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import SiteForm, { type Field } from '../components/SiteForm.astro';
+import { url } from '../lib/url';
 
 const fields: Field[] = [
   { name: 'name', label: 'Your name', required: true, autocomplete: 'name' },
@@ -43,10 +44,32 @@ const fields: Field[] = [
   <PageHero
     eyebrow="Request a talk"
     title="Bring Adam’s story to your group."
-    lede="Schools, daycares, churches, moms’ groups, pediatric offices and pool stores: we’ll share Adam’s story and teach the layers of protection."
+    lede="Schools, daycares, churches, moms’ groups, pediatric offices and pool stores: one of us will come tell Adam’s story and teach the layers of protection, the way we wish someone had taught us."
   />
   <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
-    <div class="wrap narrow">
+    <div class="wrap split split--wide-left">
+      <div>
+        <h2>What a talk is like</h2>
+        <p>
+          We’re not professional speakers. We’re Adam’s family, and we talk about what happened in our own backyard,
+          because that’s what makes people go home and check their doors. A talk usually covers:
+        </p>
+        <ul class="talk-list">
+          <li><strong>Adam’s story,</strong> told by one of us. We keep the day itself brief, and we never show anything graphic.</li>
+          <li><strong>How drowning really happens:</strong> fast, silent, and usually when nobody thinks it’s swim time.</li>
+          <li><strong>The layers of protection,</strong> with our own backyard as the example: the door alarm that went quiet, the fence we didn’t have, the lessons that were too far away.</li>
+          <li><strong>Something to take home:</strong> Water Watcher cards, our one-page flyer, and the home checklist.</li>
+          <li><strong>Questions.</strong> Ask us anything. Parents of survivors are welcome to find us afterward, too.</li>
+        </ul>
+        <p>
+          We talk to parents, grandparents, sitters, teachers, nurses and kids, and we adjust what we say to who’s in the
+          room. Tell us about your group and we’ll work out the date, the length and the details together.
+        </p>
+        <p class="talk-note">
+          Can’t host a talk? <a href={url('/flyer')}>Print the flyer</a> for your waiting room or classroom, or send
+          your staff <a href={url('/quiz')}>the water safety quiz</a>.
+        </p>
+      </div>
       <SiteForm
         id="talk"
         fields={fields}
@@ -57,3 +80,15 @@ const fields: Field[] = [
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .talk-list {
+    padding-left: 1.2em;
+    display: grid;
+    gap: 10px;
+    margin: 0 0 1.2em;
+  }
+  .talk-note {
+    color: var(--ink-soft);
+  }
+</style>
