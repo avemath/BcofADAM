@@ -139,6 +139,22 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
           ))
         }
       </div>
+
+      <aside class="sibling-note reveal" aria-labelledby="sibling-title">
+        <p class="eyebrow">For brothers and sisters</p>
+        <h3 id="sibling-title">A note from Adam’s big sister</h3>
+        <p>
+          I was 14 when Adam drowned. Mom stayed in Pittsburgh with him for months, and my sister and I started a new
+          school year without her. Every day someone asked how our brother was doing, and we learned that “good” just
+          meant he was still alive.
+        </p>
+        <p>
+          If you’re the brother or sister of a drowning survivor, what you’re carrying is real, even when everyone’s
+          attention is on the hospital room. Find one person you can tell the truth to. And when you’re ready, ask how you
+          can help. I learned to change Adam’s trach and give him oxygen in an emergency.
+        </p>
+        <p class="sibling-note__sign">Avery</p>
+      </aside>
     </div>
   </section>
 
@@ -193,6 +209,25 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
   .nf-stats span {
     display: block;
     margin: 6px 0 2px;
+  }
+  .sibling-note {
+    max-width: 760px;
+    margin: clamp(32px, 5vw, 48px) auto 0;
+    padding: clamp(22px, 3vw, 32px);
+    background: #fff;
+    border-radius: var(--radius);
+    border-left: 6px solid var(--sun);
+    box-shadow: var(--shadow);
+  }
+  .sibling-note h3 {
+    margin-bottom: 0.5em;
+  }
+  .sibling-note__sign {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--ocean);
+    margin-bottom: 0;
   }
   .mom-words {
     margin: 14px 0 0;

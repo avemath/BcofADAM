@@ -17,6 +17,7 @@ import { getEvents, splitEvents } from '../lib/events';
 import { site, hasDonate } from '../data/site';
 import { isr } from '../data/content';
 import { url } from '../lib/url';
+import { withAge } from '../lib/age';
 
 const events = await getEvents();
 const countWord = (n: number) =>
@@ -87,8 +88,8 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
       <div class="reveal">
         <span class="eyebrow">Adam’s story</span>
         <h2>{story.meetTitle}</h2>
-        <p class="lede">{story.teaser}</p>
-        {story.teaserMore && <p>{story.teaserMore}</p>}
+        <p class="lede">{withAge(story.teaser)}</p>
+        {story.teaserMore && <p>{withAge(story.teaserMore)}</p>}
         <div class="btn-row">
           <a class="btn btn--ocean" href={url('/adams-story')}>Read Adam’s story</a>
         </div>
