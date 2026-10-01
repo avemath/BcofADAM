@@ -19,14 +19,13 @@ const { title, eyebrow, lede, description, image, imageAlt } = entry.data;
   <PageHero eyebrow={eyebrow} title={title} lede={lede}>
     <div class="btn-row">
       <a class="btn" href="#find">Find an ISR instructor near you</a>
-      <a class="btn btn--ghost" href="#dad">Why our dad teaches ISR</a>
+      <a class="btn btn--ghost" href="#why-we-recommend-isr-not-just-swim-lessons">Why we recommend ISR</a>
     </div>
   </PageHero>
 
   <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
     <div class="wrap isr-layout">
       <div class="isr-main">
-        <PediatriciansSay />
         <article class="prose" set:html={html} />
       </div>
 
@@ -39,6 +38,7 @@ const { title, eyebrow, lede, description, image, imageAlt } = entry.data;
           <p class="program__note">{isr.disclosure}</p>
           <a class="btn" href="#find">Find an instructor near you</a>
         </div>
+        <PediatriciansSay />
       </aside>
     </div>
   </section>
