@@ -53,7 +53,7 @@
     },
     {
       "stat": "5,900",
-      "label": "children under 15 are treated in an ER each year after a nonfatal drowning in a pool or spa (estimated, 2023–2025).",
+      "label": "Children under 15 treated in an emergency room each year after a nonfatal drowning in a pool or spa (estimated, 2023–2025).",
       "source": "CPSC, 2026 report",
       "sourceUrl": "https://www.cpsc.gov/Newsroom/News-Releases/2026/CPSC-Report-Highlights-Persistent-Risk-of-Childhood-Drowning"
     }
@@ -113,7 +113,7 @@
         },
         {
           "stat": "376",
-          "label": "Children under 15 lost to pool or spa drownings each year, on average (2021–2023).",
+          "label": "Children under 15 who drown in a pool or spa each year, on average (2021–2023).",
           "detail": "Nearly 80% of them were younger than 5.",
           "source": "CPSC, 2026 report",
           "sourceUrl": "https://www.cpsc.gov/Newsroom/News-Releases/2026/CPSC-Report-Highlights-Persistent-Risk-of-Childhood-Drowning"
@@ -175,7 +175,7 @@
         },
         {
           "stat": "5,900",
-          "label": "children under 15 are treated in an ER each year after a nonfatal drowning in a pool or spa (estimated, 2023–2025).",
+          "label": "Children under 15 treated in an emergency room each year after a nonfatal drowning in a pool or spa (estimated, 2023–2025).",
           "source": "CPSC, 2026 report",
           "sourceUrl": "https://www.cpsc.gov/Newsroom/News-Releases/2026/CPSC-Report-Highlights-Persistent-Risk-of-Childhood-Drowning",
           "detail": ""
