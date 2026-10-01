@@ -1,0 +1,91 @@
+---
+/**
+ * "Share this page" buttons. On phones the first button opens the share sheet (texts, Messenger,
+ * whatever the person uses); on computers it copies the link. The Facebook button opens
+ * Facebook's share window. Nothing is tracked.
+ */
+interface Props {
+  /** What the share is called, e.g. "Share Adam’s story". */
+  label?: string;
+  /** The text that goes with the link when sharing. */
+  text: string;
+  /** Smaller, on a dark or colored background. */
+  compact?: boolean;
+}
+const { label = 'Share this page', text, compact = false } = Astro.props;
+const pageUrl = new URL(Astro.url.pathname, Astro.site ?? 'https://becauseofadam.org').href;
+const facebook = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`;
+---
+
+<div class:list={['share', { 'share--compact': compact }]} data-share-box>
+  <p class="share__label">{label}</p>
+  <div class="btn-row">
+    <button type="button" class="btn btn--ocean" data-share-native data-text={text} data-url={pageUrl}>
+      <span data-share-mobile>Share</span><span data-share-desktop hidden>Copy the link</span>
+    </button>
+    <a class="btn btn--ghost" href={facebook} rel="noopener" target="_blank">
+      Share on Facebook<span class="visually-hidden"> (opens in a new tab)</span>
+    </a>
+  </div>
+  <p class="share__note" role="status" aria-live="polite"></p>
+</div>
+
+<script>
+  for (const box of document.querySelectorAll<HTMLElement>('[data-share-box]')) {
+    const button = box.querySelector<HTMLButtonElement>('[data-share-native]');
+    const note = box.querySelector<HTMLElement>('.share__note');
+    if (!button) continue;
+    const canShare = typeof navigator.share === 'function';
+    box.querySelector<HTMLElement>('[data-share-mobile]')!.hidden = !canShare;
+    box.querySelector<HTMLElement>('[data-share-desktop]')!.hidden = canShare;
+    button.addEventListener('click', async () => {
+      const data = { title: document.title, text: button.dataset.text ?? '', url: button.dataset.url ?? location.href };
+      try {
+        if (canShare) await navigator.share(data);
+        else {
+          await navigator.clipboard.writeText(data.url);
+          if (note) note.textContent = 'Link copied. Paste it in a text, an email or a post.';
+        }
+      } catch (error) {
+        // Closing the share sheet is fine. Anything else (like no clipboard access): show the link to copy.
+        if ((error as Error)?.name !== 'AbortError' && note) note.textContent = `Copy this link: ${data.url}`;
+      }
+    });
+  }
+</script>
+
+<style>
+  .share {
+    padding: 22px 24px;
+    border-radius: var(--radius);
+    background: var(--foam);
+    border: 1px solid var(--line);
+  }
+  .share__label {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--deep);
+    margin: 0 0 12px;
+  }
+  .share .btn-row {
+    margin: 0;
+  }
+  .share__note {
+    margin: 10px 0 0;
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+    overflow-wrap: anywhere;
+  }
+  .share__note:empty {
+    display: none;
+  }
+  .share--compact {
+    padding: 0;
+    background: none;
+    border: 0;
+  }
+  .share--compact .share__label {
+    font-size: 1.1rem;
+  }
+</style>
