@@ -4,7 +4,10 @@
  *
  * The one marked "Show this one big" leads, as a sentence next to a picture: one child who died,
  * then a row of children for its number (7 more who end up in the emergency room). One of them is Adam.
- * The rest follow as short facts that read on from their number ("#1 cause of death for…").
+ * The rest follow as short facts that read on from their number ("#1 cause of death for…"), each
+ * with a small picture picked in the Studio: "ages" (children growing from 1 to 4), "homes" (ten houses,
+ * filled in to match the number) or "fence" (a yard where the house is the fourth side, next to one
+ * fenced all the way around). The pictures fill in one piece at a time as they scroll into view.
  *
  * People understand a risk faster when they can see the whole group it's about, and they care
  * more when one of the group is a real child they can name. That's why Adam is in the picture.
@@ -38,6 +41,31 @@ const kid = (outline = false) =>
     '<svg ',
     `<svg class="${outline ? 'kid-svg kid-svg--outline' : 'kid-svg'}" `,
   );
+const house = (filled: boolean) =>
+  `<svg class="house-svg${filled ? ' house-svg--filled' : ''}" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 11 12 3l9 8v10H3z"/>${
+    filled ? '<rect x="10" y="14" width="4" height="7" class="house-svg__door"/>' : ''
+  }</svg>`;
+// A pool seen from above, with the house along the top and a toddler who just came out the door.
+// `around` = fenced all the way around (the fence stops them). Otherwise the house is the fourth side
+// of the fence, so the door opens straight onto the pool.
+const toddler = (x: number, y: number) =>
+  `<g class="yard-svg__kid" transform="translate(${x} ${y}) scale(0.55)"><circle cx="12" cy="7" r="6"/><path d="M6 16h12a4 4 0 0 1 4 4v8h-4v10H6V28H2v-8a4 4 0 0 1 4-4z"/></g>`;
+const yard = (around: boolean) =>
+  `<svg class="yard-svg" viewBox="0 0 160 112" aria-hidden="true" focusable="false">
+    <rect class="yard-svg__house" x="6" y="4" width="148" height="28" rx="3"/>
+    <text x="80" y="23" text-anchor="middle">HOUSE</text>
+    <rect class="yard-svg__door" x="70" y="29" width="20" height="6" rx="1"/>
+    <rect class="yard-svg__pool" x="46" y="70" width="68" height="32" rx="7"/>
+    ${
+      around
+        ? `<rect class="yard-svg__fence" x="28" y="58" width="104" height="48" rx="3"/>${toddler(73, 36)}`
+        : `<path class="yard-svg__fence" d="M6 32v74h148V32"/>${toddler(73, 38)}<path class="yard-svg__way" d="M80 61v4"/><path class="yard-svg__arrow" d="m74 63 6 7 6-7z"/>`
+    }
+  </svg>`;
+const homesFilled = (stat: string) => {
+  const n = Number.parseInt(stat, 10);
+  return n > 0 && n <= 100 ? Math.max(1, Math.round(n / 10)) : 0;
+};
 const external = (href: string) => /^https?:/.test(href);
 ---
 
@@ -53,9 +81,9 @@ const external = (href: string) => /^https?:/.test(href);
                 role="img"
                 aria-label={`One child who died from drowning, next to ${many} children who ended up in the emergency room. One of them is Adam.`}
               >
-                <span class="kid kid--lost" set:html={kid(true)} />
+                <span class="kid kid--lost pop" style="--i: 0" set:html={kid(true)} />
                 {Array.from({ length: many }, (_, i) => (
-                  <span class:list={['kid', { 'kid--adam': i === adamAt }]}>
+                  <span class:list={['kid pop', { 'kid--adam': i === adamAt }]} style={`--i: ${i + 4}`}>
                     <Fragment set:html={kid()} />
                     {i === adamAt && <b aria-hidden="true">Adam</b>}
                   </span>
@@ -111,6 +139,44 @@ const external = (href: string) => /^https?:/.test(href);
         <ul class="numbers__facts" aria-label="More numbers every parent should know">
           {rest.map((f) => (
             <li class="reveal">
+              {f.picture === 'ages' && (
+                <div class="pic pic--ages" role="img" aria-label="Children ages 1, 2, 3 and 4">
+                  {[1, 2, 3, 4].map((age, i) => (
+                    <span class="pop" style={`--i: ${i}; --h: ${[0.6, 0.73, 0.86, 1][i]}`}>
+                      <Fragment set:html={kid()} />
+                      <small>{age}</small>
+                    </span>
+                  ))}
+                  <em>years old</em>
+                </div>
+              )}
+              {f.picture === 'homes' && homesFilled(f.stat) > 0 && (
+                <div class="pic pic--homes" role="img" aria-label={`${homesFilled(f.stat)} of 10 houses filled in`}>
+                  {Array.from({ length: 10 }, (_, i) => (
+                    <span class="pop" style={`--i: ${i}`} set:html={house(i < homesFilled(f.stat))} />
+                  ))}
+                </div>
+              )}
+              {f.picture === 'fence' && (
+                <div
+                  class="pic pic--fence"
+                  role="img"
+                  aria-label="Two pools seen from above, each with a toddler coming out the back door. In the first, the house is the fourth side of the fence, so the toddler walks straight to the pool. In the second, the fence goes all the way around the pool and stops them."
+                >
+                  <span class="yard pop" style="--i: 0">
+                    <Fragment set:html={yard(false)} />
+                    <small>
+                      <b class="yard__no">✗</b> Door opens to the pool
+                    </small>
+                  </span>
+                  <span class="yard pop" style="--i: 3">
+                    <Fragment set:html={yard(true)} />
+                    <small>
+                      <b class="yard__yes">✓</b> Fence stops them
+                    </small>
+                  </span>
+                </div>
+              )}
               <p class="numbers__fact">
                 <b>{f.stat}</b> {f.label}
               </p>
@@ -321,9 +387,172 @@ const external = (href: string) => /^https?:/.test(href);
     padding-top: 4px;
   }
 
+  /* ---------- Small pictures over the three facts ---------- */
+  /* Every picture sits on the same light panel, so the numbers below line up across the cards. */
+  .pic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 156px;
+    padding: 16px;
+    margin-bottom: 8px;
+    border-radius: var(--radius-sm);
+    background: var(--foam);
+  }
+  .pic--ages {
+    align-items: flex-end;
+    gap: 14px;
+    color: var(--ocean);
+  }
+  .pic--ages span {
+    display: grid;
+    justify-items: center;
+    gap: 4px;
+    width: calc(44px * var(--h));
+  }
+  .pic--ages :global(.kid-svg) {
+    display: block;
+    width: 100%;
+    height: auto;
+    fill: currentColor;
+  }
+  .pic--ages small,
+  .pic--ages em {
+    font-size: 0.82rem;
+    font-weight: 800;
+    font-style: normal;
+    color: var(--ink-soft);
+    line-height: 1;
+  }
+  .pic--ages em {
+    align-self: flex-end;
+    margin-left: 2px;
+  }
+  .pic--homes {
+    display: grid;
+    grid-template-columns: repeat(5, 40px);
+    gap: 10px 14px;
+    align-content: center;
+    justify-content: center;
+  }
+  .pic--homes :global(.house-svg) {
+    display: block;
+    width: 40px;
+    fill: none;
+    stroke: var(--ocean);
+    stroke-width: 1.8;
+    stroke-linejoin: round;
+  }
+  .pic--homes :global(.house-svg--filled) {
+    fill: var(--ocean);
+  }
+  .pic--homes :global(.house-svg__door) {
+    fill: #fff;
+    stroke: none;
+  }
+  .pic--fence {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    align-items: start;
+    align-content: center;
+  }
+  .yard {
+    display: grid;
+    gap: 4px;
+    text-align: center;
+  }
+  .yard small {
+    font-size: 0.82rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--ink);
+  }
+  .yard b {
+    font-size: 1rem;
+  }
+  .yard__no {
+    color: var(--coral);
+  }
+  .yard__yes {
+    color: var(--ocean);
+  }
+  .pic--fence :global(.yard-svg) {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .pic--fence :global(.yard-svg__house) {
+    fill: var(--line);
+  }
+  .pic--fence :global(.yard-svg text) {
+    font: 800 12px var(--font-body);
+    letter-spacing: 0.12em;
+    fill: var(--ink-soft);
+  }
+  .pic--fence :global(.yard-svg__door) {
+    fill: var(--ink-soft);
+  }
+  .pic--fence :global(.yard-svg__pool) {
+    fill: var(--aqua);
+  }
+  .pic--fence :global(.yard-svg__fence) {
+    fill: none;
+    stroke: var(--deep);
+    stroke-width: 3;
+    stroke-dasharray: 6 4;
+  }
+  .pic--fence :global(.yard-svg__way) {
+    stroke: var(--coral);
+    stroke-width: 3;
+  }
+  .pic--fence :global(.yard-svg__arrow) {
+    fill: var(--coral);
+  }
+  .pic--fence :global(.yard-svg__kid) {
+    fill: var(--deep);
+  }
+
+  /* ---------- The pictures fill in one piece at a time when they scroll into view ---------- */
+  :global(.js) .reveal .pop {
+    opacity: 0;
+    transform: translateY(10px) scale(0.85);
+    transition:
+      opacity 0.45s ease,
+      transform 0.45s ease;
+    transition-delay: calc(0.25s + var(--i, 0) * 0.11s);
+  }
+  :global(.js) .reveal.is-visible .pop {
+    opacity: 1;
+    transform: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    :global(.js) .reveal .pop {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+  @media print {
+    :global(.js) .reveal .pop {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+
   @media (max-width: 760px) {
     .numbers__feature {
       grid-template-columns: minmax(0, 1fr);
+    }
+    .numbers__facts li {
+      padding: 16px 18px;
+    }
+    .pic {
+      height: 128px;
+      padding: 12px;
+    }
+    .pic--fence {
+      height: auto;
     }
   }
 </style>
