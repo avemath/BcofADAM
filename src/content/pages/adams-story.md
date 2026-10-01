@@ -36,7 +36,11 @@ Then came that Monday, June 5, 2017, and our house was as full as it gets. Ricke
 
 He was right there. And then, quietly, he wasn’t.
 
-He had slipped out the kitchen door and gone straight for the pool. Three days earlier, we had all cheered him on as he jumped into the pool and into our arms, and this time no one was there to catch him. About three minutes later, Mom found him in the water. She started CPR, and then everyone who could took a turn: our family, the first responders, the emergency team at the hospital. After 90 minutes without a pulse, right as a priest anointed his head, **Adam’s heart started beating again.** That night he was flown to UPMC Children’s Hospital of Pittsburgh, and our family’s “after” began.
+He had slipped out the kitchen door and gone straight for the pool. Three days earlier, we had all cheered him on as he jumped into the pool and into our arms, and this time no one was there to catch him. About three minutes later, Mom found him in the water. She started CPR, and then everyone who could took a turn: our family, the first responders, the emergency team at the hospital.
+
+I don’t remember that day in order. I remember sirens, and running to the front yard to show the ambulances the way around to the back.
+
+After 90 minutes without a pulse, right as a priest anointed his head, **Adam’s heart started beating again.** That night he was flown to UPMC Children’s Hospital of Pittsburgh. Mom and Dad went with him. The rest of us stayed behind, and what I remember most is not knowing what was going on. That was the start of our family’s “after.”
 
 ## “Adam. Get out of my room!”
 
@@ -46,7 +50,7 @@ He had slipped out the kitchen door and gone straight for the pool. Three days e
 
 Mom stayed in Pittsburgh with him, and for the next four months our family lived in two places. One week in, a neurologist told her that Adam would never hear her again. She read to him anyway. For 33 days she wasn’t allowed to hold him, so she stood beside his crib, *“singing, reading, praying and squeezing his hand but nothing more.”* Then one day, while she was reading, he cried.
 
-Most days, though, nothing seemed to reach him. So one day his therapist, running out of ideas, asked me to talk to him the way I normally would at home. I thought about that yellow brush, leaned over his crib, and snapped, *“Adam. Get out of my room!”* His eyes shot open. The therapist was shocked, and the rest of us crumbled.
+Most days, though, nothing seemed to reach him. One day I walked in while Mom and his therapist were working with him and getting nowhere. I was 14, and I didn’t really understand that he wasn’t responding the way Mom was hoping he would. The therapist, out of ideas, asked if I would talk to him the way I normally did at home. I leaned over the crib, thought for a second, and snapped, *“Adam. Get out of my room!”* His eyes shot open. I laughed. Mom was shocked, and then she was crying. I didn’t realize until later how big that moment was.
 
 Back home, the garden didn’t make it. By July the plants, still crammed in their pots, had died, and for a long time Dad couldn’t stand to look at them.
 
@@ -88,9 +92,11 @@ Dad became a Red Cross CPR instructor, then spent eight weeks in Florida learnin
 
 ## Because of Adam
 
-Adam is {{Adam’s age}} now. He can’t walk or talk, but he sees, hears and understands everything. He picks his favorite songs and plays games on an eye-gaze computer that follows his eyes. His teachers come to our house for school, and he spends hours on his favorite swing and on long walks around the neighborhood with his nurse. He loves Mickey Mouse, Pooh Bear, Spider-Man, fast cars and anything Mom sings. Mom says she and Adam have *“a secret language that does not need words to communicate,”* and the rest of us have learned to speak it, too. Trust me, he can say a whole lot with just his eyes and that smile.
+Adam is {{Adam’s age}} now. He can’t walk or talk, but he sees, hears and understands everything. He picks his favorite songs and plays games on an eye-gaze computer that follows his eyes. His teachers come to our house for school, and he spends hours on his favorite swing and on long walks around the neighborhood with his nurse. He loves Mickey Mouse, Pooh Bear, Spider-Man, fast cars and anything Mom sings. For years it was Frozen, Elsa especially. Lately it’s Moana. Mom says she and Adam have *“a secret language that does not need words to communicate,”* and the rest of us have learned to speak it, too. Trust me, he can say a whole lot with just his eyes and that smile.
 
-I wanted to know everything about taking care of him, so I learned to do what his nurses do, including changing his trach and giving him oxygen in an emergency. And all through high school, my family packed up every piece of his equipment and brought him to my soccer and softball games, so he was there for the wins and the losses.
+I wanted to know everything about taking care of him, so I learned to do what his nurses do, including changing his trach and giving him oxygen in an emergency. And all through high school, my family brought him to my soccer and softball games. They’d pull the truck up into the outfield, open it up, set out their chairs, and roll his stroller up beside them with all of his equipment, and he’d watch from out there with everyone else, for the wins and the losses.
+
+I’m in school in Louisiana now, so most of my time with Adam is when I come home, with the whole family around. A lot of it is just sitting quietly in a room with him. The rest of it is the kitchen, which is where our family always ends up. Dad is a really good cook, and when he’s making one of his mom’s recipes, gumbo or red beans, there’s always good music on and somebody dancing around the kitchen, all of us in there together.
 
 ![Lea curled up with Adam in a big armchair, her hand on his cheek](/images/uploads/leaaj2.jpg)
 
