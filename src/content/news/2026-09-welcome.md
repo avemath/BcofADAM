@@ -1,7 +1,7 @@
 ---
 title: Welcome to the movement
 date: 2026-09-28
-summary: Why we built this website, and what you’ll find here.
+summary: After years of sharing Adam’s journey on Facebook, we built a home for everything we’ve learned. Here’s what you’ll find, and why.
 draft: false
 ---
 
