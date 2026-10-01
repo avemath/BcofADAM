@@ -217,7 +217,7 @@ const spoken =
   @media (max-width: 759px) {
     .anywhere__grid {
       grid-auto-flow: column;
-      grid-auto-columns: 84%;
+      grid-auto-columns: 86%;
       gap: 14px;
       overflow-x: auto;
       overscroll-behavior-x: contain;
@@ -225,7 +225,10 @@ const spoken =
       margin-inline: calc(-1 * var(--gutter));
       padding: 4px var(--gutter) 16px;
       scroll-padding-inline: var(--gutter);
-      scrollbar-width: thin;
+      scrollbar-width: none;
+    }
+    .anywhere__grid::-webkit-scrollbar {
+      display: none;
     }
     .anywhere__card {
       scroll-snap-align: start;
