@@ -37,7 +37,7 @@ He said something else in that interview that we all agree with: *“Our lives w
 
 *Rickey’s graduation, just days before June 5, 2017.*
 
-It was a busy, happy week. Our brother Rickey had just graduated from high school, and family had flown in from Louisiana to celebrate. That Monday afternoon, Grace and I were in our uniforms for the first softball game of the season, and Mom was braiding my hair. Adam was 14 months old, and he was in the living room playing in a tent with Lea, bringing his toys inside.
+It was a busy, happy week. Our brother Rickey had just graduated from high school, and family had flown in to celebrate. That Monday afternoon, Grace and I were in our uniforms for the first softball game of the season, and Mom was braiding my hair. Adam was 14 months old, and he was in the living room playing in a tent with Lea, bringing his toys inside.
 
 He was right there. And then, quietly, he wasn’t. He slipped out the kitchen door and went straight for the pool.
 
@@ -63,7 +63,7 @@ My parents are not careless people. Adam was loved and watched over like crazy, 
 
 *Mom and Adam in the PICU, summer 2017.*
 
-Adam spent months in hospitals and therapy before he finally came home that fall. Doctors told us he had a severe brain injury from the lack of oxygen, and that he might never hear us again.
+Adam spent months in hospitals and therapy before he finally came home that fall. Doctors told us he had a severe brain injury from the lack of oxygen. That first week, a neurologist told Mom he would never hear her again.
 
 Adam had other plans. Within weeks, he was crying when Mom read to him. The last thing he did before the accident was steal my yellow hairbrush and run off squealing. So when nothing else was getting a reaction and his therapist asked me to talk to him the way I normally would at home, I leaned over his crib and snapped, *“Adam. Get out of my room!”* His eyes shot open, and we all lost it. His smile took 15 months to come back, and it was worth every single day.
 
@@ -81,7 +81,7 @@ In 2020, we did.
 
 > To plant a garden is to believe in tomorrow.
 >
-> *Audrey Hepburn (one of Mom’s favorites)*
+> *Audrey Hepburn, quoted by Mom*
 
 That same year, my brother, sisters and I started **Because of ADAM: Allies in the Drowning Awareness Movement** with one goal: to end childhood drowning. We’ve been teaching water safety at [cornhole tournaments, awareness days and more](/events) ever since.
 
@@ -99,7 +99,7 @@ When Lea was 7, she and Mom were talking about time machines. Mom figured they�
 >
 > *Lea, age 7*
 
-That’s where our name comes from. Everything we do is because of Adam.
+That’s what our name means. Everything we do is because of Adam.
 
 ![Lea curled up with Adam in a big armchair, her hand on his cheek](/images/uploads/leaaj2.jpg)
 
