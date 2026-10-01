@@ -71,35 +71,35 @@ Full-size photos live in `public/images/uploads/` (uploaded through GitHub or th
 | `momdadaj-1.jpg` | Adam's Story, after Dad's bath-time quote | Mom, Dad and baby Adam |
 | `aj_plants.jpg` | Adam's Story, the 2017 garden | Adam in front of the seedling trays |
 | `ricgradredbikeb4acc-1.jpg` | Adam's Story, June 5 | Rickey's graduation, days before; the red tricycle |
-| `picu.jpg` | Adam's Story, PICU | Mom holding Adam in the PICU, summer 2017 (the one hospital photo on the site) |
-| `adams_village.jpg` | Adam's Story, September 2017; Events (Adam's Hope benefit 2017) | Bee-logo Adam's Hope shirts under a tent, Adam in front. **Family, please confirm this is the 2017 benefit on the bayou** |
-| `fishingrodeo.jpg` | Events (fishing rodeo) | The packed pavilion. The family's own filename says fishing rodeo, so it is no longer captioned as the 2017 benefit |
+| `picu.jpg` | Adam's Story, PICU | Mom holding Adam in the PICU; her badge reads 7-3-17, the day of her first cuddle (July 5, 2017 post). The one hospital photo on the site; **family, confirm it stays** |
+| `adams_village.jpg` | Adam's Story, September 2017; Events (Adam's Hope benefit 2017) | Light blue bee-logo Adam's Hope shirts (the 2017 design), Adam in front; Adam was in Louisiana that September. Captioned without a place. **Family, please confirm this is the 2017 benefit on the bayou** |
+| `fishingrodeo.jpg` | Events (fishing rodeo) | The packed pavilion. The family's filename says fishing rodeo, but every legible shirt is the light blue 2017 benefit design, not the royal blue 2018 rodeo shirts, so the alt names no event. **Family: 2017 benefit or 2018 rodeo?** |
 | `fr17.jpg` | Adam's Story, the 2018 rodeo | Mom, Lea (bee face paint) and Adam; the photo itself says "Adams Hope Fishing Rodeo 2018" |
 | `fr3.jpg` | Get Involved | The crowd under the tent at the rodeo, Adam in the middle (2018 per the fr-series) |
 | `lea_dad_garden.jpg` | Adam's Story, "Planting seeds" | Dad and Lea at the raised bed. Year not stated in the caption |
 | `mom-nurse-1.jpg` | Adam's Story, "Planting seeds" | Mom's nursing graduation, family around her |
 | `aj_smile.jpg` | Adam's Story, "Because of Adam" | Adam in glasses, "Mom's amazing dude" sweatshirt |
-| `mom_and_adam_at_softball_game.jpg` | Adam's Story, the games paragraph | Mom and Adam on a blanket at one of Avery's softball games (per the family's filename) |
+| `mom_and_adam_at_softball_game.jpg` | Adam's Story, the games paragraph | Mom and Adam on a blanket at a softball game (the filename doesn't say whose). Adam's red, white and blue shirt matches Mom's July 4, 2019 "ballpark last week" post |
 | `avery_and_aj2.jpg` | Adam's Story, the nights in his room | Avery and Adam, Tigers jersey |
 | `leaaj2.jpg` | Adam's Story, Lea's paragraph | Lea and Adam in the armchair |
-| `disney.jpg` | About, family photo | All seven at Disney in Seven Dwarfs shirts; Adam's says "The Charming One" |
+| `disney.jpg` | About, family photo | Eight people in "The ___ One" shirts at the Seven Dwarfs Mine Train; Adam is "The Charming One," Lea is Snow White. **Family: who is the eighth person, and are they fine being on the site?** The caption no longer counts heads |
 | `mom_and_aj.jpg` | About, Mom's card | Mom and Adam, Halloween 2019 (the family's "Up" year, Mom's post of Nov. 9, 2019) |
 | `new_normal.jpg` | About, Dad's card | Dad and Adam on a train ride |
 | `xmaspic.jpg` | About, siblings' card | The kids under the Christmas blanket |
 | `lea_and_adam.jpg` | Survivors & Families, top | Lea as Kevin and Adam as Russell from "Up," Halloween 2019 (Mom's post of Nov. 9, 2019) |
 | `beach_lifegoeson.jpg` | Survivors & Families, beside "What nonfatal drowning means" | Adam at the beach between two grown-ups (captioned only "Adam at the beach") |
-| `dad-teaching-a-float.jpg` | ISR Swim Lessons | A crop of `dadisr.jpg` with the business name cropped off the top and bottom. **Family: please confirm the student's parents are fine with this photo on the site** |
-| `booth-2021.jpg` | Events (Water Safety Booth 2021) | A crop of `duncansville_days_bcofadam.jpg` with the ISR business banner cropped off the right |
-| `200_club.jpg` | Events (Adam's Army 200 Club, 2018) | The group at the Duncansville Community Center |
+| `dad-teaching-a-float.jpg` | ISR Swim Lessons | A crop of `dadisr.jpg` with the business name cropped off the top and bottom. It is a pool photo with a student who isn't family, from Dad's own public ad. **Family: please confirm the student's parents are fine with this photo on the site** |
+| `booth-2021.jpg` | Events (Water Safety Booth 2021) | A crop of `duncansville_days_bcofadam.jpg` with the ISR business banner cropped off the right and the business name on the table runner blurred. The alt says "a July 2021 community event" until the family confirms it was Duncansville Community Days |
+| `200_club.jpg` | Events (Adam's Army 200 Club, 2018) | The group at the Duncansville Community Center. Both 200 Club nights (Oct. 14, 2017 and Oct. 13, 2018) were there, and Adam looks young in this one. **Family: 2017 or 2018?** The alt names no year |
 | `cornhole_countdown.jpg` | Events (Cornhole 2020) | Adam with the "1 day until cornhole" chalkboard |
-| `rocks.jpg` | Events (Adam Rocks) | Painted rocks: Hope, Peace, Joy, #AdamRocks |
+| `rocks2.jpg` | Events (Adam Rocks) | The Halloween batch of painted rocks (fall 2018, Mom's posts of Sept. 15 and Oct. 30, 2018). `rocks.jpg` is **not used**: it is from March 2019 and the rocks were painted for Amelia, another family's child, so her name stays off the site |
 | `momsswing.jpg` | Events (Wear Blue), News | Mom's swing painting |
 | `adamchildofgodheadshot.jpg` | Home, "Meet Adam" | Adam in the "Child of God" headband |
 | `cornhole-2021-flyer.jpg` | Events (Cornhole 2021) | The flyer |
 
 Uploaded but **not used on purpose**: `lesisrddays.jpg`, `dadisr.jpg` and `duncansville_days_bcofadam.jpg` uncropped (Dad's business banner or name), `cornhole.jpg`, `200_club_benefit.jpg`, `adams_bayou_benefit.jpg` and `adams_hope_pamphlet.jpg` (phone numbers, people's names or payment links), `isr.jpg` (ISR's registered logo), `kailee_rock.jpg` (a child who isn't family), `lea_and_aj_kiss.jpg`, `right_after.jpg`, `small_hospital_couch.jpg`, `lea_stuffed_animals.jpg`, `captainaj.jpg` (hospital), `adams_village_3.jpg` (another family's teal shirts), and personal photos (`mom+dad.jpg`, `momdadgirls.jpg`, `momdadlea.jpg`, `roadtrip.jpg`, `snowman.jpg`, `decorating_xmas_tree.jpg`, `lea_bday.jpg`, `tiger_fans.jpg`, `yoda.jpg`, `aj_2025.jpg` which is also stored sideways). The 206px thumbnails and exact duplicates of files already in use were deleted.
 
-Lightly brightened in October 2026 so they read on a phone (no other edits): `before_aj_mess.jpg`, `aj_plants.jpg`, `picu.jpg`, `avery_and_aj2.jpg`, `xmaspic.jpg`, `fishingrodeo.jpg`. The originals are in the git history and on Facebook.
+Lightly brightened in October 2026 so they read on a phone (no other edits): `aj_plants.jpg`, `picu.jpg`, `avery_and_aj2.jpg`, `xmaspic.jpg`, `fishingrodeo.jpg`. `before_aj_mess.jpg` was brightened and cropped tighter (the countertop at the top is gone, so Adam is bigger in the frame). The originals are in the git history and on Facebook.
 
 Kept off the site: hospital and medical photos (one PICU photo excepted), bath and pool photos, the newspaper photo, siblings' personal photos, and flyers with phone numbers or the prayersforadam PayPal.
 
@@ -147,6 +147,7 @@ Those stay on Facebook, where people choose to follow along.
 - **Adam Rocks the Jaffa**, Altoona (announced Feb. 28, 2020, with event shirts and "Adam's Ambassadors"). Avery thinks it was probably canceled (likely COVID), so it isn't on the site.
 - **Wear Blue on June 5**: every year, since the first anniversary in 2018 (Mom's poem "The Color of Love," June 4, 2018: "Today I choose to wear BLUE for Adam's hope, his strength, and our journey's reflection.")
 - **Vendor fair**, Saturday, Oct. 14, 2017, 10 a.m. to 2 p.m.: the only post says Adam's Hope shirts were for sale there, not that the fair was held for Adam, so the site mentions it inside the benefit dinner event instead of as its own event.
+- **The Oct. 14, 2017 dinner** was a "200 Club Benefit Dinner, Drawing & Dance" at the Duncansville Community Center (doors at 5, drawing at 6:30, dance at 7; $50 ticket admits 2; $800 drawing), per the flyer `200_club_benefit.jpg`, which stays off the site because it names contacts.
 
 ## News coverage we've had
 

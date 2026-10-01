@@ -39,7 +39,17 @@ import { site } from '../data/site';
     display: grid;
     gap: 24px;
   }
-  @media (min-width: 1000px) {
+  /* Phones and tablets: the photo goes above the story, the cards stay after it. */
+  @media (max-width: 999px) {
+    .story-aside {
+      display: contents;
+    }
+    .story-aside > :global(.photo) {
+      order: -1;
+    }
+  }
+  /* Desktop: the column sticks beside the story on screens tall enough to show all of it. */
+  @media (min-width: 1000px) and (min-height: 1040px) {
     .story-aside {
       position: sticky;
       top: 100px;
