@@ -99,6 +99,8 @@ Full-size photos live in `public/images/uploads/` (uploaded through GitHub or th
 
 Uploaded but **not used on purpose**: `lesisrddays.jpg`, `dadisr.jpg` and `duncansville_days_bcofadam.jpg` uncropped (Dad's business banner or name), `cornhole.jpg`, `200_club_benefit.jpg`, `adams_bayou_benefit.jpg` and `adams_hope_pamphlet.jpg` (phone numbers, people's names or payment links), `isr.jpg` (ISR's registered logo), `kailee_rock.jpg` (a child who isn't family), `lea_and_aj_kiss.jpg`, `right_after.jpg`, `small_hospital_couch.jpg`, `lea_stuffed_animals.jpg`, `captainaj.jpg` (hospital), `adams_village_3.jpg` (another family's teal shirts), and personal photos (`mom+dad.jpg`, `momdadgirls.jpg`, `momdadlea.jpg`, `roadtrip.jpg`, `snowman.jpg`, `decorating_xmas_tree.jpg`, `lea_bday.jpg`, `tiger_fans.jpg`, `yoda.jpg`, `aj_2025.jpg` which is also stored sideways). The 206px thumbnails and exact duplicates of files already in use were deleted.
 
+Lightly brightened in October 2026 so they read on a phone (no other edits): `before_aj_mess.jpg`, `aj_plants.jpg`, `picu.jpg`, `avery_and_aj2.jpg`, `xmaspic.jpg`, `fishingrodeo.jpg`. The originals are in the git history and on Facebook.
+
 Kept off the site: hospital and medical photos (one PICU photo excepted), bath and pool photos, the newspaper photo, siblings' personal photos, and flyers with phone numbers or the prayersforadam PayPal.
 
 ## What we keep off the website
