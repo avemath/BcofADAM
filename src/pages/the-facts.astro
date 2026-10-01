@@ -26,7 +26,7 @@ import { url } from '../lib/url';
             <div class="grid grid--3">
               {g.facts.map((f) => (
                 <article class="fact reveal">
-                  <p class="fact__stat">{f.stat}</p>
+                  <p class:list={['fact__stat', { 'fact__stat--word': !/\d/.test(f.stat) }]}>{f.stat}</p>
                   <p class="fact__label">{f.label}</p>
                   {f.detail && <p class="fact__detail">{f.detail}</p>}
                   <p class="source">
@@ -53,7 +53,7 @@ import { url } from '../lib/url';
   </section>
 
   <CtaBand title="Facts don’t save lives. People do." text="Put the layers of protection in place today.">
-    <a class="btn" href={url('/water-safety')}>See the layers</a>
+    <a class="btn" href={url('/water-safety')}>See the seven layers</a>
     <a class="btn btn--ghost" href={url('/quiz')}>Test yourself: take the quiz</a>
   </CtaBand>
 </BaseLayout>
@@ -72,6 +72,10 @@ import { url } from '../lib/url';
   }
   .fact .source {
     margin-top: auto;
+  }
+  .fact__stat--word {
+    font-size: clamp(1.8rem, 1vw + 1.4rem, 2.4rem) !important;
+    line-height: 1.1;
   }
   .fact__stat {
     font-family: var(--font-display);

@@ -29,15 +29,17 @@ const fields: Field[] = [
   />
 
   <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
+    <div class="wrap" style="margin-bottom: 24px">
+      <div class="callout callout--warn">
+          <strong>In an emergency, call 911.</strong>
+          We don’t check messages around the clock. If a child is missing, check the water first.
+      </div>
+    </div>
     <div class="wrap split">
       <div>
         <SiteForm id="contact" fields={fields} subject="Message from the website" submitLabel="Send message" fallbackTitle="Send us a message" />
       </div>
       <div class="contact-side">
-        <div class="callout callout--warn">
-          <strong>In an emergency, call 911.</strong>
-          We don’t check messages around the clock. If a child is missing, check the water first.
-        </div>
         <div class="card contact-card">
           <h2>If your child is a drowning survivor</h2>
           <p>

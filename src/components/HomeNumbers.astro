@@ -45,22 +45,19 @@ const house = (filled: boolean) =>
   `<svg class="house-svg${filled ? ' house-svg--filled' : ''}" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 11 12 3l9 8v10H3z"/>${
     filled ? '<rect x="10" y="14" width="4" height="7" class="house-svg__door"/>' : ''
   }</svg>`;
-// A pool seen from above, with the house along the top and a toddler who just came out the door.
-// `around` = fenced all the way around (the fence stops them). Otherwise the house is the fourth side
-// of the fence, so the door opens straight onto the pool.
-const toddler = (x: number, y: number) =>
-  `<g class="yard-svg__kid" transform="translate(${x} ${y}) scale(0.55)"><circle cx="12" cy="7" r="6"/><path d="M6 16h12a4 4 0 0 1 4 4v8h-4v10H6V28H2v-8a4 4 0 0 1 4-4z"/></g>`;
-const yard = (around: boolean) =>
-  `<svg class="yard-svg" viewBox="0 0 160 112" aria-hidden="true" focusable="false">
-    <rect class="yard-svg__house" x="6" y="4" width="148" height="28" rx="3"/>
-    <text x="80" y="23" text-anchor="middle">HOUSE</text>
-    <rect class="yard-svg__door" x="70" y="29" width="20" height="6" rx="1"/>
-    <rect class="yard-svg__pool" x="46" y="70" width="68" height="32" rx="7"/>
-    ${
-      around
-        ? `<rect class="yard-svg__fence" x="28" y="58" width="104" height="48" rx="3"/>${toddler(73, 36)}`
-        : `<path class="yard-svg__fence" d="M6 32v74h148V32"/>${toddler(73, 38)}<path class="yard-svg__way" d="M80 61v4"/><path class="yard-svg__arrow" d="m74 63 6 7 6-7z"/>`
-    }
+// A back yard seen from the side: the house and its back door on the left, the pool on the right,
+// and a toddler who just came out the door. `fenced` puts a fence between the door and the water;
+// otherwise the house is the fourth side of the fence, so the door opens straight onto the pool.
+const yard = (fenced: boolean) =>
+  `<svg class="yard-svg" viewBox="0 0 240 64" aria-hidden="true" focusable="false">
+    <path class="yard-svg__house" d="M0 18 26 4l26 14v38H0z"/>
+    <rect class="yard-svg__door" x="38" y="30" width="12" height="26" rx="1"/>
+    <g class="yard-svg__kid" transform="translate(60 33) scale(0.6)"><circle cx="12" cy="7" r="6"/><path d="M6 16h12a4 4 0 0 1 4 4v8h-4v10H6V28H2v-8a4 4 0 0 1 4-4z"/></g>
+    ${fenced ? '' : '<path class="yard-svg__way" d="M82 55h64"/>'}
+    <rect class="yard-svg__pool" x="150" y="56" width="90" height="8"/>
+    <path class="yard-svg__water" d="M156 56q6-3 12 0t12 0 12 0 12 0 12 0 12 0"/>
+    ${fenced ? '<path class="yard-svg__fence" d="M106 56V22m10 34V22m10 34V22m-26 8h32M100 46h32"/>' : ''}
+    <path class="yard-svg__ground" d="M0 56h150M240 56h0"/>
   </svg>`;
 const homesFilled = (stat: string) => {
   const n = Number.parseInt(stat, 10);
@@ -162,18 +159,18 @@ const external = (href: string) => /^https?:/.test(href);
                   <div
                     class="pic pic--fence"
                     role="img"
-                    aria-label="Two pools seen from above, each with a toddler coming out the back door. In the first, the house is the fourth side of the fence, so the toddler walks straight to the pool. In the second, the fence goes all the way around the pool and stops them."
+                    aria-label="Two back yards seen from the side, each with a toddler coming out the back door toward the pool. In the first there is nothing between the door and the water. In the second, a fence stands between them."
                   >
                     <span class="yard pop" style="--i: 0">
                       <Fragment set:html={yard(false)} />
                       <small>
-                        <b class="yard__no">✗</b> Door opens to the pool
+                        <b class="yard__no">✗</b> Door opens onto the pool
                       </small>
                     </span>
                     <span class="yard pop" style="--i: 3">
                       <Fragment set:html={yard(true)} />
                       <small>
-                        <b class="yard__yes">✓</b> Fence stops them
+                        <b class="yard__yes">✓</b> Fence between door and pool
                       </small>
                     </span>
                   </div>
@@ -210,46 +207,7 @@ const external = (href: string) => /^https?:/.test(href);
 </section>
 
 <script>
-  // On phones the three facts are a row you swipe through. The dots show which one you're on,
-  // and tapping a dot slides to it. On bigger screens the facts sit side by side and this does nothing.
-  for (const box of document.querySelectorAll<HTMLElement>('[data-carousel]')) {
-    const track = box.querySelector<HTMLElement>('[data-carousel-track]');
-    if (!track) continue;
-    const items = [...track.children] as HTMLElement[];
-    const dots = [...box.querySelectorAll<HTMLButtonElement>('[data-to]')];
-    const phone = window.matchMedia('(max-width: 759px)');
-    const calm = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const start = (i: number) => items[i].offsetLeft - items[0].offsetLeft;
-    const update = () => {
-      let on = 0;
-      items.forEach((_, i) => {
-        if (Math.abs(start(i) - track.scrollLeft) < Math.abs(start(on) - track.scrollLeft)) on = i;
-      });
-      dots.forEach((d, i) => d.setAttribute('aria-current', String(i === on)));
-    };
-    dots.forEach((d) =>
-      d.addEventListener('click', () => {
-        track.scrollTo({ left: start(Number(d.dataset.to)), behavior: calm.matches ? 'auto' : 'smooth' });
-      }),
-    );
-    let frame = 0;
-    track.addEventListener(
-      'scroll',
-      () => {
-        cancelAnimationFrame(frame);
-        frame = requestAnimationFrame(update);
-      },
-      { passive: true },
-    );
-    // Keyboard users can scroll the row with the arrow keys once it is a row.
-    const sync = () => {
-      if (phone.matches) track.tabIndex = 0;
-      else track.removeAttribute('tabindex');
-      update();
-    };
-    phone.addEventListener('change', sync);
-    sync();
-  }
+  import '../scripts/carousel';
 </script>
 
 <style>
@@ -448,7 +406,7 @@ const external = (href: string) => /^https?:/.test(href);
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 156px;
+    height: 164px;
     padding: 16px;
     margin-bottom: 8px;
     border-radius: var(--radius-sm);
@@ -507,15 +465,14 @@ const external = (href: string) => /^https?:/.test(href);
   }
   .pic--fence {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 14px;
-    align-items: start;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
     align-content: center;
+    padding: 10px 16px;
   }
   .yard {
     display: grid;
-    gap: 4px;
-    text-align: center;
+    gap: 2px;
   }
   .yard small {
     font-size: 0.875rem;
@@ -536,33 +493,38 @@ const external = (href: string) => /^https?:/.test(href);
     display: block;
     width: 100%;
     height: auto;
+    max-height: 46px;
   }
   .pic--fence :global(.yard-svg__house) {
     fill: var(--line);
   }
-  .pic--fence :global(.yard-svg text) {
-    font: 800 12px var(--font-body);
-    letter-spacing: 0.12em;
-    fill: var(--ink-soft);
-  }
   .pic--fence :global(.yard-svg__door) {
     fill: var(--ink-soft);
   }
+  .pic--fence :global(.yard-svg__ground) {
+    stroke: var(--line);
+    stroke-width: 2;
+  }
   .pic--fence :global(.yard-svg__pool) {
     fill: var(--aqua);
+  }
+  .pic--fence :global(.yard-svg__water) {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 1.5;
+    opacity: 0.8;
   }
   .pic--fence :global(.yard-svg__fence) {
     fill: none;
     stroke: var(--deep);
     stroke-width: 3;
-    stroke-dasharray: 6 4;
+    stroke-linecap: round;
   }
   .pic--fence :global(.yard-svg__way) {
     stroke: var(--coral);
-    stroke-width: 3;
-  }
-  .pic--fence :global(.yard-svg__arrow) {
-    fill: var(--coral);
+    stroke-width: 2.5;
+    stroke-dasharray: 2 6;
+    stroke-linecap: round;
   }
   .pic--fence :global(.yard-svg__kid) {
     fill: var(--deep);
@@ -662,12 +624,16 @@ const external = (href: string) => /^https?:/.test(href);
     .numbers__facts li {
       padding: 16px 18px;
     }
-    .pic {
+    .pic:not(.pic--fence) {
       height: 128px;
       padding: 12px;
     }
     .pic--fence {
       height: auto;
+      padding: 14px 16px;
+    }
+    .pic--fence :global(.yard-svg) {
+      max-height: none;
     }
   }
 </style>

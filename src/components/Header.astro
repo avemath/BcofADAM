@@ -65,7 +65,13 @@ const slug = (label: string) => label.toLowerCase().replace(/[^a-z]+/g, '-').rep
           })
         }
       </ul>
-      {hasDonate && <a href={url('/donate')} class="btn site-nav__donate">Donate</a>}
+      {
+        hasDonate ? (
+          <a href={url('/donate')} class="btn site-nav__donate">Donate</a>
+        ) : (
+          <a href={url('/water-watcher')} class="btn site-nav__donate">Take the pledge</a>
+        )
+      }
     </nav>
   </div>
 </header>
@@ -157,6 +163,7 @@ const slug = (label: string) => label.toLowerCase().replace(/[^a-z]+/g, '-').rep
   }
   .site-header__brand {
     text-decoration: none;
+    flex: none;
   }
 
   .site-nav ul {
@@ -345,11 +352,12 @@ const slug = (label: string) => label.toLowerCase().replace(/[^a-z]+/g, '-').rep
     .site-nav {
       display: flex;
       align-items: center;
-      gap: 24px;
+      gap: 16px;
+      min-width: 0;
     }
     .site-nav__list {
       display: flex;
-      gap: 18px;
+      gap: 12px;
     }
     .site-nav__item {
       position: relative;
@@ -359,6 +367,17 @@ const slug = (label: string) => label.toLowerCase().replace(/[^a-z]+/g, '-').rep
     }
     .site-nav__item > a {
       white-space: nowrap;
+    }
+    .site-nav__donate {
+      flex: none;
+      white-space: nowrap;
+      padding-inline: 18px;
+    }
+  }
+  /* Between 1200 and 1359px the menu alone fills the bar, so the pledge button waits for wider screens. */
+  @media (min-width: 1200px) and (max-width: 1359px) {
+    .site-nav__donate {
+      display: none;
     }
     .site-nav .submenu {
       position: absolute;
