@@ -2,7 +2,8 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import CtaBand from '../components/CtaBand.astro';
-import { nonfatal } from '../data/content';
+import PhotoFrame from '../components/PhotoFrame.astro';
+import { nonfatal, survivorsPhotos } from '../data/content';
 import { survivorResources } from '../data/content';
 import { url } from '../lib/url';
 
@@ -49,6 +50,16 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
     title="Surviving is only the beginning."
     lede="Adam survived. Many children do. A nonfatal drowning can change a child’s life, and a whole family’s, for good. Many drowning prevention groups were started in memory of a child who died. Ours was started for one who lived."
   />
+
+  {
+    survivorsPhotos.photo && (
+      <section class="section" style="padding-block: clamp(40px, 6vw, 72px) 0">
+        <div class="wrap narrow">
+          <PhotoFrame src={survivorsPhotos.photo} alt={survivorsPhotos.photoAlt} caption={survivorsPhotos.caption} ratio="3 / 2" natural />
+        </div>
+      </section>
+    )
+  }
 
   <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
     <div class="wrap narrow">
@@ -99,7 +110,9 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
           and he survived.
         </p>
       </div>
-      <div class="card reveal">
+      <div class="reveal nf-side">
+        {survivorsPhotos.photo2 && <PhotoFrame src={survivorsPhotos.photo2} alt={survivorsPhotos.photo2Alt} caption={survivorsPhotos.caption2} ratio="4 / 3" natural />}
+        <div class="card">
         <p class="eyebrow">By the numbers</p>
         <ul class="nf-stats">
           {
@@ -114,6 +127,7 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
             ))
           }
         </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -285,5 +299,10 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
   .resource-list span {
     color: var(--ink-soft);
     font-size: 0.95rem;
+  }
+  .nf-side {
+    display: grid;
+    gap: 24px;
+    align-content: start;
   }
 </style>

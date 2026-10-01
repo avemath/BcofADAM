@@ -5,6 +5,8 @@ import resourcesJson from './resources.json';
 import teamJson from './team.json';
 import anywhereJson from './anywhere.json';
 import aboutJson from './about.json';
+import survivorsJson from './survivors.json';
+import getInvolvedJson from './get-involved.json';
 import isrJson from './isr.json';
 import pediatriciansJson from './pediatricians.json';
 import checklistJson from './checklist.json';
@@ -76,6 +78,9 @@ export const survivorResources: Resource[] = resourcesJson.survivor ?? [];
 export const resourceGroups: { title: string; items: Resource[] }[] = resourcesJson.groups ?? [];
 export const team: TeamMember[] = teamJson ?? [];
 export const about: { photo?: string; photoAlt?: string; caption?: string } = aboutJson;
+/** Photos on Survivors & Families and Get Involved (edited in the Studio). */
+export const survivorsPhotos: { photo?: string; photoAlt?: string; caption?: string; photo2?: string; photo2Alt?: string; caption2?: string } = survivorsJson;
+export const getInvolvedPhoto: { photo?: string; photoAlt?: string; caption?: string } = getInvolvedJson;
 export const isr: IsrBox = isrJson;
 /** "What pediatricians say" box on the ISR page and the home page. */
 export const pediatricians: {
