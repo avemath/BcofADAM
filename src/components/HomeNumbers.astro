@@ -164,13 +164,13 @@ const external = (href: string) => /^https?:/.test(href);
                     <span class="yard pop" style="--i: 0">
                       <Fragment set:html={yard(false)} />
                       <small>
-                        <b class="yard__no">✗</b> The back door opens onto the pool
+                        <b class="yard__no">✗</b> Door opens onto the pool
                       </small>
                     </span>
                     <span class="yard pop" style="--i: 3">
                       <Fragment set:html={yard(true)} />
                       <small>
-                        <b class="yard__yes">✓</b> A fence between the door and the water
+                        <b class="yard__yes">✓</b> Fence between door and pool
                       </small>
                     </span>
                   </div>
@@ -406,7 +406,7 @@ const external = (href: string) => /^https?:/.test(href);
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 156px;
+    height: 164px;
     padding: 16px;
     margin-bottom: 8px;
     border-radius: var(--radius-sm);
@@ -466,10 +466,9 @@ const external = (href: string) => /^https?:/.test(href);
   .pic--fence {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
-    gap: 12px;
+    gap: 8px;
     align-content: center;
-    height: auto;
-    min-height: 156px;
+    padding: 10px 16px;
   }
   .yard {
     display: grid;
@@ -494,6 +493,7 @@ const external = (href: string) => /^https?:/.test(href);
     display: block;
     width: 100%;
     height: auto;
+    max-height: 46px;
   }
   .pic--fence :global(.yard-svg__house) {
     fill: var(--line);
@@ -624,12 +624,16 @@ const external = (href: string) => /^https?:/.test(href);
     .numbers__facts li {
       padding: 16px 18px;
     }
-    .pic {
+    .pic:not(.pic--fence) {
       height: 128px;
       padding: 12px;
     }
     .pic--fence {
-      min-height: 0;
+      height: auto;
+      padding: 14px 16px;
+    }
+    .pic--fence :global(.yard-svg) {
+      max-height: none;
     }
   }
 </style>
