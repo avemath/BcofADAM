@@ -85,7 +85,7 @@ Full-size photos live in `public/images/uploads/` (uploaded through GitHub or th
 | `mom_and_adam_at_softball_game.jpg` | Adam's Story, the games paragraph | Mom and Adam on a blanket at a softball game (the filename doesn't say whose). Adam's red, white and blue shirt matches Mom's July 4, 2019 "ballpark last week" post |
 | `avery_and_aj2.jpg` | Adam's Story, the nights in his room | Avery and Adam, Tigers jersey |
 | `leaaj2.jpg` | Adam's Story, under Lea's quote | Lea and Adam in the armchair; Mom calls Lea his best friend (July 11, 2017; Sept. 6, 2018) |
-| `disney.jpg` | About, family photo | The family plus Rickey's girlfriend (she's fine with it, per Avery) in "The ___ One" shirts at the Seven Dwarfs Mine Train; Adam is "The Charming One," Lea is Snow White |
+| `disney.jpg` | About, family photo | The family, Rickey's wife included (Avery: "my sister-in-law, no need to make any distinction"), in "The ___ One" shirts at the Seven Dwarfs Mine Train; Adam is "The Charming One," Lea is Snow White |
 | `mom_and_aj.jpg` | About, Mom's card | Mom and Adam, Halloween 2019 (the family's "Up" year, Mom's post of Nov. 9, 2019) |
 | `new_normal.jpg` | About, Dad's card | Dad and Adam on a train ride |
 | `xmaspic.jpg` | About, siblings' card | The kids under the Christmas blanket |
