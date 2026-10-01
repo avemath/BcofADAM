@@ -16,7 +16,7 @@ It was a Monday in June, and Mom was braiding my hair for a softball game. Adam 
 
 That was Adam all over.
 
-![Baby Adam grinning from inside an open kitchen drawer, with plastic containers and lids scattered all over the floor](/images/uploads/before_aj_mess.jpg)
+![Baby Adam grinning behind an emptied kitchen drawer, lids all over the floor](/images/uploads/before_aj_mess.jpg)
 
 *Adam and the Tupperware drawer.*
 
@@ -28,13 +28,13 @@ There are five of us: Rickey, Grace, me, Lea and Adam. Dad had really wanted one
 
 ![Dad and Mom cheek to cheek with baby Adam, all three smiling](/images/uploads/momdadaj-1.jpg)
 
-*Mom, Dad and Adam.*
+*Mom, Dad and the one more boy.*
 
 That spring, Dad and Lea grew a garden from seed. Lea was 4, and she picked out her favorite fruit and veggie packets herself. Every day the two of them watered the little pots while Adam watched from his walker, and by June the plants were ready to go into the ground.
 
-![Baby Adam looking up at the camera, with trays of seedlings in the sunny window behind him](/images/uploads/aj_plants.jpg)
+![Baby Adam looking up at the camera, with little pots of seedlings in the sunny window behind him](/images/uploads/aj_plants.jpg)
 
-*Adam and the seedlings.*
+*Adam and the little pots.*
 
 That Monday was June 5, 2017, and our house was as full as it gets. Rickey had just graduated from high school, family had flown in to celebrate, and Grace and I were in our uniforms for the first game of the season. After the business with my brush, Adam went to play with Lea in a tent in the living room, carrying his toys inside, and Dad, Grace and I left for the field. Dad coached our team, so the three of us always went early to warm up.
 
@@ -52,11 +52,11 @@ Everyone who could took a turn after Mom: our family, the first responders, the 
 
 ## She read to him anyway
 
-Mom stayed with him, first in Pittsburgh, and for the next four months our family lived in two places. One week in, a neurologist told her that Adam would never hear her again. She read to him anyway. For 33 days she wasn’t allowed to hold him, so she stood beside his crib, *“singing, reading, praying and squeezing his hand but nothing more.”* Then one day, while she was reading, he cried.
-
 ![Mom holding Adam in the hospital, with his breathing tube and wires](/images/uploads/picu.jpg)
 
 *Mom and Adam in the PICU, summer 2017.*
+
+Mom stayed with him, first in Pittsburgh, and for the next four months our family lived in two places. One week in, a neurologist told her that Adam would never hear her again. She read to him anyway. For 33 days she wasn’t allowed to hold him, so she stood beside his crib, *“singing, reading, praying and squeezing his hand but nothing more.”* Then one day, while she was reading, he cried.
 
 Most days, though, nothing seemed to reach him. One day I walked in while Mom and his therapist were working with him and getting nowhere. I was 14, and I didn’t understand that he wasn’t responding the way Mom was hoping he would. The therapist, out of ideas, asked if I would talk to him the way I normally did at home. I leaned over the crib, thought for a second, and snapped, *“Adam. Get out of my room!”* His eyes shot open. I laughed. Mom was shocked, and then she was crying.
 
@@ -84,9 +84,9 @@ That night, Mom looked out across our field and saw thousands of fireflies light
 
 Not long after, we drove down to Louisiana, where our hometown did what Lafitte does: they set a date and threw a [fishing rodeo](/events) for Adam. It paid for his stem cell treatment at Duke. *“Our village shines just as bright as the fireflies’ village,”* Mom wrote.
 
-![Mom taking a selfie with Lea, who has a bee painted on her cheek, and Adam in his stroller with a stuffed sloth](/images/uploads/fr17.jpg)
+![Mom’s selfie with Lea, the Adam’s Hope logo painted on her cheek, and Adam in his stroller with a stuffed sloth](/images/uploads/fr17.jpg)
 
-*Mom, Lea and Adam at the fishing rodeo in Lafitte, 2018.*
+*Mom, Lea and Adam at the fishing rodeo.*
 
 Then October came, the pool was covered for the season, and Adam smiled. It had been 15 months. At first Mom didn’t trust it. Then he did it again, and the next day. *“I did not request it,”* she wrote. *“It was not given on demand. Adam’s smile is on His time.”*
 
@@ -114,7 +114,7 @@ Adam is {{Adam’s age}} now. He can’t walk or talk, but he sees, hears and un
 
 ![Adam in glasses looking up with a small smile, in a sweatshirt that says Mom’s amazing dude](/images/uploads/aj_smile.jpg)
 
-*Adam in his “Mom’s amazing dude” sweatshirt.*
+*His eyes and that smile.*
 
 I wanted to know everything about taking care of him, so I learned to do what his nurses do, including changing his trach and giving him oxygen in an emergency. And all through high school, my family brought him to my soccer and softball games. They’d pull the truck into the outfield, open it up, set out their chairs and roll his stroller in beside them with all of his equipment, and he’d watch from out there with everyone else, wins and losses.
 
@@ -128,15 +128,15 @@ I’m in school in Louisiana now, so I see Adam when I come home. He has nurses 
 
 *Me and Adam.*
 
-![Lea curled up with Adam in a big armchair, her hand on his cheek](/images/uploads/leaaj2.jpg)
-
-*Lea and Adam, best friends.*
-
 Lea, who was right there in the tent with him that day, used to pray she’d be smart enough to build a time machine, so she could go back to June 5 and take her brother out for ice cream. When she was 7, she and Mom got to talking about time machines again, and Mom figured they’d both go back to that day. Lea had a different answer:
 
 > Not me. I love brother just the way he is. He smiles when I sing, and every time he sees me, he is happy. Because of Adam, I know so much about the brain, you learned how to take care of him, and just think of how many babies are going to live because Dad can teach them to float. Everyone loves Adam, and we are all better and smarter people because of him.
 >
 > *Lea, age 7*
+
+![Lea curled up with Adam in a big armchair, her hand on his cheek](/images/uploads/leaaj2.jpg)
+
+*Lea and brother.*
 
 That’s what our name means. Dad said it best, back in 2017: *“Our lives weren’t perfect but our family was.”* It still is.
 

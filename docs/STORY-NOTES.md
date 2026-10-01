@@ -70,18 +70,18 @@ Full-size photos live in `public/images/uploads/` (uploaded through GitHub or th
 | `before_aj_mess.jpg` | Adam's Story, "That was Adam all over" | Adam in the kitchen drawer with the Tupperware everywhere, before |
 | `momdadaj-1.jpg` | Adam's Story, after Dad's bath-time quote | Mom, Dad and baby Adam |
 | `aj_plants.jpg` | Adam's Story, the 2017 garden | Adam in front of the seedling trays |
-| `ricgradredbikeb4acc-1.jpg` | Adam's Story, June 5 | Rickey's graduation, days before; the red tricycle |
+| `ricgradredbikeb4acc-1.jpg` | Adam's Story, June 5 | Rickey's graduation; "days before" rests on Mom's "graduation week" (the Anywhere page) and "had just graduated." The closet line is Mom's, March 22, 2021 |
 | `picu.jpg` | Adam's Story, PICU | Mom holding Adam in the PICU; her badge reads 7-3-17, the day of her first cuddle (July 5, 2017 post). The one hospital photo on the site; **family, confirm it stays** |
 | `adams_village.jpg` | Adam's Story, September 2017; Events (Adam's Hope benefit 2017) | Light blue bee-logo Adam's Hope shirts (the 2017 design), Adam in front; Adam was in Louisiana that September. Captioned without a place. **Family, please confirm this is the 2017 benefit on the bayou** |
 | `fishingrodeo.jpg` | Events (fishing rodeo) | The packed pavilion. The family's filename says fishing rodeo, but every legible shirt is the light blue 2017 benefit design, not the royal blue 2018 rodeo shirts, so the alt names no event. **Family: 2017 benefit or 2018 rodeo?** |
-| `fr17.jpg` | Adam's Story, the 2018 rodeo | Mom, Lea (bee face paint) and Adam; the photo itself says "Adams Hope Fishing Rodeo 2018" |
+| `fr17.jpg` | Adam's Story, the 2018 rodeo | Mom, Lea (the Adam's Hope logo painted on her cheek) and Adam; the photo itself says "Adams Hope Fishing Rodeo 2018". The editor flagged the baked-in text: **if the original without the overlay exists, swap it in** |
 | `fr3.jpg` | Get Involved | The crowd under the tent at the rodeo, Adam in the middle (2018 per the fr-series) |
 | `lea_dad_garden.jpg` | Adam's Story, "Planting seeds" | Dad and Lea at the raised bed. Year not stated in the caption |
 | `mom-nurse-1.jpg` | Adam's Story, "Planting seeds" | Mom's nursing graduation, family around her |
 | `aj_smile.jpg` | Adam's Story, "Because of Adam" | Adam in glasses, "Mom's amazing dude" sweatshirt |
 | `mom_and_adam_at_softball_game.jpg` | Adam's Story, the games paragraph | Mom and Adam on a blanket at a softball game (the filename doesn't say whose). Adam's red, white and blue shirt matches Mom's July 4, 2019 "ballpark last week" post |
 | `avery_and_aj2.jpg` | Adam's Story, the nights in his room | Avery and Adam, Tigers jersey |
-| `leaaj2.jpg` | Adam's Story, Lea's paragraph | Lea and Adam in the armchair |
+| `leaaj2.jpg` | Adam's Story, under Lea's quote | Lea and Adam in the armchair; Mom calls Lea his best friend (July 11, 2017; Sept. 6, 2018) |
 | `disney.jpg` | About, family photo | Eight people in "The ___ One" shirts at the Seven Dwarfs Mine Train; Adam is "The Charming One," Lea is Snow White. **Family: who is the eighth person, and are they fine being on the site?** The caption no longer counts heads |
 | `mom_and_aj.jpg` | About, Mom's card | Mom and Adam, Halloween 2019 (the family's "Up" year, Mom's post of Nov. 9, 2019) |
 | `new_normal.jpg` | About, Dad's card | Dad and Adam on a train ride |

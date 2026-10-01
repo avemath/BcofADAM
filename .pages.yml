@@ -143,6 +143,9 @@ content:
       - name: storyPhotoAlt
         label: Describe that photo (for people who can't see it)
         type: string
+      - name: storyPhotoCaption
+        label: Caption under that photo
+        type: string
       - name: timeCompare
         label: Line under the clock
         type: string

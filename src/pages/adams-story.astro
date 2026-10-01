@@ -10,7 +10,7 @@ import { site } from '../data/site';
 
 <ProseLayout slug="adams-story" type="Article">
   <div class="story-aside">
-    <PhotoFrame src={story.storyPhoto || story.photo} alt={story.storyPhoto ? story.storyPhotoAlt : story.photoAlt} hint="Add a photo of Adam" />
+    <PhotoFrame src={story.storyPhoto || story.photo} alt={story.storyPhoto ? story.storyPhotoAlt : story.photoAlt} caption={story.storyPhoto ? story.storyPhotoCaption : undefined} hint="Add a photo of Adam" />
     <div class="card story-aside__card">
       <p class="eyebrow">Adam’s Village of Hope</p>
       <p>Follow Adam on Facebook and join the thousands cheering him on.</p>
