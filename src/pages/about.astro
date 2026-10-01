@@ -75,18 +75,17 @@ const values = [
       <span class="eyebrow">A note from Avery</span>
       <h2>Why we started this</h2>
       <p>
-        I was 14 when my little brother drowned in our backyard pool. I was home that afternoon, in my softball
-        uniform, yelling at him for running off with my hairbrush. About three minutes later, everything changed.
+        I was 14 when my little brother drowned in our backyard pool. What happened that day is on
+        <a href={url('/adams-story')}>Adam’s story</a>. This page is about what we did next.
       </p>
       <p>
-        Adam survived, and I spent the rest of high school growing up alongside his therapies and hospital stays. I
-        learned to take care of him. I also learned how little most families know about how drowning really happens,
-        because we didn’t know either.
+        Adam survived, and I spent the rest of high school growing up alongside his therapies and hospital stays. Along
+        the way I learned how little most families know about how drowning really happens, because we didn’t know
+        either.
       </p>
       <p>
-        In 2020, my brother, sisters and I started Because of ADAM so other families could learn what we learned,
-        without having to learn it the way we did. This website is everything we wish someone had told us, in one place,
-        free for anyone who needs it.
+        In 2020, my brother, sisters and I started Because of ADAM. This website is everything we wish someone had told
+        us in 2017, in one place, free for anyone who needs it.
       </p>
       <p>
         If you take one thing from it, make it this: no single layer is enough, so stack them. And if you ever can’t
@@ -138,7 +137,7 @@ const values = [
               <h3>{v.title}</h3>
               <p>{v.body}</p>
               <p class="value__said">
-                “{v.said}” <span>Mom</span>
+                “{v.said}” <span>Our mom</span>
               </p>
             </div>
           ))
@@ -184,7 +183,7 @@ const values = [
     </div>
   </section>
 
-  <CtaBand title="Walk with us." text="Follow Adam’s journey, share what you learn, and join the movement.">
+  <CtaBand title="Walk with us." text="Share what you learn, come to an event, and tell one more parent to check the water first.">
     <a class="btn" href={url('/get-involved')}>Get involved</a>
     <a class="btn btn--ghost" href={url('/contact')}>Contact us</a>
   </CtaBand>
