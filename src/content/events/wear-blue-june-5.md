@@ -1,7 +1,7 @@
 ---
 title: Wear Blue on June 5
 kind: Awareness
-date: 2017-06-05
+date: 2018-06-05
 repeatsYearly: true
 when: Every June 5
 location: Everywhere
