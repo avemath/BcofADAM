@@ -68,7 +68,7 @@ Dad’s favorite memory of him isn’t one moment. It’s a routine. When a repo
 >
 > *Dad*
 
-He said something else in that interview that I think about a lot: *“Our lives weren’t perfect but our family was.”* It still is.
+He said something else in that interview, too: *“Our lives weren’t perfect but our family was.”*
 
 ## Planting seeds
 
@@ -90,7 +90,7 @@ Dad became a Red Cross CPR instructor, then trained for eight weeks in Florida t
 
 *Mom became a nurse, and we were all there to cheer her on.*
 
-I spent my senior year, during COVID, growing Because of ADAM with fundraisers and awareness events. I also helped coach Lea’s 8U Firefly softball team, which felt about right.
+I spent my senior year, during COVID, growing Because of ADAM with fundraisers and awareness events. I also helped coach Lea’s 8U Firefly softball team.
 
 And the garden? In Mom’s words, *“yeah, it is amazing too.”*
 
