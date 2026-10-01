@@ -40,7 +40,7 @@ He had slipped out the kitchen door and gone straight for the pool. Three days e
 
 We weren’t even two minutes from the house when Dad’s phone rang. He pulled a definitely illegal U-turn in the middle of the road, and I looked at Grace wide-eyed and laughed, thinking, what is going on? Dad raced back while the two of us sat in the back seat, confused and starting to get worried. He threw the car in park and ran for the backyard, and we followed him. That’s when we saw Mom at the edge of the pool, giving Adam CPR, and our grandparents trying to push us back from the door so we wouldn’t see. People were already calling 911, and we could hear the sirens coming. Our driveway winds, so Grace and I ran to the front yard to show the ambulances the way around to the back, so they could get to Adam as fast as possible.
 
-Everyone who could took a turn after Mom: our family, the first responders, the emergency team at the hospital. Ninety minutes without a pulse, and then, right as a priest anointed his head, Adam’s heart started beating again. That night he was flown to UPMC Children’s Hospital of Pittsburgh, and Mom and Dad went with him.
+Everyone who could took a turn after Mom: our family, the first responders, the emergency team at the hospital. Ninety minutes without a pulse, and then, right as a priest anointed his head, Adam’s heart started beating again. That night he was life-flighted to UPMC Children’s Hospital of Pittsburgh, and Mom and Dad went with him.
 
 ## She read to him anyway
 
