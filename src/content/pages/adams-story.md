@@ -36,11 +36,7 @@ That Monday was June 5, 2017, and our house was as full as it gets. Rickey had j
 
 He was right there. And then, quietly, he wasn’t.
 
-He had slipped out the kitchen door and gone straight for the pool. Three days earlier, we had all cheered him on as he jumped into the pool and into our arms. This time no one was there to catch him. He had been gone about three minutes when Mom found him in the water. She started CPR, and then everyone who could took a turn: our family, the first responders, the emergency team at the hospital.
-
-I don’t remember that day in order. I remember sirens, and running to the front yard to show the ambulances the way around to the back.
-
-After 90 minutes without a pulse, right as a priest anointed his head, Adam’s heart started beating again. That night he was flown to UPMC Children’s Hospital of Pittsburgh. Mom and Dad went with him. The rest of us stayed behind, and what I remember most is not knowing what was going on.
+He had slipped out the kitchen door and gone straight for the pool. Three days earlier, we had all cheered him on as he jumped into the pool and into our arms. This time no one was there to catch him. He had been gone about three minutes when Mom found him in the water. She started CPR, and then everyone who could took a turn: our family, the first responders, the emergency team at the hospital. After 90 minutes without a pulse, right as a priest anointed his head, Adam’s heart started beating again. That night he was flown to UPMC Children’s Hospital of Pittsburgh, and Mom and Dad went with him.
 
 ## She read to him anyway
 
@@ -98,7 +94,7 @@ Adam is {{Adam’s age}} now. He can’t walk or talk, but he sees, hears and un
 
 I wanted to know everything about taking care of him, so I learned to do what his nurses do, including changing his trach and giving him oxygen in an emergency. And all through high school, my family brought him to my soccer and softball games. They’d pull the truck up into the outfield, open it up, set out their chairs, and roll his stroller up beside them with all of his equipment, and he’d watch from out there with everyone else, for the wins and the losses.
 
-I’m in school in Louisiana now, so most of my time with Adam is when I come home, with the whole family around. A lot of it is just sitting quietly in a room with him. The rest of it is the kitchen, which is where our family always ends up. Dad is a really good cook, and when he’s making one of his mom’s recipes, gumbo or red beans, there’s always good music on and somebody dancing around the kitchen, all of us in there together.
+I’m in school in Louisiana now, so I see Adam when I come home. He has nurses around the clock and he’s usually in his bed or his stroller, so I go in to visit him when Mom is on shift, and I love it so much. I love my mom with my whole heart, and when it’s just me and her and Adam in his room, we can talk about anything. I can tell her whatever, she can tell me her latest conspiracy theory, and we gab into the night, knowing Adam is right there in the room with us, hearing the people he loves just living their lives and talking. We don’t include him in the conversation so much, because he can’t respond. We include him in the moment. It may seem so simple, but it’s so special to me, and every time I go home I make sure I get another night like that with them.
 
 ![Lea curled up with Adam in a big armchair, her hand on his cheek](/images/uploads/leaaj2.jpg)
 
