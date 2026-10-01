@@ -1,26 +1,39 @@
 {
   "headline": [
     {
-      "stat": "#1",
-      "label": "Drowning is the leading cause of death for children ages 1–4. It’s also preventable.",
-      "source": "CDC",
-      "sourceUrl": "https://www.cdc.gov/drowning/data-research/facts/index.html"
-    },
-    {
       "stat": "7",
-      "label": "For every child lost to drowning, 7 more survive one and need emergency care.",
+      "label": "For every child who dies from drowning, 7 more end up in the emergency room.",
+      "detail": "Some are left with brain damage or a long-term disability. Adam is one of them.",
+      "feature": true,
+      "link": "/adams-story",
+      "linkText": "Read Adam’s story",
       "source": "CDC, 2026",
       "sourceUrl": "https://www.cdc.gov/drowning/prevention/summer-swim-safety.html"
     },
     {
+      "stat": "#1",
+      "label": "cause of death for children ages 1 to 4. It’s also preventable.",
+      "picture": "ages",
+      "link": "/water-safety",
+      "linkText": "Learn the layers of protection",
+      "source": "CDC",
+      "sourceUrl": "https://www.cdc.gov/drowning/data-research/facts/index.html"
+    },
+    {
       "stat": "70%+",
-      "label": "More than 7 in 10 fatal child pool and spa drownings (2021–2023) happen at a home: their own, a grandparent’s, a friend’s or a neighbor’s.",
+      "label": "of fatal child pool and spa drownings happen at a home: their own, a grandparent’s, a friend’s or a neighbor’s.",
+      "picture": "homes",
+      "link": "/checklist",
+      "linkText": "Check your home",
       "source": "CPSC, 2026 report",
       "sourceUrl": "https://www.cpsc.gov/Newsroom/News-Releases/2026/CPSC-Report-Highlights-Persistent-Risk-of-Childhood-Drowning"
     },
     {
       "stat": "83%",
-      "label": "Lower odds of drowning when a pool is fenced on all four sides instead of three. Layers work.",
+      "label": "lower odds of a child drowning when the pool is fenced on all four sides. Don’t let the house be the fourth side.",
+      "picture": "fence",
+      "link": "/water-safety#barriers",
+      "linkText": "How to fence a pool",
       "source": "Cochrane review",
       "sourceUrl": "https://www.cochrane.org/evidence/CD001047_fencing-which-completely-encloses-all-sides-swimming-pool-and-isolates-it-home-effective-preventing"
     }
