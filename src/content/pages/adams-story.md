@@ -36,7 +36,11 @@ That Monday was June 5, 2017, and our house was as full as it gets. Rickey had j
 
 He was right there. And then, quietly, he wasn’t.
 
-He had slipped out the kitchen door and gone straight for the pool. Three days earlier, we had all cheered him on as he jumped into the pool and into our arms. This time no one was there to catch him. He had been gone about three minutes when Mom found him in the water. She started CPR, and then everyone who could took a turn: our family, the first responders, the emergency team at the hospital. After 90 minutes without a pulse, right as a priest anointed his head, Adam’s heart started beating again. That night he was flown to UPMC Children’s Hospital of Pittsburgh, and Mom and Dad went with him.
+He had slipped out the kitchen door and gone straight for the pool. Three days earlier, we had all cheered him on as he jumped into the pool and into our arms. This time no one was there to catch him. He had been gone about three minutes when Mom found him in the water. She started CPR, and then everyone who could took a turn: our family, the first responders, the emergency team at the hospital.
+
+I don’t remember that day in order. I remember sirens, and running to the front yard to show the ambulances the way around to the back.
+
+After 90 minutes without a pulse, right as a priest anointed his head, Adam’s heart started beating again. That night he was flown to UPMC Children’s Hospital of Pittsburgh, and Mom and Dad went with him.
 
 ## She read to him anyway
 
