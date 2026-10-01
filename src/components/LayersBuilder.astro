@@ -205,6 +205,13 @@ const list = (items: string[]) => items.slice(0, -1).join(', ') + ' and ' + item
       grid-template-columns: 1.35fr 1fr;
     }
   }
+  @media (max-width: 959px) {
+    .builder__scene {
+      position: sticky;
+      top: 80px;
+      z-index: 2;
+    }
+  }
   .builder__scene {
     background: #fff;
     border-radius: var(--radius);
