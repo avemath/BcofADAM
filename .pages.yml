@@ -127,6 +127,7 @@ content:
       - name: teaser
         label: "\"Meet Adam\" paragraph"
         type: text
+        description: Type {{Adam's age}} and the site fills in his age.
       - name: teaserMore
         label: Second paragraph
         type: text
@@ -259,6 +260,7 @@ content:
           - name: body
             label: Page text
             type: rich-text
+            description: Type {{Adam's age}} anywhere on this page and the site fills in his age, so it never goes out of date.
             options:
               format: markdown
       - name: swim-lessons
