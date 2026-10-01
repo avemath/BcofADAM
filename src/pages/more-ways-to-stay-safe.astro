@@ -1,0 +1,33 @@
+---
+import ProseLayout from '../layouts/ProseLayout.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { url } from '../lib/url';
+---
+
+<ProseLayout slug="water-safety-more">
+  <div class="card more-aside">
+    <p class="eyebrow">Near Blair County?</p>
+    <p>Lakes, rivers, cold water, ice and Pennsylvania’s life jacket rules, on one page.</p>
+    <a class="btn btn--ocean" href={url('/pennsylvania')}>Water safety in Pennsylvania</a>
+  </div>
+  <CtaBand
+    slot="after"
+    title="Start with the layers."
+    text="Supervision, barriers, alarms, swim skills, life jackets and CPR: the seven layers of protection for every age."
+  >
+    <a class="btn" href={url('/water-safety')}>See the seven layers</a>
+    <a class="btn btn--ghost" href={url('/checklist')}>Print the home checklist</a>
+  </CtaBand>
+</ProseLayout>
+
+<style>
+  .more-aside p:not(.eyebrow) {
+    margin-bottom: 1rem;
+  }
+  @media (min-width: 1000px) {
+    .more-aside {
+      position: sticky;
+      top: 100px;
+    }
+  }
+</style>

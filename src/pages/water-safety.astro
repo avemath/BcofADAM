@@ -8,12 +8,10 @@ import Wave from '../components/Wave.astro';
 import { layers } from '../data/layers';
 import { risks } from '../data/content';
 import { url } from '../lib/url';
-import { prose } from '../lib/prose';
 import { getEntry } from 'astro:content';
 
-// "More ways to stay safe" (teens, life jackets, pool recall, CPR), edited in the Studio.
+// "More ways to stay safe" has its own page now; this page points to it.
 const more = await getEntry('pages', 'water-safety-more');
-const moreHtml = more ? prose(more.rendered?.html) : '';
 ---
 
 <BaseLayout
@@ -24,16 +22,8 @@ const moreHtml = more ? prose(more.rendered?.html) : '';
     eyebrow="Layers of protection"
     title="No single layer is enough. Stack them."
     lede="We had locks and door alarms, and we thought that was enough. A fence, an alarm, a Water Watcher, swim skills, CPR: when one fails on a busy day, the next one is still there."
-    next="var(--deep)"
+    next="var(--sand)"
   />
-
-  <section class="section section--deep" style="padding-top: 24px">
-    <div class="wrap">
-      <LayersBuilder />
-    </div>
-  </section>
-
-  <Wave color="var(--sand)" bg="var(--deep)" />
 
   <section class="section">
     <div class="wrap layers-page">
@@ -66,6 +56,7 @@ const moreHtml = more ? prose(more.rendered?.html) : '';
             <article id={l.id} class="layer-detail reveal">
               <span class="layer-detail__num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
               <h2>{l.title}</h2>
+              <p class="layer-detail__short">{l.short}</p>
               {l.body.map((p) => <p>{p}</p>)}
               {l.family && (
                 <blockquote class="layer-family">
@@ -105,18 +96,29 @@ const moreHtml = more ? prose(more.rendered?.html) : '';
     </div>
   </section>
 
+  <Wave color="var(--deep)" bg="var(--sand)" />
+  <section class="section section--deep" id="builder">
+    <div class="wrap">
+      <div class="builder-intro reveal">
+        <span class="eyebrow">Try it</span>
+        <h2>Turn the layers on.</h2>
+        <p class="lede">Each one catches what the last one misses. Flip them on and watch what changes in the yard.</p>
+      </div>
+      <LayersBuilder />
+    </div>
+  </section>
+  <Wave color="var(--sand)" bg="var(--deep)" />
+
   {
     more && (
-      <section class="section more-safety" id="more" aria-labelledby="more-title">
+      <section class="section" id="more" style="padding-top: clamp(32px, 5vw, 56px)">
         <div class="wrap narrow">
-          {more.data.eyebrow && <span class="eyebrow">{more.data.eyebrow}</span>}
-          <h2 id="more-title">{more.data.title}</h2>
-          {more.data.lede && <p class="lede">{more.data.lede}</p>}
-          <p>
-            Live in or near Pennsylvania? See <a href={url('/pennsylvania')}>water safety in Pennsylvania</a> for
-            lakes, rivers, cold water, ice and our state’s life jacket rules.
-          </p>
-          <div class="prose more-safety__body" set:html={moreHtml} />
+          <div class="card more-link reveal">
+            {more.data.eyebrow && <p class="eyebrow">{more.data.eyebrow}</p>}
+            <h2>{more.data.title}</h2>
+            {more.data.lede && <p>{more.data.lede}</p>}
+            <a class="btn btn--ocean" href={url('/more-ways-to-stay-safe')}>Read more ways to stay safe</a>
+          </div>
         </div>
       </section>
     )
@@ -173,7 +175,6 @@ const moreHtml = more ? prose(more.rendered?.html) : '';
   >
     <a class="btn" href={url('/water-watcher')}>Take the pledge</a>
     <a class="btn btn--ghost" href={url('/checklist')}>Print the home checklist</a>
-    <a class="btn btn--ghost" href={url('/resources')}>More resources</a>
   </CtaBand>
 </BaseLayout>
 
@@ -203,15 +204,82 @@ const moreHtml = more ? prose(more.rendered?.html) : '';
     text-decoration: none;
     font-weight: 600;
   }
+  /* Phones and tablets: the jump list rides along the top as a row of chips, so you can always get to the next layer. */
+  @media (max-width: 999px) {
+    .layers-page > * {
+      min-width: 0;
+    }
+    .layers-toc {
+      position: sticky;
+      top: 72px;
+      z-index: 5;
+      padding: 8px 0;
+    }
+    .layers-toc::before {
+      content: '';
+      position: absolute;
+      inset: 0 calc(-1 * var(--gutter));
+      background: var(--sand);
+      border-bottom: 1px solid var(--line);
+      z-index: -1;
+    }
+    .layers-toc .eyebrow {
+      display: none;
+    }
+    .layers-toc ol {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      counter-reset: layer;
+    }
+    .layers-toc ol::-webkit-scrollbar {
+      display: none;
+    }
+    .layers-toc li {
+      flex: none;
+    }
+    .layers-toc a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 40px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid var(--line);
+      background: #fff;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+    .layers-toc a::before {
+      counter-increment: layer;
+      content: counter(layer, decimal-leading-zero);
+      margin-right: 7px;
+      color: var(--ocean);
+      font-weight: 800;
+    }
+  }
+  .layer-detail__short {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--ink-soft);
+    margin: -0.4em 0 1em;
+  }
+  .builder-intro {
+    max-width: 640px;
+    margin-bottom: 28px;
+  }
+  .more-link h2 {
+    margin-bottom: 0.4em;
+  }
+  .more-link p:not(.eyebrow) {
+    margin-bottom: 1.2rem;
+  }
   .layers-list {
     display: grid;
     gap: clamp(48px, 7vw, 88px);
     max-width: 760px;
-  }
-  .more-safety__body :global(h2) {
-    font-size: clamp(1.5rem, 1.5vw + 1rem, 2rem);
-    margin-top: 2.2em;
-    scroll-margin-top: 100px;
   }
   .layer-family {
     margin: 1.25em 0;
@@ -264,6 +332,13 @@ const moreHtml = more ? prose(more.rendered?.html) : '';
   .layer-detail {
     position: relative;
     scroll-margin-top: 100px;
+  }
+  @media (max-width: 999px) {
+    .layer-detail {
+      scroll-margin-top: 150px;
+    }
+  }
+  .layer-detail {
   }
   .layer-detail__num {
     display: block;
