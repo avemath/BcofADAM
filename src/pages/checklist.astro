@@ -23,8 +23,6 @@ const host = Astro.site?.host ?? 'becauseofadam.org';
 
       <div class="no-print checklist-actions">
         <button type="button" class="btn btn--ocean" data-print>Print or save as PDF</button>
-        <a class="btn btn--ghost" href={url('/water-safety')}>Learn about each layer</a>
-        <a class="btn btn--ghost" href={url('/flyer')}>Flyer for offices and daycares</a>
       </div>
       <p class="no-print checklist-saved" data-saved-note hidden>
         Your checks are saved on this device, so you can come back and finish later.
@@ -86,6 +84,11 @@ const host = Astro.site?.host ?? 'becauseofadam.org';
           <span>{site.name} · {host}</span>
         </p>
       </article>
+
+      <div class="no-print btn-row checklist-after">
+        <a class="btn btn--ghost" href={url('/water-safety')}>See the seven layers</a>
+        <a class="btn btn--ghost" href={url('/flyer')}>Flyer for offices and daycares</a>
+      </div>
     </div>
   </section>
 </BaseLayout>
@@ -147,6 +150,9 @@ const host = Astro.site?.host ?? 'becauseofadam.org';
     color: var(--ocean);
     text-decoration: underline;
     cursor: pointer;
+  }
+  .checklist-after {
+    margin-top: 8px;
   }
   .checklist-actions {
     display: flex;

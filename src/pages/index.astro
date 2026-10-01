@@ -5,16 +5,13 @@ import PhotoFrame from '../components/PhotoFrame.astro';
 import TimeOnPage from '../components/TimeOnPage.astro';
 import LayersBuilder from '../components/LayersBuilder.astro';
 import CtaBand from '../components/CtaBand.astro';
-import { nonfatal } from '../data/content';
 import HomeNumbers from '../components/HomeNumbers.astro';
 import { layers } from '../data/layers';
 import { home as story } from '../data/content';
-import FacebookFeed from '../components/FacebookFeed.astro';
-import PediatriciansSay from '../components/PediatriciansSay.astro';
 import AnywhereAnytime from '../components/AnywhereAnytime.astro';
 import EventCard from '../components/EventCard.astro';
 import { getEvents, splitEvents } from '../lib/events';
-import { site, hasDonate } from '../data/site';
+import { site } from '../data/site';
 import { isr } from '../data/content';
 import { url } from '../lib/url';
 import { withAge } from '../lib/age';
@@ -27,8 +24,7 @@ const { upcoming } = splitEvents(events);
 // Highlight the key phrase in the hero intro if it's there.
 const ledeParts = (story.heroLede ?? '').split('#1 cause of death');
 // The second survivors number (hospital stays) sits next to the survivors section.
-const survivorStat = nonfatal[1] ?? nonfatal[0];
-const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upcoming.includes(e))].slice(0, 3);
+const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upcoming.includes(e))].slice(0, 1);
 ---
 
 <BaseLayout
@@ -44,7 +40,7 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     </div>
     <div class="wrap hero__inner">
       <p class="hero__eyebrow">
-        Because of <strong>ADAM</strong> · <span>{site.tagline}</span>
+        <span class="hero__eyebrow-name">Because of <strong>ADAM</strong> · </span><span>{site.tagline}</span>
       </p>
       <h1 class="hero__title">
         <span class="hero__line">Drowning is silent.</span>{' '}
@@ -73,6 +69,36 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
 
   <!-- THE NUMBERS -->
   <HomeNumbers />
+
+  <!-- TONIGHT -->
+  <section class="section" style="padding-top: clamp(32px, 5vw, 64px)">
+    <div class="wrap">
+      <span class="eyebrow">Start tonight</span>
+      <h2>{story.tonightTitle}</h2>
+      {story.tonightIntro && <p class="lede layers-lede">{story.tonightIntro}</p>}
+      <ol class="tonight">
+        {
+          (story.tonight ?? []).map((t, i) => (
+            <li class="card reveal">
+              <span class="tonight__num" aria-hidden="true">{i + 1}</span>
+              <p>{t}</p>
+            </li>
+          ))
+        }
+      </ol>
+      <div class="btn-row">
+        <a class="btn btn--ocean" href={url('/water-safety')}>See the {countWord(layers.length).toLowerCase()} layers</a>
+        <a class="btn btn--ghost" href={url('/checklist')}>Print the home checklist</a>
+      </div>
+      <div class="missing-callout reveal" role="note">
+        <h3>If a child is missing, check the water first.</h3>
+        <p>
+          Pools, hot tubs, ponds, bathtubs, even buckets. Every second counts. Call 911 and start CPR if you’re trained.
+        </p>
+        <a href={url('/water-safety#emergency')}>What to do in an emergency →</a>
+      </div>
+    </div>
+  </section>
 
   <!-- ANYWHERE, ANYTIME -->
   <Wave color="var(--deep)" bg="var(--sand)" />
@@ -104,6 +130,7 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
       <TimeOnPage />
     </div>
   </section>
+  <Wave color="var(--abyss)" bg="var(--deep)" />
 
   <!-- LAYERS BUILDER -->
   <section id="layers" class="section section--abyss">
@@ -119,40 +146,9 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
       <LayersBuilder />
     </div>
   </section>
-  <Wave color="var(--sand)" bg="var(--abyss)" />
-
-  <!-- TONIGHT -->
-  <section class="section" style="padding-top: clamp(32px, 5vw, 64px)">
-    <div class="wrap">
-      <span class="eyebrow">Start tonight</span>
-      <h2>{story.tonightTitle}</h2>
-      {story.tonightIntro && <p class="lede layers-lede">{story.tonightIntro}</p>}
-      <ol class="tonight">
-        {
-          (story.tonight ?? []).map((t, i) => (
-            <li class="card reveal">
-              <span class="tonight__num" aria-hidden="true">{i + 1}</span>
-              <p>{t}</p>
-            </li>
-          ))
-        }
-      </ol>
-      <div class="btn-row">
-        <a class="btn btn--ocean" href={url('/water-safety')}>See all {countWord(layers.length).toLowerCase()} layers</a>
-        <a class="btn btn--ghost" href={url('/checklist')}>Print the home checklist</a>
-      </div>
-      <div class="missing-callout reveal" role="note">
-        <h3>If a child is missing, check the water first.</h3>
-        <p>
-          Pools, hot tubs, ponds, bathtubs, even buckets. Every second counts. Call 911 and start CPR if you’re trained.
-        </p>
-        <a href={url('/water-safety#emergency')}>What to do in an emergency →</a>
-      </div>
-    </div>
-  </section>
+  <Wave color="var(--deep)" bg="var(--abyss)" />
 
   <!-- ISR -->
-  <Wave color="var(--deep)" bg="var(--sand)" />
   <section class="section section--deep isr-band">
     <div class="wrap split">
       <div class="reveal">
@@ -177,16 +173,11 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
           <a class="btn btn--ghost" href={url('/swim-lessons#find')}>Find an instructor near you</a>
         </div>
       </div>
-      <div class="isr-side">
       <div class="isr-card reveal">
         <p class="isr-card__label">Why this is personal</p>
         <p class="isr-card__name">Adam’s nearest ISR instructor was two hours away.</p>
         <p>After Adam drowned, our dad became one. Wherever you live, ISR’s map lists every certified instructor near you.</p>
         <p class="isr-card__quote">“Skills before thrills. Sometimes there are no do-overs.”</p>
-      </div>
-      <div class="isr-peds reveal">
-        <PediatriciansSay level={3} />
-      </div>
       </div>
     </div>
   </section>
@@ -194,7 +185,7 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
 
   <!-- SURVIVORS -->
   <section class="section section--foam" style="padding-top: clamp(32px, 5vw, 64px)">
-    <div class="wrap split split--wide-left">
+    <div class="wrap narrow">
       <div class="reveal">
         <span class="eyebrow">Survivors & families</span>
         <h2>Surviving is only the beginning.</h2>
@@ -207,20 +198,17 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
           <a class="btn btn--ocean" href={url('/survivors-and-families')}>Support for families</a>
         </div>
       </div>
-      {
-        survivorStat && (
-          <div class="survivor-stat card reveal">
-            <p class="stat__num">{survivorStat.stat}</p>
-            <p>{survivorStat.label}</p>
-            <a class="source" href={survivorStat.sourceUrl} rel="noopener" target="_blank">
-              Source: {survivorStat.source}
-              <span class="visually-hidden"> for “{survivorStat.stat}” (opens in a new tab)</span>
-            </a>
-          </div>
-        )
-      }
     </div>
   </section>
+
+  <!-- PLEDGE -->
+  <CtaBand
+    title="Be the Water Watcher."
+    text="“Do whatever you can to keep your eyes on children that cannot swim, especially during parties.” That’s our mom, July 4, 2019. Promise to be the one adult whose only job is the water, and print your card."
+  >
+    <a class="btn" href={url('/water-watcher')}>Take the pledge</a>
+    <a class="btn btn--ghost" href={url('/quiz')}>Take the quiz</a>
+  </CtaBand>
 
   <!-- EVENTS -->
   {
@@ -228,9 +216,9 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
       <section class="section">
         <div class="wrap">
           <span class="eyebrow">Events & fundraisers</span>
-          <h2>Come find Adam’s village.</h2>
+          <h2>Next up.</h2>
           <p class="lede">Cornhole in Duncansville, blue shirts every June 5, and a tent with a “Never swim alone” poster. Come meet the village.</p>
-          <div class="grid grid--3" style="margin-top: 32px">
+          <div class="home-events" style="margin-top: 32px">
             {homeEvents.map((e) => <EventCard event={e} />)}
           </div>
           <div class="btn-row">
@@ -241,71 +229,6 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     )
   }
 
-  <!-- FACEBOOK -->
-  {
-    site.showFacebookFeed && (
-      <section class="section section--foam">
-        <div class="wrap split fb-split">
-          <div class="reveal">
-            <span class="eyebrow">Follow along</span>
-            <h2>Adam’s Village of Hope</h2>
-            <p class="lede">
-              Thousands of people follow Adam on Facebook. It’s where Mom shares the small miracles, we post our
-              events, and everyone gets a water safety reminder before the holidays.
-            </p>
-            <div class="btn-row">
-              <a class="btn btn--ocean" href={site.facebookUrl} rel="noopener" target="_blank">Follow us on Facebook</a>
-            </div>
-          </div>
-          <FacebookFeed maxHeight={860} />
-        </div>
-      </section>
-    )
-  }
-
-  <!-- PLEDGE -->
-  <CtaBand
-    title="Be the Water Watcher."
-    text="“Do whatever you can to keep your eyes on children that cannot swim, especially during parties.” That’s our mom, July 4, 2019. Promise to be the one adult whose only job is the water, and print your card."
-  >
-    <a class="btn" href={url('/water-watcher')}>Take the pledge</a>
-    <a class="btn btn--ghost" href={url('/get-involved')}>More ways to help</a>
-  </CtaBand>
-
-  <!-- GET INVOLVED -->
-  <section class="section">
-    <div class="wrap">
-      <span class="eyebrow">Join the movement</span>
-      <h2>Adam’s village is growing.</h2>
-      <div class="grid grid--3" style="margin-top: 32px">
-        {
-          hasDonate ? (
-            <a class="card join reveal" href={url('/donate')}>
-              <h3>Give</h3>
-              <p>Help put Water Watcher tags, alarms, CPR and water safety education within reach of more families.</p>
-              <span class="join__go">Donate →</span>
-            </a>
-          ) : (
-            <a class="card join reveal" href={url('/water-watcher')}>
-              <h3>Pledge</h3>
-              <p>Promise to be a Water Watcher, print your card, and ask your family to do the same.</p>
-              <span class="join__go">Take the pledge →</span>
-            </a>
-          )
-        }
-        <a class="card join reveal" href={url('/get-involved')}>
-          <h3>Share</h3>
-          <p>Ready-to-post messages that put water safety in front of the people you love.</p>
-          <span class="join__go">Get the toolkit →</span>
-        </a>
-        <a class="card join reveal" href={url('/request-a-talk')}>
-          <h3>Invite us</h3>
-          <p>Schools, daycares, churches and community groups: we’ll share Adam’s story and the layers of protection.</p>
-          <span class="join__go">Request a talk →</span>
-        </a>
-      </div>
-    </div>
-  </section>
 </BaseLayout>
 
 <style>
@@ -384,6 +307,11 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     color: #fff;
     font-weight: 800;
   }
+  @media (max-width: 639px) {
+    .hero__eyebrow-name {
+      display: none;
+    }
+  }
   .hero__title {
     font-size: clamp(3rem, 8.4vw + 0.5rem, 7.6rem);
     text-shadow: 0 2px 30px rgb(4 29 43 / 0.35);
@@ -450,8 +378,15 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     padding: 0;
     margin: 0 0 8px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 16px;
+    gap: 12px;
+    max-width: 720px;
+  }
+  .tonight li {
+    display: grid;
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 14px;
+    align-items: center;
+    padding: 16px 18px;
   }
   .tonight p {
     margin: 0;
@@ -468,7 +403,6 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     background: var(--foam);
     color: var(--ocean);
     font-weight: 800;
-    margin-bottom: 14px;
   }
   .missing-callout {
     margin-top: 28px;
@@ -491,9 +425,6 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
   }
 
   /* ---------- Survivors ---------- */
-  .survivor-stat .stat__num {
-    font-size: clamp(3.5rem, 6vw, 5.5rem);
-  }
 
   /* ---------- ISR ---------- */
   .isr-band {
@@ -512,10 +443,6 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     color: var(--on-dark);
     font-weight: 600;
     max-width: 52ch;
-  }
-  .isr-side {
-    display: grid;
-    gap: 24px;
   }
   .isr-card {
     background:
@@ -548,12 +475,6 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     padding-top: 1em;
     border-top: 1px solid rgb(255 255 255 / 0.25);
   }
-  .fb-split {
-    align-items: start;
-  }
-  .fb-split :global(.fb-feed) {
-    justify-self: center;
-  }
   /* Give the feed the bigger side on wide screens so it can scale up. */
   @media (min-width: 900px) {
     .fb-split {
@@ -565,24 +486,8 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     }
   }
 
-  /* ---------- Join ---------- */
-  .join {
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    color: var(--ink);
-    transition:
-      transform 0.25s ease,
-      box-shadow 0.25s ease;
+  .home-events {
+    max-width: 460px;
   }
-  .join:hover {
-    color: var(--ink);
-    transform: translateY(-4px);
-    box-shadow: 0 24px 40px -20px rgb(4 29 43 / 0.45);
-  }
-  .join__go {
-    margin-top: auto;
-    font-weight: 700;
-    color: var(--ocean);
-  }
+
 </style>

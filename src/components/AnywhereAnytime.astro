@@ -35,11 +35,8 @@ const spoken =
       <p class="lede">{anywhere.lede}</p>
     </div>
 
-    <p class="anywhere__swipe" aria-hidden="true">
-      <span class="anywhere__swipe--touch">Swipe for more →</span>
-      <span class="anywhere__swipe--mouse">Scroll sideways for more →</span>
-    </p>
-    <div class="grid grid--3 anywhere__grid">
+    <div data-carousel>
+    <div class="grid grid--3 anywhere__grid" data-carousel-track>
       {
         (anywhere.places ?? []).map((p) => (
           <article class="card anywhere__card reveal">
@@ -86,6 +83,16 @@ const spoken =
         ))
       }
     </div>
+    {
+      (anywhere.places ?? []).length > 1 && (
+        <div class="anywhere__dots">
+          {(anywhere.places ?? []).map((p, i) => (
+            <button type="button" data-to={i} aria-label={`Show ${p.title} (${i + 1} of ${(anywhere.places ?? []).length})`} aria-current={i === 0 ? 'true' : 'false'} />
+          ))}
+        </div>
+      )
+    }
+    </div>
 
     {
       anywhere.quote && (
@@ -97,7 +104,7 @@ const spoken =
     }
 
     <div class="btn-row anywhere__cta">
-      <a class="btn" href={url('/water-safety')}>See every layer of protection</a>
+      <a class="btn" href={url('/water-safety')}>See the seven layers</a>
     </div>
   </div>
 </section>
@@ -203,14 +210,14 @@ const spoken =
   .anywhere__grid {
     margin-top: clamp(32px, 5vw, 56px);
   }
-  .anywhere__swipe {
+  .anywhere__dots {
     display: none;
   }
   /* Phones: a row of cards you swipe through, instead of one very long column. */
   @media (max-width: 759px) {
     .anywhere__grid {
       grid-auto-flow: column;
-      grid-auto-columns: 84%;
+      grid-auto-columns: 86%;
       gap: 14px;
       overflow-x: auto;
       overscroll-behavior-x: contain;
@@ -218,29 +225,41 @@ const spoken =
       margin-inline: calc(-1 * var(--gutter));
       padding: 4px var(--gutter) 16px;
       scroll-padding-inline: var(--gutter);
-      scrollbar-width: thin;
+      scrollbar-width: none;
+    }
+    .anywhere__grid::-webkit-scrollbar {
+      display: none;
     }
     .anywhere__card {
       scroll-snap-align: start;
     }
-    .anywhere__swipe {
-      display: block;
-      margin: 18px 0 0;
-      text-align: center;
-      font-size: 0.9rem;
-      color: var(--on-dark-soft);
+    .anywhere__dots {
+      display: flex;
+      justify-content: center;
+      margin-top: -2px;
     }
-  }
-  /* "Swipe" only makes sense on touch screens. */
-  .anywhere__swipe--touch {
-    display: none;
-  }
-  @media (hover: none) {
-    .anywhere__swipe--touch {
-      display: inline;
+    .anywhere__dots button {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      border: 0;
+      background: none;
+      cursor: pointer;
     }
-    .anywhere__swipe--mouse {
-      display: none;
+    .anywhere__dots button::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      border: 2px solid var(--on-dark-soft);
+      transition: width 0.25s ease;
+    }
+    .anywhere__dots button[aria-current='true']::before {
+      width: 24px;
+      border-color: var(--sun);
+      background: var(--sun);
     }
   }
   .anywhere__card {

@@ -365,17 +365,21 @@ a:hover {
 .prose .story-figure {
   margin: 2em 0;
 }
+.prose h2 + .story-figure {
+  margin-top: 1em;
+}
 .prose .story-figure img {
   display: block;
   width: auto;
   max-width: 100%;
-  max-height: min(620px, 78vh);
+  max-height: min(520px, 65vh);
   margin: 0 auto;
   box-shadow: 0 30px 60px -30px rgb(4 29 43 / 0.55);
 }
 .prose .story-figure figcaption {
   margin-top: 12px;
   text-align: center;
+  text-wrap: balance;
   font-size: 0.92rem;
   color: var(--ink-soft);
 }

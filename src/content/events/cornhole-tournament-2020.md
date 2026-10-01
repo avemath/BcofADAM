@@ -7,6 +7,9 @@ summary: A double-elimination tournament with pulled pork (or two hot dogs), a
   jambalaya side, dessert, a snack cart, poker darts and a cornhole-board
   raffle. Bags started flying at 1 p.m., and the day raised money and awareness
   for water safety and CPR education in our community.
+photo: /images/uploads/cornhole_countdown.jpg
+photoAlt: Adam in his stroller holding a little chalkboard that says 1 day until cornhole
+photoWhole: true
 featured: false
 draft: false
 ---

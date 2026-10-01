@@ -10,7 +10,7 @@ import { site } from '../data/site';
 
 <ProseLayout slug="adams-story" type="Article">
   <div class="story-aside">
-    <PhotoFrame src={story.photo} alt={story.photoAlt} hint="Add a photo of Adam" />
+    <PhotoFrame src={story.storyPhoto || story.photo} alt={story.storyPhoto ? story.storyPhotoAlt : story.photoAlt} caption={story.storyPhoto ? story.storyPhotoCaption : undefined} hint="Add a photo of Adam" />
     <div class="card story-aside__card">
       <p class="eyebrow">Adam’s Village of Hope</p>
       <p>Follow Adam on Facebook and join the thousands cheering him on.</p>
@@ -29,7 +29,7 @@ import { site } from '../data/site';
     title="Every family can add a layer today."
     text="Learn the layers that stand between a toddler and the water."
   >
-    <a class="btn" href={url('/water-safety')}>Learn the layers</a>
+    <a class="btn" href={url('/water-safety')}>See the seven layers</a>
     <a class="btn btn--ghost" href={url('/water-watcher')}>Take the pledge</a>
   </CtaBand>
 </ProseLayout>
@@ -39,7 +39,17 @@ import { site } from '../data/site';
     display: grid;
     gap: 24px;
   }
-  @media (min-width: 1000px) {
+  /* Phones and tablets: the photo goes above the story, the cards stay after it. */
+  @media (max-width: 999px) {
+    .story-aside {
+      display: contents;
+    }
+    .story-aside > :global(.photo) {
+      order: -1;
+    }
+  }
+  /* Desktop: the column sticks beside the story on screens tall enough to show all of it. */
+  @media (min-width: 1000px) and (min-height: 1040px) {
     .story-aside {
       position: sticky;
       top: 100px;

@@ -24,8 +24,10 @@ interface Props {
   submitLabel: string;
   /** Shown when there's no form service yet. */
   fallbackTitle: string;
+  /** One sentence on what to put in the email (when there's no form service yet). */
+  fallbackHint?: string;
 }
-const { id, fields, subject, submitLabel, fallbackTitle } = Astro.props;
+const { id, fields, subject, submitLabel, fallbackTitle, fallbackHint = 'Tell us who you are and what it’s about.' } = Astro.props;
 const action = site.contactFormAction.trim();
 const key = site.contactFormKey.trim();
 const mailto = `mailto:${site.email}?subject=${encodeURIComponent(subject)}`;
@@ -98,12 +100,10 @@ const mailto = `mailto:${site.email}?subject=${encodeURIComponent(subject)}`;
   ) : (
     <div class="card site-form site-form--fallback">
       <h2>{fallbackTitle}</h2>
-      <p>
-        Email us at <a href={mailto}>{site.email}</a> and include:
-      </p>
-      <ul>
-        {fields.filter((f) => f.name !== 'email').map((f) => <li>{f.label.replace(/\?$/, '')}</li>)}
-      </ul>
+      <p>{fallbackHint}</p>
+      <div class="btn-row">
+        <a class="btn btn--ocean" href={mailto}>Email {site.email}</a>
+      </div>
       <p class="site-form__privacy">We read every message and reply as soon as we can.</p>
     </div>
   )
@@ -214,7 +214,10 @@ const mailto = `mailto:${site.email}?subject=${encodeURIComponent(subject)}`;
     color: var(--ink-soft);
     margin: 0;
   }
-  .site-form--fallback ul {
-    margin: 0 0 0.5em;
+  .site-form--fallback .btn-row {
+    margin: 0;
+  }
+  .site-form--fallback .btn {
+    overflow-wrap: anywhere;
   }
 </style>
