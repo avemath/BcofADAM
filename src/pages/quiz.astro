@@ -109,7 +109,7 @@ const host = Astro.site?.host ?? 'becauseofadam.org';
 
   <CtaBand title="Now make it a habit." text="Knowing is the first layer. Name a Water Watcher every time, and share the layers with the people who watch your kids.">
     <a class="btn btn--ocean" href={url('/water-watcher')}>Take the Water Watcher pledge</a>
-    <a class="btn btn--ghost" href={url('/water-safety')}>Learn the layers</a>
+    <a class="btn btn--ghost" href={url('/water-safety')}>See the seven layers</a>
   </CtaBand>
 
   <script>
@@ -479,5 +479,19 @@ const host = Astro.site?.host ?? 'becauseofadam.org';
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
     }
+  }
+  /* The running score stays in view while you work down the page. */
+  .quiz__progress {
+    position: sticky;
+    top: 72px;
+    z-index: 5;
+    background: var(--sand);
+    padding: 10px 0;
+  }
+  /* "Check my answer" is quiet until an answer is picked. */
+  .quiz__q:not(:has(input:checked)) .quiz__check {
+    --btn-bg: transparent;
+    --btn-fg: var(--ocean);
+    border-color: var(--ocean);
   }
 </style>
