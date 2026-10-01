@@ -26,7 +26,7 @@ const promises = [
   />
 
   <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
-    <div class="wrap split">
+    <div class="wrap split" style="align-items: start">
       <form class="pledge card" data-pledge>
         <h2>I promise…</h2>
         <p class="pledge__why">
@@ -239,5 +239,20 @@ const promises = [
       print-color-adjust: exact;
       box-shadow: none;
     }
+  }
+  /* All seven promises ticked: the card gets a gold edge and printing the card becomes the main button. */
+  .is-complete {
+    outline: 3px solid var(--sun);
+    outline-offset: 6px;
+  }
+  .is-complete [data-share] {
+    --btn-bg: transparent;
+    --btn-fg: currentColor;
+    border-color: currentColor;
+  }
+  .is-complete [data-print] {
+    --btn-bg: var(--sun);
+    --btn-fg: var(--abyss);
+    border-color: var(--sun);
   }
 </style>
