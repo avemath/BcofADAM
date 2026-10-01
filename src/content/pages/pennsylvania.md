@@ -19,7 +19,7 @@ Open water isn’t a pool. Before you go:
 
 - **Check for a lifeguard.** At Canoe Creek State Park, the beach is open from late May to September, and the state park’s own page says to swim at your own risk ([Pennsylvania DCNR](https://www.pa.gov/agencies/dcnr/recreation/where-to-go/state-parks/find-a-park/canoe-creek-state-park/swimming)). Where there’s no lifeguard, you are the lifeguard.
 - **Swim with a buddy, never alone,** and only where lifeguards are on duty when you can ([American Academy of Pediatrics](https://www.healthychildren.org/English/safety-prevention/at-play/Pages/Water-Safety-for-Older-Children.aspx)).
-- **Put young children and weak swimmers in a life jacket,** even on shore. See [life jackets](/water-safety#life-jackets) for how to pick one that fits.
+- **Put young children and weak swimmers in a life jacket,** even on shore. See [life jackets](/more-ways-to-stay-safe#life-jackets) for how to pick one that fits.
 
 ## Cold water in spring and fall
 
@@ -41,7 +41,7 @@ In Pennsylvania, children 12 and under must wear a life jacket on any boat 20 fe
 
 ## Backyard and public pools
 
-More than 7 in 10 children who die in a pool or spa drown at a home ([CPSC, 2026](https://www.cpsc.gov/Newsroom/News-Releases/2026/CPSC-Report-Highlights-Persistent-Risk-of-Childhood-Drowning)). Stack every [layer of protection](/water-safety) you can, and check your above-ground pool against the [compression strap recall](/water-safety#check-your-above-ground-pool-for-a-recall).
+More than 7 in 10 children who die in a pool or spa drown at a home ([CPSC, 2026](https://www.cpsc.gov/Newsroom/News-Releases/2026/CPSC-Report-Highlights-Persistent-Risk-of-Childhood-Drowning)). Stack every [layer of protection](/water-safety) you can, and check your above-ground pool against the [compression strap recall](/more-ways-to-stay-safe#check-your-above-ground-pool-for-a-recall).
 
 At public pools, the Pennsylvania Department of Health says to have a responsible adult watch young children, even when lifeguards are on duty, use the buddy system, find the lifesaving equipment before you get in, and never go into water that’s cloudy ([Pennsylvania Department of Health](https://www.pa.gov/agencies/health/business-registration-and-regulation/bathing-places/pool-safety)).
 
