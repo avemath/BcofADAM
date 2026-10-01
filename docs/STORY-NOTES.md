@@ -71,28 +71,34 @@ Full-size photos live in `public/images/uploads/` (uploaded through GitHub or th
 | `momdadaj-1.jpg` | Adam's Story, after Dad's bath-time quote | Mom, Dad and baby Adam |
 | `aj_plants.jpg` | Adam's Story, the 2017 garden | Adam in front of the seedling trays |
 | `ricgradredbikeb4acc-1.jpg` | Adam's Story, June 5 | Rickey's graduation; "days before" rests on Mom's "graduation week" (the Anywhere page) and "had just graduated." The closet line is Mom's, March 22, 2021 |
-| `picu.jpg` | Adam's Story, PICU | Mom holding Adam in the PICU; her badge reads 7-3-17, the day of her first cuddle (July 5, 2017 post). The one hospital photo on the site; **family, confirm it stays** |
-| `adams_village.jpg` | Adam's Story, September 2017; Events (Adam's Hope benefit 2017) | Light blue bee-logo Adam's Hope shirts (the 2017 design), Adam in front; Adam was in Louisiana that September. Captioned without a place. **Family, please confirm this is the 2017 benefit on the bayou** |
-| `fishingrodeo.jpg` | Events (fishing rodeo) | The packed pavilion. The family's filename says fishing rodeo, but every legible shirt is the light blue 2017 benefit design, not the royal blue 2018 rodeo shirts, so the alt names no event. **Family: 2017 benefit or 2018 rodeo?** |
-| `fr17.jpg` | Adam's Story, the 2018 rodeo | Mom, Lea (the Adam's Hope logo painted on her cheek) and Adam; the photo itself says "Adams Hope Fishing Rodeo 2018". The editor flagged the baked-in text: **if the original without the overlay exists, swap it in** |
+| `picu.jpg` | Adam's Story, PICU | Mom holding Adam in the PICU; her badge reads 7-3-17, the day of her first cuddle (July 5, 2017 post). Hospital photos are fine with the family (Oct. 2026) |
+| `lea_stuffed_animals.jpg` | Adam's Story, after the crib moment | Lea on the floor of Adam's hospital room with his stuffed animals lined up |
+| `captainaj.jpg` | Adam's Story, after coming home | Halloween 2017 (Mom's Nov. 1, 2017 post): Lea the mermaid, Adam the captain of the S.S. Adam. The first Halloween after he came home in early October |
+| `adams_village.jpg` | Events (Adam's Hope benefit 2017) | Light blue bee-logo Adam's Hope shirts (the 2017 design), Adam in front; Adam was in Louisiana that September. Avery: "It may be the 2017 benefit" |
+| `fishingrodeo.jpg` | Adam's Story, "That September, our hometown packed a pavilion" | The packed pavilion. Every legible shirt is the light blue 2017 benefit design (the 2018 rodeo shirts are royal blue), Mom's Sept. 27, 2017 post praised the venue, and Avery said the file was named on sight, so it's captioned as the September 2017 benefit |
+| `fr17.jpg` | Adam's Story, the 2018 rodeo | Mom, Lea (the Adam's Hope logo painted on her cheek) and Adam; the "Adams Hope Fishing Rodeo 2018" text is a Snapchat filter from the event and there is no copy without it |
 | `fr3.jpg` | Get Involved | The crowd under the tent at the rodeo, Adam in the middle (2018 per the fr-series) |
+| `fr4.jpg` | Events (fishing rodeo) | Family and friends in the royal blue rodeo shirts under the pavilion by the water, Adam in front |
 | `lea_dad_garden.jpg` | Adam's Story, "Planting seeds" | Dad and Lea at the raised bed. Year not stated in the caption |
 | `mom-nurse-1.jpg` | Adam's Story, "Planting seeds" | Mom's nursing graduation, family around her |
 | `aj_smile.jpg` | Adam's Story, "Because of Adam" | Adam in glasses, "Mom's amazing dude" sweatshirt |
 | `mom_and_adam_at_softball_game.jpg` | Adam's Story, the games paragraph | Mom and Adam on a blanket at a softball game (the filename doesn't say whose). Adam's red, white and blue shirt matches Mom's July 4, 2019 "ballpark last week" post |
 | `avery_and_aj2.jpg` | Adam's Story, the nights in his room | Avery and Adam, Tigers jersey |
 | `leaaj2.jpg` | Adam's Story, under Lea's quote | Lea and Adam in the armchair; Mom calls Lea his best friend (July 11, 2017; Sept. 6, 2018) |
-| `disney.jpg` | About, family photo | Eight people in "The ___ One" shirts at the Seven Dwarfs Mine Train; Adam is "The Charming One," Lea is Snow White. **Family: who is the eighth person, and are they fine being on the site?** The caption no longer counts heads |
+| `disney.jpg` | About, family photo | The family plus Rickey's girlfriend (she's fine with it, per Avery) in "The ___ One" shirts at the Seven Dwarfs Mine Train; Adam is "The Charming One," Lea is Snow White |
 | `mom_and_aj.jpg` | About, Mom's card | Mom and Adam, Halloween 2019 (the family's "Up" year, Mom's post of Nov. 9, 2019) |
 | `new_normal.jpg` | About, Dad's card | Dad and Adam on a train ride |
 | `xmaspic.jpg` | About, siblings' card | The kids under the Christmas blanket |
 | `lea_and_adam.jpg` | Survivors & Families, top | Lea as Kevin and Adam as Russell from "Up," Halloween 2019 (Mom's post of Nov. 9, 2019) |
 | `beach_lifegoeson.jpg` | Survivors & Families, beside "What nonfatal drowning means" | Adam at the beach between two grown-ups (captioned only "Adam at the beach") |
-| `dad-teaching-a-float.jpg` | ISR Swim Lessons | A crop of `dadisr.jpg` with the business name cropped off the top and bottom. It is a pool photo with a student who isn't family, from Dad's own public ad. **Family: please confirm the student's parents are fine with this photo on the site** |
-| `booth-2021.jpg` | Events (Water Safety Booth 2021) | A crop of `duncansville_days_bcofadam.jpg` with the ISR business banner cropped off the right and the business name on the table runner blurred. The alt says "a July 2021 community event" until the family confirms it was Duncansville Community Days |
-| `200_club.jpg` | Events (Adam's Army 200 Club, 2018) | The group at the Duncansville Community Center. Both 200 Club nights (Oct. 14, 2017 and Oct. 13, 2018) were there, and Adam looks young in this one. **Family: 2017 or 2018?** The alt names no year |
+| `dad-teaching-a-float.jpg` | ISR Swim Lessons | A crop of `dadisr.jpg` with the business name cropped off the top and bottom. Fine with the family (Oct. 2026) |
+| `adam-wedding-2025.jpg` | Survivors & Families, "Life after a drowning" | `aj_2025.jpg` turned upright: Adam in a bow tie and flat cap at an outdoor wedding, an older couple leaning in. Captioned only "Adam at a wedding, 2025" (the year is the family's filename) |
+| `lea_and_aj_kiss.jpg` | Survivors & Families, the note for brothers and sisters | Lea kissing the top of Adam's head in a hospital bed |
+| `snowman.jpg` | Pennsylvania, after "Ice on ponds and lakes" | Two of the family building a snowman, Adam watching from his stroller |
+| `booth-2021.jpg` | Events (Water Safety Booth 2021) | A crop of `duncansville_days_bcofadam.jpg` with the ISR business banner cropped off the right and the business name on the table runner blurred. Duncansville Community Days, per the family's filename |
+| `200_club.jpg` | Events (200 Club dinner, Oct. 14, 2017) | The group at the Duncansville Community Center. Adam has the short, light hair of 2017 (by the July 2018 rodeo he had curls), so it's on the 2017 dinner. The 2018 night shows its flyer, `200_club_benefit2.jpg` |
 | `cornhole_countdown.jpg` | Events (Cornhole 2020) | Adam with the "1 day until cornhole" chalkboard |
-| `rocks2.jpg` | Events (Adam Rocks) | The Halloween batch of painted rocks (fall 2018, Mom's posts of Sept. 15 and Oct. 30, 2018). `rocks.jpg` is **not used**: it is from March 2019 and the rocks were painted for Amelia, another family's child, so her name stays off the site |
+| `rocks.jpg` | Events (Adam Rocks) | The rocks our family painted for Amelia, a local girl fighting cancer (Mom's March 12, 2019 post). Avery: the rocks aren't only about Adam. The event text now follows Mom's posts: the church group (May 1, 2018), hiding rocks in Altoona (April 20, 2018), "Rocks in my pocket" (June 17, 2018), rocks for other families. `rocks2.jpg` (the Halloween batch) is unused |
 | `momsswing.jpg` | Events (Wear Blue), News | Mom's swing painting |
 | `adamchildofgodheadshot.jpg` | Home, "Meet Adam" | Adam in the "Child of God" headband |
 | `cornhole-2021-flyer.jpg` | Events (Cornhole 2021) | The flyer |
@@ -101,7 +107,7 @@ Uploaded but **not used on purpose**: `lesisrddays.jpg`, `dadisr.jpg` and `dunca
 
 Lightly brightened in October 2026 so they read on a phone (no other edits): `aj_plants.jpg`, `picu.jpg`, `avery_and_aj2.jpg`, `xmaspic.jpg`, `fishingrodeo.jpg`. `before_aj_mess.jpg` was brightened and cropped tighter (the countertop at the top is gone, so Adam is bigger in the frame). The originals are in the git history and on Facebook.
 
-Kept off the site: hospital and medical photos (one PICU photo excepted), bath and pool photos, the newspaper photo, siblings' personal photos, and flyers with phone numbers or the prayersforadam PayPal.
+In October 2026 Avery said anything in the uploads folder can go on the site, hospital photos included; she'll say if she doesn't like one. Still held back on purpose: `right_after.jpg` (Adam intubated on the night of June 5; the day stays non-graphic), flyers with phone numbers or the PayPal link (`cornhole.jpg`, `200_club_benefit.jpg`), `dadisr.jpg` and `duncansville_days_bcofadam.jpg` uncropped (Dad's business name), and the personal photos that don't serve a page. Available if wanted: `decorating_xmas_tree.jpg`, `small_hospital_couch.jpg`, `aj+ric.jpg` (Rickey with baby Adam on his shoulders, for "her bookends"), `avery_and_aj.jpg` (Avery asleep with baby Adam), `planting_seeds2.jpg` and `lea_plants.jpg` (the 2020 seed trays), `yoda.jpg` (Adam as Baby Yoda on his fifth birthday, Mom's March 22, 2021 post), `mawmaw_and_aj.jpg`, `pawpaw_aj.jpg`, `mom+dad.jpg` (their wedding, 1995).
 
 ## What we keep off the website
 
