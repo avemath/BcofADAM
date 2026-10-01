@@ -722,6 +722,12 @@ content:
           - name: feature
             label: Show this one big, with the picture of children
             type: boolean
+          - name: picture
+            label: Small picture (for the other three)
+            type: select
+            options:
+              values: [none, ages, homes, fence]
+            description: "ages: four children growing from age 1 to 4. homes: ten houses, with as many filled in as the number says (70% fills 7). fence: a yard where the house is the fourth side next to one fenced all the way around."
           - name: link
             label: Link (optional)
             type: string
