@@ -68,7 +68,7 @@ Dad’s favorite memory of him isn’t one moment. It’s a routine. When a repo
 >
 > *Dad*
 
-He said something else in that interview, too: *“Our lives weren’t perfect but our family was.”*
+He said something else in that interview, too: *“Our lives weren’t perfect but our family was.”* It still is.
 
 ## Planting seeds
 
