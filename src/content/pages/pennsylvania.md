@@ -31,6 +31,10 @@ A warm day doesn’t mean warm water. When water is colder than 70°F, falling i
 
 Ice can look solid when it isn’t. Keep kids off frozen ponds and lakes unless an adult has checked the ice. Pennsylvania’s state parks recommend at least 4 inches of solid ice for one skater and at least 7 inches for a small group ([Pennsylvania DCNR](https://www.pa.gov/agencies/dcnr/recreation/what-to-do/sledding-and-ice-skating)).
 
+![Two of us building a snowman while Adam watches from his stroller, bundled up in a knit hat and boots](/images/uploads/snowman.jpg)
+
+*Adam in the snow.*
+
 ## Flash floods and swollen creeks
 
 Just 6 inches of fast-moving flood water can knock over an adult, and 12 inches of rushing water can carry away most cars ([National Weather Service](https://www.weather.gov/safety/flood-turn-around-dont-drown)). After heavy rain, keep kids away from creeks, ditches and storm drains, and never drive through a flooded road. Turn around, don’t drown.

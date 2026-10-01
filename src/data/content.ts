@@ -79,7 +79,12 @@ export const resourceGroups: { title: string; items: Resource[] }[] = resourcesJ
 export const team: TeamMember[] = teamJson ?? [];
 export const about: { photo?: string; photoAlt?: string; caption?: string } = aboutJson;
 /** Photos on Survivors & Families and Get Involved (edited in the Studio). */
-export const survivorsPhotos: { photo?: string; photoAlt?: string; caption?: string; photo2?: string; photo2Alt?: string; caption2?: string } = survivorsJson;
+export const survivorsPhotos: {
+  photo?: string; photoAlt?: string; caption?: string;
+  photo2?: string; photo2Alt?: string; caption2?: string;
+  lifePhoto?: string; lifePhotoAlt?: string; lifeCaption?: string;
+  siblingPhoto?: string; siblingPhotoAlt?: string; siblingCaption?: string;
+} = survivorsJson;
 export const getInvolvedPhoto: { photo?: string; photoAlt?: string; caption?: string } = getInvolvedJson;
 export const isr: IsrBox = isrJson;
 /** "What pediatricians say" box on the ISR page and the home page. */

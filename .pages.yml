@@ -392,6 +392,24 @@ content:
           - name: caption2
             label: Caption under that photo
             type: string
+          - name: lifePhoto
+            label: Photo under "Life after a drowning"
+            type: image
+          - name: lifePhotoAlt
+            label: Describe that photo
+            type: string
+          - name: lifeCaption
+            label: Caption under that photo
+            type: string
+          - name: siblingPhoto
+            label: Photo beside the note for brothers and sisters
+            type: image
+          - name: siblingPhotoAlt
+            label: Describe that photo
+            type: string
+          - name: siblingCaption
+            label: Caption under that photo
+            type: string
       - name: get-involved-photo
         label: "Get Involved: photo under the heading"
         type: file

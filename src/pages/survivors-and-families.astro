@@ -136,6 +136,7 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
     <div class="wrap">
       <span class="eyebrow">What families face</span>
       <h2>Life after a drowning</h2>
+      {survivorsPhotos.lifePhoto && <PhotoFrame src={survivorsPhotos.lifePhoto} alt={survivorsPhotos.lifePhotoAlt} caption={survivorsPhotos.lifeCaption} ratio="16 / 9" natural />}
       <div class="grid grid--2" style="margin-top: 32px">
         {
           realities.map((r) => (
@@ -154,6 +155,8 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
       </div>
 
       <aside class="sibling-note reveal" aria-labelledby="sibling-title">
+        {survivorsPhotos.siblingPhoto && <div class="sibling-note__photo"><PhotoFrame src={survivorsPhotos.siblingPhoto} alt={survivorsPhotos.siblingPhotoAlt} caption={survivorsPhotos.siblingCaption} ratio="4 / 5" /></div>}
+        <div class="sibling-note__text">
         <p class="eyebrow">For brothers and sisters</p>
         <h3 id="sibling-title">A note from Adam’s big sister</h3>
         <p>
@@ -167,6 +170,7 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
           can help. I learned to change Adam’s trach and give him oxygen in an emergency.
         </p>
         <p class="sibling-note__sign">Avery</p>
+        </div>
       </aside>
     </div>
   </section>
@@ -302,5 +306,20 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
   }
   .split :global(.photo) {
     margin-top: 28px;
+  }
+  .sibling-note__photo {
+    max-width: 300px;
+    margin-bottom: 24px;
+  }
+  @media (min-width: 900px) {
+    .sibling-note {
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      gap: 36px;
+      align-items: start;
+    }
+    .sibling-note__photo {
+      margin-bottom: 0;
+    }
   }
 </style>
