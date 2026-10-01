@@ -11,7 +11,7 @@ import { hasDonate } from '../data/site';
 const realities: { title: string; body: string; quote?: string; by?: string }[] = [
   {
     title: 'The hospital stay',
-    body: 'Intensive care, ventilators, scans, and days or weeks of waiting to learn what the future holds. Families often live out of a hospital room far from home, with other children to care for.',
+    body: 'Intensive care, ventilators, scans, and waiting. Our mom stood beside Adam’s crib for 33 days before she was allowed to hold him, two hours from home, with four other kids who needed her too.',
     quote: 'I decided I would be the smartest person in the room when it came to Adam’s care. I would be his voice, his advocate, his warrior mom.',
   },
   {
@@ -48,20 +48,20 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
   <PageHero
     eyebrow="Nonfatal drowning"
     title="Surviving is only the beginning."
-    lede="Adam survived. Many children do. But a nonfatal drowning can change a child’s life, and a family’s, forever. These families are often left out of the conversation, and we want to change that."
+    lede="Adam survived. Many children do. A nonfatal drowning can change a child’s life, and a whole family’s, for good. Many drowning prevention groups were started in memory of a child who died. Ours was started for one who lived."
   />
 
   <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
     <div class="wrap narrow">
       <span class="eyebrow">If this is your family</span>
-      <h2>You are not alone, and it’s not only your story to carry.</h2>
+      <h2>You are not alone.</h2>
       <p class="lede">
-        Drowning happens to loving, careful families. If your child is a drowning survivor, we would be
-        honored to hear from you, whether you want to talk, find resources, or share your child’s story
-        to help protect other children.
+        Drowning happens to loving, careful families. Ours is one of them. If your child survived a drowning and you
+        want to talk, find help, or tell your story so it protects another child, write to us. As our mom put it in
+        2024: “The fact is, we’re not interested in the alternative.”
       </p>
       <div class="btn-row">
-        <a class="btn btn--ocean" href={url('/contact')}>Reach out to our family</a>
+        <a class="btn btn--ocean" href={url('/contact')}>Write to our family</a>
       </div>
 
       <h3 style="margin-top: 56px">Places to find help</h3>
@@ -177,16 +177,10 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
   </section>
 
   <CtaBand
-    title="Help us support survivor families."
-    text={hasDonate
-      ? 'Your gift helps families facing life after a drowning, and helps keep other families from ever facing it.'
-      : 'Share what you learn, take the pledge, and help us keep other families from ever facing this.'}
+    title="Pass it on."
+    text="If you know a family living life after a drowning, send them this page. If you are that family, write to us."
   >
-    {hasDonate ? (
-      <a class="btn" href={url('/donate')}>Give today</a>
-    ) : (
-      <a class="btn" href={url('/get-involved')}>Get involved</a>
-    )}
+    <a class="btn" href={url('/contact')}>Write to us</a>
     <a class="btn btn--ghost" href={url('/adams-story')}>Read Adam’s story</a>
   </CtaBand>
 </BaseLayout>
