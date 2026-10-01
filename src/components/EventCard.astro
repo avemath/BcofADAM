@@ -109,6 +109,12 @@ const art = /fish|rodeo/.test(t)
     aspect-ratio: 4 / 3;
     object-fit: cover;
   }
+  /* On phones, events without a photo get a short band of color, not a photo-sized block of nothing. */
+  @media (max-width: 759px) {
+    .event__art {
+      aspect-ratio: 5 / 2;
+    }
+  }
   .event__photo {
     object-position: center 55%;
   }
