@@ -5,7 +5,6 @@ import CtaBand from '../components/CtaBand.astro';
 import { nonfatal } from '../data/content';
 import { survivorResources } from '../data/content';
 import { url } from '../lib/url';
-import { hasDonate } from '../data/site';
 
 // Our mom's own words sit under some of these, quoted from her posts on Adam's Facebook page.
 const realities: { title: string; body: string; quote?: string; by?: string }[] = [
@@ -61,7 +60,7 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
         2024: “The fact is, we’re not interested in the alternative.”
       </p>
       <div class="btn-row">
-        <a class="btn btn--ocean" href={url('/contact')}>Write to our family</a>
+        <a class="btn btn--ocean" href={url('/contact')}>Write to us</a>
       </div>
 
       <h3 style="margin-top: 56px">Places to find help</h3>
