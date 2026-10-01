@@ -41,7 +41,7 @@ In Pennsylvania, children 12 and under must wear a life jacket on any boat 20 fe
 
 ## Backyard and public pools
 
-More than 7 in 10 fatal child pool and spa drownings happen at a home ([CPSC, 2026](https://www.cpsc.gov/Newsroom/News-Releases/2026/CPSC-Report-Highlights-Persistent-Risk-of-Childhood-Drowning)). Stack every [layer of protection](/water-safety) you can, and check your above-ground pool against the [compression strap recall](/water-safety#check-your-above-ground-pool-for-a-recall).
+More than 7 in 10 children who die in a pool or spa drown at a home ([CPSC, 2026](https://www.cpsc.gov/Newsroom/News-Releases/2026/CPSC-Report-Highlights-Persistent-Risk-of-Childhood-Drowning)). Stack every [layer of protection](/water-safety) you can, and check your above-ground pool against the [compression strap recall](/water-safety#check-your-above-ground-pool-for-a-recall).
 
 At public pools, the Pennsylvania Department of Health says to have a responsible adult watch young children, even when lifeguards are on duty, use the buddy system, find the lifesaving equipment before you get in, and never go into water that’s cloudy ([Pennsylvania Department of Health](https://www.pa.gov/agencies/health/business-registration-and-regulation/bathing-places/pool-safety)).
 
