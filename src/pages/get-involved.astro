@@ -2,6 +2,8 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import CtaBand from '../components/CtaBand.astro';
+import PhotoFrame from '../components/PhotoFrame.astro';
+import { getInvolvedPhoto } from '../data/content';
 import SiteForm, { type Field } from '../components/SiteForm.astro';
 import { url } from '../lib/url';
 import { hasDonate } from '../data/site';
@@ -107,6 +109,16 @@ const volunteerFields: Field[] = [
     title="Adam’s village is bigger than one family."
     lede="Everyone who shares, pledges, gives or speaks up becomes another layer of protection for a child they may never meet."
   />
+
+  {
+    getInvolvedPhoto.photo && (
+      <section class="section" style="padding-block: clamp(40px, 6vw, 72px) 0">
+        <div class="wrap narrow">
+          <PhotoFrame src={getInvolvedPhoto.photo} alt={getInvolvedPhoto.photoAlt} caption={getInvolvedPhoto.caption} ratio="16 / 9" natural />
+        </div>
+      </section>
+    )
+  }
 
   <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
     <div class="wrap grid grid--3">

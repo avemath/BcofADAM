@@ -60,25 +60,46 @@ These details are Avery's own memories, told in her words while we wrote the sto
 - **Alarms have blind spots.** Our door alarms went quiet when a door was mostly closed but not latched.
 - **Everywhere there's water.** "A pool, a bathtub, a pond, the bayou, and even a bucket."
 
-## Photos from our Facebook photo doc
+## Photos on the site (October 2026)
 
-Our Word doc of Facebook photos (193 small thumbnails, numbered in order) is mapped to the site:
+Full-size photos live in `public/images/uploads/` (uploaded through GitHub or the Studio). Where each one is used, and what we know about it:
 
-| Photo | Where it is now |
-|---|---|
-| Mom, Dad and baby Adam (#22) | Adam's Story, "Meet Adam" |
-| Rickey's graduation with Adam on his trike (#176) | Adam's Story, "June 5, 2017" (**still the small thumbnail; swap in the full-size photo**) |
-| Mom holding Adam in the PICU | Adam's Story, "Life after" (the one hospital photo on the site) |
-| Mom's nursing graduation | Adam's Story, "Planting seeds" |
-| Lea curled up with Adam | Adam's Story, "Because of Adam" |
-| The sea of blue shirts in Lafitte (#71) | Adam's Story, "Adam's village", and the 2017 Adam's Hope benefit on the Events page (not the 2018 rodeo, which still needs its own photo) |
-| Christmas 2017, all five of us (#14) | About Us, sibling team card |
-| Mom's swing painting | Events: Wear Blue on June 5 |
-| Still open | About Us family photo ("It's a boy!" #167), Mom's and Dad's team cards, Dad teaching ISR, other event photos |
+| File | Where | What we know |
+|---|---|---|
+| `red_bike_b4_accident.jpg` | Adam's Story, beside the opening | Adam laughing on his red tricycle, before June 5, 2017 |
+| `before_aj_mess.jpg` | Adam's Story, "That was Adam all over" | Adam in the kitchen drawer with the Tupperware everywhere, before |
+| `momdadaj-1.jpg` | Adam's Story, after Dad's bath-time quote | Mom, Dad and baby Adam |
+| `aj_plants.jpg` | Adam's Story, the 2017 garden | Adam in front of the seedling trays |
+| `ricgradredbikeb4acc-1.jpg` | Adam's Story, June 5 | Rickey's graduation, days before; the red tricycle |
+| `picu.jpg` | Adam's Story, PICU | Mom holding Adam in the PICU, summer 2017 (the one hospital photo on the site) |
+| `adams_village.jpg` | Adam's Story, September 2017; Events (Adam's Hope benefit 2017) | Bee-logo Adam's Hope shirts under a tent, Adam in front. **Family, please confirm this is the 2017 benefit on the bayou** |
+| `fishingrodeo.jpg` | Events (fishing rodeo) | The packed pavilion. The family's own filename says fishing rodeo, so it is no longer captioned as the 2017 benefit |
+| `fr17.jpg` | Adam's Story, the 2018 rodeo | Mom, Lea (bee face paint) and Adam; the photo itself says "Adams Hope Fishing Rodeo 2018" |
+| `fr3.jpg` | Get Involved | The crowd under the tent at the rodeo, Adam in the middle (2018 per the fr-series) |
+| `lea_dad_garden.jpg` | Adam's Story, "Planting seeds" | Dad and Lea at the raised bed. Year not stated in the caption |
+| `mom-nurse-1.jpg` | Adam's Story, "Planting seeds" | Mom's nursing graduation, family around her |
+| `aj_smile.jpg` | Adam's Story, "Because of Adam" | Adam in glasses, "Mom's amazing dude" sweatshirt |
+| `mom_and_adam_at_softball_game.jpg` | Adam's Story, the games paragraph | Mom and Adam on a blanket at one of Avery's softball games (per the family's filename) |
+| `avery_and_aj2.jpg` | Adam's Story, the nights in his room | Avery and Adam, Tigers jersey |
+| `leaaj2.jpg` | Adam's Story, Lea's paragraph | Lea and Adam in the armchair |
+| `disney.jpg` | About, family photo | All seven at Disney in Seven Dwarfs shirts; Adam's says "The Charming One" |
+| `mom_and_aj.jpg` | About, Mom's card | Mom and Adam, Halloween 2019 (the family's "Up" year, Mom's post of Nov. 9, 2019) |
+| `new_normal.jpg` | About, Dad's card | Dad and Adam on a train ride |
+| `xmaspic.jpg` | About, siblings' card | The kids under the Christmas blanket |
+| `lea_and_adam.jpg` | Survivors & Families, top | Lea as Kevin and Adam as Russell from "Up," Halloween 2019 (Mom's post of Nov. 9, 2019) |
+| `beach_lifegoeson.jpg` | Survivors & Families, beside "What nonfatal drowning means" | Adam at the beach between two grown-ups (captioned only "Adam at the beach") |
+| `dad-teaching-a-float.jpg` | ISR Swim Lessons | A crop of `dadisr.jpg` with the business name cropped off the top and bottom. **Family: please confirm the student's parents are fine with this photo on the site** |
+| `booth-2021.jpg` | Events (Water Safety Booth 2021) | A crop of `duncansville_days_bcofadam.jpg` with the ISR business banner cropped off the right |
+| `200_club.jpg` | Events (Adam's Army 200 Club, 2018) | The group at the Duncansville Community Center |
+| `cornhole_countdown.jpg` | Events (Cornhole 2020) | Adam with the "1 day until cornhole" chalkboard |
+| `rocks.jpg` | Events (Adam Rocks) | Painted rocks: Hope, Peace, Joy, #AdamRocks |
+| `momsswing.jpg` | Events (Wear Blue), News | Mom's swing painting |
+| `adamchildofgodheadshot.jpg` | Home, "Meet Adam" | Adam in the "Child of God" headband |
+| `cornhole-2021-flyer.jpg` | Events (Cornhole 2021) | The flyer |
 
-Upload **full-size** copies (the original phone photo, or Facebook's Download option), never the thumbnails. Extras worth using on Facebook: #192, #22, #75, #107, #193, #60.
+Uploaded but **not used on purpose**: `lesisrddays.jpg`, `dadisr.jpg` and `duncansville_days_bcofadam.jpg` uncropped (Dad's business banner or name), `cornhole.jpg`, `200_club_benefit.jpg`, `adams_bayou_benefit.jpg` and `adams_hope_pamphlet.jpg` (phone numbers, people's names or payment links), `isr.jpg` (ISR's registered logo), `kailee_rock.jpg` (a child who isn't family), `lea_and_aj_kiss.jpg`, `right_after.jpg`, `small_hospital_couch.jpg`, `lea_stuffed_animals.jpg`, `captainaj.jpg` (hospital), `adams_village_3.jpg` (another family's teal shirts), and personal photos (`mom+dad.jpg`, `momdadgirls.jpg`, `momdadlea.jpg`, `roadtrip.jpg`, `snowman.jpg`, `decorating_xmas_tree.jpg`, `lea_bday.jpg`, `tiger_fans.jpg`, `yoda.jpg`, `aj_2025.jpg` which is also stored sideways). The 206px thumbnails and exact duplicates of files already in use were deleted.
 
-Kept off the site: hospital and medical photos, bath and pool photos (even happy ones), the newspaper photo, siblings' personal photos (prom, senior pictures, sports), the pink tent, and flyers with phone numbers or the prayersforadam PayPal.
+Kept off the site: hospital and medical photos (one PICU photo excepted), bath and pool photos, the newspaper photo, siblings' personal photos, and flyers with phone numbers or the prayersforadam PayPal.
 
 ## What we keep off the website
 

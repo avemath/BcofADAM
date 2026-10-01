@@ -137,6 +137,12 @@ content:
       - name: photoAlt
         label: Describe the photo (for people who can't see it)
         type: string
+      - name: storyPhoto
+        label: Photo beside the opening of Adam's Story (leave empty to reuse the one above)
+        type: image
+      - name: storyPhotoAlt
+        label: Describe that photo (for people who can't see it)
+        type: string
       - name: timeCompare
         label: Line under the clock
         type: string
@@ -352,6 +358,45 @@ content:
         fields:
           - name: photo
             label: Photo (shows right under "It started with our little brother.")
+            type: image
+          - name: photoAlt
+            label: Describe the photo (for people who can't see it)
+            type: string
+          - name: caption
+            label: Caption under the photo
+            type: string
+      - name: survivors-photos
+        label: "Survivors & Families: photos"
+        type: file
+        path: src/data/survivors.json
+        format: json
+        fields:
+          - name: photo
+            label: Photo at the top of the page
+            type: image
+          - name: photoAlt
+            label: Describe the photo (for people who can't see it)
+            type: string
+          - name: caption
+            label: Caption under the photo
+            type: string
+          - name: photo2
+            label: Photo beside "What nonfatal drowning means"
+            type: image
+          - name: photo2Alt
+            label: Describe that photo
+            type: string
+          - name: caption2
+            label: Caption under that photo
+            type: string
+      - name: get-involved-photo
+        label: "Get Involved: photo under the heading"
+        type: file
+        path: src/data/get-involved.json
+        format: json
+        fields:
+          - name: photo
+            label: Photo
             type: image
           - name: photoAlt
             label: Describe the photo (for people who can't see it)
