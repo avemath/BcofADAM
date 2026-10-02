@@ -61,7 +61,7 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
       </p>
       <div class="btn-row">
         <a class="btn" href={url('/adams-story')}>Read Adam’s story</a>
-        <a class="btn btn--ghost" href="#layers">Learn the layers of protection</a>
+        <a class="btn btn--ghost" href="#tonight">Five things to do tonight</a>
       </div>
     </div>
     <Wave color="var(--sand)" animated />
@@ -71,7 +71,7 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
   <HomeNumbers />
 
   <!-- TONIGHT -->
-  <section class="section" style="padding-top: clamp(32px, 5vw, 64px)">
+  <section id="tonight" class="section" style="padding-top: clamp(32px, 5vw, 64px)">
     <div class="wrap">
       <span class="eyebrow">Start tonight</span>
       <h2>{story.tonightTitle}</h2>
@@ -177,7 +177,8 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
         <p class="isr-card__label">Why this is personal</p>
         <p class="isr-card__name">Adam’s nearest ISR instructor was two hours away.</p>
         <p>After Adam drowned, our dad became one. Wherever you live, ISR’s map lists every certified instructor near you.</p>
-        <p class="isr-card__quote">“Skills before thrills. Sometimes there are no do-overs.”</p>
+        <p class="isr-card__quote">“Skills before thrills. No matter the cost, the time commitment or the distance, sometimes there are no do-overs.”</p>
+        <p class="isr-card__by">Our mom, Shannon</p>
       </div>
     </div>
   </section>
@@ -190,9 +191,8 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
         <span class="eyebrow">Survivors & families</span>
         <h2>Surviving is only the beginning.</h2>
         <p class="lede">
-          For every child lost to drowning, seven more end up in the emergency room. Some, like Adam, come home with injuries that
-          change everything, and families who need a village around them. We want every one of them to know
-          they’re not alone.
+          Some children, like Adam, come home from a drowning with injuries that change everything, and families who
+          need a village around them. We want every one of them to know they’re not alone.
         </p>
         <div class="btn-row">
           <a class="btn btn--ocean" href={url('/survivors-and-families')}>Support for families</a>
@@ -204,7 +204,7 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
   <!-- PLEDGE -->
   <CtaBand
     title="Be the Water Watcher."
-    text="“Do whatever you can to keep your eyes on children that cannot swim, especially during parties.” That’s our mom, July 4, 2019. Promise to be the one adult whose only job is the water, and print your card."
+    text="Promise to be the one adult whose only job is the water, and print your card."
   >
     <a class="btn" href={url('/water-watcher')}>Take the pledge</a>
     <a class="btn btn--ghost" href={url('/quiz')}>Take the quiz</a>
@@ -474,6 +474,12 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     margin: 1.2em 0 0;
     padding-top: 1em;
     border-top: 1px solid rgb(255 255 255 / 0.25);
+  }
+  .isr-card__by {
+    margin: 6px 0 0;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--ink-soft);
   }
   /* Give the feed the bigger side on wide screens so it can scale up. */
   @media (min-width: 900px) {

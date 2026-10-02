@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import CtaBand from '../components/CtaBand.astro';
 import PageHero from '../components/PageHero.astro';
 import SiteForm, { type Field } from '../components/SiteForm.astro';
 import { url } from '../lib/url';
@@ -80,6 +81,11 @@ const fields: Field[] = [
       />
     </div>
   </section>
+
+  <CtaBand title="While you wait, pass it on." text="Print the flyer for your waiting room or bulletin board, and send the Water Watcher pledge to your staff.">
+    <a class="btn" href={url('/flyer')}>Print the flyer</a>
+    <a class="btn btn--ghost" href={url('/water-watcher')}>Take the pledge</a>
+  </CtaBand>
 </BaseLayout>
 
 <style>

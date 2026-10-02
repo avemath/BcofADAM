@@ -31,7 +31,7 @@ export const layers: Layer[] = [
     short: 'One adult, eyes on the water, no distractions.',
     body: [
       'Drowning is fast and silent. There is usually no splashing and no calling for help, which is why “everyone watching” so often means no one is.',
-      'Name one adult as the Water Watcher. For young children and weak swimmers, that person stays within arm’s reach: close enough to touch. Phones go down, conversations wait, and the Water Watcher tag is handed to the next adult every 15 minutes or so.',
+      'Name one adult as the Water Watcher. For young children and weak swimmers, that person stays within arm’s reach: close enough to touch. Phones go down, conversations wait, and the Water Watcher tag is handed to the next adult every 15 minutes.',
     ],
     tips: [
       'Use a Water Watcher tag or lanyard so everyone knows who’s on duty.',
@@ -80,7 +80,7 @@ export const layers: Layer[] = [
       'Put alarms on every door and window that opens toward the pool. Code-compliant door alarms (UL 2017) sound within seconds of the door opening.',
       'In Pennsylvania, building code still lets the house be one side of the pool barrier if doors to the pool have alarms (or the pool has a certified safety cover). A four-sided fence is safer.',
       'Add a pool alarm or a wearable wristband alarm as an extra layer.',
-      'Test every door alarm with the door pulled almost shut, not just wide open. Ours went quiet that way. Keep spare batteries on hand.',
+      'Test every door alarm with the door pulled almost shut, not just wide open, and keep spare batteries on hand.',
       'Make “alarms stay on” a house rule, especially when you have guests.',
     ],
     sources: [
@@ -166,7 +166,7 @@ export const layers: Layer[] = [
     short: 'Learn CPR, keep a phone close, check the water first.',
     body: [
       'When a child is missing, check the water first: pools, spas, ponds, bathtubs. Seconds matter.',
-      'Bystander CPR begun right away can make a life-saving difference while emergency crews are on the way. Our mom, our Pops, our dad and the first responders all did CPR on Adam.',
+      'Bystander CPR begun right away can make a life-saving difference while emergency crews are on the way. Our mom, Pops (our grandfather), our dad and the first responders all did CPR on Adam.',
     ],
     tips: [
       'In an emergency, call 911. If a child is missing, check the water first.',

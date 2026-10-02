@@ -1,6 +1,6 @@
 ---
 title: Adam’s Story
-eyebrow: Because of Adam
+eyebrow: Our little brother
 lede: My little brother Adam is {{Adam’s age}}. He loves music, fast cars and his
   favorite swing, and he’s the reason my family does all of this. This is his
   story, told by his big sister, Avery.
@@ -54,7 +54,7 @@ Everyone who could took a turn after Mom: our family, the first responders, the 
 
 ![Mom holding Adam in the hospital, with his breathing tube and wires](/images/uploads/picu.jpg)
 
-*Mom and Adam in the PICU, summer 2017.*
+*Mom and Adam in the pediatric ICU, summer 2017.*
 
 Mom stayed with him, first in Pittsburgh, and for the next four months our family lived in two places. One week in, a neurologist told her that Adam would never hear her again. She read to him anyway. For 33 days she wasn’t allowed to hold him, so she stood beside his crib, *“singing, reading, praying and squeezing his hand but nothing more.”* Then one day, while she was reading, he cried.
 
@@ -108,7 +108,7 @@ For two more summers, Lea asked for a garden, and for two more summers, Dad coul
 
 That year, Rickey, Grace, Lea and I started **Because of ADAM: Allies in the Drowning Awareness Movement**, so other families could learn what we learned without having to learn it the way we did.
 
-Dad became a Red Cross CPR instructor, then spent eight weeks in Florida learning to teach [ISR self-rescue](/swim-lessons), the lessons Adam never got to take, and he has taught more than 150 children since. Mom went back to school at 43 to become a nurse for kids like Adam.
+Dad became a Red Cross CPR instructor, then spent eight weeks in Florida learning to teach [ISR self-rescue](/swim-lessons), the lessons Adam never got to take, and by 2023 he had taught more than 150 children. Mom went back to school at 43 to become a nurse for kids like Adam.
 
 In her first months of nursing school, with Dad away in Florida, Adam’s night nurse quit without notice. Three agencies couldn’t staff his 90 hours of approved nursing, so Mom covered his nights herself. Then she threw on her scrubs and walked two icy blocks through downtown Altoona before sunrise to get to clinicals. I spent my senior year working on Because of ADAM and helping coach Lea’s softball team, the 8U Fireflies.
 
