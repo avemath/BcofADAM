@@ -384,7 +384,7 @@ content:
             label: Caption under the photo
             type: string
           - name: photo2
-            label: Photo beside "What nonfatal drowning means"
+            label: Photo under "What nonfatal drowning means"
             type: image
           - name: photo2Alt
             label: Describe that photo
@@ -401,6 +401,30 @@ content:
           - name: lifeCaption
             label: Caption under that photo
             type: string
+          - name: momentsTitle
+            label: "Life goes on: heading"
+            type: string
+          - name: momentsText
+            label: "Life goes on: the paragraph"
+            type: text
+          - name: moments
+            label: "Life goes on: photos"
+            type: object
+            list: true
+            description: Seven photos fill the grid exactly, with the first one wide. Any photo works, but this fits best.
+            fields:
+              - name: photo
+                label: Photo
+                type: image
+              - name: alt
+                label: Describe the photo (for people who can't see it)
+                type: string
+              - name: caption
+                label: Caption
+                type: string
+              - name: wide
+                label: Wide photo (takes two columns)
+                type: boolean
           - name: siblingPhoto
             label: Photo beside the note for brothers and sisters
             type: image
