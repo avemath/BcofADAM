@@ -94,7 +94,7 @@ Full-size photos live in `public/images/uploads/` (uploaded through GitHub or th
 | `dad-teaching-a-float.jpg` | ISR Swim Lessons | A crop of `dadisr.jpg` with the business name cropped off the top and bottom. Fine with the family (Oct. 2026) |
 | `adam-wedding-2025.jpg` | Not used since October 2026 (the family wedding photo below took its place) | `aj_2025.jpg` turned upright: Adam in a bow tie and flat cap at an outdoor wedding, an older couple leaning in. Captioned only "Adam at a wedding, 2025" (the year is the family's filename) |
 | `lea_and_aj_kiss.jpg` | Survivors & Families, under "Life after a drowning" | Lea kissing the top of Adam's head in a hospital bed. Avery asked for the hospital photos back (Oct. 2026) |
-| `small_hospital_couch.jpg` | Survivors & Families, under "Life after a drowning" | Two of the kids asleep on the couch in a hospital room. The caption doesn't say who |
+| `small_hospital_couch.jpg` | Not used (Avery took it off the page, Oct. 2026) | Two of the kids asleep on the couch in a hospital room |
 | `ave_adam.jpg` | Survivors & Families, the note for brothers and sisters | Adam at one of Avery's soccer games, Avery in her goalie jersey, a hearts filter over it (Avery, Oct. 2026) |
 | `snowman.jpg` | Survivors & Families, "Life goes on" | Two of the family building a snowman, Adam watching from his stroller. It sat on the Pennsylvania page under the ice section until October 2026, when Avery said these are "life goes on" pictures, not safety ones |
 | `booth-2021.jpg` | Events (Water Safety Booth 2021) | A crop of `duncansville_days_bcofadam.jpg` with the ISR business banner cropped off the right and the business name on the table runner blurred. Duncansville Community Days, per the family's filename |
@@ -105,7 +105,7 @@ Full-size photos live in `public/images/uploads/` (uploaded through GitHub or th
 | `adamchildofgodheadshot.jpg` | Not used since October 2026 (`aj_glasses.jpg` is the "Meet Adam" photo now) | Adam in the "Child of God" headband |
 | `cornhole-2021-flyer.jpg` | Events (Cornhole 2021) | The flyer |
 | `aj_glasses.jpg` | Home, "Meet Adam" | Adam close up in his glasses, recent. Replaced the "Child of God" headshot because he's looking right at you |
-| `mom_hospital_gown_aj.jpg` | Survivors & Families, under "Life after a drowning" (first of three) | Mom in a disposable gown and cap, flashing peace signs, Adam in his Pittsburgh hoodie in a hospital room. Captioned only "Mom and Adam at the hospital" (we don't know which visit) |
+| `mom_hospital_gown_aj.jpg` | Survivors & Families, under "Life after a drowning" (first of two) | Mom in a disposable gown and cap, flashing peace signs, Adam in his Pittsburgh hoodie in a hospital room. Captioned only "Mom and Adam at the hospital" (we don't know which visit) |
 | `avegrad_fam.jpg` | Survivors & Families, "Life goes on" (the wide one) | All of us on the field at Avery's high school graduation, 2021 (Avery, Oct. 2026), Adam in front |
 | `dad_aj_up.jpg` | Survivors & Families, "Life goes on" | Dad with Adam dressed as Russell from "Up." Same costume as `lea_and_adam.jpg`, so probably Halloween 2019, but the caption doesn't say |
 | `dad_aj_disney.jpg` | Survivors & Families, "Life goes on" | Dad pushing Adam at Disney, Olaf on his lap. A screenshot; the trip isn't dated |
