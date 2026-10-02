@@ -14,7 +14,7 @@
     {
       "photo": "/images/uploads/avegrad_fam.jpg",
       "alt": "The whole family on the football field at Avery’s high school graduation, Avery in a white cap and gown holding her diploma, Adam in his stroller in front with a sunflower on the canopy",
-      "caption": "Avery’s graduation. Adam front and center.",
+      "caption": "Avery’s graduation, 2021. Adam front and center.",
       "wide": true
     },
     {
@@ -37,8 +37,8 @@
     },
     {
       "photo": "/images/uploads/aj_fam_wedding.jpg",
-      "alt": "Adam in a bow tie, suspenders and flat cap in his chair at an outdoor wedding, with family crowded in around him, two of them holding bouquets",
-      "caption": "All dressed up for a wedding, 2025.",
+      "alt": "Adam in a bow tie, suspenders and flat cap in his chair at Rickey and Harley’s outdoor wedding, with family crowded in around him, two of them holding bouquets",
+      "caption": "Rickey and Harley’s wedding, 2025.",
       "wide": false
     },
     {
@@ -49,12 +49,12 @@
     },
     {
       "photo": "/images/uploads/mom_aj_harrypotter.jpg",
-      "alt": "Adam as Harry Potter, in round glasses and a striped tie, in his stroller with a lion plush, and Mom in pink novelty glasses leaning in beside him in a parking lot at night",
-      "caption": "Halloween: Harry Potter, with Mom.",
+      "alt": "Adam as Harry Potter, in round glasses and a striped tie, in his stroller with a lion plush, and Mom as Luna Lovegood in pink spectrespecs leaning in beside him in a parking lot at night",
+      "caption": "Halloween: Harry Potter, with Mom as Luna Lovegood.",
       "wide": false
     }
   ],
-  "siblingPhoto": "/images/uploads/lea_and_aj_kiss.jpg",
-  "siblingPhotoAlt": "Lea leaning over Adam’s hospital bed, kissing the top of his head",
-  "siblingCaption": "Lea and Adam, in the hospital."
+  "siblingPhoto": "/images/uploads/ave_adam.jpg",
+  "siblingPhotoAlt": "Avery in her goalie jersey beside Adam in his stroller at one of her soccer games, with a hearts filter over the photo",
+  "siblingCaption": "Adam at one of my soccer games."
 }
