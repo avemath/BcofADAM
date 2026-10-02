@@ -1,0 +1,106 @@
+---
+/**
+ * One line that changes with the calendar (Water Safety Month, wear blue,
+ * July 4, the holidays, winter). Picked in the browser from today's date, so
+ * the site feels current without a server. Each one can be hidden for good.
+ */
+import { url } from '../lib/url';
+---
+
+<div class="strip" data-strip data-base={url('/')} hidden>
+  <div class="wrap strip__inner">
+    <p>
+      <span data-strip-text></span>
+      <a data-strip-link href="#tonight"></a>
+    </p>
+    <button type="button" class="strip__close" data-strip-close aria-label="Hide this note">
+      <svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M2 2l8 8M10 2l-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>
+    </button>
+  </div>
+</div>
+
+<script>
+  const strip = document.querySelector<HTMLElement>('[data-strip]');
+  if (strip) {
+    const base = (strip.dataset.base || '/').replace(/\/$/, '');
+    const now = new Date();
+    const v = (now.getMonth() + 1) * 100 + now.getDate();
+    const between = (m1: number, d1: number, m2: number, d2: number) => {
+      const a = m1 * 100 + d1;
+      const b = m2 * 100 + d2;
+      return a <= b ? v >= a && v <= b : v >= a || v <= b;
+    };
+    const notes = [
+      { key: 'blue', on: between(5, 22, 6, 5), text: 'Wear blue on June 5 for Adam.', link: 'Here’s why', href: `${base}/get-involved#wear-blue-on-june-5` },
+      { key: 'may', on: between(5, 1, 5, 21), text: 'May is National Water Safety Month.', link: 'Start with tonight’s five', href: '#tonight' },
+      { key: 'july4', on: between(6, 27, 7, 5), text: 'Pool parties and fireworks this week.', link: 'Three checks before the party', href: '#tonight=party' },
+      { key: 'wdpd', on: between(7, 20, 7, 25), text: 'July 25 is World Drowning Prevention Day.', link: 'What we do that day', href: `${base}/events` },
+      { key: 'holidays', on: between(11, 20, 1, 1), text: 'Company’s coming.', link: 'Three checks before guests arrive', href: '#tonight=party' },
+      { key: 'winter', on: between(1, 2, 2, 28), text: 'Pools don’t take the winter off.', link: 'Covers, gates and alarms, all year', href: '#tonight=pool' },
+    ];
+    const note = notes.find((n) => n.on);
+    const storageKey = note ? `bcoa:strip:${note.key}:${now.getFullYear()}` : '';
+    let hidden = false;
+    try {
+      hidden = !!note && localStorage.getItem(storageKey) === '1';
+    } catch {
+      /* fine */
+    }
+    if (note && !hidden) {
+      strip.querySelector('[data-strip-text]')!.textContent = note.text;
+      const a = strip.querySelector<HTMLAnchorElement>('[data-strip-link]')!;
+      a.textContent = note.link;
+      a.href = note.href;
+      strip.hidden = false;
+      strip.querySelector('[data-strip-close]')?.addEventListener('click', () => {
+        strip.hidden = true;
+        try {
+          localStorage.setItem(storageKey, '1');
+        } catch {
+          /* fine */
+        }
+      });
+    }
+  }
+</script>
+
+<style>
+  .strip {
+    background: var(--foam);
+    border-bottom: 1px solid var(--line);
+  }
+  .strip__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding-block: 10px;
+  }
+  .strip p {
+    margin: 0;
+    font-size: 0.95rem;
+    text-align: center;
+  }
+  .strip a {
+    margin-left: 6px;
+    font-weight: 700;
+    color: var(--ocean);
+  }
+  .strip__close {
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--ink-soft);
+    cursor: pointer;
+  }
+  .strip__close:hover {
+    background: rgb(8 51 73 / 0.08);
+    color: var(--deep);
+  }
+</style>

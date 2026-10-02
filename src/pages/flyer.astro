@@ -6,6 +6,7 @@
  */
 import QRCode from 'qrcode';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import SharePage from '../components/SharePage.astro';
 import Logo from '../components/Logo.astro';
 import { flyer as f } from '../data/content';
 import { site } from '../data/site';
@@ -132,9 +133,10 @@ const sources = [...new Set(f.facts.map((x) => x.source))];
         </div>
       </article>
 
-      <p class="no-print" style="margin: 24px 0 0">
-        <button class="btn" type="button" onclick="window.print()">Print the flyer</button>
-      </p>
+      <div class="no-print" style="margin: 24px 0 0">
+        <p><button class="btn" type="button" onclick="window.print()">Print the flyer</button></p>
+        <SharePage label="Send this flyer to an office or a daycare" text="A one-page water safety flyer with the layers of protection, from a family that learned them the hard way." />
+      </div>
 
       <p class="no-print flyer-sources">
         Sources:{' '}

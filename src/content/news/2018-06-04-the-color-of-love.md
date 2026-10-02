@@ -1,7 +1,7 @@
 ---
 title: "The Color of Love: why we wear blue on June 5"
 date: 2018-06-04
-summary: Our mom wrote this poem the night before the first anniversary of Adam’s drowning. Its last lines are why we wear blue every June 5.
+summary: Our mom, Shannon, wrote this poem the night before the first anniversary of Adam’s drowning. Its last lines are why we wear blue every June 5.
 draft: false
 ---
 

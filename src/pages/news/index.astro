@@ -12,8 +12,8 @@ const posts = (await getCollection('news', ({ data }) => !data.draft)).sort(
 const fmt = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeZone: 'UTC' });
 ---
 
-<BaseLayout title="News & Updates" description="What’s new with Adam and our family, upcoming events and the latest in drowning prevention, from Because of ADAM in Blair County, Pennsylvania.">
-  <PageHero eyebrow="News" title="News & updates" lede="What’s new with Adam, with us, and with the fight to end childhood drowning. For the day to day, our Facebook page is where our mom writes." />
+<BaseLayout title="News & Updates" description="News from Because of ADAM in Blair County, Pennsylvania: new pages, upcoming events and posts from our mom worth keeping.">
+  <PageHero eyebrow="News" title="News & updates" lede="New pages, upcoming events, and the posts from our mom, Shannon, worth keeping. For the day to day, Adam’s Facebook page is where she writes." />
   <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
     <div class="wrap news-layout">
       <div>

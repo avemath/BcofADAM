@@ -1,9 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import SharePage from '../components/SharePage.astro';
+import Album from '../components/Album.astro';
+import FacebookVideo from '../components/FacebookVideo.astro';
 import PageHero from '../components/PageHero.astro';
+import OnThisPage from '../components/OnThisPage.astro';
 import CtaBand from '../components/CtaBand.astro';
 import PhotoFrame from '../components/PhotoFrame.astro';
-import { nonfatal, survivorsPhotos } from '../data/content';
+import { nonfatal, survivorsPhotos, album } from '../data/content';
 import { survivorResources } from '../data/content';
 import { url } from '../lib/url';
 
@@ -11,6 +15,8 @@ import { url } from '../lib/url';
 const moments = (survivorsPhotos.moments ?? []).filter((m) => m.photo);
 // The hospital photos under "Life after a drowning".
 const lifePhotos = (survivorsPhotos.lifePhotos ?? []).filter((m) => m.photo);
+const hospitalVideo = (album.videos ?? [])[1];
+const christmasVideo = (album.videos ?? [])[2];
 
 // Our mom's own words sit under some of these, quoted from her posts on Adam's Facebook page.
 const realities: { title: string; body: string; quote?: string; by?: string }[] = [
@@ -55,6 +61,7 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
     title="Surviving is only the beginning."
     lede="Adam survived. Many children do. A nonfatal drowning can change a child’s life, and a whole family’s, for good. Many drowning prevention groups were started in memory of a child who died. Ours was started for one who lived."
   />
+  <OnThisPage />
 
   {
     survivorsPhotos.photo && (
@@ -78,7 +85,7 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
         <a class="btn btn--ocean" href={url('/contact')}>Write to us</a>
       </div>
 
-      <p class="how-lead">People often tell our mom, “I don’t know how you do it.” In 2024 she answered:</p>
+      <p class="how-lead">People often tell our mom, Shannon, “I don’t know how you do it.” In 2024 she answered:</p>
       <blockquote class="mom-words how-quote reveal">
         <p>
           “The fact is, we’re not interested in the alternative. We’ve been there. … We keep busy, so we don’t go
@@ -159,6 +166,13 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
           </div>
         )
       }
+      {
+        hospitalVideo?.url && (
+          <Album summary={`Watch: ${hospitalVideo.title}`} note={`${hospitalVideo.date}, from our mom’s page`} more>
+            <FacebookVideo url={hospitalVideo.url} title={hospitalVideo.title!} caption={hospitalVideo.caption} />
+          </Album>
+        )
+      }
       <div class="grid grid--2" style="margin-top: 32px">
         {
           realities.map((r) => (
@@ -189,6 +203,13 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
                 </div>
               ))}
             </div>
+            {
+              christmasVideo?.url && (
+                <Album summary={`Watch: ${christmasVideo.title}`} note={`${christmasVideo.date}, from our mom’s page`} more>
+                  <FacebookVideo url={christmasVideo.url} title={christmasVideo.title!} caption={christmasVideo.caption} />
+                </Album>
+              )
+            }
           </div>
         )
       }
@@ -234,6 +255,7 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
         <li><strong>Say the child’s name.</strong> Ask how they’re doing, and celebrate every milestone with them.</li>
         <li><strong>Never say “move on.”</strong> This kind of grief doesn’t end. Help them carry it.</li>
       </ul>
+      <SharePage label="Send this page to a family who needs it" text="If your child survived a drowning, you are not alone. A family that has lived it, on what comes next and where to find help." />
     </div>
   </section>
 

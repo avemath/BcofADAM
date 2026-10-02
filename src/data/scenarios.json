@@ -1,0 +1,72 @@
+[
+  {
+    "id": "pool",
+    "label": "Our own pool",
+    "fact": "More than 70% of children who die in a pool or spa drown at a home.",
+    "source": "CPSC, 2026 report",
+    "sourceUrl": "https://www.cpsc.gov/Newsroom/News-Releases/2026/CPSC-Report-Highlights-Persistent-Risk-of-Childhood-Drowning",
+    "checks": [
+      "Walk away from the pool gate. Does it close and latch by itself?",
+      "Pull each door to the pool almost shut. Does the alarm still sound?",
+      "Say out loud who the Water Watcher is before anyone gets in."
+    ],
+    "link": "/water-safety#barriers-fence-the-pool-on-all-four-sides",
+    "linkText": "Fence it on all four sides"
+  },
+  {
+    "id": "visit",
+    "label": "Grandma’s or a friend’s",
+    "fact": "Grandparents’, neighbors’ and friends’ pools count too. More than 70% of children who die in a pool or spa drown at a home, including the homes of family, friends and neighbors.",
+    "source": "CPSC, 2026 report",
+    "sourceUrl": "https://www.cpsc.gov/Newsroom/News-Releases/2026/CPSC-Report-Highlights-Persistent-Risk-of-Childhood-Drowning",
+    "checks": [
+      "Find every pool, hot tub and pond before the kids do.",
+      "Pack a portable door alarm, and put it on the door to the water.",
+      "Agree who watches after swim time ends. That’s when kids wander back."
+    ],
+    "link": "/checklist",
+    "linkText": "Print the half-page for grandparents"
+  },
+  {
+    "id": "nopool",
+    "label": "No pool here",
+    "fact": "Most child drownings inside the home happen in the bathtub, and a toddler can drown in as little as an inch or two of water.",
+    "source": "American Academy of Pediatrics",
+    "sourceUrl": "https://www.healthychildren.org/English/safety-prevention/at-play/Pages/Water-Safety-And-Young-Children.aspx",
+    "checks": [
+      "Stay within arm’s reach at bath time. If you have to step away, take the baby with you.",
+      "Empty buckets, coolers and kiddie pools, and flip them over.",
+      "Put a latch on the toilet lid."
+    ],
+    "link": "/water-safety#covers-drains-close-off-the-water",
+    "linkText": "Close off the water"
+  },
+  {
+    "id": "open",
+    "label": "Lake, river or beach",
+    "fact": "Water colder than 70°F can make anyone gasp and lose control of their breathing.",
+    "source": "National Weather Service",
+    "sourceUrl": "https://www.weather.gov/safety/coldwater",
+    "checks": [
+      "A U.S. Coast Guard-approved life jacket on every child, fitted by weight, even on shore.",
+      "Swim where there’s a lifeguard. Where there isn’t, you are the lifeguard.",
+      "Keep kids out of cold water, and keep boots and coats in mind: they soak up water fast."
+    ],
+    "link": "/pennsylvania",
+    "linkText": "Water safety in Pennsylvania"
+  },
+  {
+    "id": "party",
+    "label": "A party or holiday",
+    "fact": "Adam slipped out during graduation week, with family in from out of town and nobody expecting him anywhere near the pool.",
+    "source": "",
+    "sourceUrl": "",
+    "checks": [
+      "Name a Water Watcher out loud, and hand the job off every 15 minutes.",
+      "Keep watching through cleanup and fireworks, when floaties come off.",
+      "When company leaves, check that doors, gates and alarms are still set."
+    ],
+    "link": "/water-watcher",
+    "linkText": "Take the Water Watcher pledge"
+  }
+]

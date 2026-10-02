@@ -1,0 +1,149 @@
+---
+/**
+ * A fold-away album. Closed, it is one warm line with a few tiny photos and an
+ * arrow; open, it holds whatever is inside (a video, a photo grid). Anyone who
+ * came for water safety can leave it shut. It is a native <details>, so it
+ * works without JavaScript and with a keyboard.
+ */
+import { url } from '../lib/url';
+
+interface Props {
+  /** The line people click, like "Watch: Mom singing to Adam". */
+  summary: string;
+  /** A quieter second line, like "A short video from Mom’s page, May 2019". */
+  note?: string;
+  /** Start open (on pages that are about the village). */
+  open?: boolean;
+  /** Up to three small photos shown on the closed album. */
+  teaser?: string[];
+  /** Add a link to the Photos & videos page at the bottom. */
+  more?: boolean;
+}
+const { summary, note, open = false, teaser = [], more = false } = Astro.props;
+---
+
+<details class="album" open={open || undefined}>
+  <summary class="album__summary">
+    <span class="album__icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="22" height="22"><path d="M4 7h3l2-2h6l2 2h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" /><circle cx="12" cy="13" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8" /></svg>
+    </span>
+    <span class="album__text">
+      <span class="album__title">{summary}</span>
+      {note && <span class="album__note">{note}</span>}
+    </span>
+    {
+      teaser.length > 0 && (
+        <span class="album__teaser" aria-hidden="true">
+          {teaser.slice(0, 3).map((src) => (
+            <img src={url(src)} alt="" width="44" height="44" sizes="44px" loading="lazy" decoding="async" />
+          ))}
+        </span>
+      )
+    }
+    <span class="album__chev" aria-hidden="true">
+      <svg viewBox="0 0 12 8" width="14" height="10"><path d="M1 1.5 6 6.5 11 1.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+    </span>
+  </summary>
+  <div class="album__body">
+    <slot />
+    {
+      more && (
+        <p class="album__more">
+          <a href={url('/photos')}>All of our photos and videos</a>
+        </p>
+      )
+    }
+  </div>
+</details>
+
+<style is:global>
+  .album {
+    margin: 24px 0 0;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: #fff;
+    box-shadow: var(--shadow);
+  }
+  .album__summary {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 18px;
+    cursor: pointer;
+    list-style: none;
+    border-radius: var(--radius);
+  }
+  .album__summary::-webkit-details-marker {
+    display: none;
+  }
+  .album__summary:hover {
+    background: var(--foam);
+  }
+  .album__summary:focus-visible {
+    outline: 3px solid var(--aqua);
+    outline-offset: 2px;
+  }
+  .album__icon {
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--foam);
+    color: var(--ocean);
+  }
+  .album__text {
+    flex: 1;
+    min-width: 0;
+    display: grid;
+    gap: 2px;
+  }
+  .album__title {
+    font-weight: 700;
+    color: var(--deep);
+  }
+  .album__note {
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+  }
+  .album__teaser {
+    flex: none;
+    display: flex;
+  }
+  .album__teaser img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+    margin-left: -10px;
+  }
+  .album__teaser img:first-child {
+    margin-left: 0;
+  }
+  .album__chev {
+    flex: none;
+    color: var(--ocean);
+    transition: transform 0.2s ease;
+  }
+  .album[open] .album__chev {
+    transform: rotate(180deg);
+  }
+  .album[open] .album__summary {
+    border-bottom: 1px solid var(--line);
+    border-radius: var(--radius) var(--radius) 0 0;
+  }
+  .album__body {
+    padding: 18px;
+  }
+  .album__more {
+    margin: 16px 0 0;
+    font-size: 0.95rem;
+  }
+  @media (max-width: 479px) {
+    .album__teaser {
+      display: none;
+    }
+  }
+</style>

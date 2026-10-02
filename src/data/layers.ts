@@ -51,7 +51,7 @@ export const layers: Layer[] = [
     title: 'Barriers: fence the pool on all four sides',
     short: 'A fence that separates the pool from the house and yard.',
     body: [
-      'Toddlers can slip out of the house and reach the pool in seconds, often when no one realizes they’re gone. A fence is the layer that’s still there when that happens.',
+      'We didn’t want a fence blocking our view of the pool. A lot of families don’t. But toddlers slip out of the house and reach the water in seconds, usually when nobody knows they’re gone, and a fence is the one layer that doesn’t need anyone to remember it. It would have stood between Adam and the water.',
       'An isolation fence surrounds the pool on all four sides and separates it from the house. Pool safety guidance calls for a fence at least 4 feet tall, hard to climb, with a gate that closes and latches by itself.',
     ],
     tips: [
@@ -166,7 +166,7 @@ export const layers: Layer[] = [
     short: 'Learn CPR, keep a phone close, check the water first.',
     body: [
       'When a child is missing, check the water first: pools, spas, ponds, bathtubs. Seconds matter.',
-      'Bystander CPR begun right away can make a life-saving difference while emergency crews are on the way. Our mom, Pops (our grandfather), our dad and the first responders all did CPR on Adam.',
+      'Bystander CPR begun right away can make a life-saving difference while emergency crews are on the way. Our mom, Shannon, started CPR on Adam. Pops (our grandfather), our dad and the first responders all did CPR too.',
     ],
     tips: [
       'In an emergency, call 911. If a child is missing, check the water first.',

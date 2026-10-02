@@ -3,14 +3,36 @@ import ProseLayout from '../layouts/ProseLayout.astro';
 import PhotoFrame from '../components/PhotoFrame.astro';
 import CtaBand from '../components/CtaBand.astro';
 import SharePage from '../components/SharePage.astro';
-import { home as story } from '../data/content';
+import Album from '../components/Album.astro';
+import FacebookVideo from '../components/FacebookVideo.astro';
+import { home as story, album } from '../data/content';
 import { url } from '../lib/url';
 import { site } from '../data/site';
+import { getEntry } from 'astro:content';
+
+const audio = (await getEntry('pages', 'adams-story'))?.data.audio?.trim();
+const video = (album.videos ?? [])[0];
 ---
 
-<ProseLayout slug="adams-story" type="Article">
+<ProseLayout slug="adams-story" toc={false} type="Article">
   <div class="story-aside">
     <PhotoFrame src={story.storyPhoto || story.photo} alt={story.storyPhoto ? story.storyPhotoAlt : story.photoAlt} caption={story.storyPhoto ? story.storyPhotoCaption : undefined} hint="Add a photo of Adam" />
+    {
+      audio && (
+        <div class="card story-aside__card">
+          <p class="eyebrow">Listen</p>
+          <p>Avery reads Adam’s story.</p>
+          <audio controls preload="none" src={url(audio)} style="width: 100%" />
+        </div>
+      )
+    }
+    {
+      video?.url && (
+        <Album summary={`Watch: ${video.title}`} note={`A short video from Mom’s page, ${video.date}`} more>
+          <FacebookVideo url={video.url} title={video.title!} caption={video.caption} />
+        </Album>
+      )
+    }
     <div class="card story-aside__card">
       <p class="eyebrow">Adam’s Village of Hope</p>
       <p>Follow Adam on Facebook and join the thousands cheering him on.</p>
