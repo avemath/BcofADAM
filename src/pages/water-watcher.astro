@@ -46,6 +46,10 @@ const promises = [
             ))
           }
         </ul>
+        <label class="pledge__name">
+          <span>Your name, for the card (optional)</span>
+          <input type="text" name="name" maxlength="40" autocomplete="name" data-name />
+        </label>
         <p class="pledge__done" role="status" aria-live="polite"></p>
         <div class="btn-row no-print">
           <button type="button" class="btn" data-share>Share the pledge</button>
@@ -59,6 +63,7 @@ const promises = [
           <div class="ww-card__top">
             <span class="ww-card__eyebrow">I am the</span>
             <span class="ww-card__title">Water Watcher</span>
+            <span class="ww-card__name" data-card-name hidden></span>
           </div>
           <ul>
             <li>I watch the water. Nothing else.</li>
@@ -92,12 +97,59 @@ const promises = [
     const form = document.querySelector('[data-pledge]');
     const boxes = form.querySelectorAll('input[type=checkbox]');
     const done = form.querySelector('.pledge__done');
+    const nameInput = form.querySelector('[data-name]');
+    const cardName = document.querySelector('[data-card-name]');
+    const KEY = 'bcoa:pledge';
+    const read = () => {
+      try {
+        return JSON.parse(localStorage.getItem(KEY) || 'null') || null;
+      } catch {
+        return null;
+      }
+    };
+    const write = (value) => {
+      try {
+        if (value) localStorage.setItem(KEY, JSON.stringify(value));
+        else localStorage.removeItem(KEY);
+      } catch {
+        /* private window or storage off */
+      }
+    };
+    const niceDate = (iso) => new Date(iso).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+    const showName = () => {
+      const name = nameInput.value.trim();
+      cardName.textContent = name;
+      cardName.hidden = !name;
+    };
     const update = () => {
       const all = [...boxes].every((b) => b.checked);
       form.classList.toggle('is-complete', all);
-      done.textContent = all ? 'Thank you. You’re a Water Watcher. Now pass it on.' : '';
+      const saved = read();
+      if (all) {
+        const when = saved?.date || new Date().toISOString();
+        write({ date: when, name: nameInput.value.trim() });
+        done.textContent = saved?.date
+          ? `You took the pledge on ${niceDate(saved.date)}. Thank you for keeping it. Print your card any time.`
+          : 'Thank you. You’re a Water Watcher. Now pass it on.';
+      } else {
+        if (saved) write(null);
+        done.textContent = '';
+      }
     };
     boxes.forEach((b) => b.addEventListener('change', update));
+    nameInput.addEventListener('input', () => {
+      showName();
+      const saved = read();
+      if (saved) write({ ...saved, name: nameInput.value.trim() });
+    });
+    // Took the pledge before? Pick up where you left off.
+    const saved = read();
+    if (saved?.date) {
+      boxes.forEach((b) => (b.checked = true));
+      if (saved.name) nameInput.value = saved.name;
+      showName();
+      update();
+    }
   
     form.querySelector('[data-print]').addEventListener('click', () => window.print());
     form.querySelector('[data-share]').addEventListener('click', async () => {
@@ -164,6 +216,32 @@ const promises = [
     font-style: normal;
     font-size: 0.875rem;
     font-weight: 700;
+  }
+  .pledge__name {
+    display: grid;
+    gap: 6px;
+    margin: 16px 0 4px;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+  .pledge__name input {
+    width: 100%;
+    max-width: 360px;
+    padding: 10px 12px;
+    border: 1.5px solid var(--line);
+    border-radius: var(--radius-sm);
+    font: inherit;
+  }
+  .pledge__name input:focus-visible {
+    outline: 3px solid var(--aqua);
+    outline-offset: 2px;
+  }
+  .ww-card__name {
+    display: block;
+    margin-top: 6px;
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 600;
   }
   .pledge__done {
     font-family: var(--font-display);

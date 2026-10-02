@@ -1,0 +1,130 @@
+---
+/**
+ * "On this page": a row of jump links to the sections (h2) on long pages.
+ * It is built in the browser from the headings that are actually there, so
+ * it stays right when the family edits a page in the Studio. It hides itself
+ * on pages with fewer than three sections.
+ */
+interface Props {
+  label?: string;
+}
+const { label = 'On this page' } = Astro.props;
+---
+
+<nav class="otp" aria-label={label} data-otp hidden>
+  <div class="wrap otp__inner">
+    <span class="otp__label">{label}</span>
+    <ol></ol>
+  </div>
+</nav>
+
+<script>
+  for (const nav of document.querySelectorAll<HTMLElement>('[data-otp]')) {
+    const list = nav.querySelector('ol')!;
+    const main = document.querySelector('main');
+    const heads = main
+      ? [...main.querySelectorAll<HTMLHeadingElement>('h2[id]')].filter(
+          (h) => !h.closest('[data-otp-skip]') && !h.classList.contains('visually-hidden') && h.getClientRects().length > 0,
+        )
+      : [];
+    if (heads.length < 3) continue;
+    const links = new Map<Element, HTMLAnchorElement>();
+    for (const h of heads) {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = `#${h.id}`;
+      a.textContent = (h.textContent || '').trim().replace(/[.:]$/, '');
+      li.append(a);
+      list.append(li);
+      links.set(h, a);
+    }
+    nav.hidden = false;
+    // Mark the section you're in.
+    if ('IntersectionObserver' in window) {
+      let current: HTMLAnchorElement | null = null;
+      const io = new IntersectionObserver(
+        (entries) => {
+          for (const e of entries) {
+            if (!e.isIntersecting) continue;
+            current?.removeAttribute('aria-current');
+            current = links.get(e.target) ?? null;
+            current?.setAttribute('aria-current', 'location');
+            // Keep the current chip in view on a phone (the row scrolls sideways; the page doesn't move).
+            if (current) list.scrollTo({ left: Math.max(0, current.offsetLeft - 16), behavior: 'smooth' });
+          }
+        },
+        { rootMargin: '-110px 0px -65% 0px' },
+      );
+      heads.forEach((h) => io.observe(h));
+    }
+  }
+</script>
+
+<!-- Global on purpose: the links are built by the script, so scoped styles would not reach them. Every selector starts with .otp. -->
+<style is:global>
+  .otp {
+    position: sticky;
+    top: 72px;
+    z-index: 5;
+    background: var(--sand);
+    border-bottom: 1px solid var(--line);
+  }
+  .otp__inner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-block: 8px;
+  }
+  .otp__label {
+    flex: none;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .otp ol {
+    list-style: none;
+    margin: 0;
+    padding: 2px 0;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    min-width: 0;
+  }
+  .otp ol::-webkit-scrollbar {
+    display: none;
+  }
+  .otp li {
+    flex: none;
+  }
+  .otp a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 40px;
+    padding: 6px 14px;
+    border: 1.5px solid var(--line);
+    border-radius: 999px;
+    background: #fff;
+    color: var(--ocean);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .otp a:hover,
+  .otp a:focus-visible {
+    border-color: var(--aqua);
+  }
+  .otp a[aria-current='location'] {
+    background: var(--deep);
+    border-color: var(--deep);
+    color: #fff;
+  }
+  @media (max-width: 639px) {
+    .otp__label {
+      display: none;
+    }
+  }
+</style>

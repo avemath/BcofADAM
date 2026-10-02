@@ -8,7 +8,7 @@ import { url } from '../lib/url';
 import { site } from '../data/site';
 ---
 
-<ProseLayout slug="adams-story" type="Article">
+<ProseLayout slug="adams-story" toc={false} type="Article">
   <div class="story-aside">
     <PhotoFrame src={story.storyPhoto || story.photo} alt={story.storyPhoto ? story.storyPhotoAlt : story.photoAlt} caption={story.storyPhoto ? story.storyPhotoCaption : undefined} hint="Add a photo of Adam" />
     <div class="card story-aside__card">
