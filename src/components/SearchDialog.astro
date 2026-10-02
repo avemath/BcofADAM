@@ -1,0 +1,402 @@
+---
+/**
+ * Site search, in a dialog that opens from the header (or by pressing "/").
+ * Results come from Pagefind, which indexes the built site, so there is no
+ * server and nothing to keep in sync. The empty state lists the pages this
+ * visitor looked at before (kept in their own browser) and good places to start.
+ */
+import { url } from '../lib/url';
+
+const starts = [
+  { label: 'Layers of protection', href: '/water-safety' },
+  { label: 'Home safety checklist', href: '/checklist' },
+  { label: 'Water Watcher pledge', href: '/water-watcher' },
+  { label: 'The facts', href: '/the-facts' },
+  { label: 'Adam’s story', href: '/adams-story' },
+  { label: 'Request a talk', href: '/request-a-talk' },
+];
+---
+
+<dialog class="search" id="site-search" aria-labelledby="site-search-title" data-pagefind={url('/pagefind/pagefind.js')}>
+  <div class="search__panel">
+    <form class="search__form" role="search">
+      <h2 id="site-search-title" class="visually-hidden">Search this site</h2>
+      <div class="search__bar">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2.2" />
+          <path d="m16.5 16.5 4.5 4.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+        </svg>
+        <label class="visually-hidden" for="site-search-input">Search this site</label>
+        <input id="site-search-input" type="search" placeholder="Try “pool fence”, “CPR” or “checklist”" autocomplete="off" spellcheck="false" enterkeyhint="search" />
+        <button type="button" class="search__close" data-search-close>Close</button>
+      </div>
+    </form>
+    <div class="search__results" id="site-search-results" aria-live="polite"></div>
+    <div class="search__empty" id="site-search-empty">
+      <div class="search__recent" hidden>
+        <p class="search__heading">Pages you looked at before</p>
+        <ul></ul>
+        <button type="button" class="search__clear">Clear this list</button>
+      </div>
+      <div>
+        <p class="search__heading">Good places to start</p>
+        <ul>
+          {starts.map((s) => (
+            <li><a href={url(s.href)}>{s.label}</a></li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<script>
+  type Sub = { title: string; url: string; excerpt: string };
+  type Hit = { url: string; excerpt: string; meta: { title?: string }; sub_results: Sub[] };
+  type Pagefind = {
+    init: () => Promise<void>;
+    debouncedSearch: (q: string) => Promise<{ results: { data: () => Promise<Hit> }[] } | null>;
+  };
+  type Recent = { t: string; u: string };
+
+  const dialog = document.getElementById('site-search') as HTMLDialogElement | null;
+  const main = document.querySelector<HTMLElement>('main[data-pagefind-body]');
+  const RECENT_KEY = 'bcoa:recent';
+
+  const readRecent = (): Recent[] => {
+    try {
+      const v = JSON.parse(localStorage.getItem(RECENT_KEY) || '[]');
+      return Array.isArray(v) ? v.filter((r) => r && typeof r.u === 'string' && typeof r.t === 'string') : [];
+    } catch {
+      return [];
+    }
+  };
+  const writeRecent = (list: Recent[]) => {
+    try {
+      localStorage.setItem(RECENT_KEY, JSON.stringify(list.slice(0, 8)));
+    } catch {
+      /* private window or storage off: the list just isn't kept */
+    }
+  };
+
+  // Remember this page, so it shows up under "Pages you looked at before".
+  if (main) {
+    const title = (main.getAttribute('data-pagefind-meta') || '').replace(/^title:/, '').trim();
+    if (title) writeRecent([{ t: title, u: location.pathname }, ...readRecent().filter((r) => r.u !== location.pathname)]);
+  }
+
+  if (dialog && typeof dialog.showModal === 'function') {
+    const form = dialog.querySelector('form')!;
+    const input = dialog.querySelector<HTMLInputElement>('#site-search-input')!;
+    const results = dialog.querySelector<HTMLElement>('#site-search-results')!;
+    const empty = dialog.querySelector<HTMLElement>('#site-search-empty')!;
+    const recentBox = dialog.querySelector<HTMLElement>('.search__recent')!;
+    const recentList = recentBox.querySelector('ul')!;
+
+    const el = <K extends keyof HTMLElementTagNameMap>(tag: K, cls?: string, text?: string) => {
+      const n = document.createElement(tag);
+      if (cls) n.className = cls;
+      if (text !== undefined) n.textContent = text;
+      return n;
+    };
+
+    const renderRecent = () => {
+      const list = readRecent().filter((r) => r.u !== location.pathname).slice(0, 5);
+      recentBox.hidden = list.length === 0;
+      recentList.replaceChildren(
+        ...list.map((r) => {
+          const li = el('li');
+          const a = el('a', undefined, r.t);
+          a.href = r.u;
+          li.append(a);
+          return li;
+        }),
+      );
+    };
+    recentBox.querySelector('.search__clear')?.addEventListener('click', () => {
+      writeRecent([]);
+      renderRecent();
+    });
+
+    let loading: Promise<Pagefind> | null = null;
+    const load = () =>
+      (loading ??= import(/* @vite-ignore */ dialog.dataset.pagefind!).then(async (m: Pagefind) => {
+        await m.init();
+        return m;
+      }));
+
+    const render = (hits: Hit[], q: string) => {
+      if (hits.length === 0) {
+        results.replaceChildren(el('p', 'search__none', `Nothing found for “${q}”. Try another word, or start from one of the pages below.`));
+        empty.hidden = false;
+        return;
+      }
+      const ul = el('ul');
+      for (const h of hits) {
+        const li = el('li', 'search__item');
+        const a = el('a');
+        a.href = h.url;
+        a.append(el('span', 'search__title', h.meta.title || 'Untitled'));
+        const ex = el('span', 'search__excerpt');
+        ex.innerHTML = h.excerpt; // Pagefind escapes page text and only adds <mark> tags.
+        a.append(ex);
+        li.append(a);
+        const subs = h.sub_results.filter((s) => s.url.includes('#') && s.title !== h.meta.title).slice(0, 3);
+        if (subs.length) {
+          const sl = el('ul', 'search__subs');
+          for (const s of subs) {
+            const sli = el('li');
+            const sa = el('a', undefined, s.title);
+            sa.href = s.url;
+            sli.append(sa);
+            sl.append(sli);
+          }
+          li.append(sl);
+        }
+        ul.append(li);
+      }
+      results.replaceChildren(ul);
+      empty.hidden = true;
+    };
+
+    let seq = 0;
+    const run = async () => {
+      const q = input.value.trim();
+      if (!q) {
+        results.replaceChildren();
+        empty.hidden = false;
+        renderRecent();
+        return;
+      }
+      const my = ++seq;
+      const pf = await load();
+      const res = await pf.debouncedSearch(q);
+      if (!res || my !== seq) return;
+      const hits = await Promise.all(res.results.slice(0, 8).map((r) => r.data()));
+      if (my !== seq) return;
+      render(hits, q);
+    };
+    input.addEventListener('input', run);
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      results.querySelector<HTMLAnchorElement>('a')?.click();
+    });
+
+    const open = () => {
+      if (!dialog.open) dialog.showModal();
+      renderRecent();
+      load().catch(() => {
+        results.replaceChildren(el('p', 'search__none', 'Search isn’t available right now. The menu and the footer list every page.'));
+      });
+      input.focus();
+      input.select();
+    };
+    const close = () => {
+      if (dialog.open) dialog.close();
+    };
+    document.querySelectorAll('[data-search-open]').forEach((b) => b.addEventListener('click', open));
+    dialog.querySelector('[data-search-close]')?.addEventListener('click', close);
+    // Escape closes it (browsers do this for modal dialogs, but not always without a click first).
+    dialog.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        e.stopPropagation();
+        close();
+      }
+    });
+    dialog.addEventListener('cancel', (e) => {
+      e.preventDefault();
+      close();
+    });
+    // A click on the dark backdrop (outside the panel) closes the dialog.
+    dialog.addEventListener('click', (e) => {
+      if (e.target === dialog) close();
+    });
+    document.addEventListener('keydown', (e) => {
+      const t = e.target as HTMLElement | null;
+      const typing = !!t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.tagName === 'SELECT' || t.isContentEditable);
+      if ((e.key === 'k' && (e.metaKey || e.ctrlKey)) || (e.key === '/' && !typing && !e.metaKey && !e.ctrlKey && !e.altKey)) {
+        e.preventDefault();
+        open();
+      }
+    });
+  }
+</script>
+
+<!-- Global on purpose: the result rows are built by the script, so scoped styles wouldn't reach them. Every selector starts with .search. -->
+<style is:global>
+  .search {
+    width: min(680px, calc(100% - 32px));
+    max-height: min(84vh, 84dvh);
+    margin: 8vh auto auto;
+    padding: 0;
+    border: 0;
+    border-radius: var(--radius);
+    background: #fff;
+    color: var(--ink);
+    box-shadow: 0 30px 80px -20px rgb(4 29 43 / 0.55);
+    overflow: auto;
+    overscroll-behavior: contain;
+  }
+  .search::backdrop {
+    background: rgb(4 29 43 / 0.55);
+  }
+  .search__bar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+    color: var(--ocean);
+  }
+  .search__bar:focus-within {
+    box-shadow: inset 0 -3px 0 var(--aqua);
+  }
+  .search__bar svg {
+    flex: none;
+  }
+  .search__bar input {
+    flex: 1;
+    min-width: 0;
+    padding: 8px 0;
+    border: 0;
+    outline: none;
+    background: transparent;
+    color: var(--ink);
+    font: inherit;
+    font-size: 1.1rem;
+  }
+  .search__bar input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+  }
+  .search__close {
+    flex: none;
+    min-height: 36px;
+    padding: 4px 12px;
+    border: 2px solid var(--line);
+    border-radius: 999px;
+    background: #fff;
+    color: var(--deep);
+    font: 700 0.9rem var(--font-body);
+    cursor: pointer;
+  }
+  .search__close:hover {
+    border-color: var(--deep);
+  }
+  .search__results,
+  .search__empty {
+    padding: 8px 12px 16px;
+  }
+  .search__results:empty {
+    padding: 0;
+  }
+  .search ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .search__item {
+    padding: 6px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .search__item:last-child {
+    border-bottom: 0;
+  }
+  .search__item > a {
+    display: block;
+    padding: 8px;
+    border-radius: 8px;
+    color: inherit;
+    text-decoration: none;
+  }
+  .search__item > a:hover,
+  .search__item > a:focus-visible {
+    background: var(--foam);
+  }
+  .search__title {
+    display: block;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.12rem;
+    line-height: 1.3;
+    color: var(--ocean);
+  }
+  .search__excerpt {
+    display: block;
+    margin-top: 2px;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: var(--ink-soft);
+  }
+  .search__excerpt mark {
+    padding: 0 2px;
+    border-radius: 3px;
+    background: #fff1bf;
+    color: inherit;
+  }
+  .search__subs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 2px 8px 6px;
+  }
+  .search__subs a {
+    display: inline-block;
+    padding: 4px 10px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--foam);
+    color: var(--aqua-text);
+    font-size: 0.86rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .search__subs a:hover,
+  .search__subs a:focus-visible {
+    border-color: var(--aqua);
+  }
+  .search__heading {
+    margin: 12px 8px 4px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .search__empty li a {
+    display: block;
+    padding: 8px;
+    border-radius: 8px;
+    color: var(--ocean);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .search__empty li a:hover,
+  .search__empty li a:focus-visible {
+    background: var(--foam);
+  }
+  .search__clear {
+    margin: 2px 8px 6px;
+    padding: 4px 0;
+    border: 0;
+    background: none;
+    color: var(--ink-soft);
+    font: 600 0.85rem var(--font-body);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .search__none {
+    margin: 8px;
+    color: var(--ink-soft);
+  }
+  @media (max-width: 639px) {
+    .search {
+      width: calc(100% - 24px);
+      margin-top: 12px;
+      max-height: min(88vh, 88dvh);
+    }
+  }
+</style>
