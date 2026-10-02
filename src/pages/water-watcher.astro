@@ -217,22 +217,24 @@ const promises = [
     font-size: 0.875rem;
     font-weight: 700;
   }
-  .pledge__name {
+  /* More specific than the checkbox rows' flex rule above. */
+  .pledge .pledge__name {
     display: grid;
     gap: 6px;
     margin: 16px 0 4px;
     font-size: 0.95rem;
     font-weight: 600;
   }
-  .pledge__name input {
+  .pledge .pledge__name input {
     width: 100%;
+    min-width: 0;
     max-width: 360px;
     padding: 10px 12px;
     border: 1.5px solid var(--line);
     border-radius: var(--radius-sm);
     font: inherit;
   }
-  .pledge__name input:focus-visible {
+  .pledge .pledge__name input:focus-visible {
     outline: 3px solid var(--aqua);
     outline-offset: 2px;
   }
