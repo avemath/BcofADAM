@@ -3,6 +3,7 @@
 import { getEntry } from 'astro:content';
 import BaseLayout from './BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
+import OnThisPage from '../components/OnThisPage.astro';
 import { prose } from '../lib/prose';
 import { withAge } from '../lib/age';
 
@@ -10,6 +11,8 @@ interface Props {
   slug: string;
   /** 'Article' for stories; other pages are a WebPage. */
   type?: 'WebPage' | 'Article';
+  /** The "On this page" jump list (off for the story, which reads top to bottom). */
+  toc?: boolean;
 }
 const entry = await getEntry('pages', Astro.props.slug);
 if (!entry) throw new Error(`Missing src/content/pages/${Astro.props.slug}.md`);
@@ -28,6 +31,7 @@ const html = prose(entry.rendered?.html);
   type={Astro.props.type}
 >
   <PageHero eyebrow={eyebrow} title={title} lede={lede} />
+  {Astro.props.toc !== false && <OnThisPage />}
   <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
     <div class="wrap prose-layout">
       <article class="prose">

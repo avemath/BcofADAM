@@ -4,6 +4,7 @@
  * (Pages → Water safety quiz). Nothing people type or pick here leaves their browser.
  */
 import BaseLayout from '../layouts/BaseLayout.astro';
+import SharePage from '../components/SharePage.astro';
 import PageHero from '../components/PageHero.astro';
 import CtaBand from '../components/CtaBand.astro';
 import Logo from '../components/Logo.astro';
@@ -103,6 +104,9 @@ const host = Astro.site?.host ?? 'becauseofadam.org';
             <span>{host}</span>
           </p>
         </div>
+      </div>
+      <div class="no-print" style="margin-top: 32px">
+        <SharePage label="Pass the quiz along" text="How much do you know about keeping kids safe around water? A quick quiz, with every answer explained." />
       </div>
     </div>
   </section>

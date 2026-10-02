@@ -4,6 +4,7 @@
  * grandparents. Edit the wording in the Studio (Pages → Home water safety checklist).
  */
 import BaseLayout from '../layouts/BaseLayout.astro';
+import SharePage from '../components/SharePage.astro';
 import Logo from '../components/Logo.astro';
 import { checklist as c } from '../data/content';
 import { site } from '../data/site';
@@ -88,6 +89,9 @@ const host = Astro.site?.host ?? 'becauseofadam.org';
       <div class="no-print btn-row checklist-after">
         <a class="btn btn--ghost" href={url('/water-safety')}>See the seven layers</a>
         <a class="btn btn--ghost" href={url('/flyer')}>Flyer for offices and daycares</a>
+      </div>
+      <div class="no-print" style="margin-top: 24px">
+        <SharePage label="Send the checklist to the grandparents or the babysitter" text="A home water safety checklist you can walk through in ten minutes, from a family that knows." />
       </div>
     </div>
   </section>

@@ -115,6 +115,7 @@ export const nav: NavItem[] = [
     href: '/about',
     children: [
       { label: 'About us', href: '/about' },
+      { label: 'Photos & videos', href: '/photos' },
       { label: 'News', href: '/news' },
       { label: 'Press', href: '/press' },
       { label: 'Contact', href: '/contact' },

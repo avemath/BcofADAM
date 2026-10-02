@@ -1,0 +1,164 @@
+---
+/**
+ * "What people picture. What happened." Two short lists that swap: what most
+ * people imagine drowning looks like, and what happened to Adam. Every line
+ * in the second list is from Adam's story. Both lists are editable in the Studio.
+ */
+import { home } from '../data/content';
+import { url } from '../lib/url';
+
+const expect = (home.expect ?? []).filter((l) => l?.trim());
+const reality = (home.reality ?? []).filter((l) => l?.trim());
+const pairs = expect.map((e, i) => [e, reality[i]] as const).filter(([e, r]) => e && r);
+---
+
+{
+  pairs.length > 0 && (
+    <section class="section expect" aria-labelledby="expect-title" data-expect>
+      <div class="wrap narrow">
+        <span class="eyebrow">June 5, 2017</span>
+        <h2 id="expect-title">What people picture. What happened.</h2>
+        <div class="expect__toggle" role="group" aria-label="Show">
+          <button type="button" class="expect__btn" aria-pressed="true" data-show="expect">What people picture</button>
+          <button type="button" class="expect__btn" aria-pressed="false" data-show="reality">What happened</button>
+        </div>
+        <div class="expect__lists">
+          <ol class="expect__list" data-list="expect" aria-hidden="true">
+            {pairs.map(([e]) => (
+              <li>{e}</li>
+            ))}
+          </ol>
+          <ol class="expect__list expect__list--reality" data-list="reality" aria-hidden="true" hidden>
+            {pairs.map(([, r]) => (
+              <li>{r}</li>
+            ))}
+          </ol>
+          <ol class="visually-hidden">
+            {pairs.map(([e, r]) => (
+              <li>
+                People picture: {e} What happened: {r}
+              </li>
+            ))}
+          </ol>
+        </div>
+        <p class="expect__foot">
+          Every line on the right is from <a href={url('/adams-story')}>Adam’s story</a>, and the pattern isn’t only ours.
+          Drowning is usually silent (
+          <a href="https://www.healthychildren.org/English/safety-prevention/at-play/Pages/Water-Safety-And-Young-Children.aspx" rel="noopener" target="_blank">
+            American Academy of Pediatrics<span class="visually-hidden"> (opens in a new tab)</span>
+          </a>
+          ), and most young children who drown in a pool weren’t expected to be anywhere near it (
+          <a href="https://www.cpsc.gov/s3fs-public/pdfs/blk_media_359.pdf" rel="noopener" target="_blank">
+            CPSC<span class="visually-hidden"> (opens in a new tab)</span>
+          </a>
+          ).
+        </p>
+      </div>
+    </section>
+  )
+}
+
+<script>
+  for (const box of document.querySelectorAll<HTMLElement>('[data-expect]')) {
+    const buttons = [...box.querySelectorAll<HTMLButtonElement>('[data-show]')];
+    const lists = [...box.querySelectorAll<HTMLElement>('[data-list]')];
+    const show = (which: string) => {
+      buttons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.show === which)));
+      lists.forEach((l) => {
+        l.hidden = l.dataset.list !== which;
+        if (!l.hidden) {
+          l.classList.remove('is-in');
+          requestAnimationFrame(() => l.classList.add('is-in'));
+        }
+      });
+    };
+    buttons.forEach((b) => b.addEventListener('click', () => show(b.dataset.show!)));
+  }
+</script>
+
+<style>
+  .expect {
+    padding-top: clamp(40px, 6vw, 72px);
+    padding-bottom: clamp(24px, 4vw, 48px);
+  }
+  .expect__toggle {
+    display: inline-flex;
+    margin: 4px 0 20px;
+    padding: 4px;
+    border: 1.5px solid var(--line);
+    border-radius: 999px;
+    background: #fff;
+  }
+  .expect__btn {
+    min-height: 40px;
+    padding: 6px 16px;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--ocean);
+    font: 700 0.95rem var(--font-body);
+    cursor: pointer;
+  }
+  .expect__btn[aria-pressed='true'] {
+    background: var(--deep);
+    color: #fff;
+  }
+  .expect__btn:focus-visible {
+    outline: 3px solid var(--aqua);
+    outline-offset: 2px;
+  }
+  .expect__lists {
+    min-height: 15rem;
+  }
+  .expect__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 12px;
+    font-family: var(--font-display);
+    font-size: clamp(1.35rem, 1.2vw + 1rem, 1.9rem);
+    line-height: 1.25;
+    color: var(--ink-soft);
+  }
+  .expect__list--reality {
+    color: var(--ocean);
+  }
+  .expect__list li {
+    padding-left: 1.4em;
+    position: relative;
+  }
+  .expect__list li::before {
+    content: counter(line) '.';
+    counter-increment: line;
+    position: absolute;
+    left: 0;
+    font-size: 0.8em;
+    top: 0.2em;
+    color: var(--aqua-text);
+    font-family: var(--font-body);
+    font-weight: 700;
+  }
+  .expect__list {
+    counter-reset: line;
+  }
+  .expect__list.is-in {
+    animation: expect-in 0.25s ease both;
+  }
+  @keyframes expect-in {
+    from {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .expect__list.is-in {
+      animation: none;
+    }
+  }
+  .expect__foot {
+    margin-top: 20px;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+  }
+</style>

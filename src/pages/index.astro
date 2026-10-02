@@ -6,6 +6,10 @@ import TimeOnPage from '../components/TimeOnPage.astro';
 import LayersBuilder from '../components/LayersBuilder.astro';
 import CtaBand from '../components/CtaBand.astro';
 import HomeNumbers from '../components/HomeNumbers.astro';
+import WhereTonight from '../components/WhereTonight.astro';
+import ExpectReality from '../components/ExpectReality.astro';
+import SeasonStrip from '../components/SeasonStrip.astro';
+import SharePage from '../components/SharePage.astro';
 import { layers } from '../data/layers';
 import { home as story } from '../data/content';
 import AnywhereAnytime from '../components/AnywhereAnytime.astro';
@@ -39,36 +43,50 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
       {Array.from({ length: 14 }, (_, i) => <span style={`--i:${i}`} />)}
     </div>
     <div class="wrap hero__inner">
-      <p class="hero__eyebrow">
-        <span class="hero__eyebrow-name">Because of <strong>ADAM</strong> · </span><span>{site.tagline}</span>
-      </p>
-      <h1 class="hero__title">
-        <span class="hero__line">Drowning is silent.</span>{' '}
-        <span class="hero__line hero__line--2">We won’t be.</span>
-      </h1>
-      <p class="hero__lede">
+      <div class="hero__text">
         {
-          ledeParts.length === 2 ? (
-            <>
-              {ledeParts[0]}
-              <strong>#1 cause of death</strong>
-              {ledeParts[1]}
-            </>
-          ) : (
-            story.heroLede
+          story.heroPhoto && (
+            <div class="hero__photo">
+              <img src={url(story.heroPhoto)} alt={story.heroPhotoAlt} sizes="(min-width: 900px) 560px, 88px" loading="eager" fetchpriority="high" />
+              <span class="hero__photo-caption">{withAge(story.heroCaption)}</span>
+            </div>
           )
         }
-      </p>
-      <div class="btn-row">
-        <a class="btn" href={url('/adams-story')}>Read Adam’s story</a>
-        <a class="btn btn--ghost" href="#tonight">Five things to do tonight</a>
+        <h1 class="hero__title">
+          <span class="hero__line">Drowning is silent.</span>{' '}
+          <span class="hero__line hero__line--2">We won’t be.</span>
+        </h1>
+        <p class="hero__lede">
+          {
+            ledeParts.length === 2 ? (
+              <>
+                {ledeParts[0]}
+                <strong>#1 cause of death</strong>
+                {ledeParts[1]}
+              </>
+            ) : (
+              story.heroLede
+            )
+          }
+        </p>
+        <p class="hero__by">From Adam’s brother and sisters · {site.location}</p>
+        <div class="btn-row">
+          <a class="btn" href="#tonight">Five things to do tonight</a>
+          <a class="btn btn--ghost" href={url('/adams-story')}>Read Adam’s story</a>
+        </div>
+        <p class="hero__chip">
+          <strong>#1 cause of death</strong> for kids ages 1 to 4 ·{' '}
+          <a href="https://www.cdc.gov/drowning/data-research/facts/index.html" rel="noopener" target="_blank">
+            CDC<span class="visually-hidden"> (opens in a new tab)</span>
+          </a>
+        </p>
       </div>
     </div>
     <Wave color="var(--sand)" animated />
   </section>
 
-  <!-- THE NUMBERS -->
-  <HomeNumbers />
+  <SeasonStrip />
+  <ExpectReality />
 
   <!-- TONIGHT -->
   <section id="tonight" class="section" style="padding-top: clamp(32px, 5vw, 64px)">
@@ -76,7 +94,8 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
       <span class="eyebrow">Start tonight</span>
       <h2>{story.tonightTitle}</h2>
       {story.tonightIntro && <p class="lede layers-lede">{story.tonightIntro}</p>}
-      <ol class="tonight">
+      <WhereTonight generic="tonight-all" />
+      <ol class="tonight" id="tonight-all">
         {
           (story.tonight ?? []).map((t, i) => (
             <li class="card reveal">
@@ -90,6 +109,9 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
         <a class="btn btn--ocean" href={url('/water-safety')}>See the {countWord(layers.length).toLowerCase()} layers</a>
         <a class="btn btn--ghost" href={url('/checklist')}>Print the home checklist</a>
       </div>
+      <div class="tonight__send">
+        <SharePage compact label="Who watches your kids this week? Send them tonight’s checks." text="Five things you can do tonight to keep kids safe around water, from a family that knows." />
+      </div>
       <div class="missing-callout reveal" role="note">
         <h3>If a child is missing, check the water first.</h3>
         <p>
@@ -99,6 +121,9 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
       </div>
     </div>
   </section>
+
+  <!-- THE NUMBERS -->
+  <HomeNumbers />
 
   <!-- ANYWHERE, ANYTIME -->
   <Wave color="var(--deep)" bg="var(--sand)" />
@@ -118,6 +143,7 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
         {story.teaserMore && <p>{withAge(story.teaserMore)}</p>}
         <div class="btn-row">
           <a class="btn btn--ocean" href={url('/adams-story')}>Read Adam’s story</a>
+          <a class="btn btn--ghost" href={url('/photos')}>Photos & videos</a>
         </div>
       </div>
     </div>
@@ -191,8 +217,8 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
         <span class="eyebrow">Survivors & families</span>
         <h2>Surviving is only the beginning.</h2>
         <p class="lede">
-          Some children, like Adam, come home from a drowning with injuries that change everything, and families who
-          need a village around them. We want every one of them to know they’re not alone.
+          Many drowning prevention groups were started in memory of a child who died. Ours was started for one who
+          lived. If your child came home from a drowning, there’s a page here for you, and a family behind it.
         </p>
         <div class="btn-row">
           <a class="btn btn--ocean" href={url('/survivors-and-families')}>Support for families</a>
@@ -295,22 +321,109 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
       padding-top: 56px;
     }
   }
-  .hero__eyebrow {
-    font-size: 0.85rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: #fff;
-    margin-bottom: 1.5rem;
+  .hero__inner {
+    display: grid;
+    gap: 24px;
   }
-  /* White, not gold: the moving light in the hero can sit right behind this label on phones. */
-  .hero__eyebrow strong {
-    color: #fff;
-    font-weight: 800;
+  /* On a phone the photo is a small round portrait above the headline; on a desktop it fills the right side. */
+  .hero__photo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
   }
-  @media (max-width: 639px) {
-    .hero__eyebrow-name {
-      display: none;
+  .hero__photo img {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 30%;
+    border: 3px solid rgb(255 255 255 / 0.85);
+    box-shadow: 0 10px 30px -10px rgb(4 29 43 / 0.6);
+  }
+  .hero__photo-caption {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #fff;
+  }
+  @media (min-width: 900px) {
+    .hero .hero__inner {
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
+      align-items: end;
+      gap: 16px 48px;
+      padding-top: 48px;
     }
+    /* Beside the photo the headline runs a size smaller, so each line stays whole. */
+    .hero .hero__title {
+      font-size: clamp(3rem, 4vw + 0.4rem, 4.8rem);
+      margin-bottom: 0.2em;
+    }
+    .hero__line--2 {
+      white-space: nowrap;
+    }
+    .hero__text {
+      display: contents;
+    }
+    .hero__photo {
+      display: block;
+      position: relative;
+      order: 2;
+      grid-column: 2;
+      grid-row: 1 / span 5;
+      align-self: end;
+      margin: 0;
+    }
+    .hero__photo img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 5;
+      max-height: min(520px, 62vh);
+      border: 0;
+      border-radius: var(--radius);
+      box-shadow: none;
+      object-position: center 20%;
+      -webkit-mask-image: linear-gradient(to right, transparent 0, #000 22%);
+      mask-image: linear-gradient(to right, transparent 0, #000 22%);
+    }
+    .hero__photo-caption {
+      position: absolute;
+      right: 16px;
+      bottom: 14px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: rgb(4 29 43 / 0.55);
+      font-size: 1rem;
+    }
+    .hero__title,
+    .hero__lede,
+    .hero__by,
+    .hero .btn-row,
+    .hero__chip {
+      grid-column: 1;
+    }
+  }
+  .hero__by {
+    margin: -4px 0 20px;
+    font-size: 0.95rem;
+    color: var(--on-dark-soft);
+  }
+  .hero__chip {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin: 20px 0 0;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: rgb(4 29 43 / 0.45);
+    font-size: 0.85rem;
+    color: var(--on-dark);
+  }
+  .hero__chip strong {
+    color: var(--sun);
+  }
+  .hero__chip a {
+    color: #fff;
   }
   .hero__title {
     font-size: clamp(3rem, 8.4vw + 0.5rem, 7.6rem);
@@ -322,12 +435,12 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
   }
   .hero__line {
     display: block;
-    animation: surface 1.4s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    animation: surface 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
   }
   .hero__line--2 {
     font-style: italic;
     color: var(--sun);
-    animation-delay: 0.6s;
+    animation-delay: 0.25s;
   }
   @keyframes surface {
     from {
@@ -340,13 +453,17 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
     font-size: clamp(1.15rem, 0.8vw + 1rem, 1.5rem);
     max-width: 44ch;
     color: var(--on-dark);
-    animation: surface 1.4s 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
   }
   .hero__lede strong {
     color: var(--sun);
   }
   .hero .btn-row {
-    animation: surface 1.4s 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    margin-top: 4px;
+  }
+
+  .tonight__send {
+    max-width: 640px;
+    margin-top: 28px;
   }
 
   /* ---------- Stats ---------- */
