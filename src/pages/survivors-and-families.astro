@@ -364,10 +364,11 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
     align-items: flex-start;
     gap: 20px 24px;
   }
-  .life-photos :global(.photo) {
+  /* Specific enough to beat the photo component's own natural-height rule. */
+  .life-photos :global(.photo--natural) {
     margin-inline: 0;
   }
-  .life-photos :global(img) {
+  .life-photos :global(.photo--natural img) {
     max-height: min(400px, 60vh);
   }
   .moments {
