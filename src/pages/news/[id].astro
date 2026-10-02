@@ -27,8 +27,12 @@ const fmt = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeZone: 'UTC
     </div>
   </section>
 
-  <CtaBand title="Keep reading." text="Adam’s story, in his sister’s words, and the pledge that came out of it.">
-    <a class="btn" href={url('/adams-story')}>Read Adam’s story</a>
-    <a class="btn btn--ghost" href={url('/water-watcher')}>Take the pledge</a>
-  </CtaBand>
+  {
+    post.id.includes('color-of-love') && (
+      <CtaBand title="Thank you for reading it." text="If your own family has a June 5, write to us. If you’re here to understand ours, Adam’s story picks up where the poem leaves off.">
+        <a class="btn" href={url('/contact')}>Write to us</a>
+        <a class="btn btn--ghost" href={url('/adams-story')}>Read Adam’s story</a>
+      </CtaBand>
+    )
+  }
 </BaseLayout>

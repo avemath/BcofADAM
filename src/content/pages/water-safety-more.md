@@ -1,7 +1,7 @@
 ---
 title: Teens, life jackets, CPR and the pool recall
 eyebrow: More ways to stay safe
-lede: Older kids, life jackets, a pool recall to check, and CPR.
+lede: The layers don’t retire when the toddler years end. What changes for teens, how to pick a life jacket that works, a pool recall to check tonight, and where to learn CPR.
 description: Water safety for teens, how to choose a life jacket, the above-ground pool recall, and where to learn CPR.
 ---
 
@@ -41,7 +41,7 @@ Have an above-ground pool 48 inches or taller? About 5 million Bestway, Intex an
 
 **In an emergency, call 911.** Then start CPR if you’re trained.
 
-Our mom, Pops (our grandfather), our dad and the first responders all did CPR on Adam. Take a class that includes infant and child CPR, so you’re ready too:
+Our mom, Shannon, started CPR on Adam. Pops (our grandfather), our dad and the first responders all did CPR too. Take a class that includes infant and child CPR, so you’re ready too:
 
 - [American Red Cross: find a CPR class](https://www.redcross.org/take-a-class/cpr)
 - [American Heart Association: find a class](https://atlas.heart.org/)
