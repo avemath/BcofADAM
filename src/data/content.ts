@@ -82,7 +82,7 @@ export const about: { photo?: string; photoAlt?: string; caption?: string } = ab
 export const survivorsPhotos: {
   photo?: string; photoAlt?: string; caption?: string;
   photo2?: string; photo2Alt?: string; caption2?: string;
-  lifePhoto?: string; lifePhotoAlt?: string; lifeCaption?: string;
+  lifePhotos?: { photo?: string; alt?: string; caption?: string }[];
   momentsTitle?: string; momentsText?: string;
   moments?: { photo?: string; alt?: string; caption?: string; wide?: boolean }[];
   siblingPhoto?: string; siblingPhotoAlt?: string; siblingCaption?: string;
