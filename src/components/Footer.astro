@@ -6,6 +6,22 @@ import { site, nav, footerNav, nonprofitLine } from '../data/site';
 import { url } from '../lib/url';
 
 const year = new Date().getFullYear();
+
+// Every page, in three lists, so nothing depends on the header's dropdowns (which need JavaScript).
+const byHref = (href: string) => nav.find((item) => item.href === href);
+const columns = [
+  { title: 'Water safety', links: byHref('/water-safety')?.children ?? [] },
+  {
+    title: 'Adam and our family',
+    links: [
+      { label: 'Adam’s story', href: '/adams-story' },
+      { label: 'Survivors & families', href: '/survivors-and-families' },
+      { label: 'ISR swim lessons', href: '/swim-lessons' },
+      ...(byHref('/about')?.children ?? []),
+    ],
+  },
+  { title: 'Get involved', links: byHref('/get-involved')?.children ?? [] },
+];
 ---
 
 <footer class="site-footer">
@@ -17,37 +33,26 @@ const year = new Date().getFullYear();
         Every second counts. Call 911 and start CPR if you’re trained.
       </div>
 
+      <div class="site-footer__brand">
+        <Logo light loading="lazy" />
+        <p class="site-footer__tag">{site.tagline}</p>
+      </div>
+
       <div class="site-footer__grid">
-        <div>
-          <Logo light loading="lazy" />
-          <p class="site-footer__tag">{site.tagline}</p>
-        </div>
-
-        <nav aria-label="Footer: explore">
-          <h2 class="site-footer__heading">Explore</h2>
-          <ul>
-            {
-              [...nav.filter((item) => item.href !== '/about'), ...footerNav.filter((item) => item.href === '/water-watcher'), { label: 'Home safety checklist', href: '/checklist' }].map((item) => (
-                <li>
-                  <a href={url(item.href)}>{item.label}</a>
-                </li>
-              ))
-            }
-          </ul>
-        </nav>
-
-        <nav aria-label="Footer: about">
-          <h2 class="site-footer__heading">About</h2>
-          <ul>
-            {
-              footerNav.filter((item) => ['/about', '/news', '/press', '/contact', '/resources'].includes(item.href)).map((item) => (
-                <li>
-                  <a href={url(item.href)}>{item.label}</a>
-                </li>
-              ))
-            }
-          </ul>
-        </nav>
+        {
+          columns.map((col) => (
+            <nav aria-label={`Footer: ${col.title}`}>
+              <h2 class="site-footer__heading">{col.title}</h2>
+              <ul>
+                {col.links.map((item) => (
+                  <li>
+                    <a href={url(item.href)}>{item.label}</a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          ))
+        }
 
         <div>
           <h2 class="site-footer__heading">Adam’s village</h2>
@@ -93,6 +98,11 @@ const year = new Date().getFullYear();
           The information on this site is for education and awareness and is not a substitute for
           professional medical advice.
         </p>
+        <p>
+          This website was made by Avery Matherne, Adam’s sister, and she keeps it running. Spotted a bug, a typo or
+          a broken link? <a href={`mailto:${site.email}?subject=${encodeURIComponent('Website bug')}`}>Tell us</a> and
+          we’ll sort it out as soon as we can.
+        </p>
       </div>
     </div>
   </div>
@@ -124,18 +134,28 @@ const year = new Date().getFullYear();
     gap: 36px 24px;
   }
   /* On phones the two link lists share a row, so the footer is half as tall. */
+  .site-footer__brand {
+    margin-bottom: 28px;
+  }
   @media (max-width: 759px) {
     .site-footer__grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-    .site-footer__grid > :first-child,
     .site-footer__grid > :last-child {
       grid-column: 1 / -1;
     }
   }
-  @media (min-width: 760px) {
+  @media (min-width: 760px) and (max-width: 999px) {
     .site-footer__grid {
-      grid-template-columns: 1.3fr 1fr 1fr 1.4fr;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .site-footer__grid > :last-child {
+      grid-column: 1 / -1;
+    }
+  }
+  @media (min-width: 1000px) {
+    .site-footer__grid {
+      grid-template-columns: 1fr 1.1fr 1fr 1.4fr;
     }
   }
   .site-footer__tag {
