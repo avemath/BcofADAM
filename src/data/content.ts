@@ -1,5 +1,6 @@
 /** Typed access to the JSON files the family edits in the Studio. */
 import homeJson from './home.json';
+import scenariosJson from './scenarios.json';
 import factsJson from './facts.json';
 import resourcesJson from './resources.json';
 import teamJson from './team.json';
@@ -70,6 +71,8 @@ export interface IsrBox {
 }
 
 export const home = homeJson;
+/** "Where will the kids be?" on the home page: three checks for each place. */
+export const scenarios: { id: string; label: string; fact?: string; source?: string; sourceUrl?: string; checks: string[]; link?: string; linkText?: string }[] = scenariosJson;
 export const headline: Fact[] = factsJson.headline ?? [];
 export const nonfatal: Fact[] = factsJson.nonfatal ?? [];
 export const risks: Risk[] = factsJson.risks ?? [];

@@ -56,6 +56,11 @@ html {
   scroll-margin-top: 110px;
 }
 
+/* The hidden attribute wins over any display rule, so scripts can hide things reliably. */
+[hidden] {
+  display: none !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

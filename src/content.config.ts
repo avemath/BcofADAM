@@ -23,6 +23,8 @@ const pages = defineCollection({
     /** Picture shown when the page is shared on social media (optional). */
     image: text(),
     imageAlt: text(),
+    /** Optional audio recording (Avery reading the story). */
+    audio: text(),
   }),
 });
 
