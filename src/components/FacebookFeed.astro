@@ -3,9 +3,9 @@
  * Our Facebook page's latest posts, using Facebook's official Page Plugin.
  * Turn it on or off in the Studio (Site settings → Show Facebook feed).
  *
- * Facebook only loads when a visitor clicks "Show our latest posts", so nobody
- * gets Facebook's cookies or trackers just for visiting our site. Until then
- * it's a simple card with a link to the page.
+ * The feed loads on its own when the page opens (the privacy page says so).
+ * Without JavaScript, or if a browser blocks Facebook, the card with a link to
+ * the page shows instead.
  *
  * Facebook won't draw the feed wider than 500px, so on bigger screens we
  * scale it up to fill its space (up to 1.5×). On phones it shrinks to fit.
@@ -35,19 +35,21 @@ const title = 'Latest posts from the Because of ADAM Facebook page';
         <div>
           <p class="fb-feed__name">{site.name} on Facebook</p>
           <p class="fb-feed__note">
-            Updates on Adam, events and water safety reminders. Showing the posts here loads content from
-            Facebook, which may set its own cookies.
+            Updates on Adam, events and water safety reminders.
           </p>
           <div class="fb-feed__actions">
-            <button class="btn btn--ocean" type="button" data-fb-load hidden>
-              Show our latest posts
-            </button>
-            <a class="btn btn--ghost" href={pageUrl} rel="noopener" target="_blank">
+            <a class="btn btn--ocean" href={pageUrl} rel="noopener" target="_blank">
               Open our Facebook page<span class="visually-hidden"> (opens in a new tab)</span>
             </a>
           </div>
         </div>
       </div>
+      <p class="fb-feed__fallback source" data-fb-fallback hidden>
+        Not showing?{' '}
+        <a href={pageUrl} rel="noopener" target="_blank">
+          Open our Facebook page<span class="visually-hidden"> (opens in a new tab)</span>
+        </a>
+      </p>
     </div>
   )
 }
@@ -93,18 +95,14 @@ const title = 'Latest posts from the Because of ADAM Facebook page';
       }).toString();
   }
 
+  // The feed loads as soon as the page does. The card stays for browsers without JavaScript.
   const feeds: HTMLElement[] = [];
   document.querySelectorAll<HTMLElement>('[data-fb-feed]').forEach((feed) => {
-    const button = feed.querySelector<HTMLButtonElement>('[data-fb-load]');
-    if (!button) return;
-    button.hidden = false; // the button only works with JavaScript
-    button.addEventListener('click', () => {
-      feed.querySelector<HTMLElement>('[data-fb-frame]')?.removeAttribute('hidden');
-      feed.querySelector<HTMLElement>('[data-fb-card]')?.setAttribute('hidden', '');
-      feeds.push(feed);
-      fit(feed);
-      feed.querySelector<HTMLIFrameElement>('[data-fb-iframe]')?.focus();
-    });
+    feed.querySelector<HTMLElement>('[data-fb-frame]')?.removeAttribute('hidden');
+    feed.querySelector<HTMLElement>('[data-fb-card]')?.setAttribute('hidden', '');
+    feed.querySelector<HTMLElement>('[data-fb-fallback]')?.removeAttribute('hidden');
+    feeds.push(feed);
+    fit(feed);
   });
 
   // Refit when the window is resized or the phone is turned sideways, once it settles.
@@ -152,9 +150,8 @@ const title = 'Latest posts from the Because of ADAM Facebook page';
     display: block;
     transform-origin: 0 0;
   }
-  .fb-feed__frame[hidden],
-  .fb-feed__card[hidden] {
-    display: none;
+  .fb-feed__fallback {
+    margin: 10px 0 0;
   }
   .fb-feed__card {
     display: flex;
