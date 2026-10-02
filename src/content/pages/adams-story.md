@@ -134,7 +134,7 @@ I’m in school in Louisiana now, so I see Adam when I come home. He has nurses 
 
 ![Avery resting her head against Adam’s, his black visor pulled low, in a purple Tigers jersey](/images/uploads/avery_and_aj2.jpg)
 
-*Me and Adam.*
+*Adam and me.*
 
 Lea, who was right there in the tent with him that day, used to pray she’d be smart enough to build a time machine, so she could go back to June 5 and take her brother out for ice cream. When she was 7, she and Mom got to talking about time machines again, and Mom figured they’d both go back to that day. Lea had a different answer:
 
