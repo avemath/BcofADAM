@@ -75,7 +75,7 @@ if (hasDonate) {
 }
 
 const shareText = [
-  'Drowning is the #1 cause of death for kids ages 1–4, and it’s preventable. Learn the layers of protection: fences, alarms, Water Watchers, swim skills and CPR. #BecauseOfADAM',
+  'Drowning is the #1 cause of death for kids ages 1 to 4, and it’s preventable. Learn the layers of protection: fences, alarms, Water Watchers, swim skills and CPR. #BecauseOfADAM',
   'When everyone is watching, no one is. Name a Water Watcher every time kids are near water. #BecauseOfADAM #AdamsVillage',
   'It only takes a second to latch a gate, switch on an alarm, or put down the phone. #BecauseOfADAM',
   'Skills before thrills. Learn from our past, protect your future. #BecauseOfADAM #LayerUp',
@@ -102,13 +102,15 @@ const volunteerFields: Field[] = [
 
 <BaseLayout
   title="Get Involved"
-  description="Join the movement: take the Water Watcher pledge, share Adam’s story, give, host a fundraiser, or invite Because of ADAM to speak."
+  description={`Join the movement: take the Water Watcher pledge, share Adam’s story, ${hasDonate ? 'give, ' : ''}host a fundraiser, or invite Because of ADAM to speak.`}
 >
   <PageHero
     eyebrow="Join the movement"
     title="Adam’s village is bigger than one family."
-    lede="Everyone who shares, pledges, gives or speaks up becomes another layer of protection for a child they may never meet."
-  />
+    lede={`Everyone who shares, pledges, ${hasDonate ? 'gives' : 'hosts'} or speaks up becomes another layer of protection for a child they may never meet.`}
+  >
+    {!hasDonate && <p class="hero__note">We’re not set up to take donations online yet. When we are, you’ll find it here.</p>}
+  </PageHero>
 
   {
     getInvolvedPhoto.photo && (
@@ -167,12 +169,12 @@ const volunteerFields: Field[] = [
         subject="Volunteer sign-up from the website"
         submitLabel="Sign me up"
         fallbackTitle="Volunteer with us"
-        fallbackHint="Tell us how you’d like to help and where you are."
+        fallbackHint="A line or two is plenty."
       />
     </div>
   </section>
 
-  <CtaBand title="Have another idea?" text="We’d love to hear it. Tell us how you want to help.">
+  <CtaBand title="Have another idea?" text="We’d love to hear it.">
     <a class="btn" href={url('/contact')}>Get in touch</a>
   </CtaBand>
 </BaseLayout>
@@ -192,6 +194,12 @@ const volunteerFields: Field[] = [
 </script>
 
 <style>
+  .hero__note {
+    margin: 18px 0 0;
+    font-size: 0.95rem;
+    opacity: 0.85;
+  }
+
   .way {
     display: flex;
     flex-direction: column;

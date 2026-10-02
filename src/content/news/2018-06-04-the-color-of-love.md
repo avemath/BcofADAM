@@ -1,11 +1,11 @@
 ---
 title: "The Color of Love: why we wear blue on June 5"
 date: 2018-06-04
-summary: Mom wrote this poem the night before the first anniversary of Adam’s drowning. Its last lines are why we wear blue every June 5.
+summary: Our mom wrote this poem the night before the first anniversary of Adam’s drowning. Its last lines are why we wear blue every June 5.
 draft: false
 ---
 
-On June 4, 2018, the night before the first anniversary of Adam’s drowning, Mom shared a poem on Facebook called “The Color of Love.” It walks through that day one color at a time, and it ends here:
+On June 4, 2018, the night before the first anniversary of Adam’s drowning, our mom shared a poem on Facebook called “The Color of Love.” It walks through that day one color at a time, and it ends here:
 
 BLUE is where I picture Adam\
 on his swing staring at the moon.\
@@ -32,14 +32,14 @@ When he’s in my arms, it’s all I can see.\
 Blessed by His miracle, perspective I’ve gained,\
 LOVE, the purest of colors, God and Adam invented just for me.
 
-*Mom (Shannon Matherne)*
+*Our mom, Shannon Matherne*
 
 That’s why we wear blue every June 5: for Adam’s hope, his strength, and every family we can reach. Wear it with us and share one water safety tip with #WearBlueJune5th. [Add Wear Blue on June 5 to your calendar](/events).
 
 <details class="poem-full">
 <summary>Read the whole poem</summary>
 
-*The whole poem describes the day Adam drowned. It’s lightly edited here for typos.*
+*The whole poem walks through the day Adam drowned, from the pool to the hospital, in our mom’s own words. Some of it is hard to read. It’s lightly edited here for typos.*
 
 **THE COLOR OF LOVE**
 

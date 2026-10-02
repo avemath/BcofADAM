@@ -2,14 +2,14 @@
 title: Press & Media
 eyebrow: Press
 lede: Writing about drowning prevention, water safety or nonfatal drowning? We’re glad to help.
-description: A short fact sheet about Because of ADAM, a drowning awareness nonprofit in Blair County, Pennsylvania, and how to reach us for interviews.
+description: A short fact sheet about Because of ADAM, a family-run drowning awareness nonprofit in Blair County, Pennsylvania, and how to reach us for interviews.
 ---
 
 {{TODO: family review}}
 
 ## About us
 
-Because of ADAM is a drowning awareness nonprofit started in 2020 by Adam’s brother and sisters. We teach water safety to parents and caregivers through talks, events and this website, and we want to end childhood drowning.
+Because of ADAM is a family-run drowning awareness nonprofit started in 2020 by Adam’s brother and sisters. We teach water safety to parents and caregivers through talks, events and this website, and we want to end childhood drowning.
 
 ## About Adam
 

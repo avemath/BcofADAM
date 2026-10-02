@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import CtaBand from '../components/CtaBand.astro';
 import PageHero from '../components/PageHero.astro';
 import SiteForm, { type Field } from '../components/SiteForm.astro';
 import { site } from '../data/site';
@@ -62,6 +63,11 @@ const fields: Field[] = [
       </div>
     </div>
   </section>
+
+  <CtaBand title="Looking for something on the site?" text="Most questions we get are answered on the water safety pages, and the search covers every page.">
+    <a class="btn" href={url('/water-safety')}>See the layers</a>
+    <button class="btn btn--ghost" type="button" data-search-open>Search the site</button>
+  </CtaBand>
 </BaseLayout>
 
 <style>

@@ -13,4 +13,4 @@ Here you’ll find Adam’s story, the layers of protection that keep little one
 
 Thank you for being part of Adam’s village.
 
-*Avery, Rickey, Grace & Lea*
+*Rickey, Grace, Avery & Lea*

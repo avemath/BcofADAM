@@ -9,13 +9,13 @@ description: What Infant Swimming Resource (ISR) self-rescue lessons are, why th
 
 When Adam was about 6 months old, we looked for ISR lessons. The closest instructor was two hours away. So we told ourselves our locked doors and door alarms would be enough.
 
-They weren’t. Adam was 14 months old when he slipped out of the house and into our pool, and he didn’t know how to roll onto his back and float. Mom has said that if ISR had been available nearby, she believes she might have found him floating on his back, waiting to be rescued. In 2019 she put it plainly: ISR lessons “as early as 6 months old (before teaching him that the water was FUN!) would have saved him.”
+They weren’t. Adam was 14 months old when he slipped out of the house and into our pool, and he didn’t know how to roll onto his back and float. Our mom has said that if ISR had been available nearby, she believes she might have found him floating on his back, waiting to be rescued. In 2019 she put it plainly: ISR lessons “as early as 6 months old (before teaching him that the water was FUN!) would have saved him.”
 
-After Adam drowned, Dad decided no family near us should have to make that drive. He spent eight weeks training in Florida, became a certified ISR instructor (and a Red Cross CPR instructor), and by 2023 he had taught more than 150 children to self-rescue.
+After Adam drowned, our dad decided no family near us should have to make that drive. He spent eight weeks training in Florida, became a certified ISR instructor (and a Red Cross CPR instructor), and by 2023 he had taught more than 150 children to self-rescue.
 
 > Skills before thrills. No matter the cost, the time commitment or the distance, sometimes there are no do-overs.
 >
-> *Mom*
+> *Our mom, Shannon*
 
 ## Why we recommend ISR, not just swim lessons
 
@@ -66,6 +66,6 @@ If ISR just isn’t possible, look for lessons that teach self-rescue skills, li
 
 Swim skills are one layer of protection. They never replace the others, and ISR says the same thing: no child is ever “drown-proof,” and supervision is the first and most important defense.
 
-Talk with your pediatrician about what’s right for your child (see what the American Academy of Pediatrics says on this page). Either way, an adult watching (a Water Watcher), a four-sided pool fence, door and pool alarms, and CPR still matter every single time.
+Talk with your pediatrician about what’s right for your child (see what the American Academy of Pediatrics says, below). Either way, an adult watching (a Water Watcher), a four-sided pool fence, door and pool alarms, and CPR still matter every single time.
 
 We just want every child to have one more layer than Adam had.
