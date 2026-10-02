@@ -1,0 +1,162 @@
+---
+/**
+ * "Where will the kids be?" Pick a place and tonight's list becomes three
+ * checks for that place, with one sourced fact and a link. With nothing
+ * picked, the five-for-everyone list shows. A link like #tonight=party
+ * picks a place from anywhere on the site.
+ */
+import { scenarios } from '../data/content';
+import { url } from '../lib/url';
+
+interface Props {
+  /** The id of the list that shows when nothing is picked. */
+  generic: string;
+}
+const { generic } = Astro.props;
+const list = scenarios.filter((s) => s.id && s.label && (s.checks ?? []).length > 0);
+---
+
+{
+  list.length > 0 && (
+    <div class="where" data-where data-generic={generic}>
+      <fieldset class="where__pick">
+        <legend class="where__legend">Where will the kids be?</legend>
+        <div class="where__pills">
+          <label class="where__pill">
+            <input type="radio" name="where" value="" checked />
+            <span>Anywhere</span>
+          </label>
+          {list.map((s) => (
+            <label class="where__pill">
+              <input type="radio" name="where" value={s.id} />
+              <span>{s.label}</span>
+            </label>
+          ))}
+        </div>
+      </fieldset>
+      {list.map((s) => (
+        <div class="where__panel card" data-where-panel={s.id} role="region" aria-label={`Tonight, if the kids will be at ${s.label.toLowerCase()}`} hidden>
+          <ol class="where__checks">
+            {s.checks.map((c) => (
+              <li>{c}</li>
+            ))}
+          </ol>
+          {s.fact && (
+            <p class="where__fact">
+              {s.fact}
+              {s.source && s.sourceUrl && (
+                <>
+                  {' '}
+                  <a class="source" href={s.sourceUrl} rel="noopener" target="_blank">
+                    {s.source}
+                    <span class="visually-hidden"> (opens in a new tab)</span>
+                  </a>
+                </>
+              )}
+            </p>
+          )}
+          {s.link && (
+            <a class="btn btn--ocean" href={url(s.link)}>
+              {s.linkText || 'Learn more'}
+            </a>
+          )}
+        </div>
+      ))}
+    </div>
+  )
+}
+
+<script>
+  for (const box of document.querySelectorAll<HTMLElement>('[data-where]')) {
+    const radios = [...box.querySelectorAll<HTMLInputElement>('input[name="where"]')];
+    const panels = [...box.querySelectorAll<HTMLElement>('[data-where-panel]')];
+    const generic = document.getElementById(box.dataset.generic || '');
+    const show = (id: string) => {
+      panels.forEach((p) => (p.hidden = p.dataset.wherePanel !== id));
+      if (generic) generic.hidden = id !== '';
+      radios.forEach((r) => (r.checked = r.value === id));
+    };
+    radios.forEach((r) => r.addEventListener('change', () => r.checked && show(r.value)));
+    // A link like #tonight=party picks that place and brings it into view.
+    const fromHash = () => {
+      const m = location.hash.match(/^#tonight=([a-z-]+)$/);
+      if (!m || !panels.some((p) => p.dataset.wherePanel === m[1])) return;
+      show(m[1]);
+      document.getElementById('tonight')?.scrollIntoView({ block: 'start' });
+    };
+    addEventListener('hashchange', fromHash);
+    fromHash();
+  }
+</script>
+
+<style>
+  .where {
+    margin: 8px 0 28px;
+  }
+  .where__pick {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  .where__legend {
+    padding: 0;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  .where__pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .where__pill {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 8px 16px;
+    border: 1.5px solid var(--line);
+    border-radius: 999px;
+    background: #fff;
+    color: var(--ocean);
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .where__pill input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+  }
+  .where__pill:hover {
+    border-color: var(--aqua);
+  }
+  .where__pill:has(input:checked) {
+    background: var(--deep);
+    border-color: var(--deep);
+    color: #fff;
+  }
+  .where__pill:has(input:focus-visible) {
+    outline: 3px solid var(--aqua);
+    outline-offset: 2px;
+  }
+  .where__panel {
+    margin-top: 18px;
+  }
+  .where__checks {
+    margin: 0 0 14px;
+    padding-left: 1.3em;
+    display: grid;
+    gap: 10px;
+    font-size: 1.05rem;
+  }
+  .where__checks li::marker {
+    font-weight: 700;
+    color: var(--ocean);
+  }
+  .where__fact {
+    margin: 0 0 16px;
+    padding-left: 14px;
+    border-left: 3px solid var(--sun);
+    color: var(--ink-soft);
+  }
+</style>

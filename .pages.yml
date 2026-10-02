@@ -121,6 +121,24 @@ content:
       - name: heroLede
         label: Intro under "Drowning is silent. We won't be."
         type: text
+      - name: heroPhoto
+        label: Photo of Adam in the hero (leave empty for no photo)
+        type: image
+      - name: heroPhotoAlt
+        label: Describe the hero photo (for people who can't see it)
+        type: string
+      - name: heroCaption
+        label: Caption on the hero photo
+        type: string
+        description: Type {{Adam's age}} and the site fills in his age.
+      - name: expect
+        label: "\"What people picture\": five short lines"
+        type: string
+        list: true
+      - name: reality
+        label: "\"What happened\": five lines, in the same order"
+        type: string
+        list: true
       - name: meetTitle
         label: "\"Meet Adam\" heading"
         type: string
@@ -168,6 +186,39 @@ content:
         label: Things to do tonight (keep them quick)
         type: string
         list: true
+
+  - name: scenarios
+    label: "🏠 Home page: Where will the kids be?"
+    type: file
+    path: src/data/scenarios.json
+    format: json
+    list: true
+    fields:
+      - name: id
+        label: Short id (letters only, used in links like #tonight=party)
+        type: string
+      - name: label
+        label: Pill label
+        type: string
+      - name: fact
+        label: One sourced fact (optional)
+        type: text
+      - name: source
+        label: Source name
+        type: string
+      - name: sourceUrl
+        label: Source link
+        type: string
+      - name: checks
+        label: Three checks for tonight
+        type: string
+        list: true
+      - name: link
+        label: Page to send people to (like /checklist)
+        type: string
+      - name: linkText
+        label: Button text
+        type: string
 
   # ───────────────────────────── Pages ─────────────────────────────
   - name: anywhere
@@ -266,6 +317,10 @@ content:
           - name: imageAlt
             label: Describe the share picture
             type: string
+          - name: audio
+            label: Audio recording of the story (optional)
+            type: string
+            description: Upload the recording to the images folder and paste its path here, like /images/uploads/adams-story.m4a. A player appears beside the story.
           - name: body
             label: Page text
             type: rich-text

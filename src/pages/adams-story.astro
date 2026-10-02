@@ -6,11 +6,23 @@ import SharePage from '../components/SharePage.astro';
 import { home as story } from '../data/content';
 import { url } from '../lib/url';
 import { site } from '../data/site';
+import { getEntry } from 'astro:content';
+
+const audio = (await getEntry('pages', 'adams-story'))?.data.audio?.trim();
 ---
 
 <ProseLayout slug="adams-story" toc={false} type="Article">
   <div class="story-aside">
     <PhotoFrame src={story.storyPhoto || story.photo} alt={story.storyPhoto ? story.storyPhotoAlt : story.photoAlt} caption={story.storyPhoto ? story.storyPhotoCaption : undefined} hint="Add a photo of Adam" />
+    {
+      audio && (
+        <div class="card story-aside__card">
+          <p class="eyebrow">Listen</p>
+          <p>Avery reads Adam’s story.</p>
+          <audio controls preload="none" src={url(audio)} style="width: 100%" />
+        </div>
+      )
+    }
     <div class="card story-aside__card">
       <p class="eyebrow">Adam’s Village of Hope</p>
       <p>Follow Adam on Facebook and join the thousands cheering him on.</p>
