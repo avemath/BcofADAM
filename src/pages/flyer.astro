@@ -108,7 +108,7 @@ const sources = [...new Set(f.facts.map((x) => x.source))];
         <div class="cards__grid">
           {
             [0, 1, 2, 3].map((n) => (
-              <div class:list={['card-out', { 'card-out--copy': n > 0 }]}>
+              <div class:list={['card-out', { 'card-out--copy': n > 0 }]} data-pagefind-ignore={n > 0 || undefined}>
                 <div class="card-out__top">
                   <Logo />
                 </div>
@@ -131,6 +131,10 @@ const sources = [...new Set(f.facts.map((x) => x.source))];
           }
         </div>
       </article>
+
+      <p class="no-print" style="margin: 24px 0 0">
+        <button class="btn" type="button" onclick="window.print()">Print the flyer</button>
+      </p>
 
       <p class="no-print flyer-sources">
         Sources:{' '}

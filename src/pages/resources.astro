@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import CtaBand from '../components/CtaBand.astro';
 import PageHero from '../components/PageHero.astro';
 import { resourceGroups, survivorResources } from '../data/content';
 import { url } from '../lib/url';
@@ -8,6 +9,8 @@ const guides = [
   { name: 'Printable home water safety checklist', href: '/checklist', description: 'Walk through your home and yard layer by layer, plus a half-page for babysitters and grandparents.' },
   { name: 'Water safety in Pennsylvania', href: '/pennsylvania', description: 'Lakes and rivers near Blair County, cold water, ice, flash floods and Pennsylvania’s life jacket rules.' },
   { name: 'Water Watcher pledge and card', href: '/water-watcher', description: 'Make the promise and print a Water Watcher card for your pool bag.' },
+  { name: 'Printable flyer for offices and daycares', href: '/flyer', description: 'A one-page flyer and cut-apart cards with the layers of protection, for waiting rooms and bulletin boards.' },
+  { name: 'Water safety quiz', href: '/quiz', description: 'Quick questions on what protects kids around water, with every answer explained.' },
   { name: 'Teens, life jackets and CPR', href: '/more-ways-to-stay-safe', description: 'Water safety for older kids, how to pick a life jacket, a pool recall to check, and where to learn CPR.' },
 ];
 
@@ -66,6 +69,11 @@ const groups = [...resourceGroups, { title: 'For survivors & families', items: s
       </p>
     </div>
   </section>
+
+  <CtaBand title="Start with the layers." text="Seven layers of protection, one at a time, and a checklist you can print for your own home.">
+    <a class="btn" href={url('/water-safety')}>See the layers</a>
+    <a class="btn btn--ghost" href={url('/checklist')}>Print the checklist</a>
+  </CtaBand>
 </BaseLayout>
 
 <style>
