@@ -20,13 +20,14 @@ This website is run by Because of ADAM, a nonprofit in Blair County, Pennsylvani
 
 ## Things that stay in your browser
 
-- **The Water Watcher pledge** and the **home water safety checklist** run entirely in your browser. We don’t receive or save your answers.
+- **The Water Watcher pledge**, the **water safety quiz** and the **home water safety checklist** run entirely in your browser. We don’t receive or save your answers.
+- **Site search** runs in your browser against an index built into the site. Nothing you type is sent to us. The list of **pages you looked at before** in the search window is kept only in your browser, and you can clear it there.
 - We don’t use cookies of our own, and we don’t use advertising trackers.
 - Our fonts are stored on our own site, so loading a page doesn’t contact any font service.
 
 ## Facebook
 
-Our home page and News page can show our latest Facebook posts. Nothing from Facebook loads until you click **Show our latest posts**. After you click, Facebook may set cookies or collect information about your visit under [Facebook’s privacy policy](https://www.facebook.com/privacy/policy/). If you’d rather not, just use the **Open our Facebook page** link instead, or skip it.
+Our News page can show our latest Facebook posts. Nothing from Facebook loads until you click **Show our latest posts**. After you click, Facebook may set cookies or collect information about your visit under [Facebook’s privacy policy](https://www.facebook.com/privacy/policy/). If you’d rather not, just use the **Open our Facebook page** link instead, or skip it.
 
 ## Hosting
 

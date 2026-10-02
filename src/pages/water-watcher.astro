@@ -1,8 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import CtaBand from '../components/CtaBand.astro';
 import PageHero from '../components/PageHero.astro';
 import Logo from '../components/Logo.astro';
 import { site } from '../data/site';
+import { url } from '../lib/url';
 
 const promises = [
   'When children are in or near the water, I will name one adult as the Water Watcher.',
@@ -116,6 +118,11 @@ const promises = [
       }
     });
   </script>
+
+  <CtaBand title="Next: your own home." text="Walk through the house and yard with the checklist, one layer at a time.">
+    <a class="btn" href={url('/checklist')}>Print the checklist</a>
+    <a class="btn btn--ghost" href={url('/water-safety')}>See the layers</a>
+  </CtaBand>
 </BaseLayout>
 
 

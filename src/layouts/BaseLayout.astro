@@ -8,6 +8,7 @@ import { site } from '../data/site';
 import { url } from '../lib/url';
 import { organization, website, page } from '../lib/seo';
 import Analytics from '../components/Analytics.astro';
+import SearchDialog from '../components/SearchDialog.astro';
 import fs from 'node:fs';
 
 // scripts/generate-icons.mjs only makes favicon.svg when the logo source is an SVG.
@@ -32,6 +33,8 @@ interface Props {
   jsonLd?: Record<string, unknown>[];
   /** Keep this page out of Google even after launch (the 404 page, the print-only checklist). */
   noindex?: boolean;
+  /** Leave this page out of the site search and the "pages you looked at" list (the 404 page). */
+  searchable?: boolean;
 }
 
 const {
@@ -45,6 +48,7 @@ const {
   published,
   jsonLd = [],
   noindex = false,
+  searchable = true,
 } = Astro.props;
 const fullTitle = documentTitle ?? (title ? `${title} | ${site.name}` : `${site.name}: ${site.tagline}`);
 const canonical = new URL(Astro.url.pathname, Astro.site);
@@ -112,10 +116,11 @@ const ld = {
       )
     }
     <Header />
-    <main id="main">
+    <main id="main" data-pagefind-body={searchable || undefined} data-pagefind-meta={searchable ? `title:${title ?? 'Home'}` : undefined}>
       <slot />
     </main>
     <Footer />
+    <SearchDialog />
 
     <div class="water-level" aria-hidden="true"><span></span></div>
 

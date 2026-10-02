@@ -9,6 +9,8 @@ import { url } from '../lib/url';
 
 // The "Life goes on" photos, in the order the family set them in the Studio.
 const moments = (survivorsPhotos.moments ?? []).filter((m) => m.photo);
+// The hospital photos under "Life after a drowning".
+const lifePhotos = (survivorsPhotos.lifePhotos ?? []).filter((m) => m.photo);
 
 // Our mom's own words sit under some of these, quoted from her posts on Adam's Facebook page.
 const realities: { title: string; body: string; quote?: string; by?: string }[] = [
@@ -70,12 +72,21 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
       <h2>You are not alone.</h2>
       <p class="lede">
         Drowning happens to loving, careful families. Ours is one of them. If your child survived a drowning and you
-        want to talk, find help, or tell your story so it protects another child, write to us. As our mom put it in
-        2024: “The fact is, we’re not interested in the alternative.”
+        want to talk, find help, or tell your story so it protects another child, write to us.
       </p>
       <div class="btn-row">
         <a class="btn btn--ocean" href={url('/contact')}>Write to us</a>
       </div>
+
+      <p class="how-lead">People often tell our mom, “I don’t know how you do it.” In 2024 she answered:</p>
+      <blockquote class="mom-words how-quote reveal">
+        <p>
+          “The fact is, we’re not interested in the alternative. We’ve been there. … We keep busy, so we don’t go
+          backwards. We work hard to show our children that it’s okay to get knocked down, it’s okay to grieve, but it
+          is our responsibility to quietly get up, keep pushing forward and do the next right thing.”
+        </p>
+        <cite>Our mom, Shannon</cite>
+      </blockquote>
 
       <h3 style="margin-top: 56px">Places to find help</h3>
       <ul class="resource-list">
@@ -139,7 +150,15 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
     <div class="wrap">
       <span class="eyebrow">What families face</span>
       <h2>Life after a drowning</h2>
-      {survivorsPhotos.lifePhoto && <PhotoFrame src={survivorsPhotos.lifePhoto} alt={survivorsPhotos.lifePhotoAlt} caption={survivorsPhotos.lifeCaption} ratio="16 / 9" natural />}
+      {
+        lifePhotos.length > 0 && (
+          <div class="life-photos">
+            {lifePhotos.map((m) => (
+              <PhotoFrame src={m.photo} alt={m.alt} caption={m.caption} natural />
+            ))}
+          </div>
+        )
+      }
       <div class="grid grid--2" style="margin-top: 32px">
         {
           realities.map((r) => (
@@ -180,14 +199,19 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
         <p class="eyebrow">For brothers and sisters</p>
         <h3 id="sibling-title">A note from Adam’s big sister</h3>
         <p>
-          I was 14 when Adam drowned. Mom stayed in Pittsburgh with him for months, and my sister and I started a new
-          school year without her. Every day someone asked how our brother was doing, and we learned that “good” just
-          meant he was still alive.
+          I was 14 when Adam drowned. Mom and Dad went to Pittsburgh with him, and Mom stayed for months. My sisters and
+          I stayed in Duncansville and started a new school year without her. For a long time, every conversation
+          anyone had with us was about the hospital.
         </p>
         <p>
-          If you’re the brother or sister of a drowning survivor, what you’re carrying is real, even when everyone’s
-          attention is on the hospital room. Find one person you can tell the truth to. And when you’re ready, ask how you
-          can help. I learned to change Adam’s trach and give him oxygen in an emergency.
+          I learned to do what his nurses do. I can change his
+          trach and give him oxygen in an emergency. Being able to help is what made it feel like my family again, and
+          not just something happening to us.
+        </p>
+        <p>
+          If your brother or sister survived a drowning, you don’t have to be fine. Ask to learn one thing about their
+          care, and spend time with them that isn’t about the hospital. Adam can’t talk, but he hears everything, and he
+          knows who’s in the room.
         </p>
         <p class="sibling-note__sign">Avery</p>
         </div>
@@ -326,6 +350,26 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
   }
   .split :global(.photo) {
     margin-top: 28px;
+  }
+  .how-lead {
+    margin: 40px 0 0;
+  }
+  .how-quote {
+    margin-top: 10px;
+  }
+  .life-photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px 24px;
+  }
+  /* Specific enough to beat the photo component's own natural-height rule. */
+  .life-photos :global(.photo--natural) {
+    margin-inline: 0;
+  }
+  .life-photos :global(.photo--natural img) {
+    max-height: min(400px, 60vh);
   }
   .moments {
     margin-top: clamp(40px, 6vw, 64px);

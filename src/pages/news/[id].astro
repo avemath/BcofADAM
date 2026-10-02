@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import CtaBand from '../../components/CtaBand.astro';
 import PageHero from '../../components/PageHero.astro';
 import { url } from '../../lib/url';
 import { prose } from '../../lib/prose';
@@ -25,4 +26,9 @@ const fmt = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeZone: 'UTC
       <p style="margin-top: 48px"><a href={url('/news')}>← All news</a></p>
     </div>
   </section>
+
+  <CtaBand title="Keep reading." text="Adam’s story, in his sister’s words, and the pledge that came out of it.">
+    <a class="btn" href={url('/adams-story')}>Read Adam’s story</a>
+    <a class="btn btn--ghost" href={url('/water-watcher')}>Take the pledge</a>
+  </CtaBand>
 </BaseLayout>

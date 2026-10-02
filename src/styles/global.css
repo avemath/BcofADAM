@@ -51,6 +51,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* A section someone jumps to (from search or a link) lands below the sticky header. */
+[id] {
+  scroll-margin-top: 110px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

@@ -86,7 +86,7 @@ const art = /fish|rodeo/.test(t)
       e.link && (
         <a class="btn btn--ocean event__btn" href={href(e.link)} rel="noopener">
           {e.linkLabel || 'Learn more'}
-          <span class="visually-hidden"> about {e.title}</span>
+          {!(e.linkLabel || '').includes(e.title) && <span class="visually-hidden"> about {e.title}</span>}
         </a>
       )
     }
