@@ -7,6 +7,9 @@ import { nonfatal, survivorsPhotos } from '../data/content';
 import { survivorResources } from '../data/content';
 import { url } from '../lib/url';
 
+// The "Life goes on" photos, in the order the family set them in the Studio.
+const moments = (survivorsPhotos.moments ?? []).filter((m) => m.photo);
+
 // Our mom's own words sit under some of these, quoted from her posts on Adam's Facebook page.
 const realities: { title: string; body: string; quote?: string; by?: string }[] = [
   {
@@ -109,7 +112,7 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
           That’s why we say Adam <em>is</em> a drowning survivor. He didn’t “almost drown.” He drowned,
           and he survived.
         </p>
-        {survivorsPhotos.photo2 && <PhotoFrame src={survivorsPhotos.photo2} alt={survivorsPhotos.photo2Alt} caption={survivorsPhotos.caption2} ratio="4 / 3" natural />}
+        {survivorsPhotos.photo2 && <PhotoFrame src={survivorsPhotos.photo2} alt={survivorsPhotos.photo2Alt} caption={survivorsPhotos.caption2} ratio="4 / 5" natural />}
       </div>
       <div class="reveal">
         <div class="card">
@@ -153,6 +156,23 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
           ))
         }
       </div>
+
+      {
+        moments.length > 0 && (
+          <div class="moments reveal">
+            <span class="eyebrow">Life goes on</span>
+            <h3>{survivorsPhotos.momentsTitle}</h3>
+            <p>{survivorsPhotos.momentsText}</p>
+            <div class="moments__grid">
+              {moments.map((m) => (
+                <div class:list={['moments__item', { 'moments__item--wide': m.wide }]}>
+                  <PhotoFrame src={m.photo} alt={m.alt} caption={m.caption} ratio={m.wide ? '5 / 3' : '4 / 5'} />
+                </div>
+              ))}
+            </div>
+          </div>
+        )
+      }
 
       <aside class="sibling-note reveal" aria-labelledby="sibling-title">
         {survivorsPhotos.siblingPhoto && <div class="sibling-note__photo"><PhotoFrame src={survivorsPhotos.siblingPhoto} alt={survivorsPhotos.siblingPhotoAlt} caption={survivorsPhotos.siblingCaption} ratio="4 / 5" /></div>}
@@ -306,6 +326,39 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
   }
   .split :global(.photo) {
     margin-top: 28px;
+  }
+  .moments {
+    margin-top: clamp(40px, 6vw, 64px);
+  }
+  .moments h3 {
+    font-size: clamp(1.5rem, 1vw + 1.1rem, 2rem);
+    margin-bottom: 0.4em;
+  }
+  .moments > p {
+    max-width: 64ch;
+  }
+  .moments__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 24px;
+  }
+  .moments__item--wide {
+    grid-column: span 2;
+  }
+  .moments__grid :global(img) {
+    border-radius: var(--radius-sm);
+    box-shadow: 0 10px 24px -14px rgb(4 29 43 / 0.45);
+  }
+  .moments__grid :global(figcaption) {
+    font-size: 0.85rem;
+    margin-top: 8px;
+  }
+  @media (min-width: 760px) {
+    .moments__grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
   }
   .sibling-note__photo {
     max-width: 300px;

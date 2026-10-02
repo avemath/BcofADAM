@@ -83,6 +83,8 @@ export const survivorsPhotos: {
   photo?: string; photoAlt?: string; caption?: string;
   photo2?: string; photo2Alt?: string; caption2?: string;
   lifePhoto?: string; lifePhotoAlt?: string; lifeCaption?: string;
+  momentsTitle?: string; momentsText?: string;
+  moments?: { photo?: string; alt?: string; caption?: string; wide?: boolean }[];
   siblingPhoto?: string; siblingPhotoAlt?: string; siblingCaption?: string;
 } = survivorsJson;
 export const getInvolvedPhoto: { photo?: string; photoAlt?: string; caption?: string } = getInvolvedJson;
