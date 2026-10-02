@@ -2,6 +2,9 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import CtaBand from '../components/CtaBand.astro';
+import { album } from '../data/content';
+import Album from '../components/Album.astro';
+import PhotoGrid from '../components/PhotoGrid.astro';
 import EventCard from '../components/EventCard.astro';
 import { getEvents, splitEvents } from '../lib/events';
 import { url } from '../lib/url';
@@ -20,6 +23,7 @@ const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
 const origin = new URL(url('/'), Astro.site).href.replace(/\/$/, '');
 // Upcoming events (including the yearly ones) as structured data for search engines.
 const jsonLd = upcoming.map((e) => eventLd(e, origin, pageUrl)).filter((x) => x !== undefined);
+const village = (album.village ?? []).filter((p) => p.photo);
 ---
 
 <BaseLayout
@@ -76,6 +80,18 @@ const jsonLd = upcoming.map((e) => eventLd(e, origin, pageUrl)).filter((x) => x 
           <div class="grid grid--3" style="margin-top: 28px">
             {photoFirst(early).map((e) => <EventCard event={e} />)}
           </div>
+        </div>
+      </section>
+    )
+  }
+
+  {
+    village.length > 0 && (
+      <section class="section">
+        <div class="wrap">
+          <Album open summary={album.villageTitle || 'Our village'} note={album.villageText} teaser={village.slice(0, 3).map((p) => p.photo!)} more>
+            <PhotoGrid photos={village} />
+          </Album>
         </div>
       </section>
     )

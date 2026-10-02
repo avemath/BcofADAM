@@ -1,6 +1,7 @@
 /** Typed access to the JSON files the family edits in the Studio. */
 import homeJson from './home.json';
 import scenariosJson from './scenarios.json';
+import albumJson from './album.json';
 import factsJson from './facts.json';
 import resourcesJson from './resources.json';
 import teamJson from './team.json';
@@ -71,6 +72,15 @@ export interface IsrBox {
 }
 
 export const home = homeJson;
+export type AlbumPhoto = { photo?: string; alt?: string; caption?: string; wide?: boolean };
+export type AlbumVideo = { title?: string; date?: string; url?: string; caption?: string };
+/** Photos & videos: the fold-away albums and the page that gathers them. */
+export const album: {
+  intro?: string;
+  videosTitle?: string; videosText?: string; videos?: AlbumVideo[];
+  villageTitle?: string; villageText?: string; village?: AlbumPhoto[];
+  familyTitle?: string; familyText?: string; family?: AlbumPhoto[];
+} = albumJson;
 /** "Where will the kids be?" on the home page: three checks for each place. */
 export const scenarios: { id: string; label: string; fact?: string; source?: string; sourceUrl?: string; checks: string[]; link?: string; linkText?: string }[] = scenariosJson;
 export const headline: Fact[] = factsJson.headline ?? [];

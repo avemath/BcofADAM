@@ -1,11 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SharePage from '../components/SharePage.astro';
+import Album from '../components/Album.astro';
+import FacebookVideo from '../components/FacebookVideo.astro';
 import PageHero from '../components/PageHero.astro';
 import OnThisPage from '../components/OnThisPage.astro';
 import CtaBand from '../components/CtaBand.astro';
 import PhotoFrame from '../components/PhotoFrame.astro';
-import { nonfatal, survivorsPhotos } from '../data/content';
+import { nonfatal, survivorsPhotos, album } from '../data/content';
 import { survivorResources } from '../data/content';
 import { url } from '../lib/url';
 
@@ -13,6 +15,8 @@ import { url } from '../lib/url';
 const moments = (survivorsPhotos.moments ?? []).filter((m) => m.photo);
 // The hospital photos under "Life after a drowning".
 const lifePhotos = (survivorsPhotos.lifePhotos ?? []).filter((m) => m.photo);
+const hospitalVideo = (album.videos ?? [])[1];
+const christmasVideo = (album.videos ?? [])[2];
 
 // Our mom's own words sit under some of these, quoted from her posts on Adam's Facebook page.
 const realities: { title: string; body: string; quote?: string; by?: string }[] = [
@@ -162,6 +166,13 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
           </div>
         )
       }
+      {
+        hospitalVideo?.url && (
+          <Album summary={`Watch: ${hospitalVideo.title}`} note={`${hospitalVideo.date}, from our mom’s page`} more>
+            <FacebookVideo url={hospitalVideo.url} title={hospitalVideo.title!} caption={hospitalVideo.caption} />
+          </Album>
+        )
+      }
       <div class="grid grid--2" style="margin-top: 32px">
         {
           realities.map((r) => (
@@ -192,6 +203,13 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
                 </div>
               ))}
             </div>
+            {
+              christmasVideo?.url && (
+                <Album summary={`Watch: ${christmasVideo.title}`} note={`${christmasVideo.date}, from our mom’s page`} more>
+                  <FacebookVideo url={christmasVideo.url} title={christmasVideo.title!} caption={christmasVideo.caption} />
+                </Album>
+              )
+            }
           </div>
         )
       }
