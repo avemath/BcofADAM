@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
+import OnThisPage from '../components/OnThisPage.astro';
 import CtaBand from '../components/CtaBand.astro';
 import { factGroups } from '../data/content';
 import { url } from '../lib/url';
@@ -15,6 +16,7 @@ import { url } from '../lib/url';
     title="Drowning is fast, silent, and preventable."
     lede="Every number on this page is a child and a family. One of them is ours. We link to the source for every number, skip the viral ones nobody can trace, and end with what works."
   />
+  <OnThisPage />
 
   <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
     <div class="wrap">

@@ -2,6 +2,7 @@
 import { getEntry } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
+import OnThisPage from '../components/OnThisPage.astro';
 import CtaBand from '../components/CtaBand.astro';
 import IsrFinder from '../components/IsrFinder.astro';
 import PediatriciansSay from '../components/PediatriciansSay.astro';
@@ -22,6 +23,7 @@ const { title, lede, description, image, imageAlt } = entry.data;
       <a class="btn btn--ghost" href="#why-we-recommend-isr-not-just-swim-lessons">Why we recommend ISR</a>
     </div>
   </PageHero>
+  <OnThisPage />
 
   <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
     <div class="wrap isr-layout">

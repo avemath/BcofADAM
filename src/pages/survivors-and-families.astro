@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import SharePage from '../components/SharePage.astro';
 import PageHero from '../components/PageHero.astro';
+import OnThisPage from '../components/OnThisPage.astro';
 import CtaBand from '../components/CtaBand.astro';
 import PhotoFrame from '../components/PhotoFrame.astro';
 import { nonfatal, survivorsPhotos } from '../data/content';
@@ -55,6 +57,7 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
     title="Surviving is only the beginning."
     lede="Adam survived. Many children do. A nonfatal drowning can change a child’s life, and a whole family’s, for good. Many drowning prevention groups were started in memory of a child who died. Ours was started for one who lived."
   />
+  <OnThisPage />
 
   {
     survivorsPhotos.photo && (
@@ -234,6 +237,7 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
         <li><strong>Say the child’s name.</strong> Ask how they’re doing, and celebrate every milestone with them.</li>
         <li><strong>Never say “move on.”</strong> This kind of grief doesn’t end. Help them carry it.</li>
       </ul>
+      <SharePage label="Send this page to a family who needs it" text="If your child survived a drowning, you are not alone. A family that has lived it, on what comes next and where to find help." />
     </div>
   </section>
 

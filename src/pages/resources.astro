@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CtaBand from '../components/CtaBand.astro';
 import PageHero from '../components/PageHero.astro';
+import OnThisPage from '../components/OnThisPage.astro';
 import { resourceGroups, survivorResources } from '../data/content';
 import { url } from '../lib/url';
 
@@ -26,6 +27,7 @@ const groups = [...resourceGroups, { title: 'For survivors & families', items: s
     title="Trusted help, all in one place."
     lede="Pediatricians, public health agencies, the groups fighting drowning alongside us, and the help families need after a drowning. Start here."
   />
+  <OnThisPage />
 
   <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
     <div class="wrap">

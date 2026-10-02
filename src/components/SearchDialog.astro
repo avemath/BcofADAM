@@ -125,6 +125,22 @@ const starts = [
         return m;
       }));
 
+    const TAGS: [RegExp, string][] = [
+      [/\/(water-safety|the-facts|pennsylvania|more-ways-to-stay-safe|swim-lessons)\/?$/, 'Guide'],
+      [/\/(checklist|flyer|water-watcher)\/?$/, 'Printable'],
+      [/\/quiz\/?$/, 'Quiz'],
+      [/\/adams-story\/?$/, 'Adam’s story'],
+      [/\/survivors-and-families\/?$/, 'For families'],
+      [/\/news\//, 'News'],
+      [/\/(events|get-involved|request-a-talk|donate)\/?$/, 'Get involved'],
+      [/\/(about|press|contact|news)\/?$/, 'About us'],
+      [/\/resources\/?$/, 'Resources'],
+    ];
+    const tagFor = (u: string) => {
+      const path = u.replace(/[#?].*$/, '');
+      return TAGS.find(([re]) => re.test(path))?.[1];
+    };
+
     const render = (hits: Hit[], q: string) => {
       if (hits.length === 0) {
         results.replaceChildren(el('p', 'search__none', `Nothing found for “${q}”. Try another word, or start from one of the pages below.`));
@@ -136,6 +152,8 @@ const starts = [
         const li = el('li', 'search__item');
         const a = el('a');
         a.href = h.url;
+        const tag = tagFor(h.url);
+        if (tag) a.append(el('span', 'search__tag', tag));
         a.append(el('span', 'search__title', h.meta.title || 'Untitled'));
         const ex = el('span', 'search__excerpt');
         ex.innerHTML = h.excerpt; // Pagefind escapes page text and only adds <mark> tags.
@@ -315,6 +333,18 @@ const starts = [
   .search__item > a:hover,
   .search__item > a:focus-visible {
     background: var(--foam);
+  }
+  .search__tag {
+    display: inline-block;
+    margin-bottom: 4px;
+    padding: 1px 8px;
+    border-radius: 999px;
+    background: var(--foam);
+    color: var(--aqua-text);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
   }
   .search__title {
     display: block;
