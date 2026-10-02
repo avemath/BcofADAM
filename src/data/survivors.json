@@ -2,12 +2,58 @@
   "photo": "/images/uploads/lea_and_adam.jpg",
   "photoAlt": "Lea in a bright feathered bird costume cheek to cheek with Adam, dressed as Russell from Up, in his stroller",
   "caption": "Lea and Adam on Halloween: Kevin and Russell from Up.",
-  "photo2": "/images/uploads/beach_lifegoeson.jpg",
-  "photo2Alt": "Adam in a beach chair under a sun hat at the edge of the waves, with a chair on either side of him",
-  "caption2": "Adam at the beach.",
-  "lifePhoto": "/images/uploads/adam-wedding-2025.jpg",
-  "lifePhotoAlt": "Adam in a bow tie and flat cap in his chair at an outdoor wedding, with a smiling older couple leaning in on either side of him",
-  "lifeCaption": "Adam at a wedding, 2025.",
+  "photo2": "/images/uploads/aj_and_stuffies.jpg",
+  "photo2Alt": "Adam lying back in a Superman shirt and red cape, with Batman, Spider-Man, Black Panther and other superhero plushies tucked in around him",
+  "caption2": "Adam and his superheroes.",
+  "lifePhoto": "/images/uploads/mom_hospital_gown_aj.jpg",
+  "lifePhotoAlt": "Mom in a white disposable gown and hair cap, flashing two peace signs beside Adam, who sits in his chair in a yellow Pittsburgh hoodie in a hospital room",
+  "lifeCaption": "Mom and Adam at the hospital.",
+  "momentsTitle": "We keep living, and Adam comes with us.",
+  "momentsText": "Weddings, graduations, Halloween, Disney, the beach, the snow. Adam can’t exactly join in, but we still do the normal family things, and we still include him. It takes extra effort: getting him out of bed and into his stroller, getting his equipment ready, getting him portable. We do it anyway. Life goes on, and he’s part of it.",
+  "moments": [
+    {
+      "photo": "/images/uploads/avegrad_fam.jpg",
+      "alt": "The whole family on the football field at Avery’s high school graduation, Avery in a white cap and gown holding her diploma, Adam in his stroller in front with a sunflower on the canopy",
+      "caption": "Avery’s graduation. Adam front and center.",
+      "wide": true
+    },
+    {
+      "photo": "/images/uploads/snowman.jpg",
+      "alt": "Two of us building a snowman while Adam watches from his stroller, bundled up in a knit hat and boots",
+      "caption": "Snow day.",
+      "wide": false
+    },
+    {
+      "photo": "/images/uploads/dad_aj_up.jpg",
+      "alt": "Dad in a cap beside Adam in his stroller, Adam dressed as Russell from Up with aviator goggles and a sash of badges",
+      "caption": "Halloween: Russell from Up, with Dad.",
+      "wide": false
+    },
+    {
+      "photo": "/images/uploads/dad_aj_disney.jpg",
+      "alt": "Dad pushing Adam’s stroller along a walkway at Disney, an Olaf plush on Adam’s lap",
+      "caption": "Dad and Adam at Disney.",
+      "wide": false
+    },
+    {
+      "photo": "/images/uploads/aj_fam_wedding.jpg",
+      "alt": "Adam in a bow tie, suspenders and flat cap in his chair at an outdoor wedding, with family crowded in around him, two of them holding bouquets",
+      "caption": "All dressed up for a wedding, 2025.",
+      "wide": false
+    },
+    {
+      "photo": "/images/uploads/beach_lifegoeson.jpg",
+      "alt": "Adam in a beach chair under a sun hat at the edge of the waves, with a chair on either side of him",
+      "caption": "Adam at the beach.",
+      "wide": false
+    },
+    {
+      "photo": "/images/uploads/mom_aj_harrypotter.jpg",
+      "alt": "Adam as Harry Potter, in round glasses and a striped tie, in his stroller with a lion plush, and Mom in pink novelty glasses leaning in beside him in a parking lot at night",
+      "caption": "Halloween: Harry Potter, with Mom.",
+      "wide": false
+    }
+  ],
   "siblingPhoto": "/images/uploads/lea_and_aj_kiss.jpg",
   "siblingPhotoAlt": "Lea leaning over Adam’s hospital bed, kissing the top of his head",
   "siblingCaption": "Lea and Adam, in the hospital."
