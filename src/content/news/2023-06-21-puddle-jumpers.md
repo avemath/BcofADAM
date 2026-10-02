@@ -1,7 +1,7 @@
 ---
 title: "Puddle Jumpers: a question from our mom"
 date: 2023-06-21
-summary: Would your child know what happens if they went back in the water without one? Our mom’s post from June 2023.
+summary: Would your child know what happens if they went back in the water without one? A post from our mom, Shannon, June 2023.
 draft: false
 ---
 

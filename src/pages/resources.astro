@@ -15,7 +15,8 @@ const guides = [
   { name: 'Teens, life jackets and CPR', href: '/more-ways-to-stay-safe', description: 'Water safety for older kids, how to pick a life jacket, a pool recall to check, and where to learn CPR.' },
 ];
 
-const groups = [...resourceGroups, { title: 'For survivors & families', items: survivorResources }];
+// The full survivor list lives on Survivors & Families, where the reader who needs it is; two anchors here, with a pointer.
+const groups = [...resourceGroups, { title: 'For survivors & families', items: survivorResources.filter((r) => /Project One Cause|988/.test(r.name)), more: { text: 'The full list, with Pennsylvania programs, is on Survivors & Families.', href: '/survivors-and-families#you-are-not-alone' } }];
 ---
 
 <BaseLayout
@@ -24,8 +25,8 @@ const groups = [...resourceGroups, { title: 'For survivors & families', items: s
 >
   <PageHero
     eyebrow="Resources"
-    title="Trusted help, all in one place."
-    lede="Pediatricians, public health agencies, the groups fighting drowning alongside us, and the help families need after a drowning. Start here."
+    title="The pages we’d send you."
+    lede="If you wrote to us with a question, these are the links we’d answer with. Our own printables come first. After them, the pediatricians and agencies we cite on every page, the groups working to end drowning alongside us, and the help a family needs after one."
   />
   <OnThisPage />
 
@@ -62,6 +63,11 @@ const groups = [...resourceGroups, { title: 'For survivors & families', items: s
                 </li>
               ))}
             </ul>
+            {'more' in g && g.more && (
+              <p class="source">
+                <a href={url(g.more.href)}>{g.more.text}</a>
+              </p>
+            )}
           </div>
         ))
       }

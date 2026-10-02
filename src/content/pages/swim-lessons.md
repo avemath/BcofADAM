@@ -1,21 +1,21 @@
 ---
 title: ISR Swim Lessons
 eyebrow: Infant Swimming Resource (ISR)
-lede: Teaching babies and toddlers to save themselves if they ever end up in the water alone. It’s the lesson Adam never got the chance to take, and now our dad teaches it.
+lede: ISR teaches babies and toddlers to roll onto their backs, float and breathe if they ever end up in the water alone. When Adam was a baby, the nearest instructor was two hours from our house. Now our dad is one.
 description: What Infant Swimming Resource (ISR) self-rescue lessons are, why they matter so much to our family, and how to find a certified ISR instructor near you.
 ---
 
-## Why this matters to us
+## Two hours away
 
 When Adam was about 6 months old, we looked for ISR lessons. The closest instructor was two hours away. So we told ourselves our locked doors and door alarms would be enough.
 
-They weren’t. Adam was 14 months old when he slipped out of the house and into our pool, and he didn’t know how to roll onto his back and float. Our mom has said that if ISR had been available nearby, she believes she might have found him floating on his back, waiting to be rescued. In 2019 she put it plainly: ISR lessons “as early as 6 months old (before teaching him that the water was FUN!) would have saved him.”
+They weren’t. Adam was 14 months old when he slipped out of the house and into our pool, and he didn’t know how to roll onto his back and float. Our mom, Shannon, has said that if ISR had been available nearby, she believes she might have found him floating on his back, waiting to be rescued. In 2019 she put it plainly: ISR lessons “as early as 6 months old (before teaching him that the water was FUN!) would have saved him.”
 
 After Adam drowned, our dad decided no family near us should have to make that drive. He spent eight weeks training in Florida, became a certified ISR instructor (and a Red Cross CPR instructor), and by 2023 he had taught more than 150 children to self-rescue.
 
 > Skills before thrills. No matter the cost, the time commitment or the distance, sometimes there are no do-overs.
 >
-> *Our mom, Shannon*
+> *Our mom*
 
 ## Why we recommend ISR, not just swim lessons
 
