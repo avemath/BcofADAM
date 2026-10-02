@@ -6,7 +6,9 @@ import OnThisPage from '../components/OnThisPage.astro';
 import CtaBand from '../components/CtaBand.astro';
 import IsrFinder from '../components/IsrFinder.astro';
 import PediatriciansSay from '../components/PediatriciansSay.astro';
-import { isr } from '../data/content';
+import Album from '../components/Album.astro';
+import FacebookVideo from '../components/FacebookVideo.astro';
+import { isr, album } from '../data/content';
 import { url } from '../lib/url';
 import { prose } from '../lib/prose';
 
@@ -39,6 +41,13 @@ const { title, lede, description, image, imageAlt } = entry.data;
           <p class="program__note">{isr.disclosure}</p>
           <a class="btn" href="#find">Find an ISR instructor near you</a>
         </div>
+        {
+          (album.videos ?? [])[3]?.url && (
+            <Album summary={`Watch: ${album.videos![3].title}`} note={`${album.videos![3].date}, from our mom’s page`} more>
+              <FacebookVideo url={album.videos![3].url!} title={album.videos![3].title!} caption={album.videos![3].caption} />
+            </Album>
+          )
+        }
         <PediatriciansSay />
       </div>
     </div>

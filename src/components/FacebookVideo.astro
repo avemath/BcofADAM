@@ -1,0 +1,91 @@
+---
+/**
+ * One video from our Facebook page, through Facebook's video plugin (the video
+ * must be public). Inside a fold-away album nothing loads until the album is
+ * opened; on the Photos & videos page it loads with the page.
+ */
+interface Props {
+  url: string;
+  title: string;
+  caption?: string;
+  date?: string;
+}
+const { url: videoUrl, title, caption, date } = Astro.props;
+const embed = `https://www.facebook.com/plugins/video.php?${new URLSearchParams({ href: videoUrl, show_text: 'false', width: '500', height: '500' }).toString()}`;
+---
+
+<figure class="fbv" data-fbv>
+  <div class="fbv__frame">
+    <iframe data-src={embed} title={title} allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy" />
+  </div>
+  <figcaption>
+    {date && <span class="fbv__date">{date}</span>}
+    {caption && <span>{caption}</span>}{' '}
+    <a href={videoUrl} rel="noopener" target="_blank">
+      Watch on Facebook<span class="visually-hidden"> (opens in a new tab)</span>
+    </a>
+  </figcaption>
+</figure>
+
+<script>
+  // Load the player when it is in view: right away on an open page, or when its album opens.
+  for (const fig of document.querySelectorAll<HTMLElement>('[data-fbv]')) {
+    const iframe = fig.querySelector<HTMLIFrameElement>('iframe');
+    if (!iframe) continue;
+    const load = () => {
+      if (iframe.dataset.src && !iframe.getAttribute('src')) iframe.src = iframe.dataset.src;
+    };
+    const details = fig.closest('details');
+    if (!details || details.open) load();
+    else details.addEventListener('toggle', () => details.open && load());
+  }
+</script>
+
+<style is:global>
+  .fbv {
+    margin: 0;
+  }
+  .fbv__frame {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    max-width: 500px;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    background:
+      linear-gradient(135deg, rgb(255 255 255 / 0.85), rgb(255 255 255 / 0.6)),
+      var(--foam);
+  }
+  .fbv__frame::before {
+    content: 'Loading the video from Facebook…';
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 16px;
+    text-align: center;
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+  }
+  .fbv__frame iframe {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  .fbv figcaption {
+    margin-top: 10px;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    text-wrap: pretty;
+  }
+  .fbv__date {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--aqua-text);
+    margin-bottom: 2px;
+  }
+</style>

@@ -27,7 +27,7 @@ This website is run by Because of ADAM, a nonprofit in Blair County, Pennsylvani
 
 ## Facebook
 
-Our News page shows our latest Facebook posts through Facebook’s page plugin, which loads with the page. When it does, Facebook may set cookies or collect information about your visit under [Facebook’s privacy policy](https://www.facebook.com/privacy/policy/). No other page on this site loads anything from Facebook.
+Our News page shows our latest Facebook posts through Facebook’s page plugin, which loads with the page, and our Photos & videos page plays short videos from our Facebook page. A few other pages hold one of those videos inside a fold-away album, and nothing loads from Facebook until you open it. When Facebook content loads, Facebook may set cookies or collect information about your visit under [Facebook’s privacy policy](https://www.facebook.com/privacy/policy/).
 
 ## Hosting
 

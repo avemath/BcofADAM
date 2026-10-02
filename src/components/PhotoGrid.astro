@@ -1,0 +1,53 @@
+---
+/** A grid of captioned photos: two across on a phone, four on a desktop. A "wide" photo takes two columns. */
+import PhotoFrame from './PhotoFrame.astro';
+import type { AlbumPhoto } from '../data/content';
+
+interface Props {
+  photos: AlbumPhoto[];
+  /** Columns on a desktop (3 or 4). */
+  columns?: 3 | 4;
+}
+const { photos, columns = 4 } = Astro.props;
+const list = photos.filter((p) => p.photo);
+---
+
+<div class:list={['pgrid', `pgrid--${columns}`]}>
+  {
+    list.map((p) => (
+      <div class:list={['pgrid__item', { 'pgrid__item--wide': p.wide }]}>
+        <PhotoFrame src={p.photo} alt={p.alt} caption={p.caption} ratio={p.wide ? '5 / 3' : '4 / 5'} />
+      </div>
+    ))
+  }
+</div>
+
+<style is:global>
+  .pgrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+  .pgrid__item--wide {
+    grid-column: span 2;
+  }
+  .pgrid img {
+    border-radius: var(--radius-sm);
+    box-shadow: 0 10px 24px -14px rgb(4 29 43 / 0.45);
+  }
+  .pgrid figcaption {
+    font-size: 0.85rem;
+    margin-top: 8px;
+  }
+  @media (min-width: 760px) {
+    .pgrid {
+      gap: 18px;
+    }
+    .pgrid--4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .pgrid--3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+</style>

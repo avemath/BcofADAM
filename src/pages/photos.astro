@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import CtaBand from '../components/CtaBand.astro';
+import FacebookVideo from '../components/FacebookVideo.astro';
+import PhotoGrid from '../components/PhotoGrid.astro';
+import { album } from '../data/content';
+import { url } from '../lib/url';
+
+const videos = (album.videos ?? []).filter((v) => v.url && v.title);
+const village = (album.village ?? []).filter((p) => p.photo);
+const family = (album.family ?? []).filter((p) => p.photo);
+---
+
+<BaseLayout
+  title="Photos & Videos"
+  description="Photos and short videos of Adam, our family and the village that shows up for him, from Because of ADAM in Blair County, Pennsylvania."
+>
+  <PageHero eyebrow="Adam’s village" title="Photos & videos" lede={album.intro} />
+
+  {
+    videos.length > 0 && (
+      <section class="section" style="padding-top: clamp(40px, 6vw, 72px)">
+        <div class="wrap">
+          <h2>{album.videosTitle}</h2>
+          {album.videosText && <p class="lede">{album.videosText}</p>}
+          <div class="videos">
+            {videos.map((v) => (
+              <FacebookVideo url={v.url!} title={v.title!} date={v.date} caption={v.caption} />
+            ))}
+          </div>
+          <p class="source">The videos play through Facebook, which may set its own cookies. Our <a href={url('/privacy')}>privacy page</a> explains.</p>
+        </div>
+      </section>
+    )
+  }
+
+  {
+    village.length > 0 && (
+      <section class="section section--foam">
+        <div class="wrap">
+          <h2>{album.villageTitle}</h2>
+          {album.villageText && <p class="lede">{album.villageText}</p>}
+          <PhotoGrid photos={village} />
+          <p class="source" style="margin-top: 20px">
+            The rodeos, the benefits and the booths are on our <a href={url('/events')}>Events</a> page.
+          </p>
+        </div>
+      </section>
+    )
+  }
+
+  {
+    family.length > 0 && (
+      <section class="section">
+        <div class="wrap">
+          <h2>{album.familyTitle}</h2>
+          {album.familyText && <p class="lede">{album.familyText}</p>}
+          <PhotoGrid photos={family} />
+          <p class="source" style="margin-top: 20px">
+            How it all started is in <a href={url('/adams-story')}>Adam’s story</a>, and what we do about it is on <a href={url('/about')}>About us</a>.
+          </p>
+        </div>
+      </section>
+    )
+  }
+
+  <CtaBand title="Now the part that protects other kids." text="Everything we learned, one layer at a time, and five things you can do tonight.">
+    <a class="btn" href={url('/water-safety')}>See the layers</a>
+    <a class="btn btn--ghost" href={url('/#tonight')}>Five things tonight</a>
+  </CtaBand>
+</BaseLayout>
+
+<style>
+  .videos {
+    display: grid;
+    gap: 28px;
+    margin-top: 28px;
+  }
+  @media (min-width: 760px) {
+    .videos {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 32px 40px;
+    }
+  }
+</style>

@@ -2,10 +2,12 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import CtaBand from '../components/CtaBand.astro';
+import Album from '../components/Album.astro';
+import PhotoGrid from '../components/PhotoGrid.astro';
 import { site, nonprofitLine } from '../data/site';
 import { url } from '../lib/url';
 import PhotoFrame from '../components/PhotoFrame.astro';
-import { about, team } from '../data/content';
+import { about, team, album } from '../data/content';
 
 // Each value ends with our mom's own words, quoted from her posts on Adam's Facebook page.
 const values = [
@@ -31,6 +33,7 @@ const values = [
   },
 ];
 
+const family = (album.family ?? []).filter((p) => p.photo);
 ---
 
 <BaseLayout
@@ -169,6 +172,18 @@ const values = [
       </ul>
     </div>
   </section>
+
+  {
+    family.length > 0 && (
+      <section class="section" style="padding-top: 0">
+        <div class="wrap">
+          <Album summary="Family album" note={`${family.length} more of us: birthdays, holidays, the bleachers`} teaser={family.slice(0, 3).map((p) => p.photo!)} more>
+            <PhotoGrid photos={family} />
+          </Album>
+        </div>
+      </section>
+    )
+  }
 
   <section class="section section--deep">
     <div class="wrap narrow">
