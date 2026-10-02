@@ -392,15 +392,21 @@ content:
           - name: caption2
             label: Caption under that photo
             type: string
-          - name: lifePhoto
-            label: Photo under "Life after a drowning"
-            type: image
-          - name: lifePhotoAlt
-            label: Describe that photo
-            type: string
-          - name: lifeCaption
-            label: Caption under that photo
-            type: string
+          - name: lifePhotos
+            label: Photos under "Life after a drowning" (the hospital ones)
+            type: object
+            list: true
+            description: They sit side by side on a computer and stack on a phone. Three fit well.
+            fields:
+              - name: photo
+                label: Photo
+                type: image
+              - name: alt
+                label: Describe the photo (for people who can't see it)
+                type: string
+              - name: caption
+                label: Caption
+                type: string
           - name: momentsTitle
             label: "Life goes on: heading"
             type: string

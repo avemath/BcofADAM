@@ -5,9 +5,23 @@
   "photo2": "/images/uploads/aj_and_stuffies.jpg",
   "photo2Alt": "Adam lying back in a Superman shirt and red cape, with Batman, Spider-Man, Black Panther and other superhero plushies tucked in around him",
   "caption2": "Adam and his superheroes.",
-  "lifePhoto": "/images/uploads/mom_hospital_gown_aj.jpg",
-  "lifePhotoAlt": "Mom in a white disposable gown and hair cap, flashing two peace signs beside Adam, who sits in his chair in a yellow Pittsburgh hoodie in a hospital room",
-  "lifeCaption": "Mom and Adam at the hospital.",
+  "lifePhotos": [
+    {
+      "photo": "/images/uploads/mom_hospital_gown_aj.jpg",
+      "alt": "Mom in a white disposable gown and hair cap, flashing two peace signs beside Adam, who sits in his chair in a yellow Pittsburgh hoodie in a hospital room",
+      "caption": "Mom and Adam at the hospital."
+    },
+    {
+      "photo": "/images/uploads/lea_and_aj_kiss.jpg",
+      "alt": "Lea leaning over Adam’s hospital bed, kissing the top of his head",
+      "caption": "Lea and Adam, in the hospital."
+    },
+    {
+      "photo": "/images/uploads/small_hospital_couch.jpg",
+      "alt": "Two of the kids asleep together on a couch in a hospital room, one under a plaid blanket",
+      "caption": "Asleep on the hospital couch."
+    }
+  ],
   "momentsTitle": "We keep living, and Adam comes with us.",
   "momentsText": "Weddings, graduations, Halloween, Disney, the beach, the snow. Adam can’t exactly join in, but we still do the normal family things, and we still include him. It takes extra effort: getting him out of bed and into his stroller, getting his equipment ready, getting him portable. We do it anyway. Life goes on, and he’s part of it.",
   "moments": [
