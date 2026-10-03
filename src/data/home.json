@@ -1,8 +1,8 @@
 {
   "heroLede": "Our little brother Adam drowned in our backyard pool at 14 months old, with a house full of family. He survived. We’re his brother and sisters, and this is everything we wish we’d known.",
-  "heroPhoto": "/images/uploads/aj_wedding2.jpg",
-  "heroPhotoAlt": "Adam, close up, in a flat cap, bow tie and suspenders, looking up, a stuffed animal tucked by his shoulder",
-  "heroCaption": "Adam at his brother’s wedding, 2025.",
+  "heroPhoto": "",
+  "heroPhotoAlt": "",
+  "heroCaption": "Adam, {{Adam’s age}}.",
   "expect": [
     "A splash and a scream.",
     "It happens during swim time.",
