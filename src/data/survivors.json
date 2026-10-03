@@ -15,6 +15,11 @@
       "photo": "/images/uploads/lea_and_aj_kiss.jpg",
       "alt": "Lea leaning over Adam’s hospital bed, kissing the top of his head",
       "caption": "Lea and Adam, in the hospital."
+    },
+    {
+      "photo": "/images/uploads/mom-dad-aj-ICU.jpg",
+      "alt": "Our mom and dad sitting close beside Adam’s hospital crib, machines and tubing all around them",
+      "caption": "Our mom and dad with Adam in the hospital."
     }
   ],
   "momentsTitle": "We keep living, and Adam comes with us.",
@@ -27,9 +32,9 @@
       "wide": true
     },
     {
-      "photo": "/images/uploads/snowman.jpg",
-      "alt": "Two of us building a snowman while Adam watches from his stroller, bundled up in a knit hat and boots",
-      "caption": "Snow day.",
+      "photo": "/images/uploads/lea-adam-sled.jpg",
+      "alt": "Lea on an orange sled in the snow with Adam in her lap, both bundled up in winter coats and hats",
+      "caption": "Snow day. Lea takes Adam sledding.",
       "wide": false
     },
     {
@@ -37,6 +42,12 @@
       "alt": "Our dad in a cap beside Adam in his stroller, Adam dressed as Russell from Up with aviator goggles and a sash of badges",
       "caption": "Halloween: Russell from Up, with our dad.",
       "wide": false
+    },
+    {
+      "photo": "/images/uploads/rickeyIII-adam-plane.jpg",
+      "alt": "Rickey holding Adam in an airplane cockpit while the pilot points up at the switches overhead",
+      "caption": "Rickey and Adam in the cockpit.",
+      "wide": true
     },
     {
       "photo": "/images/uploads/dad_aj_disney.jpg",
@@ -49,6 +60,12 @@
       "alt": "Adam in a bow tie, suspenders and flat cap in his chair at Rickey and Harley’s outdoor wedding, with family crowded in around him, two of them holding bouquets",
       "caption": "Rickey and Harley’s wedding, 2025.",
       "wide": false
+    },
+    {
+      "photo": "/images/uploads/adam-party-glasses.jpg",
+      "alt": "Adam in black sunglasses and a Johnny Cash shirt between a woman in pink pixel glasses and our dad in orange pixel glasses",
+      "caption": "Party glasses.",
+      "wide": true
     },
     {
       "photo": "/images/uploads/beach_lifegoeson.jpg",
