@@ -28,6 +28,16 @@ Adam drowned in our backyard pool on June 5, 2017, when he was 14 months old. He
 
 We say **nonfatal drowning**, the term the [CDC](https://www.cdc.gov/drowning/data-research/facts/index.html) uses, instead of “near-drowning.” Adam didn’t almost drown. He drowned, and he survived.
 
+## In the news
+
+![The headline “A Mother’s Love” across the top of a page of The Times-Picayune](/images/uploads/times-picayune-a-mothers-love.jpg)
+
+*The Times-Picayune, September 2017.*
+
+- The Times-Picayune (New Orleans): “A Mother’s Love,” a story about our mom and Adam, September 2017.
+- WJAC-TV: [Duncansville couple warns other parents: “It only takes a second”](https://wjactv.com/news/local/duncansville-couple-warns-other-parents-it-only-takes-a-second)
+- WTAJ: [Infant swim classes being offered at Altoona facility](https://www.wtaj.com/studio814/infant-swim-classes-being-offered-at-altoona-facility/)
+
 ## Photos
 
 Need a photo of Adam or our family for your story? Email our media contact (it’s in the fact sheet on this page) and tell us a little about the story. We’ll send photos the family has approved for press use.

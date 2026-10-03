@@ -101,6 +101,16 @@
       "caption": "Mom and Dad, 1995."
     },
     {
+      "photo": "/images/uploads/adam-2016-soccer-game.jpg",
+      "alt": "Baby Adam in a green shirt, held up by a man in a blue shirt and cap at the edge of a soccer field",
+      "caption": "Adam at a soccer game, fall 2016."
+    },
+    {
+      "photo": "/images/uploads/adam-march-2017.jpg",
+      "alt": "Baby Adam in a high chair, little pieces of fruit and snacks spread on his tray",
+      "caption": "Adam, March 2017."
+    },
+    {
       "photo": "/images/uploads/aj+ric.jpg",
       "alt": "Rickey smiling with baby Adam sitting on his shoulders, in a studio portrait",
       "caption": "Rickey and Adam. Mom calls them her bookends."
@@ -114,6 +124,11 @@
       "photo": "/images/uploads/lea+aj.jpg",
       "alt": "Lea lying on a play mat cheek to cheek with Adam, who is in a teal onesie",
       "caption": "Lea and Adam."
+    },
+    {
+      "photo": "/images/uploads/lea-adam-2020-cuddle.jpg",
+      "alt": "Lea with a red bow in her hair hugging Adam from behind, cheek to his head, on a Spider-Man blanket",
+      "caption": "Lea and brother."
     },
     {
       "photo": "/images/uploads/pawpaw_aj.jpg",
@@ -141,9 +156,19 @@
       "caption": "Tigers fans: Dad, Lea and Adam."
     },
     {
+      "photo": "/images/uploads/adam-lsu-headband-experiment-626-stitch-disney.jpg",
+      "alt": "Adam in his stroller in a purple and gold LSU headband, white sunglasses and a blue Experiment 626 shirt",
+      "caption": "LSU headband and a Stitch shirt."
+    },
+    {
       "photo": "/images/uploads/yoda.jpg",
       "alt": "Adam in his stroller wearing Baby Yoda ears and sunglasses, with Dad in an LSU cap and his sister behind him",
       "caption": "Adam as Baby Yoda on his fifth birthday, March 2021."
+    },
+    {
+      "photo": "/images/uploads/madhatter-halloween.jpg",
+      "alt": "Lea dressed as Alice beside Adam as the Mad Hatter, his wheelchair made into a tea party table with teacups and flowers, four women in costume around them",
+      "caption": "Halloween: Lea as Alice, Adam as the Mad Hatter."
     },
     {
       "photo": "/images/uploads/mom_nurse.jpg",
@@ -166,6 +191,16 @@
       "caption": "Decorating the tree. Adam supervises."
     },
     {
+      "photo": "/images/uploads/snowman.jpg",
+      "alt": "Two of us building a snowman while Adam watches from his stroller, bundled up in a knit hat and boots",
+      "caption": "Adam supervises the snowman."
+    },
+    {
+      "photo": "/images/uploads/family-snow-selfie.jpg",
+      "alt": "A selfie of the family in winter hats around a snowman, Adam bundled up in his stroller at the left",
+      "caption": "Snowman day."
+    },
+    {
       "photo": "/images/uploads/dad_aj_matching.jpg",
       "alt": "Dad standing beside Adam in his chair in the kitchen, both in the same patterned shirt",
       "caption": "Dad and Adam, matching."
@@ -184,6 +219,21 @@
       "photo": "/images/uploads/aj_ave_grace_wedding.jpg",
       "alt": "Adam in a flat cap and bow tie in his chair, three bridesmaids in dark red and tan dresses holding dried-flower bouquets behind him",
       "caption": "Avery, Grace and Adam at Rickey and Harley’s wedding, 2025."
+    },
+    {
+      "photo": "/images/uploads/roadtrip.jpg",
+      "alt": "Adam in his glasses in his car seat in the back of the van, a little girl with a red bow behind him, a teenager in a gray sweatshirt beside him and the driver in a cap up front, bags piled in the back",
+      "caption": "Road trip."
+    },
+    {
+      "photo": "/images/uploads/lea-aj-ICU.jpg",
+      "alt": "Four-year-old Lea in a sunflower dress leaning on the rail of Adam’s hospital crib, looking in at him",
+      "caption": "Lea visiting Adam in the PICU, 2017."
+    },
+    {
+      "photo": "/images/uploads/adam-lea-2020.jpg",
+      "alt": "Lea curled up in a hospital recliner holding Adam across her lap, his feet in fuzzy socks, tubes running to the machines beside them",
+      "caption": "Lea and Adam in the hospital, 2020."
     }
   ]
 }

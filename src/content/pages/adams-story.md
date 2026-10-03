@@ -60,13 +60,17 @@ Mom stayed with him, first in Pittsburgh, and for the next four months our famil
 
 Most days, though, nothing seemed to reach him. One day I walked in while Mom and his therapist were working with him and getting nowhere. I was 14, and I didn’t understand that he wasn’t responding the way Mom was hoping he would. The therapist, out of ideas, asked if I would talk to him the way I normally did at home. I leaned over the crib, thought for a second, and snapped, *“Adam. Get out of my room!”* His eyes shot open. I laughed. Mom was shocked, and then she was crying.
 
-![Lea sitting on the floor of Adam’s hospital room with his stuffed animals lined up in front of her](/images/uploads/lea_stuffed_animals.jpg)
+![Avery leaning on the rail of Adam’s hospital crib in the PICU, Adam lying among his stuffed animals with his breathing tube](/images/uploads/adam-avery-2017-ICU.jpg)
 
-*Lea in Adam’s hospital room, with his stuffed animals.*
+*Me at Adam’s crib in the PICU, summer 2017.*
 
 Back home, the garden didn’t make it. By July the plants, still crammed in their pots, had died, and for a long time Dad couldn’t stand to look at them.
 
 Grace and I started a new school year without Mom there. Every day, friends and strangers asked how our brother was doing, and when we said “good,” they heard “totally healed.” We had to explain that a good day just meant he was still alive.
+
+![Lea sitting on the floor of Adam’s hospital room with his stuffed animals lined up in front of her](/images/uploads/lea_stuffed_animals.jpg)
+
+*Lea in Adam’s hospital room, with his stuffed animals.*
 
 That September, our hometown packed a pavilion with people in blue Adam’s Hope shirts, and two weeks later our Pennsylvania neighbors held a benefit of their own.
 
@@ -102,11 +106,15 @@ Then October came, the pool was covered for the season, and Adam smiled. It had 
 
 For two more summers, Lea asked for a garden, and for two more summers, Dad couldn’t do it. Then, in the spring of 2020, with COVID keeping everyone home, he pulled out the old trays of soil and we planted it again.
 
+![Lea and Dad at a table by the back doors, filling a tray of seedling cells with soil under a grow light](/images/uploads/planting_seeds.jpg)
+
+*The old trays, planted again.*
+
+That year, Rickey, Grace, Lea and I started **Because of ADAM: Allies in the Drowning Awareness Movement**, so other families could learn what we learned without having to learn it the way we did.
+
 ![Dad bent over a raised garden bed full of green plants while Lea leaps beside it with her arms in the air](/images/uploads/lea_dad_garden.jpg)
 
 *Dad and Lea, back in the garden.*
-
-That year, Rickey, Grace, Lea and I started **Because of ADAM: Allies in the Drowning Awareness Movement**, so other families could learn what we learned without having to learn it the way we did.
 
 Dad became a Red Cross CPR instructor, then spent eight weeks in Florida learning to teach [ISR self-rescue](/swim-lessons), the lessons Adam never got to take, and by 2023 he had taught more than 150 children. Mom went back to school at 43 to become a nurse for kids like Adam.
 
@@ -135,6 +143,10 @@ I’m in school in Louisiana now, so I see Adam when I come home. He has nurses 
 ![Avery resting her head against Adam’s, his black visor pulled low, in a purple Tigers jersey](/images/uploads/avery_and_aj2.jpg)
 
 *Adam and me.*
+
+![Grace and Avery sitting on the floor in Adam’s room, one hugging the other from behind, both smiling at the camera](/images/uploads/grace-joining-aj-mom-and-mys-talk.jpg)
+
+*Some nights Grace joins us, too.*
 
 Lea, who was right there in the tent with him that day, used to pray she’d be smart enough to build a time machine, so she could go back to June 5 and take her brother out for ice cream. When she was 7, she and Mom got to talking about time machines again, and Mom figured they’d both go back to that day. Lea had a different answer:
 

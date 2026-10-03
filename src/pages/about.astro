@@ -121,6 +121,10 @@ const family = (album.family ?? []).filter((p) => p.photo);
           brain are getting oxygen and which parts were hurt when they couldn’t. On Adam’s scan, the part that was hurt
           showed up dark, and it was shaped like a perfect heart.
         </p>
+        <figure class="logo-story__scan">
+          <img src={url('/images/uploads/adam-brain-SPECT.jpg')} sizes="(min-width: 800px) 709px, calc(100vw - 32px)" alt="Five slices of Adam’s SPECT brain scan in purple, teal and orange on a black background, each with a dark heart shape in the middle" width="709" height="197" loading="lazy" />
+          <figcaption>Adam’s SPECT scan, September 2017. The dark heart in the middle is the part that was hurt.</figcaption>
+        </figure>
         <blockquote class="logo-story__quote">
           <p>Rather than devastation, I was flooded with immense hope.</p>
           <cite>Our mom, Shannon</cite>
@@ -290,6 +294,23 @@ const family = (album.family ?? []).filter((p) => p.photo);
     height: auto;
     justify-self: center;
     filter: drop-shadow(0 24px 40px rgb(4 29 43 / 0.25));
+  }
+  .logo-story__scan {
+    margin: 1.4em 0 0;
+  }
+  .logo-story__scan img {
+    display: block;
+    width: 100%;
+    max-width: 709px;
+    height: auto;
+    border-radius: var(--radius-sm);
+    background: #000;
+  }
+  .logo-story__scan figcaption {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+    text-wrap: pretty;
   }
   .logo-story__quote {
     margin: 1.4em 0;
