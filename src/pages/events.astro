@@ -87,7 +87,7 @@ const village = (album.village ?? []).filter((p) => p.photo);
 
   {
     village.length > 0 && (
-      <section class="section">
+      <section class="section" style="padding-top: 0">
         <div class="wrap">
           <Album open summary={album.villageTitle || 'Our village'} note={album.villageText} teaser={village.slice(0, 3).map((p) => p.photo!)} more>
             <PhotoGrid photos={village} />
