@@ -145,16 +145,15 @@ Avery asked for the four videos, the village gallery and the rest of the support
 
 Research behind the pattern: family-founded drowning groups keep the education in front and the child's story as the way in. The Joshua Collingsworth Memorial Foundation (Otter Spotter Day), the Team Kareem Memorial Foundation, the Trevor "Birdie" Davis Water Safety Foundation and the ZAC Foundation all do it this way.
 
-**The four videos** (public videos on Mom's page, embedded through Facebook's video plugin; Mom's captions quoted verbatim):
+**The three videos** (public videos on Mom's page, embedded through Facebook's video plugin; Mom's captions quoted verbatim):
 
 | Video | Date | Where on the site |
 |---|---|---|
 | Mom singing to Adam, "A voice only a son could love… But look at that smile!!" | May 17, 2019 | Adam's Story, in the side column |
-| Adam and Lea watching Barney in the hospital, "Just a sweet video of Aj and Lea watching his favorite." | June 13, 2017 | Survivors & Families, under the hospital photos |
 | Christmas tickles, "May your day be full of tickles!" | Dec. 25, 2018 | Survivors & Families, after the "Life goes on" grid |
 | Adam in the water with Dad, "Yall he's so relaxed in here, he fell asleep shortly after this video." | July 22, 2020 | ISR Swim Lessons, after the note about Dad's lessons |
 
-Left out on purpose (medical updates): the Oct. 21, 2017 spasticity video, the Nov. 14, 2018 suctioning video, the Sept. 5, 2017 chamber video and the June 20, 2017 surgery video.
+Taken off on Oct. 4, 2026: the June 13, 2017 video of Adam and Lea watching Barney. It was a throwback clip of Adam from before June 5, and Avery doesn't want it on the site. Left out on purpose (medical updates): the Oct. 21, 2017 spasticity video, the Nov. 14, 2018 suctioning video, the Sept. 5, 2017 chamber video and the June 20, 2017 surgery video.
 
 **Our village** (12 photos; open by default on Events, and on the Photos & videos page): `fr9.jpg`, `adams_village3.jpg`, `fr2.jpg`, `fr5.jpg`, `fr14.jpg`, `fr8.jpg`, `adams_village2.jpg`, `fr13.jpg`, `fr11.jpg`, `fr10.jpg`, `rocks2.jpg` (the painted rocks from Mom's May 1, 2018 post: "This amazing church group painting rocks in honor of Adam's fighting spirit is from our hometown!") and `fr1.jpg` (the 4:32 a.m. photo). The `fr` photos are the 2018 fishing rodeo in Jean Lafitte (the overlay on `fr13.jpg` and `fr1.jpg` says so). Skipped: `fr12.jpg` (children who aren't family), `fr6.jpg` and `fr7.jpg` (orange "689 Swampers" shirts, another group), `fr15.jpg` and `fr16.jpg`, `adams_village_3.jpg` (another family's teal shirts) and the `adams village.jpg` duplicate.
 

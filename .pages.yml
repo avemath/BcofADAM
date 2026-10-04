@@ -442,7 +442,7 @@ content:
             label: Videos (from our Facebook page; the video must be public)
             type: object
             list: true
-            description: The first video shows on Adam's Story, the second and third on Survivors & Families, the fourth on ISR Swim Lessons. All four show on the Photos & videos page.
+            description: The first video shows on Adam's Story, the second on Survivors & Families, the third on ISR Swim Lessons. All of them show on the Photos & videos page.
             fields:
               - name: title
                 label: Title
