@@ -12,10 +12,12 @@ interface Props {
   caption?: string;
   hint?: string;
   ratio?: string;
+  /** Where to keep the crop, as CSS object-position (like "50% 30%" to favor faces near the top). */
+  focus?: string;
   /** Show the photo in its own shape (tall or wide) instead of cropping it. */
   natural?: boolean;
 }
-const { src, alt = '', caption, hint = 'Add a photo', ratio = '4 / 5', natural = false } = Astro.props;
+const { src, alt = '', caption, hint = 'Add a photo', ratio = '4 / 5', natural = false, focus } = Astro.props;
 // Unique ids so several placeholders can share a page.
 const uid = Math.random().toString(36).slice(2, 8);
 ---
@@ -23,7 +25,7 @@ const uid = Math.random().toString(36).slice(2, 8);
 <figure class:list={['photo', { 'photo--natural': natural }]} style={`--ratio:${ratio}`}>
   {
     src ? (
-      <img src={url(src)} sizes="(min-width: 1000px) 600px, 100vw" alt={alt} data-missing-alt={!alt.trim() || undefined} loading="lazy" decoding="async" />
+      <img src={url(src)} sizes="(min-width: 1000px) 600px, 100vw" alt={alt} data-missing-alt={!alt.trim() || undefined} loading="lazy" decoding="async" style={focus ? `object-position: ${focus}` : undefined} />
     ) : (
       <div class="photo__placeholder" role="img" aria-label="Illustration of sunlight on water">
         <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
