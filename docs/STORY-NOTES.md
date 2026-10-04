@@ -153,7 +153,7 @@ Research behind the pattern: family-founded drowning groups keep the education i
 |---|---|---|
 | Mom singing to Adam, "A voice only a son could love… But look at that smile!!" | May 17, 2019 | Adam's Story, in the side column |
 | Christmas tickles, "May your day be full of tickles!" | Dec. 25, 2018 | Survivors & Families, after the "Life goes on" grid |
-| Adam in the water with Dad, "Yall he's so relaxed in here, he fell asleep shortly after this video." | July 22, 2020 | ISR Swim Lessons, after the note about Dad's lessons |
+| Adam in the water with Dad, "Yall he's so relaxed in here, he fell asleep shortly after this video." | July 22, 2020 | Photos & videos page only (it was on ISR Swim Lessons until Oct. 4, 2026, when Avery said it didn't fit there) |
 
 Taken off on Oct. 4, 2026: the June 13, 2017 video of Adam and Lea watching Barney. It was a throwback clip of Adam from before June 5, and Avery doesn't want it on the site. Left out on purpose (medical updates): the Oct. 21, 2017 spasticity video, the Nov. 14, 2018 suctioning video, the Sept. 5, 2017 chamber video and the June 20, 2017 surgery video.
 
