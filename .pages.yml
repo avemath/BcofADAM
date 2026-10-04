@@ -479,6 +479,9 @@ content:
               - name: wide
                 label: Wide photo (takes two columns)
                 type: boolean
+              - name: focus
+                label: Where to keep the crop (optional, like "50% 30%" to favor faces near the top)
+                type: string
           - name: familyTitle
             label: Family gallery heading
             type: string
@@ -502,6 +505,9 @@ content:
               - name: wide
                 label: Wide photo (takes two columns)
                 type: boolean
+              - name: focus
+                label: Where to keep the crop (optional, like "50% 30%" to favor faces near the top)
+                type: string
       - name: survivors-photos
         label: "Survivors & Families: photos"
         type: file
@@ -565,6 +571,9 @@ content:
               - name: wide
                 label: Wide photo (takes two columns)
                 type: boolean
+              - name: focus
+                label: Where to keep the crop (optional, like "50% 30%" to favor faces near the top)
+                type: string
           - name: siblingPhoto
             label: Photo beside the note for brothers and sisters
             type: image

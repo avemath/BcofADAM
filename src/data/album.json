@@ -168,7 +168,8 @@
     {
       "photo": "/images/uploads/madhatter-halloween.jpg",
       "alt": "Lea dressed as Alice beside Adam as the Mad Hatter, his wheelchair made into a tea party table with teacups and flowers, four women in costume around them",
-      "caption": "Halloween 2018: Lea as Alice, Adam as the Mad Hatter."
+      "caption": "Halloween 2018: Lea as Alice, Adam as the Mad Hatter.",
+      "focus": "20% 50%"
     },
     {
       "photo": "/images/uploads/mom_nurse.jpg",
@@ -176,14 +177,16 @@
       "caption": "Mom went back to school for nursing at 43 and graduated in the fall of 2021."
     },
     {
+      "photo": "/images/uploads/momdadgirls.jpg",
+      "alt": "Dad in an LSU cap, Mom and three of the girls in a selfie on a city sidewalk",
+      "caption": "Mom, Dad and the girls.",
+      "wide": true,
+      "focus": "50% 30%"
+    },
+    {
       "photo": "/images/uploads/momdadlea.jpg",
       "alt": "Dad in a cap, Lea in an orange softball shirt holding up a first-place medal, and Mom, in a selfie on a field",
       "caption": "Lea’s first-place softball medal, with Mom and Dad."
-    },
-    {
-      "photo": "/images/uploads/momdadgirls.jpg",
-      "alt": "Dad in an LSU cap, Mom and three of the girls in a selfie on a city sidewalk",
-      "caption": "Mom, Dad and the girls."
     },
     {
       "photo": "/images/uploads/decorating_xmas_tree.jpg",
@@ -191,14 +194,15 @@
       "caption": "Decorating the tree. Adam supervises."
     },
     {
+      "photo": "/images/uploads/family-snow-selfie.jpg",
+      "alt": "A selfie of the family in winter hats around a snowman, Adam bundled up in his stroller at the left",
+      "caption": "Snowman day.",
+      "wide": true
+    },
+    {
       "photo": "/images/uploads/snowman.jpg",
       "alt": "Two of us building a snowman while Adam watches from his stroller, bundled up in a knit hat and boots",
       "caption": "Adam supervises the snowman."
-    },
-    {
-      "photo": "/images/uploads/family-snow-selfie.jpg",
-      "alt": "A selfie of the family in winter hats around a snowman, Adam bundled up in his stroller at the left",
-      "caption": "Snowman day."
     },
     {
       "photo": "/images/uploads/dad_aj_matching.jpg",
@@ -208,7 +212,8 @@
     {
       "photo": "/images/uploads/blupaint-1.jpg",
       "alt": "Six of the family in white shirts splattered with blue paint, standing in a field",
-      "caption": "Blue paint, on purpose."
+      "caption": "Blue paint, on purpose.",
+      "wide": true
     },
     {
       "photo": "/images/uploads/aj_wedding2.jpg",
@@ -223,7 +228,8 @@
     {
       "photo": "/images/uploads/roadtrip.jpg",
       "alt": "Adam in his glasses in his car seat in the back of the van, a little girl with a red bow behind him, a teenager in a gray sweatshirt beside him and the driver in a cap up front, bags piled in the back",
-      "caption": "Road trip."
+      "caption": "Road trip.",
+      "wide": true
     },
     {
       "photo": "/images/uploads/lea-aj-ICU.jpg",

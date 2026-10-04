@@ -16,7 +16,7 @@ const list = photos.filter((p) => p.photo);
   {
     list.map((p) => (
       <div class:list={['pgrid__item', { 'pgrid__item--wide': p.wide }]}>
-        <PhotoFrame src={p.photo} alt={p.alt} caption={p.caption} ratio={p.wide ? '5 / 3' : '4 / 5'} />
+        <PhotoFrame src={p.photo} alt={p.alt} caption={p.caption} ratio={p.wide ? '5 / 3' : '4 / 5'} focus={p.focus} />
       </div>
     ))
   }
