@@ -116,14 +116,14 @@ Full-size photos live in `public/images/uploads/` (uploaded through GitHub or th
 | `grace-joining-aj-mom-and-mys-talk.jpg` | Adam's Story, right under "Adam and me." (the one planned pair of stacked photos) | Grace and Avery on the floor of Adam's room; captioned "Some nights Grace joins us, too." |
 | `lea-adam-sled.jpg` | Survivors & Families, "Life goes on" (second, where `snowman.jpg` was) | Lea on an orange sled with Adam in her lap |
 | `rickeyIII-adam-plane.jpg` | Survivors & Families, "Life goes on" (wide) | Rickey holding Adam in an airplane cockpit while the pilot points at the overhead switches |
-| `adam-party-glasses.jpg` | Survivors & Families, "Life goes on" (wide) | Adam in black sunglasses and a Johnny Cash shirt between a woman in pink pixel glasses and Dad in orange ones. We don't know who the woman is, so the caption is just "Party glasses." |
+| `adam-party-glasses.jpg` | Survivors & Families, "Life goes on" (wide) | Adam in black sunglasses and a Johnny Cash shirt between Mom in pink pixel glasses and Dad in orange ones (Avery, Oct. 4, 2026) |
 | `mom-dad-aj-ICU.jpg` | Survivors & Families, under "Life after a drowning" (third of three) | Mom and Dad beside Adam's hospital crib, machines all around |
 | `adam-lea-2020.jpg` | Photos & videos, family album (last). It was meant for the "Life after a drowning" row, but four photos wrapped three and one at desktop width, so it took Avery's fallback and went to the album | Lea in a hospital recliner with Adam across her lap, 2020 (the family's filename) |
-| `adam-2016-soccer-game.jpg` | Photos & videos, family album (after Mom and Dad's wedding photo) | Baby Adam held up at the edge of a soccer field, fall 2016. We don't know who is holding him, so the caption doesn't say |
+| `adam-2016-soccer-game.jpg` | Photos & videos, family album (after Mom and Dad's wedding photo) | Dad, in the blue shirt, holding baby Adam at the edge of a soccer field, fall 2016 (Avery, Oct. 4, 2026) |
 | `adam-march-2017.jpg` | Photos & videos, family album | Baby Adam in his high chair with snacks on the tray, March 2017 |
 | `lea-adam-2020-cuddle.jpg` | Photos & videos, family album (after `lea+aj.jpg`) | Lea hugging Adam from behind on a Spider-Man blanket, 2020 (the filename). Captioned "Lea and brother." |
 | `adam-lsu-headband-experiment-626-stitch-disney.jpg` | Photos & videos, family album (after the Tigers photo) | Adam in an LSU headband, white sunglasses and an Experiment 626 shirt |
-| `madhatter-halloween.jpg` | Photos & videos, family album (after Baby Yoda) | Lea as Alice and Adam as the Mad Hatter, his wheelchair made into a tea party table. The year isn't known |
+| `madhatter-halloween.jpg` | Photos & videos, family album (after Baby Yoda) | Lea as Alice and Adam as the Mad Hatter, his wheelchair made into a tea party table. Halloween 2018 (Avery, Oct. 4, 2026) |
 | `family-snow-selfie.jpg` | Photos & videos, family album (after `snowman.jpg`) | The family in winter hats around a snowman, Adam in his stroller at the left |
 | `roadtrip.jpg` | Photos & videos, family album | Adam in his car seat in the back of the van, a little girl with a red bow behind him, a teenager in a gray sweatshirt beside him, the driver in a cap. Captioned only "Road trip." |
 | `lea-aj-ICU.jpg` | Photos & videos, family album | Four-year-old Lea in a sunflower dress at the rail of Adam's crib in the PICU, 2017 |
@@ -210,7 +210,7 @@ Those stay on Facebook, where people choose to follow along.
 
 ## News coverage we've had
 
-- The Times-Picayune (New Orleans): **"A Mother's Love,"** a print story about Mom and Adam, most likely the September 2017 article by **Lara Arceneaux** (it ran on nola.com and in print; Mom thanked her Sept. 26, 2017, and posted Dad's full Q&A, including the "80 minutes" figure). We still need the exact date and a link. The clipping (`newspaper-article.jpg`) has a date line that appears to read Sunday, Sept. 24, 2017, but it's too blurry to be sure, so the Press page says only September 2017. Confirm the date, and add the link when we find it.
+- The Times-Picayune (New Orleans): **"A Mother's Love,"** a print story about Mom and Adam, most likely the September 2017 article by **Lara Arceneaux** (it ran on nola.com and in print; Mom thanked her Sept. 26, 2017, and posted Dad's full Q&A, including the "80 minutes" figure). We still need the exact date and a link. Avery says it ran around Sept. 25, 2017 (Oct. 4, 2026), and the clipping's date line (`newspaper-article.jpg`) appears to read Sunday, Sept. 24, 2017, which fits. The Press page says September 2017 until the exact date and a link are confirmed.
 
 - WJAC-TV: ["Duncansville couple warns other parents: 'It only takes a second'"](https://wjactv.com/news/local/duncansville-couple-warns-other-parents-it-only-takes-a-second)
 - WTAJ: ["Infant swim classes being offered at Altoona facility"](https://www.wtaj.com/studio814/infant-swim-classes-being-offered-at-altoona-facility/)
