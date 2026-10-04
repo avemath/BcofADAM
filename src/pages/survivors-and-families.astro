@@ -15,8 +15,7 @@ import { url } from '../lib/url';
 const moments = (survivorsPhotos.moments ?? []).filter((m) => m.photo);
 // The hospital photos under "Life after a drowning".
 const lifePhotos = (survivorsPhotos.lifePhotos ?? []).filter((m) => m.photo);
-const hospitalVideo = (album.videos ?? [])[1];
-const christmasVideo = (album.videos ?? [])[2];
+const christmasVideo = (album.videos ?? [])[1];
 
 // Our mom's own words sit under some of these, quoted from her posts on Adam's Facebook page.
 const realities: { title: string; body: string; quote?: string; by?: string }[] = [
@@ -164,13 +163,6 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
               <PhotoFrame src={m.photo} alt={m.alt} caption={m.caption} natural />
             ))}
           </div>
-        )
-      }
-      {
-        hospitalVideo?.url && (
-          <Album summary={`Watch: ${hospitalVideo.title}`} note={`${hospitalVideo.date}, from our mom’s page`} more>
-            <FacebookVideo url={hospitalVideo.url} title={hospitalVideo.title!} caption={hospitalVideo.caption} />
-          </Album>
         )
       }
       <div class="grid grid--2" style="margin-top: 32px">

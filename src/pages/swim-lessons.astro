@@ -42,9 +42,9 @@ const { title, lede, description, image, imageAlt } = entry.data;
           <a class="btn" href="#find">Find an ISR instructor near you</a>
         </div>
         {
-          (album.videos ?? [])[3]?.url && (
-            <Album summary={`Watch: ${album.videos![3].title}`} note={`${album.videos![3].date}, from our mom’s page`} more>
-              <FacebookVideo url={album.videos![3].url!} title={album.videos![3].title!} caption={album.videos![3].caption} />
+          (album.videos ?? [])[2]?.url && (
+            <Album summary={`Watch: ${album.videos![2].title}`} note={`${album.videos![2].date}, from our mom’s page`} more>
+              <FacebookVideo url={album.videos![2].url!} title={album.videos![2].title!} caption={album.videos![2].caption} />
             </Album>
           )
         }
