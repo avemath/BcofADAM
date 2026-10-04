@@ -101,6 +101,16 @@
       "caption": "Mom and Dad, 1995."
     },
     {
+      "photo": "/images/uploads/adam-2016-soccer-game.jpg",
+      "alt": "Baby Adam in a green shirt, held up by our dad in a blue shirt and cap at the edge of a soccer field",
+      "caption": "Our dad and Adam at a soccer game, fall 2016."
+    },
+    {
+      "photo": "/images/uploads/adam-march-2017.jpg",
+      "alt": "Baby Adam in a high chair, little pieces of fruit and snacks spread on his tray",
+      "caption": "Adam, March 2017."
+    },
+    {
       "photo": "/images/uploads/aj+ric.jpg",
       "alt": "Rickey smiling with baby Adam sitting on his shoulders, in a studio portrait",
       "caption": "Rickey and Adam. Mom calls them her bookends."
@@ -114,6 +124,11 @@
       "photo": "/images/uploads/lea+aj.jpg",
       "alt": "Lea lying on a play mat cheek to cheek with Adam, who is in a teal onesie",
       "caption": "Lea and Adam."
+    },
+    {
+      "photo": "/images/uploads/lea-adam-2020-cuddle.jpg",
+      "alt": "Lea with a red bow in her hair hugging Adam from behind, cheek to his head, on a Spider-Man blanket",
+      "caption": "Lea and brother."
     },
     {
       "photo": "/images/uploads/pawpaw_aj.jpg",
@@ -141,9 +156,20 @@
       "caption": "Tigers fans: Dad, Lea and Adam."
     },
     {
+      "photo": "/images/uploads/adam-lsu-headband-experiment-626-stitch-disney.jpg",
+      "alt": "Adam in his stroller in a purple and gold LSU headband, white sunglasses and a blue Experiment 626 shirt",
+      "caption": "LSU headband and a Stitch shirt."
+    },
+    {
       "photo": "/images/uploads/yoda.jpg",
       "alt": "Adam in his stroller wearing Baby Yoda ears and sunglasses, with Dad in an LSU cap and his sister behind him",
       "caption": "Adam as Baby Yoda on his fifth birthday, March 2021."
+    },
+    {
+      "photo": "/images/uploads/madhatter-halloween.jpg",
+      "alt": "Lea dressed as Alice beside Adam as the Mad Hatter, his wheelchair made into a tea party table with teacups and flowers, four women in costume around them",
+      "caption": "Halloween 2018: Lea as Alice, Adam as the Mad Hatter.",
+      "focus": "20% 50%"
     },
     {
       "photo": "/images/uploads/mom_nurse.jpg",
@@ -151,19 +177,32 @@
       "caption": "Mom went back to school for nursing at 43 and graduated in the fall of 2021."
     },
     {
+      "photo": "/images/uploads/momdadgirls.jpg",
+      "alt": "Dad in an LSU cap, Mom and three of the girls in a selfie on a city sidewalk",
+      "caption": "Mom, Dad and the girls.",
+      "wide": true,
+      "focus": "50% 30%"
+    },
+    {
       "photo": "/images/uploads/momdadlea.jpg",
       "alt": "Dad in a cap, Lea in an orange softball shirt holding up a first-place medal, and Mom, in a selfie on a field",
       "caption": "Lea’s first-place softball medal, with Mom and Dad."
     },
     {
-      "photo": "/images/uploads/momdadgirls.jpg",
-      "alt": "Dad in an LSU cap, Mom and three of the girls in a selfie on a city sidewalk",
-      "caption": "Mom, Dad and the girls."
-    },
-    {
       "photo": "/images/uploads/decorating_xmas_tree.jpg",
       "alt": "The family on ladders decorating a tall Christmas tree while Adam watches from his stroller",
       "caption": "Decorating the tree. Adam supervises."
+    },
+    {
+      "photo": "/images/uploads/family-snow-selfie.jpg",
+      "alt": "A selfie of the family in winter hats around a snowman, Adam bundled up in his stroller at the left",
+      "caption": "Snowman day.",
+      "wide": true
+    },
+    {
+      "photo": "/images/uploads/snowman.jpg",
+      "alt": "Two of us building a snowman while Adam watches from his stroller, bundled up in a knit hat and boots",
+      "caption": "Adam supervises the snowman."
     },
     {
       "photo": "/images/uploads/dad_aj_matching.jpg",
@@ -173,7 +212,8 @@
     {
       "photo": "/images/uploads/blupaint-1.jpg",
       "alt": "Six of the family in white shirts splattered with blue paint, standing in a field",
-      "caption": "Blue paint, on purpose."
+      "caption": "Blue paint, on purpose.",
+      "wide": true
     },
     {
       "photo": "/images/uploads/aj_wedding2.jpg",
@@ -184,6 +224,22 @@
       "photo": "/images/uploads/aj_ave_grace_wedding.jpg",
       "alt": "Adam in a flat cap and bow tie in his chair, three bridesmaids in dark red and tan dresses holding dried-flower bouquets behind him",
       "caption": "Avery, Grace and Adam at Rickey and Harley’s wedding, 2025."
+    },
+    {
+      "photo": "/images/uploads/roadtrip.jpg",
+      "alt": "Adam in his glasses in his car seat in the back of the van, a little girl with a red bow behind him, a teenager in a gray sweatshirt beside him and the driver in a cap up front, bags piled in the back",
+      "caption": "Road trip.",
+      "wide": true
+    },
+    {
+      "photo": "/images/uploads/lea-aj-ICU.jpg",
+      "alt": "Four-year-old Lea in a sunflower dress leaning on the rail of Adam’s hospital crib, looking in at him",
+      "caption": "Lea visiting Adam in the PICU, 2017."
+    },
+    {
+      "photo": "/images/uploads/adam-lea-2020.jpg",
+      "alt": "Lea curled up in a hospital recliner holding Adam across her lap, his feet in fuzzy socks, tubes running to the machines beside them",
+      "caption": "Lea and Adam in the hospital, 2020."
     }
   ]
 }

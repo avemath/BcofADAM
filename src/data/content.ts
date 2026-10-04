@@ -72,7 +72,7 @@ export interface IsrBox {
 }
 
 export const home = homeJson;
-export type AlbumPhoto = { photo?: string; alt?: string; caption?: string; wide?: boolean };
+export type AlbumPhoto = { photo?: string; alt?: string; caption?: string; wide?: boolean; focus?: string };
 export type AlbumVideo = { title?: string; date?: string; url?: string; caption?: string };
 /** Photos & videos: the fold-away albums and the page that gathers them. */
 export const album: {
@@ -97,7 +97,7 @@ export const survivorsPhotos: {
   photo2?: string; photo2Alt?: string; caption2?: string;
   lifePhotos?: { photo?: string; alt?: string; caption?: string }[];
   momentsTitle?: string; momentsText?: string;
-  moments?: { photo?: string; alt?: string; caption?: string; wide?: boolean }[];
+  moments?: { photo?: string; alt?: string; caption?: string; wide?: boolean; focus?: string }[];
   siblingPhoto?: string; siblingPhotoAlt?: string; siblingCaption?: string;
 } = survivorsJson;
 export const getInvolvedPhoto: { photo?: string; photoAlt?: string; caption?: string } = getInvolvedJson;
