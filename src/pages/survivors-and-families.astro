@@ -199,7 +199,7 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
             <div class="moments__grid">
               {moments.map((m) => (
                 <div class:list={['moments__item', { 'moments__item--wide': m.wide }]}>
-                  <PhotoFrame src={m.photo} alt={m.alt} caption={m.caption} ratio={m.wide ? '5 / 3' : '4 / 5'} />
+                  <PhotoFrame src={m.photo} alt={m.alt} caption={m.caption} ratio={m.wide ? '5 / 3' : '4 / 5'} focus={m.focus} />
                 </div>
               ))}
             </div>
