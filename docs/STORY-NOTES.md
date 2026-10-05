@@ -83,7 +83,7 @@ Full-size photos live in `public/images/uploads/` (uploaded through GitHub or th
 | `fr3.jpg` | Get Involved | The crowd under the tent at the rodeo, Adam in the middle (2018 per the fr-series) |
 | `fr4.jpg` | Events (fishing rodeo) | Family and friends in the royal blue rodeo shirts under the pavilion by the water, Adam in front |
 | `lea_dad_garden.jpg` | Adam's Story, after "That year, Rickey, Grace, Lea and I started" (moved down in Oct. 2026 to make room for the seed trays) | Dad and Lea at the raised bed. Year not stated in the caption |
-| `mom-nurse-1.jpg` | Adam's Story, "Planting seeds" | Mom's nursing graduation, family around her |
+| `mom-nurse-1.jpg` | Adam's Story, "Planting seeds" | Mom's nursing graduation, family around her. Avery was at school in Louisiana and isn't in it, and the caption says so (Avery, Oct. 5, 2026) |
 | `aj_smile.jpg` | Adam's Story, "Because of Adam" | Adam in glasses, "Mom's amazing dude" sweatshirt |
 | `mom_and_adam_at_softball_game.jpg` | Adam's Story, the games paragraph | Mom and Adam on a blanket at a softball game (the filename doesn't say whose). Adam's red, white and blue shirt matches Mom's July 4, 2019 "ballpark last week" post |
 | `avery_and_aj2.jpg` | Adam's Story, the nights in his room | Avery and Adam, Tigers jersey |
