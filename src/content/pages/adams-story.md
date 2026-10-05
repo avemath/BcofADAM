@@ -124,7 +124,7 @@ Mom went back to school at 43 to become a nurse for kids like Adam. In her first
 
 ![Mom in her white nursing uniform and cap at her graduation, with the family around her and Adam in his chair in front](/images/uploads/mom-nurse-1.jpg)
 
-*Mom became a nurse, and we were all there to cheer her on.*
+*Mom became a nurse, and the family turned out to cheer her on. I was at school in Louisiana by then, so I cheered from there.*
 
 ## Because of Adam
 
