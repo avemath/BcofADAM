@@ -116,9 +116,11 @@ That year, Rickey, Grace, Lea and I started **Because of ADAM: Allies in the Dro
 
 *Dad and Lea, back in the garden.*
 
-Dad became a Red Cross CPR instructor, then spent eight weeks in Florida learning to teach [ISR self-rescue](/swim-lessons), the lessons Adam never got to take, and by 2023 he had taught more than 150 children. Mom went back to school at 43 to become a nurse for kids like Adam.
+We didn’t keep up with it, if I’m honest, and in the end the Pennsylvania frost took it. It didn’t matter. That garden brought us together for a happy time when we were all in the trenches and there wasn’t much to be happy about. It saved us.
 
-In her first months of nursing school, with Dad away in Florida, Adam’s night nurse quit without notice. Three agencies couldn’t staff his 90 hours of approved nursing, so Mom covered his nights herself. Then she threw on her scrubs and walked two icy blocks through downtown Altoona before sunrise to get to clinicals. I spent my senior year working on Because of ADAM and helping coach Lea’s softball team, the 8U Fireflies.
+Dad became a Red Cross CPR instructor, then spent eight weeks in Florida learning to teach [ISR self-rescue](/swim-lessons), the lessons Adam never got to take, and by 2023 he had taught more than 150 children. In the summer, he teaches them in our pool. It’s still there, the same as it was, with a fence on three sides and the house for the fourth, and we still swim in it every summer.
+
+Mom went back to school at 43 to become a nurse for kids like Adam. In her first months of nursing school, with Dad away in Florida, Adam’s night nurse quit without notice. Three agencies couldn’t staff his 90 hours of approved nursing, so Mom covered his nights herself. Then she threw on her scrubs and walked two icy blocks through downtown Altoona before sunrise to get to clinicals. I spent my senior year working on Because of ADAM and helping coach Lea’s softball team, the 8U Fireflies.
 
 ![Mom in her white nursing uniform and cap at her graduation, with the family around her and Adam in his chair in front](/images/uploads/mom-nurse-1.jpg)
 
