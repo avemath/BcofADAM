@@ -104,7 +104,7 @@ Then October came, the pool was covered for the season, and Adam smiled. It had 
 
 ## Planting seeds
 
-For two more summers, Lea asked for a garden, and for two more summers, Dad couldn’t do it. Then, in the spring of 2020, with COVID keeping everyone home, he pulled out the old trays of soil and we planted it again.
+For two more summers, Lea asked for a garden, and for two more summers, Dad couldn’t do it. Then the spring of 2020 came, and COVID kept all of us home. Dad got the old seed trays back out, he and Lea filled them with soil at the table by the back door, and we planted it again. Mom’s words for it that spring: *“To plant a garden is to believe in tomorrow.”*
 
 ![Lea and Dad at a table by the back doors, filling a tray of seedling cells with soil under a grow light](/images/uploads/planting_seeds.jpg)
 
