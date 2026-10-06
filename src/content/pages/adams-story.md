@@ -126,6 +126,8 @@ Mom went back to school at 43 to become a nurse for kids like Adam. In her first
 
 *Mom became a nurse, and the family turned out to cheer her on. I was at school in Louisiana by then, so I cheered from there.*
 
+I know how this sounds coming from their daughter, but I’m not going to pretend my parents are regular people. I don’t know anyone else who could have carried all of that at once. I couldn’t have asked for better parents, and I know how lucky that makes me.
+
 ## Because of Adam
 
 Adam is {{Adam’s age}} now. He can’t walk or talk, but he sees, hears and understands everything. He picks his favorite songs and plays games on an eye-gaze computer that follows his eyes. His teachers come to our house for school, and he spends hours on his favorite swing and on long walks around the neighborhood with his nurse. He loves Mickey Mouse, Pooh Bear, Spider-Man, fast cars and anything Mom sings. For years it was Frozen, Elsa especially. Lately it’s Moana. Mom says she and Adam have *“a secret language that does not need words to communicate,”* and the rest of us have learned to speak it, too. Trust me, he can say a whole lot with just his eyes and that smile.
