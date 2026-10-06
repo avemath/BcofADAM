@@ -126,7 +126,7 @@ Mom went back to school at 43 to become a nurse for kids like Adam. In her first
 
 *Mom became a nurse, and the family turned out to cheer her on. I was at school in Louisiana by then, so I cheered from there.*
 
-I know how this sounds coming from their daughter, but I’m not going to pretend my parents are regular people. I don’t know anyone else who could have carried all of that at once. I couldn’t have asked for better parents, and I know how lucky that makes me.
+I know how this sounds coming from their daughter, but I’m not going to pretend my parents are regular people. Superhuman is more like it. I don’t know anyone else who could have carried all of that at once. I couldn’t have asked for better parents, and I know how lucky that makes me.
 
 ## Because of Adam
 
