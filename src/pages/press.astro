@@ -21,14 +21,16 @@ const label: Record<string, string> = {
       <dd>{site.name}: {site.tagline}</dd>
       <dt>Based in</dt>
       <dd>{site.location}</dd>
+      <dt>Status</dt>
       {
-        site.taxExempt && (
+        site.taxExempt ? (
           <>
-            <dt>Status</dt>
             <dd>501(c)(3) nonprofit organization</dd>
             <dt>EIN</dt>
             <dd>{ein}</dd>
           </>
+        ) : (
+          <dd>Nonprofit organization (501(c)(3) status pending reinstatement)</dd>
         )
       }
       <dt>Media contact</dt>
@@ -52,7 +54,7 @@ const label: Record<string, string> = {
       }
     </dl>
     <p class="fact-sheet__more">
-      Planning an event or class? <a href={url('/request-a-talk')}>Request a talk</a>.
+      Planning an event or class? <a href={url('/get-involved#request-a-talk')}>Request a talk</a>.
     </p>
   </aside>
 </ProseLayout>

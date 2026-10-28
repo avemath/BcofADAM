@@ -28,7 +28,7 @@ const video = (album.videos ?? [])[0];
     }
     {
       video?.url && (
-        <Album summary={`Watch: ${video.title}`} note={`A short video from Mom’s page, ${video.date}`} more>
+        <Album summary={`Watch: ${video.title}`} note={`A short video from Mom’s page, ${video.date}`}>
           <FacebookVideo url={video.url} title={video.title!} caption={video.caption} />
         </Album>
       )

@@ -3,7 +3,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Wave from '../components/Wave.astro';
 import PhotoFrame from '../components/PhotoFrame.astro';
 import TimeOnPage from '../components/TimeOnPage.astro';
-import LayersBuilder from '../components/LayersBuilder.astro';
 import CtaBand from '../components/CtaBand.astro';
 import HomeNumbers from '../components/HomeNumbers.astro';
 import WhereTonight from '../components/WhereTonight.astro';
@@ -11,8 +10,7 @@ import ExpectReality from '../components/ExpectReality.astro';
 import SeasonStrip from '../components/SeasonStrip.astro';
 import SharePage from '../components/SharePage.astro';
 import { layers } from '../data/layers';
-import { home as story } from '../data/content';
-import AnywhereAnytime from '../components/AnywhereAnytime.astro';
+import { home as story, anywhere } from '../data/content';
 import EventCard from '../components/EventCard.astro';
 import { getEvents, splitEvents } from '../lib/events';
 import { site } from '../data/site';
@@ -128,7 +126,16 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
 
   <!-- ANYWHERE, ANYTIME -->
   <Wave color="var(--deep)" bg="var(--sand)" />
-  <AnywhereAnytime />
+  <section class="section section--deep home-teaser" aria-labelledby="anywhere-title">
+    <div class="wrap narrow reveal">
+      <span class="eyebrow">{anywhere.eyebrow}</span>
+      <h2 id="anywhere-title">{anywhere.title}</h2>
+      <p class="lede">{anywhere.lede}</p>
+      <div class="btn-row">
+        <a class="btn" href={url('/water-safety#anywhere')}>Where and when it happens</a>
+      </div>
+    </div>
+  </section>
   <Wave color="var(--foam)" bg="var(--deep)" />
 
   <!-- ADAM -->
@@ -144,7 +151,7 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
         {story.teaserMore && <p>{withAge(story.teaserMore)}</p>}
         <div class="btn-row">
           <a class="btn btn--ocean" href={url('/adams-story')}>Read Adam’s story</a>
-          <a class="btn btn--ghost" href={url('/photos')}>Photos & videos</a>
+          <a class="btn btn--ghost" href={url('/about')}>Meet our family</a>
         </div>
       </div>
     </div>
@@ -169,8 +176,11 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
           Our door alarms went quiet when a door was pulled almost shut but never latched. Gates get propped open.
           Adults look away. Each layer you add catches what the last one misses. Turn them on and see the difference.
         </p>
+        <div class="btn-row">
+          <a class="btn" href={url('/water-safety#builder')}>Try it: turn the layers on</a>
+          <a class="btn btn--ghost" href={url('/water-safety')}>See the seven layers</a>
+        </div>
       </div>
-      <LayersBuilder />
     </div>
   </section>
   <Wave color="var(--deep)" bg="var(--abyss)" />
@@ -486,7 +496,6 @@ const homeEvents = [...upcoming, ...events.filter((e) => e.data.featured && !upc
   /* ---------- Layers ---------- */
   .layers-intro {
     max-width: 760px;
-    margin-bottom: clamp(32px, 5vw, 56px);
   }
   .layers-lede {
     max-width: 62ch;
