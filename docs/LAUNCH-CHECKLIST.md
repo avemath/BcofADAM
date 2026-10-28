@@ -6,6 +6,19 @@ Everything we still need to do to get Because of ADAM and the website fully up a
 
 ---
 
+## 📝 Still open on the website (October 2026)
+
+The site is launched, so these are no longer marked on the pages themselves. They live here instead, so nothing gets forgotten.
+
+| ✓ | Page | Section | What's needed |
+|---|---|---|---|
+| [ ] | **Privacy Policy** (`/privacy`, Studio → Pages → Privacy policy) | Whole page, especially "What we collect," "Facebook," "Hosting" and "Children's privacy" | A **legal review** by a nonprofit attorney. Nobody has reviewed it yet. Then change the "Last updated" date |
+| [ ] | **Terms of Use** (`/terms`, Studio → Pages → Terms of use) | Whole page, especially "Please share this," "This isn't medical advice" and "Our name and logo" | A **legal review** by a nonprofit attorney. Nobody has reviewed it yet. Then change the "Last updated" date |
+| [ ] | **Press** (`/press`) Fact sheet, **Donate** (`/donate`), footer and **About** ("Accountable to our village") | Status / EIN line | **501(c)(3) status is paused.** Our EIN (85-0723376) is already in **Site settings → EIN**. When the IRS confirms reinstatement: check **Site settings → We're an IRS-approved 501(c)(3)**, then look at `/press` and `/donate` to make sure they say what we expect. Until then /press says "Nonprofit organization (501(c)(3) status pending reinstatement)" |
+| [ ] | **Privacy Policy** | "What we collect" | When we add a **contact form, newsletter, donation link or analytics** in Site settings, the policy names the service by itself. We still need to change the policy's **"Last updated"** date by hand each time |
+
+---
+
 ## ⚠️ First: four things that shape everything else
 
 1. **We're already registered with the IRS, but we need to check our status right away.** ProPublica lists a 501(c)(3) for us:
@@ -83,7 +96,7 @@ Everything we still need to do to get Because of ADAM and the website fully up a
 
 - [ ] Set up **automatic receipts**. The IRS requires a written acknowledgment for any single gift of **$250+**, and a quid-pro-quo disclosure when a donor gets something worth more than **$75** in return (gala tickets, merch bundles)
 - [ ] Decide on a simple **bookkeeping** system (a spreadsheet at first; Wave or QuickBooks for Nonprofits later) and who approves spending
-- [ ] Once our 501(c)(3) status is confirmed active: in the **Studio → Site settings**, check the 501(c)(3) box and add our EIN (85-0723376). The site will then say "tax-deductible" everywhere automatically
+- [ ] Once our 501(c)(3) status is confirmed active: in the **Studio → Site settings**, add our EIN (85-0723376) and check the 501(c)(3) box. The site will then say "tax-deductible" everywhere automatically. Then check `/press` and `/donate` to be sure they read right
 - 💡 Message to use in 2026+: starting with 2026 taxes, people who *don't itemize* can deduct up to $1,000 (single) / $2,000 (married filing jointly) in cash gifts to charity
 
 ---
@@ -132,7 +145,7 @@ We're using **[Porkbun](https://porkbun.com/)**: $7.98 for the first year of a .
 - [ ] **Contact form**: create a free form at [Web3Forms](https://web3forms.com/) (250 submissions/month free) or [Formspree](https://formspree.io/) (50/month free). Paste the endpoint into **Studio → Site settings → Contact form link**, and send a test message
 - [ ] **Newsletter** (optional): MailerLite (30% nonprofit discount), Mailchimp (15%), Buttondown (50%). Paste the sign-up link into **Studio → Site settings**
 - [ ] **Analytics** (privacy-friendly, no cookie banner needed): [Cloudflare Web Analytics](https://www.cloudflare.com/web-analytics/) (free) or Plausible ($9/mo, 15% nonprofit discount)
-- [ ] Update the **Privacy Policy** (**Studio → Pages → Privacy policy**) to name the form, donation, email and analytics tools we pick
+- [ ] The **Privacy Policy** names the form, donation, email and analytics tools by itself once they're in Site settings. Each time we add one, change the policy's **"Last updated"** date (**Studio → Pages → Privacy policy**)
 
 ### Step 4: Accessibility and quality
 - [ ] Every photo has **alt text** describing it
@@ -156,7 +169,7 @@ The site is built and written. These are the last things to confirm, all doable 
 - [ ] **Fact check**: click every source link on The Facts page and make sure each number still matches (details in [RESEARCH.md](RESEARCH.md))
 - [ ] Ideally, ask a **pediatrician, ER nurse or first responder** to look over the Water Safety and Survivors pages. "Reviewed by…" builds trust
 - [ ] **Logo**: have one designed (Canva, or a volunteer designer) with a written copyright assignment to the organization
-- [ ] **Launch**: **Studio → Site settings → Launch the site**. The preview banner goes away and Google can find us
+- [x] **Launch**: **Studio → Site settings → Launch the site** (turned on October 2026). The preview banner is gone and Google can find us. From now on, a page with a {{TODO}} left in it won't publish until it's fixed
 
 ---
 

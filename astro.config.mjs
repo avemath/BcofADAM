@@ -17,6 +17,13 @@ export default defineConfig({
   site,
   base,
   trailingSlash: 'ignore',
+  // Pages that were folded into other pages. Old links (Facebook posts, printed flyers) still land
+  // in the right place: GitHub Pages can't redirect, so Astro writes a small page that forwards.
+  redirects: {
+    '/more-ways-to-stay-safe': '/water-safety/#more',
+    '/photos': '/about/',
+    '/request-a-talk': '/get-involved/#request-a-talk',
+  },
   integrations: [
     sitemap({
       // Keep the Studio shortcut, the 404 page, the print-only checklist (and Donate, until there's a donation link) out of Google.

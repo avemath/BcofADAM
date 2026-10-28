@@ -7,8 +7,6 @@ description: Water safety for teens, how to choose a life jacket, the above-grou
 
 ## Teens and older kids
 
-{{TODO: family review}}
-
 Big kids drown too, and it often looks different than it does for toddlers. The American Academy of Pediatrics says:
 
 - **Teens are more likely to overestimate their skills** and underestimate dangerous situations.
@@ -21,8 +19,6 @@ Source: [American Academy of Pediatrics, Water Safety for Older Children](https:
 
 ## Life jackets
 
-{{TODO: family review}}
-
 - **Look for U.S. Coast Guard approval** on the label.
 - **Fit it by weight.** Check the label for the weight range (and chest size for adults), then try it on your child ([U.S. Coast Guard](https://www.uscgboating.org/recreational-boaters/life-jacket-wear-wearing-your-life-jacket.php); [Pennsylvania Fish & Boat Commission](https://www.pa.gov/agencies/fishandboat/boating/basics/equipment/life-jackets)).
 - **Floaties aren’t life jackets.** Water wings, arm bands and other “floaties” don’t prevent drowning and can slip off. A Coast Guard-approved life jacket protects better ([CDC](https://www.cdc.gov/drowning/prevention/summer-swim-safety.html)). Pool floats, inflatable toys and rafts aren’t life jackets either ([Pennsylvania Fish & Boat Commission](https://www.pa.gov/agencies/fishandboat/boating/basics/equipment/life-jackets)).
@@ -31,13 +27,9 @@ Source: [American Academy of Pediatrics, Water Safety for Older Children](https:
 
 ## Check your above-ground pool for a recall
 
-{{TODO: family review}}
-
 Have an above-ground pool 48 inches or taller? About 5 million Bestway, Intex and Polygroup pools were recalled in July 2025 because the compression strap around the outside can give a child a foothold to climb in. Nine young children died. [Check your pool on the CPSC recall page](https://www.cpsc.gov/Recalls/2025/Bestway-Intex-and-Polygroup-Recall-Certain-Above-Ground-Pools-48-Inches-and-Taller-Due-to-Drowning-Hazard-Nine-Deaths-Reported-Five-Million-Pools-Sold-Since-2002) and see what to do.
 
 ## Learn CPR
-
-{{TODO: family review}}
 
 **In an emergency, call 911.** Then start CPR if you’re trained.
 

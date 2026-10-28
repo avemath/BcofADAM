@@ -17,6 +17,26 @@
   ],
   "places": [
     {
+      "icon": "⏱️",
+      "title": "When they slip away",
+      "text": "In a CPSC study of young children who drowned in pools in Arizona, California and Florida, 46% were last seen in the house, 69% weren’t expected to be at or in the pool, and 77% had been missing for 5 minutes or less.",
+      "tip": "",
+      "source": "CPSC Publication 359",
+      "sourceUrl": "https://www.cpsc.gov/s3fs-public/pdfs/blk_media_359.pdf",
+      "link": "",
+      "linkLabel": ""
+    },
+    {
+      "icon": "🏡",
+      "title": "At someone else’s home",
+      "text": "Grandparents’, neighbors’ and friends’ pools count too. More than 70% of children who die in a pool or spa drown at a home, including the homes of family, friends and neighbors.",
+      "tip": "",
+      "source": "CPSC, 2026 report",
+      "sourceUrl": "https://www.cpsc.gov/Newsroom/News-Releases/2026/CPSC-Report-Highlights-Persistent-Risk-of-Childhood-Drowning",
+      "link": "/checklist",
+      "linkLabel": "Print the half-page for grandparents"
+    },
+    {
       "icon": "🛁",
       "title": "The bathtub",
       "text": "Most child drownings inside the home happen in the bathtub, usually during a quick break in supervision. For babies under 1, it’s the most common place of all.",
@@ -39,10 +59,12 @@
     {
       "icon": "🌙",
       "title": "While the house is asleep",
-      "text": "Kids wake up early, sleepwalk and wander. Among people with autism, deaths are nearly 40 times as likely to be caused by drowning as deaths in the general population.",
-      "tip": "Keep doors to the water locked and alarmed at night too, latch the pool gate every time, and make a wandering plan if your child has autism.",
+      "text": "Kids wake up early, sleepwalk and wander. Among people with autism, deaths are nearly 40 times as likely to be caused by drowning as deaths in the general population. Children on the autism spectrum may be drawn to water and not always recognize the danger.",
+      "tip": "Keep doors to the water locked and alarmed at night too, latch the pool gate every time, look for adapted swim lessons, and make a wandering plan if your child has autism.",
       "source": "CDC",
       "sourceUrl": "https://www.cdc.gov/drowning/risk-factors/index.html",
+      "source2": "American Academy of Pediatrics",
+      "sourceUrl2": "https://www.healthychildren.org/English/safety-prevention/at-play/Pages/water-safety-for-children-with-special-health-care-needs.aspx",
       "link": "",
       "linkLabel": ""
     },
@@ -73,7 +95,7 @@
     {
       "icon": "🎉",
       "title": "On the busiest days",
-      "text": "Holidays, birthday parties, a house full of company. Adam slipped out during graduation week, with family in from out of town and nobody expecting him anywhere near the pool.",
+      "text": "Holidays, birthday parties, cookouts, a house full of company. That’s when doors get propped open and alarms get switched off. Adam slipped out during graduation week, with family in from out of town and nobody expecting him anywhere near the pool.",
       "tip": "Name a Water Watcher any time kids and water are together, and check that doors, gates and alarms are still set when the company leaves.",
       "source": "",
       "sourceUrl": "",

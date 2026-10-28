@@ -166,7 +166,7 @@ export const layers: Layer[] = [
     short: 'Learn CPR, keep a phone close, check the water first.',
     body: [
       'When a child is missing, check the water first: pools, spas, ponds, bathtubs. Seconds matter.',
-      'Bystander CPR begun right away can make a life-saving difference while emergency crews are on the way. Our mom, Shannon, started CPR on Adam. Pops (our grandfather), our dad and the first responders all did CPR too.',
+      'Bystander CPR begun right away can make a life-saving difference while emergency crews are on the way.',
     ],
     tips: [
       'In an emergency, call 911. If a child is missing, check the water first.',
