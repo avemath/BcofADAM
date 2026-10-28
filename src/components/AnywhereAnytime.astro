@@ -1,10 +1,16 @@
 ---
 /**
  * "Not just pools. Not just summer." Where and when kids drown besides a pool in July.
- * The words come from src/data/anywhere.json (Studio → Home page: Anywhere, anytime).
+ * The words come from src/data/anywhere.json (Studio → Water Safety: Anywhere, anytime).
  */
 import { anywhere } from '../data/content';
 import { url } from '../lib/url';
+
+interface Props {
+  /** The "See the seven layers" button (off on the Water Safety page itself). */
+  cta?: boolean;
+}
+const { cta = true } = Astro.props;
 
 const words = (anywhere.rotateWords ?? []).filter((w) => w?.trim());
 const last = words.at(-1) ?? '';
@@ -103,9 +109,13 @@ const spoken =
       )
     }
 
-    <div class="btn-row anywhere__cta">
-      <a class="btn" href={url('/water-safety')}>See the seven layers</a>
-    </div>
+    {
+      cta && (
+        <div class="btn-row anywhere__cta">
+          <a class="btn" href={url('/water-safety')}>See the seven layers</a>
+        </div>
+      )
+    }
   </div>
 </section>
 

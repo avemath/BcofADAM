@@ -147,6 +147,7 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
             ))
           }
         </ul>
+        <p class="nf-more"><a href={url('/the-facts#nonfatal-drowning')}>More drowning facts, with sources</a></p>
         </div>
       </div>
     </div>
@@ -197,7 +198,7 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
             </div>
             {
               christmasVideo?.url && (
-                <Album summary={`Watch: ${christmasVideo.title}`} note={`${christmasVideo.date}, from our mom’s page`} more>
+                <Album summary={`Watch: ${christmasVideo.title}`} note={`${christmasVideo.date}, from our mom’s page`}>
                   <FacebookVideo url={christmasVideo.url} title={christmasVideo.title!} caption={christmasVideo.caption} />
                 </Album>
               )
@@ -260,6 +261,10 @@ const realities: { title: string; body: string; quote?: string; by?: string }[] 
 </BaseLayout>
 
 <style>
+  .nf-more {
+    margin: 16px 0 0;
+    font-size: 0.95rem;
+  }
   .nf-stats {
     list-style: none;
     padding: 0;

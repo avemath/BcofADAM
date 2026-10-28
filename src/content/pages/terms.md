@@ -5,8 +5,6 @@ lede: The short version. Please share what you learn here, and call 911 in an em
 description: Terms for using the Because of ADAM website, including how to share our content and our medical disclaimer.
 ---
 
-{{TODO: legal review}}
-
 *Last updated: September 2026*
 
 ## Please share this

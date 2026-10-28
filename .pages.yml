@@ -222,7 +222,7 @@ content:
 
   # ───────────────────────────── Pages ─────────────────────────────
   - name: anywhere
-    label: "🌙 Home page: Anywhere, anytime"
+    label: "🌙 Water Safety: not just pools, not just summer (heading and intro also show on the home page)"
     type: file
     path: src/data/anywhere.json
     format: json
@@ -424,25 +424,22 @@ content:
             label: Caption under the photo
             type: string
       - name: album
-        label: "📷 Photos & videos"
+        label: "📷 Photo albums and videos (About, Events, Adam's Story, Survivors)"
         type: file
         path: src/data/album.json
         format: json
         fields:
-          - name: intro
-            label: Intro at the top of the Photos & videos page
-            type: text
           - name: videosTitle
-            label: Videos heading
+            label: Heading on the About page's video album
             type: string
           - name: videosText
-            label: Line under the videos heading
+            label: Line inside the About page's video album
             type: text
           - name: videos
             label: Videos (from our Facebook page; the video must be public)
             type: object
             list: true
-            description: The first video shows on Adam's Story and the second on Survivors & Families. All of them show on the Photos & videos page.
+            description: The first video shows on Adam's Story, the second on Survivors & Families and the third on About Us.
             fields:
               - name: title
                 label: Title
@@ -463,7 +460,7 @@ content:
             label: Line under the village heading
             type: text
           - name: village
-            label: Village photos (also shown on the Events page)
+            label: Village photos (shown on the Events page)
             type: object
             list: true
             fields:
@@ -482,14 +479,8 @@ content:
               - name: focus
                 label: Where to keep the crop (optional, like "50% 30%" to favor faces near the top)
                 type: string
-          - name: familyTitle
-            label: Family gallery heading
-            type: string
-          - name: familyText
-            label: Line under the family heading
-            type: text
           - name: family
-            label: Family photos (also shown on the About page)
+            label: Family photos (shown on the About page)
             type: object
             list: true
             fields:
@@ -611,7 +602,7 @@ content:
         format: yaml-frontmatter
         fields: *pageFields
       - name: water-safety-more
-        label: "Water Safety: more ways to stay safe (teens, life jackets, recall, CPR)"
+        label: "Water Safety: teens, life jackets, recall and CPR section"
         type: file
         path: src/content/pages/water-safety-more.md
         format: yaml-frontmatter
@@ -982,53 +973,8 @@ content:
           - name: sourceUrl
             label: Source link
             type: string
-      - name: nonfatal
-        label: Survivors page numbers
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: "{stat}: {label}"
-        fields: &factFields
-          - name: stat
-            label: Big number
-            type: string
-          - name: label
-            label: What it means
-            type: text
-          - name: detail
-            label: Extra detail (optional)
-            type: text
-          - name: source
-            label: Source name
-            type: string
-          - name: sourceUrl
-            label: Source link
-            type: string
-      - name: risks
-        label: High-risk moments (Water Safety page)
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: "{title}"
-        fields:
-          - name: title
-            type: string
-          - name: body
-            type: text
-          - name: source
-            type: string
-          - name: sourceUrl
-            type: string
-          - name: source2
-            label: Second source (optional)
-            type: string
-          - name: sourceUrl2
-            label: Second source link
-            type: string
       - name: groups
-        label: The Facts page sections
+        label: The Facts page sections (the "Nonfatal drowning" section also shows on Survivors & Families)
         type: object
         list:
           collapsible:
@@ -1045,7 +991,22 @@ content:
               collapsible:
                 collapsed: true
                 summary: "{stat}: {label}"
-            fields: *factFields
+            fields: &factFields
+              - name: stat
+                label: Big number
+                type: string
+              - name: label
+                label: What it means
+                type: text
+              - name: detail
+                label: Extra detail (optional)
+                type: text
+              - name: source
+                label: Source name
+                type: string
+              - name: sourceUrl
+                label: Source link
+                type: string
 
   - name: resources
     label: 🔗 Resource links
