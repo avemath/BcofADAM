@@ -38,68 +38,6 @@
       "sourceUrl": "https://www.cochrane.org/evidence/CD001047_fencing-which-completely-encloses-all-sides-swimming-pool-and-isolates-it-home-effective-preventing"
     }
   ],
-  "nonfatal": [
-    {
-      "stat": "8,000+",
-      "label": "Emergency department visits for nonfatal drowning in the U.S. each year (2012–2021 average).",
-      "source": "CDC",
-      "sourceUrl": "https://www.cdc.gov/drowning/data-research/facts/index.html"
-    },
-    {
-      "stat": "~40%",
-      "label": "Nearly 4 in 10 drownings treated in emergency departments need a hospital stay or transfer for more care. That’s 3 times the rate for other unintentional injuries.",
-      "source": "CDC, 2026",
-      "sourceUrl": "https://www.cdc.gov/drowning/prevention/summer-swim-safety.html"
-    },
-    {
-      "stat": "5,900",
-      "label": "Children under 15 treated in an emergency room each year after a nonfatal drowning in a pool or spa (estimated, 2023–2025).",
-      "source": "CPSC, 2026 report",
-      "sourceUrl": "https://www.cpsc.gov/Newsroom/News-Releases/2026/CPSC-Report-Highlights-Persistent-Risk-of-Childhood-Drowning"
-    }
-  ],
-  "risks": [
-    {
-      "title": "When they slip away",
-      "body": "In a CPSC study of young children who drowned in pools in Arizona, California and Florida, 46% were last seen in the house, 69% weren’t expected to be at or in the pool, and 77% had been missing for 5 minutes or less.",
-      "source": "CPSC Publication 359",
-      "sourceUrl": "https://www.cpsc.gov/s3fs-public/pdfs/blk_media_359.pdf"
-    },
-    {
-      "title": "When the house is full",
-      "body": "Parties, holidays and cookouts are when doors get propped open, alarms get switched off, and a toddler can slip away without anyone noticing. Name a Water Watcher and keep every layer on.",
-      "source": "",
-      "sourceUrl": ""
-    },
-    {
-      "title": "At someone else’s home",
-      "body": "Grandparents’, neighbors’ and friends’ pools count too. More than 70% of children who die in a pool or spa drown at a home, including the homes of family, friends and neighbors.",
-      "source": "CPSC, 2026 report",
-      "sourceUrl": "https://www.cpsc.gov/Newsroom/News-Releases/2026/CPSC-Report-Highlights-Persistent-Risk-of-Childhood-Drowning"
-    },
-    {
-      "title": "In the bathtub",
-      "body": "Babies under 1 most often drown in bathtubs. Young children can drown in just an inch or two of water, so stay within arm’s reach at bath time and empty buckets and kiddie pools.",
-      "source": "CDC",
-      "sourceUrl": "https://www.cdc.gov/drowning/risk-factors/index.html",
-      "source2": "American Academy of Pediatrics",
-      "sourceUrl2": "https://www.healthychildren.org/English/safety-prevention/at-play/Pages/Water-Safety-And-Young-Children.aspx"
-    },
-    {
-      "title": "In summer, and all year",
-      "body": "Pool and spa drownings peak in June, July and August. But bathtubs, buckets, hot tubs and ponds don’t take the winter off. Keep every layer in place in every season.",
-      "source": "CPSC, 2026 report",
-      "sourceUrl": "https://www.cpsc.gov/Newsroom/News-Releases/2026/CPSC-Report-Highlights-Persistent-Risk-of-Childhood-Drowning"
-    },
-    {
-      "title": "Children with autism",
-      "body": "Among people with autism, deaths are nearly 40 times as likely to be caused by drowning as deaths in the general population. Children on the autism spectrum may be drawn to water and not always recognize the danger. Door alarms, adapted swim lessons and a wandering plan help.",
-      "source": "CDC",
-      "sourceUrl": "https://www.cdc.gov/drowning/risk-factors/index.html",
-      "source2": "American Academy of Pediatrics",
-      "sourceUrl2": "https://www.healthychildren.org/English/safety-prevention/at-play/Pages/water-safety-for-children-with-special-health-care-needs.aspx"
-    }
-  ],
   "groups": [
     {
       "title": "Young children",

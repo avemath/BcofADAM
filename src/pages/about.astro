@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import CtaBand from '../components/CtaBand.astro';
 import Album from '../components/Album.astro';
+import FacebookVideo from '../components/FacebookVideo.astro';
 import PhotoGrid from '../components/PhotoGrid.astro';
 import { site, nonprofitLine } from '../data/site';
 import { url } from '../lib/url';
@@ -34,6 +35,8 @@ const values = [
 ];
 
 const family = (album.family ?? []).filter((p) => p.photo);
+// The third video (Adam in the water with our dad). The first is on Adam's Story, the second on Survivors & Families.
+const video = (album.videos ?? [])[2];
 ---
 
 <BaseLayout
@@ -181,8 +184,21 @@ const family = (album.family ?? []).filter((p) => p.photo);
     family.length > 0 && (
       <section class="section" style="padding-top: 0">
         <div class="wrap">
-          <Album summary="Family album" note={`${family.length} more of us: birthdays, holidays, the bleachers`} teaser={family.slice(0, 3).map((p) => p.photo!)} more>
+          <Album summary="Family album" note={`${family.length} more of us: birthdays, holidays, the bleachers`} teaser={family.slice(0, 3).map((p) => p.photo!)}>
             <PhotoGrid photos={family} />
+          </Album>
+        </div>
+      </section>
+    )
+  }
+
+  {
+    video?.url && video.title && (
+      <section class="section" style="padding-top: 0">
+        <div class="wrap">
+          <Album summary={album.videosTitle || `Watch: ${video.title}`} note={`${video.title}, ${video.date}, from our mom’s Facebook page`}>
+            {album.videosText && <p>{album.videosText}</p>}
+            <FacebookVideo url={video.url} title={`Video: ${video.title}, ${video.date}`} date={video.date} caption={video.caption} />
           </Album>
         </div>
       </section>

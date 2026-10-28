@@ -5,18 +5,16 @@ lede: We collect as little information as possible, and we never sell it.
 description: How Because of ADAM handles information collected through this website, including forms, email updates, Facebook posts and site statistics.
 ---
 
-{{TODO: legal review}}
-
-*Last updated: September 2026*
+*Last updated: October 2026*
 
 This website is run by Because of ADAM, a nonprofit in Blair County, Pennsylvania. This policy explains what the site collects and why.
 
 ## What we collect
 
-- **Forms you fill out.** The Contact, Request a Talk and Volunteer forms send what you type (like your name, email address and message) to our form service, {{TODO: form service, e.g. Formspree or Web3Forms}}, which passes it on to us by email. Until that service is set up, those pages show our email address instead, and we only get what you choose to email us.
-- **Email updates.** If you sign up for our emails, your email address is stored with our email provider, {{TODO: newsletter provider}}. You’ll get a message asking you to confirm before we send anything, and every email has an unsubscribe link.
-- **Donations.** We don’t take donations on this website yet. When we do, a secure giving platform ({{TODO: donation platform}}) will process them. We’ll receive your name, contact details and gift amount so we can thank you and send receipts. We never see or store your full card number.
-- **Site statistics.** We may use a privacy-friendly analytics service ({{TODO: analytics provider, or none}}) that counts visits without cookies and without building a profile of you.
+- **Forms you fill out.** {{contact form}}
+- **Email updates.** {{newsletter}}
+- **Donations.** {{donations}}
+- **Site statistics.** {{analytics}}
 
 ## Things that stay in your browser
 
@@ -27,7 +25,7 @@ This website is run by Because of ADAM, a nonprofit in Blair County, Pennsylvani
 
 ## Facebook
 
-Our News page shows our latest Facebook posts through Facebook’s page plugin, which loads with the page, and our Photos & videos page plays short videos from our Facebook page. A few other pages hold one of those videos inside a fold-away album, and nothing loads from Facebook until you open it. When Facebook content loads, Facebook may set cookies or collect information about your visit under [Facebook’s privacy policy](https://www.facebook.com/privacy/policy/).
+Our News page shows our latest Facebook posts through Facebook’s page plugin, which loads with the page. A few pages, like Adam’s Story and About Us, hold a short video from our Facebook page inside a fold-away album, and nothing loads from Facebook until you open it. When Facebook content loads, Facebook may set cookies or collect information about your visit under [Facebook’s privacy policy](https://www.facebook.com/privacy/policy/).
 
 ## Hosting
 

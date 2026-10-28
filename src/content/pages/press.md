@@ -5,8 +5,6 @@ lede: Writing about drowning prevention, water safety or nonfatal drowning? Weâ€
 description: A short fact sheet about Because of ADAM, a family-run drowning awareness nonprofit in Blair County, Pennsylvania, and how to reach us for interviews.
 ---
 
-{{TODO: family review}}
-
 ## About us
 
 Because of ADAM is a family-run drowning awareness nonprofit started in 2020 by Adamâ€™s brother and sisters. We teach water safety to parents and caregivers through talks, events and this website, and we want to end childhood drowning.
@@ -21,6 +19,8 @@ Adam drowned in our backyard pool on June 5, 2017, when he was 14 months old. He
 - Layers of protection families can add at home, from pool fences to door alarms to a Water Watcher.
 - Life after a nonfatal drowning, for the survivor and the whole family.
 - Wear Blue on June 5, our yearly day of awareness.
+
+Every number we use is on our [drowning facts page](/the-facts), with a link to its source.
 
 **Good times to run a water safety story:** May (National Water Safety Month, right before pools open), June 5 (the day our family wears blue for Adam), the week before the Fourth of July, and July 25 ([World Drowning Prevention Day](https://www.who.int/campaigns/world-drowning-prevention-day)).
 

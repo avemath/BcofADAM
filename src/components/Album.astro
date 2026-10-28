@@ -16,10 +16,8 @@ interface Props {
   open?: boolean;
   /** Up to three small photos shown on the closed album. */
   teaser?: string[];
-  /** Add a link to the Photos & videos page at the bottom. */
-  more?: boolean;
 }
-const { summary, note, open = false, teaser = [], more = false } = Astro.props;
+const { summary, note, open = false, teaser = [] } = Astro.props;
 ---
 
 <details class="album" open={open || undefined}>
@@ -46,13 +44,6 @@ const { summary, note, open = false, teaser = [], more = false } = Astro.props;
   </summary>
   <div class="album__body">
     <slot />
-    {
-      more && (
-        <p class="album__more">
-          <a href={url('/photos')}>All of our photos and videos</a>
-        </p>
-      )
-    }
   </div>
 </details>
 
@@ -136,10 +127,6 @@ const { summary, note, open = false, teaser = [], more = false } = Astro.props;
   }
   .album__body {
     padding: 18px;
-  }
-  .album__more {
-    margin: 16px 0 0;
-    font-size: 0.95rem;
   }
   @media (max-width: 479px) {
     .album__teaser {

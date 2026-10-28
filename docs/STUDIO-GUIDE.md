@@ -21,12 +21,12 @@ That's it. From then on, everyone signs in at `/studio` with their email.
 |---|---|
 | ⚙️ **Site settings** | Donation link, show/hide the Facebook feed, contact email, social links, 501(c)(3) status, the **launch** switch |
 | 🏠 **Home page** | The intro, the "Meet Adam" text, Adam's photo, the quote under the clock |
-| 🌙 **Home page — Anywhere, anytime** | The "Not just pools. Not just summer." section: the words that flip by, the six cards (bathtub, winter clothes…), and Mom's quote |
+| 🌙 **Water Safety: not just pools, not just summer** | The "Not just pools. Not just summer." section on the Water Safety page: the words that flip by, the eight cards (bathtub, winter clothes…) and Mom's quote. Its heading and intro also show on the home page |
 | 📄 **Pages** | Adam's Story, ISR Swim Lessons (and Dad's story box), Privacy policy |
 | 🎣 **Events & fundraisers** | Add a fishing rodeo, cornhole tournament or any event, with photos and results |
 | 📰 **News & updates** | Post an update about Adam, an event recap, a water safety reminder |
 | 👨‍👩‍👧‍👦 **Our team** | Names, roles, short bios and photos on the About page |
-| 📊 **Statistics** | The numbers on the site (every number needs a source link) |
+| 📊 **Statistics** | The numbers on the site (every number needs a source link). The "Nonfatal drowning" numbers on The Facts also show on Survivors & Families, so you only change them in one place |
 | 🔗 **Resource links** | The helpful links on the Resources and Survivors pages |
 
 ## Common jobs
@@ -63,7 +63,14 @@ That's it. From then on, everyone signs in at `/studio` with their email.
 **Site settings** → **Show our Facebook feed on the website**.
 
 ### Launch the site for real
-When everything looks right: **Site settings** → check **Launch the site** → **Save**. The yellow "Preview" banner disappears and Google can start listing us.
+We turned on **Site settings** → **Launch the site** in October 2026. The yellow "Preview" banner is gone and Google can list us.
+
+**If a save leaves a {{TODO}} on a page, the live site won't update until it's fixed.** With the launch switch on, the website refuses to publish any page that still has a {{TODO: ...}} note or a "Family, please review" box, so a reminder never shows up in public by accident. The site stays on the last good version. If your change doesn't appear after 5 minutes, look for a {{TODO}} you left in, or tell Avery (the list is in the Actions tab on GitHub).
+
+### Added a contact form, newsletter, donation link or analytics?
+The Privacy Policy names those services by itself. In the policy's text you'll see {{contact form}}, {{newsletter}}, {{donations}} and {{analytics}}: leave those exactly as they are, because the site swaps each one for the right sentence from Site settings.
+
+What you do need to do by hand: open **Pages** → **Privacy policy** and change the **"Last updated"** date at the top to the month you added the service.
 
 ## Where our photos go
 

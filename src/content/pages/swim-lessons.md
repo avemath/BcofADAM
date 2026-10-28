@@ -19,8 +19,6 @@ After Adam drowned, our dad decided no family near us should have to make that d
 
 ## Why we recommend ISR, not just swim lessons
 
-{{TODO: family review}}
-
 Our family recommends **ISR self-rescue lessons** for babies and toddlers. Not just any swim lessons, and not “mommy and me” classes.
 
 Here’s why. Little kids usually don’t drown during swim time. They drown when they get to the water alone and nobody expects them to be there. In a CPSC study of young children who drowned in pools, 69% weren’t expected to be at or in the pool at all ([CPSC](https://www.cpsc.gov/s3fs-public/pdfs/blk_media_359.pdf)). So the question that matters is simple: what will your child do in the water if you aren’t there?

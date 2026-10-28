@@ -5,13 +5,17 @@ import LayersBuilder from '../components/LayersBuilder.astro';
 import CtaBand from '../components/CtaBand.astro';
 import SharePage from '../components/SharePage.astro';
 import Wave from '../components/Wave.astro';
+import AnywhereAnytime from '../components/AnywhereAnytime.astro';
 import { layers } from '../data/layers';
-import { risks } from '../data/content';
+import { anywhere } from '../data/content';
 import { url } from '../lib/url';
+import { prose } from '../lib/prose';
 import { getEntry } from 'astro:content';
 
-// "More ways to stay safe" has its own page now; this page points to it.
+// Teens, life jackets, the pool recall and CPR (Studio → Pages → Water Safety: teens, life jackets, recall and CPR section).
+// It used to be its own page; its headings sit one level down here, under the section heading.
 const more = await getEntry('pages', 'water-safety-more');
+const moreHtml = prose(more?.rendered?.html).replace(/<(\/?)h2\b/g, '<$1h3');
 ---
 
 <BaseLayout
@@ -36,6 +40,12 @@ const more = await getEntry('pages', 'water-safety-more');
             </li>
           ))}
         </ol>
+        <p class="eyebrow layers-toc__more">More on this page</p>
+        <ul>
+          <li><a href="#builder">Try the layers</a></li>
+          {more && <li><a href="#more">{more.data.title}</a></li>}
+          <li><a href="#anywhere">{(anywhere.title || 'Not just pools').replace(/[.:]$/, '')}</a></li>
+        </ul>
       </nav>
 
       <div class="layers-list">
@@ -112,54 +122,31 @@ const more = await getEntry('pages', 'water-safety-more');
   {
     more && (
       <section class="section" id="more" style="padding-top: clamp(32px, 5vw, 56px)">
-        <div class="wrap narrow">
-          <div class="card more-link reveal">
+        <div class="wrap more-wrap">
+          <div class="more-head">
             {more.data.eyebrow && <p class="eyebrow">{more.data.eyebrow}</p>}
             <h2>{more.data.title}</h2>
-            {more.data.lede && <p>{more.data.lede}</p>}
-            <a class="btn btn--ocean" href={url('/more-ways-to-stay-safe')}>Read more ways to stay safe</a>
+            {more.data.lede && <p class="lede">{more.data.lede}</p>}
+          </div>
+          <div class="prose more-body">
+            <Fragment set:html={moreHtml} />
+          </div>
+          <div class="card more-aside">
+            <p class="eyebrow">Near Blair County?</p>
+            <p>Lakes, rivers, cold water, ice and Pennsylvania’s life jacket rules, on one page.</p>
+            <a class="btn btn--ocean" href={url('/pennsylvania')}>Water safety in Pennsylvania</a>
           </div>
         </div>
       </section>
     )
   }
 
-  <section class="section section--foam">
+  <Wave color="var(--deep)" bg="var(--sand)" />
+  <div id="anywhere">
+    <AnywhereAnytime cta={false} />
+  </div>
+  <section class="section section--foam ws-share-band">
     <div class="wrap">
-      <span class="eyebrow">High-risk moments</span>
-      <h2>When families are most at risk</h2>
-      <p class="lede">
-        Most drownings of young children don’t happen during swim time. They happen when nobody expects
-        the child to be near the water.
-      </p>
-      <div class="grid grid--2" style="margin-top: 40px">
-        {
-          risks.map((r) => (
-            <div class="card reveal">
-              <h3>{r.title}</h3>
-              <p>{r.body}</p>
-              {r.source && (
-                <p class="source">
-                  {r.source2 ? 'Sources: ' : 'Source: '}
-                  <a href={r.sourceUrl} rel="noopener" target="_blank">
-                    {r.source}
-                    <span class="visually-hidden"> (source for “{r.title}”, opens in a new tab)</span>
-                  </a>
-                  {r.source2 && r.sourceUrl2 && (
-                    <>
-                      {'; '}
-                      <a href={r.sourceUrl2} rel="noopener" target="_blank">
-                        {r.source2}
-                        <span class="visually-hidden"> (source for “{r.title}”, opens in a new tab)</span>
-                      </a>
-                    </>
-                  )}
-                </p>
-              )}
-            </div>
-          ))
-        }
-      </div>
       <div class="ws-share">
         <SharePage
           label="Send this page to someone who watches your kids"
@@ -223,7 +210,8 @@ const more = await getEntry('pages', 'water-safety-more');
       border-bottom: 1px solid var(--line);
       z-index: -1;
     }
-    .layers-toc .eyebrow {
+    .layers-toc .eyebrow,
+    .layers-toc ul {
       display: none;
     }
     .layers-toc ol {
@@ -270,11 +258,28 @@ const more = await getEntry('pages', 'water-safety-more');
     max-width: 640px;
     margin-bottom: 28px;
   }
-  .more-link h2 {
+  .layers-toc ul {
+    margin: 0;
+    padding-left: 1.2em;
+    list-style: none;
+    display: grid;
+  }
+  .layers-toc__more {
+    margin-top: 1.5em;
+  }
+  .more-wrap {
+    display: grid;
+    gap: 32px;
+    max-width: 760px;
+  }
+  .more-head h2 {
     margin-bottom: 0.4em;
   }
-  .more-link p:not(.eyebrow) {
-    margin-bottom: 1.2rem;
+  .more-body :global(h3) {
+    scroll-margin-top: 100px;
+  }
+  .more-aside p:not(.eyebrow) {
+    margin-bottom: 1rem;
   }
   .layers-list {
     display: grid;

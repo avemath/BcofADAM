@@ -28,14 +28,6 @@ export interface Fact {
   source: string;
   sourceUrl: string;
 }
-export interface Risk {
-  title: string;
-  body: string;
-  source?: string;
-  sourceUrl?: string;
-  source2?: string;
-  sourceUrl2?: string;
-}
 export interface Resource {
   name: string;
   url: string;
@@ -74,19 +66,18 @@ export interface IsrBox {
 export const home = homeJson;
 export type AlbumPhoto = { photo?: string; alt?: string; caption?: string; wide?: boolean; focus?: string };
 export type AlbumVideo = { title?: string; date?: string; url?: string; caption?: string };
-/** Photos & videos: the fold-away albums and the page that gathers them. */
+/** Photos & videos: the fold-away albums on About, Events, Adam's Story and Survivors & Families. */
 export const album: {
-  intro?: string;
   videosTitle?: string; videosText?: string; videos?: AlbumVideo[];
   villageTitle?: string; villageText?: string; village?: AlbumPhoto[];
-  familyTitle?: string; familyText?: string; family?: AlbumPhoto[];
+  family?: AlbumPhoto[];
 } = albumJson;
 /** "Where will the kids be?" on the home page: three checks for each place. */
 export const scenarios: { id: string; label: string; fact?: string; source?: string; sourceUrl?: string; checks: string[]; link?: string; linkText?: string }[] = scenariosJson;
 export const headline: Fact[] = factsJson.headline ?? [];
-export const nonfatal: Fact[] = factsJson.nonfatal ?? [];
-export const risks: Risk[] = factsJson.risks ?? [];
 export const factGroups: { title: string; intro?: string; facts: Fact[] }[] = factsJson.groups ?? [];
+/** Survivors & Families shows The Facts page's "Nonfatal drowning" numbers, so each number is typed once. */
+export const nonfatal: Fact[] = factGroups.find((g) => /nonfatal/i.test(g.title))?.facts ?? [];
 export const survivorResources: Resource[] = resourcesJson.survivor ?? [];
 export const resourceGroups: { title: string; items: Resource[] }[] = resourcesJson.groups ?? [];
 export const team: TeamMember[] = teamJson ?? [];
