@@ -24,9 +24,10 @@ jobs:
         with:
           # These sites block automated checkers (they answer 403 Forbidden to GitHub's servers even
           # though the pages work fine in a browser), so they're skipped: Facebook, the CDC, the CPSC,
-          # Pool Safely and the AAP journal.
+          # Pool Safely, the AAP journal and WTAJ (which blocks some runs but not others).
           # REMINDER: since these aren't checked automatically, click through the CDC, CPSC, Pool Safely
-          # and AAP links on /the-facts and /resources by hand a couple of times a year.
+          # and AAP links on /the-facts and /resources, and the WTAJ story on /press, by hand a couple of
+          # times a year.
           args: >-
             --no-progress
             --root-dir "${{ github.workspace }}/dist"
@@ -35,6 +36,7 @@ jobs:
             --exclude "cpsc\.gov"
             --exclude "poolsafely\.gov"
             --exclude "publications\.aap\.org"
+            --exclude "wtaj\.com"
             --exclude "localhost"
             --max-retries 3
             --accept 200,206,429
