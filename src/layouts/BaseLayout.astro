@@ -74,7 +74,8 @@ const ld = {
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
-    <link rel="canonical" href={canonical} />
+    {/* No canonical on hidden pages like the 404 page: its address (/404/) doesn't exist, which broke the monthly link check. */}
+    {!noindex && <link rel="canonical" href={canonical} />}
     {!site.launchReady ? <meta name="robots" content="noindex, nofollow" /> : noindex && <meta name="robots" content="noindex" />}
     <link rel="icon" href={url('/favicon.ico')} sizes="48x48" />
     {hasSvgIcon && <link rel="icon" href={url('/favicon.svg')} type="image/svg+xml" />}
